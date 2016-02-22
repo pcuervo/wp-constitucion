@@ -1,5 +1,18 @@
 <?php
 
+// RENAME THE DEFAULT POST TYPE
+
+function change_post_menu_label() {
+    global $menu, $submenu;
+
+    $menu[5][0] = 'Noticias';
+    $submenu['edit.php'][5][0] = 'Noticias';
+    $submenu['edit.php'][10][0] = 'Nueva Noticia';
+    $submenu['edit.php'][16][0] = 'Noticias Tags';
+    echo '';
+}
+add_action( 'admin_menu', 'change_post_menu_label' );
+
 
 // DEFINIR LOS PATHS A LOS DIRECTORIOS DE JAVASCRIPT Y CSS ///////////////////////////
 

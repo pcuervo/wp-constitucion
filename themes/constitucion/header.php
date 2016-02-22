@@ -19,26 +19,23 @@
 			<header>
 				<nav>
 					<ul>
-						<li><a href="<?php echo site_url('/'); ?> ">Home</a></li>
-						<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Constitución CDMX</a></li>
-						<li><a href="<?php echo site_url('/cdmx/'); ?>">CDMX</a></li>
-						<li><a href="<?php echo site_url('/participa/'); ?>">Participa</a>
+						<li><a href="<?php echo site_url('/'); ?> ">Home</a> - page-home.php</li>
+						<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Constitución CDMX</a> - page-constitucion-cdmx.php</li>
+						<li><a href="<?php echo site_url('/cdmx/'); ?>">CDMX</a> - page-cdmx.php</li>
+						<li><a href="<?php echo site_url('/participa/'); ?>">Participa</a> - page-participa.php
 							<ul>
-								<li><a href="<?php echo site_url('/cronologia/'); ?>">Cronología</a></li>
-								<li><a href="<?php echo site_url('/instrucciones/'); ?>">Instrucciones</a></li>
-								<li>Calendario</li>
+								<li><a href="<?php echo site_url('/cronologia/'); ?>">Cronología</a> - page-cronologia.php</li>
+								<li><a href="<?php echo site_url('/instrucciones/'); ?>">Instrucciones</a> - page-instrucciones.php</li>
+								<li><a href="<?php echo site_url('/calendario/'); ?>">Calendario</a> - archive-calendario.php</li>
 								<li>Cuestionario</li>
 								<li><a href="#">Link a Youtube</a></li>
-								<li><a href="<?php echo site_url('/instrucciones/'); ?>">Instrucciones</a></li>
-								<li><a href="<?php echo site_url('/buscador/'); ?>">Buscador</a></li>
-								<li><a href="#">Mapa con ubicación de kiosko</a></li>
-
-
+								<li><a href="<?php echo site_url('/instrucciones/'); ?>">Instrucciones</a> - page-instrucciones.php </li>
+								<li><a href="#">Buscador</a></li>
+								<li><a href="<?php echo site_url('/kioskos/'); ?>">Mapa con ubicación de kiosko</a> - archive-kioskos.php</li>
 							</ul>
 						</li>
-						<li><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a></li>
-						<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>"></a></li>
-						<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>"></a></li>
+						<li><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a> - index.php</li>
+						<li><a href="<?php echo site_url('/contacto/'); ?>">Contacto</a> - page-contacto.php</li>
 
 					</ul>
 				</nav>

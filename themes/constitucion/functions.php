@@ -58,17 +58,17 @@
 
 
 
-	/*add_action( 'after_setup_theme', function () {
+	add_action( 'after_setup_theme', function () {
 		
 		$frontPage = get_page_by_path('home', OBJECT);
-		$blogPage  = get_page_by_path('blog', OBJECT);
+		$blogPage  = get_page_by_path('noticias', OBJECT);
 		
 		if ( $frontPage AND $blogPage ){
 			update_option('show_on_front', 'page');
 			update_option('page_on_front', $frontPage->ID);
 			update_option('page_for_posts', $blogPage->ID);
 		}
-	});*/
+	});
 
 
 
@@ -192,73 +192,3 @@
 		}
 	}
 
-
-
-	/**
-	 * Imprime una lista separada por commas de todos los terms asociados al post id especificado
-	 * los terms pertenecen a la taxonomia especificada. Default: Category
-	 *
-	 * @param  int     $post_id
-	 * @param  string  $taxonomy
-	 * @return string
-	 */
-	function print_the_terms($post_id, $taxonomy = 'category'){
-		$terms = get_the_terms( $post_id, $taxonomy );
-
-		if ( $terms and ! is_wp_error($terms) ){
-			$names = wp_list_pluck($terms ,'name');
-			echo implode(', ', $names);
-		}
-	}
-
-
-
-	/**
-	 * Regresa la url del attachment especificado
-	 * @param  int     $post_id
-	 * @param  string  $size
-	 * @return string  url de la imagen
-	 */
-	function attachment_image_url($post_id, $size){
-		$image_id   = get_post_thumbnail_id($post_id);
-		$image_data = wp_get_attachment_image_src($image_id, $size, true);
-		echo isset($image_data[0]) ? $image_data[0] : '';
-	}
-
-
-
-	/*
-	 * Echoes active if the page showing is associated with the parameter
-	 * @param  string $compare, Array $compare
-	 * @param  Bool $echo use FALSE to use with php, default is TRUE to echo value
-	 * @return string
-	 */
-	function nav_is($compare = array(), $echo = TRUE){
-
-		$query = get_queried_object();
-		$inner_array = array();
-		if(gettype($compare) == 'string'){
-			
-			$inner_array[] = $compare;
-		}else{
-			$inner_array = $compare;
-		}
-
-		foreach ($inner_array as $value) {
-			if( isset($query->slug) AND preg_match("/$value/i", $query->slug)
-				OR isset($query->name) AND preg_match("/$value/i", $query->name)
-				OR isset($query->rewrite) AND preg_match("/$value/i", $query->rewrite['slug'])
-				OR isset($query->post_name) AND preg_match("/$value/i", $query->post_name)
-				OR isset($query->post_title) AND preg_match("/$value/i", remove_accents(str_replace(' ', '-', $query->post_title) ) ) )
-			{
-				if($echo){
-					echo 'active';
-				}else{
-					return 'active';
-				}
-				return FALSE;
-			}
-
-		}
-		return FALSE;
-	}

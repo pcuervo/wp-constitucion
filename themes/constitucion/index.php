@@ -1,8 +1,6 @@
-<?php get_header(); the_post(); 
+<?php get_header(); the_post(); ?>
 
-the_title(); ?>
-
-
+noticias
 <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

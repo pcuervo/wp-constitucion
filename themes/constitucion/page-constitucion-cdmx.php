@@ -90,4 +90,4 @@ the_title(); ?>
 		</div>
 	</div>
 </section>
-<?php get_footer2(); ?>
+<?php get_footer(); ?>

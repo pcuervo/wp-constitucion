@@ -7248,6 +7248,8 @@ ul.menu > li {
   border: 3px solid #555555;
 }
 footer {
+  padding-top: 24px;
   padding-bottom: 24px;
+  background-color: #3c3c3c;
 }
 /*# sourceMappingURL=bootstrap.css.map */

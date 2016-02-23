@@ -6556,6 +6556,45 @@ button.close {
 .hidden {
   display: none !important;
 }
+.width-100 {
+  width: 100%;
+}
+.width-50 {
+  width: 50%;
+}
+.width-40 {
+  width: 40%;
+}
+.width-30 {
+  width: 30%;
+}
+.width-20 {
+  width: 20%;
+}
+.width-10 {
+  width: 10%;
+}
+.color-primary {
+  color: #e80e8a;
+}
+.color-gray {
+  color: #555555;
+}
+.color-light {
+  color: #fff;
+}
+.bg-primary {
+  background-color: #e80e8a;
+}
+.bg-light {
+  background-color: #fff;
+}
+.bg-gray {
+  background-color: #555555;
+}
+.bg-gray-darken {
+  background-color: #3c3c3c;
+}
 .affix {
   position: fixed;
 }
@@ -7211,5 +7250,19 @@ button.close {
 .icon--stroke polyline,
 .icon--stroke polygon {
   stroke: currentColor;
+}
+header li {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+header > nav > li > a {
+  font-family: 'Alegreya Sans', sans-serif;
+  text-decoration: none;
+  display: inline;
+  color: #555555;
+}
+ul.menu > li {
+  border: 3px solid #555555;
 }
 /*# sourceMappingURL=bootstrap.css.map */

@@ -13,7 +13,6 @@
 		<meta http-equiv="cleartype" content="on">
 		<!-- Favicon - generated with http://www.favicomatic.com/ -->
 		<link rel="shortcut icon" href="<?php echo THEMEPATH; ?>images/favicon.ico">
-		<!-- CSS -->
 		<!-- Google font(s) -->
 		<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700,800,300' rel='stylesheet' type='text/css'>

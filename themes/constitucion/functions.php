@@ -38,6 +38,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
 
+
 		// localize scripts
 		wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
 
@@ -55,7 +56,8 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	add_action( 'admin_enqueue_scripts', function(){
 
 		// scripts
-		wp_enqueue_script( 'admin-js', JSPATH.'admin.js', array('jquery'), '1.0', true );
+		wp_enqueue_script( 'api-google', 'http://maps.google.com/maps/api/js?sensor=false&libraries=places&language=en-AU', array('jquery'), '1.0', true );
+		wp_enqueue_script( 'admin-js', JSPATH.'admin.js', array('api-google'), '1.0', true );
 
 		// localize scripts
 		wp_localize_script( 'admin-js', 'ajax_url', admin_url('admin-ajax.php') );

@@ -65,7 +65,7 @@
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 6,
-			'supports'           => array( 'title', 'editor', 'thumbnail' )
+			'supports'           => array( 'title' )
 		);
 		register_post_type( 'kioskos', $args );
 

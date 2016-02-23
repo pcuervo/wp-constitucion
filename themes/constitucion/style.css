@@ -1123,9 +1123,11 @@ img {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   display: inline-block;
   max-width: 100%;
   height: auto;
@@ -1173,7 +1175,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
+  font-family: "Alegreya Sans", sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -1278,6 +1280,7 @@ h6,
 }
 p {
   margin: 0 0 10px;
+  font-family: "ABeeZee", sans-serif;
 }
 .lead {
   margin-bottom: 20px;
@@ -1516,6 +1519,18 @@ address {
   margin-bottom: 20px;
   font-style: normal;
   line-height: 1.42857143;
+}
+h2 {
+  font-weight: 300;
+}
+.fz-small {
+  font-size: 12px;
+}
+.fz-large {
+  font-size: 18px;
+}
+.fz-xlarge {
+  font-size: 20px;
 }
 code,
 kbd,
@@ -2549,9 +2564,11 @@ output {
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -ms-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus {
   border-color: #66afe9;
@@ -3455,9 +3472,11 @@ input[type="button"].btn-block {
 }
 .fade {
   opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  -o-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -ms-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
 }
 .fade.in {
   opacity: 1;
@@ -4988,9 +5007,11 @@ a.badge:focus {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  -webkit-transition: border 0.2s ease-in-out;
-  -o-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
+  -webkit-transition: border 0.2s ease-in-out;
+  -moz-transition: border 0.2s ease-in-out;
+  -ms-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
 }
 .thumbnail > img,
 .thumbnail a > img {
@@ -5117,9 +5138,11 @@ a.thumbnail.active {
   background-color: #337ab7;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -webkit-transition: width 0.6s ease;
-  -o-transition: width 0.6s ease;
   transition: width 0.6s ease;
+  -webkit-transition: width 0.6s ease;
+  -moz-transition: width 0.6s ease;
+  -ms-transition: width 0.6s ease;
+  -o-transition: width 0.6s ease;
 }
 .progress-striped .progress-bar,
 .progress-bar-striped {
@@ -5841,6 +5864,12 @@ button.close {
   background-repeat: no-repeat;
   background-position: center center;
 }
+.rectangle-small {
+  height: 150px;
+}
+.rectangle {
+  height: 300px;
+}
 .modal-open {
   overflow: hidden;
 }
@@ -6220,9 +6249,11 @@ button.close {
 .carousel-inner > .item {
   display: none;
   position: relative;
-  -webkit-transition: 0.6s ease-in-out left;
-  -o-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -ms-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
@@ -6491,6 +6522,15 @@ button.close {
   margin-left: auto;
   margin-right: auto;
 }
+.center-full {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 .pull-right {
   float: right !important;
 }
@@ -6537,6 +6577,15 @@ button.close {
 .table-cell {
   display: table-cell;
 }
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
 .align-top {
   vertical-align: top;
 }
@@ -6581,6 +6630,9 @@ button.close {
 }
 .width-19 {
   width: 19%;
+}
+.height-100 {
+  height: 100%;
 }
 .no-padding {
   padding: 0 !important;
@@ -6766,7 +6818,7 @@ button.close {
 .margin-bottom--xxlarge {
   margin-bottom: 160px;
 }
-.no-margin--top {
+.no-margin-top {
   margin-top: 0;
 }
 .margin-top {
@@ -6874,6 +6926,15 @@ button.close {
 }
 .no-border-radius {
   border-radius: 0px;
+}
+.color-light {
+  color: #fff;
+}
+.bg-dark--opacity {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.bg-gray-light {
+  background-color: #eeeeee;
 }
 @-ms-viewport {
   width: device-width;
@@ -7084,5 +7145,71 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .2em;
+  margin-left: .2em;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+/*------------------------------------*\
+    #SIZES
+\*------------------------------------*/
+.icon--responsive {
+  width: 100%;
+  height: auto;
+}
+.icon--iconed {
+  width: 20px !important;
+  height: 20px;
+}
+/*------------------------------------*\
+  #COLOR
+
+
+
+\*------------------------------------*/
+/**
+ * Fill
+**/
+.icon--fill path,
+.icon--fill line,
+.icon--fill rect,
+.icon--fill circle,
+.icon--fill ellipse,
+.icon--fill polyline,
+.icon--fill polygon {
+  fill: currentColor;
+}
+/**
+ * Stroke
+**/
+.icon--stroke {
+  stroke-width: 1.5;
+}
+.icon--thickness-05 {
+  stroke-width: 0.5;
+}
+.icon--thickness-1 {
+  stroke-width: 1;
+}
+.icon--thickness-2 {
+  stroke-width: 2;
+}
+.icon--thickness-3 {
+  stroke-width: 3;
+}
+.icon--stroke path,
+.icon--stroke line,
+.icon--stroke rect,
+.icon--stroke circle,
+.icon--stroke ellipse,
+.icon--stroke polyline,
+.icon--stroke polygon {
+  stroke: currentColor;
 }
 /*# sourceMappingURL=bootstrap.css.map */

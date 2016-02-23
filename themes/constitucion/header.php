@@ -8,6 +8,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="cleartype" content="on">
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+
+		<link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700,800,300" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700,800,500,300" rel="stylesheet" type="text/css">
+
 		<?php wp_head(); ?>
 	</head>
 

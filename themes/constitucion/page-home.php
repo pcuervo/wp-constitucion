@@ -15,6 +15,9 @@
 					</div>
 				</div>
 			</div><!--/container-->
+			<iframe src="https://ishaqibrahim.cartodb.com/viz/6cc1ad26-d690-11e5-971e-0e31c9be1b51/embed_map" frameborder="0" height="300" width="100%">
+				
+			</iframe>
 
 <?php get_sidebar(); ?>
 

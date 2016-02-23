@@ -26,20 +26,20 @@ the_title(); ?>
 		<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
 		<div class="[ row ][ margin-bottom ]">
 			<div class="[ col-xs-6 col-sm-3 ]">
-				<p class="[ fz-xlarge ]"><strong>Paso 1</strong></p>
+				<p class="[ fz-xlarge ]">Paso 1</p>
 				<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			</div>
 			<div class="[ col-xs-6 col-sm-3 ]">
-				<p class="[ fz-xlarge ]"><strong>Paso 2</strong></p>
+				<p class="[ fz-xlarge ]">Paso 2</p>
 				<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			</div>
 			<div class="[ clearfix ][ visible-xs ]"></div>
 			<div class="[ col-xs-6 col-sm-3 ]">
-				<p class="[ fz-xlarge ]"><strong>Paso 3</strong></p>
+				<p class="[ fz-xlarge ]">Paso 3</p>
 				<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			</div>
 			<div class="[ col-xs-6 col-sm-3 ]">
-				<p class="[ fz-xlarge ]"><strong>Paso 4</strong></p>
+				<p class="[ fz-xlarge ]">Paso 4</p>
 				<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			</div>
 		</div>

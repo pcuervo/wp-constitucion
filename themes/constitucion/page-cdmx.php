@@ -17,7 +17,18 @@ the_title(); ?>
 	<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/edificios.png">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 col-sm-6 ]">
+			<div class="[ row ]">
+				<div class="[ col-xs-6 ]">
+					<div class="[ margin-bottom ]">
+						<div class="[ inline-block ][ margin-sides--small ]">
+							<canvas id="mycanvas" width="130%" height="130%"></canvas>
+						</div>
+					</div>
+				</div>
+				<div class="[ col-xs-6 ]">
 
+				</div>
+			</div>
 		</div>
 		<div class="[ col-xs-12 col-sm-6 ]">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae amet aperiam pariatur ea iste officia facilis, eligendi rem modi reiciendis delectus impedit quibusdam consectetur possimus eaque nihil facere reprehenderit nisi.</p>

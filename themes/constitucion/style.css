@@ -7256,12 +7256,12 @@ button.close {
 header li {
   text-transform: uppercase;
   text-decoration: none;
+  display: inline;
   color: #fff;
 }
 header > nav > li > a {
   font-family: 'Alegreya Sans', sans-serif;
   text-decoration: none;
-  display: inline;
   color: #555555;
 }
 ul.menu > li {

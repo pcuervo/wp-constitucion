@@ -167,6 +167,8 @@
 .padding--right--xxlarge{ padding-right: (@padding-base-vertical*8); }
 
 .padding--right--small--sm{ @media (min-width: @screen-sm){ padding-right: (@padding-base-vertical); } }
+.padding--right--small--xs{ @media (max-width: @screen-sm){ padding-right: (@padding-base-vertical); } }
+.no-padding--right--xs{ @media (max-width: @screen-sm){ padding-right: 0px; } }
 
 .no-padding--left{ padding-left: 0; }
 .padding--left{ padding-left: (@padding-base-vertical*2); }
@@ -176,6 +178,8 @@
 .padding--left--xxlarge{ padding-left: (@padding-base-vertical*8); }
 
 .padding--left--small--sm{ @media (min-width: @screen-sm){ padding-left: (@padding-base-vertical); } }
+.padding--left--small--xs{ @media (max-width: @screen-sm){ padding-left: (@padding-base-vertical); } }
+.no-padding--left--xs{ @media (max-width: @screen-sm){ padding-left: 0px; } }
 
 .padding--square{
   width: 100%;

@@ -1,5 +1,5 @@
 		<video width="100%" height="300" controls></video>
-		<button class="[ btn-play ][ center-full ]" onclick="playPause()"><img src="<?php echo THEMEPATH; ?>images/icons/play-btn.png"></button>
+		<button class="[ btn-play ][ center-full ]" onclick="playPause()"><img src="<?php echo THEMEPATH; ?>images/play.png"></button>
 <?php get_header(); the_post();  ?>
 
 

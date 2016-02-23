@@ -48,6 +48,39 @@ the_title(); ?>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis deserunt, quidem totam eveniet expedita assumenda illum accusantium iusto ratione, ex atque molestias consectetur facere, reiciendis blanditiis id suscipit rerum, libero?</p>
 	<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
 	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
-
+</section>
+<section class=""></section>
+<section class="[ container ][ margin-bottom--large ]">
+	<h2>Preguntas frecuentes</h2>
+	<div class="[ row ]">
+		<div class="[ col-xs-12 col-sm-6 ]">
+			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt neque, fugiat nostrum. Tempora aliquid quasi blanditiis doloribus deserunt natus obcaecati non. Recusandae ipsa fugit molestias error eum repellat qui omnis.</p>
+		</div>
+		<div class="[ col-xs-12 col-sm-6 ]">
+			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt neque, fugiat nostrum. Tempora aliquid quasi blanditiis doloribus deserunt natus obcaecati non. Recusandae ipsa fugit molestias error eum repellat qui omnis.</p>
+		</div>
+	</div>
+		<div class="[ row ]">
+		<div class="[ col-xs-12 col-sm-6 ]">
+			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt neque, fugiat nostrum. Tempora aliquid quasi blanditiis doloribus deserunt natus obcaecati non. Recusandae ipsa fugit molestias error eum repellat qui omnis.</p>
+		</div>
+		<div class="[ col-xs-12 col-sm-6 ]">
+			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt neque, fugiat nostrum. Tempora aliquid quasi blanditiis doloribus deserunt natus obcaecati non. Recusandae ipsa fugit molestias error eum repellat qui omnis.</p>
+		</div>
+	</div>
+		<div class="[ row ]">
+		<div class="[ col-xs-12 col-sm-6 ]">
+			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt neque, fugiat nostrum. Tempora aliquid quasi blanditiis doloribus deserunt natus obcaecati non. Recusandae ipsa fugit molestias error eum repellat qui omnis.</p>
+		</div>
+		<div class="[ col-xs-12 col-sm-6 ]">
+			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt neque, fugiat nostrum. Tempora aliquid quasi blanditiis doloribus deserunt natus obcaecati non. Recusandae ipsa fugit molestias error eum repellat qui omnis.</p>
+		</div>
+	</div>
 </section>
 <?php get_footer(); ?>

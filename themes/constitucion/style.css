@@ -7041,13 +7041,11 @@ button.close {
     height: 400px;
   }
 }
-<<<<<<< HEAD
 @media (min-width: 992px) {
   .height-home-video {
     height: 500px;
   }
 }
-=======
 .rectangle--light {
   width: 60%;
   height: 50%;
@@ -7079,7 +7077,6 @@ button.close {
 .question:hover p {
   font-weight: bold;
 }
->>>>>>> 8b2776ed07e98bd90de4e0b82fc615f85f78bf6a
 @-ms-viewport {
   width: device-width;
 }
@@ -7377,16 +7374,7 @@ header li a:active {
   color: #e80e8a;
 }
 header > nav > ul > li {
-<<<<<<< HEAD
   padding: 1.5%;
-=======
-  border-left: 1px solid #4a4a4a;
-  border-bottom: 1px solid #4a4a4a;
-  padding: 24px 48px;
-}
-header > nav > ul > li:last-child {
-  border-right: 1px solid #4a4a4a;
->>>>>>> 8b2776ed07e98bd90de4e0b82fc615f85f78bf6a
 }
 header > nav > ul > li > a {
   font-family: 'Alegreya Sans', sans-serif;

@@ -10,7 +10,7 @@ html, body {
 
 .survey-container {
 	min-height: 600px;
-	background: #3b3f45;
+	background: #eeeeee;
 }
 
 body {
@@ -78,3 +78,14 @@ a:hover, a:focus {
 	max-width: 300px;
 	text-align: left;
 }
+
+h1{ color: #e80e8a;}
+.color-gray { color: #4a4a4a; }
+.color-gray--light { color: #cccccc; }
+
+.fs-fields input{
+	background-color: #fff;
+	color: #cccccc;
+}
+
+.fs-progress{ background-color: #4a4a4a!important;}

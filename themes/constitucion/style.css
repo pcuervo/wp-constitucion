@@ -3021,6 +3021,33 @@ select[multiple].input-lg {
   background-color: #eeeeee;
   font-size: 16px;
 }
+.input-primary {
+  border-bottom: 1px solid #eeeeee;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 0px;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.input-primary::-webkit-input-placeholder {
+  font-style: italic;
+}
+.input-primary:-moz-placeholder {
+  font-style: italic;
+}
+.input-primary::-moz-placeholder {
+  font-style: italic;
+}
+.input-primary:-ms-input-placeholder {
+  font-style: italic;
+}
+.input--search {
+  border: 0px;
+  background-color: #eeeeee;
+  border-radius: 0px;
+}
 .btn {
   display: inline-block;
   margin-bottom: 0;
@@ -3133,63 +3160,6 @@ fieldset[disabled] .btn-default.focus {
 .btn-default .badge {
   color: #fff;
   background-color: #333;
-}
-.btn-primary {
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
-}
-.btn-primary:focus,
-.btn-primary.focus {
-  color: #fff;
-  background-color: #286090;
-  border-color: #122b40;
-}
-.btn-primary:hover {
-  color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
-}
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
-  color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
-}
-.btn-primary:active:hover,
-.btn-primary.active:hover,
-.open > .dropdown-toggle.btn-primary:hover,
-.btn-primary:active:focus,
-.btn-primary.active:focus,
-.open > .dropdown-toggle.btn-primary:focus,
-.btn-primary:active.focus,
-.btn-primary.active.focus,
-.open > .dropdown-toggle.btn-primary.focus {
-  color: #fff;
-  background-color: #204d74;
-  border-color: #122b40;
-}
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
-  background-image: none;
-}
-.btn-primary.disabled:hover,
-.btn-primary[disabled]:hover,
-fieldset[disabled] .btn-primary:hover,
-.btn-primary.disabled:focus,
-.btn-primary[disabled]:focus,
-fieldset[disabled] .btn-primary:focus,
-.btn-primary.disabled.focus,
-.btn-primary[disabled].focus,
-fieldset[disabled] .btn-primary.focus {
-  background-color: #337ab7;
-  border-color: #2e6da4;
-}
-.btn-primary .badge {
-  color: #337ab7;
-  background-color: #fff;
 }
 .btn-success {
   color: #fff;
@@ -3513,7 +3483,7 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
 }
-.btn-gray {
+.btn-primary {
   background-color: transparent;
   border: 2px solid #999999;
   text-transform: uppercase;
@@ -3521,6 +3491,31 @@ input[type="button"].btn-block {
   font-weight: lighter;
   font-family: "Alegreya Sans", sans-serif;
   font-size: 16px;
+}
+.btn-primary:hover {
+  background-color: #999999;
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.btn-secondary {
+  background-color: transparent;
+  background-color: #eeeeee;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #4a4a4a;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 14px;
+}
+.btn-secondary:hover {
+  background-color: #777777;
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 .fade {
   opacity: 0;
@@ -6752,6 +6747,11 @@ button.close {
 .padding--bottom--xxlarge {
   padding-bottom: 48px;
 }
+@media (min-width: 768px) {
+  .padding-bottom--large--sm {
+    padding-bottom: 120px;
+  }
+}
 .no-padding--top-bottom {
   padding-top: 0;
   padding-bottom: 0;
@@ -6806,6 +6806,12 @@ button.close {
   .padding--sides--xsm--large {
     padding-left: 25%;
     padding-right: 25%;
+  }
+}
+@media (min-width: 768px) {
+  .padding--sides--large--sm {
+    padding-left: 48px;
+    padding-right: 48px;
   }
 }
 .no-padding--right {
@@ -7017,6 +7023,9 @@ button.close {
 .no-border-radius {
   border-radius: 0px;
 }
+.border-gray {
+  border-bottom: 1px solid #cccccc;
+}
 .color-primary {
   color: #e80e8a;
 }
@@ -7052,6 +7061,9 @@ button.close {
 }
 .bg--light {
   background-color: rgba(255, 255, 255, 0.8);
+}
+.bg-light {
+  background-color: #fff;
 }
 .height-home-video {
   height: 200px;
@@ -7096,6 +7108,12 @@ button.close {
 }
 .question:hover p {
   font-weight: bold;
+}
+@media (min-width: 768px) {
+  .float-top--sm {
+    position: relative;
+    bottom: 70px;
+  }
 }
 @-ms-viewport {
   width: device-width;

@@ -10,9 +10,9 @@ the_title(); ?>
 				<h2 class="[ no-margin-top ]">Instrucciones</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quod minus officia, vitae alias, ex illum perferendis veritatis impedit ullam, provident debitis, consequuntur commodi quo doloribus iste ipsam possimus. Quas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis eligendi exercitationem dolores est doloribus excepturi, facilis assumenda nam velit. Iure harum, aspernatur minus molestiae eos inventore possimus tempora soluta officiis.</p>
 			</div>
-			<div class="[ row ][ margin-top-bottom ]">
+			<div class="[ row ][ margin-top-bottom ][ padding--sides--xsm ]">
 				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ row ]">
+					<div class="[ row ][ margin-bottom ]">
 						<div class="[ col-xs-8 ]">
 							<p class="[ fz-xlarge ]">Paso 1</p>
 							<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -23,7 +23,7 @@ the_title(); ?>
 					</div>
 				</div>
 				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ row ]">
+					<div class="[ row ][ margin-bottom ]">
 						<div class="[ col-xs-8 ]">
 							<p class="[ fz-xlarge ]">Paso 2</p>
 							<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -35,7 +35,7 @@ the_title(); ?>
 				</div>
 				<div class="[ clearfix ][ visible-xs ]"></div>
 				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ row ]">
+					<div class="[ row ][ margin-bottom ]">
 						<div class="[ col-xs-8 ]">
 							<p class="[ fz-xlarge ]">Paso 3</p>
 							<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -46,7 +46,7 @@ the_title(); ?>
 					</div>
 				</div>
 				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ row ]">
+					<div class="[ row ][ margin-bottom ]">
 						<div class="[ col-xs-8 ]">
 							<p class="[ fz-xlarge ]">Paso 4</p>
 							<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -163,23 +163,30 @@ the_title(); ?>
 
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+	<div class="modal-dialog [ margin-top--xlarge ][ padding--sides--xsm--large ]">
+		<!-- Modal content-->
+		<div class="[ row ]">
+			<div class="[ col-xs-12  col-sm-10 col-sm-offset-1 ]">
+				<div class="modal-content [ no-border-radius ]">
+					<div class="modal-body [ padding--bottom--xxlarge padding--sides padding--sides--large--sm ]">
+					<!-- gif -->
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
+						<h2 class="[ text-center ][ text-uppercase ]">¡Gracias por participar!</h2>
+						<p class="[ text-center ][ text-uppercase ]">Escribe tu nombre y apellido para obtener tu certificado de participación</p>
+						<form class="[ row ]">
+							<div class="[ col-xs-12 col-sm-6  padding--right--small--sm ]">
+								<input type="text" class="form-control [ margin-bottom ][ input--search ][ width-50 ] " placeholder="NOMBRES">
+							</div>
+							<div class="[ col-xs-12 col-sm-6 padding--left--small--sm ]">
+								<input type="text" class="form-control [ margin-bottom ][ input--search ][ width-50 ] " placeholder="APELLIDOS">
+							</div>
+							<button type="submit" class="[ btn btn-secondary color-gray ][ pull-right ]">enviar</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <?php get_footer(); ?>

@@ -147,8 +147,6 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	require_once('inc/pages.php');
 
 
-	require_once('inc/functions-js-footer.php');
-
 
 // MODIFICAR EL MAIN QUERY ///////////////////////////////////////////////////////////
 

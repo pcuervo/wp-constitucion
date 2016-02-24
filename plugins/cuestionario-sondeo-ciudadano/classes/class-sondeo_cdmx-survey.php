@@ -106,11 +106,11 @@ class Sondeo_CDMX_Survey {
 						</li>
 						<?php foreach ( $questions as $key => $question_with_answers ) : ?>
 							<li data-input-trigger>
-								<label class="fs-field-label fs-anim-upper" for="q<?php echo $next_question ?>"><?php echo $question_with_answers['question'] ?></label>
+								<label class="fs-field-label fs-anim-upper" for="q<?php echo $next_question ?>" data-question=""><?php echo $question_with_answers['question'] ?></label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 									<?php $current_answer = 1; ?>
 									<?php foreach ( $question_with_answers['answers'] as $key => $answer ) : ?>
-										<span><input id="q<?php echo $next_question ?>-<?php echo $current_answer ?>" name="q<?php echo $next_question ?>" type="radio" value="<?php echo $answer ?>"/><label for="q<?php echo $next_question ?>-<?php echo $current_answer ?>" class="radio-conversion"><?php echo $answer ?></label></span>
+										<span><input id="q<?php echo $next_question ?>-<?php echo $current_answer ?>" name="q<?php echo $next_question ?>" type="radio" value="<?php echo $answer['id'] ?>" /><label for="q<?php echo $next_question ?>-<?php echo $current_answer ?>" class="radio-conversion"><?php echo $answer['answer'] ?></label></span>
 									<?php $current_answer += 1; endforeach; ?>
 								</div>
 							</li>
@@ -171,22 +171,27 @@ class Sondeo_CDMX_Survey {
 		global $wpdb;
 		$questions = array();
 		$questions_results = $wpdb->get_results('
-			SELECT * FROM ' .
+			SELECT q.id as question_id, question, question_type, a.id AS answer_id, answer FROM ' .
 			$wpdb->prefix . 'sondeo_cdmx_questions q
 			INNER JOIN ' . $wpdb->prefix . 'sondeo_cdmx_answers a
 			ON q.id = a.sondeo_cdmx_question_id'
 		);
 		$current_question_id = -1;
 		foreach ( $questions_results as $key => $result ) {
-			if( $current_question_id != $result->sondeo_cdmx_question_id ){
-				$current_question_id = $result->sondeo_cdmx_question_id;
+			if( $current_question_id != $result->question_id ){
+				$current_question_id = $result->question_id;
 				$questions[$current_question_id] = array(
+					'id'			=> $result->question_id,
 					'question'		=> $result->question,
 					'question_type' => $result->question_type,
 					'answers'		=> array(),
 					);
 			}
-			array_push( $questions[$current_question_id]['answers'], $result->answer );
+			$answer_arr = array(
+				'id'		=> $result->answer_id,
+				'answer' 	=> $result->answer,
+			);
+			array_push( $questions[$current_question_id]['answers'], $answer_arr );
 		}
 
 		if( 'array' == $format ){

@@ -2,8 +2,14 @@
 // Header classes
 // --------------------------------------------------
 
-// Header -- 2
+// Header Desktop 2
 // --------------------------------------------------
+header{
+	.affix;
+	.bg-light;
+	.width-100;
+	z-index: 1050;
+}
 
 header li {
 	text-decoration: none;
@@ -66,6 +72,10 @@ header ul.submenu{
 // menu mobile
 // --------------------------------------------------
 
+ul.menu-mobile{
+	padding-left: 0px !important;
+}
+
 ul.menu-mobile li {
 	list-style: none;
 	display: block;
@@ -73,8 +83,32 @@ ul.menu-mobile li {
 }
 
 ul.menu-mobile li:hover {
-	.bg-primary;
-	.color-light--cdmx;
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		.transition;
+		.bg-primary;
+		.color-light-cdmx;
+	}
+}
+
+ul.menu-mobile li:hover a {
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		.transition;
+		.color-light-cdmx;
+	}
+}
+
+ul.menu-mobile > li:last-child {
+	background-color: lighten(@gray-light,42%);
+	font-family: 'Alegreya Sans', sans-serif;
+	font-style: italic;
+    font-weight: 100;
+ 	.color-gray;
 }
 
 ul.menu-mobile >li > a {
@@ -83,21 +117,6 @@ ul.menu-mobile >li > a {
     letter-spacing: .1em;
     text-decoration: none;
     color: lighten(@gray-light,5%);
-
  }
 
-
-ul.menu-mobile > li:last-child {
-	background-color: lighten(@gray-light,42%);
-	font-family: 'Alegreya Sans', sans-serif;
-	font-style: italic;
-    font-weight: 100;
- 	.color-gray;
- 	&,
-	&:hover,
-	&:focus,
-	&:active {
-	.color-light;
-	}
-}
 

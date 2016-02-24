@@ -197,6 +197,7 @@
 .margin-top--large{ margin-top: (@margin-base*2); }
 .margin-top--xlarge{ margin-top: (@margin-base*4); }
 .margin-top--xxlarge{ margin-top: (@margin-base*8); }
+.margin-top-10{ margin-top: 10%; }
 
 .no-margin-top-bottom{ margin-top:0; margin-bottom:0; }
 .margin-top-bottom{ margin-top: (@margin-base); margin-bottom: (@margin-base); }
@@ -238,7 +239,7 @@
 // -------------------------
 .color-primary { color: @primary; }
 .color-gray { color: @gray; }
-.color-light--cdmx { color: @light-cdmx; }
+.color-light-cdmx { color: @light-cdmx; }
 .color-light { color: @light; }
 .color-youtube{color: @youtube;}
 
@@ -298,4 +299,21 @@
 		position: relative;
 		bottom: 70px;
 	 }
+}
+
+.content-user{
+	img:first-child {
+		.margin-bottom;
+		.width-100;
+	}
+	& h2{
+		.no-margin-top;
+		.color-primary;
+	}
+	& p:nth-child(3){
+		.color-primary;
+	}
+	& img + p{
+		display: inline;
+	}
 }

@@ -47,6 +47,20 @@ function imgToSvg(){
 } //imgToSvg
 
 
+<<<<<<< HEAD
+/*------------------------------------*\
+	ANIMATED STICKY HEADER 
+
+$(window).scroll(function() {
+	if ($(this).scrollTop() > 1){  
+	$('header').addClass("sticky");
+	}
+	else{
+	$('header').removeClass("sticky");
+	}
+});
+\*------------------------------------*/
+=======
 //Chart.js
 //#piecanvas
 var ctx = $("#pie-data").get(0).getContext("2d");
@@ -104,3 +118,4 @@ var data = {
 };
 //draw¡
 var barChart = new Chart(ctx).Bar(data);
+>>>>>>> a422377c21c5b48ac9a4e413012ce9950bb13ea7

@@ -88,7 +88,7 @@ var ctx = $("#bar-data").get(0).getContext("2d");
 //pie chart data
 //sum of values = 360
 var data = {
-	labels: ['Italy', 'UK', 'USA', 'Germany', 'France', 'Japan'],
+	labels: ['dato', 'dato', 'dato', 'dato', 'dato', 'dato'],
 	datasets: [
 		{
 			label: '2010 customers #',

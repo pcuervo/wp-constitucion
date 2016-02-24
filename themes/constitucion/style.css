@@ -6699,6 +6699,9 @@ button.close {
 .height-40 {
   height: 40px;
 }
+.height-200 {
+  height: 200px;
+}
 .no-padding {
   padding: 0 !important;
 }
@@ -6749,7 +6752,7 @@ button.close {
 }
 @media (min-width: 768px) {
   .padding-bottom--large--sm {
-    padding-bottom: 120px;
+    padding-bottom: 60px;
   }
 }
 .no-padding--top-bottom {
@@ -7037,6 +7040,9 @@ button.close {
 }
 .color-light {
   color: #fff;
+}
+.color-youtube {
+  color: #c4302b;
 }
 .bg-primary {
   background-color: #e80e8a;

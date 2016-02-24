@@ -103,6 +103,7 @@
 
 .height-100   { height: 100%;}
 .height-40    { height: 40px;}
+.height-200   { height: 200px;}
 
 // Padding
 // -------------------------
@@ -127,7 +128,7 @@
 .padding--bottom--xlarge{ padding-bottom: (@padding-base-vertical*6); }
 .padding--bottom--xxlarge{ padding-bottom: (@padding-base-vertical*8); }
 
-.padding-bottom--large--sm{ @media (min-width: @screen-sm){ padding-bottom: (@padding-base-vertical*20); } }
+.padding-bottom--large--sm{ @media (min-width: @screen-sm){ padding-bottom: (@padding-base-vertical*10); } }
 
 .no-padding--top-bottom{ padding-top: 0; padding-bottom: 0; }
 .padding--top-bottom{ padding-top: (@padding-base-vertical*2); padding-bottom: (@padding-base-vertical*2); }
@@ -239,6 +240,7 @@
 .color-gray { color: @gray; }
 .color-light--cdmx { color: @light-cdmx; }
 .color-light { color: @light; }
+.color-youtube{color: @youtube;}
 
 
 //bg-color
@@ -259,7 +261,7 @@
 .height-home-video{
   height: 200px;
     @media (min-width: @screen-sm-min){ height: 400px; }
-    @media (min-width: @screen-md-min){ height: 500px; }  
+    @media (min-width: @screen-md-min){ height: 500px; }
 }
 
 .rectangle--light {

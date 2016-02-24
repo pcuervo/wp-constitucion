@@ -37,7 +37,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		// scripts
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
-		// wp_enqueue_script( 'chart', JSPATH.'Chart.js', array('jquery'), '1.0', false );
+		wp_enqueue_script( 'chart', JSPATH.'Chart.js', array('jquery'), '1.0', false );
 
 
 		// localize scripts

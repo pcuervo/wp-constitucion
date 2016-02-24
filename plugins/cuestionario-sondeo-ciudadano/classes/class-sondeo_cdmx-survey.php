@@ -44,7 +44,7 @@ class Sondeo_CDMX_Survey {
 	 * Load scripts in specific pages
 	 */
 	public function load_script_is_page(){
-		if( is_page( 'test' ) ){
+		if( is_page( 'test' )  ){
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_and_localize_scripts' ) );
 		}
 	}
@@ -104,22 +104,17 @@ class Sondeo_CDMX_Survey {
 								<option value="xochimilco" >Xochimilco</option>
 							</select>
 						</li>
-						<?php 
-							foreach ( $questions as $key => $question_with_answers ) : ?>
-								<li data-input-trigger>
-									<label class="fs-field-label fs-anim-upper" for="q<?php echo $next_question ?>"><?php echo $question_with_answers['question'] ?></label>
-									<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-										<?php foreach ( $question_with_answers['answers'] as $key => $answer ) : 
-											$current_answer = 1;
-										?>
-											<span><input id="q<?php echo $next_question ?>-<?php echo $current_answer ?>" name="q<?php echo $next_question ?>" type="radio" value="<?php echo $answer ?>"/><label for="q<?php echo $next_question ?>-<?php echo $current_answer ?>" class="radio-conversion"><?php echo $answer ?></label></span>
-										<?php endforeach; ?>
-									</div>
-								</li>
-							<?php
-								$next_question += 1; 
-							endforeach; 
-						?>
+						<?php foreach ( $questions as $key => $question_with_answers ) : ?>
+							<li data-input-trigger>
+								<label class="fs-field-label fs-anim-upper" for="q<?php echo $next_question ?>"><?php echo $question_with_answers['question'] ?></label>
+								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+									<?php $current_answer = 1; ?>
+									<?php foreach ( $question_with_answers['answers'] as $key => $answer ) : ?>
+										<span><input id="q<?php echo $next_question ?>-<?php echo $current_answer ?>" name="q<?php echo $next_question ?>" type="radio" value="<?php echo $answer ?>"/><label for="q<?php echo $next_question ?>-<?php echo $current_answer ?>" class="radio-conversion"><?php echo $answer ?></label></span>
+									<?php $current_answer += 1; endforeach; ?>
+								</div>
+							</li>
+						<?php $next_question += 1; endforeach; ?>
 					</ol><!-- /fs-fields -->
 					<button class="fs-submit" type="submit">Enviar respuestas</button>
 				</form><!-- /fs-form -->

@@ -7228,8 +7228,8 @@ button.close {
   height: auto;
 }
 .icon--iconed {
-  width: 20px !important;
-  height: 20px;
+  width: 30px !important;
+  height: 30px;
 }
 /*------------------------------------*\
   #COLOR
@@ -7281,7 +7281,7 @@ header li {
   text-decoration: none;
   color: #fff;
 }
-header > nav > li > a {
+header > nav > ul > li {
   font-family: 'Alegreya Sans', sans-serif;
   text-decoration: none;
   display: inline;

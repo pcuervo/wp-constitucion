@@ -24,6 +24,7 @@ the_title(); ?>
 					<div class="[ col-xs-6 ]">
 						<div class="[ margin-bottom ]">
 							<div class="[ inline-block ][ margin-sides--small ]">
+								<!-- Charts.js -->
 								<canvas id="mycanvas" width="130%" height="130%"></canvas>
 							</div>
 						</div>

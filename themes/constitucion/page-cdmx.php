@@ -25,7 +25,8 @@ the_title(); ?>
 						<div class="[ margin-bottom ]">
 							<div class="[ inline-block ][ margin-sides--small ]">
 								<!-- Charts.js -->
-								<canvas id="mycanvas" width="130%" height="130%"></canvas>
+								<canvas id="pie-data" width="100%" height="100%"></canvas>
+								<canvas id="bar-data" width="300px" height="300px"></canvas>
 							</div>
 						</div>
 					</div>

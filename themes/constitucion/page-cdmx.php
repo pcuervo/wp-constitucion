@@ -4,7 +4,7 @@ the_title(); ?>
 
 
 <?php get_sidebar(); ?>
-<section class="[ bg-image rectangle-small ][ margin-bottom--large ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/edificios.png');">
+<section class="[ bg-image rectangle-small ][ margin-top-10 margin-bottom--large ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/edificios.png');">
 	<div class="[ bg-dark--opacity width-100 height-100 ]">
 		<h2 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ fw-semibold ]">Ciudad de México</h2>
 	</div>
@@ -25,7 +25,8 @@ the_title(); ?>
 						<div class="[ margin-bottom ]">
 							<div class="[ inline-block ][ margin-sides--small ]">
 								<!-- Charts.js -->
-								<canvas id="mycanvas" width="130%" height="130%"></canvas>
+								<canvas id="pie-data" width="200px" height="200px"></canvas>
+								<canvas id="bar-data" width="200px" height="200px"></canvas>
 							</div>
 						</div>
 					</div>

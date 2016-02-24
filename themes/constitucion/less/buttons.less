@@ -66,9 +66,6 @@
 .btn-default {
   .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
 }
-.btn-primary {
-  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
-}
 // Success appears as green
 .btn-success {
   .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
@@ -86,12 +83,24 @@
   .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
 }
 
-.btn-play, .btn-play img {
-  width: 80px;
-  height: 80px;
+.btn-play {
+  width: 40px;
+  height: 40px;
   border-radius: 100px;
   z-index: 1000;
-  .center-full;
+  .no-padding;
+  @media (max-width: @screen-sm-max){
+    position: absolute;
+    bottom: 10px;
+  }
+  @media (min-width: @screen-sm-min){
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    z-index: 1000;
+    .center-full;
+  }
+
 }
 
 // Link buttons
@@ -172,7 +181,7 @@ input[type="button"] {
   }
 }
 
-.btn-gray{
+.btn-primary{
   background-color: transparent;
   border: 2px solid @gray-xlight;
   text-transform: uppercase;
@@ -180,4 +189,24 @@ input[type="button"] {
   font-weight: lighter;
   font-family: "Alegreya Sans", sans-serif;
   font-size: 16px;
+  &:hover{
+    background-color: @gray-xlight;
+    color: @light;
+    .transition;
+  }
+}
+
+.btn-secondary{
+  background-color: transparent;
+  background-color: @gray-lighter;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: @gray;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 14px;
+  &:hover{
+    background-color: @gray-light;
+    color: @light;
+    .transition;
+  }
 }

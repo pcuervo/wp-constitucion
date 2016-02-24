@@ -6,7 +6,7 @@
 						<span class="[ lead text-italic ]">punto de encuentro</span> 
 					</div>
 					<button class="[ btn btn-play ][ center-full ]" onclick="playPause()"><img class="[ width-100 ]" src="<?php echo THEMEPATH; ?>images/play.png"></button>
-					<video width="100%" height="100%" controls></video>
+					<video width="100%" height="100%"></video>
 				</div>
 			</div>
 		</section>

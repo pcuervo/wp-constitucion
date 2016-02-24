@@ -73,17 +73,17 @@ class Sondeo_CDMX_Survey {
 		?>
 		<div class="[ survey-container ]">
 			<div class="[ fs-form-wrap ][ padding--top--large ]" id="fs-form-wrap">
-				<div class="fs-title">
+				<div class="fs-title [ container ][ text-center ]">
 					<h1>Sondeo CDMX</h1>
 				</div>
 				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
 					<ol class="fs-fields">
 						<li>
-							<label class="fs-field-label fs-anim-upper" for="q1" data-info="Este campo es opcional. Recuerda que tu participación puede ser anónima.">¿Cómo te llamas?</label>
+							<label class="fs-field-label fs-anim-upper [ color-gray ]" for="q1" data-info="Este campo es opcional. Recuerda que tu participación puede ser anónima.">¿Cómo te llamas?</label>
 							<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Juan Pérez"/>
 						</li>
 						<li>
-							<label class="fs-field-label fs-anim-upper">¿En qué delegación vives?</label>
+							<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En qué delegación vives?</label>
 							<select class="cs-select cs-skin-boxes fs-anim-lower" required="required">
 								<option value="" disabled selected>Selecciona tu delgación</option>
 								<option value="alvaro-obregon">Álvaro Obregón</option>
@@ -106,7 +106,7 @@ class Sondeo_CDMX_Survey {
 						</li>
 						<?php foreach ( $questions as $key => $question_with_answers ) : ?>
 							<li data-input-trigger>
-								<label class="fs-field-label fs-anim-upper" for="q<?php echo $next_question ?>" data-question=""><?php echo $question_with_answers['question'] ?></label>
+								<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="q<?php echo $next_question ?>" data-question="<?php echo $question_with_answers['question_id'] ?>"><?php echo $question_with_answers['question'] ?></label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 									<?php $current_answer = 1; ?>
 									<?php foreach ( $question_with_answers['answers'] as $key => $answer ) : ?>

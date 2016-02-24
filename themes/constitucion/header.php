@@ -97,32 +97,39 @@
 									<a href="<?php echo site_url('/'); ?> "><img class="[ width-30 ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png"></a>
 								</div>
 								<div class="[ col-xs-2 ][ text-center ]">
-									<a type="button" data-toggle="modal" data-target="#myModal"><img src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>	
+									<a type="button" data-toggle="modal" data-target="#modal-menu"><img src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>	
 								</div>
 							</div>	
 						</div>
 					</div>
 					<!-- MENÚ MOVIL -->
-					<div class="[ width-100 ][ bg-light-cdmx ][ text-center ][ no-padding ][ hidden ]">
-						<div class="[ container ]">
-							<div class="[ row ][ padding--top ]">
-								<div class="[ col-xs-10 ]">
-									<a href="<?php echo site_url('/'); ?> "><img class="[ width-30 ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png"></a>
+					<div class="modal fade" id="modal-menu" tabindex="-1" role="dialog">
+						<div class="[ modal-dialog ]">
+							<div class="[ modal-content ][ width-100 ]">
+								<div class="[ bg-light-cdmx ][ text-center ]">
+									<div class="[ container ]">
+										<div class="[ row ][ padding--top ]">
+											<div class="[ col-xs-10 ]">
+												<a href="<?php echo site_url('/'); ?> "><img class="[ width-30 ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png"></a>
+											</div>
+											<div class="[ col-xs-2 ][ text-center ]">
+												<a type="button" data-toggle="modal" data-target="#myModal"><img src="<?php echo THEMEPATH; ?>icons/close.svg"></a>	
+											</div>
+										</div>	
+									</div>
+									<ul class="[ menu-mobile ]">
+										<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
+										<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
+										<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php--></li>
+										<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
+										<li><a href="<?php echo site_url('/contacto/'); ?>">#SoyCDMX</a><!-- Contacto - page-contacto.php--></li>
+									</ul>
+									<img class="[ width-60 ][ margin-top--large ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png">
 								</div>
-								<div class="[ col-xs-2 ][ text-center ]">
-									<a type="button" data-toggle="modal" data-target="#myModal"><img src="<?php echo THEMEPATH; ?>icons/close.svg"></a>	
-								</div>
-							</div>	
+							</div>
 						</div>
-						<ul class="[ menu-mobile ]">
-							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
-							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
-							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php--></li>
-							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-							<li><a href="<?php echo site_url('/contacto/'); ?>">#SoyCDMX</a><!-- Contacto - page-contacto.php--></li>
-						</ul>
-						<img class="[ width-60 ][ margin-top--large ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png">
 					</div>
+					
 
 				</nav>
 			</header>

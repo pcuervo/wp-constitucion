@@ -7468,6 +7468,12 @@ ul.menu-mobile > li:last-child {
   font-weight: 100;
   color: #4a4a4a;
 }
+ul.menu-mobile > li:last-child,
+ul.menu-mobile > li:last-child:hover,
+ul.menu-mobile > li:last-child:focus,
+ul.menu-mobile > li:last-child:active {
+  color: #fff;
+}
 footer {
   padding-top: 24px;
   padding-bottom: 24px;

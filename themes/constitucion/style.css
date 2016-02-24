@@ -5877,7 +5877,10 @@ button.close {
   height: 150px;
 }
 .rectangle {
-  height: 500px;
+  height: 300px;
+}
+.height-line {
+  height: 30px;
 }
 .modal-open {
   overflow: hidden;
@@ -6779,6 +6782,16 @@ button.close {
     padding-right: 6px;
   }
 }
+@media (max-width: 768px) {
+  .padding--right--small--xs {
+    padding-right: 6px;
+  }
+}
+@media (max-width: 768px) {
+  .no-padding--right--xs {
+    padding-right: 0px;
+  }
+}
 .no-padding--left {
   padding-left: 0;
 }
@@ -6800,6 +6813,16 @@ button.close {
 @media (min-width: 768px) {
   .padding--left--small--sm {
     padding-left: 6px;
+  }
+}
+@media (max-width: 768px) {
+  .padding--left--small--xs {
+    padding-left: 6px;
+  }
+}
+@media (max-width: 768px) {
+  .no-padding--left--xs {
+    padding-left: 0px;
   }
 }
 .padding--square {

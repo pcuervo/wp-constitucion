@@ -12,14 +12,18 @@
 	</section>
 	<section class="[ container ]">
 		<div class="[ row ][ margin-bottom--large ]">
-			<div class="[ col-xs-5 no-padding--right ]">
-				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>/images/edificios.png">
-			</div>
+			<a href="<?php echo site_url('/noticias-single/'); ?>">
+				<div class="[ col-xs-5 no-padding--right ]">
+					<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>/images/edificios.png">
+				</div>
+			</a>
 			<div class="[ col-xs-7 ]">
 				<h2 class="[ no-margin-top ][ color-primary ][ fw-semibold ]">Alequam erat volupat</h2>
 				<p class="[ color-primary ]">19 febrero 2016</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias soluta praesentium, earum placeat, quo quas est veniam excepturi quos porro nesciunt.</p>
-				<p class="[ fz-small ][ color-primary ]">Leer más >></p>
+				<a href="<?php echo site_url('/noticias-single/'); ?>">
+					<p class="[ fz-small ][ color-primary ]">Leer más >></p>
+				</a>
 			</div>
 		</div>
 		<div class="[ row ][ margin-bottom--large ]">

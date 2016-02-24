@@ -27,7 +27,7 @@ class Sondeo_CDMX_Survey {
 	 */
 	private function init() {
 		$this->hooks();
-		
+
 		if( ! is_admin() ){
 			add_shortcode( 'show-survey', array( $this, 'display_survey' ) );
 		}
@@ -44,7 +44,7 @@ class Sondeo_CDMX_Survey {
 	 * Load scripts in specific pages
 	 */
 	public function load_script_is_page(){
-		if( is_page( 'test' )  ){
+		if( is_page( 'participa' )  ){
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_and_localize_scripts' ) );
 		}
 	}
@@ -134,9 +134,9 @@ class Sondeo_CDMX_Survey {
 			'question'		=> $question,
 			'question_type' => $question_type
 		);
-		$question_inserted = $wpdb->insert( 
-			$wpdb->prefix . 'sondeo_cdmx_questions', 
-			$question_data, 
+		$question_inserted = $wpdb->insert(
+			$wpdb->prefix . 'sondeo_cdmx_questions',
+			$question_data,
 			array( '%s', '%s' )
 		);
 		if( $question_inserted ){
@@ -156,9 +156,9 @@ class Sondeo_CDMX_Survey {
 			'sondeo_cdmx_question_id'	=> $question_id,
 			'answer' 					=> $answer
 		);
-		$answer_inserted = $wpdb->insert( 
-			$wpdb->prefix . 'sondeo_cdmx_answers', 
-			$answer_data, 
+		$answer_inserted = $wpdb->insert(
+			$wpdb->prefix . 'sondeo_cdmx_answers',
+			$answer_data,
 			array( '%d', '%s' )
 		);
 		if( $answer_inserted ){
@@ -173,7 +173,7 @@ class Sondeo_CDMX_Survey {
 		$questions_results = $wpdb->get_results('
 			SELECT * FROM ' .
 			$wpdb->prefix . 'sondeo_cdmx_questions q
-			INNER JOIN ' . $wpdb->prefix . 'sondeo_cdmx_answers a 
+			INNER JOIN ' . $wpdb->prefix . 'sondeo_cdmx_answers a
 			ON q.id = a.sondeo_cdmx_question_id'
 		);
 		$current_question_id = -1;

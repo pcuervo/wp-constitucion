@@ -71,8 +71,8 @@ the_title(); ?>
 			</div>
 		</div>
 		<div>
-			<p class="[ inline-block middle ][ text-uppercase ]">Descarga los documentos oficiales aquí 	</p>
-			<img class="[ svg icon icon--iconed--xlarge icon--thickness-2 icon--fill ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/file-acrobat.svg">
+			<p class="[ inline-block middle ][ text-uppercase ]">Descarga los documentos oficiales aquí</p>
+			<img class="[ svg icon icon--iconed icon--thickness-1 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/file-acrobat.svg">
 		</div>
 	</section>
 </article>

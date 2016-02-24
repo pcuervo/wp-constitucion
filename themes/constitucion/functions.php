@@ -23,7 +23,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	define( 'CSSPATH', get_template_directory_uri() . '/css/' );
 
 	define( 'THEMEPATH', get_template_directory_uri() . '/' );
-	
+
 	define( 'SITEURL', site_url('/') );
 
 
@@ -37,6 +37,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		// scripts
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
+		// wp_enqueue_script( 'chart', JSPATH.'Chart.js', array('jquery'), '1.0', false );
 
 
 		// localize scripts
@@ -74,10 +75,10 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 
 	add_action( 'after_setup_theme', function () {
-		
+
 		$frontPage = get_page_by_path('home', OBJECT);
 		$blogPage  = get_page_by_path('noticias', OBJECT);
-		
+
 		if ( $frontPage AND $blogPage ){
 			update_option('show_on_front', 'page');
 			update_option('page_on_front', $frontPage->ID);
@@ -117,9 +118,9 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	}
 
 	if ( function_exists('add_image_size') ){
-		
+
 		// add_image_size( 'size_name', 200, 200, true );
-		
+
 		// cambiar el tamaño del thumbnail
 		/*
 		update_option( 'thumbnail_size_h', 100 );
@@ -144,8 +145,11 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 
 	require_once('inc/pages.php');
-	
-	
+
+
+	require_once('inc/functions-js-footer.php');
+
+
 // MODIFICAR EL MAIN QUERY ///////////////////////////////////////////////////////////
 
 

@@ -14,7 +14,7 @@
 		<!-- Favicon - generated with http://www.favicomatic.com/ -->
 		<link rel="shortcut icon" href="<?php echo THEMEPATH; ?>images/favicon.ico">
 		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo THEMEPATH; ?>style.css">
 		<!-- Google font(s) -->
 		<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700,800,300' rel='stylesheet' type='text/css'>

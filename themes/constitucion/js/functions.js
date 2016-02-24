@@ -47,12 +47,12 @@ function imgToSvg(){
 } //imgToSvg
 
 
-<<<<<<< HEAD
+
 /*------------------------------------*\
-	ANIMATED STICKY HEADER 
+	ANIMATED STICKY HEADER
 
 $(window).scroll(function() {
-	if ($(this).scrollTop() > 1){  
+	if ($(this).scrollTop() > 1){
 	$('header').addClass("sticky");
 	}
 	else{
@@ -60,7 +60,7 @@ $(window).scroll(function() {
 	}
 });
 \*------------------------------------*/
-=======
+
 //Chart.js
 //#piecanvas
 var ctx = $("#pie-data").get(0).getContext("2d");
@@ -117,5 +117,4 @@ var data = {
 	]
 };
 //draw¡
-var barChart = new Chart(ctx).Bar(data);
->>>>>>> a422377c21c5b48ac9a4e413012ce9950bb13ea7
+var BARchart = new Chart(ctx).Bar(data);

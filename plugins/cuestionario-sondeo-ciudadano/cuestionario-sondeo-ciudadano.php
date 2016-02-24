@@ -134,11 +134,12 @@ class Sondeo_CDMX {
 	 */
 	private function includes() {
 
-		
+		require_once( SONDEO_CDMX_PLUGIN_DIR . 'classes/class-sondeo_cdmx-survey.php' );
+
 		if ( is_admin() ) {
-			require_once( SONDEO_CDMX_PLUGIN_DIR . 'classes/class-sondeo_cdmx-survey.php' );
 			require_once( SONDEO_CDMX_PLUGIN_DIR . 'classes/class-sondeo_cdmx-settings.php' );
 		}
+
 	}
 
 	/**
@@ -146,6 +147,7 @@ class Sondeo_CDMX {
 	 */
 	private function init() {
 		
+		Sondeo_CDMX_Survey::get();
 		if ( is_admin() ) {
 			// Setup settings
 			Sondeo_CDMX_Settings::get();

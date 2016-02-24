@@ -1,36 +1,18 @@
-$ = jQuery.noConflict();
+(function() {
+    var formWrap = document.getElementById( 'fs-form-wrap' );
 
-$(document).ready( function(){
+    [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {    
+        new SelectFx( el, {
+            stickyPlaceholder: false,
+            onChange: function(val){
+                document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+            }
+        });
+    } );
 
-    $('.js-save-question').hide();
-    $('#added-answers').hide();
-    $('[data-parsley-question]').parsley();
-    $('[data-parsley-answer]').parsley();
-
-});
-
-$(window).load( function() {
-
-    $('.js-add-answer-row').click( function( e ){
-        e.preventDefault();
-
-        if( ! $('[data-parsley-answer]').parsley().validate() ) return;
-
-        addAnswer( $('#new-answer').val() );
-        if( $('.current-answers li').length > 0 ) $('#added-answers').show();
-
-        if( $('.current-answers li').length > 1 ) $('.js-save-question').show();
-
-        $('#new-answer').val('').focus();
-    });
-
-});
-
-
-
-function addAnswer( answer ){
-    var currentAnswer = $('.current-answers li').length + 1;
-    var inputHTML = '<input type="hidden" name="answers[]" value="' + answer + '">'
-    $('#added-answers form').append( inputHTML );
-    $('.current-answers').append('<li>' + answer + '</li>');
-}
+    new FForm( formWrap, {
+        onReview : function() {
+            classie.add( document.body, 'overview' ); // for demo purposes only
+        }
+    } );
+})();

@@ -42,8 +42,8 @@ class Sondeo_CDMX_Settings {
 	 */
 	function enqueue_and_localize_scripts(){
 		wp_enqueue_script( 'plugins', SONDEO_CDMX_PLUGIN_URL . 'inc/js/plugins.js', array('jquery') );
-		wp_enqueue_script( 'sondeo_cdmx_functions', SONDEO_CDMX_PLUGIN_URL . 'inc/js/functions.js', array('jquery') );
-		wp_localize_script( 'sondeo_cdmx_functions', 'ajax_url', admin_url('admin-ajax.php') );
+		wp_enqueue_script( 'sondeo_cdmx_admin_functions', SONDEO_CDMX_PLUGIN_URL . 'inc/js/admin-functions.js', array('jquery') );
+		wp_localize_script( 'sondeo_cdmx_admin_functions', 'ajax_url', admin_url('admin-ajax.php') );
 	}
 
 	/**

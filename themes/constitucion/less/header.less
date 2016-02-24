@@ -2,42 +2,6 @@
 // Header classes
 // --------------------------------------------------
 
-//header li {
-//    text-decoration: none;
-//    display:inline;
-//    .color-light;
-//}
-//
-//header li a:hover {
-//	text-decoration: none;
-//	.transition;
-//    .color-primary;
-//
-//}
-//
-//
-//header > nav > ul > li{
-//	border-left: 1px solid @gray;
-//	border-bottom: 1px solid @gray;
-//	padding: 1.5% 2.5%;
-//}
-//
-//header > nav > ul > li:last-child {
-//	border-right: 1px solid @gray;
-//}
-//
-//header > nav > ul >li > a {
-//    font-family: 'Alegreya Sans', sans-serif;
-//    font-weight: bold;
-//    text-decoration: none;
-//    .color-gray;
-// }
-//
-////ul.submenu{
-//	.hidden;
-//}
-
-
 // Header -- 2
 // --------------------------------------------------
 
@@ -50,7 +14,7 @@ header ul{
 	.margin-top;
 }
 
-header li a:hover, header li a:active {
+header li a:hover {
 	text-decoration: none;
 	.transition;
     .color-primary;
@@ -70,5 +34,64 @@ header > nav > ul >li > a {
 
 ul.submenu{
 	.hidden;
+}
+
+
+// Header -- home
+// --------------------------------------------------
+
+
+header > nav > ul.home > li{
+	border-left: 1px solid @gray;
+	border-bottom: 1px solid @gray;
+	padding: 1.5% 2.5%;
+}
+
+header > nav > ul.home > li:last-child {
+	border-right: 1px solid @gray;
+}
+
+header > nav > ul.home >li > a {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    .color-gray;
+ }
+
+header ul.submenu{
+	.hidden;
+}
+
+
+// menu mobile
+// --------------------------------------------------
+
+ul.menu-mobile li {
+	list-style: none;
+	display: block;
+	.padding;
+}
+
+ul.menu-mobile li:hover {
+	.bg-primary;
+	.color-light--cdmx;
+}
+
+ul.menu-mobile >li > a {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-decoration: none;
+    color: lighten(@gray-light,5%);
+
+ }
+
+
+ul.menu-mobile > li:last-child {
+	background-color: lighten(@gray-light,42%);
+	font-family: 'Alegreya Sans', sans-serif;
+	font-style: italic;
+    font-weight: 100;
+ 	.color-gray;
 }
 

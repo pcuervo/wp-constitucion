@@ -2,34 +2,64 @@
 // Header classes
 // --------------------------------------------------
 
+//header li {
+//    text-decoration: none;
+//    display:inline;
+//    .color-light;
+//}
+//
+//header li a:hover {
+//	text-decoration: none;
+//	.transition;
+//    .color-primary;
+//
+//}
+//
+//
+//header > nav > ul > li{
+//	border-left: 1px solid @gray;
+//	border-bottom: 1px solid @gray;
+//	padding: 1.5% 2.5%;
+//}
+//
+//header > nav > ul > li:last-child {
+//	border-right: 1px solid @gray;
+//}
+//
+//header > nav > ul >li > a {
+//    font-family: 'Alegreya Sans', sans-serif;
+//    font-weight: bold;
+//    text-decoration: none;
+//    .color-gray;
+// }
+//
+////ul.submenu{
+//	.hidden;
+//}
+
+
+// Header -- 2
+// --------------------------------------------------
 
 header li {
-    text-decoration: none;
-    display:inline;
-    .color-light;
+	text-decoration: none;
+	display:inline;
 }
 
-header li a:hover {
+header ul{
+	.margin-top;
+}
+
+header li a:hover, header li a:active {
 	text-decoration: none;
 	.transition;
     .color-primary;
-
-}
-
-
-nav{
-	.center-block;
 }
 
 header > nav > ul > li{
-	border-left: 1px solid @gray;
-	border-bottom: 1px solid @gray;
-	.padding--large;
+	padding: 1.5%;
 }
 
-header > nav > ul > li:last-child {
-	border-right: 1px solid @gray;
-}
 
 header > nav > ul >li > a {
     font-family: 'Alegreya Sans', sans-serif;
@@ -42,5 +72,3 @@ ul.submenu{
 	.hidden;
 }
 
-//#menu ul li a:hover ul
-//#menu ul li:hover ul

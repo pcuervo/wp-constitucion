@@ -36,8 +36,9 @@
 		<div><!-- class="container" -->
 			<header>
 				<nav>
-					<ul class="[ text-center ]">
-						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a><!-- - page-home.php --></li>
+					<ul class="[ text-center ][ hidden-xs hideen-sm ]">
+						<li><a href="<?php echo site_url('/'); ?> "><img class="[ width-10 ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png"></a><span class="[ text-italic ]">punto de encuentro</span> <!-- - page-home.php --></li>
+						<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php-->
@@ -56,7 +57,43 @@
 						<li>
 							<img class="[ ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 							<a href="<?php echo site_url('/contacto/'); ?>">#SoyCDMX</a><!-- Contacto - page-contacto.php-->
+							<img class="[ ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
 						</li>
 					</ul>
+					<!-- nav header movil -->
+					<div class="[ bg-light ][ visible-xs ]">
+						<div class="[ container ]">
+							<div class="[ row ][ padding--top ]">
+								<div class="[ col-xs-10 ]">
+									<a href="<?php echo site_url('/'); ?> "><img class="[ width-30 ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png"></a>
+								</div>
+								<div class="[ col-xs-2 ][ text-center ]">
+									<a href=""><img src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>	
+								</div>
+							</div>
+						</div>	
+					</div>
+					
+					<!-- modal-movil
+					<a data-toggle="modal" data-target="#menu-movil">
+						
+					</a>
+					<div id="menu-info" class="[ modal fade ]" role="dialog">
+						<div class="[ modal-dialog ]">
+							<div class="[ modal-content height-auto ][ color-light ]">
+								<div class="modal-header">
+									<button type="button" class="[ close ]" data-dismiss="modal">
+										<img src="<?php echo THEMEPATH; ?>images/icons/close.svg">
+									</button>
+								</div>
+								<div class="[ no-margin ][ modal-body ][ bg-ligth ][ padding--top--large ][ text-center ]">
+									<ul class="[ no-padding ]">
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>-->
+
 				</nav>
 			</header>

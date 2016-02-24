@@ -1329,6 +1329,10 @@ mark,
 .text-sm-caps {
   font-family: 'Alegreya Sans SC', sans-serif;
 }
+.text-italic {
+  font-family: 'ABeeZee', sans-serif;
+  font-style: italic;
+}
 .text-muted {
   color: #777777;
 }
@@ -3407,11 +3411,19 @@ fieldset[disabled] .btn-danger.focus {
   color: #d9534f;
   background-color: #fff;
 }
-.btn-play {
+.btn-play,
+.btn-play img {
   width: 80px;
   height: 80px;
   border-radius: 100px;
   z-index: 1000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .btn-link {
   color: #337ab7;
@@ -6652,6 +6664,9 @@ button.close {
 .width-15 {
   width: 15%;
 }
+.width-10 {
+  width: 10%;
+}
 .height-100 {
   height: 100%;
 }
@@ -7003,6 +7018,11 @@ button.close {
     height: 400px;
   }
 }
+@media (min-width: 992px) {
+  .height-home-video {
+    height: 500px;
+  }
+}
 @-ms-viewport {
   width: device-width;
 }
@@ -7282,9 +7302,12 @@ button.close {
 header li {
   text-decoration: none;
   display: inline;
-  color: #fff;
 }
-header li a:hover {
+header ul {
+  margin-top: 20px;
+}
+header li a:hover,
+header li a:active {
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -7292,18 +7315,8 @@ header li a:hover {
   -o-transition: all 0.3s ease;
   color: #e80e8a;
 }
-nav {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 header > nav > ul > li {
-  border-left: 1px solid #555555;
-  border-bottom: 1px solid #555555;
-  padding: 24px 48px;
-}
-header > nav > ul > li:last-child {
-  border-right: 1px solid #555555;
+  padding: 1.5%;
 }
 header > nav > ul > li > a {
   font-family: 'Alegreya Sans', sans-serif;

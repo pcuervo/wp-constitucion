@@ -36,13 +36,13 @@
 		<div><!-- class="container" -->
 			<header>
 				<nav>
-					<ul>
-						<li><a href="<?php echo site_url('/'); ?> ">Home</a><!-- - page-home.php --></li>
-						<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Constitución CDMX</a><!--  - page-constitucion-cdmx.php--></li>
-						<li><a href="<?php echo site_url('/cdmx/'); ?>">CDMX</a><!--  - page-cdmx.php--></li>
-						<li><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php-->
-							<ul class="[ hidden ]">
-								<li><a href="<?php echo site_url('/cronologia/'); ?>">Cronología</a><!--  - page-cronologia.php--></li>
+					<ul class="[ text-center ]">
+						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a><!-- - page-home.php --></li>
+						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
+						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
+						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php-->
+							<ul class="[ submenu ]">
+								<li ><a href="<?php echo site_url('/cronologia/'); ?>">Cronología</a><!--  - page-cronologia.php--></li>
 								<li><a href="<?php echo site_url('/instrucciones/'); ?>">Instrucciones</a><!--  - page-instrucciones.php--></li>
 								<li><a href="<?php echo site_url('/calendario/'); ?>">Calendario</a><!--  - archive-calendario.php--></li>
 								<li>Cuestionario</li>
@@ -52,9 +52,11 @@
 								<li><a href="<?php echo site_url('/kioskos/'); ?>">Mapa con ubicación de kiosko</a><!--  - archive-kioskos.php--></li>
 							</ul>
 						</li>
-						<li><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-						<li><a href="<?php echo site_url('/contacto/'); ?>">Contacto</a><!--  - page-contacto.php--></li>
-
+						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
+						<li>
+							<img class="[ ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+							<a href="<?php echo site_url('/contacto/'); ?>">#SoyCDMX</a><!-- Contacto - page-contacto.php-->
+						</li>
 					</ul>
 				</nav>
 			</header>

@@ -2,24 +2,45 @@
 // Header classes
 // --------------------------------------------------
 
+
 header li {
-    text-transform: uppercase;
     text-decoration: none;
+    display:inline;
     .color-light;
 }
 
+header li a:hover {
+	text-decoration: none;
+	.transition;
+    .color-primary;
 
-header > nav > ul > li {
+}
+
+
+nav{
+	.center-block;
+}
+
+header > nav > ul > li{
+	border-left: 1px solid @gray;
+	border-bottom: 1px solid @gray;
+	.padding--large;
+}
+
+header > nav > ul > li:last-child {
+	border-right: 1px solid @gray;
+}
+
+header > nav > ul >li > a {
     font-family: 'Alegreya Sans', sans-serif;
+    font-weight: bold;
     text-decoration: none;
-    display:inline;
     .color-gray;
  }
 
-ul.menu > li {
-    border: 3px solid @gray;
+ul.submenu{
+	.hidden;
 }
-
 
 //#menu ul li a:hover ul
 //#menu ul li:hover ul

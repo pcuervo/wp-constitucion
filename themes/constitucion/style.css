@@ -1281,6 +1281,12 @@ h6,
 p {
   margin: 0 0 10px;
   font-family: "ABeeZee", sans-serif;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 14px;
+  }
 }
 .lead {
   margin-bottom: 20px;
@@ -1529,6 +1535,12 @@ address {
 }
 h2 {
   font-weight: 300;
+  font-size: 26px;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
 }
 .fz-xsmall {
   font-size: 10px;
@@ -1546,6 +1558,9 @@ h2 {
 }
 .fz-xlarge {
   font-size: 20px;
+}
+.letter-spacing {
+  letter-spacing: 2px;
 }
 code,
 kbd,
@@ -6559,7 +6574,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
   margin-bottom: 0px;
 }
 .margin-top--date {
-  margin-top: 18px;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 .margin-bottom--date {
@@ -7038,6 +7053,19 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .margin-top-8 {
   margin-top: 8%;
 }
+.margin--header {
+  margin-top: 10%;
+}
+@media (min-width: 992px) {
+  .margin--header {
+    margin-top: 15%;
+  }
+}
+@media (max-width: 768px) {
+  .margin--header {
+    margin-top: 15%;
+  }
+}
 .no-margin-top-bottom {
   margin-top: 0;
   margin-bottom: 0;
@@ -7202,25 +7230,6 @@ ul.horizontal-slide li[class*="col"]:first-child {
     width: 100%;
   }
 }
-.question .circle {
-  width: 100px;
-  height: 100px;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background-color: #cccccc;
-}
-.question:hover .circle {
-  background-color: #fff;
-  border: 3px solid #777777;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-}
-.question:hover p {
-  font-weight: bold;
-}
 @media (min-width: 768px) {
   .float-top--sm {
     position: relative;
@@ -7233,6 +7242,12 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .content-user img:first-child {
   margin-bottom: 20px;
   width: 100%;
+  margin-top: 10%;
+}
+@media (max-width: 768px) {
+  .content-user img:first-child {
+    margin-top: 15%;
+  }
 }
 .content-user h2 {
   margin-top: 0;
@@ -7244,6 +7259,10 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .content-user p ~ img {
   margin-right: 20px;
   float: left !important;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 @-ms-viewport {
   width: device-width;

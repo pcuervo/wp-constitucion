@@ -3414,7 +3414,7 @@ fieldset[disabled] .btn-danger.focus {
   height: 40px;
   border-radius: 100px;
   z-index: 1000;
-  bottom: -15px;
+  bottom: -20px;
   left: 43%;
   position: absolute;
   padding: 0 !important;

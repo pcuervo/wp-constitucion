@@ -5942,7 +5942,7 @@ button.close {
 }
 @media (min-width: 992px) {
   .logo {
-    width: 160px;
+    width: 120px;
   }
 }
 .height-line {
@@ -6746,8 +6746,14 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .top-10 {
   top: 10px;
 }
+.top-12 {
+  top: 12px;
+}
 .right-42 {
   right: 42px;
+}
+.right-32 {
+  right: 32px;
 }
 .align-top {
   vertical-align: top;

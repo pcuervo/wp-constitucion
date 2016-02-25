@@ -40,7 +40,10 @@
 				<nav>
 					<!-- menu desktop -->
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hideen-sm ][ sticky ]">
-						<li><a href="<?php echo site_url('/'); ?> "><img class="[ width-10 ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a><span class="[ text-italic ]">punto de encuentro</span> <!-- - page-home.php --></li>
+						<li>
+							<a href="<?php echo site_url('/'); ?> "><img class="[ width-10 ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
+							<span class="[ text-italic ][ width-10 ]">punto de encuentro</span> <!-- - page-home.php -->
+						</li>
 						<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>

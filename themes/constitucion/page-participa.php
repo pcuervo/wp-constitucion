@@ -109,7 +109,6 @@ the_title(); ?>
 
 
 	</section>
-	<?php do_shortcode('[show-survey]'); ?>
 
 	<!-- Trigger the modal with a button -->
 	<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Modal</button>

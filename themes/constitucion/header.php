@@ -37,9 +37,6 @@
 		<div><!-- class="container" -->
 
 			<header>
-
-				<?php if( is_page() ) : ?>
-				<?php else : ?>
 				<nav>
 					<!-- menu desktop -->
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hideen-sm ][ sticky ]">
@@ -117,5 +114,4 @@
 						</div>
 					</div>
 				</nav>
-				<?php endif; ?>
 			</header>

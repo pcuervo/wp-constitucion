@@ -109,8 +109,8 @@ class Sondeo_CDMX_Survey {
 								<option value="fuera-mexico">Fuera de México</option>
 							</select>
 						</li>
-						<li class="[ delegaciones-estados-paises ]"></li>
-						<li class="[ colonias-municipios ]"></li>
+						<li class="delegaciones-estados-paises"></li>
+						<li class="colonias-municipios"></li>
 						<?php foreach ( $questions as $key => $question_with_answers ) : ?>
 							<li data-input-trigger>
 								<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="q<?php echo $next_question ?>" data-question="<?php echo $question_with_answers['question_id'] ?>"><?php echo $question_with_answers['question'] ?></label>

@@ -23,7 +23,7 @@
         });
     } );
 
-    var theForm = new FForm( formWrap, {
+    new FForm( formWrap, {
         onReview : function() {
             classie.add( document.body, 'overview' ); // for demo purposes only
         }
@@ -53,6 +53,7 @@ function showDelegaciones( ciudad ){
 }
 
 function showEstados(){
+    $('.colonias-municipios').remove();
     $('.delegaciones-estados-paises').append( getHTMLEstados() );
     new SelectFx( $('.delegaciones-estados-paises .cs-select')[0], {
         stickyPlaceholder: false,

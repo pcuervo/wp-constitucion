@@ -270,6 +270,12 @@
 			this._updateFieldNumber();
 
 			var nextField = this.fields[ this.current ];
+            if( 'colonias-municipios' == nextField.className ){
+                console.log( this.fields );
+                this.current += 1;
+                nextField = this.fields[ this.current ];
+                console.log( nextField );
+            }
 			classie.add( nextField, 'fs-current' );
 			classie.add( nextField, 'fs-show' );
 		}
@@ -466,6 +472,20 @@
 	FForm.prototype._clearError = function() {
 		this._hideCtrl( this.msgError );
 	}
+
+    FForm._removeField = function( el ){
+        this.el = el;
+        // the form element
+        this.formEl = this.el.querySelector( 'form' );
+
+        // list of fields
+        this.fieldsList = this.formEl.querySelector( 'ol.fs-fields' );
+        // all fields
+        this.fields = [].slice.call( this.fieldsList.children );
+        // total fields
+        this.fieldsCount = this.fields.length;
+        console.log( this.fieldsCount );
+    }
 
 	// add to global namespace
 	window.FForm = FForm;

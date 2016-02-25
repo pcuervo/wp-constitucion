@@ -76,8 +76,8 @@
 .absolute{ position: absolute; }
 .fixed{ position: fixed; }
 
-.bottom-10{ bottom: 10px;}
-.top-10{ top: 10px;}
+
+.top-20{ top: 20px;}
 .right-42{ right: 42px;}
 
 //alingnemt
@@ -129,6 +129,12 @@
 .padding--top--xlarge{ padding-top: (@padding-base-vertical*6); }
 .padding--top--xxlarge{ padding-top: (@padding-base-vertical*8); }
 
+.padding--header{
+	padding-top: 55px;
+	@media (min-width: @screen-sm){ padding-top: 70px; }
+	@media (min-width: @screen-md){ padding-top: 110px; }
+ }
+
 .padding--bottom{ padding-bottom: (@padding-base-vertical*2); }
 .padding--bottom-0{ padding-bottom: 0px; }
 .padding--bottom--small{ padding-bottom: (@padding-base-vertical); }
@@ -146,7 +152,7 @@
 .padding--top-bottom--xlarge{ padding-top: (@padding-base-vertical*6); padding-bottom: (@padding-base-vertical*6); }
 .padding--top-bottom--xxlarge{ padding-top: (@padding-base-vertical*8); padding-bottom: (@padding-base-vertical*8); }
 
-.no-padding--sides{ padding-left: 0px; padding-right: 0px; }
+.no-padding--sides{ padding-left: 0px!important; padding-right: 0px!important; }
 .padding--sides{ padding-left: (@padding-base-horizontal*2); padding-right: (@padding-base-horizontal*2); }
 .padding--sides--small{ padding-left: (@padding-base-horizontal); padding-right: (@padding-base-horizontal); }
 .padding--sides--xsmall{ padding-left: (@padding-base-horizontal/2); padding-right: (@padding-base-horizontal/2); }
@@ -206,12 +212,11 @@
 .margin-top--large{ margin-top: (@margin-base*2); }
 .margin-top--xlarge{ margin-top: (@margin-base*4); }
 .margin-top--xxlarge{ margin-top: (@margin-base*8); }
-.margin-top-10{ margin-top: 10%; }
-.margin-top-8{ margin-top: 8%; }
+
 .margin--header{
-	margin-top: 10%;
-	@media (min-width: @screen-md){ margin-top: 15%; }
-	@media (max-width: @screen-sm){ margin-top: 15%; }
+	margin-top: 55px;
+	@media (min-width: @screen-sm){ margin-top: 70px; }
+	@media (min-width: @screen-md){ margin-top: 110px; }
  }
 
 .no-margin-top-bottom{ margin-top:0; margin-bottom:0; }
@@ -232,6 +237,8 @@
 .margin-right--small{ margin-right: (@margin-base/2); }
 .margin-right--large{ margin-right: (@margin-base*2); }
 .margin-right--xlarge{ margin-right: (@margin-base*4); }
+
+.margin-right--31{ @media (max-width: @screen-md){ margin-right: -31px;}}
 
 .margin-left{ margin-left: @margin-base; }
 .margin-left--xsmall{ margin-left: (@margin-base/4); }
@@ -321,13 +328,13 @@
 .content-user{
 	padding: 5%;
 	@media (min-width: @screen-md){
-		padding: 5% 10%;
+		padding: 2% 10% 5%;
 	}
 
 	img:first-child {
 		.margin-bottom;
 		.width-100;
-		.margin-top-10;
+		.margin--header;
 		 @media (max-width: @screen-sm){ margin-top: 15%; }
 	}
 	& h2{
@@ -354,5 +361,3 @@
 		.margin-bottom;
 	}
 }
-
-

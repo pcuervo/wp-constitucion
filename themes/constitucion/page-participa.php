@@ -17,7 +17,7 @@ the_title(); ?>
 							<p class="[ fz-xlarge ]">Paso 1</p>
 							<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 						</div>
-						<div class="[ col-xs-4 ]">
+						<div class="[ col-xs-4 no-padding--sides ]">
 							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 						</div>
 					</div>
@@ -28,7 +28,7 @@ the_title(); ?>
 							<p class="[ fz-xlarge ]">Paso 2</p>
 							<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 						</div>
-						<div class="[ col-xs-4 ]">
+						<div class="[ col-xs-4 no-padding--sides ]">
 							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 						</div>
 					</div>
@@ -40,7 +40,7 @@ the_title(); ?>
 							<p class="[ fz-xlarge ]">Paso 3</p>
 							<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 						</div>
-						<div class="[ col-xs-4 ]">
+						<div class="[ col-xs-4 no-padding--sides ]">
 							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 						</div>
 					</div>
@@ -51,7 +51,7 @@ the_title(); ?>
 							<p class="[ fz-xlarge ]">Paso 4</p>
 							<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 						</div>
-						<div class="[ col-xs-4 ]">
+						<div class="[ col-xs-4 no-padding--sides ]">
 							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 						</div>
 					</div>
@@ -116,22 +116,22 @@ the_title(); ?>
 
 	<!-- Modal -->
 	<div id="myModal" class="modal fade" role="dialog">
-		<div class="modal-dialog [ margin-top--xlarge ][ padding--sides--xsm--large ]">
+		<div class="modal-dialog [ margin-top--xlarge ][ padding--sides--xsm ]">
 			<!-- Modal content-->
 			<div class="[ row ]">
 				<div class="[ col-xs-12  col-sm-10 col-sm-offset-1 ]">
 					<div class="modal-content [ no-border-radius ]">
 						<div class="modal-body [ padding--bottom--xxlarge padding--sides padding--sides--large--sm ]">
-						<!-- gif -->
+							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif">
 
 							<h2 class="[ text-center ][ text-uppercase ]">¡Gracias por participar!</h2>
 							<p class="[ text-center ][ text-uppercase ]">Escribe tu nombre y apellido para obtener tu certificado de participación</p>
 							<form class="[ row ]">
 								<div class="[ col-xs-12 col-sm-6  padding--right--small--sm ]">
-									<input type="text" class="form-control [ margin-bottom ][ input--search ][ width-50 ] " placeholder="NOMBRES">
+									<input type="text" class="form-control [ margin-bottom ][ input--search ] " placeholder="NOMBRES">
 								</div>
 								<div class="[ col-xs-12 col-sm-6 padding--left--small--sm ]">
-									<input type="text" class="form-control [ margin-bottom ][ input--search ][ width-50 ] " placeholder="APELLIDOS">
+									<input type="text" class="form-control [ margin-bottom ][ input--search ] " placeholder="APELLIDOS">
 								</div>
 								<button type="submit" class="[ btn btn-secondary color-gray ][ pull-right ]">enviar</button>
 							</form>

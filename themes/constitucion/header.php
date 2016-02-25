@@ -35,7 +35,7 @@
 		<![endif]-->
 
 		<div><!-- class="container" -->
-		
+
 			<header>
 				<nav>
 					<!-- menu desktop -->
@@ -66,7 +66,7 @@
 						</li>
 					</ul>
 
-					<!-- nav header movil -->	
+					<!-- nav header movil -->
 					<div class="[ bg-light ][ visible-xs ]">
 						<div class="[ container ]">
 							<div class="[ row ]">
@@ -74,9 +74,9 @@
 									<a href="<?php echo site_url('/'); ?> "><img class="[ width-40 ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
 								</div>
 								<div class="[ col-xs-3 ][ text-center ][ padding--top padding--left--xlarge ]">
-									<a type="button" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>	
+									<a type="button" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
 								</div>
-							</div>	
+							</div>
 						</div>
 					</div>
 
@@ -89,9 +89,9 @@
 										<a href="<?php echo site_url('/'); ?> "><img class="[ width-40 ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
 									</div>
 									<div class="[ col-xs-2 ][ text-center ][ padding--top ]">
-										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>	
+										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
 									</div>
-								</div>	
+								</div>
 							</div>
 							<div class="[ bg-light-cdmx ][ text-center ]">
 								<ul class="[ menu-mobile ]">
@@ -105,7 +105,7 @@
 							<img class="[ width-60 ][ margin-top-bottom--large ][ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png">
 						</div>
 					</div>
-					
+
 
 				</nav>
 			</header>

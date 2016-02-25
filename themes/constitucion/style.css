@@ -7244,7 +7244,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
   background-color: #fff;
 }
 .height-home-video {
-  height: 200px;
+  height: 250px;
 }
 @media (min-width: 768px) {
   .height-home-video {

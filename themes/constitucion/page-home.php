@@ -1,5 +1,5 @@
 <?php get_header(); the_post();  ?>
-			<section class="[ padding--header ]">
+			<section class="padding--header">
 				<div class="[ bg-image height-home-video ][ margin-bottom ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/home.png');">
 					<div class="[ width-100 height-100 ]">
 						<div class="[ visible-xs ][ padding--top padding--right ][ btn-nav-home ]">

@@ -1,6 +1,6 @@
 			</div><!-- container -->
 			<footer>
-				<img class="[ width-20 ][ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx2.png">
+				<img class="[ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx2.png">
 			</footer>
 
 			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -315,7 +315,10 @@
 }
 
 .content-user{
-	padding: 5% 10%;
+	padding: 5%;
+	@media (min-width: @screen-md){
+		padding: 5% 10%;
+	}
 
 	img:first-child {
 		.margin-bottom;
@@ -326,11 +329,21 @@
 	& h2{
 		.no-margin-top;
 		.color-primary;
+		@media (min-width: @screen-md){
+			.padding--sides--large;
+		}
 	}
 	& p:nth-child(3){
 		.color-primary;
+		@media (min-width: @screen-md){
+			.padding--sides--large;
+		}
 	}
 	& p ~ img {
+		.img-responsive;
+		@media (min-width: @screen-sm){
+			.width-60;
+		}
 		.margin-right;
 		.pull-left;
 		.img-responsive;

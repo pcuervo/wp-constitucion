@@ -232,8 +232,10 @@ the_title(); ?>
 	</section>
 	<section class="[ container padding--sides--xsm ][ margin-bottom--xlarge ]">
 		<div class="[ bg-light float-top--sm ][ padding--top-bottom--large padding--sides--large--sm ]">
-			<h2 class="[ inline-block align-middle ][ no-margin ][ fz-small--xs ]">Estimados</h2>
-			<img class="[ inline-block align-middle ][ width-200 ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif">
+			<div>
+				<h2 class="[ inline-block align-middle ][ no-margin ]">Estimados</h2>
+				<img class="[ inline-block align-middle ][ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif">
+			</div>
 			<form class="[ margin-bottom--large ]">
 				<input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Escribe tu mensaje">
 				<h2 class="[ margin-bottom--large ][ fz-small--xs ]">Con respecto,</h2>

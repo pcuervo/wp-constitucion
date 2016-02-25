@@ -3077,7 +3077,7 @@ select[multiple].input-lg {
   touch-action: manipulation;
   cursor: pointer;
   background-image: none;
-  border: 1px solid transparent;
+  border: none;
   white-space: nowrap;
   padding: 6px 12px;
   font-size: 14px;
@@ -3414,13 +3414,10 @@ fieldset[disabled] .btn-danger.focus {
   height: 40px;
   border-radius: 100px;
   z-index: 1000;
+  bottom: -15px;
+  left: 43%;
+  position: absolute;
   padding: 0 !important;
-}
-@media (max-width: 991px) {
-  .btn-play {
-    position: absolute;
-    bottom: 10px;
-  }
 }
 @media (min-width: 768px) {
   .btn-play {
@@ -3469,6 +3466,9 @@ fieldset[disabled] .btn-link:hover,
 fieldset[disabled] .btn-link:focus {
   color: #777777;
   text-decoration: none;
+}
+.btn-nav-home {
+  z-index: 1060;
 }
 .btn-lg,
 .btn-group-lg > .btn {
@@ -7237,7 +7237,12 @@ ul.horizontal-slide li[class*="col"]:first-child {
   }
 }
 .content-user {
-  padding: 5% 10%;
+  padding: 5%;
+}
+@media (min-width: 992px) {
+  .content-user {
+    padding: 5% 10%;
+  }
 }
 .content-user img:first-child {
   margin-bottom: 20px;
@@ -7253,8 +7258,20 @@ ul.horizontal-slide li[class*="col"]:first-child {
   margin-top: 0;
   color: #e80e8a;
 }
+@media (min-width: 992px) {
+  .content-user h2 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
 .content-user p:nth-child(3) {
   color: #e80e8a;
+}
+@media (min-width: 992px) {
+  .content-user p:nth-child(3) {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
 }
 .content-user p ~ img {
   margin-right: 20px;
@@ -7263,6 +7280,11 @@ ul.horizontal-slide li[class*="col"]:first-child {
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .content-user p ~ img {
+    width: 60%;
+  }
 }
 @-ms-viewport {
   width: device-width;
@@ -7569,7 +7591,7 @@ ul.menu-desktop > li:last-child {
   border-right: none;
 }
 ul.menu-desktop {
-  margin-top: 20px;
+  margin: 0 !important;
 }
 ul.menu-desktop li a:hover,
 ul.menu-home > li a:hover,
@@ -7665,5 +7687,13 @@ footer {
   padding-top: 24px;
   padding-bottom: 24px;
   background-color: #313131;
+}
+footer img {
+  width: 60%;
+}
+@media (min-width: 768px) {
+  footer img {
+    width: 20%;
+  }
 }
 /*# sourceMappingURL=bootstrap.css.map */

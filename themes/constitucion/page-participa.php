@@ -61,6 +61,53 @@ the_title(); ?>
 	</section>
 	<section class="[ container ]">
 		<h2 class="[ no-margin-top ]">Cronología</h2>
+
+
+
+
+		<!-- scroll horizontal -->
+			<div class="[ row ][ margin-bottom ]">
+				<div class="[ col-md-12 ]">
+					<ul id="scroll" class="[ horizontal-slide ][ text-center ]">
+						<li class="[ box-li ]">
+							<img class="img-slide" src="<?php echo THEMEPATH; ?>/images/cdmx.png"/>
+						</li>
+						<li class="[ box-li ]">
+							<div class="[ text--large relative ]">
+								<p class="[ center-full ]">Lorem ipsum dolor sit</p>
+							</div>
+							<div class="[ vertical-line ]"></div>
+							<div class="[ circle-xsmall ][ margin-auto ]"></div>
+							<div class="[ border-gray--large ]"></div>
+							<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]">Febrero 19 de 2016</p>
+						</li>
+						<li class="[ box-li ]">
+							<p class="[ color-gray ][ fz-small ][ margin-top--date ]">Febrero 20 de 2016</p>
+							<div class="[ border-gray--large ]"></div>
+							<div class="[ circle-xsmall ][ margin-auto ]"></div>
+							<div class="[ vertical-line ]"></div>
+							<div class="[ text--small relative ]">
+								<p class="[ center-full ]">Lorem ipsum dolor sit amet, consectetur adispiscing elit.</p>
+							</div>
+						</li>
+						<li class="[ box-li ]">
+							<div class="[ text--large relative ]">
+								<p class="[ center-full ]">Lorem ipsum dolor sit amet, consectetur adispiscing elit.</p>
+							</div>
+							<div class="[ vertical-line ]"></div>
+							<div class="[ circle-xsmall ][ margin-auto ]"></div>
+							<div class="[ border-gray--large ]"></div>
+							<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]">Febrero 21 de 2016</p>
+						</li>
+					</ul>
+				</div>
+			</div> <!-- row -->
+
+
+
+
+
+
 	</section>
 	<?php do_shortcode('[show-survey]'); ?>
 
@@ -191,7 +238,7 @@ the_title(); ?>
 			</div>
 			<form class="[ margin-bottom--large ]">
 				<input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Escribe tu mensaje">
-				<h2 class="[ margin-bottom--large ]">Con respecto,</h2>
+				<h2 class="[ margin-bottom--large ][ fz-small--xs ]">Con respecto,</h2>
 				<input type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Tu nombre">
 				<input type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Correo Electrónico">
 				<input type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Teléfono">

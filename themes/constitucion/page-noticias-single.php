@@ -24,7 +24,7 @@
 					Sed fringilla mauris sit amet nibh. 
 					Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
 					</p>
-					<div class="[ fz-small ][ color-primary ][ margin-top--large ]"> << Regresar </div>
+					<a class="[ fz-small ][ color-primary ][ margin-top--large ]" href="<?php echo site_url('/noticias/'); ?>">  << Regresar </a>
 				</section>
 			</div>
 		</div>

@@ -114,16 +114,15 @@
 					</div>
 				</nav>
 			</header>
-		<?php endif; ?>
-		<?php if ( ! is_page('home') ): ?>
-			<header>
+		<?php else: ?>
+			<header class="not-home">
 				<nav>
 					<!-- menu desktop -->
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ]">
 						<li class="[ no-padding--sides ]"><a href="<?php echo site_url('/'); ?> ">
 							<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
-							<span class="[ text-italic ][ relative bottom-10 ]">punto</span>
-							<span class="[ text-italic ][ relative top-10 right-42 ]">de encuentro</span> <!-- - page-home.php -->
+							<span class="[ text-italic ][ relative ]">punto</span>
+							<span class="[ text-italic ][ relative top-20 right-42 ][ margin-right--31 ]">de encuentro</span> <!-- - page-home.php -->
 						</li>
 						<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>

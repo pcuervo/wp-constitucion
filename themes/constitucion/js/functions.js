@@ -1,51 +1,64 @@
+$ = jQuery.noConflict();
+
 (function($){
 
-	"use strict";
+    "use strict";
 
-	$(function(){
+    $(function(){
 
-		imgToSvg();
-		$('.js-video-wrapper').fitVids();
-        createPieChart();
-        createLineChart();
+        if( parseInt( isPageSondeo ) ){
+            return;
+        }
 
-	});
+        imgToSvg();
+        $('.js-video-wrapper').fitVids();
+
+        if( parseInt( isPageCDMX ) ){
+            createPieChart();
+            createLineChart();
+        }
+
+
+
+
+
+    });
 
 })(jQuery);
 
 /*------------------------------------*\
-	#GENERAL FUNCTIONS
+    #GENERAL FUNCTIONS
 \*------------------------------------*/
 
 function imgToSvg(){
-	$('img.svg').each(function(){
-		var $img = $(this);
-		var imgID = $img.attr('id');
-		var imgClass = $img.attr('class');
-		var imgURL = $img.attr('src');
+    $('img.svg').each(function(){
+        var $img = $(this);
+        var imgID = $img.attr('id');
+        var imgClass = $img.attr('class');
+        var imgURL = $img.attr('src');
 
-		$.get(imgURL, function(data) {
-			// Get the SVG tag, ignore the rest
-			var $svg = $(data).find('svg');
+        $.get(imgURL, function(data) {
+            // Get the SVG tag, ignore the rest
+            var $svg = $(data).find('svg');
 
-			// Add replaced image's ID to the new SVG
-			if(typeof imgID !== 'undefined') {
-				$svg = $svg.attr('id', imgID);
-			}
-			// Add replaced image's classes to the new SVG
-			if(typeof imgClass !== 'undefined') {
-				$svg = $svg.attr('class', imgClass+' replaced-svg');
-			}
+            // Add replaced image's ID to the new SVG
+            if(typeof imgID !== 'undefined') {
+                $svg = $svg.attr('id', imgID);
+            }
+            // Add replaced image's classes to the new SVG
+            if(typeof imgClass !== 'undefined') {
+                $svg = $svg.attr('class', imgClass+' replaced-svg');
+            }
 
-			// Remove any invalid XML tags as per http://validator.w3.org
-			$svg = $svg.removeAttr('xmlns:a').removeAttr('width').removeAttr('height');
+            // Remove any invalid XML tags as per http://validator.w3.org
+            $svg = $svg.removeAttr('xmlns:a').removeAttr('width').removeAttr('height');
 
-			// Replace image with new SVG
-			$img.replaceWith($svg);
+            // Replace image with new SVG
+            $img.replaceWith($svg);
 
-		}, 'xml');
+        }, 'xml');
 
-	});
+    });
 } //imgToSvg
 
 function createPieChart(){
@@ -107,41 +120,20 @@ function createLineChart(){
 
 
 /*------------------------------------*\
-	ANIMATED STICKY HEADER
-
-
-
-function init() {
-        window.addEventListener( 'scroll', function( event ) {
-            if( !didScroll ) {
-                didScroll = true;
-                setTimeout( scrollPage, 250 );
-            }
-        }, false );
-    }
-
-    function scrollPage() {
-        var sy = scrollY();
-        if ( sy >= changeHeaderOn ) {
-            classie.add( header, 'sticky' );
-        }
-        else {
-            classie.remove( header, 'sticky' );
-        }
-        didScroll = false;
-    }
-
-    function scrollY() {
-        return window.pageYOffset || docElem.scrollTop;
-    }
+    ANIMATED STICKY HEADER
 \*------------------------------------*/
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 500){  
-            $('header').addClass("sticky");
-            $('header').removeClass("hidden");
+
+    $(window).scroll(function() {        
+        if( parseInt( isHome ) ){
+            if ($(this).scrollTop() > 500){  
+                $('header').addClass("sticky");
+                $('header').removeClass("hidden");
+            }
+            else{
+                $('header').removeClass("sticky");
+                $('header').addClass("hidden");
+            }
         }
-        else{
-            $('header').removeClass("sticky");
-            $('header').addClass("hidden");
-        }
+
     });
+

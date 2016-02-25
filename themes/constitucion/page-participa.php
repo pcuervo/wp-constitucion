@@ -4,7 +4,7 @@ the_title(); ?>
 
 
 <?php get_sidebar(); ?>
-	<section class="[ bg-gray-light ][ margin-top-10 margin-bottom--large padding--top-bottom--xlarge ]">
+	<section class="[ bg-gray-light ][ margin--header margin-bottom--large padding--top-bottom--xlarge ]">
 		<article class="[ container ]">
 			<div class="[ padding--sides--xsm ]">
 				<h2 class="[ no-margin-top ]">Instrucciones</h2>
@@ -109,7 +109,6 @@ the_title(); ?>
 
 
 	</section>
-	<?php do_shortcode('[show-survey]'); ?>
 
 	<!-- Trigger the modal with a button -->
 	<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Modal</button>

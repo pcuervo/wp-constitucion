@@ -5,8 +5,9 @@
 	$(function(){
 
 		imgToSvg();
-
 		$('.js-video-wrapper').fitVids();
+        createPieChart();
+        createLineChart();
 
 	});
 
@@ -15,6 +16,7 @@
 /*------------------------------------*\
 	#GENERAL FUNCTIONS
 \*------------------------------------*/
+
 function imgToSvg(){
 	$('img.svg').each(function(){
 		var $img = $(this);
@@ -46,6 +48,63 @@ function imgToSvg(){
 	});
 } //imgToSvg
 
+function createPieChart(){
+    var ctx = $("#pie-data").get(0).getContext("2d");
+    //pie chart data
+    //sum of values = 360
+    var data = [
+        {
+            value: 60,
+            color: "#e80e8a",
+            highlight: "#222",
+            label: "nombre"
+        },
+        {
+            value: 10,
+            color: "#cccccc",
+            highlight: "#222",
+            label: "nombre"
+        },
+        {
+            value: 10,
+            color: "#555",
+            highlight: "#222",
+            label: "nombre"
+        },
+        {
+            value: 20,
+            color: "#4a4a4a",
+            highlight: "#222",
+            label: "nombre"
+        }
+    ];
+    //draw
+    var piechart = new Chart(ctx).Pie(data);
+}
+
+function createLineChart(){
+    //#piecanvas
+    var ctx = $("#bar-data").get(0).getContext("2d");
+    //pie chart data
+    //sum of values = 360
+    var data = {
+        labels: ['dato', 'dato', 'dato', 'dato', 'dato', 'dato'],
+        datasets: [
+            {
+                label: '2010 customers #',
+                fillColor: '#382765',
+                data: [2500, 1902, 1041, 610, 1245, 952]
+            },
+            {
+                label: '2014 customers #',
+                fillColor: '#7BC225',
+                data: [3104, 1689, 1318, 589, 1199, 1436]
+            }
+        ]
+    };
+    var barchart = new Chart(ctx).Bar(data);
+}
+
 
 
 /*------------------------------------*\
@@ -61,60 +120,4 @@ $(window).scroll(function() {
 });
 \*------------------------------------*/
 
-//Chart.js
-//#piecanvas
-var ctx = $("#pie-data").get(0).getContext("2d");
-//pie chart data
-//sum of values = 360
-var data = [
-	{
-		value: 60,
-		color: "#e80e8a",
-		highlight: "#222",
-		label: "nombre"
-	},
-	{
-		value: 10,
-		color: "#cccccc",
-		highlight: "#222",
-		label: "nombre"
-	},
-	{
-		value: 10,
-		color: "#555",
-		highlight: "#222",
-		label: "nombre"
-	},
-	{
-		value: 20,
-		color: "#4a4a4a",
-		highlight: "#222",
-		label: "nombre"
-	}
-];
-//draw
-var piechart = new Chart(ctx).Pie(data);
 
-
-
-//#piecanvas
-var ctx = $("#bar-data").get(0).getContext("2d");
-//pie chart data
-//sum of values = 360
-var data = {
-	labels: ['dato', 'dato', 'dato', 'dato', 'dato', 'dato'],
-	datasets: [
-		{
-			label: '2010 customers #',
-			fillColor: '#382765',
-			data: [2500, 1902, 1041, 610, 1245, 952]
-		},
-		{
-			label: '2014 customers #',
-			fillColor: '#7BC225',
-			data: [3104, 1689, 1318, 589, 1199, 1436]
-		}
-	]
-};
-//draw¡
-var BARchart = new Chart(ctx).Bar(data);

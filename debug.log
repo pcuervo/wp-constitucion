@@ -25,3 +25,7 @@
 [24-Feb-2016 18:56:50 UTC] PHP Notice:  Array to string conversion in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 113
 [24-Feb-2016 18:56:50 UTC] PHP Notice:  Array to string conversion in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 113
 [24-Feb-2016 18:56:50 UTC] PHP Notice:  Array to string conversion in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 113
+[24-Feb-2016 23:49:15 UTC] PHP Notice:  Undefined index: question_id in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 109
+[24-Feb-2016 23:49:15 UTC] PHP Notice:  Undefined index: question_id in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 109
+[25-Feb-2016 00:04:36 UTC] PHP Notice:  Undefined index: question_id in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 109
+[25-Feb-2016 00:04:36 UTC] PHP Notice:  Undefined index: question_id in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 109

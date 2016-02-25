@@ -58,9 +58,11 @@
 						</li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
 						<li>
-							<img class="[ ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
-							<a href="<?php echo site_url('/contacto/'); ?>">#SoyCDMX</a><!-- Contacto - page-contacto.php-->
-							<img class="[ ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+							<a href="<?php echo site_url('/contacto/'); ?>">
+								<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+								#SoyCDMX<!-- Contacto - page-contacto.php-->
+								<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+							</a>
 						</li>
 					</ul>
 

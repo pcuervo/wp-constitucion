@@ -187,7 +187,7 @@ the_title(); ?>
 		<div class="[ bg-light float-top--sm ][ padding--top-bottom--large padding--sides--large--sm ]">
 			<div>
 				<h2 class="[ inline-block align-middle ][ no-margin ]">Estimados</h2>
-<!-- 				<img class="[ inline-block align-middle ][ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo_horizontal.gif"> -->
+				<img class="[ inline-block align-middle ][ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif">
 			</div>
 			<form class="[ margin-bottom--large ]">
 				<input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Escribe tu mensaje">

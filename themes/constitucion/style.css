@@ -1281,6 +1281,12 @@ h6,
 p {
   margin: 0 0 10px;
   font-family: "ABeeZee", sans-serif;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 14px;
+  }
 }
 .lead {
   margin-bottom: 20px;
@@ -1529,6 +1535,12 @@ address {
 }
 h2 {
   font-weight: 300;
+  font-size: 26px;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
 }
 .fz-xsmall {
   font-size: 10px;
@@ -1546,6 +1558,9 @@ h2 {
 }
 .fz-xlarge {
   font-size: 20px;
+}
+.letter-spacing {
+  letter-spacing: 2px;
 }
 code,
 kbd,
@@ -3062,7 +3077,7 @@ select[multiple].input-lg {
   touch-action: manipulation;
   cursor: pointer;
   background-image: none;
-  border: 1px solid transparent;
+  border: none;
   white-space: nowrap;
   padding: 6px 12px;
   font-size: 14px;
@@ -3399,13 +3414,10 @@ fieldset[disabled] .btn-danger.focus {
   height: 40px;
   border-radius: 100px;
   z-index: 1000;
+  bottom: -15px;
+  left: 43%;
+  position: absolute;
   padding: 0 !important;
-}
-@media (max-width: 991px) {
-  .btn-play {
-    position: absolute;
-    bottom: 10px;
-  }
 }
 @media (min-width: 768px) {
   .btn-play {
@@ -3454,6 +3466,9 @@ fieldset[disabled] .btn-link:hover,
 fieldset[disabled] .btn-link:focus {
   color: #777777;
   text-decoration: none;
+}
+.btn-nav-home {
+  z-index: 1060;
 }
 .btn-lg,
 .btn-group-lg > .btn {
@@ -5922,6 +5937,14 @@ button.close {
 .rectangle {
   height: 300px;
 }
+.logo {
+  width: 80px;
+}
+@media (min-width: 992px) {
+  .logo {
+    width: 130px;
+  }
+}
 .height-line {
   height: 30px;
 }
@@ -6559,7 +6582,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
   margin-bottom: 0px;
 }
 .margin-top--date {
-  margin-top: 18px;
+  margin-top: 17px;
   margin-bottom: 10px;
 }
 .margin-bottom--date {
@@ -6717,6 +6740,24 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .fixed {
   position: fixed;
 }
+.top-20 {
+  top: 20px;
+}
+.bottom-10 {
+  bottom: 10px;
+}
+.top-10 {
+  top: 10px;
+}
+.top-12 {
+  top: 12px;
+}
+.right-42 {
+  right: 42px;
+}
+.right-32 {
+  right: 32px;
+}
 .align-top {
   vertical-align: top;
 }
@@ -6822,6 +6863,19 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .padding--top--xxlarge {
   padding-top: 48px;
 }
+.padding--header {
+  padding-top: 55px;
+}
+@media (min-width: 768px) {
+  .padding--header {
+    padding-top: 70px;
+  }
+}
+@media (min-width: 992px) {
+  .padding--header {
+    padding-top: 110px;
+  }
+}
 .padding--bottom {
   padding-bottom: 12px;
 }
@@ -6874,8 +6928,8 @@ ul.horizontal-slide li[class*="col"]:first-child {
   padding-bottom: 48px;
 }
 .no-padding--sides {
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 0px!important;
+  padding-right: 0px!important;
 }
 .padding--sides {
   padding-left: 24px;
@@ -7032,11 +7086,18 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .margin-top--xxlarge {
   margin-top: 160px;
 }
-.margin-top-10 {
-  margin-top: 10%;
+.margin--header {
+  margin-top: 55px;
 }
-.margin-top-8 {
-  margin-top: 8%;
+@media (min-width: 768px) {
+  .margin--header {
+    margin-top: 70px;
+  }
+}
+@media (min-width: 992px) {
+  .margin--header {
+    margin-top: 110px;
+  }
 }
 .no-margin-top-bottom {
   margin-top: 0;
@@ -7095,6 +7156,11 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 .margin-right--xlarge {
   margin-right: 80px;
+}
+@media (max-width: 992px) {
+  .margin-right--31 {
+    margin-right: -31px;
+  }
 }
 .margin-left {
   margin-left: 20px;
@@ -7178,7 +7244,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
   background-color: #fff;
 }
 .height-home-video {
-  height: 200px;
+  height: 250px;
 }
 @media (min-width: 768px) {
   .height-home-video {
@@ -7202,25 +7268,6 @@ ul.horizontal-slide li[class*="col"]:first-child {
     width: 100%;
   }
 }
-.question .circle {
-  width: 100px;
-  height: 100px;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background-color: #cccccc;
-}
-.question:hover .circle {
-  background-color: #fff;
-  border: 3px solid #777777;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-}
-.question:hover p {
-  font-weight: bold;
-}
 @media (min-width: 768px) {
   .float-top--sm {
     position: relative;
@@ -7228,22 +7275,64 @@ ul.horizontal-slide li[class*="col"]:first-child {
   }
 }
 .content-user {
-  padding: 5% 10%;
+  padding: 5%;
+}
+@media (min-width: 992px) {
+  .content-user {
+    padding: 2% 10% 5%;
+  }
 }
 .content-user img:first-child {
   margin-bottom: 20px;
   width: 100%;
+  margin-top: 55px;
+}
+@media (min-width: 768px) {
+  .content-user img:first-child {
+    margin-top: 70px;
+  }
+}
+@media (min-width: 992px) {
+  .content-user img:first-child {
+    margin-top: 110px;
+  }
+}
+@media (max-width: 768px) {
+  .content-user img:first-child {
+    margin-top: 15%;
+  }
 }
 .content-user h2 {
   margin-top: 0;
   color: #e80e8a;
 }
+@media (min-width: 992px) {
+  .content-user h2 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
 .content-user p:nth-child(3) {
   color: #e80e8a;
+}
+@media (min-width: 992px) {
+  .content-user p:nth-child(3) {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
 }
 .content-user p ~ img {
   margin-right: 20px;
   float: left !important;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .content-user p ~ img {
+    width: 60%;
+  }
 }
 @-ms-viewport {
   width: device-width;
@@ -7529,7 +7618,18 @@ header {
   position: fixed;
   background-color: #fff;
   width: 100%;
+  height: 55px;
   z-index: 1050;
+}
+@media (min-width: 768px) {
+  header {
+    height: 70px;
+  }
+}
+@media (min-width: 992px) {
+  header {
+    height: 110px;
+  }
 }
 header li,
 ul.menu-home > li {
@@ -7550,7 +7650,7 @@ ul.menu-desktop > li:last-child {
   border-right: none;
 }
 ul.menu-desktop {
-  margin-top: 20px;
+  margin: 0 !important;
 }
 ul.menu-desktop li a:hover,
 ul.menu-home > li a:hover,
@@ -7642,9 +7742,20 @@ ul.menu-mobile > li > a {
   text-decoration: none;
   color: #848484;
 }
+header ul {
+  padding-left: 0px;
+}
 footer {
   padding-top: 24px;
   padding-bottom: 24px;
   background-color: #313131;
+}
+footer img {
+  width: 60%;
+}
+@media (min-width: 768px) {
+  footer img {
+    width: 20%;
+  }
 }
 /*# sourceMappingURL=bootstrap.css.map */

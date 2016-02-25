@@ -1,12 +1,15 @@
 <?php get_header(); the_post();  ?>
-			<section>
+			<section class="padding--header">
 				<div class="[ bg-image height-home-video ][ margin-bottom ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/home.png');">
 					<div class="[ width-100 height-100 ]">
-						<div class="[ absolute ][ padding--large ]">
-							<img class="[ width-30 ] " src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
-							<span class="[ lead text-italic ]">punto de encuentro</span> 
+						<div class="[ visible-xs ][ padding--top padding--right ][ btn-nav-home ]">
+							<a type="button" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ][ pull-right ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
 						</div>
-						<button class="[ btn btn-play ][ center-full ]" onclick="playPause()"><img class="[ width-100 ]" src="<?php echo THEMEPATH; ?>images/play.png"></button>
+						<div class="[ absolute ][ margin-top--large padding--large ]">
+							<img class="[ width-40 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
+							<span class="[ lead text-italic ][ color-gray ]">punto<br>de encuentro</span>
+						</div>
+						<button class="[ btn btn-play ]" onclick="playPause()"><img class="[ width-100 ]" src="<?php echo THEMEPATH; ?>images/play.png"></button>
 						<video width="100%" height="100%"></video>
 					</div>
 				</div>
@@ -31,9 +34,11 @@
 				</li>
 				<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
 				<li>
-					<img class="[ ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
-					<a href="<?php echo site_url('/contacto/'); ?>">#SoyCDMX</a><!-- Contacto - page-contacto.php-->
-					<img class="[ ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+					<a href="<?php echo site_url('/contacto/'); ?>">
+						<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+						#SoyCDMX<!-- Contacto - page-contacto.php-->
+						<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+					</a>
 				</li>
 			</ul>
 
@@ -48,7 +53,7 @@
 					</div>
 				</div>
 			</div><!--/container-->
-			
+
 <?php get_sidebar(); ?>
 			<iframe src="https://ishaqibrahim.cartodb.com/viz/6cc1ad26-d690-11e5-971e-0e31c9be1b51/embed_map" frameborder="0" height="400" width="100%"></iframe>
 

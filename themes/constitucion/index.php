@@ -1,12 +1,12 @@
 <?php get_header(); the_post(); ?>
-
-<?php get_sidebar(); ?>
-	<section class="[ bg-image rectangle ][ margin-bottom--large ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/edificios.png');">
-		<div class="[ bg--light rectangle--light ]">
-			<div class="[ center-full width-90 ]">
-				<h2 class=" [ text-uppercase ][ no-margin ][ color-primary ][ fw-semibold ]">Alequam erat volupat</h2>
-				<p>19 febrero 2016</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias soluta praesentium, earum placeat, quo quas est veniam excepturi quos porro nesciunt.</p>
+	<section class="padding--header">
+		<div class="[ bg-image rectangle ][  margin-bottom--large ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/edificios.png');">
+			<div class="[ bg--light rectangle--light ]">
+				<div class="[ center-full width-90 ]">
+					<h2 class=" [ text-uppercase ][ no-margin ][ color-primary ][ fw-semibold ][ fz-small--xs ]">Alequam erat volupat</h2>
+					<p>19 febrero 2016</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias soluta praesentium, earum placeat, quo quas est veniam excepturi quos porro nesciunt.</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -60,4 +60,5 @@
 			</div>
 		</div>
 	</section>
+	<?php get_sidebar(); ?>
 <?php get_footer(); ?>

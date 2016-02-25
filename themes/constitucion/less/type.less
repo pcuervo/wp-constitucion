@@ -58,6 +58,8 @@ h6, .h6 { font-size: @font-size-h6; }
 p {
   margin: 0 0 (@line-height-computed / 2);
   font-family: "ABeeZee", sans-serif;
+  font-size: 12px;
+  @media (min-width: @screen-sm){ font-size: 14px; }
 }
 
 .lead {
@@ -309,7 +311,11 @@ address {
 }
 
 //Font weight
-h2{ font-weight: 300;}
+h2{
+  font-weight: 300;
+  font-size: 26px;
+  @media (min-width: @screen-sm){ font-size: 30px; }
+}
 
 // .fw-semibold{font-weight: 500px!important;}
 
@@ -319,3 +325,6 @@ h2{ font-weight: 300;}
 .fz-small--xs{ @media (max-width: @screen-sm){font-size: 20px; }}
 .fz-large{ font-size: 18px; }
 .fz-xlarge{ font-size: 20px; }
+
+//letter-spacing
+.letter-spacing{ letter-spacing: 2px;}

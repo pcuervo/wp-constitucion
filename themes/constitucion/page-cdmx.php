@@ -19,21 +19,11 @@ the_title(); ?>
  -->
 	<div class="[ margin-bottom--large ]">
  		<div class="[ row ]">
-			<div class="[ col-xs-12 col-sm-6 ]">
-				<div class="[ row ]">
-					<div class="[ col-xs-6 ]">
-						<div class="[ margin-bottom ]">
-							<div class="[ inline-block ][ margin-sides--small ]">
-								<!-- Charts.js -->
-								<canvas id="pie-data" width="200px" height="200px"></canvas>
-								<canvas id="bar-data" width="200px" height="200px"></canvas>
-							</div>
-						</div>
-					</div>
-					<div class="[ col-xs-6 ]">
-
-					</div>
-				</div>
+			<div class="[ col-xs-4 col-sm-3 ][ margin-bottom text-center ]">
+				<canvas class="[ inline-block ]" id="pie-data" width="100px" height="100px"></canvas>
+			</div>
+			<div class="[ col-xs-8 col-sm-3 ][ margin-bottom text-center ]">
+				<canvas class="[ inline-block ]" id="bar-data" width="150px" height="150px"></canvas>
 			</div>
 			<div class="[ col-xs-12 col-sm-6 ]">
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi explicabo doloremque, temporibus? Similique nam molestias enim eius quibusdam neque incidunt quam cum, hic sint dolorem accusamus veritatis commodi! Optio, cupiditate!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae amet aperiam pariatur ea iste officia facilis, eligendi rem modi reiciendis delectus impedit quibusdam consectetur possimus eaque nihil facere reprehenderit nisi.</p>

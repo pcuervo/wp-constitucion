@@ -4,7 +4,7 @@ the_title(); ?>
 
 
 <?php get_sidebar(); ?>
-	<section class="[ bg-gray-light ][ margin-bottom--large padding--top-bottom--xlarge ]">
+	<section class="[ bg-gray-light ][ margin-top-10 margin-bottom--large padding--top-bottom--xlarge ]">
 		<article class="[ container ]">
 			<div class="[ padding--sides--xsm ]">
 				<h2 class="[ no-margin-top ]">Instrucciones</h2>
@@ -61,6 +61,53 @@ the_title(); ?>
 	</section>
 	<section class="[ container ]">
 		<h2 class="[ no-margin-top ]">Cronología</h2>
+
+
+
+
+		<!-- scroll horizontal -->
+			<div class="[ row ][ margin-bottom ]">
+				<div class="[ col-md-12 ]">
+					<ul id="scroll" class="[ horizontal-slide ][ text-center ]">
+						<li class="[ box-li ]">
+							<img class="img-slide" src="<?php echo THEMEPATH; ?>/images/cdmx.png"/>
+						</li>
+						<li class="[ box-li ]">
+							<div class="[ text--large relative ]">
+								<p class="[ center-full ]">Lorem ipsum dolor sit</p>
+							</div>
+							<div class="[ vertical-line ]"></div>
+							<div class="[ circle-xsmall ][ margin-auto ]"></div>
+							<div class="[ border-gray--large ]"></div>
+							<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]">Febrero 19 de 2016</p>
+						</li>
+						<li class="[ box-li ]">
+							<p class="[ color-gray ][ fz-small ][ margin-top--date ]">Febrero 20 de 2016</p>
+							<div class="[ border-gray--large ]"></div>
+							<div class="[ circle-xsmall ][ margin-auto ]"></div>
+							<div class="[ vertical-line ]"></div>
+							<div class="[ text--small relative ]">
+								<p class="[ center-full ]">Lorem ipsum dolor sit amet, consectetur adispiscing elit.</p>
+							</div>
+						</li>
+						<li class="[ box-li ]">
+							<div class="[ text--large relative ]">
+								<p class="[ center-full ]">Lorem ipsum dolor sit amet, consectetur adispiscing elit.</p>
+							</div>
+							<div class="[ vertical-line ]"></div>
+							<div class="[ circle-xsmall ][ margin-auto ]"></div>
+							<div class="[ border-gray--large ]"></div>
+							<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]">Febrero 21 de 2016</p>
+						</li>
+					</ul>
+				</div>
+			</div> <!-- row -->
+
+
+
+
+
+
 	</section>
 	<?php do_shortcode('[show-survey]'); ?>
 
@@ -153,25 +200,25 @@ the_title(); ?>
 	</section>
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15049.640763754784!2d-99.14220487963355!3d19.437873773736463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2sMexico+City%2C+Federal+District!5e0!3m2!1sen!2smx!4v1456352483009" class="[ height-200 width-100 ][ no-border ]" frameborder="0" allowfullscreen></iframe>
 	<section class="[ bg-gray-light ][ padding--top--xlarge padding-bottom--large--sm ]">
-		<article class="[ container padding--bottom--large ]">
+		<article class="[ container padding--sides--xsm padding--bottom--large ]">
 			<h2 class="[ no-margin-top ]">Opinión de los ciudadanos</h2>
 			<div class="[ row ][ margin-bottom ]">
-				<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ col-xs-12 col-sm-6 col-lg-3 ][ margin-bottom ]">
 					<div class="[ js-video-wrapper ]">
 						<iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/eVZbN7sPPV4" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
-				<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ col-xs-12 col-sm-6 col-lg-3 ][ margin-bottom ]">
 					<div class="[ js-video-wrapper ]">
 						<iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/eVZbN7sPPV4" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
-				<div class="[ hidden-xs col-sm-3 ]">
+				<div class="[ hidden-xs col-sm-6 col-lg-3 ]">
 					<div class="[ js-video-wrapper ]">
 						<iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/eVZbN7sPPV4" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
-				<div class="[ hidden-xs col-sm-3 ]">
+				<div class="[ hidden-xs col-sm-6 col-lg-3 ]">
 					<div class="[ js-video-wrapper ]">
 						<iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/eVZbN7sPPV4" frameborder="0" allowfullscreen></iframe>
 					</div>
@@ -185,13 +232,11 @@ the_title(); ?>
 	</section>
 	<section class="[ container padding--sides--xsm ][ margin-bottom--xlarge ]">
 		<div class="[ bg-light float-top--sm ][ padding--top-bottom--large padding--sides--large--sm ]">
-			<div>
-				<h2 class="[ inline-block align-middle ][ no-margin ]">Estimados</h2>
-<!-- 				<img class="[ inline-block align-middle ][ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo_horizontal.gif"> -->
-			</div>
+			<h2 class="[ inline-block align-middle ][ no-margin ][ fz-small--xs ]">Estimados</h2>
+			<img class="[ inline-block align-middle ][ width-200 ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif">
 			<form class="[ margin-bottom--large ]">
 				<input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Escribe tu mensaje">
-				<h2 class="[ margin-bottom--large ]">Con respecto,</h2>
+				<h2 class="[ margin-bottom--large ][ fz-small--xs ]">Con respecto,</h2>
 				<input type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Tu nombre">
 				<input type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Correo Electrónico">
 				<input type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Teléfono">

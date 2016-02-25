@@ -106,7 +106,6 @@ function createLineChart(){
 }
 
 
-
 /*------------------------------------*\
 	ANIMATED STICKY HEADER
 
@@ -119,5 +118,4 @@ $(window).scroll(function() {
 	}
 });
 \*------------------------------------*/
-
 

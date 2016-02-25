@@ -24,6 +24,7 @@
 					Sed fringilla mauris sit amet nibh. 
 					Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
 					</p>
+					<div class="[ fz-small ][ color-primary ][ margin-top--large ]"> << Regresar </div>
 				</section>
 			</div>
 		</div>

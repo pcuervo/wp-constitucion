@@ -93,6 +93,7 @@
 .width-80   { width: 80%;}
 .width-70   { width: 70%;}
 .width-60   { width: 60%;}
+.width-50   { width: 50%;}
 .width-40   { width: 40%;}
 .width-30   { width: 30%;}
 .width-25   { width: 25%;}
@@ -100,8 +101,11 @@
 .width-19   { width: 19%;}
 .width-15   { width: 15%;}
 .width-10   { width: 10%;}
+.width-200   { width: 200px;}
 
 .height-100   { height: 100%;}
+.height-120    { height: 120px;}
+.height-80    { height: 80px;}
 .height-40    { height: 40px;}
 .height-200   { height: 200px;}
 
@@ -138,6 +142,7 @@
 .padding--top-bottom--xlarge{ padding-top: (@padding-base-vertical*6); padding-bottom: (@padding-base-vertical*6); }
 .padding--top-bottom--xxlarge{ padding-top: (@padding-base-vertical*8); padding-bottom: (@padding-base-vertical*8); }
 
+.no-padding--sides{ padding-left: 0px; padding-right: 0px; }
 .padding--sides{ padding-left: (@padding-base-horizontal*2); padding-right: (@padding-base-horizontal*2); }
 .padding--sides--small{ padding-left: (@padding-base-horizontal); padding-right: (@padding-base-horizontal); }
 .padding--sides--xsmall{ padding-left: (@padding-base-horizontal/2); padding-right: (@padding-base-horizontal/2); }
@@ -198,6 +203,7 @@
 .margin-top--xlarge{ margin-top: (@margin-base*4); }
 .margin-top--xxlarge{ margin-top: (@margin-base*8); }
 .margin-top-10{ margin-top: 10%; }
+.margin-top-8{ margin-top: 8%; }
 
 .no-margin-top-bottom{ margin-top:0; margin-bottom:0; }
 .margin-top-bottom{ margin-top: (@margin-base); margin-bottom: (@margin-base); }
@@ -234,11 +240,13 @@
 .no-border-radius{ border-radius: 0px;}
 
 .border-gray{border-bottom: 1px solid @gray-xxlight;}
+.border-gray--large{border-bottom: 3px solid @gray-xlight;}
 
 // Color
 // -------------------------
 .color-primary { color: @primary; }
 .color-gray { color: @gray; }
+.color-gray--light { color: @gray-light; }
 .color-light-cdmx { color: @light-cdmx; }
 .color-light { color: @light; }
 .color-youtube{color: @youtube;}
@@ -302,6 +310,8 @@
 }
 
 .content-user{
+	padding: 5% 10%;
+
 	img:first-child {
 		.margin-bottom;
 		.width-100;
@@ -313,7 +323,10 @@
 	& p:nth-child(3){
 		.color-primary;
 	}
-	& img + p{
-		display: inline;
+	& p ~ img {
+		.margin-right;
+		.pull-left;
 	}
 }
+
+

@@ -7554,6 +7554,7 @@ header {
   position: fixed;
   background-color: #fff;
   width: 100%;
+  height: 100px;
   z-index: 1050;
 }
 header li,

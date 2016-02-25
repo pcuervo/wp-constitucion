@@ -82,7 +82,7 @@
 
 					<!-- modal menu mobile -->
 					<div class="modal fade" id="modal-menu" tabindex="-1" role="dialog">
-						<div class="[ modal-content ][ width-100 height-100 ]">
+						<div class="[ modal-dialog modal-content ][ width-100 height-100 ][ no-margin ]">
 							<div class="[ container ][ bg-light ]">
 								<div class="[ row ]">
 									<div class="[ col-xs-10 ]">

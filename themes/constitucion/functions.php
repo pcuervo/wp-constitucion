@@ -39,9 +39,10 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
 		wp_enqueue_script( 'chart', JSPATH.'Chart.js', array('jquery'), '1.0', false );
 
-
 		// localize scripts
 		wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
+		wp_localize_script( 'functions', 'isPageParticipa', (string)is_page( 'participa' ) );
+		wp_localize_script( 'functions', 'isPageSondeo', (string)is_page( 'sondeo-masivo' ) );
 
 		// styles
 		wp_enqueue_style( 'styles', get_stylesheet_uri() );

@@ -37,6 +37,9 @@
 		<div><!-- class="container" -->
 		
 			<header>
+
+				<?php if( is_page() ) : ?>
+				<?php else : ?>
 				<nav>
 					<!-- menu desktop -->
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hideen-sm ][ sticky ]">
@@ -103,7 +106,6 @@
 							<img class="[ width-60 ][ margin-top-bottom--large ][ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png">
 						</div>
 					</div>
-					
-
 				</nav>
+				<?php endif; ?>
 			</header>

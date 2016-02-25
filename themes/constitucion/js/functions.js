@@ -1,13 +1,22 @@
+$ = jQuery.noConflict();
+
 (function($){
 
 	"use strict";
 
 	$(function(){
 
-		imgToSvg();
+        if( parseInt( isPageSondeo ) ){
+            return;
+        }
+
+    	imgToSvg();
 		$('.js-video-wrapper').fitVids();
         createPieChart();
         createLineChart();
+
+
+
 
 	});
 

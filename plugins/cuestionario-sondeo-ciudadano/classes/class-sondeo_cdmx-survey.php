@@ -27,6 +27,7 @@ class Sondeo_CDMX_Survey {
 	 */
 	private function init() {
 		$this->hooks();
+		$this->create_survey_page();
 
 		if( ! is_admin() ){
 			add_shortcode( 'show-survey', array( $this, 'display_survey' ) );
@@ -41,10 +42,26 @@ class Sondeo_CDMX_Survey {
 	}
 
 	/**
+	 * Creates a Wordpress Page for for the survey. 
+	 */
+	private function create_survey_page(){
+		if( ! get_page_by_path( 'sondeo-masivo' ) ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Sondeo Masivo',
+				'post_name'   => 'sondeo-masivo',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+	}
+
+	/**
 	 * Load scripts in specific pages
 	 */
 	public function load_script_is_page(){
-		if( is_page( 'participa' )  ){
+		if( is_page( 'sondeo-masivo' )  ){
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_and_localize_scripts' ) );
 		}
 	}
@@ -74,36 +91,26 @@ class Sondeo_CDMX_Survey {
 		<div class="[ survey-container ]">
 			<div class="[ fs-form-wrap ][ padding--top--large ]" id="fs-form-wrap">
 				<div class="fs-title [ container ][ text-center ]">
-					<h1>Sondeo CDMX</h1>
+					<h1>Sondeo Masivo CDMX</h1>
 				</div>
 				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
 					<ol class="fs-fields">
 						<li>
 							<label class="fs-field-label fs-anim-upper [ color-gray ]" for="q1" data-info="Este campo es opcional. Recuerda que tu participación puede ser anónima.">¿Cómo te llamas?</label>
-							<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Juan Pérez"/>
+							<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Juana Pérez"/>
 						</li>
 						<li>
-							<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En qué delegación vives?</label>
-							<select class="cs-select cs-skin-boxes fs-anim-lower" required="required">
-								<option value="" disabled selected>Selecciona tu delgación</option>
-								<option value="alvaro-obregon">Álvaro Obregón</option>
-								<option value="azcaptozalco">Azcaptozalco</option>
-								<option value="benito-juárez">Benito Juárez</option>
-								<option value="coyoacan">Coyoacán</option>
-								<option value="cuajimalpa-de-morelos">Cuajimalpa de Morelos</option>
-								<option value="cuauhtémoc">Cuauhtémoc</option>
-								<option value="gustavo-a-madero">Gustavo A. Madero</option>
-								<option value="iztacalco">Iztacalco</option>
-								<option value="iztapalapa">Iztapalapa</option>
-								<option value="magdalena-contreras">Magdalena Contreras</option>
-								<option value="miguel-hidalgo">Miguel Hidalgo</option>
-								<option value="milpa-alta" >Milpa Alta</option>
-								<option value="tlahuac" >Tláhuac</option>
-								<option value="tlalpan" >Tlalpan</option>
-								<option value="venustiano-carranza" >Venustiano Carranza</option>
-								<option value="xochimilco" >Xochimilco</option>
+							<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde vives?</label>
+							<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
+								<option value="" disabled selected>Selecciona una opción</option>
+								<option value="cdmx">CDMX</option>
+								<option value="zmvm">ZMVM</option>
+								<option value="resto-republica">Resto de la república</option>
+								<option value="fuera-mexico">Fuera de México</option>
 							</select>
 						</li>
+						<li class="[ delegaciones-estados-paises ]"></li>
+						<li class="[ colonias-municipios ]"></li>
 						<?php foreach ( $questions as $key => $question_with_answers ) : ?>
 							<li data-input-trigger>
 								<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="q<?php echo $next_question ?>" data-question="<?php echo $question_with_answers['question_id'] ?>"><?php echo $question_with_answers['question'] ?></label>

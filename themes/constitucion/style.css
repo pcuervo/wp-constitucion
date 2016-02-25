@@ -6783,6 +6783,10 @@ button.close {
   padding-top: 48px;
   padding-bottom: 48px;
 }
+.no-padding--sides {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 .padding--sides {
   padding-left: 24px;
   padding-right: 24px;
@@ -6940,6 +6944,9 @@ button.close {
 }
 .margin-top-10 {
   margin-top: 10%;
+}
+.margin-top-8 {
+  margin-top: 8%;
 }
 .no-margin-top-bottom {
   margin-top: 0;

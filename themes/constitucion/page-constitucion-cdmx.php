@@ -4,7 +4,7 @@ the_title(); ?>
 
 
 <?php get_sidebar(); ?>
-<section class="[ bg-image rectangle-small ][ margin-bottom--large ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/edificios.png');">
+<section class="[ bg-image rectangle-small ][ margin-top-10 margin-bottom--large ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/edificios.png');">
 	<div class="[ bg-dark--opacity width-100 height-100 ]">
 		<h2 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ fw-semibold ]">Información</h2>
 	</div>
@@ -30,7 +30,7 @@ the_title(); ?>
 						<p class="[ fz-xlarge ]">Paso 1</p>
 						<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					</div>
-					<div class="[ col-xs-4 ]">
+					<div class="[ col-xs-4 no-padding--sides ]">
 						<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
 				</div>
@@ -41,19 +41,19 @@ the_title(); ?>
 						<p class="[ fz-xlarge ]">Paso 2</p>
 						<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					</div>
-					<div class="[ col-xs-4 ]">
+					<div class="[ col-xs-4 no-padding--sides ]">
 						<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
 				</div>
 			</div>
-			<div class="[ clearfix ][ visible-xs ]"></div>
+			<div class="[ clearfix ][ visible-xs ][ margin-bottom--large ]"></div>
 			<div class="[ col-xs-6 col-sm-3 ]">
 				<div class="[ row ]">
 					<div class="[ col-xs-8 ]">
 						<p class="[ fz-xlarge ]">Paso 3</p>
 						<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					</div>
-					<div class="[ col-xs-4 ]">
+					<div class="[ col-xs-4 no-padding--sides ]">
 						<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
 				</div>
@@ -64,7 +64,7 @@ the_title(); ?>
 						<p class="[ fz-xlarge ]">Paso 4</p>
 						<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					</div>
-					<div class="[ col-xs-4 ]">
+					<div class="[ col-xs-4 no-padding--sides ]">
 						<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
 				</div>

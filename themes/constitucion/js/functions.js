@@ -47,7 +47,6 @@ function imgToSvg(){
 } //imgToSvg
 
 
-
 /*------------------------------------*\
 	ANIMATED STICKY HEADER
 
@@ -60,6 +59,7 @@ $(window).scroll(function() {
 	}
 });
 \*------------------------------------*/
+
 
 //Chart.js
 //#piecanvas

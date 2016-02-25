@@ -302,6 +302,8 @@
 }
 
 .content-user{
+	padding: 5% 10%;
+
 	img:first-child {
 		.margin-bottom;
 		.width-100;
@@ -313,7 +315,8 @@
 	& p:nth-child(3){
 		.color-primary;
 	}
-	& img + p{
-		display: inline;
+	& p ~ img {
+		.margin-right;
+		.pull-left;
 	}
 }

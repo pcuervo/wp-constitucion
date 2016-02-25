@@ -1,20 +1,41 @@
-		<section>
-			<div class="[ bg-image height-home-video ][ margin-bottom ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/home.png');">
-				<div class="[ width-100 height-100 ]">
-					<div class="[ absolute ][ padding--large ]">
-						<img class="[ width-30 ] " src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
-						<span class="[ lead text-italic ]">punto de encuentro</span> 
-					</div>
-					<button class="[ btn btn-play ][ center-full ]" onclick="playPause()"><img class="[ width-100 ]" src="<?php echo THEMEPATH; ?>images/play.png"></button>
-					<video width="100%" height="100%"></video>
-				</div>
-			</div>
-		</section>
-		<div>
-		</div>
 <?php get_header(); the_post();  ?>
+			<section>
+				<div class="[ bg-image height-home-video ][ margin-bottom ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/home.png');">
+					<div class="[ width-100 height-100 ]">
+						<div class="[ absolute ][ padding--large ]">
+							<img class="[ width-30 ] " src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
+							<span class="[ lead text-italic ]">punto de encuentro</span> 
+						</div>
+						<button class="[ btn btn-play ][ center-full ]" onclick="playPause()"><img class="[ width-100 ]" src="<?php echo THEMEPATH; ?>images/play.png"></button>
+						<video width="100%" height="100%"></video>
+					</div>
+				</div>
+			</section>
 
-
+<!-- menu desktop home -->
+			<ul class="[ menu-home ][ text-center ][ hidden-xs hideen-sm ]">
+				<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
+				<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
+				<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
+				<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php-->
+					<ul class="[ submenu ]">
+						<li ><a href="<?php echo site_url('/cronologia/'); ?>">Cronología</a><!--  - page-cronologia.php--></li>
+						<li><a href="<?php echo site_url('/instrucciones/'); ?>">Instrucciones</a><!--  - page-instrucciones.php--></li>
+						<li><a href="<?php echo site_url('/calendario/'); ?>">Calendario</a><!--  - archive-calendario.php--></li>
+						<li>Cuestionario</li>
+						<li><a href="#">Link a Youtube</a></li>
+						<li><a href="<?php echo site_url('/instrucciones/'); ?>">Instrucciones</a><!--  - page-instrucciones.php --></li>
+						<li><a href="#">Buscador</a></li>
+						<li><a href="<?php echo site_url('/kioskos/'); ?>">Mapa con ubicación de kiosko</a><!--  - archive-kioskos.php--></li>
+					</ul>
+				</li>
+				<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
+				<li>
+					<img class="[ ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+					<a href="<?php echo site_url('/contacto/'); ?>">#SoyCDMX</a><!-- Contacto - page-contacto.php-->
+					<img class="[ ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+				</li>
+			</ul>
 
 <!--home -- Favor de Leer el archivo readme.md -->
 
@@ -29,7 +50,7 @@
 			</div><!--/container-->
 			
 <?php get_sidebar(); ?>
-<iframe src="https://ishaqibrahim.cartodb.com/viz/6cc1ad26-d690-11e5-971e-0e31c9be1b51/embed_map" frameborder="0" height="400" width="100%"></iframe>
+			<iframe src="https://ishaqibrahim.cartodb.com/viz/6cc1ad26-d690-11e5-971e-0e31c9be1b51/embed_map" frameborder="0" height="400" width="100%"></iframe>
 
 
 <?php get_footer(); ?>

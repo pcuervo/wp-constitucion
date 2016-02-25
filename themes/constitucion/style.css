@@ -7124,6 +7124,9 @@ button.close {
     bottom: 70px;
   }
 }
+.content-user {
+  padding: 5% 10%;
+}
 .content-user img:first-child {
   margin-bottom: 20px;
   width: 100%;
@@ -7135,8 +7138,9 @@ button.close {
 .content-user p:nth-child(3) {
   color: #e80e8a;
 }
-.content-user img + p {
-  display: inline;
+.content-user p ~ img {
+  margin-right: 20px;
+  float: left !important;
 }
 @-ms-viewport {
   width: device-width;
@@ -7424,23 +7428,10 @@ header {
   width: 100%;
   z-index: 1050;
 }
-header li {
+header li,
+ul.menu-home > li {
   text-decoration: none;
   display: inline;
-}
-header ul {
-  margin-top: 20px;
-}
-header li a:hover {
-  text-decoration: none;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  color: #e80e8a;
-}
-header > nav > ul > li {
-  padding: 1.5%;
 }
 header > nav > ul > li > a {
   font-family: 'Alegreya Sans', sans-serif;
@@ -7448,24 +7439,49 @@ header > nav > ul > li > a {
   text-decoration: none;
   color: #4a4a4a;
 }
+ul.menu-desktop > li {
+  padding: 3% 1.5%;
+  border-right: 1px solid #dbdbdb;
+}
+ul.menu-desktop > li:last-child {
+  border-right: none;
+}
+ul.menu-desktop {
+  margin-top: 20px;
+}
+ul.menu-desktop li a:hover,
+ul.menu-home > li a:hover,
+ul.menu-desktop li a:hover:hover,
+ul.menu-home > li a:hover:hover,
+ul.menu-desktop li a:hover:focus,
+ul.menu-home > li a:hover:focus,
+ul.menu-desktop li a:hover:active,
+ul.menu-home > li a:hover:active {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  color: #e80e8a;
+}
 ul.submenu {
   display: none !important;
 }
-header > nav > ul.home > li {
+ul.menu-home > li {
   border-left: 1px solid #4a4a4a;
   border-bottom: 1px solid #4a4a4a;
   padding: 1.5% 2.5%;
 }
-header > nav > ul.home > li:last-child {
+ul.menu-home > li:last-child {
   border-right: 1px solid #4a4a4a;
 }
-header > nav > ul.home > li > a {
+ul.menu-home > li > a {
   font-family: 'Alegreya Sans', sans-serif;
   font-weight: bold;
   text-decoration: none;
   color: #4a4a4a;
 }
-header ul.submenu {
+ul.submenu {
   display: none !important;
 }
 ul.menu-mobile {

@@ -2,7 +2,7 @@
 // Header classes
 // --------------------------------------------------
 
-// Header Desktop 2
+// Header
 // --------------------------------------------------
 header{
 	.affix;
@@ -11,27 +11,64 @@ header{
 	z-index: 1050;
 }
 
-header li {
+header li, ul.menu-home > li {
 	text-decoration: none;
 	display:inline;
 }
 
-header ul{
+header > nav > ul >li > a {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    .color-gray;
+ }
+
+// Header -- desktop
+// ---------------
+
+ul.menu-desktop > li{
+	padding: 3% 1.5%;
+	border-right: 1px solid lighten(@gray, 57%);
+}
+
+ul.menu-desktop > li:last-child {
+	border-right: none;
+}
+
+ul.menu-desktop{
 	.margin-top;
 }
 
-header li a:hover {
-	text-decoration: none;
-	.transition;
-    .color-primary;
+ul.menu-desktop li a:hover, ul.menu-home > li a:hover {
+		&,
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+		.transition;
+    	.color-primary;
+	}
 }
 
-header > nav > ul > li{
-	padding: 1.5%;
+ul.submenu{
+	.hidden;
 }
 
 
-header > nav > ul >li > a {
+// Header -- home
+// ---------------
+
+ul.menu-home > li{
+	border-left: 1px solid @gray;
+	border-bottom: 1px solid @gray;
+	padding: 1.5% 2.5%;
+}
+
+ul.menu-home > li:last-child {
+	border-right: 1px solid @gray;
+}
+
+ul.menu-home >li > a {
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: bold;
     text-decoration: none;
@@ -43,34 +80,8 @@ ul.submenu{
 }
 
 
-// Header -- home
-// --------------------------------------------------
-
-
-header > nav > ul.home > li{
-	border-left: 1px solid @gray;
-	border-bottom: 1px solid @gray;
-	padding: 1.5% 2.5%;
-}
-
-header > nav > ul.home > li:last-child {
-	border-right: 1px solid @gray;
-}
-
-header > nav > ul.home >li > a {
-    font-family: 'Alegreya Sans', sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-    .color-gray;
- }
-
-header ul.submenu{
-	.hidden;
-}
-
-
 // menu mobile
-// --------------------------------------------------
+// -----------
 
 ul.menu-mobile{
 	padding-left: 0px !important;

@@ -38,36 +38,9 @@
 		
 			<header>
 				<nav>
-				<!-- menu desktop home -->
-					<?php if ( is_page( 'home' ) ): ?>
-						<ul class="[ home ][ text-center ][ hidden-xs hideen-sm ]">
-							<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
-							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
-							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
-							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php-->
-								<ul class="[ submenu ]">
-									<li ><a href="<?php echo site_url('/cronologia/'); ?>">Cronología</a><!--  - page-cronologia.php--></li>
-									<li><a href="<?php echo site_url('/instrucciones/'); ?>">Instrucciones</a><!--  - page-instrucciones.php--></li>
-									<li><a href="<?php echo site_url('/calendario/'); ?>">Calendario</a><!--  - archive-calendario.php--></li>
-									<li>Cuestionario</li>
-									<li><a href="#">Link a Youtube</a></li>
-									<li><a href="<?php echo site_url('/instrucciones/'); ?>">Instrucciones</a><!--  - page-instrucciones.php --></li>
-									<li><a href="#">Buscador</a></li>
-									<li><a href="<?php echo site_url('/kioskos/'); ?>">Mapa con ubicación de kiosko</a><!--  - archive-kioskos.php--></li>
-								</ul>
-							</li>
-							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-							<li>
-								<img class="[ ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
-								<a href="<?php echo site_url('/contacto/'); ?>">#SoyCDMX</a><!-- Contacto - page-contacto.php-->
-								<img class="[ ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
-							</li>
-						</ul>
-					<?php endif; ?>
-
 					<!-- menu desktop -->
-					<ul class="[ text-center ][ hidden-xs hideen-sm ]">
-						<li><a href="<?php echo site_url('/'); ?> "><img class="[ width-10 ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png"></a><span class="[ text-italic ]">punto de encuentro</span> <!-- - page-home.php --></li>
+					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hideen-sm ][ sticky ]">
+						<li><a href="<?php echo site_url('/'); ?> "><img class="[ width-10 ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a><span class="[ text-italic ]">punto de encuentro</span> <!-- - page-home.php --></li>
 						<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>

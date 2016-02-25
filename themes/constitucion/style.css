@@ -7589,6 +7589,11 @@ header {
   width: 100%;
   z-index: 1050;
 }
+@media (min-width: 992px) {
+  header {
+    height: 100px;
+  }
+}
 header li,
 ul.menu-home > li {
   text-decoration: none;

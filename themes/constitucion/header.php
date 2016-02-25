@@ -40,7 +40,11 @@
 				<nav>
 					<!-- menu desktop -->
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hideen-sm ][ sticky ]">
-						<li class="[ no-padding--sides ]"><a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a><span class="[ text-italic ][ relative bottom-10 ]">punto</span><span class="[ text-italic ][ relative top-10 right-42 ]">de encuentro</span> <!-- - page-home.php --></li>
+						<li class="[ no-padding--sides ]"><a href="<?php echo site_url('/'); ?> ">
+							<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
+							<span class="[ text-italic ][ relative bottom-10 ]">punto</span>
+							<span class="[ text-italic ][ relative top-10 right-42 ]">de encuentro</span> <!-- - page-home.php -->
+						</li>
 						<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
@@ -87,6 +91,7 @@
 								<div class="[ row ]">
 									<div class="[ col-xs-10 ]">
 										<a href="<?php echo site_url('/'); ?> "><img class="[ width-40 ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
+										<span class="[ text-italic ]">punto <br>de encuentro</span>
 									</div>
 									<div class="[ col-xs-2 ][ text-center ][ padding--top ]">
 										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>

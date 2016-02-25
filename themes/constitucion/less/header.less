@@ -30,31 +30,63 @@ header > nav > ul >li > a {
 ul.menu-desktop > li{
 	padding: 3% 1.5%;
 	border-right: 1px solid lighten(@gray, 57%);
-}
+	}
 
 ul.menu-desktop > li:last-child {
-	border-right: none;
+border-right: none;
 }
 
 ul.menu-desktop{
-	.no-margin;
+.no-margin;
 }
 
 ul.menu-desktop li a:hover,
 ul.menu-home > li a:hover {
+	&,
+&:hover,
+&:focus,
+&:active {
+	text-decoration: none;
+	.transition;
+	.color-primary;
+}
+}
+
+ul.submenu{
+.hidden;
+}
+
+.sticky{
+	ul.menu-desktop > li{
+	padding: 3% 1.5%;
+	border-right: 1px solid lighten(@gray, 57%);
+	}
+
+	ul.menu-desktop > li:last-child {
+	border-right: none;
+	}
+
+	ul.menu-desktop{
+	.no-margin;
+	}
+
+	ul.menu-desktop li a:hover,
+	ul.menu-home > li a:hover {
 		&,
 	&:hover,
 	&:focus,
 	&:active {
 		text-decoration: none;
 		.transition;
-    	.color-primary;
+		.color-primary;
+	}
+	}
+
+	ul.submenu{
+	.hidden;
 	}
 }
 
-ul.submenu{
-	.hidden;
-}
 
 
 // Header -- home

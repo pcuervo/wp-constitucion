@@ -109,13 +109,39 @@ function createLineChart(){
 /*------------------------------------*\
 	ANIMATED STICKY HEADER
 
-$(window).scroll(function() {
-	if ($(this).scrollTop() > 1){
-	$('header').addClass("sticky");
-	}
-	else{
-	$('header').removeClass("sticky");
-	}
-});
-\*------------------------------------*/
 
+
+function init() {
+        window.addEventListener( 'scroll', function( event ) {
+            if( !didScroll ) {
+                didScroll = true;
+                setTimeout( scrollPage, 250 );
+            }
+        }, false );
+    }
+
+    function scrollPage() {
+        var sy = scrollY();
+        if ( sy >= changeHeaderOn ) {
+            classie.add( header, 'sticky' );
+        }
+        else {
+            classie.remove( header, 'sticky' );
+        }
+        didScroll = false;
+    }
+
+    function scrollY() {
+        return window.pageYOffset || docElem.scrollTop;
+    }
+\*------------------------------------*/
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 500){  
+            $('header').addClass("sticky");
+            $('header').removeClass("hidden");
+        }
+        else{
+            $('header').removeClass("sticky");
+            $('header').addClass("hidden");
+        }
+    });

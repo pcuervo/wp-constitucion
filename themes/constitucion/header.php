@@ -35,11 +35,11 @@
 		<![endif]-->
 
 		<div><!-- class="container" -->
-
-			<header>
+		<?php if ( is_page('home') ): ?>
+			<header class="[ hidden ]">
 				<nav>
 					<!-- menu desktop -->
-					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hideen-sm ][ sticky ]">
+					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ]">
 						<li class="[ no-padding--sides ]"><a href="<?php echo site_url('/'); ?> ">
 							<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
 							<span class="[ text-italic ][ relative bottom-10 ]">punto</span>
@@ -69,7 +69,6 @@
 							</a>
 						</li>
 					</ul>
-
 					<!-- nav header movil -->
 					<div class="[ bg-light ][ visible-xs ]">
 						<div class="[ container ]">
@@ -113,7 +112,87 @@
 							<img class="[ width-60 ][ margin-top-bottom--large ][ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png">
 						</div>
 					</div>
-
-
 				</nav>
 			</header>
+		<?php endif; ?>
+		<?php if ( ! is_page('home') ): ?>
+			<header>
+				<nav>
+					<!-- menu desktop -->
+					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ]">
+						<li class="[ no-padding--sides ]"><a href="<?php echo site_url('/'); ?> ">
+							<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
+							<span class="[ text-italic ][ relative bottom-10 ]">punto</span>
+							<span class="[ text-italic ][ relative top-10 right-42 ]">de encuentro</span> <!-- - page-home.php -->
+						</li>
+						<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
+						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
+						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
+						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php-->
+							<ul class="[ submenu ]">
+								<li ><a href="<?php echo site_url('/cronologia/'); ?>">Cronología</a><!--  - page-cronologia.php--></li>
+								<li><a href="<?php echo site_url('/instrucciones/'); ?>">Instrucciones</a><!--  - page-instrucciones.php--></li>
+								<li><a href="<?php echo site_url('/calendario/'); ?>">Calendario</a><!--  - archive-calendario.php--></li>
+								<li>Cuestionario</li>
+								<li><a href="#">Link a Youtube</a></li>
+								<li><a href="<?php echo site_url('/instrucciones/'); ?>">Instrucciones</a><!--  - page-instrucciones.php --></li>
+								<li><a href="#">Buscador</a></li>
+								<li><a href="<?php echo site_url('/kioskos/'); ?>">Mapa con ubicación de kiosko</a><!--  - archive-kioskos.php--></li>
+							</ul>
+						</li>
+						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
+						<li>
+							<a href="<?php echo site_url('/contacto/'); ?>">
+								<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+								#SoyCDMX<!-- Contacto - page-contacto.php-->
+								<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+							</a>
+						</li>
+					</ul>
+					<!-- nav header movil -->
+					<div class="[ bg-light ][ visible-xs ]">
+						<div class="[ container ]">
+							<div class="[ row ]">
+								<div class="[ col-xs-9 ]">
+									<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
+									<span class="[ text-italic fz-xsmall ][ relative ]">punto</span>
+									<span class="[ text-italic fz-xsmall ][ relative top-12 right-32 ]">de encuentro</span> <!-- - page-home.php -->
+								</div>
+								<div class="[ col-xs-3 ][ text-center ][ padding--top padding--left--xlarge ]">
+									<a type="button" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- modal menu mobile -->
+					<div class="modal fade" id="modal-menu" tabindex="-1" role="dialog">
+						<div class="[ modal-dialog modal-content ][ width-100 height-100 ][ no-margin ]">
+							<div class="[ container ][ bg-light ]">
+								<div class="[ row ]">
+									<div class="[ col-xs-10 ]">
+										<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
+										<span class="[ text-italic fz-xsmall ][ relative ]">punto</span>
+										<span class="[ text-italic fz-xsmall ][ relative top-12 right-32 ]">de encuentro</span> <!-- - page-home.php -->
+									</div>
+									<div class="[ col-xs-2 ][ text-center ][ padding--top ]">
+										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
+									</div>
+								</div>
+							</div>
+							<div class="[ bg-light-cdmx ][ text-center ]">
+								<ul class="[ menu-mobile ]">
+									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
+									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
+									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php--></li>
+									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
+									<li><a href="<?php echo site_url('/contacto/'); ?>">#SoyCDMX</a><!-- Contacto - page-contacto.php--></li>
+								</ul>
+							</div>
+							<img class="[ width-60 ][ margin-top-bottom--large ][ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png">
+						</div>
+					</div>
+				</nav>
+			</header>
+		<?php endif; ?>
+					

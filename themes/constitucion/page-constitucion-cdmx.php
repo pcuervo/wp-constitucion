@@ -4,7 +4,7 @@ the_title(); ?>
 
 
 <?php get_sidebar(); ?>
-<section class="[ bg-image rectangle-small ][ margin-top-10 margin-bottom--large ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/edificios.png');">
+<section class="[ bg-image rectangle-small ][ margin-header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/edificios.png');">
 	<div class="[ bg-dark--opacity width-100 height-100 ]">
 		<h2 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]"><strong>Información</strong></h2>
 	</div>

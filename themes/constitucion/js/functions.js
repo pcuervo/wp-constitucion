@@ -125,7 +125,7 @@ function createLineChart(){
 
     $(window).scroll(function() {        
         if( parseInt( isHome ) ){
-            if ($(this).scrollTop() > 500){  
+            if ($(this).scrollTop() > 400){  
                 $('header').addClass("sticky");
                 $('header').removeClass("hidden");
             }

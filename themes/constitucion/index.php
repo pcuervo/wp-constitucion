@@ -1,6 +1,4 @@
 <?php get_header(); the_post(); ?>
-
-<?php get_sidebar(); ?>
 	<section class="[ bg-image rectangle ][ margin-bottom--large ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/edificios.png');">
 		<div class="[ bg--light rectangle--light ]">
 			<div class="[ center-full width-90 ]">
@@ -60,4 +58,5 @@
 			</div>
 		</div>
 	</section>
+	<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -76,6 +76,8 @@
 							<div class="[ row ]">
 								<div class="[ col-xs-9 ]">
 									<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
+									<span class="[ text-italic fz-xsmall ][ relative ]">punto</span>
+									<span class="[ text-italic fz-xsmall ][ relative top-12 right-32 ]">de encuentro</span> <!-- - page-home.php -->
 								</div>
 								<div class="[ col-xs-3 ][ text-center ][ padding--top padding--left--xlarge ]">
 									<a type="button" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
@@ -90,8 +92,9 @@
 							<div class="[ container ][ bg-light ]">
 								<div class="[ row ]">
 									<div class="[ col-xs-10 ]">
-										<a href="<?php echo site_url('/'); ?> "><img class="[ width-40 ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
-										<span class="[ text-italic ]">punto <br>de encuentro</span>
+										<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
+										<span class="[ text-italic fz-xsmall ][ relative ]">punto</span>
+										<span class="[ text-italic fz-xsmall ][ relative top-12 right-32 ]">de encuentro</span> <!-- - page-home.php -->
 									</div>
 									<div class="[ col-xs-2 ][ text-center ][ padding--top ]">
 										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>

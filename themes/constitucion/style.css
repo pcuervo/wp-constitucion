@@ -6743,8 +6743,20 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .top-20 {
   top: 20px;
 }
+.bottom-10 {
+  bottom: 10px;
+}
+.top-10 {
+  top: 10px;
+}
+.top-12 {
+  top: 12px;
+}
 .right-42 {
   right: 42px;
+}
+.right-32 {
+  right: 32px;
 }
 .align-top {
   vertical-align: top;

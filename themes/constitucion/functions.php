@@ -43,6 +43,8 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
 		wp_localize_script( 'functions', 'isPageParticipa', (string)is_page( 'participa' ) );
 		wp_localize_script( 'functions', 'isPageSondeo', (string)is_page( 'sondeo-masivo' ) );
+		wp_localize_script( 'functions', 'isPageCDMX', (string)is_page( 'cdmx' ) );
+		wp_localize_script( 'functions', 'isHome', (string)is_page( 'home' ) );
 
 		// styles
 		wp_enqueue_style( 'styles', get_stylesheet_uri() );

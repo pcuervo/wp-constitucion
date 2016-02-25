@@ -9,7 +9,7 @@ html, body {
 }
 
 .survey-container {
-	min-height: 600px;
+	min-height: 100vh;
 	background: #eeeeee;
 }
 
@@ -38,9 +38,9 @@ a:hover, a:focus {
 .related {
 	font-weight: 700;
 	text-align: center;
-	padding: 5em 0;
+	padding: 1em 0;
 	display: none;
-	background: #fff;
+	background: #cccccc;
 	color: rgba(0,0,0,0.3);
 }
 

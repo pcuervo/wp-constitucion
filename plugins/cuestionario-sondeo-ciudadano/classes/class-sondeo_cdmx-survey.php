@@ -42,7 +42,7 @@ class Sondeo_CDMX_Survey {
 	}
 
 	/**
-	 * Creates a Wordpress Page for for the survey. 
+	 * Creates a Wordpress Page for for the survey.
 	 */
 	private function create_survey_page(){
 		if( ! get_page_by_path( 'sondeo-masivo' ) ){
@@ -88,10 +88,10 @@ class Sondeo_CDMX_Survey {
 		$questions = $this->get_questions();
 		$next_question = 3;
 		?>
-		<div class="[ survey-container ]">
-			<div class="[ fs-form-wrap ][ padding--top--large ]" id="fs-form-wrap">
+		<div class="[ survey-container ][ padding--header ]">
+			<div class="[ fs-form-wrap ]" id="fs-form-wrap">
 				<div class="fs-title [ container ][ text-center ]">
-					<h1>Sondeo Masivo CDMX</h1>
+					<h1 class="[ margin-top ]">Sondeo Masivo CDMX</h1>
 				</div>
 				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
 					<ol class="fs-fields">

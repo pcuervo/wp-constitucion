@@ -3414,7 +3414,7 @@ fieldset[disabled] .btn-danger.focus {
   height: 40px;
   border-radius: 100px;
   z-index: 1000;
-  bottom: -15px;
+  bottom: -20px;
   left: 43%;
   position: absolute;
   padding: 0 !important;
@@ -7668,6 +7668,34 @@ ul.menu-home > li a:hover:active {
   color: #e80e8a;
 }
 ul.submenu {
+  display: none !important;
+}
+.sticky ul.menu-desktop > li {
+  padding: 3% 1.5%;
+  border-right: 1px solid #dbdbdb;
+}
+.sticky ul.menu-desktop > li:last-child {
+  border-right: none;
+}
+.sticky ul.menu-desktop {
+  margin: 0 !important;
+}
+.sticky ul.menu-desktop li a:hover,
+.sticky ul.menu-home > li a:hover,
+.sticky ul.menu-desktop li a:hover:hover,
+.sticky ul.menu-home > li a:hover:hover,
+.sticky ul.menu-desktop li a:hover:focus,
+.sticky ul.menu-home > li a:hover:focus,
+.sticky ul.menu-desktop li a:hover:active,
+.sticky ul.menu-home > li a:hover:active {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  color: #e80e8a;
+}
+.sticky ul.submenu {
   display: none !important;
 }
 ul.menu-home > li {

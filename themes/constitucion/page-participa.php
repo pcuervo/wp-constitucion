@@ -4,7 +4,7 @@ the_title(); ?>
 
 
 <?php get_sidebar(); ?>
-	<section class="[ bg-gray-light ][ margin-bottom--large padding--top-bottom--xlarge ]">
+	<section class="[ bg-gray-light ][ margin-top-10 margin-bottom--large padding--top-bottom--xlarge ]">
 		<article class="[ container ]">
 			<div class="[ padding--sides--xsm ]">
 				<h2 class="[ no-margin-top ]">Instrucciones</h2>
@@ -153,25 +153,25 @@ the_title(); ?>
 	</section>
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15049.640763754784!2d-99.14220487963355!3d19.437873773736463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2sMexico+City%2C+Federal+District!5e0!3m2!1sen!2smx!4v1456352483009" class="[ height-200 width-100 ][ no-border ]" frameborder="0" allowfullscreen></iframe>
 	<section class="[ bg-gray-light ][ padding--top--xlarge padding-bottom--large--sm ]">
-		<article class="[ container padding--bottom--large ]">
+		<article class="[ container padding--sides--xsm padding--bottom--large ]">
 			<h2 class="[ no-margin-top ]">Opinión de los ciudadanos</h2>
 			<div class="[ row ][ margin-bottom ]">
-				<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ col-xs-12 col-sm-6 col-lg-3 ][ margin-bottom ]">
 					<div class="[ js-video-wrapper ]">
 						<iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/eVZbN7sPPV4" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
-				<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ col-xs-12 col-sm-6 col-lg-3 ][ margin-bottom ]">
 					<div class="[ js-video-wrapper ]">
 						<iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/eVZbN7sPPV4" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
-				<div class="[ hidden-xs col-sm-3 ]">
+				<div class="[ hidden-xs col-sm-6 col-lg-3 ]">
 					<div class="[ js-video-wrapper ]">
 						<iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/eVZbN7sPPV4" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
-				<div class="[ hidden-xs col-sm-3 ]">
+				<div class="[ hidden-xs col-sm-6 col-lg-3 ]">
 					<div class="[ js-video-wrapper ]">
 						<iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/eVZbN7sPPV4" frameborder="0" allowfullscreen></iframe>
 					</div>

@@ -5937,6 +5937,14 @@ button.close {
 .rectangle {
   height: 300px;
 }
+.logo {
+  width: 80px;
+}
+@media (min-width: 992px) {
+  .logo {
+    width: 160px;
+  }
+}
 .height-line {
   height: 30px;
 }

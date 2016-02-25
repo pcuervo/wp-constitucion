@@ -40,7 +40,7 @@
 				<nav>
 					<!-- menu desktop -->
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hideen-sm ][ sticky ]">
-						<li><a href="<?php echo site_url('/'); ?> "><img class="[ width-10 ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a><span class="[ text-italic ]">punto de encuentro</span> <!-- - page-home.php --></li>
+						<li><a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a><span class="[ text-italic ]">punto</span><span class="[ text-italic ] relative">de encuentro</span> <!-- - page-home.php --></li>
 						<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
@@ -71,7 +71,7 @@
 						<div class="[ container ]">
 							<div class="[ row ]">
 								<div class="[ col-xs-9 ]">
-									<a href="<?php echo site_url('/'); ?> "><img class="[ width-40 ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
+									<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
 								</div>
 								<div class="[ col-xs-3 ][ text-center ][ padding--top padding--left--xlarge ]">
 									<a type="button" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>

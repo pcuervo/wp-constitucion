@@ -2,8 +2,6 @@
 
 the_title(); ?>
 
-
-<?php get_sidebar(); ?>
 	<section class="[ bg-gray-light ][ margin--header margin-bottom--large padding--top-bottom--xlarge ]">
 		<article class="[ container ]">
 			<div class="[ padding--sides--xsm ]">

@@ -2,8 +2,6 @@
 
 the_title(); ?>
 
-
-<?php get_sidebar(); ?>
 <section class="[ bg-image rectangle-small ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/edificios.png');">
 	<div class="[ bg-dark--opacity width-100 height-100 ]">
 		<h2 class=" [ text-uppercase text-center ][ width-100 ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Ciudad de México</h2>

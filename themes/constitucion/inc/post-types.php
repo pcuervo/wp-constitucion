@@ -69,4 +69,35 @@
 		);
 		register_post_type( 'kioskos', $args );
 
+		// PREGUNTAS FRECUENTES
+		$labels = array(
+			'name'          => 'Preguntas frecuentes',
+			'singular_name' => 'Preguntas frecuentes',
+			'add_new'       => 'Nueva Pregunta',
+			'add_new_item'  => 'Nueva Pregunta',
+			'edit_item'     => 'Editar Pregunta',
+			'new_item'      => 'Nueva Pregunta',
+			'all_items'     => 'Todos',
+			'view_item'     => 'Ver Pregunta',
+			'search_items'  => 'Buscar Pregunta',
+			'not_found'     => 'No se encontro',
+			'menu_name'     => 'Preguntas frecuentes'
+		);
+
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'preguntas-frecuentes' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => 6,
+			'supports'           => array( 'title', 'editor' )
+		);
+		register_post_type( 'preguntas-frecuentes', $args );
+
 	});

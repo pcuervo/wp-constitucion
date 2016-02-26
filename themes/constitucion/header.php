@@ -223,7 +223,7 @@
 							</ul>
 						</li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-<!-- #SoyCDMX mobile not home -->						
+<!-- #SoyCDMX desktop not home -->						
 						<li class="dropdown">
 							<a class="dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
 								<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">

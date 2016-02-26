@@ -108,12 +108,43 @@
 		</ul>
 	</li>
 	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-	<li>
-		<a href="<?php echo site_url('/contacto/'); ?>">
+<!-- #SoyCDMX desktop home -->						
+	<li class="dropdown">
+		<a class="dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
 			<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 			#SoyCDMX<!-- Contacto - page-contacto.php-->
 			<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
 		</a>
+		<ul class="dropdown-menu drop-top-right drop-hashtag-post bg-gray-light " role="menu" aria-labelledby="menu1">
+			<div>
+				<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
+				<h1>#SoyCDM</h1>
+			</div>
+			<div>
+				<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+				<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+				<p class="[ text-italic fz-xsmall ]">20:33 - Febrero 23 - 2016 </p>
+				<hr class="[ border-bottom-gray ]">
+			</div>
+			<div>
+				<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+				<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+				<p class="[ text-italic fz-xsmall ]">20:43 - Febrero 23 - 2016 </p>
+				<hr class="[ border-bottom-gray ]">
+			</div>
+			<div>
+				<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+				<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+				<p class="[ text-italic fz-xsmall ]">20:46 - Febrero 23 - 2016 </p>
+				<hr class="[ border-bottom-gray ]">
+			</div>
+			<div>
+				<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+				<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+				<p class="[ text-italic fz-xsmall ]">20:47 - Febrero 23 - 2016 </p>
+				<hr class="[ border-bottom-gray ]">
+			</div>
+		</ul>
 	</li>
 </ul>
 

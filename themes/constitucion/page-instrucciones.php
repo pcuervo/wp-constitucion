@@ -2,7 +2,4 @@
 
 the_title(); ?>
 
-
-<?php get_sidebar(); ?>
-
 <?php get_footer(); ?>

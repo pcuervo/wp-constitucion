@@ -246,7 +246,4 @@ the_title(); ?>
 		</div>
 	</section>
 
-
-
-
 <?php get_footer(); ?>

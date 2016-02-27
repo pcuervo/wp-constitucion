@@ -38,6 +38,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 		// scripts
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '1.0', true );
+		wp_enqueue_script( 'api-google', 'http://maps.googleapis.com/maps/api/js?sensor=false', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
 		wp_enqueue_script( 'chart', JSPATH.'Chart.js', array('jquery'), '1.0', false );
 
@@ -47,6 +48,11 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		wp_localize_script( 'functions', 'isPageSondeo', (string)is_page( 'sondeo-masivo' ) );
 		wp_localize_script( 'functions', 'isPageCDMX', (string)is_page( 'cdmx' ) );
 		wp_localize_script( 'functions', 'isHome', (string)is_page( 'home' ) );
+		if ( is_page( 'home' ) ) {
+			wp_localize_script( 'functions', 'kioskos', getKioskos() );
+		}
+		
+
 
 		// styles
 		wp_enqueue_style( 'styles', get_stylesheet_uri() );
@@ -126,7 +132,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 	if ( function_exists('add_image_size') ){
 
-		//add_image_size( 'size_name', 200, 200, true );
+		add_image_size( 'images_gal_cdmx', 263, 124, true );
 
 		// cambiar el tamaño del thumbnail
 		
@@ -278,6 +284,39 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		$result['success'] = 'Se envío el mensaje con exito';
 
 		return true;
+	}
+
+	/**	
+	 * RETURN KIOSKOS
+	 */
+	function getKioskos(){
+		$kioscos = new WP_Query(array(
+				'post_type'      => 'kioskos',
+				'posts_per_page' => -1,
+			));
+
+		if ( $kioscos->have_posts() ) : 
+			$new_arr = array();
+			$count = 1;
+			while ( $kioscos->have_posts() ) : $kioscos->the_post();
+
+				$latitud_kiosko = get_post_meta(get_the_ID(), 'latitud_kiosko', true);
+				$longitud_kiosko = get_post_meta(get_the_ID(), 'longitud_kiosko', true);
+
+				if ($latitud_kiosko != '' AND $longitud_kiosko != '') {
+					$new_arr[$count]['lat'] = $latitud_kiosko;
+					$new_arr[$count]['long'] = $longitud_kiosko;
+					$new_arr[$count]['name'] = get_the_title();
+				}
+				
+
+				$count++;
+			endwhile; 
+		endif; 
+		wp_reset_postdata();
+
+		return $new_arr;
+
 	}
 
 /**	

@@ -1,4 +1,6 @@
-<?php
+<?php global $result;
+
+if(isset($_POST['accion']) AND $_POST['accion'] == 'guarda-formulario') storeForm($_POST);
 
 // RENAME THE DEFAULT POST TYPE
 
@@ -238,6 +240,31 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		$mes = array('01' => 'Enero', '02' => 'Febrero', '03' => 'Marzo', '04' => 'Abril', '05' => 'Mayo', '06' =>'Junio', '07' => 'Julio', '08' => 'Agosto', '09' => 'Septiembre', '10' => 'Octubre', '11' => 'Noviembre', '12' => 'Diciembre');
 
 		return array($fecha[2], $mes[$fecha[1]], $fecha[0], $dia_name, $fecha[1]);
+	}
+
+	/**
+	 * STORE FORM
+	 */
+	function storeForm($data){
+		global $result;
+
+		$content = '<p><strong>Teléfono: </strong>'.$data['telefono_cdmx'].'<p>';
+		$content .= '<p><strong>Correo: </strong>'.$data['email_cdmx'].'<p>';
+		$content .= '<p><strong>Mensaje: </strong>'.$data['mensaje_cdmx'].'<p>';
+
+		$contact_new = array(
+		  'post_title'    => $data['nombre_cdmx'],
+		  'post_content'  => $content,
+		  'post_status'   => 'publish',
+		  'post_type'     => 'formulario-cdmx',
+		  'post_author'   => 1,
+		);
+
+		wp_insert_post( $contact_new );
+
+		$result['success'] = 'Se envío el mensaje con exito';
+
+		return true;
 	}
 
 

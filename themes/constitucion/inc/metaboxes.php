@@ -10,6 +10,7 @@
 
 		add_meta_box( 'meta-box-ubicacion', 'Ubicación', 'show_metabox_ubicacion', 'kioskos');
 		add_meta_box( 'meta-box-extras_evento', 'Extras evento', 'show_metabox_extras_evento', 'eventos', 'side', 'high');
+		add_meta_box( 'meta-box-video_voces', 'Insertar video', 'show_metabox_video_voces', 'voces-ciudadanas');
 
 
 		if ($post->post_name == 'participa' || $post->post_name == 'proceso-participativo'){
@@ -85,6 +86,22 @@
 	}
 
 
+	function show_metabox_video_voces($post){
+		$video_voces = get_post_meta($post->ID, 'video_voces', true);
+
+		wp_nonce_field(__FILE__, '_video_nonce');
+
+		echo "<label for='video_voces' class='label-paquetes'>Video </label>";
+		echo "<textarea class='widefat' id='video_voces' name='video_voces' rows='6'/>$video_voces</textarea><br><br>";
+
+		if ($video_voces != '') {
+			preg_match('/src="([^"]+)"/', $video_voces, $match);
+			$url = $match[1];
+			echo '<iframe class="[ embed-responsive-item ]" src="'.$url.'" frameborder="0" allowfullscreen></iframe>;';
+		}
+	}
+
+
 
 // SAVE METABOXES DATA ///////////////////////////////////////////////////////////////
 
@@ -122,6 +139,10 @@
 			update_post_meta($post_id, 'fecha_evento', $_POST['fecha_evento']);
 		}
 
+		if ( isset($_POST['video_voces']) and check_admin_referer(__FILE__, '_video_nonce') ){
+		
+			update_post_meta($post_id, 'video_voces', $_POST['video_voces']);
+		}
 		// Guardar correctamente los checkboxes
 		/*if ( isset($_POST['_checkbox_meta']) and check_admin_referer(__FILE__, '_checkbox_nonce') ){
 			update_post_meta($post_id, '_checkbox_meta', $_POST['_checkbox_meta']);

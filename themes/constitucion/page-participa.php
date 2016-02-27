@@ -1,6 +1,9 @@
 <?php get_header(); the_post();
 
-the_title(); ?>
+global $result;
+if( isset( $result['success'] ) ): ?>
+	<div class="[ bg-success btn-lg text-center ]"><?php echo $result['success']; ?></div>
+<?php endif;  ?>
 
 	<section class="[ bg-gray-light ][ margin--header margin-bottom--large padding--top-bottom--xlarge ]">
 		<article class="[ container ]">
@@ -222,39 +225,42 @@ the_title(); ?>
 			</div>
 		</form>
 	</section>
-	<section class="[ bg-image rectangle-small ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/edificios.png');">
-		<div class="[ bg-dark--opacity width-100 height-100 ][ text-center ]">
-			<h2 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ fw-semibold ]">¡Participa en nuestros kioskos!</h2>
-		</div>
-	</section>
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15049.640763754784!2d-99.14220487963355!3d19.437873773736463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2sMexico+City%2C+Federal+District!5e0!3m2!1sen!2smx!4v1456352483009" class="[ height-200 width-100 ][ no-border ]" frameborder="0" allowfullscreen></iframe>
 	<section class="[ bg-gray-light ][ padding--top--xlarge padding-bottom--large--sm ]">
 		<article class="[ container padding--sides--xsm padding--bottom--large ]">
-			<h2 class="[ no-margin-top ]">Opinión de los ciudadanos</h2>
+			<h2 class="[ no-margin-top ]">Voces ciudadanas</h2>
 			<div class="[ row ][ margin-bottom ]">
-				<div class="[ col-xs-12 col-sm-6 col-lg-3 ][ margin-bottom ]">
-					<div class="[ js-video-wrapper ]">
-						<iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/eVZbN7sPPV4" frameborder="0" allowfullscreen></iframe>
-					</div>
-				</div>
-				<div class="[ col-xs-12 col-sm-6 col-lg-3 ][ margin-bottom ]">
-					<div class="[ js-video-wrapper ]">
-						<iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/eVZbN7sPPV4" frameborder="0" allowfullscreen></iframe>
-					</div>
-				</div>
-				<div class="[ hidden-xs col-sm-6 col-lg-3 ]">
-					<div class="[ js-video-wrapper ]">
-						<iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/eVZbN7sPPV4" frameborder="0" allowfullscreen></iframe>
-					</div>
-				</div>
-				<div class="[ hidden-xs col-sm-6 col-lg-3 ]">
-					<div class="[ js-video-wrapper ]">
-						<iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/eVZbN7sPPV4" frameborder="0" allowfullscreen></iframe>
-					</div>
-				</div>
+				<?php $voces_ciudadanas = new WP_Query(array(
+						'post_type'      => 'voces-ciudadanas',
+						'posts_per_page' => 4,
+						'meta_query' => array(
+							array(
+								'key'     => 'video_voces',
+								'value'   => '',
+								'compare' => '!=',
+							),
+						),
+					));
+
+				if ( $voces_ciudadanas->have_posts() ) : 
+					$count = 0;
+					$count_pasados = 0;
+					while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
+						<div class="[ col-xs-12 col-sm-6 col-lg-3 ][ margin-bottom ]">
+							<div class="[ js-video-wrapper ]">
+
+								<?php $video = get_post_meta( $post->ID, 'video_voces', true );
+								preg_match('/src="([^"]+)"/', $video, $match);
+								$url_video = $match[1]; ?>
+								<iframe class="[ embed-responsive-item ]" src="<?php echo $url_video; ?>" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</div>
+					<?php endwhile; 
+				endif; 
+				wp_reset_postdata(); ?>
+			
 			</div>
 			<div class="[ text-right ]">
-				<p class="[ inline-block align-middle ][ no-margin ]">Ver más</p>
+				<a href="https://www.youtube.com/channel/UC3-12ySVHF-iItCbSdZ2z-Q" target="_blank"><p class="[ inline-block align-middle ][ no-margin ]">Ver más</p></a>
 				<img class="[ inline-block align-middle ][ svg icon icon--iconed--small icon--thickness-1 icon--stoke ][ color-youtube ]"  src="<?php echo THEMEPATH; ?>icons/youtube.svg">
 			</div>
 		</article>
@@ -265,12 +271,14 @@ the_title(); ?>
 				<h2 class="[ inline-block align-middle ][ no-margin ]">Estimados</h2>
 				<img class="[ inline-block align-middle ][ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif">
 			</div>
-			<form class="[ margin-bottom--large ]">
-				<input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Escribe tu mensaje">
+			<form class="[ margin-bottom--large ]" action="" method="POST">
+				<input type="text" name="mensaje_cdmx" id="mensaje_cdmx" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Escribe tu mensaje">
 				<h2 class="[ margin-bottom--large ][ fz-small--xs ]">Con respeto,</h2>
-				<input type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Tu nombre">
-				<input type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Correo Electrónico">
-				<input type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Teléfono">
+				<input name="nombre_cdmx" id="nombre_cdmx" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Tu nombre">
+				<input name="email_cdmx" id="email_cdmx" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Correo Electrónico">
+				<input name="telefono_cdmx" id="telefono_cdmx" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Teléfono">
+				<input name="accion" id="accion" type="hidden" value="guarda-formulario">
+
 				<button type="submit" class="[ btn btn-secondary ][ pull-right ]">enviar</button>
 			</form>
 		</div>

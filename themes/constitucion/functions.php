@@ -195,7 +195,6 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 // HELPER METHODS AND FUNCTIONS //////////////////////////////////////////////////////
 
 
-
 	/**
 	 * Print the <title> tag based on what is being viewed.
 	 * @return string
@@ -385,3 +384,17 @@ function insert_pregunta( $text, $number, $type, $is_dynamic, $is_required, $lim
 	);
 	return $wpdb->insert_id;
 }
+
+	/**
+	 * Regresa la url del attachment especificado
+	 * @param  int     $post_id
+	 * @param  string  $size
+	 * @return string  url de la imagen
+	 */
+	function attachment_image_url($post_id, $size){
+		$image_id   = get_post_thumbnail_id($post_id);
+		$image_data = wp_get_attachment_image_src($image_id, $size, true);
+		return isset($image_data[0]) ? $image_data[0] : '';
+	}
+
+

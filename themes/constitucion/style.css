@@ -3670,6 +3670,10 @@ tbody.collapse.in {
   left: 0;
   right: auto;
 }
+.drop-top-right {
+  top: 0;
+  left: 0px;
+}
 .dropdown-header {
   display: block;
   padding: 3px 20px;
@@ -3685,6 +3689,10 @@ tbody.collapse.in {
   bottom: 0;
   top: 0;
   z-index: 990;
+}
+.drop-hashtag-post {
+  min-width: 350px;
+  padding: 12px 24px;
 }
 .pull-right > .dropdown-menu {
   right: 0;
@@ -7333,6 +7341,9 @@ ul.horizontal-slide li[class*="col"]:first-child {
   .content-user p ~ img {
     width: 60%;
   }
+}
+.border-bottom-gray {
+  border-bottom: 1px solid #cacaca;
 }
 @-ms-viewport {
   width: device-width;

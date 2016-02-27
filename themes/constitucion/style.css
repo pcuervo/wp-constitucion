@@ -6609,13 +6609,13 @@ ul.horizontal-slide li[class*="col"]:first-child {
   margin-bottom: 50px;
 }
 .box-li.ya-paso a {
-  color: red;
+  color: rgba(204, 204, 204, 0.75);
 }
 .box-li.ya-paso a:hover {
   text-decoration: none;
 }
 .box-li.ya-paso p {
-  color: red;
+  color: rgba(204, 204, 204, 0.75);
 }
 .box-li a {
   color: #333333;

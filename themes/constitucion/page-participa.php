@@ -65,12 +65,16 @@ if( isset( $result['success'] ) ): ?>
 
 		<!-- scroll horizontal -->
 			<div class="[ row ][ margin-bottom ]">
-				<div class="[ col-md-12 ]">
-					<ul id="scroll" class="[ scroll-cronologia ][ horizontal-slide ][ text-center ]">
+				<div class="[ col-md-2 ]">
+					<ul id="scroll" class="[ text-center ]">
 						<li class="[ box-li ]">
 							<img class="img-slide" src="<?php echo THEMEPATH; ?>/images/cdmx.png"/>
 						</li>
-
+					</ul>
+				</div>
+				<div class="[ col-md-10 ]">
+					<ul id="scroll" class="[ scroll-cronologia ][ horizontal-slide ][ text-center ]">
+						
 						<?php $cronologia = new WP_Query(array(
 								'post_type'      => 'eventos',
 								'posts_per_page' => -1,
@@ -131,7 +135,7 @@ if( isset( $result['success'] ) ): ?>
 
 							$data = '';
 							if ($cronologia->found_posts >= 7 AND $count_pasados > 0) {
-								$recorre = $count_pasados * 150;
+								$recorre = ($count_pasados - 1 ) * 150;
 								echo '<input type="hidden" id="recorre" value="'.$recorre.'">';
 							}
 

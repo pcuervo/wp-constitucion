@@ -294,9 +294,9 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 				'post_type'      => 'kioskos',
 				'posts_per_page' => -1,
 			));
-
+		$new_arr = array();
 		if ( $kioscos->have_posts() ) : 
-			$new_arr = array();
+			
 			$count = 1;
 			while ( $kioscos->have_posts() ) : $kioscos->the_post();
 

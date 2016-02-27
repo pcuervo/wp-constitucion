@@ -320,6 +320,54 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	}
 
 /**	
+ * EDITAR GALERIA DEL CONTENT
+ */
+
+	remove_shortcode('gallery');
+	add_shortcode('gallery', 'parse_gallery_shortcode');
+	function parse_gallery_shortcode($atts) {
+		global $post;
+		if ( ! empty( $atts['ids'] ) ) {
+			// 'ids' is explicitly ordered, unless you specify otherwise.
+			if ( empty( $atts['orderby'] ) )
+				$atts['orderby'] = 'post__in';
+			$atts['include'] = $atts['ids'];
+		}
+		extract(shortcode_atts(array(
+			'orderby' => 'menu_order ASC, ID ASC',
+			'include' => '',
+			'id' => $post->ID,
+			'itemtag' => 'dl',
+			'icontag' => 'dt',
+			'captiontag' => 'dd',
+			'columns' => 3,
+			'size' => 'medium',
+			'link' => 'file'
+		), $atts));
+		$args = array(
+			'post_type' => 'attachment',
+			'post_status' => 'inherit',
+			'post_mime_type' => 'image',
+			'orderby' => $orderby
+		);
+		if ( !empty($include) )
+			$args['include'] = $include;
+		else {
+			$args['post_parent'] = $id;
+			$args['numberposts'] = -1;
+		}
+		$images = get_posts($args);
+		echo '<div class="[ row ][ margin-bottom--large ]">';
+			foreach ( $images as $image ) {
+				$img_url = wp_get_attachment_image_src($image->ID, 'images_gal_cdmx');
+				// render your gallery here
+				echo '<div class="[ col-xs-4 col-sm-3 ][ no-padding--right--xs ]"><img src="'.$img_url[0].'" class="[ img-responsive ][ margin-auto ]"></div>';
+
+			}
+		echo "</div>";
+	}
+
+/**	
  * PAGINACION
  */
 

@@ -1,5 +1,4 @@
 <?php get_header(); the_post();
-
 the_title(); ?>
 
 <section class="[ bg-image rectangle-small ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/edificios.png');">
@@ -11,7 +10,7 @@ the_title(); ?>
 	<div class="[ margin-bottom--large ]">
 		<?php the_content(); ?>
 	</div>
-	<img class="[ img-responsive ][ margin-auto margin-bottom--large ]" src="<?php echo THEMEPATH; ?>/images/edificios.png">
+	<!-- <img class="[ img-responsive ][ margin-auto margin-bottom--large ]" src="<?php echo $url_image; ?>"> -->
 <!-- 	<div class="[ bg-image rectangle ][ margin-bottom ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/edificios.png');"></div>
  -->
 	<div class="[ margin-bottom--large ]">
@@ -28,22 +27,8 @@ the_title(); ?>
 		</div>
 		<p class="[ visible-xs ]">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
 	</div>
-	<div class="[ row ][ margin-bottom--large ]">
-		<div class="[ col-xs-4 col-sm-3 ][ no-padding--right--xs ]">
-			<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/edificios.png">
-		</div>
-		<div class="[ col-xs-4 col-sm-3 ][ padding--right--small--xs padding--left--small--xs ]">
-			<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/edificios.png">
-		</div>
-		<div class="[ col-xs-4 col-sm-3 ][ no-padding--left--xs ]">
-			<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/edificios.png">
-		</div>
-		<div class="[ hidden-xs col-sm-3 ]">
-			<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/edificios.png">
-		</div>
-	</div>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ducimus provident voluptatum accusamus, reprehenderit adipisci repellendus est doloribus exercitationem possimus obcaecati quia minima blanditiis, sequi facilis earum voluptates.</p>
-	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+	<?php echo wpautop( do_shortcode(get_post_meta($post->ID, 'contenido_extra', true) ) ); ?>
+
 </section>
 
 <?php get_footer(); ?>

@@ -7382,6 +7382,10 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .border-bottom-gray {
   border-bottom: 1px solid #cacaca;
 }
+.aligncenter {
+  margin: 0 auto;
+  display: inherit;
+}
 @-ms-viewport {
   width: device-width;
 }

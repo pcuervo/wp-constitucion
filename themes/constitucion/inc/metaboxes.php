@@ -17,6 +17,10 @@
 			add_meta_box( 'meta-box-pasos', 'Pasos', 'show_metabox_pasos', 'page');
 		}
 
+		if ($post->post_name == 'participa' || $post->post_name == 'cdmx'){
+			add_meta_box( 'meta-box-contenido_extra', 'Extras', 'show_metabox_contenido_extra', 'page');
+		}
+
 	});
 
 
@@ -101,6 +105,13 @@
 		}
 	}
 
+	function show_metabox_contenido_extra($post){
+		wp_nonce_field(__FILE__, '_extra_cdmx_nonce');
+		$contenido_extra = get_post_meta($post->ID, 'contenido_extra', true);
+		wp_editor( $contenido_extra, 'contenido_extra' );
+
+	}
+
 
 	function show_metabox_extras_noticias($post){
 		global $post;
@@ -152,8 +163,11 @@
 		}
 
 		if ( isset($_POST['video_voces']) and check_admin_referer(__FILE__, '_video_nonce') ){
-		
 			update_post_meta($post_id, 'video_voces', $_POST['video_voces']);
+		}
+
+		if ( isset($_POST['contenido_extra']) and check_admin_referer(__FILE__, '_extra_cdmx_nonce') ){
+			update_post_meta($post_id, 'contenido_extra', $_POST['contenido_extra']);
 		}
 
 		if ( isset($_POST['destacado_noticia']) and check_admin_referer(__FILE__, '_extras_noticia_nonce')){

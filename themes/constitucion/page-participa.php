@@ -1,4 +1,5 @@
 <?php get_header(); the_post();
+the_title();
 
 global $result;
 if( isset( $result['success'] ) ): ?>

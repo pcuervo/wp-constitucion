@@ -126,14 +126,14 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 	if ( function_exists('add_image_size') ){
 
-		// add_image_size( 'size_name', 200, 200, true );
+		//add_image_size( 'size_name', 200, 200, true );
 
 		// cambiar el tamaño del thumbnail
-		/*
-		update_option( 'thumbnail_size_h', 100 );
-		update_option( 'thumbnail_size_w', 200 );
-		update_option( 'thumbnail_crop', false );
-		*/
+		
+		update_option( 'medium_size_h', 224 );
+		update_option( 'medium_size_w', 473 );
+		update_option( 'medium_crop', true );
+		
 	}
 
 
@@ -162,7 +162,20 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	add_action( 'pre_get_posts', function($query){
 
 		if ( $query->is_main_query() and ! is_admin() ) {
+			if ( is_home() ) {
+				$query->set( 'posts_per_page', 1 );
+				$query->set( 'post_type', 'post' );
 
+				$meta_q = array(
+							array(
+								'key'     => 'destacado_noticia',
+								'value'   => '1',
+								'compare' => '=',
+							),
+						);
+				$query->set( 'meta_query', $meta_q );
+
+			}
 		}
 		return $query;
 
@@ -265,6 +278,180 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		$result['success'] = 'Se envío el mensaje con exito';
 
 		return true;
+	}
+
+/**	
+ * PAGINACION
+ */
+
+	function round_num($num, $to_nearest) {
+	   /*Round fractions down (http://php.net/manual/en/function.floor.php)*/
+	   return floor($num/$to_nearest)*$to_nearest;
+	}
+
+	/**	
+	 * OPCIONES PARA LA PAGINACION
+	 * @return [type] [description]
+	 */
+	function optionsPagination(){
+		$pagenavi_options = array();
+	    $pagenavi_options['pages_text'] = ('Página %CURRENT_PAGE% de %TOTAL_PAGES%:');
+	    $pagenavi_options['current_text'] = '%PAGE_NUMBER%';
+	    $pagenavi_options['page_text'] = '%PAGE_NUMBER%';
+	    $pagenavi_options['first_text'] = ('Primera');
+	    $pagenavi_options['last_text'] = ('Última');
+	    $pagenavi_options['next_text'] = 'Siguiente';
+	    $pagenavi_options['prev_text'] = 'Anterior';
+	    $pagenavi_options['dotright_text'] = '...';
+	    $pagenavi_options['dotleft_text'] = '...';
+	    $pagenavi_options['num_pages'] = 3; //continuous block of page numbers
+	    $pagenavi_options['always_show'] = 0;
+	    $pagenavi_options['num_larger_page_numbers'] = 0;
+	    $pagenavi_options['larger_page_numbers_multiple'] = 5;
+
+	    return $pagenavi_options;
+	}
+
+	 
+	/**	
+	 * PAGINACION ARCHIVES (NOTA: partir en mas funciones - alex)
+	 * @return [string]         [html con la paginacion]
+	 */
+	function pagenavi($paged = '', $num_pages = '', $siteUrl = '', $especial = false, $simbol_url = '?', $variable_page = 'paged') {
+
+	    global $wpdb, $wp_query;
+	    
+	    $before = '';
+	    $after = '';
+
+	    $pagenavi_options = optionsPagination();
+
+	    if (!is_single()) {
+
+	        $paged = $paged == '' ? intval(get_query_var($variable_page)) : $paged;
+	        $max_page = $num_pages == '' ? $wp_query->max_num_pages : $num_pages;
+	 
+	        if(empty($paged) || $paged == 0) {
+	            $paged = 1;
+	        }
+	 
+	        $pages_to_show = intval($pagenavi_options['num_pages']);
+	        $larger_page_to_show = intval($pagenavi_options['num_larger_page_numbers']);
+	        $larger_page_multiple = intval($pagenavi_options['larger_page_numbers_multiple']);
+	        $pages_to_show_minus_1 = $pages_to_show - 1;
+	        $half_page_start = floor($pages_to_show_minus_1/2);
+	        $half_page_end = ceil($pages_to_show_minus_1/2);
+	        $start_page = $paged - $half_page_start;
+	 
+	        if($start_page <= 0) {
+	            $start_page = 1;
+	        }
+	 
+	        $end_page = $paged + $half_page_end;
+	        if(($end_page - $start_page) != $pages_to_show_minus_1) {
+	            $end_page = $start_page + $pages_to_show_minus_1;
+	        }
+	        if($end_page > $max_page) {
+	            $start_page = $max_page - $pages_to_show_minus_1;
+	            $end_page = $max_page;
+	        }
+	        if($start_page <= 0) {
+	            $start_page = 1;
+	        }
+	 
+	        $larger_per_page = $larger_page_to_show*$larger_page_multiple;
+	        $larger_start_page_start = (round_num($start_page, 10) + $larger_page_multiple) - $larger_per_page;
+	        $larger_start_page_end = round_num($start_page, 10) + $larger_page_multiple;
+	        $larger_end_page_start = round_num($end_page, 10) + $larger_page_multiple;
+	        $larger_end_page_end = round_num($end_page, 10) + ($larger_per_page);
+	 
+	        if($larger_start_page_end - $larger_page_multiple == $start_page) {
+	            $larger_start_page_start = $larger_start_page_start - $larger_page_multiple;
+	            $larger_start_page_end = $larger_start_page_end - $larger_page_multiple;
+	        }
+	        if($larger_start_page_start <= 0) {
+	            $larger_start_page_start = $larger_page_multiple;
+	        }
+	        if($larger_start_page_end > $max_page) {
+	            $larger_start_page_end = $max_page;
+	        }
+	        if($larger_end_page_end > $max_page) {
+	            $larger_end_page_end = $max_page;
+	        }
+	        if($max_page > 1 || intval($pagenavi_options['always_show']) == 1) {
+
+	            $pages_text = str_replace("%CURRENT_PAGE%", number_format_i18n($paged), $pagenavi_options['pages_text']);
+	            $pages_text = str_replace("%TOTAL_PAGES%", number_format_i18n($max_page), $pages_text);
+	            echo $before.'<div class="pagenavi [ color-primary ]">'."\n";
+	 
+	            if(!empty($pages_text)) {
+	                echo '<ul class="[ pagination ][ no-margin ]">';
+	            }
+
+	            echo '<li class="pag-anterior">';
+	            	if ($especial == true) {
+	            		$pa = $paged - 1;
+	            		echo $paged > 1 ? '<a class="[ color-primary ]" href="'.$siteUrl.$simbol_url.$variable_page.'='.$pa.'"> < </a>' : '';
+	            	}else{
+	            		previous_posts_link($pagenavi_options['prev_text']);
+	            	}
+	            	
+	            echo '</li>';
+	 
+	            if ($start_page >= 2 && $pages_to_show < $max_page) {
+	                $first_page_text = str_replace("%TOTAL_PAGES%", number_format_i18n($max_page), $pagenavi_options['first_text']);
+	                
+	                $url = $especial == true ? $siteUrl.$simbol_url.$variable_page.'=1' : esc_url(get_pagenum_link());
+	                echo '<li><a href="'.$url.'" class="first [ color-primary ]" title="'.$first_page_text.'">1</a></li>';
+	                if(!empty($pagenavi_options['dotleft_text'])) {
+	                    echo '<li><span class="expand">'.$pagenavi_options['dotleft_text'].'</span></li>';
+	                }
+	            }
+	 
+	            if($larger_page_to_show > 0 && $larger_start_page_start > 0 && $larger_start_page_end <= $max_page) {
+	                for($i = $larger_start_page_start; $i < $larger_start_page_end; $i+=$larger_page_multiple) {
+	                    $page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['page_text']);
+	                    echo '<li><a href="'.esc_url(get_pagenum_link($i)).'" class="single_page" title="'.$page_text.'">'.$page_text.'</a></li>';
+	                }
+	            }
+	 
+	            for($i = $start_page; $i  <= $end_page; $i++) {
+	                if($i == $paged) {
+	                    $current_page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['current_text']);
+	                    echo '<li class="num-pag-current active [ bg-primary ]"><span class="current">'.$current_page_text.'</span></li>';
+	                } else {
+	                    $page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['page_text']);
+	                    $url = $especial == true ? $siteUrl.$simbol_url.$variable_page.'='.$i : esc_url(get_pagenum_link($i));
+	                    echo '<li class="num-pag"><a href="'.$url.'" class="single_page [ color-primary ]" title="'.$page_text.'">'.$page_text.'</a></li>';
+	                }
+	            }
+	 
+	            if ($end_page < $max_page) {
+	                if(!empty($pagenavi_options['dotright_text'])) {
+	                    echo '<li><span class="expand">'.$pagenavi_options['dotright_text'].'</span></li>';
+	                }
+	                $last_page_text = str_replace("%TOTAL_PAGES%", number_format_i18n($max_page), $pagenavi_options['last_text']);
+	               	$url = $especial == true ? $siteUrl.$simbol_url.$variable_page.'='.$max_page : esc_url(get_pagenum_link($max_page));
+	                echo '<li><a href="'.$url.'" class="last [ color-primary ]" title="'.$last_page_text.'">'.$max_page.'</a></li>';
+	            }
+	            echo '<li class="pag-siguiente">';
+	            	if ($especial == true) {
+	            		$pa = $paged + 1;
+	            		echo $paged < $num_pages ? '<a class="[ color-primary ]" href="'.$siteUrl.$simbol_url.$variable_page.'='.$pa.'"> > </a>' : '';
+	            	}else{
+	            		next_posts_link($pagenavi_options['next_text'], $max_page);
+	            	}
+	            echo '</li>';
+	 
+	            if($larger_page_to_show > 0 && $larger_end_page_start < $max_page) {
+	                for($i = $larger_end_page_start; $i <= $larger_end_page_end; $i+=$larger_page_multiple) {
+	                    $page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['page_text']);
+	                    echo '<li><a href="'.esc_url(get_pagenum_link($i)).'" class="single_page edsf	" title="'.$page_text.'">'.$page_text.'</a></li>';
+	                }
+	            }
+	            echo '</ul></div>'.$after."\n";
+	        }
+	    }
 	}
 
 

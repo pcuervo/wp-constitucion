@@ -11,7 +11,7 @@
 		add_meta_box( 'meta-box-ubicacion', 'Ubicación', 'show_metabox_ubicacion', 'kioskos');
 		add_meta_box( 'meta-box-extras_evento', 'Extras evento', 'show_metabox_extras_evento', 'eventos', 'side', 'high');
 		add_meta_box( 'meta-box-video_voces', 'Insertar video', 'show_metabox_video_voces', 'voces-ciudadanas');
-
+		add_meta_box( 'meta-box-extras_noticias', 'Extras', 'show_metabox_extras_noticias', 'post', 'side', 'high');
 
 		if ($post->post_name == 'participa' || $post->post_name == 'proceso-participativo'){
 			add_meta_box( 'meta-box-pasos', 'Pasos', 'show_metabox_pasos', 'page');
@@ -102,6 +102,18 @@
 	}
 
 
+	function show_metabox_extras_noticias($post){
+		global $post;
+		wp_nonce_field(__FILE__, '_extras_noticia_nonce');
+
+		$destacado = get_post_meta( $post->ID, 'destacado_noticia', true );
+		$checked = $destacado ? 'checked' : ''; ?>
+
+		<input type="checkbox" name="destacado_noticia" id="destacado" value="1"  <?php echo $checked; ?> /> Check costo<br><br>
+		
+	<?php }
+
+
 
 // SAVE METABOXES DATA ///////////////////////////////////////////////////////////////
 
@@ -143,6 +155,13 @@
 		
 			update_post_meta($post_id, 'video_voces', $_POST['video_voces']);
 		}
+
+		if ( isset($_POST['destacado_noticia']) and check_admin_referer(__FILE__, '_extras_noticia_nonce')){
+			update_post_meta($post_id, 'destacado_noticia', $_POST['destacado_noticia']);
+		}else if ( ! defined('DOING_AJAX') ){
+			delete_post_meta($post_id, 'destacado_noticia');
+		}
+
 		// Guardar correctamente los checkboxes
 		/*if ( isset($_POST['_checkbox_meta']) and check_admin_referer(__FILE__, '_checkbox_nonce') ){
 			update_post_meta($post_id, '_checkbox_meta', $_POST['_checkbox_meta']);

@@ -1,33 +1,22 @@
-<?php get_header(); the_post(); ?>
+<?php get_header(); the_post(); 
+$date_arr = getDateTransform( $post->post_date ); ?>
 
 <div class="[ container ]">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ]">
 			<section class="[ content-user ]">
-				<img src="<?php echo THEMEPATH; ?>images/tunnel.png" alt="">
-				<h2>Alequam erat volupat</h2>
-				<p>19 febrero 2016</p>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-				Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-				Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
-				Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, 
-				venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
-				<img src="<?php echo THEMEPATH; ?>images/tunnel.png" alt="" alt="">
-				<p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, 
-				consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-				Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. 
-				Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. 
-				Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing. 
-				Sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. 
-				Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. 
-				Sed fringilla mauris sit amet nibh. 
-				Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-				</p>
+				<?php if ( has_post_thumbnail() ):
+					the_post_thumbnail('large');
+				else:
+					echo '<img src="http://placehold.it/912x420" />';
+				endif;?>
+				<p><?php echo $date_arr[4].' '.$date_arr[1].' '.$date_arr[2] ?></p>
+				<h2><?php the_title(); ?></h2>
+				<?php the_content(); ?>
 				<a class="[ fz-small ][ color-primary ][ margin-top--large ]" href="<?php echo site_url('/noticias/'); ?>">  << Regresar </a>
 			</section>
 		</div>
 	</div>
 </div>
-	
 	
 <?php get_footer(); ?>

@@ -38,7 +38,7 @@
 		<?php if ( is_page('home') ): ?>
 			<header class="[ hidden ]">
 				<nav>
-					<!-- menu desktop -->
+<!-- menu desktop home -->
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ]">
 						<li class="[ no-padding--sides ]"><a href="<?php echo site_url('/'); ?> ">
 							<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
@@ -61,15 +61,50 @@
 							</ul>
 						</li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-						<li>
-							<a href="<?php echo site_url('/contacto/'); ?>">
+<!-- #SoyCDMX desktop home -->
+						<li class="dropdown">
+							<a class="dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
 								<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 								#SoyCDMX<!-- Contacto - page-contacto.php-->
 								<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
 							</a>
+							<ul class="dropdown-menu drop-top-right drop-hashtag-post bg-gray-light " role="menu" aria-labelledby="menu1">
+								<div>
+									<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
+									<h1>#SoyCDM</h1>
+								</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:33 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:43 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:46 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:47 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+							</ul>
 						</li>
 					</ul>
-					<!-- nav header movil -->
+
+					
+
+
+<!-- nav header movil home -->
 					<div class="[ bg-light ][ visible-xs ]">
 						<div class="[ container ]">
 							<div class="[ row ]">
@@ -85,7 +120,7 @@
 						</div>
 					</div>
 
-					<!-- modal menu mobile -->
+<!-- modal menu mobile home -->
 					<div class="modal fade" id="modal-menu" tabindex="-1" role="dialog">
 						<div class="[ modal-dialog modal-content ][ width-100 height-100 ][ no-margin ]">
 							<div class="[ container ][ bg-light ]">
@@ -106,10 +141,58 @@
 									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
 									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php--></li>
 									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-									<li><a href="<?php echo site_url('/contacto/'); ?>">#SoyCDMX</a><!-- Contacto - page-contacto.php--></li>
+									<li><a type="button" data-toggle="modal" data-target="#SoyCDMX-mobile--home">#SoyCDMX</a></li>
 								</ul>
 							</div>
 							<img class="[ width-60 ][ margin-top-bottom--large ][ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png">
+						</div>
+					</div>
+
+<!-- #SoyCDMX mobile home -->
+					<div class="modal fade" id="SoyCDMX-mobile--home" tabindex="-1" role="dialog">
+						<div class="[ modal-content ][ width-100 ][ no-margin ]">
+							<div class="[ container ]">
+								<div class="[ row ]">
+									<div class="[ col-xs-2 ][ padding--top-bottom--large ]">
+										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
+									</div>
+									<div class="[ col-xs-10 ]">
+										<h1>#SoyCDM</h1>
+									</div>
+								</div>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:33 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:43 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:46 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:47 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</nav>
@@ -117,7 +200,7 @@
 		<?php else: ?>
 			<header class="not-home">
 				<nav>
-					<!-- menu desktop -->
+<!-- menu desktop not home -->
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ]">
 						<li class="[ no-padding--sides ]"><a href="<?php echo site_url('/'); ?> ">
 							<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
@@ -140,15 +223,46 @@
 							</ul>
 						</li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-						<li>
-							<a href="<?php echo site_url('/contacto/'); ?>">
+<!-- #SoyCDMX desktop not home -->						
+						<li class="dropdown">
+							<a class="dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
 								<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 								#SoyCDMX<!-- Contacto - page-contacto.php-->
 								<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
 							</a>
+							<ul class="dropdown-menu drop-top-right drop-hashtag-post bg-gray-light " role="menu" aria-labelledby="menu1">
+								<div>
+									<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
+									<h1>#SoyCDM</h1>
+								</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:33 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:43 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:46 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:47 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+							</ul>
 						</li>
 					</ul>
-					<!-- nav header movil -->
+<!-- nav header movil not home -->
 					<div class="[ bg-light ][ visible-xs ]">
 						<div class="[ container ]">
 							<div class="[ row ]">
@@ -164,7 +278,7 @@
 						</div>
 					</div>
 
-					<!-- modal menu mobile -->
+<!-- modal menu mobile not home -->
 					<div class="modal fade" id="modal-menu" tabindex="-1" role="dialog">
 						<div class="[ modal-dialog modal-content ][ width-100 height-100 ][ no-margin ]">
 							<div class="[ container ][ bg-light ]">
@@ -185,10 +299,58 @@
 									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
 									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php--></li>
 									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-									<li><a href="<?php echo site_url('/contacto/'); ?>">#SoyCDMX</a><!-- Contacto - page-contacto.php--></li>
+									<li><a type="button" data-toggle="modal" data-target="#SoyCDMX-mobile">#SoyCDMX</a></li>
 								</ul>
 							</div>
 							<img class="[ width-60 ][ margin-top-bottom--large ][ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png">
+						</div>
+					</div>
+
+<!-- #SoyCDMX mobile not-home -->
+					<div class="modal fade" id="SoyCDMX-mobile" tabindex="-1" role="dialog">
+						<div class="[ modal-content ][ width-100 ][ no-margin ]">
+							<div class="[ container ]">
+								<div class="[ row ]">
+									<div class="[ col-xs-2 ][ padding--top-bottom--large ]">
+										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
+									</div>
+									<div class="[ col-xs-10 ]">
+										<h1>#SoyCDM</h1>
+									</div>
+								</div>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:33 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:43 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:46 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:47 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</nav>

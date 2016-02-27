@@ -95,11 +95,7 @@ class Sondeo_CDMX_Survey {
 				</div>
 				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
 					<ol class="fs-fields">
-						<li>
-							<label class="fs-field-label fs-anim-upper [ color-gray ]" for="q1" data-info="Este campo es opcional. Recuerda que tu participación puede ser anónima.">¿Cómo te llamas?</label>
-							<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Juana Pérez"/>
-						</li>
-						<li>
+						<li id="js-donde-vives">
 							<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde vives?</label>
 							<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
 								<option value="" disabled selected>Selecciona una opción</option>
@@ -109,11 +105,34 @@ class Sondeo_CDMX_Survey {
 								<option value="fuera-mexico">Fuera de México</option>
 							</select>
 						</li>
-						<li class="delegaciones-estados-paises"></li>
-						<li class="colonias-municipios"></li>
+						<li id="js-delegaciones-estados-paises"></li>
+						<li id="js-colonias-municipios"></li>
+						<li id="js-genero" data-input-trigger>
+							<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="genero">Género</label>
+							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								<span><input id="q1-1" name="genero" type="radio" value="mujer" /><label for="q1-1" class="radio-conversion">Mujer</label></span>
+								<span><input id="q1-2" name="genero" type="radio" value="hombre" /><label for="q1-2" class="radio-conversion">Hombre</label></span>
+								<span><input id="q1-3" name="genero" type="radio" value="otro" /><label for="q1-3" class="radio-conversion">Otro</label></span>
+							</div>
+						</li>
+						<li id="js-edad">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Edad</label>
+							<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="¿Cuántos años tienes?" required/>
+						</li>
+						<li id="js-dedicas">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q4">¿A què te dedicas?</label>
+							<textarea class="fs-anim-lower" id="q4" name="q4" placeholder="Describe here"></textarea>
+						</li>
+						<li id="js-trabajas" data-input-trigger>
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="trabajas">¿Trabajas?</label>
+							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								<span><input id="q5-1" name="trabajas" type="radio" value="si" /><label for="q5-1" class="radio-conversion">Si</label></span>
+								<span><input id="q5-2" name="trabajas" type="radio" value="no" /><label for="q5-2" class="radio-conversion">No</label></span>
+							</div>
+						</li>
 						<?php foreach ( $questions as $key => $question_with_answers ) : ?>
 							<li data-input-trigger>
-								<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="q<?php echo $next_question ?>" data-question="<?php echo $question_with_answers['question_id'] ?>"><?php echo $question_with_answers['question'] ?></label>
+								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q<?php echo $next_question ?>" data-question="<?php echo $question_with_answers['question_id'] ?>"><?php echo $question_with_answers['question'] ?></label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 									<?php $current_answer = 1; ?>
 									<?php foreach ( $question_with_answers['answers'] as $key => $answer ) : ?>

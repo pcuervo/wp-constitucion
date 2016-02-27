@@ -5,12 +5,12 @@
     [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {    
         new SelectFx( el, {
             stickyPlaceholder: false,
-            onChange: function( val ){
-                $('.delegaciones-estados-paises').empty();
-                switch( val ){
+            onChange: function( lugar ){
+                $('#js-delegaciones-estados-paises').empty();
+                switch( lugar ){
                     case 'cdmx':
                     case 'zmvm':
-                        showDelegaciones( val );
+                        showDelegaciones( lugar, '');
                         break;
                     case 'resto-republica':
                         showEstados();
@@ -29,12 +29,27 @@
         }
     } );
 
+    $('#js-trabajas input').click(function(){
+        if( 'si' == this.value ){
+            showDondeTrabajas();
+        }
+    })
+
+    // FForm.prototype._removeField( formWrap, 'js-colonias-municipios' );
+    // FForm.prototype._addField( formWrap, 'js-icipios', 'js-delegaciones-estados-paises' );
+
 })();
 
-function showDelegaciones( ciudad ){
+function showDelegaciones( ciudad, section ){
+    if( '' == section ){
+        var el = '#js-delegaciones-estados-paises';
+    } else{
+        var el = '#js-' + section + '-delegaciones-estados-paises';
+    }
+
     if( 'cdmx' == ciudad ){
-        $('.delegaciones-estados-paises').append( getHTMLDelegacionesCDMX() );
-        new SelectFx( $('.delegaciones-estados-paises .cs-select')[0], {
+        $(el).append( getHTMLDelegacionesCDMX() );
+        new SelectFx( $(el + ' .cs-select')[0], {
             stickyPlaceholder: false,
             onChange: function( delegacion ){
                 showColonias( delegacion );
@@ -42,8 +57,8 @@ function showDelegaciones( ciudad ){
         });
         return;
     }
-    $('.delegaciones-estados-paises').append( getHTMLDelegacionesCDMX() );
-    new SelectFx( $('.delegaciones-estados-paises .cs-select')[0], {
+    $('#js-' + section + '-delegaciones-estados-paises').append( getHTMLDelegacionesCDMX() );
+    new SelectFx( $('#js-' + section + '-delegaciones-estados-paises .cs-select')[0], {
         stickyPlaceholder: false,
         onChange: function( delegacion ){
             showColonias( delegacion );
@@ -52,10 +67,15 @@ function showDelegaciones( ciudad ){
     return;
 }
 
-function showEstados(){
-    $('.colonias-municipios').remove();
-    $('.delegaciones-estados-paises').append( getHTMLEstados() );
-    new SelectFx( $('.delegaciones-estados-paises .cs-select')[0], {
+function showEstados( section ){
+    if( '' == section ){
+        var el = '#js-delegaciones-estados-paises';
+    } else{
+        var el = '#js-' + section + '-delegaciones-estados-paises';
+    }
+    FForm.prototype._removeField( $('#fs-form-wrap')[0], 'js-colonias-municipios' );
+    $(el).append( getHTMLEstados() );
+    new SelectFx( $(el + ' .cs-select')[0], {
         stickyPlaceholder: false,
         onChange: function( estados ){
             console.log( estados );
@@ -64,9 +84,14 @@ function showEstados(){
     return;
 }
 
-function showPaises(){
-    $('.delegaciones-estados-paises').append( getHTMLPaises() );
-    new SelectFx( $('.delegaciones-estados-paises .cs-select')[0], {
+function showPaises( section ){
+    if( '' == section ){
+        var el = '#js-delegaciones-estados-paises';
+    } else{
+        var el = '#js-' + section + '-delegaciones-estados-paises';
+    }
+    $(el).append( getHTMLPaises() );
+    new SelectFx( $(el + ' .cs-select')[0], {
         stickyPlaceholder: false,
         onChange: function( pais ){
             console.log( pais );
@@ -76,14 +101,51 @@ function showPaises(){
 }
 
 function showColonias( delegacion ){
-    $('.colonias-municipios').append( getHTMLColoniasCDMX( delegacion ) );
-    new SelectFx( $('.colonias-municipios .cs-select')[0], {
+    $('#js-colonias-municipios').append( getHTMLColoniasCDMX( delegacion ) );
+    new SelectFx( $('#js-colonias-municipios .cs-select')[0], {
         stickyPlaceholder: false,
         onChange: function( colonia ){
             console.log( colonia );
         }
     });
     return;
+}
+
+function showDondeTrabajas(){
+    FForm.prototype._addField( $('#fs-form-wrap')[0], 'js-donde-trabajas', 'js-trabajas' );
+    FForm.prototype._addField( $('#fs-form-wrap')[0], 'js-trabajas-delegaciones-estados-paises', 'js-donde-trabajas' );
+    $('#js-donde-trabajas').append( getHTMLDondeTrabajas() );
+    new SelectFx( $('#js-donde-trabajas .cs-select')[0], {
+        stickyPlaceholder: false,
+        onChange: function( lugar ){
+            $('#js-trabajas-delegaciones-estados-paises').empty();
+            switch( lugar ){
+                case 'cdmx':
+                case 'zmvm':
+                    showDelegaciones( lugar, 'trabajas' );
+                    break;
+                case 'resto-republica':
+                    showEstados('trabajas');
+                    break;
+                case 'fuera-mexico':
+                    showPaises('trabajas');
+                    break;
+            }
+        }
+    });
+}
+
+function getHTMLDondeTrabajas(){
+    return `
+        <label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde trabajas?</label>
+        <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="cdmx">CDMX</option>
+            <option value="zmvm">ZMVM</option>
+            <option value="resto-republica">Resto de la república</option>
+            <option value="fuera-mexico">Fuera de México</option>
+        </select>
+    `;
 }
 
 function getHTMLDelegacionesCDMX(){

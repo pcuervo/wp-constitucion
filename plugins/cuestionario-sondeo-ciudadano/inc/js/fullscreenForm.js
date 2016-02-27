@@ -226,6 +226,12 @@
 	 * jumps to the next field
 	 */
 	FForm.prototype._nextField = function( backto ) {
+        // the form element
+        this.formEl = this.el.querySelector( 'form' );
+        this.fieldsList = this.formEl.querySelector( 'ol.fs-fields' );
+        this.fields = [].slice.call( this.fieldsList.children );
+        this.fieldsCount = this.fields.length;
+
 		if( this.isLastStep || !this._validade() || this.isAnimating ) {
 			return false;
 		}
@@ -270,12 +276,6 @@
 			this._updateFieldNumber();
 
 			var nextField = this.fields[ this.current ];
-            if( 'colonias-municipios' == nextField.className ){
-                console.log( this.fields );
-                this.current += 1;
-                nextField = this.fields[ this.current ];
-                console.log( nextField );
-            }
 			classie.add( nextField, 'fs-current' );
 			classie.add( nextField, 'fs-show' );
 		}
@@ -473,18 +473,54 @@
 		this._hideCtrl( this.msgError );
 	}
 
-    FForm._removeField = function( el ){
-        this.el = el;
-        // the form element
-        this.formEl = this.el.querySelector( 'form' );
-
+    FForm.prototype._removeField = function( form, id ){
+        console.log( form );
+        // the form 
+        this.formEl = form.querySelector( 'form' );
         // list of fields
         this.fieldsList = this.formEl.querySelector( 'ol.fs-fields' );
-        // all fields
+
+        var toRemove = document.getElementById( id );
+        this.fieldsList.removeChild( toRemove );
+
+        this.fields = [].slice.call( this.fieldsList.children );
+        console.log(this.fields);
+        // total fields
+        this.fieldsCount = this.fields.length;
+
+        var totalNumber = document.getElementsByClassName('fs-number-total');
+        totalNumber[0].innerHTML = this.fieldsCount;
+
+        var dots = document.getElementsByClassName('fs-nav-dots')[0];
+        var lastDot = dots.children.length - 1;
+        dots.removeChild( dots.children[lastDot] );
+
+    }
+
+    FForm.prototype._addField = function( form, id, afterId ){
+
+        // the form 
+        this.formEl = form.querySelector( 'form' );
+        // list of fields
+        this.fieldsList = this.formEl.querySelector( 'ol.fs-fields' );
+
+        var toAdd = document.createElement('li')
+        var afterEl = document.getElementById( afterId );
+        toAdd.setAttribute( 'id', id );
+        afterEl.parentNode.insertBefore( toAdd, afterEl.nextSibling );
+
         this.fields = [].slice.call( this.fieldsList.children );
         // total fields
         this.fieldsCount = this.fields.length;
-        console.log( this.fieldsCount );
+
+        var totalNumber = document.getElementsByClassName('fs-number-total');
+        totalNumber[0].innerHTML = this.fieldsCount;
+
+        var dots = document.getElementsByClassName('fs-nav-dots')[0];
+        var newButton = document.createElement('button');
+        newButton.disabled = true;
+        dots.appendChild( newButton );
+
     }
 
 	// add to global namespace

@@ -147,17 +147,15 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 // POST TYPES, METABOXES, TAXONOMIES AND CUSTOM PAGES ////////////////////////////////
 
 
-
 	require_once('inc/post-types.php');
-
 
 	require_once('inc/metaboxes.php');
 
-
 	require_once('inc/taxonomies.php');
 
-
 	require_once('inc/pages.php');
+
+	require_once('inc/Twitter.class.php');
 
 
 

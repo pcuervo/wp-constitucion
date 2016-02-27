@@ -44,38 +44,23 @@
 								<h1>#SoyCDM</h1>
 							</div>
 						</div>
-						<div class="[ row ]">
-							<div class="[ col-xs-12 ][ color-gray ]">
-								<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
-								<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
-								<p class="[ text-italic fz-xsmall ]">20:33 - Febrero 23 - 2016 </p>
-								<hr class="[ border-bottom-gray ]">
-							</div>
-						</div>
-						<div class="[ row ]">
-							<div class="[ col-xs-12 ][ color-gray ]">
-								<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
-								<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
-								<p class="[ text-italic fz-xsmall ]">20:43 - Febrero 23 - 2016 </p>
-								<hr class="[ border-bottom-gray ]">
-							</div>
-						</div>
-						<div class="[ row ]">
-							<div class="[ col-xs-12 ][ color-gray ]">
-								<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
-								<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
-								<p class="[ text-italic fz-xsmall ]">20:46 - Febrero 23 - 2016 </p>
-								<hr class="[ border-bottom-gray ]">
-							</div>
-						</div>
-						<div class="[ row ]">
-							<div class="[ col-xs-12 ][ color-gray ]">
-								<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
-								<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
-								<p class="[ text-italic fz-xsmall ]">20:47 - Febrero 23 - 2016 </p>
-								<hr class="[ border-bottom-gray ]">
-							</div>
-						</div>
+
+						<?php $tweet = new Twitter;
+						$tweets = $tweet->feedTwitter(); 
+						if (! empty($tweets) ):
+							foreach ($tweets as $tweet): ?>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name'];  ?></p>
+										<p><?php echo $tweet['text'];  ?></p>
+										<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
+							<?php endforeach;
+						endif; ?>
+
+						
 					</div>
 				</div>
 			</div>
@@ -120,30 +105,19 @@
 				<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
 				<h1>#SoyCDM</h1>
 			</div>
-			<div>
-				<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
-				<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
-				<p class="[ text-italic fz-xsmall ]">20:33 - Febrero 23 - 2016 </p>
-				<hr class="[ border-bottom-gray ]">
-			</div>
-			<div>
-				<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
-				<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
-				<p class="[ text-italic fz-xsmall ]">20:43 - Febrero 23 - 2016 </p>
-				<hr class="[ border-bottom-gray ]">
-			</div>
-			<div>
-				<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
-				<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
-				<p class="[ text-italic fz-xsmall ]">20:46 - Febrero 23 - 2016 </p>
-				<hr class="[ border-bottom-gray ]">
-			</div>
-			<div>
-				<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
-				<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
-				<p class="[ text-italic fz-xsmall ]">20:47 - Febrero 23 - 2016 </p>
-				<hr class="[ border-bottom-gray ]">
-			</div>
+			<?php $tweet = new Twitter;
+			$tweets = $tweet->feedTwitter(); 
+			if (! empty($tweets) ):
+				foreach ($tweets as $tweet): ?>
+					<div>
+						<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
+						<p><?php echo $tweet['text']; ?></p>
+						<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
+						<hr class="[ border-bottom-gray ]">
+					</div>
+				<?php endforeach;
+			endif; ?>
+		
 		</ul>
 	</li>
 </ul>

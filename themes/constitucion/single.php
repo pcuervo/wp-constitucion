@@ -1,6 +1,5 @@
 <?php get_header(); the_post(); ?>
 
-<?php get_sidebar(); ?>
 <div class="[ container ]">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ]">

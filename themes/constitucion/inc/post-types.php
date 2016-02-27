@@ -100,4 +100,35 @@
 		);
 		register_post_type( 'preguntas-frecuentes', $args );
 
+		// Cronología
+		$labels = array(
+			'name'          => 'Eventos',
+			'singular_name' => 'Eventos',
+			'add_new'       => 'Nuevo Evento',
+			'add_new_item'  => 'Nuevo Evento',
+			'edit_item'     => 'Editar Evento',
+			'new_item'      => 'Nuevo Evento',
+			'all_items'     => 'Todos',
+			'view_item'     => 'Ver Evento',
+			'search_items'  => 'Buscar Evento',
+			'not_found'     => 'No se encontro',
+			'menu_name'     => 'Eventos'
+		);
+
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'eventos' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => 6,
+			'supports'           => array( 'title', 'editor' )
+		);
+		register_post_type( 'eventos', $args );
+
 	});

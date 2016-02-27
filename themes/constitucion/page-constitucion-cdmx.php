@@ -18,6 +18,53 @@ $url_image_constirucion = attachment_image_url( $post->ID, 'full' ); ?>
 		<?php $proceso = get_page_by_path('proceso-participativo'); ?>
 		<h2 class="[ no-margin-top ]"><?php echo $proceso->post_title; ?></h2>
 		<?php echo $proceso->post_content; ?>
+
+		<div class="[ row ][ margin-top-bottom ]">
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ row ]">
+					<div class="[ col-xs-8 ]">
+						<p class="[ fz-xlarge ]">Paso 1</p>
+						<p class="[ fz-small ]"><?php echo get_post_meta($proceso->ID, 'paso_a', true);?></p>
+					</div>
+					<div class="[ col-xs-4 no-padding--sides ]">
+						<img class="[ img-responsive ][ margin-auto ]" src="http://constitucion.dev/wp-content/themes/constitucion//images/flecha.png" alt="" /></div>
+					</div>
+				</div>
+
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ row ]">
+					<div class="[ col-xs-8 ]">
+						<p class="[ fz-xlarge ]">Paso 2</p>
+						<p class="[ fz-small ]"><?php echo get_post_meta($proceso->ID, 'paso_b', true);?></p>
+
+					</div>
+					<div class="[ col-xs-4 no-padding--sides ]">
+						<img class="[ img-responsive ][ margin-auto ]" src="http://constitucion.dev/wp-content/themes/constitucion//images/flecha.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ row ]">
+					<div class="[ col-xs-8 ]">
+						<p class="[ fz-xlarge ]">Paso 3</p>
+						<p class="[ fz-small ]"><?php echo get_post_meta($proceso->ID, 'paso_c', true);?></p>
+					</div>
+					<div class="[ col-xs-4 no-padding--sides ]">
+						<img class="[ img-responsive ][ margin-auto ]" src="http://constitucion.dev/wp-content/themes/constitucion//images/flecha.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ row ]">
+					<div class="[ col-xs-8 ]">
+						<p class="[ fz-xlarge ]">Paso 4</p>
+						<p class="[ fz-small ]"><?php echo get_post_meta($proceso->ID, 'paso_d', true);?></p>
+					</div>
+					<div class="[ col-xs-4 no-padding--sides ]">
+						<img class="[ img-responsive ][ margin-auto ]" src="http://constitucion.dev/wp-content/themes/constitucion//images/flecha.png" alt="" /></div>
+					</div>
+				</div>
+		</div>
 		
 		<div>
 			<p class="[ inline-block middle ][ text-uppercase ]">Descarga los documentos oficiales aquí</p>

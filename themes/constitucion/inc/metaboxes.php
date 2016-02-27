@@ -6,8 +6,15 @@
 
 
 	add_action('add_meta_boxes', function(){
+		global $post;
 
 		add_meta_box( 'meta-box-ubicacion', 'Ubicación', 'show_metabox_ubicacion', 'kioskos');
+		add_meta_box( 'meta-box-extras_evento', 'Extras evento', 'show_metabox_extras_evento', 'eventos', 'side', 'high');
+
+
+		if ($post->post_name == 'participa' || $post->post_name == 'proceso-participativo'){
+			add_meta_box( 'meta-box-pasos', 'Pasos', 'show_metabox_pasos', 'page');
+		}
 
 	});
 
@@ -21,7 +28,6 @@
 		$latitud_kiosko = get_post_meta($post->ID, 'latitud_kiosko', true);
 		$longitud_kiosko = get_post_meta($post->ID, 'longitud_kiosko', true);
 		$ubicacion_kiosko = get_post_meta($post->ID, 'ubicacion_kiosko', true);
-
 
 		wp_nonce_field(__FILE__, '_ubicacion_kiosko_nonce');
 
@@ -38,6 +44,44 @@
 			}
 
 		echo '</div>';
+	}
+
+	/**
+	 * PASOS PARA PARTICIPAR
+	 */
+	function show_metabox_pasos($post){
+		$paso_a = get_post_meta($post->ID, 'paso_a', true);
+		$paso_b = get_post_meta($post->ID, 'paso_b', true);
+		$paso_c = get_post_meta($post->ID, 'paso_c', true);
+		$paso_d = get_post_meta($post->ID, 'paso_d', true);
+
+		wp_nonce_field(__FILE__, '_pasos_nonce');
+
+		echo "<label for='paso_a' class='label-paquetes'>Paso 1: </label>";
+		echo "<input type='text' class='widefat' id='paso_a' name='paso_a' value='$paso_a'/><br><br>";
+
+		echo "<label for='paso_b' class='label-paquetes'>Paso 2: </label>";
+		echo "<input type='text' class='widefat' id='paso_b' name='paso_b' value='$paso_b'/><br><br>";
+
+		echo "<label for='paso_c' class='label-paquetes'>Paso 3: </label>";
+		echo "<input type='text' class='widefat' id='paso_c' name='paso_c' value='$paso_c'/><br><br>";
+
+		echo "<label for='paso_d' class='label-paquetes'>Paso 4: </label>";
+		echo "<input type='text' class='widefat' id='paso_d' name='paso_d' value='$paso_d'/><br><br>";
+
+	}
+
+
+	/**
+	 * EXTRAS CRONOLOGIA
+	 */
+	function show_metabox_extras_evento($post){
+		$fecha_evento = get_post_meta($post->ID, 'fecha_evento', true);
+
+		wp_nonce_field(__FILE__, '_evento_nonce');
+
+		echo "<label for='fecha_evento' class='label-paquetes'>Fecha del evento </label>";
+		echo "<input type='text' class='widefat datepicker' id='fecha_evento' name='fecha_evento' value='$fecha_evento'/><br><br>";
 	}
 
 
@@ -65,7 +109,17 @@
 			update_post_meta($post_id, 'latitud_kiosko', $_POST['latitud_kiosko']);
 			update_post_meta($post_id, 'longitud_kiosko', $_POST['longitud_kiosko']);
 			update_post_meta($post_id, 'ubicacion_kiosko', $_POST['ubicacion_kiosko']);
+		}
 
+		if ( isset($_POST['paso_a']) and check_admin_referer(__FILE__, '_pasos_nonce') ){
+			update_post_meta($post_id, 'paso_a', $_POST['paso_a']);
+			update_post_meta($post_id, 'paso_b', $_POST['paso_b']);
+			update_post_meta($post_id, 'paso_c', $_POST['paso_c']);
+			update_post_meta($post_id, 'paso_d', $_POST['paso_d']);
+		}
+
+		if ( isset($_POST['fecha_evento']) and check_admin_referer(__FILE__, '_evento_nonce') ){
+			update_post_meta($post_id, 'fecha_evento', $_POST['fecha_evento']);
 		}
 
 		// Guardar correctamente los checkboxes

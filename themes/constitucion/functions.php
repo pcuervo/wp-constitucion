@@ -60,6 +60,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	add_action( 'admin_enqueue_scripts', function(){
 
 		// scripts
+		wp_enqueue_script('jquery-ui-datepicker');
 		wp_enqueue_script( 'api-google', 'http://maps.google.com/maps/api/js?sensor=false&libraries=places&language=en-AU', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'admin-js', JSPATH.'admin.js', array('api-google'), '1.0', true );
 
@@ -68,6 +69,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 		// styles
 		wp_enqueue_style( 'admin-css', CSSPATH.'admin.css' );
+		wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
 
 	});
 
@@ -222,4 +224,20 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		$image_data = wp_get_attachment_image_src($image_id, $size, true);
 		return isset($image_data[0]) ? $image_data[0] : '';
 	}
+
+
+	/**	
+	 * GET DATE TRANSFORM
+	 */
+	function getDateTransform($fecha){
+		$dias = array('Lunes','Martes','Miercoles','Jueves','Viernes','Sábado','Domingo');
+		$dia_name = $dias[date('N', strtotime($fecha)) - 1];
+
+		$fecha = explode('-', $fecha);
+
+		$mes = array('01' => 'Enero', '02' => 'Febrero', '03' => 'Marzo', '04' => 'Abril', '05' => 'Mayo', '06' =>'Junio', '07' => 'Julio', '08' => 'Agosto', '09' => 'Septiembre', '10' => 'Octubre', '11' => 'Noviembre', '12' => 'Diciembre');
+
+		return array($fecha[2], $mes[$fecha[1]], $fecha[0], $dia_name, $fecha[1]);
+	}
+
 

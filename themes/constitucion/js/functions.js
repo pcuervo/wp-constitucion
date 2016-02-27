@@ -128,6 +128,14 @@
 
         });
 
+        if (document.getElementById("scroll") && document.getElementById("recorre")) {
+            var recorre = $('#recorre').val();
+            $('.scroll-cronologia').animate({
+                scrollLeft: recorre
+            }, 0);
+
+        }
+
 
     });
 

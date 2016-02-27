@@ -5,15 +5,14 @@ the_title(); ?>
 	<section class="[ bg-gray-light ][ margin--header margin-bottom--large padding--top-bottom--xlarge ]">
 		<article class="[ container ]">
 			<div class="[ padding--sides--xsm ]">
-				<h2 class="[ no-margin-top ]">Instrucciones</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quod minus officia, vitae alias, ex illum perferendis veritatis impedit ullam, provident debitis, consequuntur commodi quo doloribus iste ipsam possimus. Quas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis eligendi exercitationem dolores est doloribus excepturi, facilis assumenda nam velit. Iure harum, aspernatur minus molestiae eos inventore possimus tempora soluta officiis.</p>
+				<?php the_content(); ?>
 			</div>
 			<div class="[ row ][ margin-top-bottom ][ padding--sides--xsm ]">
 				<div class="[ col-xs-6 col-sm-3 ]">
 					<div class="[ row ][ margin-bottom ]">
 						<div class="[ col-xs-8 ]">
 							<p class="[ fz-xlarge ]">Paso 1</p>
-							<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_a', true);?></p>
 						</div>
 						<div class="[ col-xs-4 no-padding--sides ]">
 							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
@@ -24,7 +23,7 @@ the_title(); ?>
 					<div class="[ row ][ margin-bottom ]">
 						<div class="[ col-xs-8 ]">
 							<p class="[ fz-xlarge ]">Paso 2</p>
-							<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
 						</div>
 						<div class="[ col-xs-4 no-padding--sides ]">
 							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
@@ -36,7 +35,7 @@ the_title(); ?>
 					<div class="[ row ][ margin-bottom ]">
 						<div class="[ col-xs-8 ]">
 							<p class="[ fz-xlarge ]">Paso 3</p>
-							<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
 						</div>
 						<div class="[ col-xs-4 no-padding--sides ]">
 							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
@@ -47,7 +46,7 @@ the_title(); ?>
 					<div class="[ row ][ margin-bottom ]">
 						<div class="[ col-xs-8 ]">
 							<p class="[ fz-xlarge ]">Paso 4</p>
-							<p class="[ fz-small ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
 						</div>
 						<div class="[ col-xs-4 no-padding--sides ]">
 							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
@@ -60,87 +59,84 @@ the_title(); ?>
 	<section class="[ container ]">
 		<h2 class="[ no-margin-top ]">Cronología</h2>
 
-
-
-
 		<!-- scroll horizontal -->
 			<div class="[ row ][ margin-bottom ]">
 				<div class="[ col-md-12 ]">
-					<ul id="scroll" class="[ horizontal-slide ][ text-center ]">
+					<ul id="scroll" class="[ scroll-cronologia ][ horizontal-slide ][ text-center ]">
 						<li class="[ box-li ]">
 							<img class="img-slide" src="<?php echo THEMEPATH; ?>/images/cdmx.png"/>
 						</li>
-						<li class="[ box-li ]">
-							<div class="[ text--large relative ]">
-								<p class="[ center-full ]">Lorem ipsum dolor sit</p>
-							</div>
-							<div class="[ vertical-line ]"></div>
-							<div class="[ circle-xsmall ][ margin-auto ]"></div>
-							<div class="[ border-gray--large ]"></div>
-							<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]">Febrero 19 de 2016</p>
-						</li>
-						<li class="[ box-li ]">
-							<p class="[ color-gray ][ fz-small ][ margin-top--date ]">Febrero 20 de 2016</p>
-							<div class="[ border-gray--large ]"></div>
-							<div class="[ circle-xsmall ][ margin-auto ]"></div>
-							<div class="[ vertical-line ]"></div>
-							<div class="[ text--small relative ]">
-								<p class="[ center-full ]">Lorem ipsum dolor sit amet, consectetur adispiscing elit.</p>
-							</div>
-						</li>
-						<li class="[ box-li ]">
-							<div class="[ text--large relative ]">
-								<p class="[ center-full ]">Lorem ipsum dolor sit amet, consectetur adispiscing elit.</p>
-							</div>
-							<div class="[ vertical-line ]"></div>
-							<div class="[ circle-xsmall ][ margin-auto ]"></div>
-							<div class="[ border-gray--large ]"></div>
-							<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]">Febrero 21 de 2016</p>
-						</li>
-						<li class="[ box-li ]">
-							<p class="[ color-gray ][ fz-small ][ margin-top--date ]">Febrero 20 de 2016</p>
-							<div class="[ border-gray--large ]"></div>
-							<div class="[ circle-xsmall ][ margin-auto ]"></div>
-							<div class="[ vertical-line ]"></div>
-							<div class="[ text--small relative ]">
-								<p class="[ center-full ]">Lorem ipsum dolor sit amet, consectetur adispiscing elit.</p>
-							</div>
-						</li>
-						<li class="[ box-li ]">
-							<div class="[ text--large relative ]">
-								<p class="[ center-full ]">Lorem ipsum dolor sit amet, consectetur adispiscing elit.</p>
-							</div>
-							<div class="[ vertical-line ]"></div>
-							<div class="[ circle-xsmall ][ margin-auto ]"></div>
-							<div class="[ border-gray--large ]"></div>
-							<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]">Febrero 21 de 2016</p>
-						</li>
-						<li class="[ box-li ]">
-							<p class="[ color-gray ][ fz-small ][ margin-top--date ]">Febrero 20 de 2016</p>
-							<div class="[ border-gray--large ]"></div>
-							<div class="[ circle-xsmall ][ margin-auto ]"></div>
-							<div class="[ vertical-line ]"></div>
-							<div class="[ text--small relative ]">
-								<p class="[ center-full ]">Lorem ipsum dolor sit amet, consectetur adispiscing elit.</p>
-							</div>
-						</li>
-						<li class="[ box-li ]">
-							<div class="[ text--large relative ]">
-								<p class="[ center-full ]">Lorem ipsum dolor sit amet, consectetur adispiscing elit.</p>
-							</div>
-							<div class="[ vertical-line ]"></div>
-							<div class="[ circle-xsmall ][ margin-auto ]"></div>
-							<div class="[ border-gray--large ]"></div>
-							<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]">Febrero 21 de 2016</p>
-						</li>
+
+						<?php $cronologia = new WP_Query(array(
+								'post_type'      => 'eventos',
+								'posts_per_page' => -1,
+								'orderby'  => 'fecha_evento',
+								'order'    => 'ASC',
+								'meta_query' => array(
+									array(
+										'key'     => 'fecha_evento',
+									)
+
+								)
+							));
+
+						if ( $cronologia->have_posts() ) : 
+							$count = 0;
+							$count_pasados = 0;
+							while ( $cronologia->have_posts() ) : $cronologia->the_post();
+								$date_event = get_post_meta($post->ID, 'fecha_evento', true);
+								$count_pasados = strtotime($date_event) < strtotime( date('Y-m-d') ) ? $count_pasados + 1 : $count_pasados;
+								$class_status = strtotime($date_event) < strtotime( date('Y-m-d') ) ? 'ya-paso ' : '';
+							
+								$date = '';
+								if ($date_event != '') {
+									$date_arr = getDateTransform($date_event);
+									$date = $date_arr[1].' '.$date_arr[0].' de '.$date_arr[2];
+								}
+
+								if($count%2 == 0): ?>
+								    <li class="[ box-li <?php echo $class_status; ?> ]">
+								    	<a href="<?php the_permalink(); ?>">
+											<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ]"><?php echo $date; ?></p>
+											<div class="[ border-gray--large ]"></div>
+											<div class="[ circle-xsmall ][ margin-auto ]"></div>
+											<div class="[ vertical-line ]"></div>
+											<div class="[ text--large relative ]">
+												<p class="[ evento evento-bottom ]"><?php the_title(); ?></p>
+											</div>
+										</a>
+									</li>
+								<?php else: ?>
+
+									<li class="[ box-li <?php echo $class_status; ?> ]">
+										<a href="<?php the_permalink(); ?>">
+											<div class="[ text--large relative ]">
+												<p class="[ evento ]"><?php the_title(); ?></p>
+											</div>
+											<div class="[ vertical-line ]"></div>
+											<div class="[ circle-xsmall ][ margin-auto ]"></div>
+											<div class="[ border-gray--large ]"></div>
+											<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]"><?php echo $date; ?></p>
+										</a>
+									</li>
+
+								<?php endif; 
+
+								$count++; 
+							endwhile; 
+
+							$data = '';
+							if ($cronologia->found_posts >= 7 AND $count_pasados > 0) {
+								$recorre = $count_pasados * 150;
+								echo '<input type="hidden" id="recorre" value="'.$recorre.'">';
+							}
+
+						endif; 
+						wp_reset_postdata(); ?>
+						
 					</ul>
 				</div>
 			</div> <!-- row -->
-
-
-
-
-
 
 	</section>
 

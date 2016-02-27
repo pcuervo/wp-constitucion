@@ -294,13 +294,15 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .box-li{
 display: inline-block;
 float: none;
-// padding-right: 5px;
 position: relative;
 margin-right: -4px;
 width: 150px;
+height: 248px;
 vertical-align: middle;
 text-align: center;
 }
+
+.fz-small.top-date{ height: 78px;padding-top: 66px;}
 
 .text--large { height: 60px; margin-bottom: 0px;}
 .text--small { height: 33px; margin-bottom: 0px;}
@@ -310,6 +312,19 @@ text-align: center;
 
 .margin-top-1{ margin-top: 50px;}
 .margin-bottom-1{ margin-bottom: 50px;}
+
+.box-li{
+  &.ya-paso{
+    a{ color: red; 
+      &:hover{text-decoration: none;}
+    }
+    p{color: red;}
+  }
+  a{ color: #333333; 
+    &:hover{text-decoration: none;}
+  }
+  p{color: #333333;}
+}
 
 .box-li .vertical-line {
   height: 35px;
@@ -331,3 +346,6 @@ text-align: center;
   & .vertical-line{ border-left: 2px solid @primary; }
   & .circle-xsmall{ background-color: @primary;}
 }
+
+.evento{width: 148px; overflow: hidden; white-space: normal; height: auto; position: absolute; left: 0%; bottom: 0; margin-bottom: 0;}
+.evento-bottom{bottom:inherit; top:0;}

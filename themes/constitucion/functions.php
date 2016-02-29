@@ -157,6 +157,8 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 	require_once('inc/Twitter.class.php');
 
+	require_once('inc/images-background-titles.php');
+
 
 
 // MODIFICAR EL MAIN QUERY ///////////////////////////////////////////////////////////

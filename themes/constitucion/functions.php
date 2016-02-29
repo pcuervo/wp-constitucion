@@ -319,6 +319,22 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 	}
 
+	/**
+	 * DEVUELVE DOCUMENTO PDF DEL POST
+	 */
+	function get_attachment_pdf($post_id){
+
+		global $wpdb;
+		$result = $wpdb->get_results(
+			"SELECT * FROM wp_posts
+				WHERE post_parent      = '$post_id'
+					AND post_type      = 'attachment'
+					AND post_mime_type = 'application/pdf' LIMIT 1;", OBJECT
+		);
+		return $result ? wp_get_attachment_url( $result[0]->ID ) : false;
+
+	}
+
 /**	
  * EDITAR GALERIA DEL CONTENT
  */

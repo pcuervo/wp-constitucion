@@ -68,7 +68,7 @@ div.cs-select:focus {
 
 /* Placeholder and selected option */
 .cs-select > span {
-	padding-right: 3em;
+	padding-right: 1em;
 }
 
 .cs-select > span::after,

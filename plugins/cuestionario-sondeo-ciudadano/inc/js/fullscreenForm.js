@@ -66,7 +66,7 @@
 		// show progress bar
 		ctrlProgress : true,
 		// show navigation dots
-		ctrlNavDots : true,
+		ctrlNavDots : false,
 		// show [current field]/[total fields] status
 		ctrlNavPosition : true,
 		// reached the review and submit step
@@ -226,6 +226,12 @@
 	 * jumps to the next field
 	 */
 	FForm.prototype._nextField = function( backto ) {
+        // the form element
+        this.formEl = this.el.querySelector( 'form' );
+        this.fieldsList = this.formEl.querySelector( 'ol.fs-fields' );
+        this.fields = [].slice.call( this.fieldsList.children );
+        this.fieldsCount = this.fields.length;
+
 		if( this.isLastStep || !this._validade() || this.isAnimating ) {
 			return false;
 		}
@@ -286,7 +292,10 @@
 
 				if( self.isLastStep ) {
 					// show the complete form and hide the controls
-					self._hideCtrl( self.ctrlNav );
+                    if( self.options.ctrlNavDots ){
+                        self._hideCtrl( self.ctrlNav );
+                    }
+					
 					self._hideCtrl( self.ctrlProgress );
 					self._hideCtrl( self.ctrlContinue );
 					self._hideCtrl( self.ctrlFldStatus );
@@ -376,6 +385,7 @@
 	 */
 	FForm.prototype._updateNav = function() {
 		if( this.options.ctrlNavDots ) {
+
 			classie.remove( this.ctrlNav.querySelector( 'button.fs-dot-current' ), 'fs-dot-current' );
 			classie.add( this.ctrlNavDots[ this.current ], 'fs-dot-current' );
 			this.ctrlNavDots[ this.current ].disabled = false;
@@ -466,6 +476,64 @@
 	FForm.prototype._clearError = function() {
 		this._hideCtrl( this.msgError );
 	}
+
+    FForm.prototype._removeField = function( form, id ){
+        // the form 
+        this.formEl = form.querySelector( 'form' );
+        // list of fields
+        this.fieldsList = this.formEl.querySelector( 'ol.fs-fields' );
+
+        var toRemove = document.getElementById( id );
+        this.fieldsList.removeChild( toRemove );
+
+        this.fields = [].slice.call( this.fieldsList.children );
+        // total fields
+        this.fieldsCount = this.fields.length;
+
+        var totalNumber = document.getElementsByClassName('fs-number-total');
+        totalNumber[0].innerHTML = this.fieldsCount;
+
+        if( this.options.ctrlNavDots ) {
+            var dots = document.getElementsByClassName('fs-nav-dots')[0];
+            var lastDot = dots.children.length - 1;
+            dots.removeChild( dots.children[lastDot] );
+        }
+
+        
+
+    }
+
+    FForm.prototype._addField = function( form, id, afterId ){
+
+        // the form 
+        this.formEl = form.querySelector( 'form' );
+        // list of fields
+        this.fieldsList = this.formEl.querySelector( 'ol.fs-fields' );
+
+        var toAdd = document.createElement('li')
+        var afterEl = document.getElementById( afterId );
+        toAdd.setAttribute( 'id', id );
+        afterEl.parentNode.insertBefore( toAdd, afterEl.nextSibling );
+
+        this.fields = [].slice.call( this.fieldsList.children );
+        // total fields
+        this.fieldsCount = this.fields.length;
+
+        var totalNumber = document.getElementsByClassName('fs-number-total');
+        totalNumber[0].innerHTML = this.fieldsCount;
+
+        if( this.options.ctrlNavDots ) {
+            var dots = document.getElementsByClassName('fs-nav-dots')[0];
+            var newButton = document.createElement('button');
+            newButton.disabled = true;
+            dots.appendChild( newButton );
+
+            this.ctrlNav = dots;
+            this._showCtrl( this.ctrlNav );
+            this.ctrlNavDots = [].slice.call( this.ctrlNav.children );
+        }
+
+    }
 
 	// add to global namespace
 	window.FForm = FForm;

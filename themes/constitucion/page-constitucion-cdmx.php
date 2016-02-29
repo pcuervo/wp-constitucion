@@ -68,8 +68,13 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 		</div>
 		
 		<div>
-			<p class="[ inline-block middle ][ text-uppercase ]">Descarga los documentos oficiales aquí</p>
-			<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/file-pdf.svg">
+			<?php $attachment = get_attachment_pdf($proceso->ID);
+			if ( $attachment != '' ) : ?>
+				<a href="<?php echo $attachment; ?>" target="_blank" class="descargar-doc">
+			<?php endif; ?>
+				<p class="[ inline-block middle ][ text-uppercase ]">Descarga los documentos oficiales aquí</p>
+				<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/file-pdf.svg">
+			<?php if ( $attachment != '' ) echo '</a>'; ?>
 		</div>
 	</section>
 </article>

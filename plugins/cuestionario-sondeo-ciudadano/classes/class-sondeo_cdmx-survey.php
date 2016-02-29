@@ -82,10 +82,15 @@ class Sondeo_CDMX_Survey {
 		wp_enqueue_script( 'select_fx', SONDEO_CDMX_PLUGIN_URL . 'inc/js/selectFx.js', '', '1.0', true );
 		wp_enqueue_script( 'fullscreen_form', SONDEO_CDMX_PLUGIN_URL . 'inc/js/fullscreenForm.js', '', '1.0', true );
 		wp_enqueue_script( 'sondeo_cdmx_functions', SONDEO_CDMX_PLUGIN_URL . 'inc/js/functions.js', array('jquery'), '1.0', true );
+		wp_localize_script( 'functions', 'allDelegaciones', $this->get_delegaciones() );
+		wp_localize_script( 'functions', 'allColonias', $this->get_colonias() );
+		wp_localize_script( 'functions', 'allMunicipios', $this->get_municipios() );
+		wp_localize_script( 'functions', 'allEstados', $this->get_estados() );
+		wp_localize_script( 'functions', 'allPaises', $this->get_paises() );
 	}
 
 	public function display_survey(){
-		$questions = $this->get_questions();
+		//$questions = $this->get_questions();
 		$next_question = 3;
 		?>
 		<div class="[ survey-container ][ padding--header ]">
@@ -94,9 +99,10 @@ class Sondeo_CDMX_Survey {
 					<h1 class="[ margin-top ]">Sondeo Masivo CDMX</h1>
 				</div>
 				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
-					<ol class="fs-fields">
-						<li id="js-donde-vives">
-							<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde vives?</label>
+					<ol class="fs-fields">	
+
+						<li id="js-donde-vives" data-question="1">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">¿En dónde vives?</label>
 							<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
 								<option value="" disabled selected>Selecciona una opción</option>
 								<option value="cdmx">CDMX</option>
@@ -105,42 +111,113 @@ class Sondeo_CDMX_Survey {
 								<option value="fuera-mexico">Fuera de México</option>
 							</select>
 						</li>
+						<li id="js-grandes-retos" data-question="26">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="grandes-retos">Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</label>
+<!-- 							<a href="#">Derechos Humanos</a>
+							<a href="#">Transporte y movilidad</a>
+							<a href="#">Empleo digno y productividad</a>
+							<a href="#">Pobreza y desigualdad económica.</a>
+							<a href="#">Educación de calidad permanente. </a>
+							<a href="#">Salud pública y bienestar</a>
+							<a href="#">Vivienda y uso de suelo</a>
+							<a href="#">Coordinación Metropolitana</a>
+							<a href="#">Transparencia y Rendición de Cuentas</a>
+							<a href="#">Agua</a>
+							<a href="#">Sustentabilidad del Medio Ambiente</a>
+							<a href="#">Servicios Urbanos</a>
+							<a href="#">Desarrollo barrial participativo</a>
+							<a href="#">Finanzas públicas</a>
+							<a href="#">Legalidad y Justicia</a>
+							<a href="#">Igualdad de género</a>
+							<a href="#">Infraestructura</a>
+							<a href="#">Otro</a> -->
+							<input class="fs-anim-lower" id="q9" name="grandes-retos" type="text" required/>
+						</li>
 						<li id="js-delegaciones-estados-paises"></li>
-						<li id="js-colonias-municipios"></li>
-						<li id="js-genero" data-input-trigger>
+						<li id="js-colonias" data-question="3"></li>
+						<li id="js-genero" data-input-trigger data-question="7">
 							<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="genero">Género</label>
 							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-								<span><input id="q1-1" name="genero" type="radio" value="mujer" /><label for="q1-1" class="radio-conversion">Mujer</label></span>
-								<span><input id="q1-2" name="genero" type="radio" value="hombre" /><label for="q1-2" class="radio-conversion">Hombre</label></span>
-								<span><input id="q1-3" name="genero" type="radio" value="otro" /><label for="q1-3" class="radio-conversion">Otro</label></span>
+								<span><input id="q1-1" name="genero" type="radio" value="mujer" /><label for="q1-1" class="radio-mujer">Mujer</label></span>
+								<span><input id="q1-2" name="genero" type="radio" value="hombre" /><label for="q1-2" class="radio-hombre">Hombre</label></span>
+								<span><input id="q1-3" name="genero" type="radio" value="otro" /><label for="q1-3" class="radio-otro">Otro</label></span>
 							</div>
 						</li>
-						<li id="js-edad">
+						<li id="js-edad" data-question="8">
 							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Edad</label>
 							<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="¿Cuántos años tienes?" required/>
 						</li>
-						<li id="js-dedicas">
-							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q4">¿A què te dedicas?</label>
-							<textarea class="fs-anim-lower" id="q4" name="q4" placeholder="Describe here"></textarea>
+						<li id="js-dedicas" data-question="9">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q4">¿A qué te dedicas?</label>
+							<textarea class="fs-anim-lower" id="q4" name="q4" placeholder=""></textarea>
 						</li>
-						<li id="js-trabajas" data-input-trigger>
+						<li id="js-trabajas" data-input-trigger data-question="10">
 							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="trabajas">¿Trabajas?</label>
 							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-								<span><input id="q5-1" name="trabajas" type="radio" value="si" /><label for="q5-1" class="radio-conversion">Si</label></span>
-								<span><input id="q5-2" name="trabajas" type="radio" value="no" /><label for="q5-2" class="radio-conversion">No</label></span>
+								<span><input id="q5-1" name="trabajas" type="radio" value="si" /><label for="q5-1" class="radio-si">Si</label></span>
+								<span><input id="q5-2" name="trabajas" type="radio" value="no" /><label for="q5-2" class="radio-no">No</label></span>
 							</div>
 						</li>
-						<?php foreach ( $questions as $key => $question_with_answers ) : ?>
-							<li data-input-trigger>
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q<?php echo $next_question ?>" data-question="<?php echo $question_with_answers['question_id'] ?>"><?php echo $question_with_answers['question'] ?></label>
-								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<?php $current_answer = 1; ?>
-									<?php foreach ( $question_with_answers['answers'] as $key => $answer ) : ?>
-										<span><input id="q<?php echo $next_question ?>-<?php echo $current_answer ?>" name="q<?php echo $next_question ?>" type="radio" value="<?php echo $answer['id'] ?>" /><label for="q<?php echo $next_question ?>-<?php echo $current_answer ?>" class="radio-conversion"><?php echo $answer['answer'] ?></label></span>
-									<?php $current_answer += 1; endforeach; ?>
-								</div>
-							</li>
-						<?php $next_question += 1; endforeach; ?>
+						<li id="js-estudias" data-input-trigger data-question="17">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="estudias">¿Estudias?</label>
+							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								<span><input id="q6-1" name="estudias" type="radio" value="si" /><label for="q6-1" class="radio-si">Si</label></span>
+								<span><input id="q6-2" name="estudias" type="radio" value="no" /><label for="q6-2" class="radio-no">No</label></span>
+							</div>
+						</li>
+						<li id="js-naciste-cdmx" data-input-trigger data-question="24">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="naciste-cdmx">Naciste en la CDMX?</label>
+							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								<span><input id="q7-1" name="naciste-cdmx" type="radio" value="si" /><label for="q7-1" class="radio-si">Si</label></span>
+								<span><input id="q7-2" name="naciste-cdmx" type="radio" value="no" /><label for="q7-2" class="radio-no">No</label></span>
+							</div>
+						</li>
+						<li id="js-piensas-cdmx" data-question="25">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="piensas-cdmx" data-info="Las palabras deben ir separadas por comas.">¿Cuáles son las tres primeras palabras que te llegan a la mente cuando piensas en la Ciudad de México?</label>
+							<input class="fs-anim-lower" id="q8" name="piensas-cdmx" type="text" placeholder="Ej. palabra1, palabra2, palabra3" required/>
+						</li>
+						<li id="js-grandes-retos" data-question="26">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="grandes-retos">Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</label>
+							<a href="#">Derechos Humanos</a>
+							<a href="#">Transporte y movilidad</a>
+							<a href="#">Empleo digno y productividad</a>
+							<a href="#">Pobreza y desigualdad económica.</a>
+							<a href="#">Educación de calidad permanente. </a>
+							<a href="#">Salud pública y bienestar</a>
+							<a href="#">Vivienda y uso de suelo</a>
+							<a href="#">Coordinación Metropolitana</a>
+							<a href="#">Transparencia y Rendición de Cuentas</a>
+							<a href="#">Agua</a>
+							<a href="#">Sustentabilidad del Medio Ambiente</a>
+							<a href="#">Servicios Urbanos</a>
+							<a href="#">Desarrollo barrial participativo</a>
+							<a href="#">Finanzas públicas</a>
+							<a href="#">Legalidad y Justicia</a>
+							<a href="#">Igualdad de género</a>
+							<a href="#">Infraestructura</a>
+							<a href="#">Otro</a>
+							<input class="fs-anim-lower" id="q9" name="grandes-retos" type="text" style="display: none;" required/>
+						</li>
+						<li id="js-como-imaginas" data-question="28">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="como-imaginas" data-info="Máximo 140 caracteres.">¿Cómo te imaginas la CDMX ideal, en 20 años?</label>
+							<textarea class="fs-anim-lower" id="q10" name="como-imaginas" placeholder="" maxlength="140"></textarea>
+						</li>
+						<li id="js-obstaculos-principales" data-question="29">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="obstaculos-principales" data-info="Las palabras deben ir separadas por comas.">Pensando en esta visión, ¿cuáles pensarías que son los tres obstáculos principales para que se haga realidad?</label>
+							<input class="fs-anim-lower" id="q11" name="obstaculos-principales" type="text" placeholder="Ej. palabra1, palabra2, palabra3" required/>
+						</li>
+						<li id="js-vision-realidad" data-question="30">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="vision-realidad" data-info="Máximo 140 caracteres.">Imagina que es el año 2036. Tu visión se hizo realidad ¿Qué tuvo que hacer el gobierno para que esto sucediera?</label>
+							<textarea class="fs-anim-lower" id="q12" name="vision-realidad" placeholder="" maxlength="140"></textarea>
+						</li>
+						<li id="js-tuviste-hacer" data-question="31">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="tuviste-hacer" data-info="Máximo 140 caracteres.">¿Y qué tuviste que hacer tú?</label>
+							<textarea class="fs-anim-lower" id="q13" name="tuviste-hacer" placeholder="" maxlength="140"></textarea>
+						</li>
+						<li id="js-cosas-valiosas" data-question="32">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿Qué palabras te vienen a la mente?</label>
+							<input class="fs-anim-lower" id="q14" name="cosas-valiosas" type="text" placeholder="Ej. palabra1, palabra2, palabra3" required/>
+						</li>
 					</ol><!-- /fs-fields -->
 					<button class="fs-submit" type="submit">Enviar respuestas</button>
 				</form><!-- /fs-form -->
@@ -224,6 +301,94 @@ class Sondeo_CDMX_Survey {
 			return $questions;
 		}
 		json_encode( $questions );
+	}
+
+	public function get_delegaciones(){
+		global $wpdb;
+		$delegaciones = array();
+		$delegaciones_results = $wpdb->get_results('
+			SELECT * FROM ' .
+			$wpdb->prefix . 'sondeo_cdmx_delegaciones'
+		);
+
+		foreach ( $delegaciones_results as $result ) {
+			$delegaciones[$result->id] =  array(
+				'delegacion'	=> $result->delegacion
+			);
+		}
+
+		return $delegaciones;
+	}
+
+	public function get_colonias(){
+		global $wpdb;
+		$colonias = array();
+		$colonias_results = $wpdb->get_results('
+			SELECT col.id AS colonia_id, delegacion_id, colonia, delegacion FROM ' . $wpdb->prefix . 'sondeo_cdmx_colonias col 
+			INNER JOIN ' . $wpdb->prefix . 'sondeo_cdmx_delegaciones del ON col.delegacion_id = del.id'
+		);
+
+		$current_delegacion = '';
+		foreach ( $colonias_results as $result ) {
+			if( $current_delegacion != $result->delegacion ){
+				$current_delegacion = $result->delegacion;
+				$colonias[$current_delegacion] = array();
+			}
+			array_push( $colonias[$current_delegacion], $result->colonia );
+		}
+
+		return $colonias;
+	}
+
+	public function get_municipios(){
+		global $wpdb;
+		$municipios = array();
+		$municipios_results = $wpdb->get_results('
+			SELECT id, municipio FROM ' .
+			$wpdb->prefix . 'sondeo_cdmx_municipios ORDER BY municipio ASC'
+		);
+
+		foreach ( $municipios_results as $result ) {
+			$municipios[$result->id] =  array(
+				'municipio'	=> $result->municipio
+			);
+		}
+
+		return $municipios;
+	}
+
+	public function get_estados(){
+		global $wpdb;
+		$estados = array();
+		$estados_results = $wpdb->get_results('
+			SELECT id, estado FROM ' .
+			$wpdb->prefix . 'sondeo_cdmx_estados ORDER BY estado ASC'
+		);
+
+		foreach ( $estados_results as $result ) {
+			$estados[$result->id] =  array(
+				'estado'	=> $result->estado
+			);
+		}
+
+		return $estados;
+	}
+
+	public function get_paises(){
+		global $wpdb;
+		$paises = array();
+		$paises_results = $wpdb->get_results('
+			SELECT id, pais FROM ' .
+			$wpdb->prefix . 'sondeo_cdmx_paises ORDER BY pais ASC'
+		);
+
+		foreach ( $paises_results as $result ) {
+			$paises[$result->id] =  array(
+				'pais'	=> $result->pais
+			);
+		}
+
+		return $paises;
 	}
 
 

@@ -66,7 +66,7 @@
 		// show progress bar
 		ctrlProgress : true,
 		// show navigation dots
-		ctrlNavDots : true,
+		ctrlNavDots : false,
 		// show [current field]/[total fields] status
 		ctrlNavPosition : true,
 		// reached the review and submit step
@@ -292,7 +292,10 @@
 
 				if( self.isLastStep ) {
 					// show the complete form and hide the controls
-					self._hideCtrl( self.ctrlNav );
+                    if( self.options.ctrlNavDots ){
+                        self._hideCtrl( self.ctrlNav );
+                    }
+					
 					self._hideCtrl( self.ctrlProgress );
 					self._hideCtrl( self.ctrlContinue );
 					self._hideCtrl( self.ctrlFldStatus );
@@ -382,6 +385,7 @@
 	 */
 	FForm.prototype._updateNav = function() {
 		if( this.options.ctrlNavDots ) {
+
 			classie.remove( this.ctrlNav.querySelector( 'button.fs-dot-current' ), 'fs-dot-current' );
 			classie.add( this.ctrlNavDots[ this.current ], 'fs-dot-current' );
 			this.ctrlNavDots[ this.current ].disabled = false;
@@ -474,7 +478,6 @@
 	}
 
     FForm.prototype._removeField = function( form, id ){
-        console.log( form );
         // the form 
         this.formEl = form.querySelector( 'form' );
         // list of fields
@@ -484,16 +487,19 @@
         this.fieldsList.removeChild( toRemove );
 
         this.fields = [].slice.call( this.fieldsList.children );
-        console.log(this.fields);
         // total fields
         this.fieldsCount = this.fields.length;
 
         var totalNumber = document.getElementsByClassName('fs-number-total');
         totalNumber[0].innerHTML = this.fieldsCount;
 
-        var dots = document.getElementsByClassName('fs-nav-dots')[0];
-        var lastDot = dots.children.length - 1;
-        dots.removeChild( dots.children[lastDot] );
+        if( this.options.ctrlNavDots ) {
+            var dots = document.getElementsByClassName('fs-nav-dots')[0];
+            var lastDot = dots.children.length - 1;
+            dots.removeChild( dots.children[lastDot] );
+        }
+
+        
 
     }
 
@@ -516,10 +522,16 @@
         var totalNumber = document.getElementsByClassName('fs-number-total');
         totalNumber[0].innerHTML = this.fieldsCount;
 
-        var dots = document.getElementsByClassName('fs-nav-dots')[0];
-        var newButton = document.createElement('button');
-        newButton.disabled = true;
-        dots.appendChild( newButton );
+        if( this.options.ctrlNavDots ) {
+            var dots = document.getElementsByClassName('fs-nav-dots')[0];
+            var newButton = document.createElement('button');
+            newButton.disabled = true;
+            dots.appendChild( newButton );
+
+            this.ctrlNav = dots;
+            this._showCtrl( this.ctrlNav );
+            this.ctrlNavDots = [].slice.call( this.ctrlNav.children );
+        }
 
     }
 

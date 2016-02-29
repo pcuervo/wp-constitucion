@@ -343,12 +343,25 @@ button.fs-continue,
 	transform: translate(-50%,-50%);
 }
 
-.fs-fields .fs-radio-custom label.radio-mobile::after {
-//	background-image: url(../img/mobile.svg);
+
+.fs-fields .fs-radio-custom label.radio-hombre::after {
+	background-image: url(../img/hombre.svg);
 }
 
-.fs-fields .fs-radio-custom label.radio-social::after {
-//	background-image: url(../img/social.svg);
+.fs-fields .fs-radio-custom label.radio-mujer::after {
+	background-image: url(../img/mujer.svg);
+}
+
+.fs-fields .fs-radio-custom label.radio-otro::after {
+	background-image: url(../img/otro.svg);
+}
+
+.fs-fields .fs-radio-custom label.radio-si::after {
+	background-image: url(../img/si.svg);
+}
+
+.fs-fields .fs-radio-custom label.radio-no::after {
+	background-image: url(../img/no.svg);
 }
 
 .fs-fields .fs-radio-custom label.radio-conversion::after {
@@ -375,7 +388,7 @@ button.fs-continue,
 	height: 200px;
 	border: 2px solid rgba(0,0,0,0.2);
 	background-color: transparent;
-	color: #fffed8;
+	color: #777;
 	font-weight: 700;
 	font-size: 0.85em;
 	resize: none;
@@ -383,7 +396,6 @@ button.fs-continue,
 
 .fs-form-overview .fs-fields textarea {
 	height: 100px;
-	color: rgba(0,0,0,0.5);
 }
 
 .fs-fields textarea:focus {
@@ -526,7 +538,7 @@ button.fs-continue,
 	overflow: hidden;
 	color: rgba(0,0,0,0.4);
 	margin: 40px;
-	width: 2em;
+	width: 3em;
 	font-weight: 700;
 	font-size: 2em;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -677,7 +689,7 @@ button.fs-continue:hover {
 	text-align: center;
 	background: transparent;
 	color: #999999;
-	content: 'o presiona ENTER';
+	//content: 'o presiona ENTER';
 	font-size: 0.65em;
 	pointer-events: none;
 }

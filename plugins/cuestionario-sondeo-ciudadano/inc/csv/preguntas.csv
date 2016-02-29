@@ -15,6 +15,7 @@ Edad,3,text,0,1,0
 ¿En qué estado trabajas?,5,select,1,1,0
 ¿En qué país trabajas?,5,select,1,1,0
 ¿Estudias?,6,select,0,1,0
+¿Dónde estudias?,5,select,0,1,0
 ¿En qué delegación estudias?,6,select,1,1,0
 ¿En qué colonia estudias?,6,select,1,1,0
 ¿En qué municipio estudias?,6,select,1,1,0

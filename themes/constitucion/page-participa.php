@@ -276,12 +276,12 @@ if( isset( $result['success'] ) ): ?>
 				<h2 class="[ inline-block align-middle ][ no-margin ]">Estimados</h2>
 				<img class="[ inline-block align-middle ][ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif">
 			</div>
-			<form class="[ margin-bottom--large ]" action="" method="POST">
-				<input type="text" name="mensaje_cdmx" id="mensaje_cdmx" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Escribe tu mensaje">
+			<form class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
+				<input type="text" name="mensaje_cdmx" id="mensaje_cdmx" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Escribe tu mensaje" required="">
 				<h2 class="[ margin-bottom--large ][ fz-small--xs ]">Con respeto,</h2>
-				<input name="nombre_cdmx" id="nombre_cdmx" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Tu nombre">
-				<input name="email_cdmx" id="email_cdmx" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Correo Electrónico">
-				<input name="telefono_cdmx" id="telefono_cdmx" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Teléfono">
+				<input name="nombre_cdmx" id="nombre_cdmx" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Tu nombre" required="">
+				<input name="email_cdmx" id="email_cdmx" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Correo Electrónico" required="">
+				<input name="telefono_cdmx" id="telefono_cdmx" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Teléfono" required="">
 				<input name="accion" id="accion" type="hidden" value="guarda-formulario">
 
 				<button type="submit" class="[ btn btn-secondary ][ pull-right ]">enviar</button>

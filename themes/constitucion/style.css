@@ -3068,6 +3068,15 @@ select[multiple].input-lg {
   background-color: #eeeeee;
   border-radius: 0px;
 }
+.parsley-error {
+  background: rgba(255, 0, 0, 0.07);
+}
+.parsley-errors-list {
+  margin-top: -37px;
+  padding-left: 0;
+  list-style: none;
+  color: red;
+}
 .btn {
   display: inline-block;
   margin-bottom: 0;

@@ -9,8 +9,6 @@ class Twitter {
 	private $access_token;
 	private $access_token_secret;
 
-
-
 	public function __construct()
 	{
 		$this->consumer_key = 'lYZ6h8dPRhf8hON3D6vJwIoOe';

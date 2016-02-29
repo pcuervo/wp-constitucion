@@ -3068,6 +3068,15 @@ select[multiple].input-lg {
   background-color: #eeeeee;
   border-radius: 0px;
 }
+.parsley-error {
+  background: rgba(255, 0, 0, 0.07);
+}
+.parsley-errors-list {
+  margin-top: -37px;
+  padding-left: 0;
+  list-style: none;
+  color: red;
+}
 .btn {
   display: inline-block;
   margin-bottom: 0;
@@ -4800,7 +4809,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   line-height: 1.42857143;
   text-decoration: none;
-  color: #337ab7;
+  color: #e80e8a;
   background-color: #fff;
   border: 1px solid #ddd;
   margin-left: -1px;
@@ -4833,7 +4842,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .active > span:focus {
   z-index: 3;
   color: #fff;
-  background-color: #337ab7;
+  background-color: #e80e8a;
   border-color: #337ab7;
   cursor: default;
 }
@@ -5958,7 +5967,7 @@ button.close {
 }
 .img-slide {
   height: 20px;
-  margin-top: 10px;
+  margin-top: 94px;
   margin-left: 10px !important;
   margin-right: 10px !important;
 }
@@ -6578,8 +6587,13 @@ ul.horizontal-slide li[class*="col"]:first-child {
   position: relative;
   margin-right: -4px;
   width: 150px;
+  height: 248px;
   vertical-align: middle;
   text-align: center;
+}
+.fz-small.top-date {
+  height: 78px;
+  padding-top: 66px;
 }
 .text--large {
   height: 60px;
@@ -6603,6 +6617,24 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .margin-bottom-1 {
   margin-bottom: 50px;
 }
+.box-li.ya-paso a {
+  color: rgba(204, 204, 204, 0.75);
+}
+.box-li.ya-paso a:hover {
+  text-decoration: none;
+}
+.box-li.ya-paso p {
+  color: rgba(204, 204, 204, 0.75);
+}
+.box-li a {
+  color: #333333;
+}
+.box-li a:hover {
+  text-decoration: none;
+}
+.box-li p {
+  color: #333333;
+}
 .box-li .vertical-line {
   height: 35px;
   width: 49%;
@@ -6622,6 +6654,20 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 .box-li:hover .circle-xsmall {
   background-color: #e80e8a;
+}
+.evento {
+  width: 148px;
+  overflow: hidden;
+  white-space: normal;
+  height: auto;
+  position: absolute;
+  left: 0%;
+  bottom: 0;
+  margin-bottom: 0;
+}
+.evento-bottom {
+  bottom: inherit;
+  top: 0;
 }
 .clearfix:before,
 .clearfix:after,
@@ -7344,6 +7390,10 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 .border-bottom-gray {
   border-bottom: 1px solid #cacaca;
+}
+.aligncenter {
+  margin: 0 auto;
+  display: inherit;
 }
 @-ms-viewport {
   width: device-width;

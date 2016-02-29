@@ -7,37 +7,6 @@
 	add_action('init', function(){
 
 
-		// NOTICIAS
-		$labels = array(
-			'name'          => 'Calendario',
-			'singular_name' => 'Calendario',
-			'add_new'       => 'Nueva Fecha',
-			'add_new_item'  => 'Nueva Fecha',
-			'edit_item'     => 'Editar Fecha',
-			'new_item'      => 'Nueva Fecha',
-			'all_items'     => 'Todas',
-			'view_item'     => 'Ver Fecha',
-			'search_items'  => 'Buscar Fecha',
-			'not_found'     => 'No se encontro',
-			'menu_name'     => 'Calendario'
-		);
-
-		$args = array(
-			'labels'             => $labels,
-			'public'             => true,
-			'publicly_queryable' => true,
-			'show_ui'            => true,
-			'show_in_menu'       => true,
-			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'calendario' ),
-			'capability_type'    => 'post',
-			'has_archive'        => true,
-			'hierarchical'       => false,
-			'menu_position'      => 6,
-			'supports'           => array( 'title', 'editor', 'thumbnail' )
-		);
-		register_post_type( 'calendario', $args );
-
 		// KIOSCOS
 		$labels = array(
 			'name'          => 'Kioskos',
@@ -99,5 +68,98 @@
 			'supports'           => array( 'title', 'editor' )
 		);
 		register_post_type( 'preguntas-frecuentes', $args );
+
+		// Cronología
+		$labels = array(
+			'name'          => 'Eventos',
+			'singular_name' => 'Eventos',
+			'add_new'       => 'Nuevo Evento',
+			'add_new_item'  => 'Nuevo Evento',
+			'edit_item'     => 'Editar Evento',
+			'new_item'      => 'Nuevo Evento',
+			'all_items'     => 'Todos',
+			'view_item'     => 'Ver Evento',
+			'search_items'  => 'Buscar Evento',
+			'not_found'     => 'No se encontro',
+			'menu_name'     => 'Eventos'
+		);
+
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'eventos' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => 6,
+			'supports'           => array( 'title', 'editor' )
+		);
+		register_post_type( 'eventos', $args );
+
+		// Cronología
+		$labels = array(
+			'name'          => 'Voces ciudadanas',
+			'singular_name' => 'Voces ciudadanas',
+			'add_new'       => 'Nuevo video',
+			'add_new_item'  => 'Nuevo video',
+			'edit_item'     => 'Editar video',
+			'new_item'      => 'Nuevo video',
+			'all_items'     => 'Todos',
+			'view_item'     => 'Ver video',
+			'search_items'  => 'Buscar video',
+			'not_found'     => 'No se encontro',
+			'menu_name'     => 'Voces ciudadanas'
+		);
+
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'voces-ciudadanas' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => 6,
+			'supports'           => array( 'title' )
+		);
+		register_post_type( 'voces-ciudadanas', $args );
+
+		// FORMULARIO
+		$labels = array(
+			'name'          => 'Formulario cdmx',
+			'singular_name' => 'Formulario cdmx',
+			'add_new'       => 'Nuevo mensaje',
+			'add_new_item'  => 'Nuevo mensaje',
+			'edit_item'     => 'Editar mensaje',
+			'new_item'      => 'Nuevo mensaje',
+			'all_items'     => 'Todos',
+			'view_item'     => 'Ver mensaje',
+			'search_items'  => 'Buscar mensaje',
+			'not_found'     => 'No se encontro',
+			'menu_name'     => 'Formulario cdmx'
+		);
+
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'formulario-cdmx' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => 6,
+			'supports'           => array( 'title', 'editor' )
+		);
+		register_post_type( 'formulario-cdmx', $args );
 
 	});

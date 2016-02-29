@@ -1,8 +1,9 @@
 <?php get_header(); the_post();
 the_title(); 
-$url_image_constirucion = attachment_image_url( $post->ID, 'full' ); ?>
+$url_image_constirucion = attachment_image_url( $post->ID, 'full' );
+$img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
-<section class="[ bg-image rectangle-small ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo $url_image_constirucion; ?>');">
+<section class="[ bg-image rectangle-small ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo $img_constitucion_cdmx; ?>');">
 	<div class="[ bg-dark--opacity width-100 height-100 ]">
 		<h2 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]"><strong>Información</strong></h2>
 	</div>
@@ -18,6 +19,53 @@ $url_image_constirucion = attachment_image_url( $post->ID, 'full' ); ?>
 		<?php $proceso = get_page_by_path('proceso-participativo'); ?>
 		<h2 class="[ no-margin-top ]"><?php echo $proceso->post_title; ?></h2>
 		<?php echo $proceso->post_content; ?>
+
+		<div class="[ row ][ margin-top-bottom ]">
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ row ]">
+					<div class="[ col-xs-8 ]">
+						<p class="[ fz-xlarge ]">Paso 1</p>
+						<p class="[ fz-small ]"><?php echo get_post_meta($proceso->ID, 'paso_a', true);?></p>
+					</div>
+					<div class="[ col-xs-4 no-padding--sides ]">
+						<img class="[ img-responsive ][ margin-auto ]" src="http://constitucion.dev/wp-content/themes/constitucion//images/flecha.png" alt="" /></div>
+					</div>
+				</div>
+
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ row ]">
+					<div class="[ col-xs-8 ]">
+						<p class="[ fz-xlarge ]">Paso 2</p>
+						<p class="[ fz-small ]"><?php echo get_post_meta($proceso->ID, 'paso_b', true);?></p>
+
+					</div>
+					<div class="[ col-xs-4 no-padding--sides ]">
+						<img class="[ img-responsive ][ margin-auto ]" src="http://constitucion.dev/wp-content/themes/constitucion//images/flecha.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ row ]">
+					<div class="[ col-xs-8 ]">
+						<p class="[ fz-xlarge ]">Paso 3</p>
+						<p class="[ fz-small ]"><?php echo get_post_meta($proceso->ID, 'paso_c', true);?></p>
+					</div>
+					<div class="[ col-xs-4 no-padding--sides ]">
+						<img class="[ img-responsive ][ margin-auto ]" src="http://constitucion.dev/wp-content/themes/constitucion//images/flecha.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ row ]">
+					<div class="[ col-xs-8 ]">
+						<p class="[ fz-xlarge ]">Paso 4</p>
+						<p class="[ fz-small ]"><?php echo get_post_meta($proceso->ID, 'paso_d', true);?></p>
+					</div>
+					<div class="[ col-xs-4 no-padding--sides ]">
+						<img class="[ img-responsive ][ margin-auto ]" src="http://constitucion.dev/wp-content/themes/constitucion//images/flecha.png" alt="" /></div>
+					</div>
+				</div>
+		</div>
 		
 		<div>
 			<p class="[ inline-block middle ][ text-uppercase ]">Descarga los documentos oficiales aquí</p>

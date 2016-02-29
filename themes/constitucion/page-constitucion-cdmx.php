@@ -1,8 +1,9 @@
 <?php get_header(); the_post();
 the_title(); 
-$url_image_constirucion = attachment_image_url( $post->ID, 'full' ); ?>
+$url_image_constirucion = attachment_image_url( $post->ID, 'full' );
+$img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
-<section class="[ bg-image rectangle-small ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo $url_image_constirucion; ?>');">
+<section class="[ bg-image rectangle-small ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo $img_constitucion_cdmx; ?>');">
 	<div class="[ bg-dark--opacity width-100 height-100 ]">
 		<h2 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]"><strong>Información</strong></h2>
 	</div>

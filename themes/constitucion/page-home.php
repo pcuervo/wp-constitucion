@@ -122,7 +122,6 @@
 	</li>
 </ul>
 
-<!--home -- Favor de Leer el archivo readme.md -->
 
 <div class="[ container ]">
 	<div class="[ row ]">
@@ -133,7 +132,8 @@
 		</div>
 	</div>
 </div><!--/container-->
-<section class="[ bg-image rectangle-small ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/edificios.png');">
+<?php $img_kioskos = get_option( 'img_kioskos' ); ?>
+<section class="[ bg-image rectangle-small ][ relative ]" style="background-image: url('<?php echo $img_kioskos; ?>');">
 	<div class="[ bg-dark--opacity width-100 height-100 ][ text-center ]">
 		<h2 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ fw-semibold ]">¡Participa en nuestros kioskos!</h2>
 	</div>

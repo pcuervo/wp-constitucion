@@ -1,4 +1,4 @@
-<?php 
+<?php if (isset($_POST['guarda_imagenes_plecas']) AND $_POST['guarda_imagenes_plecas'] == 'si')  update_image_background($_POST);
 add_action( 'admin_menu', 'register_background_titles' );
 
 function register_background_titles(){
@@ -11,23 +11,25 @@ function vew_setings_constitucion(){ ?>
 	<form method="post" action="">
 		<table class="form-table streaming">
 			<tbody>
-				
+				<?php $img_kioskos = get_option( 'img_kioskos' );
+				$img_cdmx = get_option( 'img_cdmx' );
+				$img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 				<tr>
-					<th><label for="img-kioskos">Imagen Kioskos</label></th>
+					<th><label for="img_kioskos">Imagen Kioskos</label></th>
 					<td>
-						<input type='text' class='widefat' id='img-kioskos' name='img-kioskos'/>
+						<input type='text' class='widefat' id='img_kioskos' name='img_kioskos' value="<?php echo $img_kioskos; ?>"/>
 					</td>
 				</tr>
 				<tr>
-					<th><label for="img-cdmx">Imagen CDMX</label></th>
+					<th><label for="img_cdmx">Imagen CDMX</label></th>
 					<td>
-						<input type='text' class='widefat' id='img-cdmx' name='img-cdmx'/>
+						<input type='text' class='widefat' id='img_cdmx' name='img_cdmx' value="<?php echo $img_cdmx; ?>"/>
 					</td>
 				</tr>
 				<tr>
-					<th><label for="constitucion-cdmx">Imagen Constitución CDMX</label></th>
+					<th><label for="img_constitucion_cdmx">Imagen Constitución CDMX</label></th>
 					<td>
-						<input type='text' class='widefat' id='constitucion-cdmx' name='constitucion-cdmx'/>
+						<input type='text' class='widefat' id='img_constitucion_cdmx' name='img_constitucion_cdmx' value="<?php echo $img_constitucion_cdmx; ?>"/>
 					</td>
 				</tr>
 
@@ -46,4 +48,25 @@ function vew_setings_constitucion(){ ?>
 	
 
 <?php }
+
+function update_image_background($plecas){
+	if (! empty($plecas)) :
+		foreach ($plecas as $option_name => $pleca):
+			if ($option_name != 'guarda_imagenes_plecas'):
+				$opcion = get_option( $option_name );
+
+				if ($opcion  !== false ) {
+
+			    	update_option( $option_name, $pleca );
+
+				} else {
+
+				    $deprecated = null;
+				    $autoload = 'no';
+				    add_option( $option_name, $pleca, $deprecated, $autoload );
+				}
+			endif;
+		endforeach;
+	endif;
+}
 

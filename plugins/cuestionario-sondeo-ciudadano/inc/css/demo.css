@@ -80,6 +80,13 @@ a:hover, a:focus {
 }
 
 h1{ color: #e80e8a;}
+@media (max-width: 480px) {
+	h1{ font-size: 25px;}
+}
+@media (min-width: 481px) and (max-width: 767px) {
+	h1{ font-size: 30px;}
+}
+
 .color-gray { color: #4a4a4a; }
 .color-gray--light { color: #cccccc; }
 

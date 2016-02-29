@@ -24,7 +24,7 @@ div.cs-skin-boxes {
 }
 
 @media screen and (max-width: 30em) {
-	div.cs-skin-boxes { font-size: 1em; }
+	div.cs-skin-boxes { font-size: 18px; }
 }
 
 // .cs-skin-boxes > span {

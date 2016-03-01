@@ -137,7 +137,7 @@
 		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-sm-6 ][ margin-top-bottom--large ]">
 			<h1 class="[ text-sm-caps text-center ]">ConstituciónCDMX</h1>
 			<?php $home = get_page_by_path('home');
-			echo $home->post_content; ?>
+			echo wpautop($home->post_content); ?>
 		</div>
 	</div>
 </div><!--/container-->

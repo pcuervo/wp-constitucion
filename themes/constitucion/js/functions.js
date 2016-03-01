@@ -225,7 +225,7 @@
                 }, 500, function() {
                     $( ".soy-cdmx" ).removeClass('js-hidden');
                 });
-                
+
                 return;
             }
 

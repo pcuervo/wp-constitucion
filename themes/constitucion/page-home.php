@@ -41,7 +41,7 @@
 								<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
 							</div>
 							<div class="[ col-xs-10 ]">
-								<h1>#SoyCDM</h1>
+								<h1>#SoyCDMX</h1>
 							</div>
 						</div>
 
@@ -94,35 +94,14 @@
 	</li>
 	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
 <!-- #SoyCDMX desktop home -->
-	<li id="btn-cdmx">
-		<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
-		#SoyCDMX<!-- Contacto - page-contacto.php-->
-		<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+	<li id="js-btn-cdmx">
+		<a href="#">
+			<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+			#SoyCDMX<!-- Contacto - page-contacto.php-->
+			<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+		</a>
 	</li>
 </ul>
-
-
-<div class="[ soy-cdmx right-350 ]">
-	<div class="relative">
-		<div class="[ close-cdmx ][ padding--top-bottom--large ][ absolute right-10 ]">
-			<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg">
-		</div>
-		<h1>#SoyCDMX</h1>
-		<?php $tweet = new Twitter;
-		$tweets = $tweet->feedTwitter();
-		if (! empty($tweets) ):
-			foreach ($tweets as $tweet): ?>
-				<div>
-					<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-					<p><?php echo $tweet['text']; ?></p>
-					<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
-					<hr class="[ border-bottom-gray ]">
-				</div>
-			<?php endforeach;
-		endif; ?>
-	</div>
-</div>
-
 
 <div class="[ container ]">
 	<div class="[ row ]">

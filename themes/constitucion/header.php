@@ -18,7 +18,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700,800,300,100' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700,800,500,300' rel='stylesheet' type='text/css'>
 		<!-- Font awesome -->
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
 		<!--[if lt IE 9]>
@@ -35,11 +35,7 @@
 		<![endif]-->
 
 		<div><!-- class="container" -->
-
-		<?php $tweet = new Twitter;
-		$tweets = $tweet->feedTwitter();
-
-		if ( is_page('home') ): ?>
+		<?php if ( is_page('home') ): ?>
 			<header class="[ hidden ]">
 				<nav>
 <!-- menu desktop home -->
@@ -66,34 +62,46 @@
 						</li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
 <!-- #SoyCDMX desktop home -->
-						<li class="[ grid-item ]">
-							<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
-							#SoyCDMX<!-- Contacto - page-contacto.php-->
-							<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
-							<div class="[ grid-item__info ]">
-								<div class="[ soy-cdmx ]">
-									<div class="[ close-cdmx ][ padding--top-bottom--large ][ absolute right-10 ]">
-										<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg">
-									</div>
-									<h1>#SoyCDMX</h1>
-									<?php $tweet = new Twitter;
-									$tweets = $tweet->feedTwitter();
-									if (! empty($tweets) ):
-										foreach ($tweets as $tweet): ?>
-											<div>
-												<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-												<p><?php echo $tweet['text']; ?></p>
-												<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
-												<hr class="[ border-bottom-gray ]">
-											</div>
-										<?php endforeach;
-									endif; ?>
+						<li class="dropdown">
+							<a class="dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+								<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+								#SoyCDMX<!-- Contacto - page-contacto.php-->
+								<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+							</a>
+							<ul class="dropdown-menu drop-top-right drop-hashtag-post bg-gray-light " role="menu" aria-labelledby="menu1">
+								<div>
+									<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
+									<h1>#SoyCDM</h1>
 								</div>
-							</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:33 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:43 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:46 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:47 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+							</ul>
 						</li>
 					</ul>
 
-
+					
 
 
 <!-- nav header movil home -->
@@ -152,20 +160,38 @@
 										<h1>#SoyCDM</h1>
 									</div>
 								</div>
-								<?php if (! empty($tweets) ):
-									foreach ($tweets as $tweet): ?>
-										<div class="[ row ]">
-											<div class="[ col-xs-12 ][ color-gray ]">
-												<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-												<p><?php echo $tweet['text']; ?></p>
-												<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
-												<hr class="[ border-bottom-gray ]">
-											</div>
-										</div>
-									<?php endforeach;
-								endif; ?>
-
-
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:33 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:43 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:46 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:47 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -175,7 +201,7 @@
 			<header class="not-home">
 				<nav>
 <!-- menu desktop not home -->
-					<ul class="[ menu-desktop ][ text-center ][ hidden-xs  ]"> <!-- hidden-sm -->
+					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ]">
 						<li class="[ no-padding--sides ]"><a href="<?php echo site_url('/'); ?> ">
 							<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
 							<span class="[ text-italic ][ relative ]">punto</span>
@@ -197,31 +223,43 @@
 							</ul>
 						</li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-<!-- #SoyCDMX desktop not home -->
-						<li class="[ grid-item ]">
-							<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
-							#SoyCDMX<!-- Contacto - page-contacto.php-->
-							<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
-							<div class="[ grid-item__info ]"> <!--  id="grid-item__info" -->
-								<div class="[ soy-cdmx ]">
-									<div class="[ close-cdmx ][ padding--top-bottom--large ][ absolute right-10 ]">
-										<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg">
-									</div>
-									<h1>#SoyCDMX</h1>
-									<?php $tweet = new Twitter;
-									$tweets = $tweet->feedTwitter();
-									if (! empty($tweets) ):
-										foreach ($tweets as $tweet): ?>
-											<div>
-												<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-												<p><?php echo $tweet['text']; ?></p>
-												<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
-												<hr class="[ border-bottom-gray ]">
-											</div>
-										<?php endforeach;
-									endif; ?>
+<!-- #SoyCDMX desktop not home -->						
+						<li class="dropdown">
+							<a class="dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+								<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+								#SoyCDMX<!-- Contacto - page-contacto.php-->
+								<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+							</a>
+							<ul class="dropdown-menu drop-top-right drop-hashtag-post bg-gray-light " role="menu" aria-labelledby="menu1">
+								<div>
+									<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
+									<h1>#SoyCDM</h1>
 								</div>
-							</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:33 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:43 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:46 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+								<div>
+									<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+									<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+									<p class="[ text-italic fz-xsmall ]">20:47 - Febrero 23 - 2016 </p>
+									<hr class="[ border-bottom-gray ]">
+								</div>
+							</ul>
 						</li>
 					</ul>
 <!-- nav header movil not home -->
@@ -280,20 +318,42 @@
 										<h1>#SoyCDM</h1>
 									</div>
 								</div>
-								<?php if (! empty($tweets) ):
-									foreach ($tweets as $tweet): ?>
-										<div>
-											<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-											<p><?php echo $tweet['text']; ?></p>
-											<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
-											<hr class="[ border-bottom-gray ]">
-										</div>
-									<?php endforeach;
-								endif; ?>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:33 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:43 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:46 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
+								<div class="[ row ]">
+									<div class="[ col-xs-12 ][ color-gray ]">
+										<p class="[ fz-xsmall ]"> Miguel López de León @Miguel López</p>
+										<p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum sapiem #SoyCDMX</p>
+										<p class="[ text-italic fz-xsmall ]">20:47 - Febrero 23 - 2016 </p>
+										<hr class="[ border-bottom-gray ]">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</nav>
 			</header>
 		<?php endif; ?>
-
+					

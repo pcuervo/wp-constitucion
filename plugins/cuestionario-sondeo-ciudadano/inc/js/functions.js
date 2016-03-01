@@ -107,16 +107,17 @@ function showDelegaciones( ciudad, section ){
 
 function showColonias( delegacion, section ){
     if( '' == section ){
+        FForm.prototype._addField( $('#fs-form-wrap')[0], 'js-colonias', 'js-delegaciones-estados-paises' );
         var el = '#js-colonias';
         $( el ).attr( 'data-question', 3 );
     } else{
+        FForm.prototype._addField( $('#fs-form-wrap')[0], 'js-' + section + '-colonias', 'js-' + section + '-delegaciones-estados-paises' );
         var el = '#js-' + section + '-colonias';
         if( 'trabajas' == section ){
             $( el ).attr( 'data-question', 13 );
         } else {
             $( el ).attr( 'data-question', 20 );
         }
-        FForm.prototype._addField( $('#fs-form-wrap')[0], 'js-' + section + '-colonias', 'js-' + section + '-delegaciones-estados-paises' );
     }
     $(el).append( getHTMLColoniasCDMX( delegacion, section ) );
     new SelectFx( $(el + ' .cs-select')[0], {
@@ -132,7 +133,6 @@ function showMunicipios( section ){
     if( '' == section ){
         var el = '#js-delegaciones-estados-paises';
         $( el ).attr( 'data-question', 4 );
-        FForm.prototype._removeField( $('#fs-form-wrap')[0], 'js-colonias' );
     } else{
         var el = '#js-' + section + '-delegaciones-estados-paises';
         if( 'trabajas' == section ){
@@ -155,7 +155,6 @@ function showEstados( section ){
     if( '' == section ){
         var el = '#js-delegaciones-estados-paises';
         $( el ).attr( 'data-question', 5 );
-        FForm.prototype._removeField( $('#fs-form-wrap')[0], 'js-colonias' );
     } else{
         var el = '#js-' + section + '-delegaciones-estados-paises';
         if( 'trabajas' == section ){
@@ -178,7 +177,6 @@ function showPaises( section ){
     if( '' == section ){
         var el = '#js-delegaciones-estados-paises';
         $( el ).attr( 'data-question', 5 );
-        FForm.prototype._removeField( $('#fs-form-wrap')[0], 'js-colonias' );
     } else{
         var el = '#js-' + section + '-delegaciones-estados-paises';
         if( 'trabajas' == section ){
@@ -412,7 +410,7 @@ function getSurveyData(){
 
     $colonia = $('#js-colonias select');
     if( 0 < $colonia.length ){
-        $coloniaQ = $('#js-colonias select').data( 'query' );
+        $coloniaQ = $('#js-colonias').data( 'question' );
         $colonia = $('#js-colonias select option:selected').val();
         $answers[$coloniaQ] = $colonia;
     }
@@ -447,7 +445,7 @@ function getSurveyData(){
 
     $coloniaTrabajo = $('#js-trabajas-colonias select');
     if( 0 < $coloniaTrabajo.length ){
-        $coloniaTrabajoQ = $('#js-trabajas-colonias select').data( 'query' );
+        $coloniaTrabajoQ = $('#js-trabajas-colonias').data( 'question' );
         $coloniaTrabajo = $('#js-trabajas-colonias select option:selected').val();
         $answers[$coloniaTrabajoQ] = $coloniaTrabajo;
     }
@@ -466,7 +464,7 @@ function getSurveyData(){
 
     $coloniaEstudio = $('#js-trabajas-colonias select');
     if( 0 < $coloniaEstudio.length ){
-        $coloniaEstudioQ = $('#js-trabajas-colonias select').data( 'question' );
+        $coloniaEstudioQ = $('#js-trabajas-colonias').data( 'question' );
         $coloniaEstudio = $('#js-trabajas-colonias select option:selected').val();
         $answers[$coloniaEstudioQ] = $coloniaEstudio;
     }
@@ -514,7 +512,6 @@ function getSurveyData(){
 }
 
 function saveSurvey( answersObj ){
-    console.log( answersObj );
     console.log( answersObj );
     $.post(
         ajax_url,

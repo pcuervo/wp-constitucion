@@ -66,7 +66,7 @@ if( isset( $result['success'] ) ): ?>
 		<!-- scroll horizontal -->
 			<div class="[ row ][ margin-bottom ]">
 				<div class="[ col-md-2 ]">
-					<ul id="scroll" class="[ text-center ]">
+					<ul lass="[ text-center ]">
 						<li class="[ box-li ]">
 							<img class="img-slide" src="<?php echo THEMEPATH; ?>/images/cdmx.png"/>
 						</li>
@@ -74,7 +74,7 @@ if( isset( $result['success'] ) ): ?>
 				</div>
 				<div class="[ col-md-10 ]">
 					<ul id="scroll" class="[ scroll-cronologia ][ horizontal-slide ][ text-center ]">
-						
+
 						<?php $cronologia = new WP_Query(array(
 								'post_type'      => 'eventos',
 								'posts_per_page' => -1,
@@ -88,14 +88,14 @@ if( isset( $result['success'] ) ): ?>
 								)
 							));
 
-						if ( $cronologia->have_posts() ) : 
+						if ( $cronologia->have_posts() ) :
 							$count = 0;
 							$count_pasados = 0;
 							while ( $cronologia->have_posts() ) : $cronologia->the_post();
 								$date_event = get_post_meta($post->ID, 'fecha_evento', true);
 								$count_pasados = strtotime($date_event) < strtotime( date('Y-m-d') ) ? $count_pasados + 1 : $count_pasados;
 								$class_status = strtotime($date_event) < strtotime( date('Y-m-d') ) ? 'ya-paso ' : '';
-							
+
 								$date = '';
 								if ($date_event != '') {
 									$date_arr = getDateTransform($date_event);
@@ -128,10 +128,10 @@ if( isset( $result['success'] ) ): ?>
 										</a>
 									</li>
 
-								<?php endif; 
+								<?php endif;
 
-								$count++; 
-							endwhile; 
+								$count++;
+							endwhile;
 
 							$data = '';
 							if ($cronologia->found_posts >= 7 AND $count_pasados > 0) {
@@ -139,15 +139,16 @@ if( isset( $result['success'] ) ): ?>
 								echo '<input type="hidden" id="recorre" value="'.$recorre.'">';
 							}
 
-						endif; 
+						endif;
 						wp_reset_postdata(); ?>
-						
+
 					</ul>
 				</div>
 			</div> <!-- row -->
 	</section>
 
 	<section class="[ container padding--sides--xsm--large ][ text-center ][ margin-bottom--large ]">
+		<a class="[ btn btn-primary btn-large ][ margin-bottom ]" href="<?php echo site_url('/sondeo-masivo/'); ?> "><strong>Participa</strong></a>
 		<h2>¿Ya participaste?</h2>
 		<p class="[ text-uppercase ]">Ingresa tu número de folio para obtener tu certificado</p>
 		<form class="[ form-inline  ]">
@@ -177,7 +178,7 @@ if( isset( $result['success'] ) ): ?>
 						),
 					));
 
-				if ( $voces_ciudadanas->have_posts() ) : 
+				if ( $voces_ciudadanas->have_posts() ) :
 					$count = 0;
 					$count_pasados = 0;
 					while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
@@ -190,10 +191,10 @@ if( isset( $result['success'] ) ): ?>
 								<iframe class="[ embed-responsive-item ]" src="<?php echo $url_video; ?>" frameborder="0" allowfullscreen></iframe>
 							</div>
 						</div>
-					<?php endwhile; 
-				endif; 
+					<?php endwhile;
+				endif;
 				wp_reset_postdata(); ?>
-			
+
 			</div>
 			<div class="[ text-right ]">
 				<a href="https://www.youtube.com/channel/UC3-12ySVHF-iItCbSdZ2z-Q" target="_blank"><p class="[ inline-block align-middle ][ no-margin ]">Ver más</p></a>

@@ -7400,38 +7400,21 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 .soy-cdmx {
   width: 350px;
+  min-height: 100vh;
   background-color: #eeeeee;
   height: auto;
   padding: 12px;
   text-align: left;
-  position: relative;
-  bottom: 110px;
-  z-index: 100;
+  position: fixed;
+  top: 0px;
+  z-index: 10000;
+  box-shadow: -1px 0px 20px 1px #4a4a4a;
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  .soy-cdmx {
-    bottom: 80px;
-  }
-}
-.soy-cdmx__home {
-  position: absolute;
-  right: 0px;
-  bottom: -50px;
-}
-.grid-item {
-  overflow: hidden;
-}
-.grid-item:hover .grid-item__info {
-  right: 0px;
-}
-.grid-item__info {
-  position: absolute;
+.right-350 {
   right: -350px;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
+}
+.right-0 {
+  right: 0px;
 }
 @-ms-viewport {
   width: device-width;

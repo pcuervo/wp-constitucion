@@ -22,6 +22,7 @@ if ( ! defined( 'SONDEO_CDMX_PLUGIN_FILE' ) ) {
 
 
 register_activation_hook( SONDEO_CDMX_PLUGIN_FILE, array( 'Sondeo_CDMX', 'install' ) );
+register_deactivation_hook( SONDEO_CDMX_PLUGIN_FILE, array( 'Sondeo_CDMX', 'uninstall' ) );
 add_action( 'plugins_loaded', create_function( '', 'Sondeo_CDMX::get();' ) );
 
 class Sondeo_CDMX {
@@ -57,7 +58,6 @@ class Sondeo_CDMX {
 	public static function install() {
 		$sondeo_cdmx = Sondeo_CDMX::get();
 		$sondeo_cdmx->create_questions_table();
-		//$sondeo_cdmx->create_closed_answers_table();
 		$sondeo_cdmx->create_user_answers_table();
 		$sondeo_cdmx->create_delegaciones_table();
 		$sondeo_cdmx->create_colonias_table();
@@ -70,6 +70,21 @@ class Sondeo_CDMX {
 		$sondeo_cdmx->fill_paises();
 		$sondeo_cdmx->fill_preguntas();
 		add_option( 'sondeo_cdmx_db_version', Sondeo_CDMX::SONDEO_CDMX_VERSION );
+	}
+
+	/**
+	 * Delete installed database tables.
+	 */
+	public static function uninstall() {
+		global $wpdb;
+		$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}sondeo_cdmx_user_answers" );
+		$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}sondeo_cdmx_questions" );
+		$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}sondeo_cdmx_colonias" );
+		$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}sondeo_cdmx_delegaciones" );
+		$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}sondeo_cdmx_municipios" );
+		$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}sondeo_cdmx_estados" );
+		$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}sondeo_cdmx_paises" );
+		delete_option( 'sondeo_cdmx_db_version' );
 	}
 
 	/**
@@ -95,31 +110,6 @@ class Sondeo_CDMX {
 			require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 			dbDelta( $sql );
 		}
-	}// create_questions_table
-
-	/**
-	 * Create table "Answers"
-	 */
-	private function create_closed_answers_table(){
-		global $wpdb;
-
-		$table_name = $wpdb->prefix . 'sondeo_cdmx_closed_answers';
-		if($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
-			$charset_collate = $wpdb->get_charset_collate();
-			$sql = "CREATE TABLE $table_name (
-				id MEDIUMINT(9) NOT NULL AUTO_INCREMENT,
-				question_id MEDIUMINT(9),
-				answer text NOT NULL,
-				UNIQUE KEY id (id),
-				FOREIGN KEY (question_id)
-					REFERENCES " . $wpdb->prefix . "sondeo_cdmx_questions(id)
-					ON DELETE CASCADE
-			) $charset_collate;";
-
-			require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-			dbDelta( $sql );
-		}
-
 	}// create_questions_table
 
 	private function create_user_answers_table(){

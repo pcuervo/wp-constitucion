@@ -41,7 +41,7 @@
 								<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
 							</div>
 							<div class="[ col-xs-10 ]">
-								<h1>#SoyCDM</h1>
+								<h1>#SoyCDMX</h1>
 							</div>
 						</div>
 
@@ -94,64 +94,21 @@
 	</li>
 	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
 <!-- #SoyCDMX desktop home -->
-	<li class="[ grid-item ]">
-		<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
-		#SoyCDMX<!-- Contacto - page-contacto.php-->
-		<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
-		<div class="[ grid-item__info ]">
-			<div class="[ soy-cdmx soy-cdmx__home ]">
-				<div class="[ close-cdmx ][ padding--top-bottom--large ][ absolute right-10 ]">
-					<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg">
-				</div>
-				<h1>#SoyCDMX</h1>
-				<?php $tweet = new Twitter;
-				$tweets = $tweet->feedTwitter();
-				if (! empty($tweets) ):
-					foreach ($tweets as $tweet): ?>
-						<div>
-							<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-							<p><?php echo $tweet['text']; ?></p>
-							<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
-							<hr class="[ border-bottom-gray ]">
-						</div>
-					<?php endforeach;
-				endif; ?>
-			</div>
-		</div>
+	<li id="js-btn-cdmx">
+		<a href="#">
+			<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+			#SoyCDMX<!-- Contacto - page-contacto.php-->
+			<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+		</a>
 	</li>
 </ul>
-
-
-<!-- 	<div class="[ soy-cdmx soy-cdmx__home ]">
-		<div class="[ close-cdmx ][ padding--top-bottom--large ][ absolute right-10 ]">
-			<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg">
-		</div>
-		<h1>#SoyCDMX</h1>
-		<?php $tweet = new Twitter;
-		$tweets = $tweet->feedTwitter();
-		if (! empty($tweets) ):
-			foreach ($tweets as $tweet): ?>
-				<div>
-					<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-					<p><?php echo $tweet['text']; ?></p>
-					<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
-					<hr class="[ border-bottom-gray ]">
-				</div>
-			<?php endforeach;
-		endif; ?>
-	</div> -->
-
-
-<!-- <div id="content">
-    <div id="column-left">Columna izquierda que se mueve con el scroll...</div>
-</div> -->
 
 <div class="[ container ]">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-sm-6 ][ margin-top-bottom--large ]">
 			<h1 class="[ text-sm-caps text-center ]">ConstituciónCDMX</h1>
 			<?php $home = get_page_by_path('home');
-			echo $home->post_content; ?>
+			echo wpautop($home->post_content); ?>
 		</div>
 	</div>
 </div><!--/container-->

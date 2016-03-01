@@ -5,7 +5,7 @@
     $(function(){
 
         if( parseInt( isPageSondeo ) ){
-            return;
+            //return;
         }
 
         imgToSvg();
@@ -16,11 +16,6 @@
             createLineChart();
         }
 
-<<<<<<< HEAD
-=======
-        // comentCdmx();
-
->>>>>>> 010ab43e8e9d6fd14fce72d19c1607e19c2f04ee
         /*------------------------------------*\
             #GENERAL FUNCTIONS
         \*------------------------------------*/
@@ -170,7 +165,7 @@
                 mapTypeId: 'roadmap',
                 draggable: false,
                 scrollwheel: false,
-                zoom: 15
+                zoom: 13
             };
 
             // Display a map on the page

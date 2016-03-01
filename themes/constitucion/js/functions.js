@@ -16,6 +16,11 @@
             createLineChart();
         }
 
+<<<<<<< HEAD
+=======
+        // comentCdmx();
+
+>>>>>>> 010ab43e8e9d6fd14fce72d19c1607e19c2f04ee
         /*------------------------------------*\
             #GENERAL FUNCTIONS
         \*------------------------------------*/
@@ -129,6 +134,7 @@
 
         if (document.getElementById("scroll") && document.getElementById("recorre")) {
             var recorre = $('#recorre').val();
+            console.log(recorre);
             $('.scroll-cronologia').animate({
                 scrollLeft: recorre
             }, 0);
@@ -234,8 +240,6 @@
                 $( ".soy-cdmx" ).addClass('js-hidden');
             });
         }
-
-
 
     });
 

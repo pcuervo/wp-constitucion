@@ -294,4 +294,26 @@
 					</div>
 				</nav>
 			</header>
+
 		<?php endif; ?>
+
+		<div class="[ soy-cdmx right-370 ][ js-hidden ]">
+			<div class="[ close-cdmx ][ padding--top-bottom--large ][ absolute right-10 ]">
+				<a id="js-hide-twitter" href="#">
+					<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg">
+				</a>
+			</div>
+			<h1>#SoyCDMX</h1>
+			<?php $tweet = new Twitter;
+			$tweets = $tweet->feedTwitter();
+			if (! empty($tweets) ):
+				foreach ($tweets as $tweet): ?>
+					<div>
+						<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
+						<p><?php echo $tweet['text']; ?></p>
+						<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
+						<hr class="[ border-bottom-gray ]">
+					</div>
+				<?php endforeach;
+			endif; ?>
+		</div>

@@ -45,11 +45,10 @@
 <!-- menu desktop home -->
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ]">
 						<li class="[ no-padding--sides ]"><a href="<?php echo site_url('/'); ?> ">
-							<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
+							<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif" alt="logo vertical de Ciudad de México"></a>
 							<span class="[ text-italic ][ relative bottom-10 ]">punto</span>
 							<span class="[ text-italic ][ relative top-10 right-42 ]">de encuentro</span> <!-- - page-home.php -->
 						</li>
-						<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php-->
@@ -68,9 +67,9 @@
 <!-- #SoyCDMX desktop home -->
 						<li id="js-btn-cdmx">
 							<a href="#">
-								<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+								<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg" alt="icono de red social twitter">
 								#SoyCDMX<!-- Contacto - page-contacto.php-->
-								<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+								<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg" alt="icono de flecha de cierre">
 							</a>
 						</li>
 					</ul>
@@ -80,12 +79,12 @@
 						<div class="[ container ]">
 							<div class="[ row ]">
 								<div class="[ col-xs-9 ]">
-									<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
+									<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"  alt="logo vertical de Ciudad de México"></a>
 									<span class="[ text-italic fz-xsmall ][ relative ]">punto</span>
 									<span class="[ text-italic fz-xsmall ][ relative top-12 right-32 ]">de encuentro</span> <!-- - page-home.php -->
 								</div>
 								<div class="[ col-xs-3 ][ text-center ][ padding--top padding--left--xlarge ]">
-									<a type="button" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
+									<a type="button" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg" alt="icono para desplegar navegador"></a>
 								</div>
 							</div>
 						</div>

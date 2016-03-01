@@ -66,7 +66,7 @@ if( isset( $result['success'] ) ): ?>
 		<!-- scroll horizontal -->
 			<div class="[ row ][ margin-bottom ]">
 				<div class="[ col-md-2 ]">
-					<ul id="scroll" class="[ text-center ]">
+					<ul lass="[ text-center ]">
 						<li class="[ box-li ]">
 							<img class="img-slide" src="<?php echo THEMEPATH; ?>/images/cdmx.png"/>
 						</li>

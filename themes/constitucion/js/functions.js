@@ -130,6 +130,7 @@
 
         if (document.getElementById("scroll") && document.getElementById("recorre")) {
             var recorre = $('#recorre').val();
+            console.log(recorre);
             $('.scroll-cronologia').animate({
                 scrollLeft: recorre
             }, 0);

@@ -7408,6 +7408,16 @@ ul.horizontal-slide li[class*="col"]:first-child {
   bottom: 110px;
   z-index: 100;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .soy-cdmx {
+    bottom: 80px;
+  }
+}
+.soy-cdmx__home {
+  position: absolute;
+  right: 0px;
+  bottom: -50px;
+}
 .grid-item {
   overflow: hidden;
 }
@@ -7415,15 +7425,6 @@ ul.horizontal-slide li[class*="col"]:first-child {
   right: 0px;
 }
 .grid-item__info {
-  position: absolute;
-  right: -350px;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-}
-.grid-item__info.close-cdmx:hover .grid-item__info {
   position: absolute;
   right: -350px;
   transition: all 0.4s ease;

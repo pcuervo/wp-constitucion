@@ -133,16 +133,14 @@ module.exports = function (grunt) {
         preserveComments: 'some'
       },
       core: {
-        src: '<%= concat.bootstrap.dest %>',
+        src: 'dist/js/<%= pkg.name %>.js',
         dest: 'dist/js/<%= pkg.name %>.min.js'
       },
-      customize: {
-        src: configBridge.paths.customizerJs,
-        dest: 'docs/assets/js/customize.min.js'
-      },
-      docsJs: {
-        src: configBridge.paths.docsJs,
-        dest: 'docs/assets/js/docs.min.js'
+      js: {
+        files: {
+          'js/functions.min.js': ['js/functions.js'],
+          'js/plugins.min.js': ['js/plugins.js']
+        }
       }
     },
 
@@ -158,9 +156,7 @@ module.exports = function (grunt) {
         options: {
           strictMath: true,
           sourceMap: true,
-          outputSourceFiles: true,
-          sourceMapURL: '<%= pkg.name %>.css.map',
-          sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
+          outputSourceFiles: true
         },
         src: 'less/bootstrap.less',
         dest: 'style.css'
@@ -249,6 +245,10 @@ module.exports = function (grunt) {
           'docs/assets/css/src/docs.css'
         ],
         dest: 'docs/assets/css/docs.min.css'
+      },
+      style: {
+        src: 'style.css',
+        dest: 'style.min.css'
       }
     },
 
@@ -368,7 +368,7 @@ module.exports = function (grunt) {
       },
       less: {
         files: 'less/**/*.less',
-        tasks: 'less'
+        tasks: ['less', 'cssmin']
       }
     },
 
@@ -477,7 +477,7 @@ module.exports = function (grunt) {
 
   // CSS distribution task.
   grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme']);
-  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyTheme']);
+  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyTheme', 'cssmin:style']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'dist-js']);

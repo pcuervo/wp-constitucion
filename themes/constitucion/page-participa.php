@@ -145,83 +145,14 @@ if( isset( $result['success'] ) ): ?>
 					</ul>
 				</div>
 			</div> <!-- row -->
-
 	</section>
 
-	<!-- Trigger the modal with a button -->
-	<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Modal</button>
-
-	<!-- Modal -->
-	<div id="myModal" class="modal fade" role="dialog">
-		<div class="modal-dialog [ margin-top--xlarge ][ padding--sides--xsm ]">
-			<!-- Modal content-->
-			<div class="[ row ]">
-				<div class="[ col-xs-12  col-sm-10 col-sm-offset-1 ]">
-					<div class="modal-content [ no-border-radius ]">
-						<div class="modal-body [ padding--bottom--xxlarge padding--sides padding--sides--large--sm ]">
-							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif">
-
-							<h2 class="[ text-center ][ text-uppercase ]">¡Gracias por participar!</h2>
-							<p class="[ text-center ][ text-uppercase ]">Escribe tu nombre y apellido para obtener tu certificado de participación</p>
-							<form class="[ row ]">
-								<div class="[ col-xs-12 col-sm-6  padding--right--small--sm ]">
-									<input type="text" class="form-control [ margin-bottom ][ input--search ] " placeholder="NOMBRES">
-								</div>
-								<div class="[ col-xs-12 col-sm-6 padding--left--small--sm ]">
-									<input type="text" class="form-control [ margin-bottom ][ input--search ] " placeholder="APELLIDOS">
-								</div>
-								<button type="submit" class="[ btn btn-secondary color-gray ][ pull-right ]">enviar</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- <section class="[ bg-gray-light ][ margin-bottom--large padding--top-bottom--xlarge ]">
-		<article class="[ container ]">
-			<h2 class="[ no-margin-top ]">Instrucciones</h2>
-			<p class="[ lead ][ text-uppercase ]">Lorem ipsum asit amet</p>
-			<div class="[ row ][ text-center ][ margin-bottom--large ]">
-				<div class="[ col-xs-3 ][ question ]">
-					<div class="[ circle ][ relative ][ margin-auto ]">
-						<img class="[ center-full ][ svg icon icon--iconed icon--thickness-1 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/hierarchy-business.svg">
-					</div>
-					<p class="[ text-uppercase ]">Lorem ipsum asit</p>
-				</div>
-				<div class="[ col-xs-3 ][ question ]">
-					<div class="[ circle ][ relative ][ margin-auto ]">
-						<img class="[ center-full ][ svg icon icon--iconed icon--thickness-1 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/hierarchy-business.svg">
-					</div>
-					<p class="[ text-uppercase ]">Lorem ipsum asit</p>
-				</div>
-				<div class="[ col-xs-3 ][ question ]">
-					<div class="[ circle ][ relative ][ margin-auto ]">
-						<img class="[ center-full ][ svg icon icon--iconed icon--thickness-1 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/hierarchy-business.svg">
-					</div>
-					<p class="[ text-uppercase ]">Lorem ipsum asit</p>
-				</div>
-				<div class="[ col-xs-3 ][ question ]">
-					<div class="[ circle ][ relative ][ margin-auto ]">
-						<img class="[ center-full ][ svg icon icon--iconed icon--thickness-1 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/hierarchy-business.svg">
-					</div>
-					<p class="[ text-uppercase ]">Lorem ipsum asit</p>
-				</div>
-			</div>
-			<div class="[ row ]">
-				<div class="[ col-xs-3 col-xs-offset-9 ][ text-center ]">
-					<a href="" class="[ btn btn-primary ][ margin-bottom--small ]">siguiente</a>
-					<p class="[ fz-xsmall ][ text-uppercase ]">Pregunta 1 de 12</p>
-				</div>
-			</div>
-		</article>
-	</section> -->
 	<section class="[ container padding--sides--xsm--large ][ text-center ][ margin-bottom--large ]">
 		<h2>¿Ya participaste?</h2>
 		<p class="[ text-uppercase ]">Ingresa tu número de folio para obtener tu certificado</p>
 		<form class="[ form-inline  ]">
 			<div class="[ input-group ]">
-				<input type="text" class="[ form-control input--search ][ height-40 ]" placeholder="012345678-6">
+				<input type="text" class="[ form-control input--search ][ height-40 ]" placeholder="1456788049">
 				<span class="[ input-group-btn ]">
 					<button class="[ btn btn-secondary ][ height-40 ]" type="button">
 						<img class="[ svg icon icon--iconed--small icon--thickness-1 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/find.svg">

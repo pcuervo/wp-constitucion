@@ -38,7 +38,8 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 		// scripts
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '1.0', true );
-		wp_enqueue_script( 'api-google', 'http://maps.googleapis.com/maps/api/js?sensor=false', array('jquery'), '1.0', true );
+		wp_enqueue_script( 'functions', 'http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js', array('jquery'), '3.1.0', true );
+		wp_enqueue_script( 'api-google', 'http://maps.googleapis.com/maps/api/js', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
 		wp_enqueue_script( 'chart', JSPATH.'Chart.js', array('jquery'), '1.0', false );
 
@@ -52,8 +53,6 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 			wp_localize_script( 'functions', 'kioskos', getKioskos() );
 		}
 		
-
-
 		// styles
 		wp_enqueue_style( 'styles', get_stylesheet_uri() );
 
@@ -69,7 +68,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 		// scripts
 		wp_enqueue_script('jquery-ui-datepicker');
-		wp_enqueue_script( 'api-google', 'http://maps.google.com/maps/api/js?sensor=false&libraries=places&language=en-AU', array('jquery'), '1.0', true );
+		wp_enqueue_script( 'api-google', 'http://maps.google.com/maps/api/js?libraries=places&language=en-AU', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'admin-js', JSPATH.'admin.js', array('api-google'), '1.0', true );
 
 		// localize scripts
@@ -540,5 +539,6 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	        }
 	    }
 	}
+
 
 

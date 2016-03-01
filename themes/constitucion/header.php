@@ -259,7 +259,7 @@
 			</header>
 		<?php endif; ?>
 
-		<div class="[ soy-cdmx right-350 ][ js-hidden ]">
+		<div class="[ soy-cdmx right-370 ][ js-hidden ]">
 			<div class="[ close-cdmx ][ padding--top-bottom--large ][ absolute right-10 ]">
 				<a id="js-hide-twitter" href="#">
 					<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg">

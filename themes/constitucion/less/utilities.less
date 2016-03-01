@@ -374,30 +374,15 @@
 
 
 .soy-cdmx{
-	width: 350px;
+	width: 350px; min-height: 100vh;
 	background-color: @gray-lighter;
 	height: auto;
 	padding: (@padding-base-vertical*2);
 	text-align: left;
-	position: relative;
-	bottom: 110px;
+	position: fixed;
+	top: 0px;
 	z-index: 100;
 }
 
-
-// Grid
-.grid-item{
-  overflow: hidden;
-}
-
-.grid-item:hover .grid-item__info{
-  right: 0px;
-}
-.grid-item__info{
-  position: absolute; right: -350px;
-  .transition(all 0.4s ease);
-}
-.grid-item__info.close-cdmx:hover .grid-item__info{
-  position: absolute; right: -350px;
-  .transition(all 0.4s ease);
-}
+.right-350{ right: -350px;}
+.right-0{ right: 0px;}

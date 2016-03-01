@@ -16,6 +16,7 @@
             createLineChart();
         }
 
+        comentCdmx();
 
         /*------------------------------------*\
             #GENERAL FUNCTIONS
@@ -109,14 +110,15 @@
             var barchart = new Chart(ctx).Bar(data);
         }
 
-
         /*------------------------------------*\
             ANIMATED STICKY HEADER
         \*------------------------------------*/
 
-        $(window).scroll(function() {        
+        $(window).scroll(function() {
+
             if( parseInt( isHome ) ){
-                if ($(this).scrollTop() > 400){  
+
+                if ($(this).scrollTop() > 400){
                     $('header').addClass("sticky");
                     $('header').removeClass("hidden");
                 }
@@ -137,17 +139,17 @@
 
         }
 
-        /** 
+        /**
          * MAPS
          */
-        
+
         if (isHome == 1) {
             initialize();
         };
-        
-        
+
+
         function initialize() {
-            
+
             var data_kioskos = [];
             var infoWindowContent = [];
 
@@ -165,18 +167,18 @@
             var mapOptions = {
                 mapTypeId: 'roadmap'
             };
-                            
+
             // Display a map on the page
             map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
             map.setTilt(45);
-                
+
             // Multiple Markers
             var markers = data_kioskos;
-                
+
             // Display multiple markers on a map
             var infoWindow = new google.maps.InfoWindow(), marker, i;
-            
-            // Loop through our array of markers & place each one on the map  
+
+            // Loop through our array of markers & place each one on the map
             for( i = 0; i < markers.length; i++ ) {
                 var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
                 bounds.extend(position);
@@ -185,8 +187,8 @@
                     map: map,
                     title: markers[i][0]
                 });
-                
-                // Allow each marker to have an info window    
+
+                // Allow each marker to have an info window
                 google.maps.event.addListener(marker, 'click', (function(marker, i) {
                     return function() {
                         infoWindow.setContent(infoWindowContent[i][0]);
@@ -203,9 +205,8 @@
                 // this.setZoom(14);
                 google.maps.event.removeListener(boundsListener);
             });
-            
-        }
 
+        }
 
     });
 

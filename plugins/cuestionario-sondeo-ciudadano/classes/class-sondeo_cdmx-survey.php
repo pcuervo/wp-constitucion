@@ -145,7 +145,6 @@ class Sondeo_CDMX_Survey {
 							</select>
 						</li>
 						<li id="js-delegaciones-estados-paises"></li>
-						<li id="js-colonias" data-question="3"></li>
 						<li id="js-genero" data-input-trigger data-question="7">
 							<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="genero">Género</label>
 							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">

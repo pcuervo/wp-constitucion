@@ -205,15 +205,15 @@
             
         }
 
-        $('#demo-form').parsley().on('field:validated', function() {
-            var ok = $('.parsley-error').length === 0;
-            $('.bs-callout-info').toggleClass('hidden', !ok);
-            $('.bs-callout-warning').toggleClass('hidden', ok);
-            $('.parsley-required').html(ok ? '' : 'You must correctly fill *at least one of these two blocks!');
-        })
-        .on('form:submit', function() {
-            return false; // Don't submit form for this demo
-        });
+        // $('#demo-form').parsley().on('field:validated', function() {
+        //     var ok = $('.parsley-error').length === 0;
+        //     $('.bs-callout-info').toggleClass('hidden', !ok);
+        //     $('.bs-callout-warning').toggleClass('hidden', ok);
+        //     $('.parsley-required').html(ok ? '' : 'You must correctly fill *at least one of these two blocks!');
+        // })
+        // .on('form:submit', function() {
+        //     return false; // Don't submit form for this demo
+        // });
 
 
     });

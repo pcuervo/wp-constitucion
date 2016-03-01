@@ -16,7 +16,7 @@
             createLineChart();
         }
 
-        comentCdmx();
+        // comentCdmx();
 
         /*------------------------------------*\
             #GENERAL FUNCTIONS

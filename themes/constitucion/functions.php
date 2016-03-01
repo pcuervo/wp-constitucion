@@ -105,6 +105,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 
 	add_filter( 'show_admin_bar', function($content){
+		return false;
 		return ( current_user_can('administrator') ) ? $content : false;
 	});
 

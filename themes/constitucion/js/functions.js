@@ -230,7 +230,7 @@
             }
 
             $( ".soy-cdmx" ).animate({
-                right: "-350"
+                right: "-370"
             }, 500, function() {
                 $( ".soy-cdmx" ).addClass('js-hidden');
             });

@@ -7784,6 +7784,7 @@ ul.menu-home > li {
   border-left: 1px solid #4a4a4a;
   border-bottom: 1px solid #4a4a4a;
   padding: 1.5% 2.5%;
+  margin-right: -4px;
 }
 ul.menu-home > li:last-child {
   border-right: 1px solid #4a4a4a;

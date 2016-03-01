@@ -37,8 +37,9 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	add_action( 'wp_enqueue_scripts', function(){
 
 		// scripts
+		wp_enqueue_script( 'jquery', 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js', array(), '2.0.3', true );
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '1.0', true );
-		wp_enqueue_script( 'functions', 'http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js', array('jquery'), '3.1.0', true );
+		wp_enqueue_script( 'bootstrap', 'http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js', array('jquery'), '3.1.0', true );
 		wp_enqueue_script( 'api-google', 'http://maps.googleapis.com/maps/api/js', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
 		wp_enqueue_script( 'chart', JSPATH.'Chart.js', array('jquery'), '1.0', false );
@@ -52,7 +53,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		if ( is_page( 'home' ) ) {
 			wp_localize_script( 'functions', 'kioskos', getKioskos() );
 		}
-		
+
 		// styles
 		wp_enqueue_style( 'styles', get_stylesheet_uri() );
 
@@ -134,11 +135,11 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		add_image_size( 'images_gal_cdmx', 263, 124, true );
 
 		// cambiar el tamaño del thumbnail
-		
+
 		update_option( 'medium_size_h', 224 );
 		update_option( 'medium_size_w', 473 );
 		update_option( 'medium_crop', true );
-		
+
 	}
 
 
@@ -248,7 +249,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	}
 
 
-	/**	
+	/**
 	 * GET DATE TRANSFORM
 	 */
 	function getDateTransform($fecha){
@@ -287,7 +288,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		return true;
 	}
 
-	/**	
+	/**
 	 * RETURN KIOSKOS
 	 */
 	function getKioskos(){
@@ -296,8 +297,8 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 				'posts_per_page' => -1,
 			));
 		$new_arr = array();
-		if ( $kioscos->have_posts() ) : 
-			
+		if ( $kioscos->have_posts() ) :
+
 			$count = 1;
 			while ( $kioscos->have_posts() ) : $kioscos->the_post();
 
@@ -309,11 +310,11 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 					$new_arr[$count]['long'] = $longitud_kiosko;
 					$new_arr[$count]['name'] = get_the_title();
 				}
-				
+
 
 				$count++;
-			endwhile; 
-		endif; 
+			endwhile;
+		endif;
 		wp_reset_postdata();
 
 		return $new_arr;
@@ -336,7 +337,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 	}
 
-/**	
+/**
  * EDITAR GALERIA DEL CONTENT
  */
 
@@ -384,7 +385,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		echo "</div>";
 	}
 
-/**	
+/**
  * PAGINACION
  */
 
@@ -393,7 +394,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	   return floor($num/$to_nearest)*$to_nearest;
 	}
 
-	/**	
+	/**
 	 * OPCIONES PARA LA PAGINACION
 	 * @return [type] [description]
 	 */
@@ -416,15 +417,15 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	    return $pagenavi_options;
 	}
 
-	 
-	/**	
+
+	/**
 	 * PAGINACION ARCHIVES (NOTA: partir en mas funciones - alex)
 	 * @return [string]         [html con la paginacion]
 	 */
 	function pagenavi($paged = '', $num_pages = '', $siteUrl = '', $especial = false, $simbol_url = '?', $variable_page = 'paged') {
 
 	    global $wpdb, $wp_query;
-	    
+
 	    $before = '';
 	    $after = '';
 
@@ -434,11 +435,11 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 	        $paged = $paged == '' ? intval(get_query_var($variable_page)) : $paged;
 	        $max_page = $num_pages == '' ? $wp_query->max_num_pages : $num_pages;
-	 
+
 	        if(empty($paged) || $paged == 0) {
 	            $paged = 1;
 	        }
-	 
+
 	        $pages_to_show = intval($pagenavi_options['num_pages']);
 	        $larger_page_to_show = intval($pagenavi_options['num_larger_page_numbers']);
 	        $larger_page_multiple = intval($pagenavi_options['larger_page_numbers_multiple']);
@@ -446,11 +447,11 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	        $half_page_start = floor($pages_to_show_minus_1/2);
 	        $half_page_end = ceil($pages_to_show_minus_1/2);
 	        $start_page = $paged - $half_page_start;
-	 
+
 	        if($start_page <= 0) {
 	            $start_page = 1;
 	        }
-	 
+
 	        $end_page = $paged + $half_page_end;
 	        if(($end_page - $start_page) != $pages_to_show_minus_1) {
 	            $end_page = $start_page + $pages_to_show_minus_1;
@@ -462,13 +463,13 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	        if($start_page <= 0) {
 	            $start_page = 1;
 	        }
-	 
+
 	        $larger_per_page = $larger_page_to_show*$larger_page_multiple;
 	        $larger_start_page_start = (round_num($start_page, 10) + $larger_page_multiple) - $larger_per_page;
 	        $larger_start_page_end = round_num($start_page, 10) + $larger_page_multiple;
 	        $larger_end_page_start = round_num($end_page, 10) + $larger_page_multiple;
 	        $larger_end_page_end = round_num($end_page, 10) + ($larger_per_page);
-	 
+
 	        if($larger_start_page_end - $larger_page_multiple == $start_page) {
 	            $larger_start_page_start = $larger_start_page_start - $larger_page_multiple;
 	            $larger_start_page_end = $larger_start_page_end - $larger_page_multiple;
@@ -487,7 +488,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	            $pages_text = str_replace("%CURRENT_PAGE%", number_format_i18n($paged), $pagenavi_options['pages_text']);
 	            $pages_text = str_replace("%TOTAL_PAGES%", number_format_i18n($max_page), $pages_text);
 	            echo $before.'<div class="pagenavi [ color-primary ]">'."\n";
-	 
+
 	            if(!empty($pages_text)) {
 	                echo '<ul class="[ pagination ][ no-margin ]">';
 	            }
@@ -499,26 +500,26 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	            	}else{
 	            		previous_posts_link($pagenavi_options['prev_text']);
 	            	}
-	            	
+
 	            echo '</li>';
-	 
+
 	            if ($start_page >= 2 && $pages_to_show < $max_page) {
 	                $first_page_text = str_replace("%TOTAL_PAGES%", number_format_i18n($max_page), $pagenavi_options['first_text']);
-	                
+
 	                $url = $especial == true ? $siteUrl.$simbol_url.$variable_page.'=1' : esc_url(get_pagenum_link());
 	                echo '<li><a href="'.$url.'" class="first [ color-primary ]" title="'.$first_page_text.'">1</a></li>';
 	                if(!empty($pagenavi_options['dotleft_text'])) {
 	                    echo '<li><span class="expand">'.$pagenavi_options['dotleft_text'].'</span></li>';
 	                }
 	            }
-	 
+
 	            if($larger_page_to_show > 0 && $larger_start_page_start > 0 && $larger_start_page_end <= $max_page) {
 	                for($i = $larger_start_page_start; $i < $larger_start_page_end; $i+=$larger_page_multiple) {
 	                    $page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['page_text']);
 	                    echo '<li><a href="'.esc_url(get_pagenum_link($i)).'" class="single_page" title="'.$page_text.'">'.$page_text.'</a></li>';
 	                }
 	            }
-	 
+
 	            for($i = $start_page; $i  <= $end_page; $i++) {
 	                if($i == $paged) {
 	                    $current_page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['current_text']);
@@ -529,7 +530,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	                    echo '<li class="num-pag"><a href="'.$url.'" class="single_page [ color-primary ]" title="'.$page_text.'">'.$page_text.'</a></li>';
 	                }
 	            }
-	 
+
 	            if ($end_page < $max_page) {
 	                if(!empty($pagenavi_options['dotright_text'])) {
 	                    echo '<li><span class="expand">'.$pagenavi_options['dotright_text'].'</span></li>';
@@ -546,7 +547,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	            		next_posts_link($pagenavi_options['next_text'], $max_page);
 	            	}
 	            echo '</li>';
-	 
+
 	            if($larger_page_to_show > 0 && $larger_end_page_start < $max_page) {
 	                for($i = $larger_end_page_start; $i <= $larger_end_page_end; $i+=$larger_page_multiple) {
 	                    $page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['page_text']);

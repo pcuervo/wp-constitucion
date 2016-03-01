@@ -125,7 +125,6 @@
                     $('header').addClass("hidden");
                 }
             }
-
         });
 
         if (document.getElementById("scroll") && document.getElementById("recorre")) {
@@ -162,7 +161,10 @@
             var map;
             var bounds = new google.maps.LatLngBounds();
             var mapOptions = {
-                mapTypeId: 'roadmap'
+                mapTypeId: 'roadmap',
+                draggable: false,
+                scrollwheel: false,
+                zoom: 15
             };
                             
             // Display a map on the page

@@ -46,7 +46,7 @@
 						</div>
 
 						<?php $tweet = new Twitter;
-						$tweets = $tweet->feedTwitter(); 
+						$tweets = $tweet->feedTwitter();
 						if (! empty($tweets) ):
 							foreach ($tweets as $tweet): ?>
 								<div class="[ row ]">
@@ -60,7 +60,7 @@
 							<?php endforeach;
 						endif; ?>
 
-						
+
 					</div>
 				</div>
 			</div>
@@ -93,34 +93,43 @@
 		</ul>
 	</li>
 	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-<!-- #SoyCDMX desktop home -->						
-	<li class="dropdown">
-		<a class="dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-			<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
-			#SoyCDMX<!-- Contacto - page-contacto.php-->
-			<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
-		</a>
-		<ul class="dropdown-menu drop-top-right drop-hashtag-post bg-gray-light " role="menu" aria-labelledby="menu1">
-			<div>
-				<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
-				<h1>#SoyCDM</h1>
+<!-- #SoyCDMX desktop home -->
+	<!-- <li class="">
+		<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+		#SoyCDMX Contacto - page-contacto.php
+		<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+	</li> -->
+	<li class="[ grid-item ]">
+		<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+		#SoyCDMX<!-- Contacto - page-contacto.php-->
+		<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+		<div class="[ grid-item__info ]">
+			<div class="[ soy-cdmx ]">
+				<div class="[ close-cdmx ][ padding--top-bottom--large ][ absolute right-10 ]">
+					<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg">
+				</div>
+				<h1>#SoyCDMX</h1>
+				<?php $tweet = new Twitter;
+				$tweets = $tweet->feedTwitter();
+				if (! empty($tweets) ):
+					foreach ($tweets as $tweet): ?>
+						<div>
+							<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
+							<p><?php echo $tweet['text']; ?></p>
+							<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
+							<hr class="[ border-bottom-gray ]">
+						</div>
+					<?php endforeach;
+				endif; ?>
 			</div>
-			<?php $tweet = new Twitter;
-			$tweets = $tweet->feedTwitter(); 
-			if (! empty($tweets) ):
-				foreach ($tweets as $tweet): ?>
-					<div>
-						<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-						<p><?php echo $tweet['text']; ?></p>
-						<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
-						<hr class="[ border-bottom-gray ]">
-					</div>
-				<?php endforeach;
-			endif; ?>
-		
-		</ul>
+		</div>
 	</li>
 </ul>
+
+
+
+
+
 
 
 <div class="[ container ]">

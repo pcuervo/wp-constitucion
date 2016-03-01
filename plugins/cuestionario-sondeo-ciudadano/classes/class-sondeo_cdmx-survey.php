@@ -39,6 +39,38 @@ class Sondeo_CDMX_Survey {
 	 */
 	private function hooks() {
 		add_action( 'template_redirect', array( $this, 'load_script_is_page' ) );
+		add_action( 'wp_ajax_nopriv_save_user_answers', array( $this, 'save_user_answers' ) );
+		add_action( 'wp_ajax_save_user_answers', array( $this, 'save_user_answers' ) );
+	}
+
+	public function save_user_answers(){
+		global $wpdb;
+
+		$answers = $_POST['answers'];
+		$today = new DateTime();
+		$ref_code = $this->format_reference_code( $today->getTimestamp() );
+
+		foreach ( $answers as $question_id => $answer ) {
+			$answer_data = array(
+				'question_id'		=> $question_id,
+				'answer' 			=> $answer,
+				'reference_code'	=> $ref_code,
+			);
+			$wpdb->insert(
+				$wpdb->prefix . 'sondeo_cdmx_user_answers',
+				$answer_data,
+				array( '%d', '%s', '%s' )
+			);
+		}
+
+		echo $ref_code;
+		wp_die();
+	}
+
+	private function format_reference_code( $code ){
+		$numbers = array( '1', '2', '3', '4' );
+		$letters   = array( 'A', 'B', 'C', 'D' );
+		return str_replace( $numbers, $letters, $code );
 	}
 
 	/**
@@ -87,6 +119,7 @@ class Sondeo_CDMX_Survey {
 		wp_localize_script( 'functions', 'allMunicipios', $this->get_municipios() );
 		wp_localize_script( 'functions', 'allEstados', $this->get_estados() );
 		wp_localize_script( 'functions', 'allPaises', $this->get_paises() );
+		wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
 	}
 
 	public function display_survey(){
@@ -106,32 +139,10 @@ class Sondeo_CDMX_Survey {
 							<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
 								<option value="" disabled selected>Selecciona una opción</option>
 								<option value="cdmx">CDMX</option>
-								<option value="zmvm">ZMVM</option>
+								<option value="zmvm">Zona Metropolitana</option>
 								<option value="resto-republica">Resto de la república</option>
 								<option value="fuera-mexico">Fuera de México</option>
 							</select>
-						</li>
-						<li id="js-grandes-retos" data-question="26">
-							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="grandes-retos">Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</label>
-<!-- 							<a href="#">Derechos Humanos</a>
-							<a href="#">Transporte y movilidad</a>
-							<a href="#">Empleo digno y productividad</a>
-							<a href="#">Pobreza y desigualdad económica.</a>
-							<a href="#">Educación de calidad permanente. </a>
-							<a href="#">Salud pública y bienestar</a>
-							<a href="#">Vivienda y uso de suelo</a>
-							<a href="#">Coordinación Metropolitana</a>
-							<a href="#">Transparencia y Rendición de Cuentas</a>
-							<a href="#">Agua</a>
-							<a href="#">Sustentabilidad del Medio Ambiente</a>
-							<a href="#">Servicios Urbanos</a>
-							<a href="#">Desarrollo barrial participativo</a>
-							<a href="#">Finanzas públicas</a>
-							<a href="#">Legalidad y Justicia</a>
-							<a href="#">Igualdad de género</a>
-							<a href="#">Infraestructura</a>
-							<a href="#">Otro</a> -->
-							<input class="fs-anim-lower" id="q9" name="grandes-retos" type="text" required/>
 						</li>
 						<li id="js-delegaciones-estados-paises"></li>
 						<li id="js-colonias" data-question="3"></li>
@@ -178,7 +189,7 @@ class Sondeo_CDMX_Survey {
 						</li>
 						<li id="js-grandes-retos" data-question="26">
 							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="grandes-retos">Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</label>
-							<a href="#">Derechos Humanos</a>
+<!-- 							<a href="#">Derechos Humanos</a>
 							<a href="#">Transporte y movilidad</a>
 							<a href="#">Empleo digno y productividad</a>
 							<a href="#">Pobreza y desigualdad económica.</a>
@@ -195,8 +206,8 @@ class Sondeo_CDMX_Survey {
 							<a href="#">Legalidad y Justicia</a>
 							<a href="#">Igualdad de género</a>
 							<a href="#">Infraestructura</a>
-							<a href="#">Otro</a>
-							<input class="fs-anim-lower" id="q9" name="grandes-retos" type="text" style="display: none;" required/>
+							<a href="#">Otro</a> -->
+							<input class="fs-anim-lower" id="q9" name="grandes-retos" type="text" required/>
 						</li>
 						<li id="js-como-imaginas" data-question="28">
 							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="como-imaginas" data-info="Máximo 140 caracteres.">¿Cómo te imaginas la CDMX ideal, en 20 años?</label>

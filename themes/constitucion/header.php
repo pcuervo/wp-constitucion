@@ -93,9 +93,6 @@
 						</li>
 					</ul>
 
-
-
-
 <!-- nav header movil home -->
 					<div class="[ bg-light ][ visible-xs ]">
 						<div class="[ container ]">
@@ -149,7 +146,7 @@
 										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
 									</div>
 									<div class="[ col-xs-10 ]">
-										<h1>#SoyCDM</h1>
+										<h1>#SoyCDMX</h1>
 									</div>
 								</div>
 								<?php if (! empty($tweets) ):

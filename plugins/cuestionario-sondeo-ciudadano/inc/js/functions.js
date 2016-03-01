@@ -1,7 +1,7 @@
 $ = jQuery.noConflict();
 
 (function() {
-    // Hide options for survey
+
 
     var formWrap = document.getElementById( 'fs-form-wrap' );
     [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {    
@@ -30,7 +30,7 @@ $ = jQuery.noConflict();
     new FForm( formWrap, {
         onReview : function() {
             //classie.add( document.body, 'overview' ); // for demo purposes only
-            saveSurvey();
+            getSurveyData();
         }
     } );
 
@@ -399,7 +399,7 @@ function getHTMLOtrosRetos(){
         `;
 }
 
-function saveSurvey(){
+function getSurveyData(){
     $answers = {};
 
     $lugarResidenciaQ = $('#js-donde-vives').data('question');
@@ -466,7 +466,7 @@ function saveSurvey(){
 
     $coloniaEstudio = $('#js-trabajas-colonias select');
     if( 0 < $coloniaEstudio.length ){
-        $coloniaEstudioQ = $('#js-trabajas-colonias select').data( 'query' );
+        $coloniaEstudioQ = $('#js-trabajas-colonias select').data( 'question' );
         $coloniaEstudio = $('#js-trabajas-colonias select option:selected').val();
         $answers[$coloniaEstudioQ] = $coloniaEstudio;
     }
@@ -510,5 +510,22 @@ function saveSurvey(){
     $cosasValiosas = $('#js-cosas-valiosas input').val();
     $answers[$cosasValiosasQ] = $cosasValiosas;
 
-    console.log( $answers );
+    saveSurvey( $answers );
 }
+
+function saveSurvey( answersObj ){
+    console.log( answersObj );
+    console.log( answersObj );
+    $.post(
+        ajax_url,
+        {
+            answers:    answersObj,
+            action:     'save_user_answers'
+        },
+        function( response ){
+            $('.js-codigo-referencia span').text( response );
+            $('#modal-agradecimiento').modal('toggle')
+        }
+    );
+}
+

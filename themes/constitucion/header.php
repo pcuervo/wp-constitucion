@@ -93,6 +93,9 @@
 						</li>
 					</ul>
 
+
+
+
 <!-- nav header movil home -->
 					<div class="[ bg-light ][ visible-xs ]">
 						<div class="[ container ]">
@@ -146,7 +149,7 @@
 										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
 									</div>
 									<div class="[ col-xs-10 ]">
-										<h1>#SoyCDMX</h1>
+										<h1>#SoyCDM</h1>
 									</div>
 								</div>
 								<?php if (! empty($tweets) ):
@@ -172,7 +175,7 @@
 			<header class="not-home">
 				<nav>
 <!-- menu desktop not home -->
-					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ]">
+					<ul class="[ menu-desktop ][ text-center ][ hidden-xs  ]"> <!-- hidden-sm -->
 						<li class="[ no-padding--sides ]"><a href="<?php echo site_url('/'); ?> ">
 							<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
 							<span class="[ text-italic ][ relative ]">punto</span>
@@ -199,7 +202,7 @@
 							<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 							#SoyCDMX<!-- Contacto - page-contacto.php-->
 							<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
-							<div class="[ grid-item__info ]">
+							<div class="[ grid-item__info ]"> <!--  id="grid-item__info" -->
 								<div class="[ soy-cdmx ]">
 									<div class="[ close-cdmx ][ padding--top-bottom--large ][ absolute right-10 ]">
 										<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg">

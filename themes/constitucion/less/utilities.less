@@ -382,14 +382,19 @@
 	position: relative;
 	bottom: 110px;
 	z-index: 100;
+	@media (min-width: @screen-sm) and (max-width: @screen-md) {  bottom: 80px; }
 }
 
+.soy-cdmx__home{
+	position: absolute;
+	right: 0px;
+	bottom: -50px;
+}
 
 // Grid
 .grid-item{
   overflow: hidden;
 }
-
 .grid-item:hover .grid-item__info{
   right: 0px;
 }
@@ -397,7 +402,27 @@
   position: absolute; right: -350px;
   .transition(all 0.4s ease);
 }
-.grid-item__info.close-cdmx:hover .grid-item__info{
-  position: absolute; right: -350px;
-  .transition(all 0.4s ease);
-}
+// .close-cdmx:hover #grid-item__info{
+//   position: absolute; right: -350px;
+//   .transition(all 0.4s ease);
+// }
+
+
+// #content {
+//     width: 1200px;
+//     margin: 0px auto;
+// }
+
+// #column-left {
+//     background-color: #EBE9EA;
+//     border: 1px solid #D2D2D2;
+//     border-radius: 8px 8px 8px 8px;
+//     float: right;
+//     position: fixed;
+//     min-height: 225px;
+//     margin-bottom: 10px;
+//     margin-right: 10px;
+//     overflow: hidden;
+//     text-align: center;
+//     width: 200px;
+// }

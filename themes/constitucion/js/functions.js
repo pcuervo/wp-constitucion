@@ -16,8 +16,6 @@
             createLineChart();
         }
 
-        // comentCdmx();
-
         /*------------------------------------*\
             #GENERAL FUNCTIONS
         \*------------------------------------*/
@@ -127,7 +125,6 @@
                     $('header').addClass("hidden");
                 }
             }
-
         });
 
         if (document.getElementById("scroll") && document.getElementById("recorre")) {
@@ -165,7 +162,10 @@
             var map;
             var bounds = new google.maps.LatLngBounds();
             var mapOptions = {
-                mapTypeId: 'roadmap'
+                mapTypeId: 'roadmap',
+                draggable: false,
+                scrollwheel: false,
+                zoom: 15
             };
 
             // Display a map on the page
@@ -206,6 +206,34 @@
                 google.maps.event.removeListener(boundsListener);
             });
 
+        }
+
+        $('#js-btn-cdmx a').click(function(e){
+            e.preventDefault();
+            toggleTwitter();
+        })
+
+        $('#js-hide-twitter').click(function(e){
+            e.preventDefault();
+            toggleTwitter()
+        })
+
+        function toggleTwitter(){
+            if( $('.soy-cdmx').hasClass('js-hidden') ){
+                $( ".soy-cdmx" ).animate({
+                    right: "0"
+                }, 500, function() {
+                    $( ".soy-cdmx" ).removeClass('js-hidden');
+                });
+
+                return;
+            }
+
+            $( ".soy-cdmx" ).animate({
+                right: "-350"
+            }, 500, function() {
+                $( ".soy-cdmx" ).addClass('js-hidden');
+            });
         }
 
     });

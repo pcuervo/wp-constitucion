@@ -7948,6 +7948,7 @@ footer img {
   }
 }
 footer a {
+  text-decoration: none;
   font-size: 12px;
   margin-left: 20px;
   margin-right: 20px;
@@ -7958,5 +7959,9 @@ footer a {
     display: block;
     margin-bottom: 10px;
   }
+}
+footer a:hover {
+  color: #e80e8a;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

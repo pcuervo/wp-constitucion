@@ -7924,4 +7924,16 @@ footer img {
     width: 180px;
   }
 }
+footer a {
+  font-size: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #cccccc;
+}
+@media (max-width: 480px) {
+  footer a {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

@@ -5,37 +5,19 @@
 
 /* Custom select skin: fullscreen color picker (adjusted for fullscreen form) */
 
-// div.cs-skin-boxes {
-// 	background: transparent;
-// 	font-size: 0.65em;
-// 	font-weight: 700;
-// 	max-width: 300px;
-// 	z-index: 2000;
-// 	color: #fff;
-// }
 
 div.cs-skin-boxes {
     background: transparent;
-    font-size: 1.25em;
+    font-size: 18px;
     font-weight: 700;
     //max-width: 300px;
     z-index: 2000;
     color: #524e4f;
 }
 
-@media screen and (max-width: 30em) {
-	div.cs-skin-boxes { font-size: 18px; }
+@media (min-width: 768px){
+	div.cs-skin-boxes {font-size: 26px;}
 }
-
-// .cs-skin-boxes > span {
-// 	border: 3px solid #292c30;
-// 	border-radius: 5px;
-// 	width: 150px;
-// 	height: 140px;
-// 	font-size: 0.5em;
-// 	padding: 0 0 0 10px;
-// 	background: #555b64;
-// }
 
 .cs-skin-boxes > span {
 	background: #fff;
@@ -44,14 +26,6 @@ div.cs-skin-boxes {
 
 div.cs-skin-boxes:focus > span {
 	box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
-}
-
-.cs-skin-boxes > span::before {
-	// content: '';
-	// display: block;
-	// padding-top: 110px;
-	// margin-left: -10px;
-	// box-shadow: 0 25px 0 #292c30, inset 0 -10px #292c30;
 }
 
 .cs-skin-boxes > span::after,

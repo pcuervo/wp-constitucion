@@ -7552,6 +7552,44 @@ ul.horizontal-slide li[class*="col"]:first-child {
   height: auto;
   margin: auto;
 }
+.mensaje-jefe-gob p:nth-child(2) {
+  width: 100%;
+  display: inline-block;
+  padding: 20px;
+  text-align: justify;
+}
+.mensaje-jefe-gob blockquote {
+  width: 100%;
+  display: inline-block;
+  border-left: none ;
+}
+.mensaje-jefe-gob blockquote p {
+  padding-top: 10px;
+  text-align: right;
+  color: #646464;
+  border-top: dotted #e80e8a;
+  border-left: none ;
+}
+@media (min-width: 768px) {
+  .mensaje-jefe-gob p:nth-child(2) {
+    width: 50%;
+    display: inline-block;
+    padding: 10px;
+    text-align: justify;
+  }
+  .mensaje-jefe-gob blockquote {
+    width: 25%;
+    display: inline-block;
+    border-left: none ;
+  }
+  .mensaje-jefe-gob blockquote p {
+    padding-top: 20px;
+    text-align: right;
+    color: #646464;
+    border-top: dotted #e80e8a;
+    border-left: none ;
+  }
+}
 @-ms-viewport {
   width: device-width;
 }

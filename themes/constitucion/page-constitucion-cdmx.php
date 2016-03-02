@@ -5,7 +5,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
 <section class="[ bg-image rectangle-small ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo $img_constitucion_cdmx; ?>');">
 	<div class="[ bg-dark--opacity width-100 height-100 ]">
-		<h2 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Acerca de</h2>
+		<h2 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Acerca de la Constitución</h2>
 	</div>
 </section>
 <section class="[ container padding--sides--xsm ][ margin-bottom--large ]">
@@ -14,6 +14,30 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</div>
 	<img class="[ img-responsive ][ margin-auto ]" src="<?php echo $url_image_constirucion; ?>">
 </section>
+
+<section >
+	<div class="[ container ]">
+		<div class="[ row ]">
+			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
+	
+				<div class="[ mensaje-jefe-gob ]">
+					<blockquote>
+						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
+					</blockquote>	
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+						accumsan lorem id porttitor porttitor. In pulvinar pellentesque ornare. Morbi facilisis sem molestie sapien euismod, 
+						vel ornare mi sagittis. Nulla at porta arcu, ut lacinia dui. In semper. Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-
+						lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. 
+						Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
+					</p>
+				</div>
+				
+			</div>
+		</div>
+	</div>	
+</section>
+
 <article class="[ bg-gray-light ][ margin-top-bottom--large padding--top-bottom--xlarge ]">
 	<section class="[ container padding--sides--xsm ]">
 		<?php $proceso = get_page_by_path('proceso-participativo'); ?>

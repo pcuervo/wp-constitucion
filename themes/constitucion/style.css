@@ -7977,6 +7977,7 @@ ul.menu-mobile > li > a,
 }
 .collapse--menu > li > a {
   color: #919191;
+  font-size: 12px;
 }
 header ul {
   padding-left: 0px;

@@ -123,7 +123,7 @@
 							</div>
 							<div class="[ bg-light-cdmx ][ text-center ]">
 								<ul class="[ menu-mobile ]">
-									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
+									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Acerca de la constitución</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
 									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
 									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php--></li>
 									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
@@ -250,7 +250,7 @@
 							</div>
 							<div class="[ bg-light-cdmx ][ text-center ]">
 								<ul class="[ menu-mobile ]">
-									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
+									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Acerca de la constitución</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
 									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
 									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php--></li>
 									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
@@ -291,7 +291,7 @@
 		<?php endif; ?>
 
 		<div class="[ soy-cdmx right-370 ][ js-hidden ]">
-			<div class="[ close-cdmx ][ padding--top-bottom--large ][ absolute right-10 ]">
+			<div class="[ opacity-7 ][ padding--top-bottom--large ][ absolute right-10 ]">
 				<a id="js-hide-twitter" href="#">
 					<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg">
 				</a>

@@ -7342,6 +7342,9 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .bg-light {
   background-color: #fff;
 }
+.opacity-7 {
+  opacity: 0.7;
+}
 .height-home-video {
   height: 250px;
 }
@@ -7780,8 +7783,13 @@ header > nav > ul > li > a {
   color: #4a4a4a;
 }
 ul.menu-desktop > li {
-  padding: 3% 1.5%;
+  padding: 3% 1%;
   border-right: 1px solid #dbdbdb;
+}
+@media (min-width: 992px) {
+  ul.menu-desktop > li {
+    padding: 3% 1.5%;
+  }
 }
 ul.menu-desktop > li:last-child {
   border-right: none;
@@ -7808,8 +7816,13 @@ ul.submenu {
   display: none !important;
 }
 .sticky ul.menu-desktop > li {
-  padding: 3% 1.5%;
+  padding: 3% 1%;
   border-right: 1px solid #dbdbdb;
+}
+@media (min-width: 992px) {
+  .sticky ul.menu-desktop > li {
+    padding: 3% 1.5%;
+  }
 }
 .sticky ul.menu-desktop > li:last-child {
   border-right: none;
@@ -7834,6 +7847,9 @@ ul.submenu {
 }
 .sticky ul.submenu {
   display: none !important;
+}
+ul.menu-home {
+  padding-left: 0px;
 }
 @media (min-width: 768px) {
   ul.menu-home {
@@ -7922,12 +7938,16 @@ ul.menu-mobile > li:last-child {
   font-weight: 100;
   color: #4a4a4a;
 }
-ul.menu-mobile > li > a {
+ul.menu-mobile > li > a,
+.collapse--menu > li > a {
   font-family: 'Alegreya Sans', sans-serif;
   font-weight: 500;
   letter-spacing: .1em;
   text-decoration: none;
   color: #848484;
+}
+.collapse--menu > li > a {
+  color: #919191;
 }
 header ul {
   padding-left: 0px;

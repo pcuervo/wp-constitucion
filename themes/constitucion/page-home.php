@@ -32,9 +32,17 @@
 					</div>
 					<div class="[ bg-light-cdmx ][ text-center ]">
 						<ul class="[ menu-mobile ]">
-							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
+							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Acerca de la constitución</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
 							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
-							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php--></li>
+							<li class="[ text-uppercase ]"><a data-toggle="collapse" data-target="#participa">Participa</a></li>
+								<ul id="participa" class="collapse [ text-uppercase ][ no-padding ][ collapse--menu ]">
+									<li><a href="<?php echo site_url('/participa/'); ?>">Imagina tu ciudad</a></li>
+									<li><a href="<?php echo site_url('/participa/'); ?>">Resultados</a></li>
+									<li><a href="<?php echo site_url('/participa/'); ?>">Peticiones</a></li>
+									<li><a href="<?php echo site_url('/participa/'); ?>">Diálogos públicos</a></li>
+									<li><a href="<?php echo site_url('/participa/'); ?>">Ensayos</a></li>
+									<li><a href="<?php echo site_url('/participa/'); ?>">Voces ciudadanas</a></li>
+								</ul>
 							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
 							<li><a type="button" data-toggle="modal" data-target="#SoyCDMX-mobile-home">#SoyCDMX</a></li>
 						</ul>
@@ -85,7 +93,7 @@
 <!-- menu desktop home -->
 <ul class="[ menu-home ][ text-center ][ hidden-xs hideen-sm ]">
 	<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
-	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
+	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Acerca de la constitución</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
 	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
 	<li class="[ dropdown ]">
 		<button class="dropdown-toggle [ text-uppercase btn-dropdown ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">

@@ -147,8 +147,9 @@ if( isset( $result['success'] ) ): ?>
 			</div> <!-- row -->
 	</section>
 
-	<section class="[ container padding--sides--xsm--large ][ text-center ][ margin-bottom--large ]">
-		<a class="[ btn btn-primary btn-large ][ margin-bottom ]" href="<?php echo site_url('/sondeo-masivo/'); ?> "><strong>Imagina tu ciudad</strong></a>
+	<section class="[ container padding--sides--xsm--large ][ text-center ][ margin-bottom--large ]" id="imagina_tu_ciudad">
+		<h2>Imagina tu ciudad</h2>
+		<a class="[ btn btn-primary btn-large ][ margin-bottom ]" href="<?php echo site_url('/sondeo-masivo/'); ?> "><strong>Participa</strong></a>
 		<h2>¿Ya participaste?</h2>
 		<p class="[ text-uppercase ]">Ingresa tu número de folio para obtener tu certificado</p>
 		<form class="[ form-inline  ]">

@@ -404,3 +404,49 @@
 	top: 50%; left: 25%;
 	.translate(-50%, -50%);
 }
+
+.mensaje-jefe-gob{
+
+	p:nth-child(2) { 
+		width: 100%; 
+		display: inline-block;
+		padding: 20px;
+		text-align: justify;
+		}
+		blockquote { 
+			width: 100%;
+			display: inline-block;
+			border-left: none ; 
+		} 
+		blockquote p{ 
+			padding-top: 10px;
+			text-align: right;
+			color: lighten(@gray, 10%);
+			border-top: dotted @primary;
+			border-left: none ; 
+		} 
+
+	@media (min-width: @screen-sm-min){
+
+		p:nth-child(2) { 
+		width: 50%; 
+		display: inline-block;
+		padding: 10px;
+		text-align: justify;
+		}
+		blockquote { 
+			width: 25%; 
+			display: inline-block;
+			border-left: none ; 
+		} 
+		blockquote p{ 
+			padding-top: 20px;
+			text-align: right;
+			color: lighten(@gray, 10%);
+			border-top: dotted @primary;
+			border-left: none ; 
+		} 
+	}
+
+}
+

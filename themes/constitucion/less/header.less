@@ -111,6 +111,7 @@ ul.menu-home > li:last-child {
 
 ul.menu-home >li > a,
 .dropdown-menu--header > li > a,
+.dropdown-menu--top > li > a,
 #dropdown--header {
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: bold;
@@ -120,17 +121,15 @@ ul.menu-home >li > a,
 
 .dropdown-menu--header{
 	border: 1px solid @gray;
+	border-top: 0px;
 	border-radius: 0px;
 	margin: 0 0 0 -1px;
-	& li {
-		display: inline!important;
-	}
 }
-
-ul.submenu{
-	.hidden;
+.dropdown-menu--top{
+	border: 0px;
+	border-radius: 0px;
+	margin: 0 0 0 -5px;
 }
-
 
 // menu mobile
 // -----------

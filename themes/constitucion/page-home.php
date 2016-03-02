@@ -1,10 +1,20 @@
 <?php get_header(); the_post();  ?>
 <section >
-	<div class="[ bg-image height-home-video ][ margin-bottom ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/home.png');">
-		<div class="[ width-100 height-100 ]">
-			<div class="[ visible-xs ][ padding--top padding--right ][ btn-nav-home ]">
-				<a type="button" data-toggle="modal" data-target="#modal-menu-home"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ][ pull-right ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
-			</div>
+	<div class="[ relative ]">
+		<!-- <div class="[ js-video-wrapper ]">
+			<iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/7Ezz0wnzdiQ" frameborder="0" allowfullscreen></iframe>
+		</div> -->
+		<div class="[ bg-image height-home-video ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/home.png');"></div>
+		<button class="[ btn btn-play ]" onclick="playPause()"><img class="[ width-100 ]" src="<?php echo THEMEPATH; ?>images/play.png"></button>
+		<div class="[ logo-video ]">
+			<img class="[ width-40 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
+			<span class="[ lead text-italic ][ color-gray ]">punto<br>de encuentro</span>
+		</div>
+		<div class="[ visible-xs ][ btn-nav-home ]">
+			<a type="button" data-toggle="modal" data-target="#modal-menu-home"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ][ pull-right ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
+		</div>
+	</div>
+
 <!-- modal menu mobile -->
 			<div class="modal fade" id="modal-menu-home" tabindex="-1" role="dialog">
 				<div class="[ modal-dialog modal-content ][ width-100 height-100 ][ no-margin ]">
@@ -65,14 +75,11 @@
 				</div>
 			</div>
 
-			<div class="[ absolute ][ margin-top--large padding--large ]">
-				<img class="[ width-40 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
-				<span class="[ lead text-italic ][ color-gray ]">punto<br>de encuentro</span>
-			</div>
-			<button class="[ btn btn-play ]" onclick="playPause()"><img class="[ width-100 ]" src="<?php echo THEMEPATH; ?>images/play.png"></button>
-			<video width="100%" height="100%"></video>
-		</div>
-	</div>
+
+
+
+	<!-- 	</div>
+	</div> -->
 </section>
 
 <!-- menu desktop home -->
@@ -80,16 +87,15 @@
 	<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
 	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
 	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
-	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a><!--  - page-participa.php-->
-		<ul class="[ submenu ]">
-			<li ><a href="<?php echo site_url('/cronologia/'); ?>">Cronología</a><!--  - page-cronologia.php--></li>
-			<li><a href="<?php echo site_url('/instrucciones/'); ?>">Instrucciones</a><!--  - page-instrucciones.php--></li>
-			<li><a href="<?php echo site_url('/calendario/'); ?>">Calendario</a><!--  - archive-calendario.php--></li>
-			<li>Cuestionario</li>
-			<li><a href="#">Link a Youtube</a></li>
-			<li><a href="<?php echo site_url('/instrucciones/'); ?>">Instrucciones</a><!--  - page-instrucciones.php --></li>
-			<li><a href="#">Buscador</a></li>
-			<li><a href="<?php echo site_url('/kioskos/'); ?>">Mapa con ubicación de kiosko</a><!--  - archive-kioskos.php--></li>
+	<li class="[ dropdown ]">
+		<button class="dropdown-toggle [ text-uppercase btn-dropdown ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			Participa
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu [ dropdown-menu--header ] [ text-uppercase ]" aria-labelledby="dropdown--header">
+			<li><a href="<?php echo site_url('/participa/'); ?>">Cronología</a></li>
+			<li><a href="<?php echo site_url('/participa/'); ?>">Cuestionario</a></li>
+			<li><a href="<?php echo site_url('/participa/'); ?>">Calendario</a></li>
 		</ul>
 	</li>
 	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
@@ -108,7 +114,7 @@
 		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-sm-6 ][ margin-top-bottom--large ]">
 			<h1 class="[ text-sm-caps text-center ]">ConstituciónCDMX</h1>
 			<?php $home = get_page_by_path('home');
-			echo wpautop($home->post_content); ?>
+			echo wpautop( $home->post_content ); ?>
 		</div>
 	</div>
 </div><!--/container-->

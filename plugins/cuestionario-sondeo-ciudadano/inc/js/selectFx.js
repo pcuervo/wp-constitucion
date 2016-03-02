@@ -96,9 +96,16 @@
 	 */
 	SelectFx.prototype._createSelectEl = function() {
 		var self = this, options = '', createOptionHTML = function(el) {
-			var optclass = '', classes = '', link = '';
 
-			if( el.selectedOpt && !this.foundSelected && !this.hasDefaultPlaceholder ) {
+            var optclass = '', classes = '', link = '', isTitle = false;
+
+            if( 'title' == el.className ){
+                console.log('es titulo');
+                optclass = 'title clear';
+                return '<li class="' + optclass + '"><span>' + el.textContent + '</span></li>';
+            }			
+
+			if( el.selectedOpt && !this.foundSelected && !this.hasDefaultPlaceholder && isTitle ) {
 				classes += 'cs-selected ';
 				this.foundSelected = true;
 			}

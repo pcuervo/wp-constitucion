@@ -1,5 +1,5 @@
 <?php get_header(); the_post();
-the_title(); 
+the_title();
 $img_cdmx = get_option( 'img_cdmx' ); ?>
 
 <section class="[ bg-image rectangle-small ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo $img_cdmx; ?>');">
@@ -11,9 +11,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<div class="[ margin-bottom--large ]">
 		<?php the_content(); ?>
 	</div>
-	<!-- <img class="[ img-responsive ][ margin-auto margin-bottom--large ]" src="<?php echo $url_image; ?>"> -->
-<!-- 	<div class="[ bg-image rectangle ][ margin-bottom ][ relative ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/edificios.png');"></div>
- -->
 	<div class="[ margin-bottom--large ]">
  		<div class="[ row ]">
 			<div class="[ col-xs-4 col-sm-3 ][ margin-bottom text-center ]">

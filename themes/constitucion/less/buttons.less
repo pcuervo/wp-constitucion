@@ -142,7 +142,14 @@
   }
 }
 
-.btn-nav-home { z-index: 1060 }
+.btn-nav-home {
+  z-index: 1000;
+  position: absolute;
+  top: 15%; left: 95%;
+  .translate(-50%, -50%);
+  .padding--top;
+  .padding--right;
+}
 
 // Button Sizes
 // --------------------------------------------------
@@ -210,4 +217,9 @@ input[type="button"] {
     color: @light;
     .transition;
   }
+}
+
+.btn-dropdown{
+  border: 0px;
+  background-color: @light;
 }

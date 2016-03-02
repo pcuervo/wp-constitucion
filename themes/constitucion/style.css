@@ -3,6 +3,9 @@
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+.clear {
+  clear: both;
+}
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -3477,7 +3480,16 @@ fieldset[disabled] .btn-link:focus {
   text-decoration: none;
 }
 .btn-nav-home {
-  z-index: 1060;
+  z-index: 1000;
+  position: absolute;
+  top: 15%;
+  left: 95%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding-top: 12px;
+  padding-right: 12px;
 }
 .btn-lg,
 .btn-group-lg > .btn {
@@ -3545,6 +3557,10 @@ input[type="button"].btn-block {
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
+}
+.btn-dropdown {
+  border: 0px;
+  background-color: #fff;
 }
 .fade {
   opacity: 0;
@@ -7416,6 +7432,16 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .right-0 {
   right: 0px;
 }
+.logo-video {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 @-ms-viewport {
   width: device-width;
 }
@@ -7780,19 +7806,40 @@ ul.submenu {
 .sticky ul.submenu {
   display: none !important;
 }
+@media (min-width: 768px) {
+  ul.menu-home {
+    margin-top: 5px;
+  }
+}
+@media (min-width: 992px) {
+  ul.menu-home {
+    margin-top: 10px;
+  }
+}
 ul.menu-home > li {
   border-left: 1px solid #4a4a4a;
   border-bottom: 1px solid #4a4a4a;
   padding: 1.5% 2.5%;
+  margin-right: -4px;
 }
 ul.menu-home > li:last-child {
   border-right: 1px solid #4a4a4a;
 }
-ul.menu-home > li > a {
+ul.menu-home > li > a,
+.dropdown-menu--header > li > a,
+#dropdown--header {
   font-family: 'Alegreya Sans', sans-serif;
   font-weight: bold;
   text-decoration: none;
   color: #4a4a4a;
+}
+.dropdown-menu--header {
+  border: 1px solid #4a4a4a;
+  border-radius: 0px;
+  margin: 0 0 0 -1px;
+}
+.dropdown-menu--header li {
+  display: inline!important;
 }
 ul.submenu {
   display: none !important;
@@ -7868,4 +7915,4 @@ footer img {
     width: 20%;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
+/*# sourceMappingURL=style.css.map */

@@ -126,6 +126,21 @@ class Sondeo_CDMX_Survey {
 		//$questions = $this->get_questions();
 		$next_question = 3;
 		?>
+		<style>
+			.title {
+				width: 100% !important;
+				text-align: center;
+				box-shadow: inset 0 -6em 0 -2em #eeeeee !important;
+				color: #4a4a4a !important;
+				font-size: 18px;
+				cursor: default !important;
+			}
+			.title span:hover, .title:hover {
+				opacity: 1 !important;
+				color: #4a4a4a !important;
+				cursor: default !important;
+			}
+		</style>
 		<div class="[ survey-container ][ padding--header ]">
 			<div class="[ fs-form-wrap ]" id="fs-form-wrap">
 				<div class="fs-title [ container ][ text-center ]">

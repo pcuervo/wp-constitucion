@@ -5,7 +5,7 @@
     $(function(){
 
         if( parseInt( isPageSondeo ) ){
-            return;
+            //return;
         }
 
         imgToSvg();
@@ -165,7 +165,7 @@
                 mapTypeId: 'roadmap',
                 draggable: false,
                 scrollwheel: false,
-                zoom: 15
+                zoom: 13
             };
 
             // Display a map on the page

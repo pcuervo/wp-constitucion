@@ -38,6 +38,7 @@
 
 		<?php $tweet = new Twitter;
 		$tweets = $tweet->feedTwitter();
+
 		if ( is_page('home') ): ?>
 			<header class="[ hidden ]">
 				<nav>
@@ -65,35 +66,14 @@
 						</li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
 <!-- #SoyCDMX desktop home -->
-						<li class="[ grid-item ]">
-							<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
-							#SoyCDMX<!-- Contacto - page-contacto.php-->
-							<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
-							<div class="[ grid-item__info ]">
-								<div class="[ soy-cdmx ]">
-									<div class="[ close-cdmx ][ padding--top-bottom--large ][ absolute right-10 ]">
-										<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg">
-									</div>
-									<h1>#SoyCDMX</h1>
-									<?php $tweet = new Twitter;
-									$tweets = $tweet->feedTwitter();
-									if (! empty($tweets) ):
-										foreach ($tweets as $tweet): ?>
-											<div>
-												<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-												<p><?php echo $tweet['text']; ?></p>
-												<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
-												<hr class="[ border-bottom-gray ]">
-											</div>
-										<?php endforeach;
-									endif; ?>
-								</div>
-							</div>
+						<li id="js-btn-cdmx">
+							<a href="#">
+								<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+								#SoyCDMX<!-- Contacto - page-contacto.php-->
+								<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+							</a>
 						</li>
 					</ul>
-
-
-
 
 <!-- nav header movil home -->
 					<div class="[ bg-light ][ visible-xs ]">
@@ -197,32 +177,15 @@
 						</li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
 <!-- #SoyCDMX desktop not home -->
-						<li class="[ grid-item ]">
-							<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
-							#SoyCDMX<!-- Contacto - page-contacto.php-->
-							<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
-							<div class="[ grid-item__info ]"> <!--  id="grid-item__info" -->
-								<div class="[ soy-cdmx ]">
-									<div class="[ close-cdmx ][ padding--top-bottom--large ][ absolute right-10 ]">
-										<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg">
-									</div>
-									<h1>#SoyCDMX</h1>
-									<?php $tweet = new Twitter;
-									$tweets = $tweet->feedTwitter();
-									if (! empty($tweets) ):
-										foreach ($tweets as $tweet): ?>
-											<div>
-												<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-												<p><?php echo $tweet['text']; ?></p>
-												<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
-												<hr class="[ border-bottom-gray ]">
-											</div>
-										<?php endforeach;
-									endif; ?>
-								</div>
-							</div>
+						<li id="js-btn-cdmx">
+							<a href="#">
+								<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+								#SoyCDMX<!-- Contacto - page-contacto.php-->
+								<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
+							</a>
 						</li>
 					</ul>
+
 <!-- nav header movil not home -->
 					<div class="[ bg-light ][ visible-xs ]">
 						<div class="[ container ]">
@@ -294,7 +257,6 @@
 					</div>
 				</nav>
 			</header>
-
 		<?php endif; ?>
 
 		<div class="[ soy-cdmx right-370 ][ js-hidden ]">

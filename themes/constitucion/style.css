@@ -5987,6 +5987,16 @@ button.close {
   margin-left: 10px !important;
   margin-right: 10px !important;
 }
+@media (max-width: 480px) {
+  .img-contacto {
+    width: 280px;
+  }
+}
+@media (min-width: 481px) {
+  .img-contacto {
+    width: 300px;
+  }
+}
 .modal-open {
   overflow: hidden;
 }
@@ -6109,6 +6119,19 @@ button.close {
   .modal-lg {
     width: 900px;
   }
+}
+.modal--contacto {
+  margin: 0 !important;
+  width: 100%;
+  min-height: 100vh;
+}
+.modal--contacto .close {
+  opacity: 0.7;
+  padding: 12px 24px;
+}
+.modal--contacto .modal-content {
+  border-radius: 0px;
+  min-height: 100vh;
 }
 .tooltip {
   position: absolute;
@@ -7852,13 +7875,13 @@ ul.submenu {
   }
 }
 ul.menu-home > li {
-  border-left: 1px solid #4a4a4a;
-  border-bottom: 1px solid #4a4a4a;
+  border-left: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
   padding: 1.5% 2.5%;
   margin-right: -4px;
 }
 ul.menu-home > li:last-child {
-  border-right: 1px solid #4a4a4a;
+  border-right: 1px solid #dbdbdb;
 }
 ul.menu-home > li > a,
 .dropdown-menu--header > li > a,
@@ -7952,5 +7975,22 @@ footer img {
   footer img {
     width: 180px;
   }
+}
+footer a {
+  text-decoration: none;
+  font-size: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #cccccc;
+}
+@media (max-width: 480px) {
+  footer a {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+footer a:hover {
+  color: #e80e8a;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

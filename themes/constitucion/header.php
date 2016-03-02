@@ -49,17 +49,35 @@
 							<span class="[ text-italic ][ relative bottom-10 ]">punto</span>
 							<span class="[ text-italic ][ relative top-10 right-42 ]">de encuentro</span> <!-- - page-home.php -->
 						</li>
-						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Información</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
+						<li class="[ dropdown ]">
+							<button class="dropdown-toggle [ text-uppercase btn-dropdown ][ no-padding ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								Acerca de la<br>constitución
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu [ dropdown-menu--top ] [ text-uppercase ]" aria-labelledby="dropdown--header">
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Mensaje del jefe de gobierno</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Sobre la constitución</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Grupo de trabajo</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Sobre la plataforma</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Hacia el constituyente</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Constitución en Wiki</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Preguntas frecuentes</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Biblioteca</a></li>
+							</ul>
+						</li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
 						<li class="[ dropdown ]">
-							<button class="dropdown-toggle [ text-uppercase btn-dropdown ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							<button class="dropdown-toggle [ text-uppercase btn-dropdown ][ no-padding ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 								Participa
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu [ dropdown-menu--top ] [ text-uppercase ]" aria-labelledby="dropdown--header">
-								<li><a href="<?php echo site_url('/participa/'); ?>">Cronología</a></li>
-								<li><a href="<?php echo site_url('/participa/'); ?>">Cuestionario</a></li>
-								<li><a href="<?php echo site_url('/participa/'); ?>">Calendario</a></li>
+								<li><a href="<?php echo site_url('/participa/'); ?>">Imagina tu ciudad</a></li>
+								<li><a href="<?php echo site_url('/participa/'); ?>">Resultados</a></li>
+								<li><a href="<?php echo site_url('/participa/'); ?>">Peticiones</a></li>
+								<li><a href="<?php echo site_url('/participa/'); ?>">Diálogos públicos</a></li>
+								<li><a href="<?php echo site_url('/participa/'); ?>">Ensayos</a></li>
+								<li><a href="<?php echo site_url('/participa/'); ?>">Voces ciudadanas</a></li>
 							</ul>
 						</li>
 						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>

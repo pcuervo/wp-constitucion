@@ -5987,6 +5987,16 @@ button.close {
   margin-left: 10px !important;
   margin-right: 10px !important;
 }
+@media (max-width: 480px) {
+  .img-contacto {
+    width: 280px;
+  }
+}
+@media (min-width: 481px) {
+  .img-contacto {
+    width: 300px;
+  }
+}
 .modal-open {
   overflow: hidden;
 }
@@ -6109,6 +6119,19 @@ button.close {
   .modal-lg {
     width: 900px;
   }
+}
+.modal--contacto {
+  margin: 0 !important;
+  width: 100%;
+  min-height: 100vh;
+}
+.modal--contacto .close {
+  opacity: 0.7;
+  padding: 12px 24px;
+}
+.modal--contacto .modal-content {
+  border-radius: 0px;
+  min-height: 100vh;
 }
 .tooltip {
   position: absolute;

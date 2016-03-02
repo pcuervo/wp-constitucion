@@ -133,14 +133,6 @@
 </section>
 <div id="map_canvas" class="mapping" style="width: 100%; height: 500px;"></div>
 
-	<!-- Slideshow 1 
-<div class="rslides_container">
-	<ul class="rslides" id="slider1">
-		<li><img src="<?php echo THEMEPATH; ?>images/1.jpg" alt=""></li>
-		<li><img src="<?php echo THEMEPATH; ?>images/2.jpg"  alt=""></li>
-		<li><img src="<?php echo THEMEPATH; ?>images/3.jpg"  alt=""></li>
-	</ul>
-</div>-->
 
 <!-- Linea tiempo -->
 <div class="[ container ]">

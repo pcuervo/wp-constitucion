@@ -46,7 +46,7 @@ $ = jQuery.noConflict();
         }
     })
 
-    $('#js-grandes-retos a').click(function(e){
+    $('#js-grandes-retos button').click(function(e){
         e.preventDefault();
         $(this).addClass('disabled');
         var $grandesRetos = $('#js-grandes-retos input').val();
@@ -58,7 +58,6 @@ $ = jQuery.noConflict();
         $grandesRetos = $('#js-grandes-retos input').val();
         if( hasFourChallenges( $grandesRetos ) ){
             if( $grandesRetos.indexOf('Otro') > -1 ){
-                console.log('hay otros');
                 showOtrosRetos();
             }
             $('#js-grandes-retos a').hide();
@@ -122,9 +121,7 @@ function showColonias( delegacion, section ){
     $(el).append( getHTMLColoniasCDMX( delegacion, section ) );
     new SelectFx( $(el + ' .cs-select')[0], {
         stickyPlaceholder: false,
-        onChange: function( colonia ){
-            console.log( colonia );
-        }
+        onChange: function( colonia ){}
     });
     return;
 }
@@ -166,9 +163,7 @@ function showEstados( section ){
     $(el).append( getHTMLEstados( section ) );
     new SelectFx( $(el + ' .cs-select')[0], {
         stickyPlaceholder: false,
-        onChange: function( estados ){
-            console.log( estados );
-        }
+        onChange: function( estados ){}
     });
     return;
 }
@@ -189,9 +184,7 @@ function showPaises( section ){
     $(el).append( getHTMLPaises( section ) );
     new SelectFx( $(el + ' .cs-select')[0], {
         stickyPlaceholder: false,
-        onChange: function( pais ){
-            console.log( pais );
-        }
+        onChange: function( pais ){}
     });
     return;
 }

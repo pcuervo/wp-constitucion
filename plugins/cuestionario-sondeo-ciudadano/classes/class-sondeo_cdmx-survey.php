@@ -126,21 +126,6 @@ class Sondeo_CDMX_Survey {
 		//$questions = $this->get_questions();
 		$next_question = 3;
 		?>
-		<style>
-			.title {
-				width: 100% !important;
-				text-align: center;
-				box-shadow: inset 0 -6em 0 -2em #eeeeee !important;
-				color: #4a4a4a !important;
-				font-size: 18px;
-				cursor: default !important;
-			}
-			.title span:hover, .title:hover {
-				opacity: 1 !important;
-				color: #4a4a4a !important;
-				cursor: default !important;
-			}
-		</style>
 		<div class="[ survey-container ][ padding--header ]">
 			<div class="[ fs-form-wrap ]" id="fs-form-wrap">
 				<div class="fs-title [ container ][ text-center ]">
@@ -203,24 +188,24 @@ class Sondeo_CDMX_Survey {
 						</li>
 						<li id="js-grandes-retos" data-question="26">
 							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="grandes-retos">Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</label>
-<!-- 							<a href="#">Derechos Humanos</a>
-							<a href="#">Transporte y movilidad</a>
-							<a href="#">Empleo digno y productividad</a>
-							<a href="#">Pobreza y desigualdad económica.</a>
-							<a href="#">Educación de calidad permanente. </a>
-							<a href="#">Salud pública y bienestar</a>
-							<a href="#">Vivienda y uso de suelo</a>
-							<a href="#">Coordinación Metropolitana</a>
-							<a href="#">Transparencia y Rendición de Cuentas</a>
-							<a href="#">Agua</a>
-							<a href="#">Sustentabilidad del Medio Ambiente</a>
-							<a href="#">Servicios Urbanos</a>
-							<a href="#">Desarrollo barrial participativo</a>
-							<a href="#">Finanzas públicas</a>
-							<a href="#">Legalidad y Justicia</a>
-							<a href="#">Igualdad de género</a>
-							<a href="#">Infraestructura</a>
-							<a href="#">Otro</a> -->
+							<button>Derechos Humanos</button>
+							<button>Transporte y movilidad</button>
+							<button>Empleo digno y productividad</button>
+							<button>Pobreza y desigualdad económica.</button>
+							<button>Educación de calidad permanente. </button>
+							<button>Salud pública y bienestar</button>
+							<button>Vivienda y uso de suelo</button>
+							<button>Coordinación Metropolitana</button>
+							<button>Transparencia y Rendición de Cuentas</button>
+							<button>Agua</button>
+							<button>Sustentabilidad del Medio Ambiente</button>
+							<button>Servicios Urbanos</button>
+							<button>Desarrollo barrial participativo</button>
+							<button>Finanzas públicas</button>
+							<button>Legalidad y Justicia</button>
+							<button>Igualdad de género</button>
+							<button>Infraestructura</button>
+							<button>Otro</button>
 							<input class="fs-anim-lower" id="q9" name="grandes-retos" type="text" required/>
 						</li>
 						<li id="js-como-imaginas" data-question="28">

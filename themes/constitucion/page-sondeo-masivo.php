@@ -21,8 +21,10 @@
 								<div class="[ col-xs-12 col-sm-6 ]">
 									<input type="text" class="form-control [ margin-bottom ][ input--search ] " placeholder="Apellidos">
 								</div>
-								<button type="submit" class="[ btn btn-secondary color-gray ][ center-block ]">obtener</button>
+								<button type="submit" class="[ col-xs-12 ][ btn btn-secondary color-gray ][ center-block ]">obtener certificado</button>
+								<a href="<?php echo site_url('participa') ?>" class="[ col-xs-12 ][ btn btn-secondary btn-sm color-gray ][ center-block ][ margin-top ]">No deseo obtener mi certificado en este momento</a>
 							</form>
+							
 						</div>
 					</div>
 				</div>

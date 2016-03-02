@@ -143,17 +143,25 @@ $url_image_experiencias = attachment_image_url( $experiencias->ID, 'full' );?>
 	</div>
 </section>
 
-<!-- Modal -->
+<!-- Modal grupo de trabajo -->
 <div id="trabajador" class="modal fade" role="dialog">
 	<div class="modal-dialog modal--trabajador">
 		<!-- Modal content-->
 		<div class="modal-content">
 			<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
 			<div class="modal-body">
+				<h3>Nombre lorem ipsum</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum incidunt id quo. Ea assumenda doloremque earum, excepturi iure reiciendis eum. Officia, vero atque. Quae provident voluptas, facilis adipisci! Aperiam, necessitatibus.</p>
 				<p>contacto@lorem.com</p>
 			</div><!-- modal-body -->
 		</div>
 	</div>
 </div>
+<section class="[ container ]">
+	<h2>Constitución en wiki</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum possimus dolorum quam illo veniam id placeat nulla repellat vero debitis ratione consectetur eos praesentium, delectus doloremque dolor, ipsa deserunt eaque.</p>
+	<div>
+		<a class="[ btn btn-primary btn-large ][ margin-bottom--large ]" data-toggle="modal" data-target="#trabajador"><strong>Visitar sitio</strong></a>
+	</div>
+</section>
 <?php get_footer(); ?>

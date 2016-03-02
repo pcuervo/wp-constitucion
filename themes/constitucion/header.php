@@ -49,7 +49,7 @@
 							<span class="[ text-italic ][ relative bottom-10 ]">punto</span>
 							<span class="[ text-italic ][ relative top-10 right-42 ]">de encuentro</span> <!-- - page-home.php -->
 						</li>
-						<li class="[ dropdown ]">
+						<li class="[ dropdown top-8 ]">
 							<button class="dropdown-toggle [ text-uppercase btn-dropdown ][ no-padding ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 								Acerca de la<br>constitución
 								<span class="caret"></span>
@@ -194,7 +194,7 @@
 							<span class="[ text-italic ][ relative top-20 right-42 ][ margin-right--31 ]">de encuentro</span> <!-- - page-home.php -->
 						</li>
 						<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
-						<li class="[ dropdown ]">
+						<li class="[ dropdown top-8 ]">
 							<button class="dropdown-toggle [ text-uppercase btn-dropdown ][ no-padding ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 								Acerca de la<br>constitución
 								<span class="caret"></span>

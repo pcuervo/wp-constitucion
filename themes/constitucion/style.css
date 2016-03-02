@@ -6167,6 +6167,12 @@ button.close {
   padding-left: 24px;
   padding-right: 24px;
 }
+.modal--trabajador h3 {
+  margin-top: 0px;
+}
+.modal--trabajador p:nth-child(3) {
+  color: #e80e8a;
+}
 .tooltip {
   position: absolute;
   z-index: 1070;
@@ -6898,6 +6904,9 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 .top-20 {
   top: 20px;
+}
+.top-8 {
+  top: -8px;
 }
 .bottom-10 {
   bottom: 10px;

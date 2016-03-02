@@ -7280,6 +7280,9 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .color-gray--light {
   color: #777777;
 }
+.color-gray--xlight {
+  color: #cccccc;
+}
 .color-light-cdmx {
   color: #f2f2f2;
 }
@@ -7907,16 +7910,18 @@ header ul {
   padding-left: 0px;
 }
 footer {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   background-color: #313131;
+  text-align: center;
 }
 footer img {
-  width: 60%;
+  margin-bottom: 20px;
+  width: 150px;
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   footer img {
-    width: 20%;
+    width: 180px;
   }
 }
 /*# sourceMappingURL=style.css.map */

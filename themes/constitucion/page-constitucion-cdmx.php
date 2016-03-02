@@ -113,4 +113,47 @@ $url_image_experiencias = attachment_image_url( $experiencias->ID, 'full' );?>
 	wp_reset_postdata(); ?>
 
 </section>
+<section class="[ container ]">
+	<h2>Grupo de trabajo</h2>
+	<div class="[ row ]">
+		<div class="[ col-xs-12 col-sm-4 col-md-3 ][ content-trabajo ][ text-center ]">
+			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+			<h3>Nombre lorem ipsum</h3>
+			<p>contacto@lorem.com</p>
+			<a class="[ btn btn-primary btn-large ][ margin-bottom--large ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		</div>
+		<div class="[ col-xs-12 col-sm-4 col-md-3 ][ content-trabajo ][ text-center ]">
+			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+			<h3>Nombre lorem ipsum</h3>
+			<p>contacto@lorem.com</p>
+			<a class="[ btn btn-primary btn-large ][ margin-bottom--large ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		</div>
+		<div class="[ col-xs-12 col-sm-4 col-md-3 ][ content-trabajo ][ text-center ]">
+			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+			<h3>Nombre lorem ipsum</h3>
+			<p>contacto@lorem.com</p>
+			<a class="[ btn btn-primary btn-large ][ margin-bottom--large ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		</div>
+		<div class="[ col-xs-12 col-sm-4 col-md-3 ][ content-trabajo ][ text-center ]">
+			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+			<h3>Nombre lorem ipsum</h3>
+			<p>contacto@lorem.com</p>
+			<a class="[ btn btn-primary btn-large ][ margin-bottom--large ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		</div>
+	</div>
+</section>
+
+<!-- Modal -->
+<div id="trabajador" class="modal fade" role="dialog">
+	<div class="modal-dialog modal--trabajador">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
+			<div class="modal-body">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum incidunt id quo. Ea assumenda doloremque earum, excepturi iure reiciendis eum. Officia, vero atque. Quae provident voluptas, facilis adipisci! Aperiam, necessitatibus.</p>
+				<p>contacto@lorem.com</p>
+			</div><!-- modal-body -->
+		</div>
+	</div>
+</div>
 <?php get_footer(); ?>

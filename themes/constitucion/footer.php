@@ -16,7 +16,7 @@
 						<div class="modal-body">
 							<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
 							<div class="[ row padding--sides--xsm ]">
-								<div class="[ col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 ]">
+								<div class="[ col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 ]">
 									<div class="[ padding--top--large padding--bottom--xxlarge padding--sides--large--sm ]">
 										<div>
 											<h2 class="[ inline-block align-middle ][ no-margin ]">Estimados</h2>

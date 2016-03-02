@@ -7846,13 +7846,13 @@ ul.submenu {
   }
 }
 ul.menu-home > li {
-  border-left: 1px solid #4a4a4a;
-  border-bottom: 1px solid #4a4a4a;
+  border-left: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
   padding: 1.5% 2.5%;
   margin-right: -4px;
 }
 ul.menu-home > li:last-child {
-  border-right: 1px solid #4a4a4a;
+  border-right: 1px solid #dbdbdb;
 }
 ul.menu-home > li > a,
 .dropdown-menu--header > li > a,

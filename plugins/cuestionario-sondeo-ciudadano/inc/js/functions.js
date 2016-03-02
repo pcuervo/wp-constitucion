@@ -298,6 +298,28 @@ function getHTMLDelegacionesCDMX( section ){
     return delegaciones + '</select>';
 }
 
+function removeAccent( letter ){
+    switch( letter ){
+        case 'Á':
+            letter = 'A';
+            break;
+        case 'É':
+            letter = 'E';
+            break;
+        case 'Í':
+            letter = 'I';
+            break;
+        case 'Ó':
+            letter = 'O';
+            break;
+        case 'Ú':
+            letter = 'U';
+            break;
+    }
+    return letter;
+}
+
+
 function getHTMLMunicipios( section ){
     switch( section ){
         case 'trabajas': 
@@ -314,7 +336,12 @@ function getHTMLMunicipios( section ){
         <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
             <option value="" disabled selected>Selecciona tu municipio</option>
         `;
+    var currentTitle = '';
     $.each( allMunicipios, function(i, val){
+        if( currentTitle != val.municipio.charAt(0) ){
+            currentTitle = removeAccent( val.municipio.charAt(0) );
+            municipios += '<option class="title" value="' + currentTitle + '">' + currentTitle + '</option>';
+        }
         municipios += '<option value="' + val.municipio + '">' + val.municipio + '</option>';
     });
     return municipios + '</select>';
@@ -358,7 +385,12 @@ function getHTMLPaises( section ){
         <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ] select-paises" name="pais" id="pais" >
             <option value="" disabled selected>Selecciona el país</option>
         `;
+    var currentTitle = '';
     $.each( allPaises, function(i, val){
+        if( currentTitle != val.pais.charAt(0) ){
+            currentTitle = removeAccent( val.pais.charAt(0) );
+            paises += '<option class="title" value="' + currentTitle + '">' + currentTitle + '</option>';
+        }
         paises += '<option value="' + val.pais + '">' + val.pais + '</option>';
     });
     return paises + '</select>';
@@ -380,10 +412,16 @@ function getHTMLColoniasCDMX( delegacion, section ){
         <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
             <option value="" disabled selected>Selecciona tu colonia</option>
         `;
+        
+    var currentTitle = '';
     $.each( allColonias, function( del, col ){
         if( delegacion != del  ) return 1;
         
         $.each( col, function( i, colonia ){
+            if( currentTitle != colonia.charAt(0) ){
+                currentTitle = removeAccent( colonia.charAt(0) );
+                colonias += '<option class="title" value="' + currentTitle + '">' + currentTitle + '</option>';
+            }
             colonias += '<option value="' + colonia + '">' + colonia + '</option>';
         });
     });

@@ -21,7 +21,7 @@
 								<div class="[ col-xs-12 col-sm-6 ]">
 									<input type="text" class="form-control [ margin-bottom ][ input--search ] " placeholder="Apellidos">
 								</div>
-								<button type="submit" class="[ btn btn-secondary color-gray ][ center-block ]">enviar</button>
+								<button type="submit" class="[ btn btn-secondary color-gray ][ center-block ]">obtener</button>
 							</form>
 						</div>
 					</div>

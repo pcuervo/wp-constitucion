@@ -68,7 +68,6 @@
 							<a href="#">
 								<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg" alt="icono de red social twitter">
 								#SoyCDMX<!-- Contacto - page-contacto.php-->
-								<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg" alt="icono de flecha de cierre">
 							</a>
 						</li>
 					</ul>
@@ -178,7 +177,6 @@
 							<a href="#">
 								<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 								#SoyCDMX<!-- Contacto - page-contacto.php-->
-								<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
 							</a>
 						</li>
 					</ul>
@@ -259,7 +257,7 @@
 		<div class="[ soy-cdmx right-370 ][ js-hidden ]">
 			<div class="[ close-cdmx ][ padding--top-bottom--large ][ absolute right-10 ]">
 				<a id="js-hide-twitter" href="#">
-					<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg">
+					<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg">
 				</a>
 			</div>
 			<h1>#SoyCDMX</h1>

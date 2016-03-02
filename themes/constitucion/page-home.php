@@ -104,7 +104,6 @@
 		<a href="#">
 			<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 			#SoyCDMX<!-- Contacto - page-contacto.php-->
-			<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/drop-down.svg">
 		</a>
 	</li>
 </ul>

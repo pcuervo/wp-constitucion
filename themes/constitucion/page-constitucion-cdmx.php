@@ -19,23 +19,23 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	<div class="[ container ]">
 		<div class="[ row ]">
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
-	
+
 				<div class="[ mensaje-jefe-gob ]">
 					<blockquote>
 						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
-					</blockquote>	
+					</blockquote>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-						accumsan lorem id porttitor porttitor. In pulvinar pellentesque ornare. Morbi facilisis sem molestie sapien euismod, 
+						accumsan lorem id porttitor porttitor. In pulvinar pellentesque ornare. Morbi facilisis sem molestie sapien euismod,
 						vel ornare mi sagittis. Nulla at porta arcu, ut lacinia dui. In semper. Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-
-						lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. 
+						lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu.
 						Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
 					</p>
 				</div>
-				
+
 			</div>
 		</div>
-	</div>	
+	</div>
 </section>
 
 <article class="[ bg-gray-light ][ margin-top-bottom--large padding--top-bottom--xlarge ]">
@@ -184,7 +184,7 @@ $url_image_experiencias = attachment_image_url( $experiencias->ID, 'full' );?>
 <section class="[ container ]">
 	<h2>Constitución en wiki</h2>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum possimus dolorum quam illo veniam id placeat nulla repellat vero debitis ratione consectetur eos praesentium, delectus doloremque dolor, ipsa deserunt eaque.</p>
-	<div>
+	<div class="[ text-center ]">
 		<a class="[ btn btn-primary btn-large ][ margin-bottom--large ]" data-toggle="modal" data-target="#trabajador"><strong>Visitar sitio</strong></a>
 	</div>
 </section>

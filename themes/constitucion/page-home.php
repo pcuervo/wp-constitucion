@@ -125,4 +125,93 @@
 </section>
 <div id="map_canvas" class="mapping" style="width: 100%; height: 500px;"></div>
 
+	<!-- Slideshow 1 
+<div class="rslides_container">
+	<ul class="rslides" id="slider1">
+		<li><img src="<?php echo THEMEPATH; ?>images/1.jpg" alt=""></li>
+		<li><img src="<?php echo THEMEPATH; ?>images/2.jpg"  alt=""></li>
+		<li><img src="<?php echo THEMEPATH; ?>images/3.jpg"  alt=""></li>
+	</ul>
+</div>-->
+
+<!-- Linea tiempo -->
+<div class="[ container ]">
+	<div class="[ row ]">
+		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-sm-6 ][ margin-top-bottom--large ]">
+			<h3 class="[ text-uppercase text-center ]">Línea del tiempo</h3>
+			<ul id="scroll" class="[ scroll-cronologia ][ horizontal-slide ][ text-center ]">
+
+				<?php $cronologia = new WP_Query(array(
+						'post_type'      => 'eventos',
+						'posts_per_page' => -1,
+						'orderby'  => 'fecha_evento',
+						'order'    => 'ASC',
+						'meta_query' => array(
+							array(
+								'key'     => 'fecha_evento',
+							)
+
+						)
+					));
+
+				if ( $cronologia->have_posts() ) :
+					$count = 0;
+					$count_pasados = 0;
+					while ( $cronologia->have_posts() ) : $cronologia->the_post();
+						$date_event = get_post_meta($post->ID, 'fecha_evento', true);
+						$count_pasados = strtotime($date_event) < strtotime( date('Y-m-d') ) ? $count_pasados + 1 : $count_pasados;
+						$class_status = strtotime($date_event) < strtotime( date('Y-m-d') ) ? 'ya-paso ' : '';
+
+						$date = '';
+						if ($date_event != '') {
+							$date_arr = getDateTransform($date_event);
+							$date = $date_arr[1].' '.$date_arr[0].' de '.$date_arr[2];
+						}
+
+						if($count%2 == 0): ?>
+						    <li class="[ box-li <?php echo $class_status; ?> ]">
+						    	<a href="<?php the_permalink(); ?>">
+									<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ]"><?php echo $date; ?></p>
+									<div class="[ border-gray--large ]"></div>
+									<div class="[ circle-xsmall ][ margin-auto ]"></div>
+									<div class="[ vertical-line ]"></div>
+									<div class="[ text--large relative ]">
+										<p class="[ evento evento-bottom ]"><?php the_title(); ?></p>
+									</div>
+								</a>
+							</li>
+						<?php else: ?>
+
+							<li class="[ box-li <?php echo $class_status; ?> ]">
+								<a href="<?php the_permalink(); ?>">
+									<div class="[ text--large relative ]">
+										<p class="[ evento ]"><?php the_title(); ?></p>
+									</div>
+									<div class="[ vertical-line ]"></div>
+									<div class="[ circle-xsmall ][ margin-auto ]"></div>
+									<div class="[ border-gray--large ]"></div>
+									<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]"><?php echo $date; ?></p>
+								</a>
+							</li>
+
+						<?php endif;
+
+						$count++;
+					endwhile;
+
+					$data = '';
+					if ($cronologia->found_posts >= 7 AND $count_pasados > 0) {
+						$recorre = ($count_pasados - 1 ) * 150;
+						echo '<input type="hidden" id="recorre" value="'.$recorre.'">';
+					}
+
+				endif;
+				wp_reset_postdata(); ?>
+
+			</ul>
+		</div>
+	</div>
+</div><!--/container-->
+
+
 <?php get_footer(); ?>

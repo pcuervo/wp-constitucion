@@ -38,6 +38,10 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</div>	
 </section>
 
+<section class="[ descanso-visual ]">
+	<img src="<?php echo THEMEPATH; ?>images/cd2.png" alt="">
+</section>
+
 <article class="[ bg-gray-light ][ margin-top-bottom--large padding--top-bottom--xlarge ]">
 	<section class="[ container padding--sides--xsm ]">
 		<?php $proceso = get_page_by_path('proceso-participativo'); ?>

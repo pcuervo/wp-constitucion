@@ -7541,6 +7541,9 @@ ul.horizontal-slide li[class*="col"]:first-child {
     border-left: none ;
   }
 }
+.descanso-visual img {
+  width: 100%;
+}
 @-ms-viewport {
   width: device-width;
 }

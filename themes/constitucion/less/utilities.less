@@ -428,6 +428,7 @@
 			width: 100%;
 			display: inline-block;
 			border-left: none ;
+			vertical-align: top;
 		}
 		blockquote p{
 			padding-top: 10px;
@@ -438,24 +439,17 @@
 		}
 
 	@media (min-width: @screen-sm-min){
-
+		
 		p:nth-child(2) {
 		width: 50%;
-		display: inline-block;
 		padding: 10px;
-		text-align: justify;
 		}
 		blockquote {
 			width: 25%;
-			display: inline-block;
-			border-left: none ;
 		}
 		blockquote p{
 			padding-top: 20px;
 			text-align: right;
-			color: lighten(@gray, 10%);
-			border-top: dotted @primary;
-			border-left: none ;
 		}
 	}
 

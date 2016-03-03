@@ -7562,6 +7562,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
   width: 100%;
   display: inline-block;
   border-left: none ;
+  vertical-align: top;
 }
 .mensaje-jefe-gob blockquote p {
   padding-top: 10px;
@@ -7579,8 +7580,6 @@ ul.horizontal-slide li[class*="col"]:first-child {
   }
   .mensaje-jefe-gob blockquote {
     width: 25%;
-    display: inline-block;
-    border-left: none ;
   }
   .mensaje-jefe-gob blockquote p {
     padding-top: 20px;

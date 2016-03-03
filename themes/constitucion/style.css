@@ -4974,6 +4974,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 label {
   font-family: "ABeeZee", sans-serif;
 }
+label span {
+  font-weight: 700;
+}
 .label {
   display: inline;
   padding: .2em .6em .3em;
@@ -7492,6 +7495,10 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 .border-primary {
   border: 1px solid #e80e8a;
+}
+.border-box-shadow {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 .color-primary {
   color: #e80e8a;

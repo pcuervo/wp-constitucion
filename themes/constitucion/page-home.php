@@ -154,6 +154,25 @@
 		</div>
 	</div>
 </div><!--/container-->
+<!-- slider -->
+<div class="[ container ]">
+	<div class="flexslider">
+	<ul class="slides">
+		<li>
+			<img src="<?php echo THEMEPATH; ?>images/1.jpg">
+		</li>
+		<li>
+			<img src="<?php echo THEMEPATH; ?>images/2.jpg">
+		</li>
+		<li>
+			<img src="<?php echo THEMEPATH; ?>images/3.jpg">
+		</li>
+		<li>
+			<img src="<?php echo THEMEPATH; ?>images/1.jpg">
+		</li>
+	</ul>
+	</div>
+</div><!-- fin slider -->
 <?php $img_kioskos = get_option( 'img_kioskos' ); ?>
 <section class="[ bg-image rectangle-small ][ relative ]" style="background-image: url('<?php echo $img_kioskos; ?>');">
 	<div class="[ bg-dark--opacity width-100 height-100 ][ text-center ]">

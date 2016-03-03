@@ -2545,10 +2545,12 @@ legend {
   border-bottom: 1px solid #e5e5e5;
 }
 label {
-  display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
   font-weight: bold;
+  font-family: "ABeeZee", sans-serif;
+  color: #4a4a4a;
+  display: block;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;
@@ -3048,7 +3050,7 @@ select[multiple].input-lg {
   font-size: 16px;
 }
 .input-primary {
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
@@ -3082,6 +3084,31 @@ select[multiple].input-lg {
   padding-left: 0;
   list-style: none;
   color: red;
+}
+@media (max-width: 480px) {
+  .box-shadow--form {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media (min-width: 481px) {
+  .box-shadow--form {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+@media (min-width: 768px) {
+  .box-shadow--form {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    padding: 24px 48px;
+  }
 }
 .btn {
   display: inline-block;
@@ -4970,9 +4997,6 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #777777;
   background-color: #fff;
   cursor: not-allowed;
-}
-label {
-  font-family: "ABeeZee", sans-serif;
 }
 .label {
   display: inline;
@@ -6872,35 +6896,41 @@ ul.horizontal-slide li[class*="col"]:first-child {
   bottom: inherit;
   top: 0;
 }
-/* Responsive   slider style */
-.rslides {
+/* Responsive   slider style
+
+.slides {
   position: relative;
   list-style: none;
   overflow: hidden;
   width: 100%;
   padding: 0;
   margin: 0;
-}
-.rslides li {
+  }
+
+.slides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
   display: none;
   width: 100%;
   left: 0;
   top: 0;
-}
-.rslides li:first-child {
+  }
+
+.slides li:first-child {
   position: relative;
   display: block;
   float: left;
-}
-.rslides img {
+  }
+
+.slides img {
   display: block;
   height: auto;
   float: left;
   width: 100%;
   border: 0;
-}
+  }
+  
+ */
 .clearfix:before,
 .clearfix:after,
 .dl-horizontal dd:before,
@@ -7492,6 +7522,11 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 .border-primary {
   border: 1px solid #e80e8a;
+}
+.border-box-shadow {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 .color-primary {
   color: #e80e8a;

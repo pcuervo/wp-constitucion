@@ -233,11 +233,12 @@
 					endwhile;
 
 					$data = '';
-					if ($cronologia->found_posts >= 7 AND $count_pasados > 0) {
+					if ($cronologia->found_posts >= 7 AND $count_pasados > 0):
 						$recorre = ($count_pasados - 1 ) * 150;
 						echo '<input type="hidden" id="recorre" value="'.$recorre.'">';
-					}
-
+					endif;
+				else:
+					echo '<p class="text-center">No existen eventos</p>';
 				endif;
 				wp_reset_postdata(); ?>
 

@@ -147,7 +147,7 @@ if( isset( $result['success'] ) ): ?>
 			</div> <!-- row -->
 	</section>
 
-	<section class="[ container padding--sides--xsm--large ][ text-center ][ margin-bottom--large ]" id="imagina_tu_ciudad">
+	<section class="[ container padding--sides--xsm--large ][ text-center ][ margin-bottom--large ]" id="imagina_ciudad">
 		<h2 class="[ text-left ]">Imagina tu ciudad</h2>
 		<a class="[ btn btn-primary btn-large ][ margin-bottom ]" href="<?php echo site_url('/sondeo-masivo/'); ?> "><strong>Participa</strong></a>
 		<h2>¿Ya participaste?</h2>
@@ -157,11 +157,91 @@ if( isset( $result['success'] ) ): ?>
 				<input type="text" class="[ form-control input--search ][ height-40 ]" placeholder="1456788049">
 				<span class="[ input-group-btn ]">
 					<button class="[ btn btn-secondary ][ height-40 ]" type="button">
-						<img class="[ svg icon icon--iconed--small icon--thickness-1 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/find.svg">
+						<img class="[ svg icon icon--iconed--small icon--thickness-2 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/search.svg">
 					</button>
 				</span>
 			</div>
 		</form>
+	</section>
+	<section class="[ container ]">
+		<h2>Resultados</h2>
+		<a class="[ btn btn-primary btn-large ][ margin-bottom ]" data-toggle="modal" data-target="#participador">Obten tu certificado</a>
+	</section>
+
+	<!-- Modal participador -->
+	<div id="participador" class="modal fade" role="dialog">
+		<div class="modal-dialog modal--participador">
+			<!-- Modal content-->
+			<div class="modal-content">
+<!-- 				<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
+ -->				<div class="modal-body">
+ 					<div class="[ border-primary ]">
+ 						<div class="[ border-primary ]">
+ 							<div class="[ border-primary ]">
+								<div class="[ row ]">
+									<div class="[ col-xs-12 col-sm-4 ]">
+										<div class="[ row ]">
+											<div class="[ col-xs-6 col-sm-12 ]">
+												<img src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
+											</div>
+											<div class="[ col-xs-6 col-sm-12 ]">
+												<p>Con el folio núm. <span>000000</span><br>
+												podrás darle seguimiento <br>
+												a tu participación</p>
+											</div>
+										</div>
+									</div>
+									<div class="[ col-xs-12 col-sm-8 ]">
+										<h3>Diego emilio cuesy edgar</h3>
+										<p>El grupo de trabajo redactor del proyecto de constitución Política de la Ciudad de México otorga la presente constancia por haber contribuido con ideas, reflexiones y propuestas.</p>
+										<p>La Ciudad de México somos todas y todos. Gracias por ser parte de este proceso histórico.</p>
+										<p>Ciudad de México a 2 de marzo de 2016</p>
+									</div>
+								</div>
+ 							</div><!-- border -->
+ 						</div><!-- border -->
+ 					</div><!-- border -->
+
+				</div><!-- modal-body -->
+			</div>π
+		</div>
+	</div>
+
+	<section class="[ container ]">
+		<h2>Ensayos</h2>
+		<div class="[ row ]">
+			<div class="[ col-xs-12 col-sm-8 col-sm-offset-2 ][ form-ensayos ]">
+				<form class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
+					<label for="">Título del ensayo o de la relatoría</label>
+					<input type="text" name="tipo_ensayo" id="tipo_ensayo" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="">
+					<label for="">Nombre del evento o sesión colaborativa de la cual se derivó el documento</label>
+					<input name="nombre_evento" id="nombre_evento" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="">
+					<label for="">Frase que describe el evento</label>
+					<label for="">Comparte una frase que describa el evento/sesión de trabajo</label>
+					<input name="frase_evento" id="frase_evento" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="">
+					<label for="">Fechas en las que sesionó el grupo de trabajo</label>
+					<input type="date" name="fecha" class="[ width-50 ]">
+					<input type="date" name="fecha" class="[ width-50 ]">
+					<label for="">Resumen. Describe a continuación las reflexiones o propuestas centrales de la sesión de trabajo y el contexto en el que esta se llevó a cabo.</label>
+					<input name="resumen_ensayo" id="resumen_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 250 palabras" required="">
+					<label for="">Palabras Clave</label>
+					<label for="">Señala a continuación 3 palabras clave vinculadas a este documento</label>
+					<input name="palabras_ensayo" id="palabras_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Ej. vivienda, salario, comunidad" required="">
+					<label for="">Frase -Mensaje central</label>
+					<label for="">Comparte en una frase un mensaje central de la relatoría o ensayo</label>
+					<input name="mensaje_ensayo" id="mensaje_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="">
+					<label for="">Autores</label>
+					<label for="">Lista a continuación el nombre de todos los autores separados por comas</label>
+					<input name="autores_ensayo" id="autores_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+					<label for="">Institución u organización</label>
+					<label for="">En caso de que este ensayo o relatoría haya sido elaborado por una institución u organización señala abajo cuales. En caso de más de una, separar por comas.</label>
+					<input name="resumen_ensayo" id="resumen_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+					<input name="" id="" type="hidden" value="">
+					<button type="submit" class="[ btn btn-secondary ][ pull-right ]">enviar</button>
+				</form>
+			</div>
+		</div>
+
 	</section>
 	<section class="[ bg-gray-light ][ padding--top--xlarge padding-bottom--large--sm ]">
 		<article class="[ container padding--sides--xsm padding--bottom--large ]">
@@ -204,4 +284,47 @@ if( isset( $result['success'] ) ): ?>
 		</article>
 	</section>
 
+
+	<section class="[ container ]">
+		<h2 class="[ margin-top--large ]">Diálogos Públicos</h2>
+		<div class="[ row ]">
+			<div class="[ col-xs-12 ][ col-sm-offset-3 col-sm-6 ]">
+				<p>En esta sección podrás registrar acontecimientos que sean espacios de diálogo relacionados a la construcción de la Constitución de la Ciudad de México. Estos pueden ser sesiones de trabajo colaborativas, foros, asambleas, talleres o conferencias.</p>
+			</div>
+			<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ][ bg-gray-light ][ padding--large ]">
+				<h2>Formato y formulario para registrar eventos</h2>
+				<form action="">
+					<div class="form-group">
+						<label for=""><span class="[ color-primary ]">Nombre del acontecimiento </span>(máximo 100 caracteres)</label>
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Text input">
+						<label for="">Frase que describe el acontecimiento Comparte una frase que describa el evento/sesión de trabajo/diálogo público (120 caracteres) </label>
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Text input">
+						<label for="">Descripción Describe los objetivos, alcances y perfil de asistentes de tu acontecimiento  (120 palabras) </label>
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Text input">
+						<label for="">Liga oficial (Campo No obligatorio) Copia a continuación la liga del sitio oficial del acontecimiento, la cuenta de Facebook o de Twitter </label>
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Text input">
+						<label for="">Fechas (Puede ser un sólo día) </label>
+						<input type="date" name="fecha">
+						<label for="">Ubicación Señala abajo dónde se llevara a cabo </label>
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Text input">
+						<label for="">Horario ¿En qué momentos se llevará a cabo el evento? </label>
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Text input">
+						<label for="">Institución u organización. Si este acontecimiento es organizado por una institución u organización, señala abajo cuál. En caso de más de una, separar por comas. Si son un grupo de personas, nombren su equipo de trabajo. </label>
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Text input">
+						<label for="">Asistentes </label>
+							<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+							La asistencia es libre
+							<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+							por invitación
+
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+
+		</div>
+
+
+
+	</section>
 <?php get_footer(); ?>

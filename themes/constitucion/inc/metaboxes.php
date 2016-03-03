@@ -10,8 +10,11 @@
 
 		add_meta_box( 'meta-box-ubicacion', 'Ubicación', 'show_metabox_ubicacion', 'kioskos');
 		add_meta_box( 'meta-box-extras_evento', 'Extras evento', 'show_metabox_extras_evento', 'eventos', 'side', 'high');
+		add_meta_box( 'meta-box-extras_evento_line', 'Extras evento', 'show_metabox_extras_evento', 'linea-del-tiempo', 'side', 'high');
 		add_meta_box( 'meta-box-video_voces', 'Insertar video', 'show_metabox_video_voces', 'voces-ciudadanas');
 		add_meta_box( 'meta-box-extras_noticias', 'Extras', 'show_metabox_extras_noticias', 'post', 'side', 'high');
+		add_meta_box( 'meta-box-info_ensayo', 'Información del ensayo', 'show_metabox_info_ensayo', 'ensayos');
+
 
 		if ($post->post_name == 'participa' || $post->post_name == 'proceso-participativo'){
 			add_meta_box( 'meta-box-pasos', 'Pasos', 'show_metabox_pasos', 'page');
@@ -87,7 +90,17 @@
 
 		echo "<label for='fecha_evento' class='label-paquetes'>Fecha del evento </label>";
 		echo "<input type='text' class='widefat datepicker' id='fecha_evento' name='fecha_evento' value='$fecha_evento'/><br><br>";
-	}
+		$tipo = get_post_meta( $post->ID, 'tipo-de-evento', true );
+		$checked_1 = $tipo == 1 ? 'checked' : '';
+		$checked_2 = $tipo == 2 ? 'checked' : ''; 
+		$checked_3 = $tipo == 3 ? 'checked' : ''; 
+
+		echo "<label for='tipo-de-evento' class='label-paquetes'>Tipo de evento: </label>";?><br><br>
+		<input type="radio" name="tipo-de-evento" value="1" <?php echo $checked_1; ?> > Tipo 1<br>
+  		<input type="radio" name="tipo-de-evento" value="2" <?php echo $checked_2; ?> > Tipo 2<br>
+  		<input type="radio" name="tipo-de-evento" value="3" <?php echo $checked_3; ?> > Nota destacada<br>
+
+	<?php }
 
 
 	function show_metabox_video_voces($post){
@@ -109,6 +122,28 @@
 		wp_nonce_field(__FILE__, '_extra_cdmx_nonce');
 		$contenido_extra = get_post_meta($post->ID, 'contenido_extra', true);
 		wp_editor( $contenido_extra, 'contenido_extra' );
+
+	}
+
+	function show_metabox_info_ensayo($post){
+		$nombre_evento = get_post_meta( $post->ID, 'nombre_evento', true );
+		$frase_evento = get_post_meta( $post->ID, 'frase_evento', true );
+		$fechaInicio = get_post_meta( $post->ID, 'fechaInicio', true );
+		$fechaFinal = get_post_meta( $post->ID, 'fechaInicio', true );
+
+
+
+		echo "<label for='nombre_evento' class='label-paquetes'>Nombre del evento o sesión colaborativa: </label>";
+		echo "<input type='text' class='widefat' id='nombre_evento' name='nombre_evento' value='$nombre_evento'/><br><br>";
+
+		echo "<label for='frase_evento' class='label-paquetes'>Frase que describe el evento: </label>";
+		echo "<input type='text' class='widefat' id='frase_evento' name='frase_evento' value='$frase_evento'/><br><br>";
+
+		echo "<label for='$fechaInicio' class='label-paquetes'>Fechas Inicio: </label>";
+		echo "<input type='text' class='widefat date-ensayo' id='$fechaInicio' name='$fechaInicio' value='$fechaInicio'/><br><br>";
+
+		echo "<label for='$fechaFinal' class='label-paquetes'>Fechas Final: </label>";
+		echo "<input type='text' class='widefat date-ensayo-fin' id='$fechaFinal' name='$fechaFinal' value='$fechaFinal' disabled/><br><br>";
 
 	}
 
@@ -160,6 +195,8 @@
 
 		if ( isset($_POST['fecha_evento']) and check_admin_referer(__FILE__, '_evento_nonce') ){
 			update_post_meta($post_id, 'fecha_evento', $_POST['fecha_evento']);
+			update_post_meta($post_id, 'tipo-de-evento', $_POST['tipo-de-evento']);
+			
 		}
 
 		if ( isset($_POST['video_voces']) and check_admin_referer(__FILE__, '_video_nonce') ){

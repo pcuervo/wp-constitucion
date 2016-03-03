@@ -4,6 +4,10 @@
 
     $(function(){
 
+        $('.nota-destacada a').on('click', function(event){
+            event.preventDefault();
+        });
+
         if( parseInt( isPageSondeo ) ){
             //return;
         }

@@ -7541,6 +7541,9 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .bg-light {
   background-color: #fff;
 }
+.bg-gray--fondo {
+  background-color: #E8E8E8;
+}
 .opacity-7 {
   opacity: 0.7;
 }

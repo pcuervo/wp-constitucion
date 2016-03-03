@@ -77,6 +77,7 @@
 .fixed{ position: fixed; }
 
 .top-20{ top: 20px;}
+.top-8{ top: -8px;}
 .bottom-10{ bottom: 10px;}
 .top-10{ top: 10px;}
 .top-12{ top: 12px;}
@@ -405,47 +406,57 @@
 	.translate(-50%, -50%);
 }
 
+
+
+//content grupo de trabajo
+.content-trabajo{
+	& img{
+		.img-responsive;
+		margin: auto;
+	}
+}
+
 .mensaje-jefe-gob{
 
-	p:nth-child(2) { 
-		width: 100%; 
+	p:nth-child(2) {
+		width: 100%;
 		display: inline-block;
 		padding: 20px;
 		text-align: justify;
 		}
-		blockquote { 
+		blockquote {
 			width: 100%;
 			display: inline-block;
-			border-left: none ; 
-		} 
-		blockquote p{ 
+			border-left: none ;
+		}
+		blockquote p{
 			padding-top: 10px;
 			text-align: right;
 			color: lighten(@gray, 10%);
 			border-top: dotted @primary;
-			border-left: none ; 
-		} 
+			border-left: none ;
+		}
 
 	@media (min-width: @screen-sm-min){
 
-		p:nth-child(2) { 
-		width: 50%; 
+		p:nth-child(2) {
+		width: 50%;
 		display: inline-block;
 		padding: 10px;
 		text-align: justify;
 		}
-		blockquote { 
-			width: 25%; 
+		blockquote {
+			width: 25%;
 			display: inline-block;
-			border-left: none ; 
-		} 
-		blockquote p{ 
+			border-left: none ;
+		}
+		blockquote p{
 			padding-top: 20px;
 			text-align: right;
 			color: lighten(@gray, 10%);
 			border-top: dotted @primary;
-			border-left: none ; 
-		} 
+			border-left: none ;
+		}
 	}
 
 }

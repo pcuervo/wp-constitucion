@@ -1284,11 +1284,11 @@ h6,
 p {
   margin: 0 0 10px;
   font-family: "ABeeZee", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
 }
 @media (min-width: 768px) {
   p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .lead {
@@ -6133,6 +6133,46 @@ button.close {
   border-radius: 0px;
   min-height: 100vh;
 }
+@media (max-width: 768px) {
+  .modal--trabajador {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .modal--trabajador {
+    width: 400px;
+  }
+}
+.modal--trabajador .close {
+  opacity: 0.7;
+  padding: 12px 24px;
+  position: relative;
+  z-index: 1000;
+}
+.modal--trabajador .modal-content {
+  border-radius: 0px;
+}
+@media (max-width: 768px) {
+  .modal--trabajador .modal-content {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 768px) {
+  .modal--trabajador .modal-content {
+    height: auto;
+  }
+}
+.modal--trabajador .modal-body {
+  padding-top: 60px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.modal--trabajador h3 {
+  margin-top: 0px;
+}
+.modal--trabajador p:nth-child(3) {
+  color: #e80e8a;
+}
 .tooltip {
   position: absolute;
   z-index: 1070;
@@ -6865,6 +6905,9 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .top-20 {
   top: 20px;
 }
+.top-8 {
+  top: -8px;
+}
 .bottom-10 {
   bottom: 10px;
 }
@@ -7502,6 +7545,12 @@ ul.horizontal-slide li[class*="col"]:first-child {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+.content-trabajo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
 }
 .mensaje-jefe-gob p:nth-child(2) {
   width: 100%;

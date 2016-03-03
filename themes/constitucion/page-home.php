@@ -3,13 +3,13 @@
 	<div class="[ relative bg-gray--xxlight height-home-video ]">
 		<!-- <div class="[ js-video-wrapper ]"> -->
 				<!-- <iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/7Ezz0wnzdiQ" frameborder="0" allowfullscreen></iframe> -->
-				<video class="[ video--home ]" controls>
+				<video class="[ video--home ]" autoplay="">
 					<source src="<?php echo THEMEPATH; ?>video/video-prueba.mp4" type="video/mp4">
 					Your browser does not support the video tag.
 				</video>
 		<!-- </div> -->
 		<!-- <div class="[ bg-image height-home-video ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/home.png');"></div> -->
-		<button class="[ btn btn-play ]" onclick="playPause()"><img class="[ width-100 ]" src="<?php echo THEMEPATH; ?>images/play.png"></button>
+
 		<div class="[ logo-video ]">
 			<img class="[ width-40 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
 			<span class="[ lead text-italic ][ color-gray ]">punto<br>de encuentro</span>
@@ -97,8 +97,6 @@
 			</div>
 
 
-
-
 	<!-- 	</div>
 	</div> -->
 </section>
@@ -168,12 +166,12 @@
 <!-- Linea tiempo -->
 <div class="[ container ]">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-sm-6 ][ margin-top-bottom--large ]">
+		<div class="[ col-sm-12 ][ margin-top-bottom--large ]">
 			<h3 class="[ text-uppercase text-center ]">Línea del tiempo</h3>
 			<ul id="scroll" class="[ scroll-cronologia ][ horizontal-slide ][ text-center ]">
 
 				<?php $cronologia = new WP_Query(array(
-						'post_type'      => 'eventos',
+						'post_type'      => 'linea-del-tiempo',
 						'posts_per_page' => -1,
 						'orderby'  => 'fecha_evento',
 						'order'    => 'ASC',
@@ -189,6 +187,7 @@
 					$count = 0;
 					$count_pasados = 0;
 					while ( $cronologia->have_posts() ) : $cronologia->the_post();
+						$tipo_evento = get_post_meta( $post->ID, 'tipo-de-evento', true );
 						$date_event = get_post_meta($post->ID, 'fecha_evento', true);
 						$count_pasados = strtotime($date_event) < strtotime( date('Y-m-d') ) ? $count_pasados + 1 : $count_pasados;
 						$class_status = strtotime($date_event) < strtotime( date('Y-m-d') ) ? 'ya-paso ' : '';
@@ -199,9 +198,13 @@
 							$date = $date_arr[1].' '.$date_arr[0].' de '.$date_arr[2];
 						}
 
+						$class_tipo = ($tipo_evento == 3) ? 'nota-destacada ' : '';
+						$url = ($tipo_evento != 3) ? get_permalink() : '';
+
 						if($count%2 == 0): ?>
-						    <li class="[ box-li <?php echo $class_status; ?> ]">
-						    	<a href="<?php the_permalink(); ?>">
+						    <li class="[ box-li <?php echo $class_status.$class_tipo; ?> ]">
+
+						    	<?php if($tipo_evento != 3) echo '<a href="'.$url.'">'; ?>
 									<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ]"><?php echo $date; ?></p>
 									<div class="[ border-gray--large ]"></div>
 									<div class="[ circle-xsmall ][ margin-auto ]"></div>
@@ -209,12 +212,14 @@
 									<div class="[ text--large relative ]">
 										<p class="[ evento evento-bottom ]"><?php the_title(); ?></p>
 									</div>
+								<?php if($tipo_evento != 3) echo '</a>'; ?>
+
 								</a>
 							</li>
 						<?php else: ?>
 
-							<li class="[ box-li <?php echo $class_status; ?> ]">
-								<a href="<?php the_permalink(); ?>">
+							<li class="[ box-li <?php echo $class_status.$class_tipo; ?> ]">
+								<?php if($tipo_evento != 3) echo '<a href="'.$url.'">'; ?>
 									<div class="[ text--large relative ]">
 										<p class="[ evento ]"><?php the_title(); ?></p>
 									</div>
@@ -222,7 +227,7 @@
 									<div class="[ circle-xsmall ][ margin-auto ]"></div>
 									<div class="[ border-gray--large ]"></div>
 									<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]"><?php echo $date; ?></p>
-								</a>
+								<?php if($tipo_evento != 3) echo '</a>'; ?>
 							</li>
 
 						<?php endif;
@@ -231,11 +236,12 @@
 					endwhile;
 
 					$data = '';
-					if ($cronologia->found_posts >= 7 AND $count_pasados > 0) {
+					if ($cronologia->found_posts >= 7 AND $count_pasados > 0):
 						$recorre = ($count_pasados - 1 ) * 150;
 						echo '<input type="hidden" id="recorre" value="'.$recorre.'">';
-					}
-
+					endif;
+				else:
+					echo '<p class="text-center">No existen eventos</p>';
 				endif;
 				wp_reset_postdata(); ?>
 
@@ -244,10 +250,11 @@
 	</div>
 </div><!--/container-->
 
-<div class="[ bg-gray-light padding--bottom--large ]">
+
+<div class="[ bg-gray-light ]">
 	<div class="[ container ]">
-		<h3 class="[ margin-top--large ][ text-uppercase text-center ][ color-primary ]">Noticias</h3>
-		<div class="[ row ][ padding--top ]">
+		<h3 class="[ margin-top--xlarge ][ text-uppercase text-center ][ color-primary ]">Noticias</h3>
+		<div class="[ row ][ margin-top-bottom--large ]">
 <!-- 3 noticias -->
 			<div class="[ col-xs-12 col-sm-4 ]">
 				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
@@ -269,7 +276,7 @@
 			</div>
 		</div>
 <!-- con 2 noticias -->
-		<div class="[ row ][ padding--top ]">
+		<div class="[ row ][ margin-bottom--large ]">
 			<div class="[ col-xs-12 col-sm-offset-2 col-sm-4 ]">
 				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
 				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
@@ -284,7 +291,7 @@
 			</div>
 		</div>
 <!-- con 1 noticia -->
-		<div class="[ row ][ padding--top ]">
+		<div class="[ row ][ margin-bottom--large ]">
 			<div class="[ col-xs-12 col-sm-offset-4 col-sm-4 ]">
 				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
 				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>

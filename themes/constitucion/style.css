@@ -6811,6 +6811,21 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .box-li.ya-paso p {
   color: rgba(204, 204, 204, 0.75);
 }
+.box-li.nota-destacada a {
+  color: #E80E89;
+}
+.box-li.nota-destacada a:hover {
+  text-decoration: none;
+}
+.box-li.nota-destacada p {
+  color: #E80E89;
+}
+.box-li.nota-destacada .circle-xsmall {
+  background-color: #E80E89;
+}
+.box-li.nota-destacada .vertical-line {
+  border-left: 2px solid #E80E89;
+}
 .box-li a {
   color: #333333;
 }
@@ -7694,6 +7709,9 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 .descanso-visual img {
   width: 100%;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .content-acerca-de {
   margin-top: 40px;
@@ -7783,6 +7801,57 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 .content-mensaje-jefegob blockquote p {
   border-top: dotted #4a4a4a;
+}
+.content-cronica-cdmx {
+  margin-top: 40px;
+}
+.content-cronica-cdmx h3 {
+  font-weight: bold;
+  margin-left: 32%;
+  color: #e80e8a;
+}
+.content-cronica-cdmx p:nth-child(2),
+.content-cronica-cdmx p:nth-child(3) {
+  width: 100%;
+  display: inline-block;
+  padding: 20px;
+  text-align: justify;
+}
+.content-cronica-cdmx blockquote {
+  width: 100%;
+  display: inline-block;
+  border-left: none ;
+  vertical-align: top;
+}
+.content-cronica-cdmx blockquote p {
+  padding-top: 10px;
+  text-align: right;
+  color: #646464;
+  border-top: dotted #e80e8a;
+  border-left: none ;
+}
+@media (min-width: 768px) {
+  .content-cronica-cdmx p:nth-child(2),
+  .content-cronica-cdmx p:nth-child(3) {
+    width: 60%;
+    padding: 10px;
+  }
+  .content-cronica-cdmx blockquote {
+    width: 30%;
+    padding: 10px;
+  }
+  .content-cronica-cdmx blockquote p {
+    padding-top: 20px;
+    text-align: right;
+  }
+}
+.content-cronica-cdmx blockquote p {
+  padding: 50px 0;
+  border-bottom: dotted #e80e8a;
+  display: inline-flex;
+}
+.content-cronica-cdmx blockquote p canvas {
+  margin-left: 20px;
 }
 @-ms-viewport {
   width: device-width;

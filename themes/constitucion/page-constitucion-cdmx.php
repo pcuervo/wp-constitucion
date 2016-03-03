@@ -16,9 +16,9 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <section class="[ container ]" id="jefe_gobierno" >
+	<h2 class="[ margin-bottom ]"></h2>
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
-
 			<div class="[ content-mensaje-jefegob ]">
 				<blockquote>
 					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
@@ -31,7 +31,6 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 					Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
 				</p>
 			</div>
-
 		</div>
 	</div>
 </section>

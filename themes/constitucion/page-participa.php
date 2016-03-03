@@ -147,7 +147,7 @@ if( isset( $result['success'] ) ): ?>
 			</div> <!-- row -->
 	</section>
 
-	<section class="[ container padding--sides--xsm--large ][ text-center ][ margin-bottom--large ]" id="imagina_tu_ciudad">
+	<section class="[ container padding--sides--xsm--large ][ text-center ][ margin-bottom--large ]" id="imagina_ciudad">
 		<h2 class="[ text-left ]">Imagina tu ciudad</h2>
 		<a class="[ btn btn-primary btn-large ][ margin-bottom ]" href="<?php echo site_url('/sondeo-masivo/'); ?> "><strong>Participa</strong></a>
 		<h2>¿Ya participaste?</h2>
@@ -163,6 +163,50 @@ if( isset( $result['success'] ) ): ?>
 			</div>
 		</form>
 	</section>
+	<section class="[ container ]">
+		<h2>Resultados</h2>
+		<a class="[ btn btn-primary btn-large ][ margin-bottom ]" data-toggle="modal" data-target="#participador">Obten tu certificado</a>
+	</section>
+
+	<!-- Modal participador -->
+	<div id="participador" class="modal fade" role="dialog">
+		<div class="modal-dialog modal--participador">
+			<!-- Modal content-->
+			<div class="modal-content">
+<!-- 				<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
+ -->				<div class="modal-body">
+ 					<div class="[ border-primary ]">
+ 						<div class="[ border-primary ]">
+ 							<div class="[ border-primary ]">
+								<div class="[ row ]">
+									<div class="[ col-xs-12 col-sm-4 ]">
+										<div class="[ row ]">
+											<div class="[ col-xs-6 col-sm-12 ]">
+												<img src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
+											</div>
+											<div class="[ col-xs-6 col-sm-12 ]">
+												<p>Con el folio núm. <span>000000</span><br>
+												podrás darle seguimiento <br>
+												a tu participación</p>
+											</div>
+										</div>
+									</div>
+									<div class="[ col-xs-12 col-sm-8 ]">
+										<h3>Diego emilio cuesy edgar</h3>
+										<p>El grupo de trabajo redactor del proyecto de constitución Política de la Ciudad de México otorga la presente constancia por haber contribuido con ideas, reflexiones y propuestas.</p>
+										<p>La Ciudad de México somos todas y todos. Gracias por ser parte de este proceso histórico.</p>
+										<p>Ciudad de México a 2 de marzo de 2016</p>
+									</div>
+								</div>
+ 							</div><!-- border -->
+ 						</div><!-- border -->
+ 					</div><!-- border -->
+
+				</div><!-- modal-body -->
+			</div>
+		</div>
+	</div>
+
 	<section class="[ bg-gray-light ][ padding--top--xlarge padding-bottom--large--sm ]">
 		<article class="[ container padding--sides--xsm padding--bottom--large ]">
 			<h2 class="[ no-margin-top ]">Voces ciudadanas</h2>

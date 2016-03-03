@@ -263,6 +263,8 @@
 .border-gray{border-bottom: 1px solid @gray-xxlight;}
 .border-gray--large{border-bottom: 3px solid @gray-xlight;}
 
+.border-primary{ border: 1px solid @primary;}
+
 // Color
 // -------------------------
 .color-primary { color: @primary; }
@@ -287,6 +289,7 @@
 .bg-gray--xxlight{ background-color: @gray-xxlight;}
 .bg--light{ background-color:rgba(255, 255, 255, 0.8) }
 .bg-light{ background-color:@light; }
+.bg-gray--fondo{background-color: @gray-bg;}
 
 
 //
@@ -440,7 +443,7 @@
 		text-transform: uppercase;
 		margin-left: 32%;
 		color: @primary;
-	}	
+	}
 	p:nth-child(2),p:nth-child(3) {
 		width: 100%;
 		display: inline-block;
@@ -462,7 +465,6 @@
 		}
 
 	@media (min-width: @screen-sm-min){
-		
 		p:nth-child(2),p:nth-child(3) {
 		width: 60%;
 		padding: 10px;

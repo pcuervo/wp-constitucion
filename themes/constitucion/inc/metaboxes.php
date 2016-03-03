@@ -10,6 +10,7 @@
 
 		add_meta_box( 'meta-box-ubicacion', 'Ubicación', 'show_metabox_ubicacion', 'kioskos');
 		add_meta_box( 'meta-box-extras_evento', 'Extras evento', 'show_metabox_extras_evento', 'eventos', 'side', 'high');
+		add_meta_box( 'meta-box-extras_evento_line', 'Extras evento', 'show_metabox_extras_evento', 'linea-del-tiempo', 'side', 'high');
 		add_meta_box( 'meta-box-video_voces', 'Insertar video', 'show_metabox_video_voces', 'voces-ciudadanas');
 		add_meta_box( 'meta-box-extras_noticias', 'Extras', 'show_metabox_extras_noticias', 'post', 'side', 'high');
 
@@ -87,7 +88,17 @@
 
 		echo "<label for='fecha_evento' class='label-paquetes'>Fecha del evento </label>";
 		echo "<input type='text' class='widefat datepicker' id='fecha_evento' name='fecha_evento' value='$fecha_evento'/><br><br>";
-	}
+		$tipo = get_post_meta( $post->ID, 'tipo-de-evento', true );
+		$checked_1 = $tipo == 1 ? 'checked' : '';
+		$checked_2 = $tipo == 2 ? 'checked' : ''; 
+		$checked_3 = $tipo == 3 ? 'checked' : ''; 
+
+		echo "<label for='tipo-de-evento' class='label-paquetes'>Tipo de evento: </label>";?><br><br>
+		<input type="radio" name="tipo-de-evento" value="1" <?php echo $checked_1; ?> > Tipo 1<br>
+  		<input type="radio" name="tipo-de-evento" value="2" <?php echo $checked_2; ?> > Tipo 2<br>
+  		<input type="radio" name="tipo-de-evento" value="3" <?php echo $checked_3; ?> > Nota destacada<br>
+
+	<?php }
 
 
 	function show_metabox_video_voces($post){
@@ -160,6 +171,8 @@
 
 		if ( isset($_POST['fecha_evento']) and check_admin_referer(__FILE__, '_evento_nonce') ){
 			update_post_meta($post_id, 'fecha_evento', $_POST['fecha_evento']);
+			update_post_meta($post_id, 'tipo-de-evento', $_POST['tipo-de-evento']);
+			
 		}
 
 		if ( isset($_POST['video_voces']) and check_admin_referer(__FILE__, '_video_nonce') ){

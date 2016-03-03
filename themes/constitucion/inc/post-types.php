@@ -162,4 +162,35 @@
 		);
 		register_post_type( 'formulario-cdmx', $args );
 
+		// 
+		$labels = array(
+			'name'          => 'Linea del tiempo',
+			'singular_name' => 'Linea del tiempo',
+			'add_new'       => 'Nuevo evento',
+			'add_new_item'  => 'Nuevo evento',
+			'edit_item'     => 'Editar evento',
+			'new_item'      => 'Nuevo evento',
+			'all_items'     => 'Todos',
+			'view_item'     => 'Ver evento',
+			'search_items'  => 'Buscar evento',
+			'not_found'     => 'No se encontro',
+			'menu_name'     => 'Linea del tiempo'
+		);
+
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'linea-del-tiempo' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => 6,
+			'supports'           => array( 'title', 'editor' )
+		);
+		register_post_type( 'linea-del-tiempo', $args );
+
 	});

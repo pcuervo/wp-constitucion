@@ -5940,6 +5940,20 @@ button.list-group-item-danger.active:focus {
 .embed-responsive-4by3 {
   padding-bottom: 75%;
 }
+.video--home {
+  width: 100%;
+  height: 185px;
+}
+@media (min-width: 768px) {
+  .video--home {
+    height: 400px;
+  }
+}
+@media (min-width: 992px) {
+  .video--home {
+    height: 500px;
+  }
+}
 .well {
   min-height: 20px;
   padding: 19px;
@@ -7437,6 +7451,9 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .bg-gray-light {
   background-color: #eeeeee;
 }
+.bg-gray--xxlight {
+  background-color: #cccccc;
+}
 .bg--light {
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -7447,7 +7464,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
   opacity: 0.7;
 }
 .height-home-video {
-  height: 250px;
+  height: 185px;
 }
 @media (min-width: 768px) {
   .height-home-video {

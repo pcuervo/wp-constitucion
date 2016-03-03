@@ -203,7 +203,7 @@ if( isset( $result['success'] ) ): ?>
  					</div><!-- border -->
 
 				</div><!-- modal-body -->
-			</div>π
+			</div>
 		</div>
 	</div>
 
@@ -216,28 +216,23 @@ if( isset( $result['success'] ) ): ?>
 					<input type="text" name="tipo_ensayo" id="tipo_ensayo" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="">
 					<label for="">Nombre del evento o sesión colaborativa de la cual se derivó el documento</label>
 					<input name="nombre_evento" id="nombre_evento" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="">
-					<label for="">Frase que describe el evento</label>
-					<label for="">Comparte una frase que describa el evento/sesión de trabajo</label>
+					<label for="">Frase que describe el evento <span>Comparte una frase que describa el evento/sesión de trabajo</span></label>
 					<input name="frase_evento" id="frase_evento" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="">
 					<label for="">Fechas en las que sesionó el grupo de trabajo</label>
-					<input type="date" name="fecha" class="[ width-50 ]">
-					<input type="date" name="fecha" class="[ width-50 ]">
-					<label for="">Resumen. Describe a continuación las reflexiones o propuestas centrales de la sesión de trabajo y el contexto en el que esta se llevó a cabo.</label>
+					<input type="date" name="fecha" class="[ input-primary ][ margin-bottom--large ][ width-50 ]">
+					<input type="date" name="fecha" class="[ input-primary ][ margin-bottom--large ][ width-50 pull-left ]">
+					<label for="">Resumen <span>Describe a continuación las reflexiones o propuestas centrales de la sesión de trabajo y el contexto en el que esta se llevó a cabo.</span></label>
 					<input name="resumen_ensayo" id="resumen_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 250 palabras" required="">
-					<label for="">Palabras Clave</label>
-					<label for="">Señala a continuación 3 palabras clave vinculadas a este documento</label>
+					<label for="">Palabras Clave <span>Señala a continuación 3 palabras clave vinculadas a este documento</span></label>
 					<input name="palabras_ensayo" id="palabras_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Ej. vivienda, salario, comunidad" required="">
-					<label for="">Frase -Mensaje central</label>
-					<label for="">Comparte en una frase un mensaje central de la relatoría o ensayo</label>
+					<label for="">Frase -Mensaje central <span>Comparte en una frase un mensaje central de la relatoría o ensayo</span></label>
 					<input name="mensaje_ensayo" id="mensaje_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="">
-					<label for="">Autores</label>
-					<label for="">Lista a continuación el nombre de todos los autores separados por comas</label>
+					<label for="">Autores <span>Lista a continuación el nombre de todos los autores separados por comas</span></label>
 					<input name="autores_ensayo" id="autores_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
-					<label for="">Institución u organización</label>
-					<label for="">En caso de que este ensayo o relatoría haya sido elaborado por una institución u organización señala abajo cuales. En caso de más de una, separar por comas.</label>
+					<label for="">Institución u organización <span>En caso de que este ensayo o relatoría haya sido elaborado por una institución u organización señala abajo cuales. En caso de más de una, separar por comas.</span></label>
 					<input name="resumen_ensayo" id="resumen_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
 					<input name="" id="" type="hidden" value="">
-					<button type="submit" class="[ btn btn-secondary ][ pull-right ]">enviar</button>
+					<button type="submit" class="[ btn btn-primary btn--large ][ pull-right ]"><strong>enviar</strong></button>
 				</form>
 			</div>
 		</div>

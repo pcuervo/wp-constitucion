@@ -238,5 +238,59 @@
 	</div>
 </div><!--/container-->
 
+<div class="[ bg-gray-light  ]">
+	<div class="[ container ]">
+		<h3 class="[ margin-top--large ][ text-uppercase text-center ][ color-primary ]">Noticias</h3>
+		<div class="[ row ][ padding--top ]">
+<!-- 3 noticias -->		
+			<div class="[ col-xs-12 col-sm-4 ]">
+				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
+				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
+				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
+				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
+			</div>
+			<div class="[ col-xs-12 col-sm-4 ]">
+				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
+				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
+				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
+				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
+			</div>
+			<div class="[ col-xs-12 col-sm-4 ]">
+				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
+				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
+				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
+				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
+			</div>
+		</div>
+<!-- con 2 noticias -->	
+		<div class="[ row ][ padding--top ]">
+			<div class="[ col-xs-12 col-sm-offset-2 col-sm-4 ]">
+				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
+				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
+				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
+				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
+			</div>
+			<div class="[ col-xs-12 col-sm-4 ]">
+				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
+				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
+				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
+				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
+			</div>
+		</div>	
+<!-- con 1 noticia -->	
+		<div class="[ row ][ padding--top ]">
+			<div class="[ col-xs-12 col-sm-offset-4 col-sm-4 ]">
+				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
+				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
+				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
+				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
+			</div>
+		</div>
+
+	</div> <!-- /container -->
+	
+</div>
+
+
 
 <?php get_footer(); ?>

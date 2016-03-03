@@ -209,13 +209,38 @@ if( isset( $result['success'] ) ): ?>
 
 	<section class="[ container ]">
 		<h2>Ensayos</h2>
+		<div class="[ row ]">
+			<div class="[ col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 ]">
+
+			</div>
+		</div>
 		<form class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
-			<input type="text" name="mensaje_cdmx" id="mensaje_cdmx" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Escribe tu mensaje" required="">
-			<h2 class="[ margin-bottom--large ][ fz-small--xs ]">Con respeto,</h2>
-			<input name="nombre_cdmx" id="nombre_cdmx" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Tu nombre" required="">
-			<input name="email_cdmx" id="email_cdmx" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Correo Electrónico" required="">
-			<input name="telefono_cdmx" id="telefono_cdmx" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Teléfono" required="">
-			<input name="accion" id="accion" type="hidden" value="guarda-formulario">
+			<label for="">Título del ensayo o de la relatoría</label>
+			<input type="text" name="tipo_ensayo" id="tipo_ensayo" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="">
+			<label for="">Nombre del evento o sesión colaborativa de la cual se derivó el documento</label>
+			<input name="nombre_evento" id="nombre_evento" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="">
+			<label for="">Frase que describe el evento</label>
+			<label for="">Comparte una frase que describa el evento/sesión de trabajo</label>
+			<input name="frase_evento" id="frase_evento" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="">
+			<label for="">Fechas en las que sesionó el grupo de trabajo</label>
+			<input name="fechas_ensayo" id="fechas_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Puede ser un sólo día" required="">
+
+
+			<label for="">Resumen. Describe a continuación las reflexiones o propuestas centrales de la sesión de trabajo y el contexto en el que esta se llevó a cabo.</label>
+			<input name="resumen_ensayo" id="resumen_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 250 palabras" required="">
+			<label for="">Palabras Clave</label>
+			<label for="">Señala a continuación 3 palabras clave vinculadas a este documento</label>
+			<input name="palabras_ensayo" id="palabras_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Ej. vivienda, salario, comunidad" required="">
+			<label for="">Frase -Mensaje central</label>
+			<label for="">Comparte en una frase un mensaje central de la relatoría o ensayo</label>
+			<input name="mensaje_ensayo" id="mensaje_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="">
+			<label for="">Autores</label>
+			<label for="">Lista a continuación el nombre de todos los autores separados por comas</label>
+			<input name="autores_ensayo" id="autores_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+			<label for="">Institución u organización</label>
+			<label for="">En caso de que este ensayo o relatoría haya sido elaborado por una institución u organización señala abajo cuales. En caso de más de una, separar por comas.</label>
+			<input name="resumen_ensayo" id="resumen_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+			<input name="" id="" type="hidden" value="">
 			<button type="submit" class="[ btn btn-secondary ][ pull-right ]">enviar</button>
 		</form>
 	</section>
@@ -258,36 +283,6 @@ if( isset( $result['success'] ) ): ?>
 				<img class="[ inline-block align-middle ][ svg icon icon--iconed--small icon--thickness-1 icon--stoke ][ color-youtube ]"  src="<?php echo THEMEPATH; ?>icons/youtube.svg">
 			</div>
 		</article>
-	</section>
-
-	<section class="[ container ]">
-		<h2 class="[ margin-top--large ]">Diálogos Públicos</h2>
-		<div class="[ row ]">
-			<div class="[ col-xs-12 ][ col-sm-offset-3 col-sm-6 ]">
-				<p>En esta sección podrás registrar acontecimientos que sean espacios de diálogo relacionados a la construcción de la Constitución de la Ciudad de México. Estos pueden ser sesiones de trabajo colaborativas, foros, asambleas, talleres o conferencias.</p>
-			</div>
-			<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ][ bg-gray-light ][ padding--large ]">
-				<form action="">
-					<div class="form-group">
-						<label for="">Nombre del acontecimiento (máximo 100 caracteres)</label>
-						<input input type="text" class="form-control" placeholder="Text input">
-						<label for="">Frase que describe el acontecimiento Comparte una frase que describa el evento/sesión de trabajo/diálogo público (120 caracteres) </label>
-						<input input type="text" class="form-control" placeholder="Text input">
-						<label for="">Descripción Describe los objetivos, alcances y perfil de asistentes de tu acontecimiento  (120 palabras) </label>
-						<input input type="text" class="form-control" placeholder="Text input">
-						<label for="">Liga oficial (Campo No obligatorio) Copia a continuación la liga del sitio oficial del acontecimiento, la cuenta de Facebook o de Twitter </label>
-						<input input type="text" class="form-control" placeholder="Text input">
-						<label for="">Fechas (Puede ser un sólo día) </label>
-						<input type="date" name="fecha">
-					</div>
-					<button type="submit" class="btn btn-default">Submit</button>
-				</form>
-			</div>
-			
-		</div>
-
-
-		
 	</section>
 
 <?php get_footer(); ?>

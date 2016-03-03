@@ -13,6 +13,8 @@
 		add_meta_box( 'meta-box-extras_evento_line', 'Extras evento', 'show_metabox_extras_evento', 'linea-del-tiempo', 'side', 'high');
 		add_meta_box( 'meta-box-video_voces', 'Insertar video', 'show_metabox_video_voces', 'voces-ciudadanas');
 		add_meta_box( 'meta-box-extras_noticias', 'Extras', 'show_metabox_extras_noticias', 'post', 'side', 'high');
+		add_meta_box( 'meta-box-info_ensayo', 'Información del ensayo', 'show_metabox_info_ensayo', 'ensayos');
+
 
 		if ($post->post_name == 'participa' || $post->post_name == 'proceso-participativo'){
 			add_meta_box( 'meta-box-pasos', 'Pasos', 'show_metabox_pasos', 'page');
@@ -120,6 +122,28 @@
 		wp_nonce_field(__FILE__, '_extra_cdmx_nonce');
 		$contenido_extra = get_post_meta($post->ID, 'contenido_extra', true);
 		wp_editor( $contenido_extra, 'contenido_extra' );
+
+	}
+
+	function show_metabox_info_ensayo($post){
+		$nombre_evento = get_post_meta( $post->ID, 'nombre_evento', true );
+		$frase_evento = get_post_meta( $post->ID, 'frase_evento', true );
+		$fechaInicio = get_post_meta( $post->ID, 'fechaInicio', true );
+		$fechaFinal = get_post_meta( $post->ID, 'fechaInicio', true );
+
+
+
+		echo "<label for='nombre_evento' class='label-paquetes'>Nombre del evento o sesión colaborativa: </label>";
+		echo "<input type='text' class='widefat' id='nombre_evento' name='nombre_evento' value='$nombre_evento'/><br><br>";
+
+		echo "<label for='frase_evento' class='label-paquetes'>Frase que describe el evento: </label>";
+		echo "<input type='text' class='widefat' id='frase_evento' name='frase_evento' value='$frase_evento'/><br><br>";
+
+		echo "<label for='$fechaInicio' class='label-paquetes'>Fechas Inicio: </label>";
+		echo "<input type='text' class='widefat date-ensayo' id='$fechaInicio' name='$fechaInicio' value='$fechaInicio'/><br><br>";
+
+		echo "<label for='$fechaFinal' class='label-paquetes'>Fechas Final: </label>";
+		echo "<input type='text' class='widefat date-ensayo-fin' id='$fechaFinal' name='$fechaFinal' value='$fechaFinal' disabled/><br><br>";
 
 	}
 

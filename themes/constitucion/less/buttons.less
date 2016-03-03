@@ -189,6 +189,12 @@ input[type="button"] {
   }
 }
 
+.btn--small{
+  padding: @padding-small-vertical @padding-small-horizontal!important;
+  font-size: @font-size-small!important;
+  line-height: @line-height-small!important;
+}
+
 .btn-primary{
   background-color: transparent;
   border: 2px solid @gray-xlight;
@@ -215,6 +221,21 @@ input[type="button"] {
   &:hover{
     background-color: @gray-light;
     color: @light;
+    .transition;
+  }
+}
+
+.btn-tertiary{
+  .btn-sm;
+  background-color: @gray-xlight;
+  border: 2px solid @gray-xlight;
+  text-transform: uppercase;
+  color: @light;
+  font-weight: lighter;
+  font-family: "Alegreya Sans", sans-serif;
+  &:hover{
+    background-color: transparent;
+    color: @gray-xlight;
     .transition;
   }
 }

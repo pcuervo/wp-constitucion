@@ -77,6 +77,7 @@
 .fixed{ position: fixed; }
 
 .top-20{ top: 20px;}
+.top-8{ top: -8px;}
 .bottom-10{ bottom: 10px;}
 .top-10{ top: 10px;}
 .top-12{ top: 12px;}
@@ -267,6 +268,7 @@
 .color-primary { color: @primary; }
 .color-gray { color: @gray; }
 .color-gray--light { color: @gray-light; }
+.color-gray--xlight { color: @gray-xxlight; }
 .color-light-cdmx { color: @light-cdmx; }
 .color-light { color: @light; }
 .color-youtube{color: @youtube;}
@@ -282,13 +284,20 @@
 .bg-gray-darken { background-color: darken(@gray, 10%); }
 .bg-dark--opacity{ background-color:rgba(0, 0, 0, 0.5) }
 .bg-gray-light{ background-color: @gray-lighter;}
+.bg-gray--xxlight{ background-color: @gray-xxlight;}
 .bg--light{ background-color:rgba(255, 255, 255, 0.8) }
 .bg-light{ background-color:@light; }
+
+
+//
+// -------------------------
+.opacity-7{opacity: 0.7;}
+
 
 //
 // -------------------------
 .height-home-video{
-  height: 250px;
+  height: 185px;
     @media (min-width: @screen-sm-min){ height: 400px; }
     @media (min-width: @screen-md-min){ height: 500px; }
 }
@@ -396,4 +405,81 @@
 	position: absolute;
 	top: 50%; left: 25%;
 	.translate(-50%, -50%);
+}
+
+
+
+//content grupo de trabajo
+.content-trabajo{
+	@media (min-width: 480px) and (max-width: 767px) { width: 33%; } //col-xsm-4
+	& img{
+		.img-responsive;
+		margin: auto;
+	}
+	& h3{
+		.margin-top--xsmall;
+		@media (max-width: @screen-sm){ font-size: 16px; }
+		@media (min-width: @screen-sm){ font-size: 18px; }
+	}
+	& p{
+		@media (max-width: @screen-sm){ font-size: 12px; }
+		@media (min-width: @screen-sm){ font-size: 14px; }
+	}
+}
+
+
+.descanso-visual img{
+	.width-100;
+}
+
+.content-acerca-de{
+	.margin-top--large;
+	h3{
+		font-weight: bold;
+		margin-left: 32%;
+		color: @primary;
+	}	
+	p:nth-child(2), p:nth-child(3) {
+		width: 100%;
+		display: inline-block;
+		padding: 20px;
+		text-align: justify;
+		}
+		blockquote {
+			width: 100%;
+			display: inline-block;
+			border-left: none ;
+			vertical-align: top;
+		}
+		blockquote p{
+			padding-top: 10px;
+			text-align: right;
+			color: lighten(@gray, 10%);
+			border-top: dotted @primary;
+			border-left: none ;
+		}
+
+	@media (min-width: @screen-sm-min){
+		
+		p:nth-child(2), p:nth-child(3) {
+		width: 60%;
+		padding: 10px;
+		}
+		blockquote {
+			width: 30%;
+			padding: 10px;
+		}
+		blockquote p{
+			padding-top: 20px;
+			text-align: right;
+		}
+	}
+
+}
+
+.content-mensaje-jefegob{
+	.content-acerca-de;
+		blockquote p{
+		border-top: dotted @gray;
+	}
 }

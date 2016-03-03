@@ -3,13 +3,28 @@
 // --------------------------------------------------
 
 footer{
-	.padding--top-bottom--large;
+	.padding--top-bottom;
 	.bg-gray-darken;
+	.text-center
 }
 
 footer img{
-	.width-60;
-	 @media (min-width: @screen-sm-min){
-	 	.width-20;
-	 }
+	.margin-bottom;
+	width: 150px;
+	 @media (min-width: 480px){ width: 180px; }
+}
+
+footer a{
+	text-decoration: none;
+	.fz-small;
+	.margin-sides;
+	.color-gray--xlight;
+	@media (max-width: 480px){
+		display: block;
+		.margin-bottom--small;
+	}
+	&:hover{
+		.color-primary;
+		text-decoration: none;
+	}
 }

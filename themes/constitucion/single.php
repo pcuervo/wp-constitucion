@@ -1,4 +1,4 @@
-<?php get_header(); the_post(); 
+<?php get_header(); the_post();
 $date_arr = getDateTransform( $post->post_date ); ?>
 
 <div class="[ container ]">
@@ -13,10 +13,10 @@ $date_arr = getDateTransform( $post->post_date ); ?>
 				<p><?php echo $date_arr[4].' '.$date_arr[1].' '.$date_arr[2] ?></p>
 				<h2><?php the_title(); ?></h2>
 				<?php the_content(); ?>
-				<a class="[ fz-small ][ color-primary ][ margin-top--large ]" href="<?php echo site_url('/noticias/'); ?>">  << Regresar </a>
+				<a class="[ btn btn-primary btn-large ]" href="<?php echo site_url('/noticias/'); ?>">Regresar</a>
 			</section>
 		</div>
 	</div>
 </div>
-	
+
 <?php get_footer(); ?>

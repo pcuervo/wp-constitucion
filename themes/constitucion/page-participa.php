@@ -147,7 +147,8 @@ if( isset( $result['success'] ) ): ?>
 			</div> <!-- row -->
 	</section>
 
-	<section class="[ container padding--sides--xsm--large ][ text-center ][ margin-bottom--large ]">
+	<section class="[ container padding--sides--xsm--large ][ text-center ][ margin-bottom--large ]" id="imagina_tu_ciudad">
+		<h2 class="[ text-left ]">Imagina tu ciudad</h2>
 		<a class="[ btn btn-primary btn-large ][ margin-bottom ]" href="<?php echo site_url('/sondeo-masivo/'); ?> "><strong>Participa</strong></a>
 		<h2>¿Ya participaste?</h2>
 		<p class="[ text-uppercase ]">Ingresa tu número de folio para obtener tu certificado</p>
@@ -201,24 +202,6 @@ if( isset( $result['success'] ) ): ?>
 				<img class="[ inline-block align-middle ][ svg icon icon--iconed--small icon--thickness-1 icon--stoke ][ color-youtube ]"  src="<?php echo THEMEPATH; ?>icons/youtube.svg">
 			</div>
 		</article>
-	</section>
-	<section class="[ container padding--sides--xsm ][ margin-bottom--xlarge ]">
-		<div class="[ bg-light float-top--sm ][ padding--top-bottom--large padding--sides--large--sm ]">
-			<div>
-				<h2 class="[ inline-block align-middle ][ no-margin ]">Estimados</h2>
-				<img class="[ inline-block align-middle ][ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif">
-			</div>
-			<form class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
-				<input type="text" name="mensaje_cdmx" id="mensaje_cdmx" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Escribe tu mensaje" required="">
-				<h2 class="[ margin-bottom--large ][ fz-small--xs ]">Con respeto,</h2>
-				<input name="nombre_cdmx" id="nombre_cdmx" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Tu nombre" required="">
-				<input name="email_cdmx" id="email_cdmx" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Correo Electrónico" required="">
-				<input name="telefono_cdmx" id="telefono_cdmx" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Teléfono" required="">
-				<input name="accion" id="accion" type="hidden" value="guarda-formulario">
-
-				<button type="submit" class="[ btn btn-secondary ][ pull-right ]">enviar</button>
-			</form>
-		</div>
 	</section>
 
 <?php get_footer(); ?>

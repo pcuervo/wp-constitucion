@@ -3097,6 +3097,7 @@ select[multiple].input-lg {
     margin-right: 20px;
     margin-bottom: 20px;
     padding: 12px 24px;
+    border-radius: 10px;
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
@@ -6895,35 +6896,41 @@ ul.horizontal-slide li[class*="col"]:first-child {
   bottom: inherit;
   top: 0;
 }
-/* Responsive   slider style */
-.rslides {
+/* Responsive   slider style
+
+.slides {
   position: relative;
   list-style: none;
   overflow: hidden;
   width: 100%;
   padding: 0;
   margin: 0;
-}
-.rslides li {
+  }
+
+.slides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
   display: none;
   width: 100%;
   left: 0;
   top: 0;
-}
-.rslides li:first-child {
+  }
+
+.slides li:first-child {
   position: relative;
   display: block;
   float: left;
-}
-.rslides img {
+  }
+
+.slides img {
   display: block;
   height: auto;
   float: left;
   width: 100%;
   border: 0;
-}
+  }
+  
+ */
 .clearfix:before,
 .clearfix:after,
 .dl-horizontal dd:before,
@@ -7517,6 +7524,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
   border: 1px solid #e80e8a;
 }
 .border-box-shadow {
+  border-radius: 10px;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

@@ -216,19 +216,20 @@ if( isset( $result['success'] ) ): ?>
 					</div>
 				</div> <!-- row -->
 		</article>
+
 		<div class="[ box-shadow--form ]">
-			<h2 class="[ margin-bottom--large ]">Formato y formulario para registrar eventos</h2>
+			<h2 class="[ margin-bottom--large ]">Formato para registrar eventos</h2>
 			<form action="">
-				<div class="[ row ]">
+        		<div class="[ row ]">
 					<div class="[ col-xs-12 col-sm-6 ]">
-						<label for=""><strong class="[ color-primary ]">Nombre del acontecimiento </strong>(máximo 100 caracteres)</label>
-						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Nombre del acontecimiento">
-						<label for=""><strong class="[ color-primary ]">Frase que describe el acontecimiento</strong> Comparte una frase que describa el evento/sesión de trabajo/diálogo público (120 caracteres) </label>
-						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Frase que describe el acontecimiento">
-						<label for=""><strong class="[ color-primary ]">Descripción Describe los objetivos, alcances y perfil de asistentes de tu acontecimiento</strong>  (120 palabras) </label>
-						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Descripción Describe los objetivos, alcances y perfil de asistentes de tu acontecimiento">
-						<label for=""><strong class="[ color-primary ]">Liga oficial</strong> (Campo No obligatorio) Copia a continuación la liga del sitio oficial del acontecimiento, la cuenta de Facebook o de Twitter </label>
-						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Liga oficial">
+						<label for=""><strong class="[ color-primary ]">Nombre</strong> del acontecimiento</label>
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="(máximo 100 caracteres)">
+						<label for=""><strong class="[ color-primary ]">Frase que describe el acontecimiento</strong> Comparte una frase que describa el evento/sesión de trabajo/diálogo público</label>
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder=" (120 caracteres) ">
+						<label for=""><strong class="[ color-primary ]">Descripción</strong> Describe los objetivos, alcances y perfil de asistentes de tu acontecimiento </label>
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder=" (120 palabras) ">
+						<label for=""><strong class="[ color-primary ]">Liga oficial</strong><i class="[ color-gray--light ]"> (Campo No obligatorio) </i> Copia a continuación la liga del sitio oficial del acontecimiento, la cuenta de Facebook o de Twitter </label>
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Liga oficial (Campo No obligatorio) ">
 						<label for=""><strong class="[ color-primary ]">Fechas</strong> (Puede ser un sólo día) </label>
 						<input class="[ input-primary border-gray ][ margin-bottom--large ]" type="date" name="fecha">
 						<label for=""><strong class="[ color-primary ]">Ubicación</strong> Señala abajo dónde se llevara a cabo </label>
@@ -241,10 +242,14 @@ if( isset( $result['success'] ) ): ?>
 						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Institución u organización.">
 						<label for=""><strong class="[ color-primary ]">Asistentes</strong></label>
 						<div class="[ margin-bottom--large ]">
-							<input  type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-							La asistencia es libre
-							<input  type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-							por invitación
+							<div>
+								<input  type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+								La asistencia es libre
+							</div>
+							<div>
+								<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+								Por invitación
+							</div>
 						</div>
 						<label for=""><strong class="[ color-primary ]">Fotografía de cartel o publicidad del acontecimiento.</strong> (Campo No obligatorio) Coloca el archivo de la fotografía en google drive, dropbox o onedrive y a continuación copia la liga.</label>
 						<input class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" type="file" id="exampleInputFile">
@@ -253,7 +258,7 @@ if( isset( $result['success'] ) ): ?>
 					</div>
 				</div>
 			</form>
-			<div class="[ text-center ]" id="ensayos">
+			<div class="[ text-center ]">
 				<button type="submit" class="[ btn btn-primary btn--large ]"><strong>enviar</strong></button>
 			</div>
 		</div>

@@ -255,18 +255,31 @@ if( isset( $result['success'] ) ): ?>
 				<p>En esta sección podrás registrar acontecimientos que sean espacios de diálogo relacionados a la construcción de la Constitución de la Ciudad de México. Estos pueden ser sesiones de trabajo colaborativas, foros, asambleas, talleres o conferencias.</p>
 			</div>
 			<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ][ bg-gray-light ][ padding--large ]">
+				<h2>Formato y formulario para registrar eventos</h2>
 				<form action="">
 					<div class="form-group">
-						<label for="">Nombre del acontecimiento (máximo 100 caracteres)</label>
-						<input input type="text" class="form-control" placeholder="Text input">
+						<label for=""><span class="[ color-primary ]">Nombre del acontecimiento </span>(máximo 100 caracteres)</label>
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Text input">
 						<label for="">Frase que describe el acontecimiento Comparte una frase que describa el evento/sesión de trabajo/diálogo público (120 caracteres) </label>
-						<input input type="text" class="form-control" placeholder="Text input">
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Text input">
 						<label for="">Descripción Describe los objetivos, alcances y perfil de asistentes de tu acontecimiento  (120 palabras) </label>
-						<input input type="text" class="form-control" placeholder="Text input">
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Text input">
 						<label for="">Liga oficial (Campo No obligatorio) Copia a continuación la liga del sitio oficial del acontecimiento, la cuenta de Facebook o de Twitter </label>
-						<input input type="text" class="form-control" placeholder="Text input">
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Text input">
 						<label for="">Fechas (Puede ser un sólo día) </label>
 						<input type="date" name="fecha">
+						<label for="">Ubicación Señala abajo dónde se llevara a cabo </label>
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Text input">
+						<label for="">Horario ¿En qué momentos se llevará a cabo el evento? </label>
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Text input">
+						<label for="">Institución u organización. Si este acontecimiento es organizado por una institución u organización, señala abajo cuál. En caso de más de una, separar por comas. Si son un grupo de personas, nombren su equipo de trabajo. </label>
+						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Text input">
+						<label for="">Asistentes </label>
+							<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+							La asistencia es libre
+							<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+							por invitación 
+
 					</div>
 					<button type="submit" class="btn btn-default">Submit</button>
 				</form>

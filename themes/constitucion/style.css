@@ -4971,12 +4971,6 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   background-color: #fff;
   cursor: not-allowed;
 }
-label {
-  font-family: "ABeeZee", sans-serif;
-}
-label span {
-  font-weight: 700;
-}
 .label {
   display: inline;
   padding: .2em .6em .3em;

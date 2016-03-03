@@ -97,8 +97,6 @@
 			</div>
 
 
-
-
 	<!-- 	</div>
 	</div> -->
 </section>
@@ -165,12 +163,12 @@
 <!-- Linea tiempo -->
 <div class="[ container ]">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-sm-6 ][ margin-top-bottom--large ]">
+		<div class="[ col-sm-12 ][ margin-top-bottom--large ]">
 			<h3 class="[ text-uppercase text-center ]">Línea del tiempo</h3>
 			<ul id="scroll" class="[ scroll-cronologia ][ horizontal-slide ][ text-center ]">
 
 				<?php $cronologia = new WP_Query(array(
-						'post_type'      => 'eventos',
+						'post_type'      => 'linea-del-tiempo',
 						'posts_per_page' => -1,
 						'orderby'  => 'fecha_evento',
 						'order'    => 'ASC',
@@ -186,6 +184,7 @@
 					$count = 0;
 					$count_pasados = 0;
 					while ( $cronologia->have_posts() ) : $cronologia->the_post();
+						$tipo_evento = get_post_meta( $post->ID, 'tipo-de-evento', true );
 						$date_event = get_post_meta($post->ID, 'fecha_evento', true);
 						$count_pasados = strtotime($date_event) < strtotime( date('Y-m-d') ) ? $count_pasados + 1 : $count_pasados;
 						$class_status = strtotime($date_event) < strtotime( date('Y-m-d') ) ? 'ya-paso ' : '';
@@ -196,9 +195,13 @@
 							$date = $date_arr[1].' '.$date_arr[0].' de '.$date_arr[2];
 						}
 
+						$class_tipo = ($tipo_evento == 3) ? 'nota-destacada ' : '';
+						$url = ($tipo_evento != 3) ? get_permalink() : '';
+
 						if($count%2 == 0): ?>
-						    <li class="[ box-li <?php echo $class_status; ?> ]">
-						    	<a href="<?php the_permalink(); ?>">
+						    <li class="[ box-li <?php echo $class_status.$class_tipo; ?> ]">
+
+						    	<?php if($tipo_evento != 3) echo '<a href="'.$url.'">'; ?>
 									<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ]"><?php echo $date; ?></p>
 									<div class="[ border-gray--large ]"></div>
 									<div class="[ circle-xsmall ][ margin-auto ]"></div>
@@ -206,12 +209,14 @@
 									<div class="[ text--large relative ]">
 										<p class="[ evento evento-bottom ]"><?php the_title(); ?></p>
 									</div>
+								<?php if($tipo_evento != 3) echo '</a>'; ?>
+
 								</a>
 							</li>
 						<?php else: ?>
 
-							<li class="[ box-li <?php echo $class_status; ?> ]">
-								<a href="<?php the_permalink(); ?>">
+							<li class="[ box-li <?php echo $class_status.$class_tipo; ?> ]">
+								<?php if($tipo_evento != 3) echo '<a href="'.$url.'">'; ?>
 									<div class="[ text--large relative ]">
 										<p class="[ evento ]"><?php the_title(); ?></p>
 									</div>
@@ -219,7 +224,7 @@
 									<div class="[ circle-xsmall ][ margin-auto ]"></div>
 									<div class="[ border-gray--large ]"></div>
 									<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]"><?php echo $date; ?></p>
-								</a>
+								<?php if($tipo_evento != 3) echo '</a>'; ?>
 							</li>
 
 						<?php endif;

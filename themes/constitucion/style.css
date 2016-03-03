@@ -6748,6 +6748,21 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .box-li.ya-paso p {
   color: rgba(204, 204, 204, 0.75);
 }
+.box-li.nota-destacada a {
+  color: #E80E89;
+}
+.box-li.nota-destacada a:hover {
+  text-decoration: none;
+}
+.box-li.nota-destacada p {
+  color: #E80E89;
+}
+.box-li.nota-destacada .circle-xsmall {
+  background-color: #E80E89;
+}
+.box-li.nota-destacada .vertical-line {
+  border-left: 2px solid #E80E89;
+}
 .box-li a {
   color: #333333;
 }

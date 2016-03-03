@@ -123,6 +123,7 @@ class Sondeo_CDMX {
 				question_id MEDIUMINT(9) NOT NULL,
 				answer TEXT,
 				reference_code varchar(20),
+				created_at DATETIME,
 				UNIQUE KEY id (id),
 				FOREIGN KEY (question_id)
 					REFERENCES " . $wpdb->prefix . "sondeo_cdmx_questions(id)

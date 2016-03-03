@@ -10,7 +10,6 @@ div.cs-skin-boxes {
     background: transparent;
     font-size: 18px;
     font-weight: 700;
-    //max-width: 300px;
     z-index: 2000;
     color: #524e4f;
 }
@@ -233,85 +232,6 @@ div.cs-skin-boxes:focus > span {
 	}
 }
 
-.cs-skin-boxes .cs-options li.color-588c75 {
-	background-color: #588c75;
-}
-
-.cs-skin-boxes .cs-options li.color-b0c47f {
-	background-color: #b0c47f;
-}
-
-.cs-skin-boxes .cs-options li.color-f3e395 {
-	background-color: #f3e395;
-}
-
-.cs-skin-boxes .cs-options li.color-f3ae73 {
-	background-color: #f3ae73;
-}
-
-.cs-skin-boxes .cs-options li.color-da645a {
-	background-color: #da645a;
-}
-
-.cs-skin-boxes .cs-options li.color-79a38f {
-	background-color: #79a38f;
-}
-
-.cs-skin-boxes .cs-options li.color-c1d099 {
-	background-color: #c1d099;
-}
-
-.cs-skin-boxes .cs-options li.color-f5eaaa {
-	background-color: #f5eaaa;
-}
-
-.cs-skin-boxes .cs-options li.color-f5be8f {
-	background-color: #f5be8f;
-}
-
-.cs-skin-boxes .cs-options li.color-e1837b {
-	background-color: #e1837b;
-}
-
-.cs-skin-boxes .cs-options li.color-9bbaab {
-	background-color: #9bbaab;
-}
-
-.cs-skin-boxes .cs-options li.color-d1dcb2 {
-	background-color: #d1dcb2;
-}
-
-.cs-skin-boxes .cs-options li.color-f9eec0 {
-	background-color: #f9eec0;
-}
-
-.cs-skin-boxes .cs-options li.color-f7cda9 {
-	background-color: #f7cda9;
-}
-
-.cs-skin-boxes .cs-options li.color-e8a19b {
-	background-color: #e8a19b;
-}
-
-.cs-skin-boxes .cs-options li.color-bdd1c8 {
-	background-color: #bdd1c8;
-}
-
-.cs-skin-boxes .cs-options li.color-e1e7cd {
-	background-color: #e1e7cd;
-}
-
-.cs-skin-boxes .cs-options li.color-faf4d4 {
-	background-color: #faf4d4;
-}
-
-.cs-skin-boxes .cs-options li.color-fbdfc9 {
-	background-color: #fbdfc9;
-}
-
-.cs-skin-boxes .cs-options li.color-f1c1bd {
-	background-color: #f1c1bd;
-}
 
 .cs-skin-boxes .cs-options span {
 	position: absolute;

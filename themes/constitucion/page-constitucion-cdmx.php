@@ -12,10 +12,10 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	<div class="[ margin-bottom--large ]">
 		<?php the_content(); ?>
 	</div>
-	<img class="[ img-responsive ][ margin-auto ]" src="<?php echo $url_image_constirucion; ?>">
+	<img class="[ img-responsive ][ margin-auto ]" src="<?php echo $url_image_constirucion; ?>" id="jefe_gobierno">
 </section>
 
-<section class="[ container ]" id="jefe_gobierno" >
+<section class="[ container ]"  >
 	<h2>Mensaje del jefe de gobierno</h2>
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
@@ -35,11 +35,11 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</div>
 </section>
 
-<section class="[ descanso-visual ]">
+<section class="[ descanso-visual ]" id="sobre_constitucion">
 	<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
 </section>
 
-<section class="[ container ]" id="sobre_constitucion">
+<section class="[ container ]">
 	<h2>Sobre la constitución</h2>
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
@@ -72,7 +72,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	<img src="<?php echo THEMEPATH; ?>images/cd3.png" alt="">
 </section>
 
-<section >
+<section  id="grupo_trabajo">
 	<div class="[ container ]">
 		<div class="[ row ]">
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
@@ -101,176 +101,177 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
 
 
-<section class="[ container ]" id="grupo_trabajo">
+<section class="[ container ]">
 	<h2 class="[ margin-bottom ]">Grupo de trabajo</h2>
 	<div class="[ row ]">
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
+			<!-- <a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a> -->
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
-		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
-			<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-			<h3>Nombre lorem ipsum</h3>
-			<p>contacto@lorem.com</p>
-			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
+		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+			<a data-toggle="modal" data-target="#trabajador">
+				<img src="<?php echo THEMEPATH; ?>images/4.jpg">
+				<h3>Nombre lorem ipsum</h3>
+			</a>
 		</div>
 	</div>
 
@@ -283,14 +284,13 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 				<div class="modal-body">
 					<h3>Nombre lorem ipsum</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum incidunt id quo. Ea assumenda doloremque earum, excepturi iure reiciendis eum. Officia, vero atque. Quae provident voluptas, facilis adipisci! Aperiam, necessitatibus.</p>
-					<p>contacto@lorem.com</p>
 				</div><!-- modal-body -->
 			</div>
 		</div>
 	</div>
 </section>
-<article class="[ bg-gray--fondo padding--top-bottom ]">
-	<section class="[ container ]" id="sobre_plataforma">
+<article class="[ bg-gray--fondo padding--top-bottom ]" id="sobre_plataforma">
+	<section class="[ container ]">
 		<h2>Sobre la plataforma</h2>
 		<div class="[ row ]">
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
@@ -319,13 +319,13 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 		</div>
 	</section>
 </article>
-<section class="[ descanso-visual ]">
+<section class="[ descanso-visual ]" id="hacia_constituyente">
 	<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
 </section>
-<section class="[ container ]" id="hacia_constituyente">
+<section class="[ container ]">
 	<h2>Hacia el constituyente</h2>
 	<div class="[ row ]">
-		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
+		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]" id="constitución_wiki">
 
 			<div class="[ content-acerca-de ]">
 				<blockquote>
@@ -351,7 +351,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</div>
 </section>
 <article class="[ bg-gray--fondo padding--top-bottom ]">
-	<section class="[ container ]" id="constitución_wiki">
+	<section class="[ container ]">
 		<h2 class="[ margin-bottom ]">Constitución en wiki</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit in suscipit similique tempore ab quam voluptatibus, quos modi fuga iusto earum incidunt repellendus quis tempora? Perspiciatis officia accusantium temporibus esse.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum possimus dolorum quam illo veniam id placeat nulla repellat vero debitis ratione consectetur eos praesentium, delectus doloremque dolor, ipsa deserunt eaque.</p>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem consequuntur error illum. Atque esse, et iure rerum fugiat consequuntur repellendus est dignissimos alias officia fugit culpa nam consequatur exercitationem quae!</p>
@@ -360,9 +360,11 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 		</div>
 	</section>
 </article>
-<section class="[ bg-image rectangle ][ margin-bottom ][ relative ]" style="background-image: url('<?php echo $url_image_experiencias; ?>');"></section>
+<section class="[ descanso-visual ]" id="preguntas_frecuentes">
+	<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
+</section>
 <article class="[ bg-gray--fondo padding--top-bottom ]">
-	<section class="[ container padding--sides--xsm ][ margin-bottom--large ]" id="preguntas_frecuentes">
+	<section class="[ container padding--sides--xsm ][ margin-bottom--large ]">
 		<h2 class="[ margin-bottom ]">Preguntas frecuentes</h2>
 		<?php $preguntas = new WP_Query(array(
 				'post_type'      => 'preguntas-frecuentes',
@@ -389,9 +391,16 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 		wp_reset_postdata(); ?>
 	</section>
 </article>
-<section class="[ container ]" id="biblioteca" >
+<section class="[ descanso-visual ]" id="biblioteca">
+	<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
+</section>
+<section class="[ container ][ content-biblioteca ]">
 	<h2 class="[ margin-bottom ]" id="biblioteca">Biblioteca</h2>
-
+	<a href="#"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></a>
+	<a href="#"><p>Lorem ipsum dolor sit amet,  adipisicing elit.</p></a>
+	<a href="#"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></a>
+	<a href="#"><p>Lorem ipsum sit amet, consectetur adipisicing elit.</p></a>
+	<a href="#"><p>Lorem ipsum dolor sit amet, elit.</p></a>
 </section>
 
 
@@ -466,5 +475,5 @@ $url_image_experiencias = attachment_image_url( $experiencias->ID, 'full' );?>
 	<h2><?php echo $experiencias->post_title; ?></h2>
 	<?php echo $experiencias->post_content; ?>
 </section>
-
+<section class="[ bg-image rectangle ][ margin-bottom ][ relative ]" style="background-image: url('<?php echo $url_image_experiencias; ?>');"></section>
 <?php get_footer(); ?>

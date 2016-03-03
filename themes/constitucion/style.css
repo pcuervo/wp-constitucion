@@ -1565,6 +1565,9 @@ h2 {
 .letter-spacing {
   letter-spacing: 2px;
 }
+a {
+  cursor: pointer;
+}
 code,
 kbd,
 pre,
@@ -3524,6 +3527,11 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
 }
+.btn--small {
+  padding: 5px 10px !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+}
 .btn-primary {
   background-color: transparent;
   border: 2px solid #999999;
@@ -3553,6 +3561,26 @@ input[type="button"].btn-block {
 .btn-secondary:hover {
   background-color: #777777;
   color: #fff;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.btn-tertiary {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  background-color: #999999;
+  border: 2px solid #999999;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: lighter;
+  font-family: "Alegreya Sans", sans-serif;
+}
+.btn-tertiary:hover {
+  background-color: transparent;
+  color: #999999;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -6145,7 +6173,7 @@ button.close {
 }
 .modal--trabajador .close {
   opacity: 0.7;
-  padding: 12px 24px;
+  padding: 24px;
   position: relative;
   z-index: 1000;
 }
@@ -7546,11 +7574,39 @@ ul.horizontal-slide li[class*="col"]:first-child {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+@media (min-width: 480px) and (max-width: 767px) {
+  .content-trabajo {
+    width: 33%;
+  }
+}
 .content-trabajo img {
   display: block;
   max-width: 100%;
   height: auto;
   margin: auto;
+}
+.content-trabajo h3 {
+  margin-top: 5px;
+}
+@media (max-width: 768px) {
+  .content-trabajo h3 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .content-trabajo h3 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .content-trabajo p {
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) {
+  .content-trabajo p {
+    font-size: 14px;
+  }
 }
 .mensaje-jefe-gob p:nth-child(2) {
   width: 100%;

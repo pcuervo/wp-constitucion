@@ -200,7 +200,7 @@
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu [ dropdown-menu--top ] [ text-uppercase ]" aria-labelledby="dropdown--header">
-								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Mensaje del jefe de gobierno</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#">Mensaje del jefe de gobierno</a></li>
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Sobre la constitución</a></li>
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Grupo de trabajo</a></li>
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Sobre la plataforma</a></li>

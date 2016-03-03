@@ -6216,6 +6216,69 @@ button.close {
 .modal--trabajador p:nth-child(3) {
   color: #e80e8a;
 }
+.modal--participador {
+  height: auto;
+}
+@media (max-width: 480px) {
+  .modal--participador {
+    width: 100%;
+    margin: 0px;
+  }
+}
+@media (min-width: 481px) {
+  .modal--participador {
+    width: 500px;
+  }
+}
+.modal--participador .close {
+  opacity: 0.7;
+  padding: 24px;
+  position: relative;
+  z-index: 1000;
+}
+.modal--participador .modal-content {
+  padding: 50px;
+  border-radius: 0px;
+}
+@media (max-width: 768px) {
+  .modal--participador .modal-content {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 768px) {
+  .modal--participador .modal-content {
+    height: auto;
+  }
+}
+.modal--participador .modal-body {
+  padding: 12px;
+}
+.modal--participador img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .modal--participador img {
+    margin-bottom: 40px;
+  }
+}
+.modal--participador h3 {
+  margin-top: 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.modal--participador span {
+  color: #e80e8a;
+}
+.modal--participador p:nth-child(1),
+.modal--participador p:nth-child(4) {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #777777;
+}
+.modal--participador .border-primary {
+  padding: 10px;
+}
 .tooltip {
   position: absolute;
   z-index: 1070;
@@ -7408,6 +7471,9 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 .border-gray--large {
   border-bottom: 3px solid #999999;
+}
+.border-primary {
+  border: 1px solid #e80e8a;
 }
 .color-primary {
   color: #e80e8a;

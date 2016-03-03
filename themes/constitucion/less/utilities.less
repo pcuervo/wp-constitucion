@@ -410,9 +410,19 @@
 
 //content grupo de trabajo
 .content-trabajo{
+	@media (min-width: 480px) and (max-width: 767px) { width: 33%; } //col-xsm-4
 	& img{
 		.img-responsive;
 		margin: auto;
+	}
+	& h3{
+		.margin-top--xsmall;
+		@media (max-width: @screen-sm){ font-size: 16px; }
+		@media (min-width: @screen-sm){ font-size: 18px; }
+	}
+	& p{
+		@media (max-width: @screen-sm){ font-size: 12px; }
+		@media (min-width: @screen-sm){ font-size: 14px; }
 	}
 }
 

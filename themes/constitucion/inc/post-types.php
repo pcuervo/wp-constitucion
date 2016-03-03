@@ -193,4 +193,35 @@
 		);
 		register_post_type( 'linea-del-tiempo', $args );
 
+		// ensayos
+		$labels = array(
+			'name'          => 'Ensayos',
+			'singular_name' => 'Ensayos',
+			'add_new'       => 'Nuevo Ensayo',
+			'add_new_item'  => 'Nuevo Ensayo',
+			'edit_item'     => 'Editar Ensayo',
+			'new_item'      => 'Nuevo Ensayo',
+			'all_items'     => 'Todos',
+			'view_item'     => 'Ver Ensayo',
+			'search_items'  => 'Buscar Ensayo',
+			'not_found'     => 'No se encontro',
+			'menu_name'     => 'Ensayos'
+		);
+
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'ensayos' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => 6,
+			'supports'           => array( 'title', 'editor' )
+		);
+		register_post_type( 'ensayos', $args );
+
 	});

@@ -88,13 +88,13 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 					</blockquote>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque.
-						accumsan lorem id porttitor porttitor. In pulvinar pellentesque ornare. 
-						Morbi facilisis sem molestie sapien euismod, vel ornare mi sagittis. 
+						accumsan lorem id porttitor porttitor. In pulvinar pellentesque ornare.
+						Morbi facilisis sem molestie sapien euismod, vel ornare mi sagittis.
 						Nulla at porta arcu, ut lacinia dui. In semper.
 						 Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-
-						lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia 
-						Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. 
-						Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at 
+						lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+						Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu.
+						Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at
 						rutrum risus.
 					</p>
 				</div>
@@ -175,7 +175,7 @@ $url_image_experiencias = attachment_image_url( $experiencias->ID, 'full' );?>
 	<h2><?php echo $experiencias->post_title; ?></h2>
 	<?php echo $experiencias->post_content; ?>
 </section>
-<section class="[ container ]">
+<section class="[ container ]" id="grupo_trabajo">
 	<h2>Grupo de trabajo</h2>
 	<div class="[ row ]">
 		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ]">
@@ -347,22 +347,24 @@ $url_image_experiencias = attachment_image_url( $experiencias->ID, 'full' );?>
 			<a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a>
 		</div>
 	</div>
-</section>
-<!-- Modal grupo de trabajo -->
-<div id="trabajador" class="modal fade" role="dialog">
-	<div class="modal-dialog modal--trabajador">
-		<!-- Modal content-->
-		<div class="modal-content">
-			<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
-			<div class="modal-body">
-				<h3>Nombre lorem ipsum</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum incidunt id quo. Ea assumenda doloremque earum, excepturi iure reiciendis eum. Officia, vero atque. Quae provident voluptas, facilis adipisci! Aperiam, necessitatibus.</p>
-				<p>contacto@lorem.com</p>
-			</div><!-- modal-body -->
+
+	<!-- Modal grupo de trabajo -->
+	<div id="trabajador" class="modal fade" role="dialog">
+		<div class="modal-dialog modal--trabajador">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
+				<div class="modal-body">
+					<h3>Nombre lorem ipsum</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum incidunt id quo. Ea assumenda doloremque earum, excepturi iure reiciendis eum. Officia, vero atque. Quae provident voluptas, facilis adipisci! Aperiam, necessitatibus.</p>
+					<p>contacto@lorem.com</p>
+				</div><!-- modal-body -->
+			</div>
 		</div>
 	</div>
-</div>
-<section class="[ container ]">
+</section>
+
+<section class="[ container ]" id="constitución_wiki">
 	<h2>Constitución en wiki</h2>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum possimus dolorum quam illo veniam id placeat nulla repellat vero debitis ratione consectetur eos praesentium, delectus doloremque dolor, ipsa deserunt eaque.</p>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem consequuntur error illum. Atque esse, et iure rerum fugiat consequuntur repellendus est dignissimos alias officia fugit culpa nam consequatur exercitationem quae!</p>
@@ -371,7 +373,7 @@ $url_image_experiencias = attachment_image_url( $experiencias->ID, 'full' );?>
 	</div>
 </section>
 <section class="[ bg-image rectangle ][ margin-bottom ][ relative ]" style="background-image: url('<?php echo $url_image_experiencias; ?>');"></section>
-<section class="[ container padding--sides--xsm ][ margin-bottom--large ]">
+<section class="[ container padding--sides--xsm ][ margin-bottom--large ]" id="preguntas_frecuentes">
 	<h2 class="[ margin-bottom ]">Preguntas frecuentes</h2>
 	<?php $preguntas = new WP_Query(array(
 			'post_type'      => 'preguntas-frecuentes',

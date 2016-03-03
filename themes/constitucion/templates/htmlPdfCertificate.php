@@ -5,8 +5,14 @@
 		<title>Certificate</title>
 		<link href="http://fonts.googleapis.com/css?family=Roboto:300,500,400,700" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="<?php echo CSSPATH; ?>styles-pdf.css" type="text/css"/>
+		<!-- Google font(s) -->
+		<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700,800,300,100' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700,800,500,300' rel='stylesheet' type='text/css'>
 	</head>
 	<style>
+		h3{	font-family: "Alegreya Sans",sans-serif;}
+		p{ font-family: "ABeeZee", sans-serif;  }
 		.text-center{text-align: center;}
 		.img-logo{ width: 120px; }
 		.color-primary{ color: #e80e8a; }

@@ -4,6 +4,14 @@
 
     $(function(){
 
+        /**
+         * INIT FLEXSLIDER
+         */
+        $('.flexslider').flexslider({
+            animation: "slide"
+        });
+
+
         $('.nota-destacada a').on('click', function(event){
             event.preventDefault();
         });

@@ -1,9 +1,13 @@
 <?php get_header(); the_post();  ?>
 <section >
-	<div class="[ relative height-home-video ]">
-		<div class="[ js-video-wrapper ]">
-				<iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/7Ezz0wnzdiQ" frameborder="0" allowfullscreen></iframe>
-		</div>
+	<div class="[ relative bg-gray--xxlight height-home-video ]">
+		<!-- <div class="[ js-video-wrapper ]"> -->
+				<!-- <iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/7Ezz0wnzdiQ" frameborder="0" allowfullscreen></iframe> -->
+				<video class="[ video--home ]" controls>
+					<source src="<?php echo THEMEPATH; ?>video/video-prueba.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+		<!-- </div> -->
 		<!-- <div class="[ bg-image height-home-video ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/home.png');"></div> -->
 		<button class="[ btn btn-play ]" onclick="playPause()"><img class="[ width-100 ]" src="<?php echo THEMEPATH; ?>images/play.png"></button>
 		<div class="[ logo-video ]">
@@ -14,7 +18,6 @@
 			<a type="button" data-toggle="modal" data-target="#modal-menu-home"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ][ pull-right ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
 		</div>
 	</div>
-
 <!-- modal menu mobile -->
 			<div class="modal fade" id="modal-menu-home" tabindex="-1" role="dialog">
 				<div class="[ modal-dialog modal-content ][ width-100 height-100 ][ no-margin ]">

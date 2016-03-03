@@ -305,7 +305,7 @@ if( isset( $result['success'] ) ): ?>
 						<label for="">Ubicación Señala abajo dónde se llevara a cabo </label>
 						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Text input">
 					</div>
-					<div class="[ form-group ][ col-xs 12 col-sm-6 ]">
+					<div class="[ form-group ][ col-xs 12 col-sm-6 ]">git 
 						<label for="">Horario ¿En qué momentos se llevará a cabo el evento? </label>
 						<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Text input">
 						<label for="">Institución u organización. Si este acontecimiento es organizado por una institución u organización, señala abajo cuál. En caso de más de una, separar por comas. Si son un grupo de personas, nombren su equipo de trabajo. </label>

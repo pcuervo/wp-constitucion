@@ -7873,7 +7873,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
   .content-biblioteca a {
     width: 50%;
     float: left;
-    padding: 0 15px;
+    padding: 0 15px 0 0;
   }
 }
 .content-biblioteca a:hover,
@@ -8106,6 +8106,10 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .icon--responsive {
   width: 100%;
   height: auto;
+}
+.icon--iconed--xsmall {
+  width: 15px !important;
+  height: 15px;
 }
 .icon--iconed--small {
   width: 20px !important;

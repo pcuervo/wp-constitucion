@@ -157,7 +157,7 @@ if( isset( $result['success'] ) ): ?>
 				<input type="text" class="[ form-control input--search ][ height-40 ]" placeholder="1456788049">
 				<span class="[ input-group-btn ]">
 					<button class="[ btn btn-secondary ][ height-40 ]" type="button">
-						<img class="[ svg icon icon--iconed--small icon--thickness-1 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/find.svg">
+						<img class="[ svg icon icon--iconed--small icon--thickness-2 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/search.svg">
 					</button>
 				</span>
 			</div>
@@ -207,6 +207,18 @@ if( isset( $result['success'] ) ): ?>
 		</div>
 	</div>
 
+	<section class="[ container ]">
+		<h2>Ensayos</h2>
+		<form class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
+			<input type="text" name="mensaje_cdmx" id="mensaje_cdmx" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Escribe tu mensaje" required="">
+			<h2 class="[ margin-bottom--large ][ fz-small--xs ]">Con respeto,</h2>
+			<input name="nombre_cdmx" id="nombre_cdmx" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Tu nombre" required="">
+			<input name="email_cdmx" id="email_cdmx" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Correo Electrónico" required="">
+			<input name="telefono_cdmx" id="telefono_cdmx" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Teléfono" required="">
+			<input name="accion" id="accion" type="hidden" value="guarda-formulario">
+			<button type="submit" class="[ btn btn-secondary ][ pull-right ]">enviar</button>
+		</form>
+	</section>
 	<section class="[ bg-gray-light ][ padding--top--xlarge padding-bottom--large--sm ]">
 		<article class="[ container padding--sides--xsm padding--bottom--large ]">
 			<h2 class="[ no-margin-top ]">Voces ciudadanas</h2>

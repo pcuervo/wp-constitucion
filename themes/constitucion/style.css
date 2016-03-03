@@ -7698,6 +7698,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
   margin: auto;
 }
 .content-trabajo h3 {
+  color: #4a4a4a;
   margin-top: 5px;
 }
 @media (max-width: 768px) {
@@ -7710,6 +7711,11 @@ ul.horizontal-slide li[class*="col"]:first-child {
     font-size: 18px;
   }
 }
+.content-trabajo h3:hover,
+.content-trabajo h3:focus {
+  text-decoration: none;
+  color: #777777;
+}
 @media (max-width: 768px) {
   .content-trabajo p {
     font-size: 12px;
@@ -7719,6 +7725,9 @@ ul.horizontal-slide li[class*="col"]:first-child {
   .content-trabajo p {
     font-size: 14px;
   }
+}
+.content-trabajo a {
+  text-decoration: none;
 }
 .descanso-visual img {
   width: 100%;
@@ -7870,6 +7879,21 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 .content-cronica-cdmx blockquote canvas {
   margin-left: 20px;
+}
+.content-biblioteca a {
+  color: #4a4a4a;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .content-biblioteca a {
+    width: 50%;
+    float: left;
+    padding: 0 15px 0 0;
+  }
+}
+.content-biblioteca a:hover,
+.content-biblioteca a:focus {
+  color: #e80e8a;
 }
 @-ms-viewport {
   width: device-width;
@@ -8097,6 +8121,10 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .icon--responsive {
   width: 100%;
   height: auto;
+}
+.icon--iconed--xsmall {
+  width: 15px !important;
+  height: 15px;
 }
 .icon--iconed--small {
   width: 20px !important;

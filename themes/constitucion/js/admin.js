@@ -23,6 +23,20 @@
 		$('.datepicker').datepicker({
 	        dateFormat : 'yy-mm-dd'
 	    });
+		window.dateInicio = 0;
+	    $('.date-ensayo').datepicker({
+	        dateFormat : 'yy-mm-dd',
+	        minDate: 0,
+	        onSelect: function(dateText, inst) { 
+		      	window.dateInicio = dateText;
+		      	$('.date-ensayo-fin').removeAttr("disabled");
+		   }
+	    });
+
+	    $('.date-ensayo-fin').datepicker({
+	        dateFormat : 'yy-mm-dd',
+	        minDate: new Date($('.date-ensayo').val())
+	    });
 
 	});
 

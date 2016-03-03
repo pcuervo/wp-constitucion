@@ -422,14 +422,20 @@
 		margin: auto;
 	}
 	& h3{
+		color: @gray;
 		.margin-top--xsmall;
 		@media (max-width: @screen-sm){ font-size: 16px; }
 		@media (min-width: @screen-sm){ font-size: 18px; }
+		&:hover, &:focus{
+			text-decoration: none;
+			color: @gray-light;
+		}
 	}
 	& p{
 		@media (max-width: @screen-sm){ font-size: 12px; }
 		@media (min-width: @screen-sm){ font-size: 14px; }
 	}
+	& a{ text-decoration: none;}
 }
 
 
@@ -504,5 +510,20 @@
 	}
 	blockquote canvas{
 		margin-left: 20px;
+	}
+}
+
+.content-biblioteca{
+	& a{
+		color: @gray;
+		text-decoration: none;
+		@media (min-width: @screen-sm){
+			width: 50%;
+			float: left;
+			padding: 0 15px 0 0;
+		}
+		&:hover, &:focus{
+			color: @primary;
+		}
 	}
 }

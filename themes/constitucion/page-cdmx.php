@@ -13,20 +13,55 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	</div>
 	<div class="[ margin-bottom--large ]">
  		<div class="[ row ]">
-			<div class="[ col-xs-4 col-sm-3 ][ margin-bottom text-center ]">
-				<canvas class="[ inline-block ]" id="pie-data" width="100px" height="100px"></canvas>
-			</div>
-			<div class="[ col-xs-8 col-sm-3 ][ margin-bottom text-center ]">
-				<canvas class="[ inline-block ]" id="bar-data" width="150px" height="150px"></canvas>
-			</div>
-			<div class="[ col-xs-12 col-sm-6 ]">
-				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi explicabo doloremque, temporibus? Similique nam molestias enim eius quibusdam neque incidunt quam cum, hic sint dolorem accusamus veritatis commodi! Optio, cupiditate!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae amet aperiam pariatur ea iste officia facilis, eligendi rem modi reiciendis delectus impedit quibusdam consectetur possimus eaque nihil facere reprehenderit nisi.</p>
+			<div class="[ col-xs-12 ]">
+
+				<div class="[ content-cronica-cdmx ]">
+					<blockquote>
+						<p>Sed dignissimligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu
+						
+							<canvas class="[ inline-block ]" id="pie-data" width="100px" height="100px"></canvas>
+						</p>
+						
+					</blockquote>	
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi explicabo doloremque, temporibus? 	Similique nam molestias enim eius quibusdam neque incidunt quam cum, hic sint dolorem accusamus itatis commodi! Optio, cupiditate!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae  amet aperiam pariatur ea iste officia facilis, eligendi rem modi reiciendis delectus impedit quibusdam consectetur possimus eaque nihil facere reprehenderit nisi. 
+						Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus <br>Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.	
+						</p>			
+				</div>	
 			</div>
 		</div>
-		<p class="[ visible-xs ]">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
 	</div>
 	<?php echo wpautop( do_shortcode(get_post_meta($post->ID, 'contenido_extra', true) ) ); ?>
+</section>
 
+<section class="[ descanso-visual ]">
+	<img src="<?php echo THEMEPATH; ?>images/cd4.png" alt="">
+</section>
+
+<section>
+	<div class="[ container ]">
+		<div class="[ row ]">
+			<div class="[ col-xs-12 ]">
+
+				<div class="[ content-cronica-cdmx ]">
+					<h4></h4>
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi explicabo doloremque, temporibus? 	Similique nam molestias enim eius quibusdam neque incidunt quam cum, hic sint dolorem accusamus itatis commodi! Optio, cupiditate!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae  amet aperiam pariatur ea iste officia facilis, eligendi rem modi reiciendis delectus impedit quibusdam consectetur possimus eaque nihil facere reprehenderit nisi. 
+					Praesent quis enim mollis, molestie nisl non, dapibus tellus. 
+					<br>Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.</p>			
+					<blockquote>
+						<p>
+							<canvas class="[ inline-block ]" id="bar-data" width="150px" height="150px"></canvas>
+							Sed dignissimligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu
+						</p>
+					</blockquote>	
+				</div>	
+
+			</div> <!-- /col -->
+		</div> <!-- /row -->
+	</div> <!-- /container -->
+</section>
+
+<section class="[ margin-top-bottom--xxlarge ]">
+	<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/logo-horizontal.gif" alt="">
 </section>
 
 <?php get_footer(); ?>

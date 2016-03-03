@@ -241,10 +241,10 @@
 	</div>
 </div><!--/container-->
 
-<div class="[ bg-gray-light  ]">
+<div class="[ bg-gray-light ]">
 	<div class="[ container ]">
-		<h3 class="[ margin-top--large ][ text-uppercase text-center ][ color-primary ]">Noticias</h3>
-		<div class="[ row ][ padding--top ]">
+		<h3 class="[ margin-top--xlarge ][ text-uppercase text-center ][ color-primary ]">Noticias</h3>
+		<div class="[ row ][ margin-top-bottom--large ]">
 <!-- 3 noticias -->		
 			<div class="[ col-xs-12 col-sm-4 ]">
 				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
@@ -266,7 +266,7 @@
 			</div>
 		</div>
 <!-- con 2 noticias -->	
-		<div class="[ row ][ padding--top ]">
+		<div class="[ row ][ margin-bottom--large ]">
 			<div class="[ col-xs-12 col-sm-offset-2 col-sm-4 ]">
 				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
 				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
@@ -281,7 +281,7 @@
 			</div>
 		</div>	
 <!-- con 1 noticia -->	
-		<div class="[ row ][ padding--top ]">
+		<div class="[ row ][ margin-bottom--large ]">
 			<div class="[ col-xs-12 col-sm-offset-4 col-sm-4 ]">
 				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
 				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>

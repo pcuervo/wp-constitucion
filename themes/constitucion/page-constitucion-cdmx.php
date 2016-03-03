@@ -20,7 +20,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 		<div class="[ row ]">
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 
-				<div class="[ mensaje-jefe-gob ]">
+				<div class="[ content-mensaje-jefegob ]">
 					<blockquote>
 						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
 					</blockquote>
@@ -39,7 +39,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <section class="[ descanso-visual ]">
-	<img src="<?php echo THEMEPATH; ?>images/cd2.png" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
 </section>
 
 <section >
@@ -47,15 +47,23 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 		<div class="[ row ]">
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 
-				<div class="[ mensaje-jefe-gob ]">
+				<div class="[ content-acerca-de ]">
 					<blockquote>
 						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
 					</blockquote>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
 						accumsan lorem id porttitor porttitor. In pulvinar pellentesque ornare. Morbi facilisis sem molestie sapien euismod,
-						vel ornare mi sagittis. Nulla at porta arcu, ut lacinia dui. In semper. Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-
-						lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu.
+						vel ornare mi sagittis. Nulla at porta arcu, ut lacinia dui. In semper.Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
+					</p>
+				</div>
+
+				<div class="[ content-acerca-de ]">
+					<blockquote>
+						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
+					</blockquote>
+					<p>
+						Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
 					</p>
 				</div>
 
@@ -63,6 +71,38 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 		</div>
 	</div>
 </section>
+
+<section class="[ descanso-visual ]">
+	<img src="<?php echo THEMEPATH; ?>images/cd3.png" alt="">
+</section>
+
+<section >
+	<div class="[ container ]">
+		<div class="[ row ]">
+			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
+
+				<div class="[ content-acerca-de ]">
+					<h3>SUBTÍTULO</h3>
+					<blockquote>
+						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
+					</blockquote>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque.
+						accumsan lorem id porttitor porttitor. In pulvinar pellentesque ornare. 
+						Morbi facilisis sem molestie sapien euismod, vel ornare mi sagittis. 
+						Nulla at porta arcu, ut lacinia dui. In semper.
+						 Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-
+						lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia 
+						Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. 
+						Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at 
+						rutrum risus.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 
 <article class="[ bg-gray-light ][ margin-top-bottom--large padding--top-bottom--xlarge ]">
 	<section class="[ container padding--sides--xsm ]">

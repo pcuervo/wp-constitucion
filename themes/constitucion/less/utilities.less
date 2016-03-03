@@ -416,9 +416,19 @@
 	}
 }
 
-.mensaje-jefe-gob{
 
-	p:nth-child(2) {
+.descanso-visual img{
+	.width-100;
+}
+
+.content-acerca-de{
+	.margin-top--large;
+	h3{
+		font-weight: bold;
+		margin-left: 32%;
+		color: @primary;
+	}	
+	p:nth-child(2), p:nth-child(3) {
 		width: 100%;
 		display: inline-block;
 		padding: 20px;
@@ -440,12 +450,13 @@
 
 	@media (min-width: @screen-sm-min){
 		
-		p:nth-child(2) {
-		width: 50%;
+		p:nth-child(2), p:nth-child(3) {
+		width: 60%;
 		padding: 10px;
 		}
 		blockquote {
-			width: 25%;
+			width: 30%;
+			padding: 10px;
 		}
 		blockquote p{
 			padding-top: 20px;
@@ -455,6 +466,9 @@
 
 }
 
-.descanso-visual img{
-	.width-100;
+.content-mensaje-jefegob{
+	.content-acerca-de;
+		blockquote p{
+		border-top: dotted @gray;
+	}
 }

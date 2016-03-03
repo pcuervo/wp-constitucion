@@ -7552,19 +7552,31 @@ ul.horizontal-slide li[class*="col"]:first-child {
   height: auto;
   margin: auto;
 }
-.mensaje-jefe-gob p:nth-child(2) {
+.descanso-visual img {
+  width: 100%;
+}
+.content-acerca-de {
+  margin-top: 40px;
+}
+.content-acerca-de h3 {
+  font-weight: bold;
+  margin-left: 32%;
+  color: #e80e8a;
+}
+.content-acerca-de p:nth-child(2),
+.content-acerca-de p:nth-child(3) {
   width: 100%;
   display: inline-block;
   padding: 20px;
   text-align: justify;
 }
-.mensaje-jefe-gob blockquote {
+.content-acerca-de blockquote {
   width: 100%;
   display: inline-block;
   border-left: none ;
   vertical-align: top;
 }
-.mensaje-jefe-gob blockquote p {
+.content-acerca-de blockquote p {
   padding-top: 10px;
   text-align: right;
   color: #646464;
@@ -7572,25 +7584,65 @@ ul.horizontal-slide li[class*="col"]:first-child {
   border-left: none ;
 }
 @media (min-width: 768px) {
-  .mensaje-jefe-gob p:nth-child(2) {
-    width: 50%;
-    display: inline-block;
+  .content-acerca-de p:nth-child(2),
+  .content-acerca-de p:nth-child(3) {
+    width: 60%;
     padding: 10px;
-    text-align: justify;
   }
-  .mensaje-jefe-gob blockquote {
-    width: 25%;
+  .content-acerca-de blockquote {
+    width: 30%;
+    padding: 10px;
   }
-  .mensaje-jefe-gob blockquote p {
+  .content-acerca-de blockquote p {
     padding-top: 20px;
     text-align: right;
-    color: #646464;
-    border-top: dotted #e80e8a;
-    border-left: none ;
   }
 }
-.descanso-visual img {
+.content-mensaje-jefegob {
+  margin-top: 40px;
+}
+.content-mensaje-jefegob h3 {
+  font-weight: bold;
+  margin-left: 32%;
+  color: #e80e8a;
+}
+.content-mensaje-jefegob p:nth-child(2),
+.content-mensaje-jefegob p:nth-child(3) {
   width: 100%;
+  display: inline-block;
+  padding: 20px;
+  text-align: justify;
+}
+.content-mensaje-jefegob blockquote {
+  width: 100%;
+  display: inline-block;
+  border-left: none ;
+  vertical-align: top;
+}
+.content-mensaje-jefegob blockquote p {
+  padding-top: 10px;
+  text-align: right;
+  color: #646464;
+  border-top: dotted #e80e8a;
+  border-left: none ;
+}
+@media (min-width: 768px) {
+  .content-mensaje-jefegob p:nth-child(2),
+  .content-mensaje-jefegob p:nth-child(3) {
+    width: 60%;
+    padding: 10px;
+  }
+  .content-mensaje-jefegob blockquote {
+    width: 30%;
+    padding: 10px;
+  }
+  .content-mensaje-jefegob blockquote p {
+    padding-top: 20px;
+    text-align: right;
+  }
+}
+.content-mensaje-jefegob blockquote p {
+  border-top: dotted #4a4a4a;
 }
 @-ms-viewport {
   width: device-width;

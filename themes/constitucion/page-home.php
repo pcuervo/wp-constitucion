@@ -103,7 +103,22 @@
 <!-- menu desktop home -->
 <ul class="[ menu-home ][ text-center ][ hidden-xs hideen-sm ]">
 	<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
-	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?> ">Acerca de la constitución</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
+	<li class="[ dropdown ]">
+		<button class="dropdown-toggle [ text-uppercase btn-dropdown ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			Acerca de la constitución
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu [ dropdown-menu--header ] [ text-uppercase ]" aria-labelledby="dropdown--header">
+			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Mensaje del jefe de gobierno</a></li>
+			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Sobre la constitución</a></li>
+			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Grupo de trabajo</a></li>
+			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Sobre la plataforma</a></li>
+			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Hacia el constituyente</a></li>
+			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Constitución en Wiki</a></li>
+			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Preguntas frecuentes</a></li>
+			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Biblioteca</a></li>
+		</ul>
+	</li>
 	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
 	<li class="[ dropdown ]">
 		<button class="dropdown-toggle [ text-uppercase btn-dropdown ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">

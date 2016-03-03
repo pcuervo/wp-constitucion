@@ -2545,11 +2545,12 @@ legend {
   border-bottom: 1px solid #e5e5e5;
 }
 label {
-  font-family: "Alegreya Sans", sans-serif;
-  display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
   font-weight: bold;
+  font-family: "ABeeZee", sans-serif;
+  color: #4a4a4a;
+  display: block;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;
@@ -7497,6 +7498,10 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 .border-primary {
   border: 1px solid #e80e8a;
+}
+.border-box-shadow {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 .color-primary {
   color: #e80e8a;

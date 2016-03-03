@@ -248,4 +248,34 @@ if( isset( $result['success'] ) ): ?>
 		</article>
 	</section>
 
+	<section class="[ container ]">
+		<h2 class="[ margin-top--large ]">Diálogos Públicos</h2>
+		<div class="[ row ]">
+			<div class="[ col-xs-12 ][ col-sm-offset-3 col-sm-6 ]">
+				<p>En esta sección podrás registrar acontecimientos que sean espacios de diálogo relacionados a la construcción de la Constitución de la Ciudad de México. Estos pueden ser sesiones de trabajo colaborativas, foros, asambleas, talleres o conferencias.</p>
+			</div>
+			<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ][ bg-gray-light ][ padding--large ]">
+				<form action="">
+					<div class="form-group">
+						<label for="">Nombre del acontecimiento (máximo 100 caracteres)</label>
+						<input input type="text" class="form-control" placeholder="Text input">
+						<label for="">Frase que describe el acontecimiento Comparte una frase que describa el evento/sesión de trabajo/diálogo público (120 caracteres) </label>
+						<input input type="text" class="form-control" placeholder="Text input">
+						<label for="">Descripción Describe los objetivos, alcances y perfil de asistentes de tu acontecimiento  (120 palabras) </label>
+						<input input type="text" class="form-control" placeholder="Text input">
+						<label for="">Liga oficial (Campo No obligatorio) Copia a continuación la liga del sitio oficial del acontecimiento, la cuenta de Facebook o de Twitter </label>
+						<input input type="text" class="form-control" placeholder="Text input">
+						<label for="">Fechas (Puede ser un sólo día) </label>
+						<input type="date" name="fecha">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+			
+		</div>
+
+
+		
+	</section>
+
 <?php get_footer(); ?>

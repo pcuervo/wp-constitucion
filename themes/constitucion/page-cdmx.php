@@ -42,7 +42,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 
 				<div class="[ content-cronica-cdmx ]">
 					<h4></h4>
-
 					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi explicabo doloremque, temporibus? 	Similique nam molestias enim eius quibusdam neque incidunt quam cum, hic sint dolorem accusamus itatis commodi! Optio, cupiditate!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae  amet aperiam pariatur ea iste officia facilis, eligendi rem modi reiciendis delectus impedit quibusdam consectetur possimus eaque nihil facere reprehenderit nisi. 
 					Praesent quis enim mollis, molestie nisl non, dapibus tellus. 
 					Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.

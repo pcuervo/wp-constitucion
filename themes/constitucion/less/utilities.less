@@ -446,6 +446,7 @@
 	.margin-top--large;
 	h3{
 		font-weight: bold;
+		text-transform: uppercase;
 		margin-left: 32%;
 		color: @primary;
 	}
@@ -456,17 +457,17 @@
 		text-align: justify;
 		}
 		blockquote {
+			margin-top: 10px;
 			width: 100%;
 			display: inline-block;
 			border-left: none ;
 			vertical-align: top;
-		}
-		blockquote p{
-			padding-top: 10px;
-			text-align: right;
-			color: lighten(@gray, 10%);
 			border-top: dotted @primary;
 			border-left: none ;
+		}
+		blockquote p{
+			text-align: right;
+			color: lighten(@gray, 10%);
 		}
 
 	@media (min-width: @screen-sm-min){
@@ -488,19 +489,24 @@
 
 .content-mensaje-jefegob{
 	.content-acerca-de;
-		blockquote p{
+		blockquote {
 		border-top: dotted @gray;
 	}
 }
 
 .content-cronica-cdmx{
 	.content-acerca-de;
-	blockquote p {
+	blockquote {
 		padding: 50px 0;
 		border-bottom: dotted @primary;
+	}
+	blockquote p{
 		display: inline-flex;
 	}
-	blockquote p canvas{
+	blockquote p:nth-child(2){
+		width: 100%
+	}
+	blockquote canvas{
 		margin-left: 20px;
 	}
 }

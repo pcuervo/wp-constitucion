@@ -7652,6 +7652,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 .content-acerca-de h3 {
   font-weight: bold;
+  text-transform: uppercase;
   margin-left: 32%;
   color: #e80e8a;
 }
@@ -7663,17 +7664,16 @@ ul.horizontal-slide li[class*="col"]:first-child {
   text-align: justify;
 }
 .content-acerca-de blockquote {
+  margin-top: 10px;
   width: 100%;
   display: inline-block;
-  border-left: none ;
   vertical-align: top;
-}
-.content-acerca-de blockquote p {
-  padding-top: 10px;
-  text-align: right;
-  color: #646464;
   border-top: dotted #e80e8a;
   border-left: none ;
+}
+.content-acerca-de blockquote p {
+  text-align: right;
+  color: #646464;
 }
 @media (min-width: 768px) {
   .content-acerca-de p:nth-child(2),
@@ -7695,6 +7695,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 .content-mensaje-jefegob h3 {
   font-weight: bold;
+  text-transform: uppercase;
   margin-left: 32%;
   color: #e80e8a;
 }
@@ -7706,17 +7707,16 @@ ul.horizontal-slide li[class*="col"]:first-child {
   text-align: justify;
 }
 .content-mensaje-jefegob blockquote {
+  margin-top: 10px;
   width: 100%;
   display: inline-block;
-  border-left: none ;
   vertical-align: top;
-}
-.content-mensaje-jefegob blockquote p {
-  padding-top: 10px;
-  text-align: right;
-  color: #646464;
   border-top: dotted #e80e8a;
   border-left: none ;
+}
+.content-mensaje-jefegob blockquote p {
+  text-align: right;
+  color: #646464;
 }
 @media (min-width: 768px) {
   .content-mensaje-jefegob p:nth-child(2),
@@ -7733,7 +7733,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
     text-align: right;
   }
 }
-.content-mensaje-jefegob blockquote p {
+.content-mensaje-jefegob blockquote {
   border-top: dotted #4a4a4a;
 }
 .content-cronica-cdmx {
@@ -7741,6 +7741,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 .content-cronica-cdmx h3 {
   font-weight: bold;
+  text-transform: uppercase;
   margin-left: 32%;
   color: #e80e8a;
 }
@@ -7752,17 +7753,16 @@ ul.horizontal-slide li[class*="col"]:first-child {
   text-align: justify;
 }
 .content-cronica-cdmx blockquote {
+  margin-top: 10px;
   width: 100%;
   display: inline-block;
-  border-left: none ;
   vertical-align: top;
-}
-.content-cronica-cdmx blockquote p {
-  padding-top: 10px;
-  text-align: right;
-  color: #646464;
   border-top: dotted #e80e8a;
   border-left: none ;
+}
+.content-cronica-cdmx blockquote p {
+  text-align: right;
+  color: #646464;
 }
 @media (min-width: 768px) {
   .content-cronica-cdmx p:nth-child(2),
@@ -7779,12 +7779,17 @@ ul.horizontal-slide li[class*="col"]:first-child {
     text-align: right;
   }
 }
-.content-cronica-cdmx blockquote p {
+.content-cronica-cdmx blockquote {
   padding: 50px 0;
   border-bottom: dotted #e80e8a;
+}
+.content-cronica-cdmx blockquote p {
   display: inline-flex;
 }
-.content-cronica-cdmx blockquote p canvas {
+.content-cronica-cdmx blockquote p:nth-child(2) {
+  width: 100%;
+}
+.content-cronica-cdmx blockquote canvas {
   margin-left: 20px;
 }
 @-ms-viewport {

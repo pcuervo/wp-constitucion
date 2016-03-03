@@ -21,6 +21,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 
 				<div class="[ content-mensaje-jefegob ]">
+					<h3>Mensaje del Jefe de Gobierno</h3>
 					<blockquote>
 						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
 					</blockquote>
@@ -48,6 +49,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 
 				<div class="[ content-acerca-de ]">
+					<h3>Sobre la Constitución</h3>
 					<blockquote>
 						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
 					</blockquote>
@@ -82,9 +84,9 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 
 				<div class="[ content-acerca-de ]">
-					<h3>SUBTÍTULO</h3>
+					<h3>Subtítulo</h3>
 					<blockquote>
-						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
+						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris</p>
 					</blockquote>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque.

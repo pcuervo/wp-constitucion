@@ -645,12 +645,17 @@ input[type="checkbox"] {
     color: red;
 }
 
-.form-ensayos{
-  & label{
-    color: @primary;
-    display: block;
-    & span{
-          color: @gray;
-    }
+.box-shadow--form{
+  @media (max-width: 480px) { margin-left: 0px; margin-right: 0px; }
+  @media (min-width: 481px){
+    .margin-sides;
+    .margin-bottom;
+    .padding;
+    .border-box-shadow
   }
+  @media (min-width: @screen-sm){
+    .margin-sides--large;
+    .margin-bottom--large;
+    .padding--large;
+   }
 }

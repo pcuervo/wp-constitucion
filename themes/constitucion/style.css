@@ -3085,12 +3085,29 @@ select[multiple].input-lg {
   list-style: none;
   color: red;
 }
-.form-ensayos label {
-  color: #e80e8a;
-  display: block;
+@media (max-width: 480px) {
+  .box-shadow--form {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
-.form-ensayos label span {
-  color: #4a4a4a;
+@media (min-width: 481px) {
+  .box-shadow--form {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 12px 24px;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+@media (min-width: 768px) {
+  .box-shadow--form {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    padding: 24px 48px;
+  }
 }
 .btn {
   display: inline-block;

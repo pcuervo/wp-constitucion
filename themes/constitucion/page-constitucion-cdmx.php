@@ -15,8 +15,8 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	<img class="[ img-responsive ][ margin-auto ]" src="<?php echo $url_image_constirucion; ?>" id="jefe_gobierno">
 </section>
 
-<section class="[ container ]"  >
-	<h2>Mensaje del jefe de gobierno</h2>
+<section class="[ container ]">
+	<h2 class="[ padding--headindg-content ]">Mensaje del jefe de gobierno</h2>
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 			<div class="[ content-mensaje-jefegob ]">
@@ -40,7 +40,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <section class="[ container ]">
-	<h2>Sobre la constitución</h2>
+	<h2 class="[ padding--headindg-content ]">Sobre la constitución</h2>
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 				<div class="[ content-acerca-de ]">
@@ -291,7 +291,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 <article class="[ bg-gray--fondo padding--top-bottom ]" id="sobre_plataforma">
 	<section class="[ container ]">
-		<h2>Sobre la plataforma</h2>
+		<h2 class="[ padding--headindg-content ]">Sobre la plataforma</h2>
 		<div class="[ row ]">
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 
@@ -323,7 +323,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
 </section>
 <section class="[ container ]">
-	<h2>Hacia el constituyente</h2>
+	<h2 class="[ padding--headindg-content ]">Hacia el constituyente</h2>
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]" id="constitución_wiki">
 

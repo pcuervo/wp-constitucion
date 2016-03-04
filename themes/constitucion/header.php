@@ -32,7 +32,7 @@
 	<body>
 		<?php $activeAcerca = is_page('constitucion-cdmx') ? 'active' : '';
 		$activeCdmx = is_page('cdmx') ? 'active' : '';
-		$activeParticipa = is_page('participa') ? 'active' : ''; 
+		$activeParticipa = is_page('participa') ? 'active' : '';
 		$activeNoticias = is_home() || is_singular('post') ? 'active' : '';   ?>
 		<!--[if lt IE 9]>
 			<p class="chromeframe">Estás usando una versión <strong>vieja</strong> de tu explorador. Por favor <a href="http://browsehappy.com/" target="_blank"> actualiza tu explorador</a> para tener una experiencia completa.</p>
@@ -53,12 +53,9 @@
 							<span class="[ text-italic ][ relative bottom-10 ]">punto</span>
 							<span class="[ text-italic ][ relative top-10 right-42 ]">de encuentro</span> <!-- - page-home.php -->
 						</li>
-						<li class="[ dropdown top-8 ]">
-							<button class="dropdown-toggle [ text-uppercase btn-dropdown ][ no-padding ] <?php echo $activeAcerca; ?>" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-								Acerca de la<br>constitución
-								<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu [ dropdown-menu--top ] [ text-uppercase ]" aria-labelledby="dropdown--header">
+						<li class="[ dropdown--hover dropdown--hover--acerca ][ text-uppercase ][ top-8 ]">
+							<span>Acerca de la<br>constitución</span>
+							<ul class="dropdown-content dropdown-menu [ text-uppercase ]" aria-labelledby="dropdown--header">
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe_gobierno">Mensaje del jefe de gobierno</a></li>
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_constitucion">Sobre la constitución</a></li>
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#grupo_trabajo">Grupo de trabajo</a></li>
@@ -70,12 +67,9 @@
 							</ul>
 						</li>
 						<li class="[ text-uppercase ] <?php echo $activeCdmx; ?>"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
-						<li class="[ dropdown ] <?php echo $activeParticipa; ?>">
-							<button class="dropdown-toggle [ text-uppercase btn-dropdown ][ no-padding ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-								Participa
-								<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu [ dropdown-menu--top ] [ text-uppercase ]" aria-labelledby="dropdown--header">
+						<li class="[ dropdown--hover ][ text-uppercase ]">
+							<span>Participa</span>
+							<ul class="dropdown-content dropdown-menu [ text-uppercase ]" aria-labelledby="dropdown--header">
 								<li><a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">Imagina tu ciudad</a></li>
 								<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Resultados</a></li>
 								<li><a href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>

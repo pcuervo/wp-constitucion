@@ -1536,11 +1536,13 @@ address {
   font-style: normal;
   line-height: 1.42857143;
 }
+h1,
 h2 {
   font-weight: 300;
   font-size: 26px;
 }
 @media (min-width: 768px) {
+  h1,
   h2 {
     font-size: 30px;
   }

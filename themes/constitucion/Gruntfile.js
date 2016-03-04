@@ -155,7 +155,7 @@ module.exports = function (grunt) {
       compileCore: {
         options: {
           strictMath: true,
-          sourceMap: true,
+          sourcemap: 'none',
           outputSourceFiles: true
         },
         src: 'less/bootstrap.less',
@@ -164,7 +164,7 @@ module.exports = function (grunt) {
       compileTheme: {
         options: {
           strictMath: true,
-          sourceMap: true,
+          sourcemap: 'none',
           outputSourceFiles: true,
           sourceMapURL: '<%= pkg.name %>-theme.css.map',
           sourceMapFilename: 'dist/css/<%= pkg.name %>-theme.css.map'
@@ -227,7 +227,7 @@ module.exports = function (grunt) {
         //    and then simplify the fix for https://github.com/twbs/bootstrap/issues/14837 accordingly
         compatibility: 'ie8',
         keepSpecialComments: '*',
-        sourceMap: true,
+        sourcemap: 'none',
         advanced: false
       },
       minifyCore: {
@@ -356,11 +356,11 @@ module.exports = function (grunt) {
       },
       src: '_gh_pages/**/*.html'
     },
-
+ 
     watch: {
       src: {
         files: '<%= jshint.core.src %>',
-        tasks: ['qunit', 'concat']
+        tasks: ['concat']
       },
       test: {
         files: '<%= jshint.test.src %>',

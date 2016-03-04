@@ -227,18 +227,19 @@ input[type="button"] {
 }
 
 .btn-tertiary{
-  .btn-sm;
-  background-color: @gray-xlight;
+  
   border: 2px solid @gray-xlight;
   text-transform: uppercase;
-  color: @light;
-  font-weight: lighter;
   font-family: "Alegreya Sans", sans-serif;
   .margin-bottom--xsmall;
   &:hover{
-    background-color: transparent;
-    color: @gray-xlight;
+    background-color: @gray-xlight;
+    color: @light;
     .transition;
+  }
+  &.active{
+    background-color: @gray-xlight;
+    color: @light;
   }
 }
 

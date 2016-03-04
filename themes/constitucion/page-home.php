@@ -157,7 +157,7 @@
 </div><!--/container-->
 <!-- slider -->
 <div class="[ container ]">
-	<div class="flexslider">
+	<div class="flexslider relative">
 	<ul class="slides">
 		<li>
 			<img src="<?php echo THEMEPATH; ?>images/1.jpg">

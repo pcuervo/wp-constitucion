@@ -4,23 +4,12 @@
 
     $(function(){
 
-        /**
-         * INIT FLEXSLIDER
-         */
-        $('.flexslider').flexslider({
-            animation: "slide"
-        });
 
+        // if( parseInt( isPageSondeo ) ){
+        //     //return;
+        // }
 
-        $('.nota-destacada a').on('click', function(event){
-            event.preventDefault();
-        });
-
-        if( parseInt( isPageSondeo ) ){
-            //return;
-        }
-
-        imgToSvg();
+        // imgToSvg();
         $('.js-video-wrapper').fitVids();
 
         if( parseInt( isPageCDMX ) ){
@@ -247,6 +236,19 @@
                 $( ".soy-cdmx" ).addClass('js-hidden');
             });
         }
+
+        console.log('hola');
+        /**
+         * INIT FLEXSLIDER
+         */
+        $('.flexslider').flexslider({
+            animation: "slide"
+        });
+
+        $('.nota-destacada a').on('click', function(event){
+            event.preventDefault();
+        });
+
 
     });
 

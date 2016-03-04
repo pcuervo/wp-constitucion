@@ -156,7 +156,7 @@
 	</div>
 </div><!--/container-->
 <!-- slider -->
-<div class="[ container ]">
+<div>
 	<div class="flexslider relative">
 	<ul class="slides">
 		<li>
@@ -287,7 +287,7 @@
 			</div>
 		</div>
 <!-- con 2 noticias -->
-		<div class="[ row ][ margin-bottom--large ]">
+		<!-- <div class="[ row ][ margin-bottom--large ]">
 			<div class="[ col-xs-12 col-sm-offset-2 col-sm-4 ]">
 				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
 				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
@@ -300,16 +300,16 @@
 				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
 				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
 			</div>
-		</div>
+		</div> -->
 <!-- con 1 noticia -->
-		<div class="[ row ][ margin-bottom--large ]">
+		<!-- <div class="[ row ][ margin-bottom--large ]">
 			<div class="[ col-xs-12 col-sm-offset-4 col-sm-4 ]">
 				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
 				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
 				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
 				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
 			</div>
-		</div>
+		</div> -->
 
 	</div> <!-- /container -->
 

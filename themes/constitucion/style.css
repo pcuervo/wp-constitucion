@@ -6946,7 +6946,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 ol.flex-control-nav.flex-control-paging {
   position: absolute;
-  left: 42%;
+  width: 100%;
   bottom: 10px;
   display: block;
   margin-left: auto;
@@ -6991,40 +6991,35 @@ ol.flex-control-nav.flex-control-paging li a.active {
 }
 ul.flex-direction-nav {
   position: absolute;
-  bottom: 50%;
+  width: 100%;
+  bottom: 45%;
   text-indent: -9999px;
   overflow: hidden;
 }
 a.flex-prev {
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   z-index: 100;
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
-  width: 38px;
+  left: 5%;
+  width: 30px;
   background-image: url('icons/prev.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
-/*!
-
-a.flex-next{
-    .box-shadow(0 5px 15px rgba(0,0,0,.5));
-    z-index:100;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 70%;
-    width: 38px;
-    background-image: url('icons/next.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+a.flex-next {
+  z-index: 1050;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5%;
+  width: 30px;
+  background-image: url('icons/next.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
- */
 ul.slides li img {
   width: 100%;
 }

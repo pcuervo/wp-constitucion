@@ -148,8 +148,8 @@
 
 <div class="[ container ]">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-sm-6 ][ margin-top-bottom--large ]">
-			<h1 class="[ text-sm-caps text-center ]">ConstituciónCDMX</h1>
+		<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ][ margin-top-bottom--large ]">
+			<h1 class="[ text-sm-caps text-center ]">¿una constitución para la ciudad de méxico?</h1>
 			<?php $home = get_page_by_path('home');
 			echo wpautop( $home->post_content ); ?>
 		</div>

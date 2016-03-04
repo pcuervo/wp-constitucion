@@ -12,112 +12,14 @@ if( isset( $result['success'] ) ): ?>
 		</div>
 	</section>
 
-
-<div id="navbar">
-  <nav class="navbar navbar-default navbar-static-top" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-              <a class="navbar-brand" href="#">Brand</a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Active Link</a></li>
-                    <li><a href="#">Link</a></li>
-
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-
-                        <ul class="dropdown-menu">
-                          <li class="kopie"><a href="#">Dropdown</a></li>
-                            <li><a href="#">Dropdown Link 1</a></li>
-                            <li class="active"><a href="#">Dropdown Link 2</a></li>
-                            <li><a href="#">Dropdown Link 3</a></li>
-
-                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Link 4</a>
-								<ul class="dropdown-menu">
-                                    <li class="kopie"><a href="#">Dropdown Link 4</a></li>
-									<li><a href="#">Dropdown Submenu Link 4.1</a></li>
-									<li><a href="#">Dropdown Submenu Link 4.2</a></li>
-									<li><a href="#">Dropdown Submenu Link 4.3</a></li>
-									<li><a href="#">Dropdown Submenu Link 4.4</a></li>
-
-								</ul>
-							</li>
-
-                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Link 5</a>
-								<ul class="dropdown-menu">
-                                    <li class="kopie"><a href="#">Dropdown Link 5</a></li>
-									<li><a href="#">Dropdown Submenu Link 5.1</a></li>
-									<li><a href="#">Dropdown Submenu Link 5.2</a></li>
-									<li><a href="#">Dropdown Submenu Link 5.3</a></li>
-
-									<li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Submenu Link 5.4</a>
-										<ul class="dropdown-menu">
-                                            <li class="kopie"><a href="#">Dropdown Submenu Link 5.4</a></li>
-											<li><a href="#">Dropdown Submenu Link 5.4.1</a></li>
-											<li><a href="#">Dropdown Submenu Link 5.4.2</a></li>
-
-
-										</ul>
-									</li>
-								</ul>
-							</li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown2 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li class="kopie"><a href="#">Dropdown2</a></li>
-                            <li><a href="#">Dropdown2 Link 1</a></li>
-                            <li><a href="#">Dropdown2 Link 2</a></li>
-                            <li><a href="#">Dropdown2 Link 3</a></li>
-
-                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown2 Link 4</a>
-								<ul class="dropdown-menu">
-                                    <li class="kopie"><a href="#">Dropdown2 Link 4</a></li>
-									<li><a href="#">Dropdown2 Submenu Link 4.1</a></li>
-									<li><a href="#">Dropdown2 Submenu Link 4.2</a></li>
-									<li><a href="#">Dropdown2 Submenu Link 4.3</a></li>
-									<li><a href="#">Dropdown2 Submenu Link 4.4</a></li>
-
-								</ul>
-							</li>
-                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown2 Link 5</a>
-								<ul class="dropdown-menu">
-                                    <li class="kopie"><a href="#">Dropdown Link 5</a></li>
-									<li><a href="#">Dropdown2 Submenu Link 5.1</a></li>
-									<li><a href="#">Dropdown2 Submenu Link 5.2</a></li>
-									<li><a href="#">Dropdown2 Submenu Link 5.3</a></li>
-									<li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Submenu Link 5.4</a>
-										<ul class="dropdown-menu">
-                                            <li class="kopie"><a href="#">Dropdown2 Submenu Link 5.4</a></li>
-											<li><a href="#">Dropdown2 Submenu Link 5.4.1</a></li>
-											<li><a href="#">Dropdown2 Submenu Link 5.4.2</a></li>
-
-										</ul>
-									</li>
-								</ul>
-							</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </nav>
-</div>
-
 	<section class="[ container ][ padding--header--id ]">
 		<div class="[ row ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi eum, cupiditate voluptatum dicta libero iure! Accusamus accusantium ea neque eius officiis, dolor et, iusto numquam. Officia voluptas impedit, delectus vel.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptas molestias officia blanditiis quidem tempore ut, ea, sint voluptatem hic ipsa odio, pariatur cum at! Voluptates, obcaecati maiores error velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi eum, cupiditate voluptatum dicta libero iure! Accusamus accusantium ea neque eius officiis, dolor et, iusto numquam. Officia voluptas impedit, delectus vel.</p>
 			</div>
 		</div>
 	</section>
-	<section class="[ bg-gray-light ][ padding--header--id margin-bottom--large padding--top-bottom--xlarge ]">
+	<section class="[ bg-gray-light ][ padding--header--id padding--top-bottom--xlarge ]">
 		<article class="[ container ]">
 			<h2 class="[ no-margin-top ]">Instrucciones</h2>
 			<div class="[ padding--sides--xsm ]">
@@ -172,8 +74,8 @@ if( isset( $result['success'] ) ): ?>
 			</div>
 		</article>
 	</section>
-	<article class="[ space-id ]" id="imagina_ciudad">
-		<section class="[ container padding--sides--xsm--large ][ text-center ]">
+	<article class="[ padding--header--id ]" id="imagina_ciudad">
+		<section class="[ container padding--header--id padding--sides--xsm--large ][ text-center ]">
 			<h2 class="[ no-margin-top margin-bottom ]">Imagina tu ciudad</h2>
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis maiores, mollitia at qui aperiam illo cumque inventore eveniet facere quos, recusandae assumenda, delectus autem corporis cupiditate necessitatibus odio enim deserunt?</p>
@@ -220,11 +122,7 @@ if( isset( $result['success'] ) ): ?>
 			<!-- scroll horizontal -->
 				<div class="[ row ][ margin-bottom ]">
 					<div class="[ col-md-2 ]">
-						<ul lass="[ text-center ]">
-							<li class="[ box-li ]">
-								<img class="img-slide" src="<?php echo THEMEPATH; ?>/images/cdmx.png"/>
-							</li>
-						</ul>
+						<img class="img-slide" src="<?php echo THEMEPATH; ?>/images/cdmx.png"/>
 					</div>
 					<div class="[ col-md-10 ]">
 						<ul id="scroll" class="[ scroll-cronologia ][ horizontal-slide ][ text-center ]">

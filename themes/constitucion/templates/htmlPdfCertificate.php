@@ -11,7 +11,7 @@
 		.img-logo{ width: 120px; }
 		.color-primary{ color: #e80e8a; }
 		.color-gray--strong{ color:#222; }
-		.color-gray{ color: #333; }
+		.color-gray{ color: #555; }
 		.col{
 			float: left;
 			padding-right: 15px;padding-right: 15px;
@@ -25,14 +25,23 @@
 		.border-primary{
 			border: 1px solid #e80e8a;
 			width: 600px;
-			height: 500px;
+			height: 350px;
 			padding: 10px;
 			position: relative;
 		}
-		.border--1{ top: 20px; }
+		.border--1{ top: 10px; }
+		.border--2{ top: -20px; }
+		.border--3{ top: 10px; }
+		.border--black{
+			border: 1px solid #000;
+			width: 640px;
+			height: 390px;
+			padding: 20px;
+		}
 		.padding{ padding: 20px; }
+
 	</style>
-	<body>
+	<body class="[ border--black ]">
 		<div class="[ border-primary border--1 ]">
 			<div class="[ border-primary border--2 ]">
 				<div class="[ border-primary border--3 ]">

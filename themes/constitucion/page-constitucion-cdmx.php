@@ -3,41 +3,40 @@ the_title();
 $url_image_constirucion = attachment_image_url( $post->ID, 'full' );
 $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
-<section class="[ bg-image rectangle-small ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo $img_constitucion_cdmx; ?>');">
+<section class="[ bg-image rectangle-small ][ margin--header ][ relative ]" style="background-image: url('<?php echo $img_constitucion_cdmx; ?>');">
 	<div class="[ bg-dark--opacity width-100 height-100 ]">
 		<h1 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Acerca de la Constitución</h1>
 	</div>
 </section>
 
-
-<section class="[ container ]">
-	<h2 class="[ padding--headindg-content ]">Mensaje del jefe de gobierno</h2>
-	<div class="[ row ]">
-		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
-			<div class="[ content-mensaje-jefegob ]">
-				<h3>Mensaje del jefe de gobierno</h3>
-				<blockquote>
-					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
-				</blockquote>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-					accumsan lorem id porttitor porttitor. In pulvinar pellentesque ornare. Morbi facilisis sem molestie sapien euismod,
-					vel ornare mi sagittis. Nulla at porta arcu, ut lacinia dui. In semper. Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-
-					lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu.
-					Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
-				</p>
+<article class="[ padding--header--id ] " id="jefe_gobierno">
+	<section class="[ container ]">
+		<div class="[ row ]">
+			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
+				<div class="[ content-mensaje-jefegob ]">
+					<h3>Mensaje del jefe de gobierno</h3>
+					<blockquote>
+						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
+					</blockquote>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+						accumsan lorem id porttitor porttitor. In pulvinar pellentesque ornare. Morbi facilisis sem molestie sapien euismod,
+						vel ornare mi sagittis. Nulla at porta arcu, ut lacinia dui. In semper. Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-
+						lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu.
+						Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
+					</p>
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
+</article>
+
 
 <section class="[ descanso-visual ]" id="sobre_constitucion">
 	<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
 </section>
 
 <section class="[ container ]">
-
-	<h2 class="[ padding--headindg-content ]">Sobre la constitución</h2>
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 				<div class="[ content-acerca-de ]">
@@ -109,7 +108,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 				));
 
 			if ( $grupoTrabajo->have_posts() ) :
-				while ( $grupoTrabajo->have_posts() ) : $grupoTrabajo->the_post(); 
+				while ( $grupoTrabajo->have_posts() ) : $grupoTrabajo->the_post();
 					$url_img = attachment_image_url($post->ID, 'thumbnail');?>
 					<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
 						<a data-toggle="modal" data-target="#trabajador">
@@ -122,7 +121,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 				<?php endwhile;
 			endif;
 			wp_reset_postdata();?>
-		
+
 		</div>
 
 		<!-- Modal grupo de trabajo -->
@@ -143,7 +142,6 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
 <article class="[ bg-gray--fondo space-id ]" id="sobre_plataforma">
 	<section class="[ container ]">
-		<h2 class="[ padding--headindg-content ]">Sobre la plataforma</h2>
 		<div class="[ row ]">
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 
@@ -178,11 +176,10 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
 <article class="[ space-id ]" id="hacia_constituyente">
 	<section class="[ container ]">
-		<h2 class="[ padding--headindg-content no-margin-top ]">Hacia el constituyente</h2>
 		<div class="[ row ]">
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
-
 				<div class="[ content-acerca-de ]">
+					<h3>Hacia el constituyente</h3>
 					<blockquote>
 						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
 					</blockquote>
@@ -267,7 +264,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </article>
 
 
-<!-- 
+<!--
 <article class="[ bg-gray-light ][ margin-top-bottom--large padding--top-bottom--xlarge ]">
 	<section class="[ container padding--sides--xsm ]">
 		<?php $proceso = get_page_by_path('proceso-participativo'); ?>
@@ -332,7 +329,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 		</div>
 	</section>
 </article> -->
-<!-- 
+<!--
 <?php $experiencias = get_page_by_path('experiencias-y-buenas-practicas-globales');
 $url_image_experiencias = attachment_image_url( $experiencias->ID, 'full' );?>
 <section class="[ container padding--sides--xsm ][ margin-bottom--large ]">

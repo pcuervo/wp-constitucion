@@ -3570,6 +3570,10 @@ input[type="button"].btn-block {
   font-weight: lighter;
   font-family: "Alegreya Sans", sans-serif;
   font-size: 16px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
 }
 .btn-primary:hover {
   background-color: #999999;
@@ -3607,6 +3611,7 @@ input[type="button"].btn-block {
   color: #fff;
   font-weight: lighter;
   font-family: "Alegreya Sans", sans-serif;
+  margin-bottom: 10px;
 }
 .btn-tertiary:hover {
   background-color: transparent;
@@ -7436,7 +7441,7 @@ ul.slides li img {
   }
 }
 .no-padding--left {
-  padding-left: 0;
+  padding-left: 0!important;
 }
 .padding--left {
   padding-left: 12px;
@@ -7780,9 +7785,6 @@ ul.slides li img {
   .height-home-video {
     height: 500px;
   }
-}
-.fluid-width-video-wrapper {
-  position: inherit!important;
 }
 .rectangle--light {
   width: 60%;
@@ -8440,7 +8442,9 @@ ul.menu-home > li a:hover:hover,
 ul.menu-desktop li a:hover:focus,
 ul.menu-home > li a:hover:focus,
 ul.menu-desktop li a:hover:active,
-ul.menu-home > li a:hover:active {
+ul.menu-home > li a:hover:active,
+ul.menu-desktop li a:hover.active,
+ul.menu-home > li a:hover.active {
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;

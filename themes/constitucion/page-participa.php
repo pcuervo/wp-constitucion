@@ -6,6 +6,62 @@ if( isset( $result['success'] ) ): ?>
 	<div class="[ bg-success btn-lg text-center ]"><?php echo $result['success']; ?></div>
 <?php endif;  ?>
 
+	<section class="[ bg-gray-light ][ margin--header margin-bottom--large padding--top-bottom--xlarge ]">
+
+		<article class="[ container ]">
+			<h2 class="[ no-margin-top ]">Instrucciones</h2>
+			<div class="[ padding--sides--xsm ]">
+				<?php the_content(); ?>
+			</div>
+			<div class="[ row ][ margin-top-bottom ][ padding--sides--xsm ]">
+				<div class="[ col-xs-6 col-sm-3 ]">
+					<div class="[ row ][ margin-bottom ]">
+						<div class="[ col-xs-8 ]">
+							<p class="[ fz-xlarge ]">Paso 1</p>
+							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_a', true);?></p>
+						</div>
+						<div class="[ col-xs-4 no-padding--sides ]">
+							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
+						</div>
+					</div>
+				</div>
+				<div class="[ col-xs-6 col-sm-3 ]">
+					<div class="[ row ][ margin-bottom ]">
+						<div class="[ col-xs-8 ]">
+							<p class="[ fz-xlarge ]">Paso 2</p>
+							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
+						</div>
+						<div class="[ col-xs-4 no-padding--sides ]">
+							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
+						</div>
+					</div>
+				</div>
+				<div class="[ clearfix ][ visible-xs ]"></div>
+				<div class="[ col-xs-6 col-sm-3 ]">
+					<div class="[ row ][ margin-bottom ]">
+						<div class="[ col-xs-8 ]">
+							<p class="[ fz-xlarge ]">Paso 3</p>
+							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
+						</div>
+						<div class="[ col-xs-4 no-padding--sides ]">
+							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
+						</div>
+					</div>
+				</div>
+				<div class="[ col-xs-6 col-sm-3 ]">
+					<div class="[ row ][ margin-bottom ]">
+						<div class="[ col-xs-8 ]">
+							<p class="[ fz-xlarge ]">Paso 4</p>
+							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
+						</div>
+						<div class="[ col-xs-4 no-padding--sides ]">
+							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+	</section>
 	<article class="[ space-id ]" id="imagina_ciudad">
 		<section class="[ container padding--sides--xsm--large ][ text-center ]">
 			<h2 class="[ no-margin-top margin-bottom ]">Imagina tu ciudad</h2>
@@ -24,7 +80,7 @@ if( isset( $result['success'] ) ): ?>
 			</form>
 		</section>
 	</article>
-	<article class="[ bg-gray--fondo padding--header--id ]">
+	<article class="[ bg-gray--fondo space-id ]">
 		<section class="[ container ][ text-center ]">
 			<h2>Resultados</h2>
 			<a class="[ btn btn-primary btn-large ]" href="#"><strong>Obten tu certificado</strong></a> <!-- certificado.pdf -->
@@ -92,24 +148,22 @@ if( isset( $result['success'] ) ): ?>
 									if($count%2 == 0): ?>
 										<li class="[ box-li <?php echo $class_status; ?> ]">
 											<a href="<?php the_permalink(); ?>">
-												<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ]"><?php echo $date; ?></p>
+												<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ][ text-uppercase ]"><?php echo $date; ?></p>
 												<div class="[ border-gray--large ]"></div>
-												<div class="[ circle-xsmall ][ margin-auto ]"></div>
 												<div class="[ vertical-line ]"></div>
+												<div class="[ circle-xsmall ]"></div>
 												<div class="[ text--large relative ]">
 													<p class="[ evento evento-bottom ]"><?php the_title(); ?></p>
 												</div>
 											</a>
 										</li>
 									<?php else: ?>
-
-										<li class="[ box-li <?php echo $class_status; ?> ]">
+										<li class="[ box-li <?php echo $class_status; ?> ]">		<!-- estilo evento destacado -->
 											<a href="<?php the_permalink(); ?>">
-												<div class="[ text--large relative ]">
+												<div class="[ text--large text--destacado relative ]">
 													<p class="[ evento ]"><?php the_title(); ?></p>
 												</div>
-												<div class="[ vertical-line ]"></div>
-												<div class="[ circle-xsmall ][ margin-auto ]"></div>
+												<div class="[ vertical-line--large ]"></div>
 												<div class="[ border-gray--large ]"></div>
 												<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]"><?php echo $date; ?></p>
 											</a>
@@ -278,61 +332,6 @@ if( isset( $result['success'] ) ): ?>
 			<div class="[ text-right ]">
 				<a href="https://www.youtube.com/channel/UC3-12ySVHF-iItCbSdZ2z-Q" target="_blank"><p class="[ inline-block align-middle ][ no-margin ]">Ver más</p></a>
 				<img class="[ inline-block align-middle ][ svg icon icon--iconed--small icon--thickness-1 icon--stoke ][ color-youtube ]"  src="<?php echo THEMEPATH; ?>icons/youtube.svg">
-			</div>
-		</article>
-	</section>
-
-<section class="[ bg-gray-light ][ margin--header margin-bottom--large padding--top-bottom--xlarge ]">
-		<article class="[ container ]">
-			<div class="[ padding--sides--xsm ]">
-				<?php the_content(); ?>
-			</div>
-			<div class="[ row ][ margin-top-bottom ][ padding--sides--xsm ]">
-				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ row ][ margin-bottom ]">
-						<div class="[ col-xs-8 ]">
-							<p class="[ fz-xlarge ]">Paso 1</p>
-							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_a', true);?></p>
-						</div>
-						<div class="[ col-xs-4 no-padding--sides ]">
-							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-						</div>
-					</div>
-				</div>
-				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ row ][ margin-bottom ]">
-						<div class="[ col-xs-8 ]">
-							<p class="[ fz-xlarge ]">Paso 2</p>
-							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
-						</div>
-						<div class="[ col-xs-4 no-padding--sides ]">
-							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-						</div>
-					</div>
-				</div>
-				<div class="[ clearfix ][ visible-xs ]"></div>
-				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ row ][ margin-bottom ]">
-						<div class="[ col-xs-8 ]">
-							<p class="[ fz-xlarge ]">Paso 3</p>
-							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
-						</div>
-						<div class="[ col-xs-4 no-padding--sides ]">
-							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-						</div>
-					</div>
-				</div>
-				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ row ][ margin-bottom ]">
-						<div class="[ col-xs-8 ]">
-							<p class="[ fz-xlarge ]">Paso 4</p>
-							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
-						</div>
-						<div class="[ col-xs-4 no-padding--sides ]">
-							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-						</div>
-					</div>
-				</div>
 			</div>
 		</article>
 	</section>

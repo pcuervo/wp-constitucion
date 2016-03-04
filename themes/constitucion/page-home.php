@@ -150,7 +150,7 @@
 	</div>
 </div><!--/container-->
 <!-- slider -->
-<div class="[ container ]">
+<div>
 	<div class="flexslider relative">
 	<ul class="slides">
 		<li>

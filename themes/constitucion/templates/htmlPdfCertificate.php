@@ -11,6 +11,8 @@
 		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700,800,500,300' rel='stylesheet' type='text/css'>
 	</head>
 	<style>
+		body{ width: 300px;
+		height: 300px }
 		h3{	font-family: "Alegreya Sans",sans-serif;}
 		p{ font-family: "ABeeZee", sans-serif;  }
 		.text-center{text-align: center;}
@@ -27,7 +29,6 @@
 		.text-uppercase{ text-transform: uppercase; }
 		.fz--small{ font-size: 12px; }
 		.margin-top{ margin-top: 60px; }
-		.margin-top--large{ margin-top: 100px; }
 		.border-primary{
 			border: 1px solid #e80e8a;
 			width: 600px; height: 350px;
@@ -67,12 +68,9 @@
 								<p class="[ text-uppercase ][ color-gray ][ fz--small ]">Ciudad de México a 2 de marzo de 2016</p>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
 		</div>
-
-
 	</body>
 </html>

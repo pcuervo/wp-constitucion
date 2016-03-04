@@ -252,14 +252,11 @@ button.fs-continue,
 	color: #777;
 	text-overflow: ellipsis;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 1.2em;
 	border-radius: 0;
 	font-family:"ABeeZee", sans-serif;
 }
 
-@media (min-width: 768px){
-	.fs-fields input { font-size: 28px;}
-}
 
 .fs-fields input:invalid {
 	box-shadow: none; /* removes red shadow in FF*/
@@ -305,7 +302,7 @@ button.fs-continue,
 	position: relative;
 	margin-right: 6%;
 	padding: 10px;
-	max-width: 100px;
+	max-width: 200px;
 	width: 30%;
 	text-align: center;
 	font-weight: 700;

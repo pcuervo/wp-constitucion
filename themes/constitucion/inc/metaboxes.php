@@ -126,24 +126,79 @@
 	}
 
 	function show_metabox_info_ensayo($post){
-		$nombre_evento = get_post_meta( $post->ID, 'nombre_evento', true );
-		$frase_evento = get_post_meta( $post->ID, 'frase_evento', true );
+		$nombre_ensayo = get_post_meta( $post->ID, 'nombre_ensayo', true );
+		$frase_ensayo = get_post_meta( $post->ID, 'frase_ensayo', true );
 		$fechaInicio = get_post_meta( $post->ID, 'fechaInicio', true );
-		$fechaFinal = get_post_meta( $post->ID, 'fechaInicio', true );
+		$fechaFinal = get_post_meta( $post->ID, 'fechaFinal', true );
+		$palabra_a = get_post_meta( $post->ID, 'palabra_a', true );
+		$palabra_b = get_post_meta( $post->ID, 'palabra_b', true );
+		$palabra_c = get_post_meta( $post->ID, 'palabra_c', true );
+		$mensaje_central = get_post_meta( $post->ID, 'mensaje_central', true );
+		$autores_ensayo = get_post_meta( $post->ID, 'autores_ensayo', true );
+		$institucion = get_post_meta( $post->ID, 'institucion-u-organizacion', true );
+		$fotografias_ensayo = get_post_meta( $post->ID, 'fotografias_ensayo', true );
+		$fotografias_redes_ensayo = get_post_meta( $post->ID, 'fotografias_redes_ensayo', true );
+		$lista_asistentes_ensayo = get_post_meta( $post->ID, 'lista_asistentes_ensayo', true );
+		$compartir_documento_ensayo = get_post_meta( $post->ID, 'compartir_documento_ensayo', true );
+		$correo_electronico_ensayo = get_post_meta( $post->ID, 'correo_electronico_ensayo', true );
+		$pagina_web_ensayo = get_post_meta( $post->ID, 'pagina_web_ensayo', true );
+		$recibir_informacion = get_post_meta( $post->ID, 'recibir_mas_informacion', true );
 
+		echo "<label for='nombre_ensayo' class='label-paquetes'>Nombre del ensayo o sesión colaborativa: </label>";
+		echo "<input type='text' class='widefat' id='nombre_ensayo' name='nombre_ensayo' value='$nombre_ensayo'/><br><br>";
 
+		echo "<label for='frase_ensayo' class='label-paquetes'>Frase que describe el ensayo: </label>";
+		echo "<input type='text' class='widefat' id='frase_ensayo' name='frase_ensayo' value='$frase_ensayo'/><br><br>";
 
-		echo "<label for='nombre_evento' class='label-paquetes'>Nombre del evento o sesión colaborativa: </label>";
-		echo "<input type='text' class='widefat' id='nombre_evento' name='nombre_evento' value='$nombre_evento'/><br><br>";
+		echo "<label for='fechaInicio' class='label-paquetes'>Fechas Inicio: </label>";
+		echo "<input type='text' class='widefat date-ensayo' id='fechaInicio' name='fechaInicio' value='$fechaInicio'/><br><br>";
 
-		echo "<label for='frase_evento' class='label-paquetes'>Frase que describe el evento: </label>";
-		echo "<input type='text' class='widefat' id='frase_evento' name='frase_evento' value='$frase_evento'/><br><br>";
+		echo "<label for='fechaFinal' class='label-paquetes'>Fechas Final: </label>";
+		echo "<input type='text' class='widefat date-ensayo-fin' id='fechaFinal' name='fechaFinal' value='$fechaFinal' disabled/><br><br>";
 
-		echo "<label for='$fechaInicio' class='label-paquetes'>Fechas Inicio: </label>";
-		echo "<input type='text' class='widefat date-ensayo' id='$fechaInicio' name='$fechaInicio' value='$fechaInicio'/><br><br>";
+		echo "<label class='label-paquetes'>Palabras: </label><br><br>";
+		echo "<label for='palabra_a' class='label-paquetes'>Palabra 1: </label>";
+		echo "<input type='text' class='widefat' id='palabra_a' name='palabra_a' value='$palabra_a' /><br><br>";
+		echo "<label for='palabra_b' class='label-paquetes'>Palabra 2: </label>";
+		echo "<input type='text' class='widefat' id='palabra_b' name='palabra_b' value='$palabra_b' /><br><br>";
+		echo "<label for='palabra_c' class='label-paquetes'>Palabra 3: </label>";
+		echo "<input type='text' class='widefat' id='palabra_c' name='palabra_c' value='$palabra_c' /><br><br>";
 
-		echo "<label for='$fechaFinal' class='label-paquetes'>Fechas Final: </label>";
-		echo "<input type='text' class='widefat date-ensayo-fin' id='$fechaFinal' name='$fechaFinal' value='$fechaFinal' disabled/><br><br>";
+		echo "<label for='mensaje_central' class='label-paquetes'>Frase - Mensaje central: </label>";
+		echo "<input type='text' class='widefat' id='mensaje_central' name='mensaje_central' value='$mensaje_central' /><br><br>";
+
+		echo "<label for='autores_ensayo' class='label-paquetes'>Autores: </label>";
+		echo "<input type='text' class='widefat' id='autores_ensayo' name='autores_ensayo' value='$autores_ensayo' /><br><br>";
+
+		echo "<label for='institucion-u-organizacion' class='label-paquetes'>Institución u organización: </label>";
+		echo "<input type='text' class='widefat' id='institucion-u-organizacion' name='institucion-u-organizacion' value='$institucion' /><br><br>";
+
+		echo "<label for='fotografias_ensayo' class='label-paquetes'>Fotografías: </label>";
+		echo "<input type='text' class='widefat' id='fotografias_ensayo' name='fotografias_ensayo' value='$fotografias_ensayo' /><br><br>";
+
+		echo "<label for='fotografias_redes_ensayo' class='label-paquetes'>Fotografías redes sociales: </label>";
+		echo "<input type='text' class='widefat' id='fotografias_redes_ensayo' name='fotografias_redes_ensayo' value='$fotografias_redes_ensayo' /><br><br>";
+
+		echo "<label for='lista_asistentes_ensayo' class='label-paquetes'>Lista de asistentes: </label>";
+		echo "<input type='text' class='widefat' id='lista_asistentes_ensayo' name='lista_asistentes_ensayo' value='$lista_asistentes_ensayo' /><br><br>";
+
+		echo "<label for='compartir_documento_ensayo' class='label-paquetes'>Compartir documento: </label>";
+		echo "<input type='text' class='widefat' id='compartir_documento_ensayo' name='compartir_documento_ensayo' value='$compartir_documento_ensayo' /><br><br>";
+
+		echo "<label for='correo_electronico_ensayo' class='label-paquetes'>Correo Electrónico: </label>";
+		echo "<input type='text' class='widefat' id='correo_electronico_ensayo' name='correo_electronico_ensayo' value='$correo_electronico_ensayo' /><br><br>";
+
+		echo "<label for='pagina_web_ensayo' class='label-paquetes'>Página Web: </label>";
+		echo "<input type='text' class='widefat' id='pagina_web_ensayo' name='pagina_web_ensayo' value='$pagina_web_ensayo' /><br><br>";
+
+		
+		$checked_1 = $recibir_informacion == 'si' ? 'checked' : '';
+		$checked_2 = $recibir_informacion == 'no' ? 'checked' : ''; 
+		$default = ($checked_1 == '' AND $checked_2 == '') ? 'checked' : '';
+
+		echo "<label for='recibir_mas_informacion' class='label-paquetes'>Quieres recibir más información: </label><br><br> ";
+		echo '<input type="radio" name="recibir_mas_informacion" value="si" '.$checked_1.' '.$default.'> Si<br>';
+  		echo '<input type="radio" name="recibir_mas_informacion" value="no" '.$checked_2.' > No<br>';
 
 	}
 

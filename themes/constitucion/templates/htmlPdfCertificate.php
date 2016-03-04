@@ -30,8 +30,7 @@
 		.margin-top--large{ margin-top: 100px; }
 		.border-primary{
 			border: 1px solid #e80e8a;
-			width: 600px;
-			height: 350px;
+			width: 600px; height: 350px;
 			padding: 10px;
 			position: relative;
 		}
@@ -40,17 +39,14 @@
 		.border--3{ top: 10px; }
 		.border--black{
 			border-top: 1px solid #000;border-left: 1px solid #000;border-right: 1px solid #000;
-			border-bottom: 10px solid #555;
-			width: 640px;
-			height: 390px;
+			border-bottom: 1px solid #555;
+			width: 640px; height: 390px;
 			padding: 20px;
-			position: relative;
-			right: 10px;
+			position: relative; right: 10px;
 			background-color: #fff;
 		}
-		.border--black--large{ border-left: 20px solid #555; border-bottom: 20px solid #555; padding: 0px;}
+		.border--black--large{ border-left: 20px solid #555; border-bottom: 20px solid #555; }
 		.padding{ padding: 20px; }
-
 	</style>
 	<body class="[ border--black--large ]" >
 		<div class="[ border--black ]">

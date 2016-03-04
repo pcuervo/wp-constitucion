@@ -369,6 +369,10 @@ module.exports = function (grunt) {
       less: {
         files: 'less/**/*.less',
         tasks: ['less', 'cssmin']
+      },
+      uglify: {
+        files: 'js/functions.js',
+        tasks: ['uglify']
       }
     },
 

@@ -8,7 +8,8 @@ class Pdf {
 
 	}
 
-	public static function generateCertificate($name = '', $surnames = '', $folio = ''){
+	public static function generateCertificate($name = '', $surnames = '', $folio = '')
+	{
 		$directory = get_template_directory();
 		ob_start();
 	  	include $directory.'/templates/htmlPdfCertificate.php';
@@ -20,4 +21,18 @@ class Pdf {
 		$mipdf->render();
 		$mipdf->stream('Certificado-Constitucion-CDMX.pdf', array("Attachment"=>0));
 	}
+
+
+	public static function generateGuia()
+	{
+		$guia = get_page_by_path('guia-para-compartir-el-texto');
+	  	$html = utf8_decode($guia->post_content);
+		$mipdf = new DOMPDF();
+		 
+		$mipdf->set_paper("A4", "portrait");
+		$mipdf->load_html( $html );
+		$mipdf->render();
+		$mipdf->stream('guia-para-compartir-el-texto.pdf', array("Attachment"=>0));
+	}
+
 }

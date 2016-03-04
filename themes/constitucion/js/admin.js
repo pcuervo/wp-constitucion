@@ -35,7 +35,7 @@
 
 	    $('.date-ensayo-fin').datepicker({
 	        dateFormat : 'yy-mm-dd',
-	        minDate: new Date( $('#scheduleDate').val() )
+	        minDate: 0
 	    });
 
 	});

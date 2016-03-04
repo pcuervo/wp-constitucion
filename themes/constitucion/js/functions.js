@@ -11,6 +11,73 @@
             animation: "slide"
         });
 
+        /**------ FORMULARIOS -------*/
+            /** 
+             * DATEPIKER
+             */
+            $('.date-ensayo').datepicker({
+                dateFormat : 'yy-mm-dd',
+                minDate: 0,
+                onSelect: function(dateText, inst) { 
+                    window.dateInicio = dateText;
+                    $('.date-ensayo-fin').removeAttr("disabled");
+               }
+            });
+
+            $('.date-ensayo-fin').datepicker({
+                dateFormat : 'yy-mm-dd',
+                minDate: 0
+            });
+
+            /** 
+             * VALIDAR LIGAS DE ARCHIVOS
+             */
+            $('#form-ensayos').on('submit', function(event){
+                event.preventDefault();
+                var result_a = getValidateDocs('fotografias_ensayo');
+                var result_b = getValidateDocs('lista_asistentes_ensayo');
+                var result_c = getValidateDocs('compartir_documento_ensayo');
+
+                if (result_a && result_b && result_c) {
+                    var form = document.getElementById("form-ensayos");
+                    form.submit();
+                };
+                
+            });
+
+            /** 
+             * VALIDAR LIGAS DE ARCHIVOS
+             */
+            $('#form-eventos').on('submit', function(event){
+                event.preventDefault();
+                var result_a = getValidateDocs('fotografia_evento');
+
+                if (result_a) {
+                    var form = document.getElementById("form-eventos");
+                    form.submit();
+                };
+                
+            });
+
+
+            function getValidateDocs(id_object){
+                var text = $('#'+id_object).val();
+                var docs = /docs.google.com/.test(text);
+                var dropbox = /dropbox.com/.test(text);
+                var onedrive = /onedrive.live.com/.test(text);
+
+                if (docs || dropbox || onedrive ) {
+                    return true;
+                }else if(text == ''){
+                    return true;
+                };
+
+                $('#'+id_object).addClass('parsley-error');
+
+                return false;
+
+            }
+        /**------ FORMULARIOS -------*/
 
         $('.nota-destacada a').on('click', function(event){
             event.preventDefault();

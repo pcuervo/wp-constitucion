@@ -1,11 +1,12 @@
 <?php get_header(); the_post();  ?>
-<section >
+<section>
 	<div class="[ relative bg-gray--xxlight height-home-video ]">
 		<!-- <div class="[ js-video-wrapper ]"> -->
-				<!-- <iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/7Ezz0wnzdiQ" frameborder="0" allowfullscreen></iframe> -->
-				<video class="[ video--home ][ js-video-wrapper ]" controls>
-					<source src="<?php echo THEMEPATH; ?>video/video-prueba.mp4" type="video/mp4">
-					Your browser does not support the video tag.
+				<!-- <iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/7Ezz0wnzdiQ" frameborder="0" allowfullscreen></iframe>--> 
+				<video class="[ width-100 ][ center-bottom ]" autoplay loop>
+					<source src="<?php echo THEMEPATH; ?>video/video.mp4" type="video/mp4">
+					<source src="<?php echo THEMEPATH; ?>video/video.webm" type="video/webm">
+					<source src="<?php echo THEMEPATH; ?>video/video.ogv" type="video/ogg">
 				</video>
 		<!-- </div> -->
 		<!-- <div class="[ bg-image height-home-video ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/home.png');"></div> -->

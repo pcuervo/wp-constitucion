@@ -6,9 +6,6 @@ if( isset( $result['success'] ) ): ?>
 	<div class="[ bg-success btn-lg text-center ]"><?php echo $result['success']; ?></div>
 <?php endif;  ?>
 
-
-
-
 	<article class="[ space-id ]" id="imagina_ciudad">
 		<section class="[ container padding--sides--xsm--large ][ text-center ]">
 			<h2 class="[ no-margin-top margin-bottom ]">Imagina tu ciudad</h2>
@@ -142,7 +139,7 @@ if( isset( $result['success'] ) ): ?>
 		        		<div class="[ row ]">
 							<div class="[ col-xs-12 col-sm-6 ]">
 								<label for=""><strong class="[ color-primary ]">Nombre</strong> del acontecimiento</label>
-								<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="(máximo 100 caracteres)">
+								<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="(Máximo 100 caracteres)">
 								<label for=""><strong class="[ color-primary ]">Frase que describe el acontecimiento</strong> Comparte una frase que describa el evento/sesión de trabajo/diálogo público</label>
 								<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder=" (120 caracteres) ">
 								<label for=""><strong class="[ color-primary ]">Descripción</strong> Describe los objetivos, alcances y perfil de asistentes de tu acontecimiento </label>
@@ -171,7 +168,7 @@ if( isset( $result['success'] ) ): ?>
 									</div>
 								</div>
 								<label for=""><strong class="[ color-primary ]">Fotografía de cartel o publicidad del acontecimiento.</strong> (Campo No obligatorio) Coloca el archivo de la fotografía en google drive, dropbox o onedrive y a continuación copia la liga.</label>
-								<input class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" type="file" id="exampleInputFile">
+								<input input type="text" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder="Archivo de fotografía">
 								<label for=""><strong class="[ color-primary ]">Correo Electrónico</strong> Señala a continuación un correo electrónico</label>
 								<input type="email" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" id="" placeholder="Correo Electrónico">
 							</div>
@@ -226,9 +223,9 @@ if( isset( $result['success'] ) ): ?>
 							<input name="pagina_ensayo" id="pagina_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Si es el caso">
 							<label for=""><span class="[ color-primary ]">Quieres recibir más información</span></label>
 							<label for="" class="[ inline-block ]">Sí</label>
-							<input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1" checked>
+							<input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1">
 							<label for="" class="[ margin-left ][ inline-block ]">No</label>
-							<input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2">
+							<input type="radio" name="optionsRadios1" id="optionsRadios1" value="option2">
 							<input name="" id="" type="hidden" value="">
 						</div>
 					</div>

@@ -116,4 +116,16 @@
   array (
     'normal' => DOMPDF_FONT_DIR . 'a7a6f35b71728c35a5ab241f05192540',
   ),
+  'abeezee' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'f47395a273bbf458ac5d63611ec61a8e',
+  ),
+  'alegreya sans' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'a0dcb49b30ce01d765879319b0d4291c',
+  ),
+  'alegreya sans sc' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'ef46e91c616f5eb82808504e407ebdc3',
+  ),
 ) ?>

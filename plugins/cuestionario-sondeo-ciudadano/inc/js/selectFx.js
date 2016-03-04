@@ -100,7 +100,6 @@
             var optclass = '', classes = '', link = '', isTitle = false;
 
             if( 'title' == el.className ){
-                console.log('es titulo');
                 optclass = 'title clear';
                 return '<li class="' + optclass + '"><span>' + el.textContent + '</span></li>';
             }			

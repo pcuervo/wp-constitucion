@@ -30,10 +30,12 @@ legend {
 }
 
 label {
-  display: inline-block;
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
   margin-bottom: 5px;
   font-weight: bold;
+  font-family: "ABeeZee", sans-serif;
+  color: @gray;
+  display: block;
 }
 
 
@@ -619,7 +621,7 @@ input[type="checkbox"] {
 }
 
 .input-primary{
-  border-bottom: 1px solid @gray-lighter; border-top: 0px; border-left: 0px; border-right: 0px;
+  border-bottom: 2px solid @gray-lighter; border-top: 0px; border-left: 0px; border-right: 0px;
   border-radius: 0px;
   font-family: "Alegreya Sans", sans-serif;
   font-size: 18px;
@@ -641,4 +643,19 @@ input[type="checkbox"] {
     padding-left: 0;
     list-style: none;
     color: red;
+}
+
+.box-shadow--form{
+  @media (max-width: 480px) { margin-left: 0px; margin-right: 0px; }
+  @media (min-width: 481px){
+    .margin-sides;
+    .margin-bottom;
+    .padding;
+    .border-box-shadow
+  }
+  @media (min-width: @screen-sm){
+    .margin-sides--large;
+    .margin-bottom--large;
+    .padding--large;
+   }
 }

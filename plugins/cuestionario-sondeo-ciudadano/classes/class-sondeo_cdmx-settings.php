@@ -27,14 +27,15 @@ class Sondeo_CDMX_Settings {
 	 */
 	private function hooks() {
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_and_localize_scripts' ) );
-		//add_action( 'admin_menu', array( $this, 'add_menu_pages' ) );
+		add_action( 'admin_menu', array( $this, 'add_menu_pages' ) );
 	}
 
 	/**
 	 * Add menu pages
 	 */
 	public function add_menu_pages() {
-		add_menu_page( 'Editar cuestionario', 'Cuestionario Sondeo CDMX', 'manage_options', 'menu_sondeo_cdmx', array( $this, 'add_sondeo_cdmx_page' ) );
+		add_menu_page( 'Respuestas Sondeo Masivo', 'Respuestas Sondeo CDMX', 'manage_options', 'menu_sondeo_cdmx', array( $this, 'add_sondeo_cdmx_page' ) );
+		add_submenu_page ( null, 'Ver respuestas', '', 'manage_options', 'respuestas_sondeo_cdmx', array( $this, 'add_respuestas_sondeo_cdmx_page' ) );
 	}
 
 	/**
@@ -50,130 +51,76 @@ class Sondeo_CDMX_Settings {
 	 * The main screen
 	 */
 	public function add_sondeo_cdmx_page() {
+		$survey = Sondeo_CDMX_Survey::get();
+		$answered_surveys = $survey->get_answered_surveys();
 		?>
 
 		<div class="[ wrap ]">
-			<h1>Cuestionario Sondeo CDMX</h1>
-			<p>Aquí podrás dar de alta preguntas para el sondeo ciudadano masivo de la Plataforma Constitución CDMX. </p>
+			<h1>Sondeo CDMX</h1>
+			<p>Aquí podrás consultar las encuestas del Sondeo Masivo de la Constitución CDMX</p>
 			<hr>
-			<?php 
-				if( ! isset( $_POST['new_question'] ) ) {
-					$this->display_question_form();
-				} else if( isset( $_POST['new_question'] ) ){
-					$this->display_answers_form();
-				}
-			
-				if( isset( $_POST['current_question'] ) ) {
-					$question = $_POST['current_question'];
-					$question_type = $_POST['current_question_type'];
-					$answers = $_POST['answers'];
-					$survey = Sondeo_CDMX_Survey::get();
-
-					$survey->add_question( $question, $question_type, $answers );
-				}
-			?>
-			<hr>
-			<?php 
-				$this->display_existing_questions(); 
-			?>
-		</div>
-		<?php
-	}// add_sondeo_cdmx_page
-
-	public function display_question_form(){
-		?>
-		<form action="" method="POST" data-parsley-question="">
-			<table class="[ form-table ][ questions ]">
-				<tbody>
-					<tr>
-						<th scope="row">
-							<label for="new-question">Pregunta</label>
-						</th>
-						<td>
-							<input type="text" id="new-question" name="new_question" class="regular-text" required data-parsley-error-message="¡La pregunta no puede estar vacía!">
-						</td>
-						<td>
-							<fieldset>
-								<label title="checkbox">
-									<input type="radio" name="question_type" value="checkbox" checked="checked">
-									Varias respuestas válidas (checkboxes)
-								</label> 
-								<label title="single_answer">
-									<input type="radio" name="question_type" value="radio">
-									Una respuesta válida (botones de radio)
-								</label>
-							</fieldset>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			<input type="submit" name="submit" id="submit" class="[ button button-primary ]" value="Agregar pregunta">
-		</form>
-		<?php 
-	}// display_question_form
-
-	public function display_answers_form(){
-		?>
-		<h2>Pregunta actual: <?php echo $_POST['new_question']; ?></h2>
-		<form action="" method="POST" data-parsley-answer="">
-			<table class="[ form-table ][ answers ]">
-				<tbody>
-					<tr class="[ answer-row ]">
-						<th scope="row">
-							<label for="new-answer">Respuesta nueva</label>
-						</th>
-						<td>
-							<input type="text" class="[ regular-text ]" id="new-answer" name="new_answer" required data-parsley-error-message="¡La respuesta no puede estar vacía!">
-						</td>
-						<td>
-							<a href="#" class="[ button button-primary ][ js-add-answer-row ]">Agregar respuesta</a>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</form>
-		<div id="added-answers">
-			<h2>Respuestas agregadas</h2>
-			<p><small>Debes agregar al menos 2 respuestas para poder guardar tu pregunta.</small></p>
-			<form action="" method="POST">
-				<ol class="[ current-answers ]"></ol>
-				<input type="hidden" name="current_question" value="<?php echo $_POST['new_question']; ?>">
-				<input type="hidden" name="current_question_type" value="<?php echo $_POST['question_type']; ?>">
-				<input type="submit" name="submit" id="submit" class="[ button button-primary ][ js-save-question ]" value="Guardar pregunta">
-			</form>
-		</div>
-		<?php
-	}// display_answers_form
-
-	public function display_existing_questions(){
-		$survey = Sondeo_CDMX_Survey::get();
-		$existing_questions = $survey->get_questions();
-		if( ! empty( $existing_questions ) ) : ?>
-			<h2>Preguntas existentes:</h2>
-			<table class="[ form-table ][ existing-questions ]">
+			<table class="[ form-table ]">
 				<thead>
 					<tr>
-						<th>Pregunta</th>
-						<th>Tipo de pregunta</th>
-						<th>Respuestas</th>
+						<th>#</th>
+						<th>Código de referencia</th>
+						<th>Fecha y hora</th>
+						<th>Ver respuestas</th>
 					</tr>
 				</thead>
 				<tbody>
-					<?php foreach ( $existing_questions as $key => $question ) : ?>
+					<?php foreach ( $answered_surveys as $key => $survey ) : ?>
 						<tr>
-							<td><?php echo $question['question'] ?></td>
-							<td><?php echo $question['question_type'] ?></td>
-							<td>
-								<?php foreach ( $question['answers'] as $key => $answer ) : ?>
-									<p><?php echo $key+1 . '. ' . $answer ?></p>
-								<?php endforeach; ?>
-							</td>
+							<td><?php echo $key+1 ?></td>
+							<td><?php echo $survey['reference_code'] ?></td>
+							<td><?php echo $survey['created_at'] ?></td>
+							<td><a href="<?php echo admin_url( '/admin.php?page=respuestas_sondeo_cdmx', 'http' ) . '&reference_code=' . $survey['reference_code']?>">Abrir</a></td>
 						</tr>
 					<?php endforeach; ?>
 				</tbody>
 			</table>
-		<?php endif; ?>
-		<?php 
-	}// display_existing_questions
+		</div>
+		<?php
+	}// add_sondeo_cdmx_page
+
+	/**
+	 * The main screen
+	 */
+	public function add_respuestas_sondeo_cdmx_page() {
+		if( ! isset( $_GET['reference_code'] ) ){
+			echo '<p>Ha ocurrido un error</p>';
+			echo '<a href="' . admin_url( '/admin.php?page=menu_sondeo_cdmx', 'http' ) . '">Ver todas las encuestas</a>';
+       	 	exit;
+		}
+		$survey = Sondeo_CDMX_Survey::get();
+		$answered_surveys = $survey->get_survey( $_GET['reference_code'] );
+		?>
+
+		<div class="[ wrap ]">
+			<a href="<?php echo admin_url( '/admin.php?page=menu_sondeo_cdmx', 'http' ) ?>">Ver todas las encuestas</a>
+			<h1>Sondeo CDMX</h1>
+			<p>Encuesta con código de referencia <?php echo $answered_surveys[0]['reference_code'] ?> creada el <?php echo $answered_surveys[0]['created_at'] ?></p>
+			<hr>
+			<table class="[ form-table ]">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Preguntas</th>
+						<th>Respuestas</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach ( $answered_surveys as $key => $survey ) : ?>
+						<tr>
+							<td><?php echo $key+1 ?></td>
+							<td><?php echo $survey['question'] ?></td>
+							<td><?php echo $survey['answer'] ?></td>
+						</tr>
+					<?php endforeach; ?>
+				</tbody>
+			</table>
+		</div>
+		<?php
+	}// add_respuestas_sondeo_cdmx_page
 
 }

@@ -46,7 +46,7 @@ $ = jQuery.noConflict();
         }
     })
 
-    $('#js-grandes-retos a').click(function(e){
+    $('#js-grandes-retos button').click(function(e){
         e.preventDefault();
         $(this).addClass('disabled');
         var $grandesRetos = $('#js-grandes-retos input').val();
@@ -58,7 +58,6 @@ $ = jQuery.noConflict();
         $grandesRetos = $('#js-grandes-retos input').val();
         if( hasFourChallenges( $grandesRetos ) ){
             if( $grandesRetos.indexOf('Otro') > -1 ){
-                console.log('hay otros');
                 showOtrosRetos();
             }
             $('#js-grandes-retos a').hide();
@@ -122,9 +121,7 @@ function showColonias( delegacion, section ){
     $(el).append( getHTMLColoniasCDMX( delegacion, section ) );
     new SelectFx( $(el + ' .cs-select')[0], {
         stickyPlaceholder: false,
-        onChange: function( colonia ){
-            console.log( colonia );
-        }
+        onChange: function( colonia ){}
     });
     return;
 }
@@ -166,9 +163,7 @@ function showEstados( section ){
     $(el).append( getHTMLEstados( section ) );
     new SelectFx( $(el + ' .cs-select')[0], {
         stickyPlaceholder: false,
-        onChange: function( estados ){
-            console.log( estados );
-        }
+        onChange: function( estados ){}
     });
     return;
 }
@@ -189,9 +184,7 @@ function showPaises( section ){
     $(el).append( getHTMLPaises( section ) );
     new SelectFx( $(el + ' .cs-select')[0], {
         stickyPlaceholder: false,
-        onChange: function( pais ){
-            console.log( pais );
-        }
+        onChange: function( pais ){}
     });
     return;
 }
@@ -440,7 +433,7 @@ function getSurveyData(){
 
     $lugarResidenciaQ = $('#js-donde-vives').data('question');
     $lugarResidencia = $('#js-donde-vives select option:selected').val();
-    $answers[$lugarResidenciaQ] = $lugarResidencia;
+    $answers[$lugarResidenciaQ] = getLugarResidencia( $lugarResidencia );
 
     $delegacionEstadoPaisMunicipioQ = $('#js-delegaciones-estados-paises').data('question');
     $delegacionEstadoPaisMunicipio = $('#js-delegaciones-estados-paises select option:selected').val()
@@ -475,7 +468,7 @@ function getSurveyData(){
 
     $lugarTrabajoQ = $('#js-donde-trabajas').data('question');
     $lugarTrabajo = $('#js-donde-trabajas select option:selected').val();
-    $answers[$lugarTrabajoQ] = $lugarTrabajo;
+    $answers[$lugarTrabajoQ] = getLugarResidencia( $lugarTrabajo );
 
     $delegacionEstadoPaisMunicipioTrabajasQ = $('#js-trabajas-delegaciones-estados-paises').data('question');
     $delegacionEstadoPaisMunicipioTrabajas = $('#js-trabajas-delegaciones-estados-paises select option:selected').val()
@@ -494,7 +487,7 @@ function getSurveyData(){
 
     $lugarEstudioQ = $('#js-donde-trabajas').data('question');
     $lugarEstudio = $('#js-donde-trabajas select option:selected').val();
-    $answers[$lugarEstudioQ] = $lugarEstudio;
+    $answers[$lugarEstudioQ] = getLugarResidencia( $lugarEstudio );
 
     $delegacionEstadoPaisMunicipioEstudiasQ = $('#js-trabajas-delegaciones-estados-paises').data('question');
     $delegacionEstadoPaisMunicipioEstudias = $('#js-trabajas-delegaciones-estados-paises select option:selected').val()
@@ -558,9 +551,28 @@ function saveSurvey( answersObj ){
             action:     'save_user_answers'
         },
         function( response ){
+            console.log( response );
             $('.js-codigo-referencia span').text( response );
-            $('#modal-agradecimiento').modal('toggle')
+            $('#modal-agradecimiento').modal('toggle');
         }
     );
+}
+
+function getLugarResidencia( slug ){
+    var lugar;
+    switch( slug ){
+        case 'cdmx':
+            lugar = 'CDMX';
+            break;
+        case 'zmvm':
+            lugar = 'Zona Metropolitana';
+            break;
+        case 'resto-republica':
+            lugar = 'Zona Metropolitana';
+            break;
+        default:
+            lugar = 'Fuera de México';
+    }
+    return lugar;
 }
 

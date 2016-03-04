@@ -5,10 +5,76 @@
 		<title>Certificate</title>
 		<link href="http://fonts.googleapis.com/css?family=Roboto:300,500,400,700" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="<?php echo CSSPATH; ?>styles-pdf.css" type="text/css"/>
+		<!-- Google font(s) -->
+		<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700,800,300,100' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700,800,500,300' rel='stylesheet' type='text/css'>
 	</head>
-	<body>
-		<h4>Hola PDF</h4>
-		<p>aqui maquetar el certificado</p>
+	<style>
+		body{ width: 300px;
+		height: 300px }
+		h3{	font-family: "Alegreya Sans",sans-serif;}
+		p{ font-family: "ABeeZee", sans-serif;  }
+		.text-center{text-align: center;}
+		.img-logo{ width: 120px; }
+		.color-primary{ color: #e80e8a; }
+		.color-gray--strong{ color:#222; }
+		.color-gray{ color: #555; }
+		.col{
+			float: left;
+			padding-right: 15px;padding-right: 15px;
+		}
+		.col-1{ width: 30%;}
+		.col-2{ width: 65%;}
+		.text-uppercase{ text-transform: uppercase; }
+		.fz--small{ font-size: 12px; }
+		.margin-top{ margin-top: 60px; }
+		.border-primary{
+			border: 1px solid #e80e8a;
+			width: 600px;
+			height: 350px;
+			padding: 10px;
+			position: relative;
+		}
+		.border--1{ top: 10px; }
+		.border--2{ top: -20px; }
+		.border--3{ top: 10px; }
+		.border--black{
+			border-top: 1px solid #000;border-left: 1px solid #000;border-right: 1px solid #000;
+			border-bottom: 10px solid #555;
+			width: 640px;
+			height: 390px;
+			padding: 20px;
+			position: relative;
+			right: 10px;
+			background-color: #fff;
+		}
+		.border--black--large{ border-left: 20px solid #555; border-bottom: 20px solid #555; padding: 0px;}
+		.padding{ padding: 20px; }
 
+	</style>
+	<body class="[ border--black--large ]" >
+		<div class="[ border--black ]">
+			<div class="[ border-primary border--1 ]">
+				<div class="[ border-primary border--2 ]">
+					<div class="[ border-primary border--3 ]">
+						<div class="[ padding ]">
+							<div class="[ col col-1 ]">
+								<img class="[ img-logo ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
+								<p class="[ color-gray ][ margin-top--large ]">Con el folio núm. <span class="[ color-primary ][ fz--small ]">000000</span><br>
+								podrás darle seguimiento <br>
+								a tu participación</p>
+							</div>
+							<div class="[ col col-2 ]">
+								<h3 class="[ text-uppercase ][ margin-top ][ color-gray ]">Diego emilio cuesy edgar</h3>
+								<p class="[ color-gray--strong ]">El grupo de trabajo redactor del proyecto de constitución Política de la Ciudad de México otorga la presente constancia por haber contribuido con ideas, reflexiones y propuestas.</p>
+								<p class="[ color-gray--strong ]">La Ciudad de México somos todas y todos. Gracias por ser parte de este proceso histórico.</p>
+								<p class="[ text-uppercase ][ color-gray ][ fz--small ]">Ciudad de México a 2 de marzo de 2016</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

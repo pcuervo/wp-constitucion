@@ -211,30 +211,30 @@ if( isset( $result['success'] ) ): ?>
 							<label for=""><span class="[ color-primary ]">Institución u organización</span> <span>En caso de que este ensayo o relatoría haya sido elaborado por una institución u organización señala abajo cuales. En caso de más de una, separar por comas.</span></label>
 							<input name="resumen_ensayo" id="resumen_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
 						</div>
-						
 						<div class="[ form-group ][ col-xs 12 col-sm-6 ]">
 							<label for=""><span class="[ color-primary ]">Fotografias</span> <span>Comparte fotografías del grupo que trabajó este documento. Copia a continuación la liga a google drive, dropbox o onedrive. </span></label>
 							<input name="fotografias_ensayo" id="fotografias_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
 							<label for=""><span class="[ color-primary ]">Comparte también fotografías</span> con una liga a flicker, instagram o blog</label>
-							<input name="fotografias_redes_ensayo" id="fotografias_redes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]">
+							<input name="fotografias1_ensayo" id="fotografias1_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]">
 							<label for=""><span class="[ color-primary ]">Lista de asistentes.</span> Comparte la lista de asistentes firmada de los participantes de la sesión/evento con una liga a google drive, dropbox o onedrive</label>
-							<input name="lista_asistentes_ensayo" id="lista_asistentes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
-							<label for=""><span class="[ color-primary ]">Compartir documento.</span> Copia a continuación la liga a google drive, dropbox o onedrive. Este deberá estar en formato .docx (Microsoft Word) y no deberá exceder 8 páginas. <a href="<?php echo site_url('/guia-para-compartir-el-texto/'); ?>" target="_blank" class="[ color-gray--light ][ fz--small ]">Aqui puedes descargar una guía para compartir el texto.</a></label>
-							<input name="compartir_documento_ensayo" id="compartir_documento_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+							<input name="lista_ensayo" id="lista_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+							<label for=""><span class="[ color-primary ]">Compartir documento.</span> Copia a continuación la liga a google drive, dropbox o onedrive. Este deberá estar en formato .docx (Microsoft Word) y no deberá exceder 8 páginas. <a href="#" class="[ color-gray--light ][ fz--small ]">Aqui puedes descargar una guía para compartir el texto.</a></label>
+							<input name="doc_ensayo" id="doc_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
 							<label for=""><span class="[ color-primary ]">Correo Electrónico.</span> Señala a continuación un correo electrónico para contactar al grupo que preparó este documento.</label>
-							<input name="correo_electronico_ensayo" id="correo_electronico_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+							<input name="email_ensayo" id="email_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
 							<label for=""><span class="[ color-primary ]">Página Web</span></label>
-							<input name="pagina_web_ensayo" id="pagina_web_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Si es el caso">
+							<input name="pagina_ensayo" id="pagina_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Si es el caso">
 							<label for=""><span class="[ color-primary ]">Quieres recibir más información</span></label>
 							<label for="" class="[ inline-block ]">Sí</label>
-							<input type="radio" name="recibir_mas_informacion" id="optionsRadios1" value="si" checked>
+							<input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1" checked>
 							<label for="" class="[ margin-left ][ inline-block ]">No</label>
-							<input type="radio" name="recibir_mas_informacion" id="optionsRadios2" value="no">
-							<input name="accion" id="accion" type="hidden" value="guarda-ensayo">
+							<input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2">
+							<input name="" id="" type="hidden" value="">
 						</div>
-						<div class="[ text-center ]">
-							<button type="submit" class="[ btn btn-primary btn--large ]"><strong>enviar</strong></button>
-						</div>
+					</div>
+
+					<div class="[ text-center ]">
+						<button type="submit" class="[ btn btn-primary btn--large ]"><strong>enviar</strong></button>
 					</div>
 				</form>
 			</div>

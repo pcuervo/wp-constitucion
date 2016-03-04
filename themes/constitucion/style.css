@@ -6998,6 +6998,23 @@ ul.horizontal-slide li[class*="col"]:first-child {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+.center-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.center-top {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
 .pull-right {
   float: right !important;
 }

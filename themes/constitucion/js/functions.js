@@ -78,13 +78,13 @@
 
             }
         /**------ FORMULARIOS -------*/
-
+ 
         $('.nota-destacada a').on('click', function(event){
             event.preventDefault();
-        });
-
-        if( parseInt( isPageSondeo ) ){
-            //return;
+        });  
+ 
+        if( parseInt( isPageSondeo ) ){ 
+            $('[data-parsley-certificado]').parsley();
         }
 
         imgToSvg();

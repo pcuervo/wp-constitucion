@@ -3,7 +3,7 @@
 	<div class="[ relative bg-gray--xxlight height-home-video ]">
 		<!-- <div class="[ js-video-wrapper ]"> -->
 				<!-- <iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/7Ezz0wnzdiQ" frameborder="0" allowfullscreen></iframe>--> 
-				<video class="[ width-100 ][ center-bottom ]" autoplay loop>
+				<video class="[ width-100 ][ center-bottom ]" autoplay="" loop="" muted="">
 					<source src="<?php echo THEMEPATH; ?>video/video.mp4" type="video/mp4">
 					<source src="<?php echo THEMEPATH; ?>video/video.webm" type="video/webm">
 					<source src="<?php echo THEMEPATH; ?>video/video.ogv" type="video/ogg">

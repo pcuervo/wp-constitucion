@@ -13,15 +13,16 @@
 							<h2 class="[ text-center text-uppercase ]">¡Gracias por participar!</h2>
 							<p class="[ text-center ][ js-codigo-referencia ]">Tu código de referencia es: <span></span></p>
 							<p class="[ text-center text-uppercase ]">Escribe tu nombre y apellido para obtener tu certificado de participación</p>
-							<form class="[ row ]">
+							<form class="[ row ]" action="<?php echo site_url('pdf-certificado-de-participacion'); ?>" method="POST" data-parsley-certificado>
 								<div class="[ col-xs-12 col-sm-6  ]">
-									<input type="text" class="form-control [ margin-bottom ][ input--search ] " placeholder="Nombre(s)">
+									<input type="text" name="nombre" class="form-control [ margin-bottom ][ input--search ] " placeholder="Nombre(s)" required="">
 								</div>
 								<div class="[ col-xs-12 col-sm-6 ]">
-									<input type="text" class="form-control [ margin-bottom ][ input--search ] " placeholder="Apellidos">
+									<input type="text" name="apellidos" class="form-control [ margin-bottom ][ input--search ] " placeholder="Apellidos" required="">
 								</div>
+								<input type="hidden" name="referencia">
 								<button type="submit" class="[ col-xs-12 ][ btn btn-secondary color-gray ][ center-block ]">obtener certificado</button>
-								<a href="<?php echo site_url('participa') ?>" class="[ col-xs-12 ][ btn btn-secondary btn-sm color-gray ][ center-block ][ margin-top ]">No deseo obtener mi certificado en este momento</a>
+								<a href="<?php echo site_url('participa') ?>" class="[ col-xs-12 ][ btn btn-secondary btn-sm color-gray ][ center-block ][ margin-top ]">No, gracias</a>
 							</form>
 						</div>
 					</div>

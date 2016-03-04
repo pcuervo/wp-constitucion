@@ -3595,24 +3595,21 @@ input[type="button"].btn-block {
   -o-transition: all 0.3s ease;
 }
 .btn-tertiary {
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 3px;
-  background-color: #999999;
   border: 2px solid #999999;
   text-transform: uppercase;
-  color: #fff;
-  font-weight: lighter;
   font-family: "Alegreya Sans", sans-serif;
 }
 .btn-tertiary:hover {
-  background-color: transparent;
-  color: #999999;
+  background-color: #999999;
+  color: #fff;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
+}
+.btn-tertiary.active {
+  background-color: #999999;
+  color: #fff;
 }
 .btn-dropdown {
   border: 0px;
@@ -8519,4 +8516,3 @@ footer a:hover {
   color: #e80e8a;
   text-decoration: none;
 }
-/*# sourceMappingURL=style.css.map */

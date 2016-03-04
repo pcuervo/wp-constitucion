@@ -3611,6 +3611,7 @@ input[type="button"].btn-block {
   color: #fff;
   font-weight: lighter;
   font-family: "Alegreya Sans", sans-serif;
+  margin-bottom: 10px;
 }
 .btn-tertiary:hover {
   background-color: transparent;

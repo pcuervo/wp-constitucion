@@ -45,18 +45,35 @@
                 
             });
 
+            /** 
+             * VALIDAR LIGAS DE ARCHIVOS
+             */
+            $('#form-eventos').on('submit', function(event){
+                event.preventDefault();
+                var result_a = getValidateDocs('fotografia_evento');
+
+                if (result_a) {
+                    var form = document.getElementById("form-eventos");
+                    form.submit();
+                };
+                
+            });
+
+
             function getValidateDocs(id_object){
                 var text = $('#'+id_object).val();
                 var docs = /docs.google.com/.test(text);
                 var dropbox = /dropbox.com/.test(text);
                 var onedrive = /onedrive.live.com/.test(text);
 
-                if (docs || dropbox || onedrive) {
+                if (docs || dropbox || onedrive ) {
+                    return true;
+                }else if(text == ''){
                     return true;
                 };
 
                 $('#'+id_object).addClass('parsley-error');
-                
+
                 return false;
 
             }

@@ -2,6 +2,8 @@
 
 if(isset($_POST['accion']) AND $_POST['accion'] == 'guarda-formulario') storeForm($_POST);
 if(isset($_POST['accion']) AND $_POST['accion'] == 'guarda-ensayo') storeFormTest($_POST);
+if(isset($_POST['accion']) AND $_POST['accion'] == 'guarda-evento') storeFormEvent($_POST);
+
 
 
 // RENAME THE DEFAULT POST TYPE
@@ -297,6 +299,24 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		return true;
 	}
 
+
+	function storeFormEvent($data){
+		if (empty($data)) return false;
+
+		$contact_new = array(
+		  'post_title'    => $data['nombre_evento'],
+		  'post_content'  => $data['descripcion_evento'],
+		  'post_type'     => 'eventos',
+		  'post_author'   => 1,
+		);
+
+		$post_id = wp_insert_post( $contact_new );
+
+		if ($post_id) {
+			saveMetaDataEvent($post_id, $data);
+		}
+	}
+
 	/**
 	 * STORE FORM TEST 
 	 */
@@ -322,6 +342,16 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 		foreach ($data as $meta_key => $meta_value):
 			if ($meta_key != $data['titulo_ensayo'] AND $meta_key != $data['resumen_ensayo'] AND $meta_key != $data['accion']):
+				update_post_meta($post_id, $meta_key, $meta_value);
+			endif;
+		endforeach;
+
+	}
+
+	function saveMetaDataEvent($post_id, $data){
+
+		foreach ($data as $meta_key => $meta_value):
+			if ($meta_key != $data['nombre_evento'] AND $meta_key != $data['descripcion_evento'] AND $meta_key != $data['accion']):
 				update_post_meta($post_id, $meta_key, $meta_value);
 			endif;
 		endforeach;

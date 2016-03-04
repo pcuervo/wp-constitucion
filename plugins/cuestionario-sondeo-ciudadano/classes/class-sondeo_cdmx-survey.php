@@ -200,20 +200,7 @@ class Sondeo_CDMX_Survey {
 					<h1 class="[ margin-top ]">Sondeo Masivo CDMX</h1>
 				</div>
 				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
-<<<<<<< HEAD
 					<ol class="fs-fields">	
-						
-=======
-					<ol class="fs-fields">
-						<li id="js-grandes-retos" data-question="26">
-							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="grandes-retos">Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</label>
-							<?php $grandes_retos = $this->get_options_grandes_retos(); ?>
-							<?php foreach ( $grandes_retos as $reto ) : ?>
-								<a class="[ btn btn-tertiary ]"><?php echo $reto; ?></a>
-							<?php endforeach; ?>
-							<input class="[ fs-anim-lower ]" id="q9" name="grandes-retos" type="text" required/>
-						</li>
->>>>>>> bfc876134ed4fad9f19d16926e947206b9023366
 						<li id="js-donde-vives" data-question="1">
 							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">¿En dónde vives?</label>
 							<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">

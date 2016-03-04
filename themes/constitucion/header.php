@@ -30,6 +30,10 @@
 	</head>
 
 	<body>
+		<?php $activeAcerca = is_page('constitucion-cdmx') ? 'active' : '';
+		$activeCdmx = is_page('cdmx') ? 'active' : '';
+		$activeParticipa = is_page('participa') ? 'active' : ''; 
+		$activeNoticias = is_home() || is_singular('post') ? 'active' : '';   ?>
 		<!--[if lt IE 9]>
 			<p class="chromeframe">Estás usando una versión <strong>vieja</strong> de tu explorador. Por favor <a href="http://browsehappy.com/" target="_blank"> actualiza tu explorador</a> para tener una experiencia completa.</p>
 		<![endif]-->
@@ -50,7 +54,7 @@
 							<span class="[ text-italic ][ relative top-10 right-42 ]">de encuentro</span> <!-- - page-home.php -->
 						</li>
 						<li class="[ dropdown top-8 ]">
-							<button class="dropdown-toggle [ text-uppercase btn-dropdown ][ no-padding ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							<button class="dropdown-toggle [ text-uppercase btn-dropdown ][ no-padding ] <?php echo $activeAcerca; ?>" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 								Acerca de la<br>constitución
 								<span class="caret"></span>
 							</button>
@@ -65,8 +69,8 @@
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#biblioteca">Biblioteca</a></li>
 							</ul>
 						</li>
-						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
-						<li class="[ dropdown ]">
+						<li class="[ text-uppercase ] <?php echo $activeCdmx; ?>"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
+						<li class="[ dropdown ] <?php echo $activeParticipa; ?>">
 							<button class="dropdown-toggle [ text-uppercase btn-dropdown ][ no-padding ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 								Participa
 								<span class="caret"></span>
@@ -80,7 +84,7 @@
 								<li><a href="<?php echo site_url('/participa/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
 							</ul>
 						</li>
-						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
+						<li class="[ text-uppercase ] <?php echo $activeNoticias; ?>"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
 <!-- #SoyCDMX desktop home -->
 						<li id="js-btn-cdmx">
 							<a href="#">
@@ -123,7 +127,7 @@
 							</div>
 							<div class="[ bg-light-cdmx ][ text-center ]">
 								<ul class="[ menu-mobile ]">
-									<li class="[ text-uppercase ]"><a data-toggle="collapse" data-target="#acerca">Acerca de la constitución</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
+									<li class="[ text-uppercase ] <?php echo $activeAcerca; ?>"><a data-toggle="collapse" data-target="#acerca">Acerca de la constitución</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
 										<ul id="acerca" class="collapse [ text-uppercase ][ no-padding ][ collapse--menu ]">
 											<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe_gobierno">Mensaje del jefe de gobierno</a></li>
 											<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_constitucion">Sobre la constitución</a></li>
@@ -134,8 +138,8 @@
 											<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#preguntas_frecuentes">Preguntas frecuentes</a></li>
 											<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#biblioteca">Biblioteca</a></li>
 										</ul>
-									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
-									<li class="[ text-uppercase ]"><a data-toggle="collapse" data-target="#participa">Participa</a></li>
+									<li class="[ text-uppercase ] <?php echo $activeCdmx; ?>"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
+									<li class="[ text-uppercase ] <?php echo $activeParticipa; ?>"><a data-toggle="collapse" data-target="#participa">Participa</a></li>
 									<ul id="participa" class="collapse [ text-uppercase ][ no-padding ][ collapse--menu ]">
 										<li><a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">Imagina tu ciudad</a></li>
 										<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Resultados</a></li>
@@ -144,7 +148,7 @@
 										<li><a href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
 										<li><a href="<?php echo site_url('/participa/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
 									</ul>
-									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
+									<li class="[ text-uppercase ] <?php echo $activeNoticias; ?>"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
 									<li><a type="button" data-toggle="modal" data-target="#SoyCDMX-mobile--home">#SoyCDMX</a></li>
 								</ul>
 							</div>
@@ -194,7 +198,7 @@
 							<span class="[ text-italic ][ relative top-20 right-42 ][ margin-right--31 ]">de encuentro</span> <!-- - page-home.php -->
 						</li>
 						<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
-						<li class="[ dropdown top-8 ]">
+						<li class="[ dropdown top-8 <?php echo $activeAcerca; ?> ]">
 							<button class="dropdown-toggle [ text-uppercase btn-dropdown ][ no-padding ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 								Acerca de la<br>constitución
 								<span class="caret"></span>
@@ -210,8 +214,8 @@
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#biblioteca">Biblioteca</a></li>
 							</ul>
 						</li>
-						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
-						<li class="[ dropdown ]">
+						<li class="[ text-uppercase ] <?php echo $activeCdmx; ?>"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
+						<li class="[ dropdown ] <?php echo $activeParticipa; ?>">
 							<button class="dropdown-toggle [ text-uppercase btn-dropdown ][ no-padding ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 								Participa
 								<span class="caret"></span>
@@ -225,7 +229,7 @@
 								<li><a href="<?php echo site_url('/participa/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
 							</ul>
 						</li>
-						<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
+						<li class="[ text-uppercase ] <?php echo $activeNoticias; ?>"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
 <!-- #SoyCDMX desktop not home -->
 						<li id="js-btn-cdmx">
 							<a href="#">
@@ -268,7 +272,7 @@
 							</div>
 							<div class="[ bg-light-cdmx ][ text-center ]">
 								<ul class="[ menu-mobile ]">
-									<li class="[ text-uppercase ]"><a data-toggle="collapse" data-target="#acerca">Acerca de la constitución</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
+									<li class="[ text-uppercase ] <?php echo $activeAcerca; ?>"><a data-toggle="collapse" data-target="#acerca">Acerca de la constitución</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
 										<ul id="acerca" class="collapse [ text-uppercase ][ no-padding ][ collapse--menu ]">
 											<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe_gobierno">Mensaje del jefe de gobierno</a></li>
 											<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_constitucion">Sobre la constitución</a></li>
@@ -279,8 +283,8 @@
 											<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#preguntas_frecuentes">Preguntas frecuentes</a></li>
 											<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#biblioteca">Biblioteca</a></li>
 										</ul>
-									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
-									<li class="[ text-uppercase ]"><a data-toggle="collapse" data-target="#participa">Participa</a></li>
+									<li class="[ text-uppercase ] <?php echo $activeCdmx; ?>"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
+									<li class="[ text-uppercase ] <?php echo $activeParticipa; ?>"><a data-toggle="collapse" data-target="#participa">Participa</a></li>
 									<ul id="participa" class="collapse [ text-uppercase ][ no-padding ][ collapse--menu ]">
 										<li><a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">Imagina tu ciudad</a></li>
 										<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Resultados</a></li>
@@ -289,7 +293,7 @@
 										<li><a href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
 										<li><a href="<?php echo site_url('/participa/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
 									</ul>
-									<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
+									<li class="[ text-uppercase ] <?php echo $activeNoticias; ?>"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
 									<li><a type="button" data-toggle="modal" data-target="#SoyCDMX-mobile">#SoyCDMX</a></li>
 								</ul>
 							</div>

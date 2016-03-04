@@ -3570,6 +3570,10 @@ input[type="button"].btn-block {
   font-weight: lighter;
   font-family: "Alegreya Sans", sans-serif;
   font-size: 16px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
 }
 .btn-primary:hover {
   background-color: #999999;
@@ -3607,6 +3611,7 @@ input[type="button"].btn-block {
   color: #fff;
   font-weight: lighter;
   font-family: "Alegreya Sans", sans-serif;
+  margin-bottom: 10px;
 }
 .btn-tertiary:hover {
   background-color: transparent;
@@ -4324,6 +4329,16 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-top: -1px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+}
+header ul li.active,
+header ul li.active #dropdown--header,
+.dropdown-menu--header > li.active > a,
+.dropdown-menu--top > li.active > a,
+ul.menu-home > li.active > a,
+.collapse--menu > li.active > a,
+ul.menu-mobile > li.active > a,
+header > nav > ul > li.active > a {
+  color: #e80e8a;
 }
 .navbar {
   position: relative;
@@ -7426,7 +7441,7 @@ ul.slides li img {
   }
 }
 .no-padding--left {
-  padding-left: 0;
+  padding-left: 0!important;
 }
 .padding--left {
   padding-left: 12px;
@@ -7770,9 +7785,6 @@ ul.slides li img {
   .height-home-video {
     height: 500px;
   }
-}
-.fluid-width-video-wrapper {
-  position: inherit!important;
 }
 .rectangle--light {
   width: 60%;
@@ -8430,7 +8442,9 @@ ul.menu-home > li a:hover:hover,
 ul.menu-desktop li a:hover:focus,
 ul.menu-home > li a:hover:focus,
 ul.menu-desktop li a:hover:active,
-ul.menu-home > li a:hover:active {
+ul.menu-home > li a:hover:active,
+ul.menu-desktop li a:hover.active,
+ul.menu-home > li a:hover.active {
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;

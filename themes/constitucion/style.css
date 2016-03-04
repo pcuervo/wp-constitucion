@@ -8393,17 +8393,8 @@ ul.submenu {
 ul.menu-home {
   position: relative;
   z-index: 1000;
+  margin-top: 10px;
   padding-left: 0px;
-}
-@media (min-width: 768px) {
-  ul.menu-home {
-    margin-top: 5px;
-  }
-}
-@media (min-width: 992px) {
-  ul.menu-home {
-    margin-top: 10px;
-  }
 }
 ul.menu-home > li {
   border-left: 1px solid #dbdbdb;

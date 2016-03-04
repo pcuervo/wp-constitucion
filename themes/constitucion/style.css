@@ -6854,7 +6854,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .box-li.nota-destacada a:hover {
   text-decoration: none;
 }
-.box-li.nota-destacada p {
+.box-li.nota-destacada p.evento {
   color: #E80E89;
 }
 .box-li.nota-destacada .circle-xsmall {
@@ -8437,6 +8437,10 @@ ul.menu-home > li > a,
   border: 0px;
   border-radius: 0px;
   margin: 0 0 0 -5px;
+}
+.dropdown-menu--header a,
+.dropdown-menu--top a {
+  padding: 10px 20px!important;
 }
 ul.menu-mobile {
   padding-left: 0px !important;

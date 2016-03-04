@@ -207,7 +207,7 @@
 						$date = '';
 						if ($date_event != '') {
 							$date_arr = getDateTransform($date_event);
-							$date = $date_arr[1].' '.$date_arr[0].' de '.$date_arr[2];
+							$date = '<span class="[ color-primary ]"><strong>'. $date_arr[0] . '</strong></span> ' . $date_arr[1] . ' de ' . $date_arr[2];
 						}
 
 						$class_tipo = ($tipo_evento == 3) ? 'nota-destacada ' : '';

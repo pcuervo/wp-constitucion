@@ -142,7 +142,7 @@ if( isset( $result['success'] ) ): ?>
 									$date = '';
 									if ($date_event != '') {
 										$date_arr = getDateTransform($date_event);
-										$date = '<span class="[ color-primary ]">'. $date_arr[0] . '</span> ' . $date_arr[1] . ' de ' . $date_arr[2];
+										$date = '<span class="[ color-primary ]"><strong>'. $date_arr[0] . '</strong></span> ' . $date_arr[1] . ' de ' . $date_arr[2];
 									}
 
 									if($count%2 == 0): ?>

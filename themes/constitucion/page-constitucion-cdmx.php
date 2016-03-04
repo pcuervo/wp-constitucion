@@ -126,7 +126,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
 				<a data-toggle="modal" data-target="#trabajador">
 					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
+					<h3>Nombre lorem ipsumddddd</h3>
 				</a>
 			</div>
 			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">

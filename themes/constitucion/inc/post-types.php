@@ -224,4 +224,35 @@
 		);
 		register_post_type( 'ensayos', $args );
 
+		// ensayos
+		$labels = array(
+			'name'          => 'Grupo de trabajo',
+			'singular_name' => 'Grupo de trabajo',
+			'add_new'       => 'Nuevo Integrante',
+			'add_new_item'  => 'Nuevo Integrante',
+			'edit_item'     => 'Editar Integrante',
+			'new_item'      => 'Nuevo Integrante',
+			'all_items'     => 'Todos',
+			'view_item'     => 'Ver Integrante',
+			'search_items'  => 'Buscar Integrante',
+			'not_found'     => 'No se encontro',
+			'menu_name'     => 'Grupo de trabajo'
+		);
+
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'grupo-de-trabajo' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => 6,
+			'supports'           => array( 'title', 'editor', 'thumbnail' )
+		);
+		register_post_type( 'grupo-de-trabajo', $args );
+
 	});

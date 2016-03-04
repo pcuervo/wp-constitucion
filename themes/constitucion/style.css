@@ -6858,8 +6858,9 @@ ul.horizontal-slide li[class*="col"]:first-child {
   color: #E80E89;
 }
 .box-li.nota-destacada .circle-xsmall {
-  background-color: #E80E89;
+  border: 2px solid #E80E89;
 }
+.box-li.nota-destacada .vertical-line,
 .box-li.nota-destacada .vertical-line--large {
   border-left: 2px solid #E80E89;
 }

@@ -2,7 +2,7 @@
 <section>
 	<div class="[ relative bg-gray--xxlight height-home-video ]">
 		<!-- <div class="[ js-video-wrapper ]"> -->
-				<!-- <iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/7Ezz0wnzdiQ" frameborder="0" allowfullscreen></iframe>--> 
+				<!-- <iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/7Ezz0wnzdiQ" frameborder="0" allowfullscreen></iframe>-->
 				<video class="[ width-100 ][ center-bottom ]" autoplay loop>
 					<source src="<?php echo THEMEPATH; ?>video/video.mp4" type="video/mp4">
 					<source src="<?php echo THEMEPATH; ?>video/video.webm" type="video/webm">
@@ -217,10 +217,10 @@
 						    <li class="[ box-li <?php echo $class_status.$class_tipo; ?> ]">
 
 						    	<?php if($tipo_evento != 3) echo '<a href="'.$url.'">'; ?>
-									<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ]"><?php echo $date; ?></p>
+									<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ][ text-uppercase ]"><?php echo $date; ?></p>
 									<div class="[ border-gray--large ]"></div>
-									<div class="[ circle-xsmall ][ margin-auto ]"></div>
 									<div class="[ vertical-line ]"></div>
+									<div class="[ circle-xsmall ]"></div>
 									<div class="[ text--large relative ]">
 										<p class="[ evento evento-bottom ]"><?php the_title(); ?></p>
 									</div>
@@ -232,11 +232,10 @@
 
 							<li class="[ box-li <?php echo $class_status.$class_tipo; ?> ]">
 								<?php if($tipo_evento != 3) echo '<a href="'.$url.'">'; ?>
-									<div class="[ text--large relative ]">
+									<div class="[ text--large text--destacado relative ]">
 										<p class="[ evento ]"><?php the_title(); ?></p>
 									</div>
-									<div class="[ vertical-line ]"></div>
-									<div class="[ circle-xsmall ][ margin-auto ]"></div>
+									<div class="[ vertical-line--large ]"></div>
 									<div class="[ border-gray--large ]"></div>
 									<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]"><?php echo $date; ?></p>
 								<?php if($tipo_evento != 3) echo '</a>'; ?>

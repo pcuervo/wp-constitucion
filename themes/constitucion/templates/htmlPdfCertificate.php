@@ -11,6 +11,8 @@
 		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700,800,500,300' rel='stylesheet' type='text/css'>
 	</head>
 	<style>
+		body{ width: 300px;
+		height: 300px }
 		h3{	font-family: "Alegreya Sans",sans-serif;}
 		p{ font-family: "ABeeZee", sans-serif;  }
 		.text-center{text-align: center;}
@@ -27,7 +29,6 @@
 		.text-uppercase{ text-transform: uppercase; }
 		.fz--small{ font-size: 12px; }
 		.margin-top{ margin-top: 60px; }
-		.margin-top--large{ margin-top: 100px; }
 		.border-primary{
 			border: 1px solid #e80e8a;
 			width: 600px;
@@ -38,7 +39,6 @@
 		.border--1{ top: 20px; }
 		.padding{ padding: 20px; }
 	</style>
-	<body>
 		<div class="[ border-primary border--1 ]">
 			<div class="[ border-primary border--2 ]">
 				<div class="[ border-primary border--3 ]">
@@ -60,6 +60,5 @@
 				</div>
 			</div>
 		</div>
-
 	</body>
 </html>

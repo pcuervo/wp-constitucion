@@ -128,75 +128,6 @@ if( isset( $result['success'] ) ): ?>
 		<h2 class="[ margin-top--large ]">Diálogos Públicos</h2>
 		<div class="[ row ]">
 
-			<div class="[ col-xs-12 col-sm-8 col-sm-offset-2 ][ form-ensayos ]">
-				<form id="form-ensayos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
-					<label for="">Título del ensayo o de la relatoría</label>
-					<input type="text" name="titulo_ensayo" id="titulo_ensayo" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="" data-parsley-maxlength="100">
-					
-					<label for="">Nombre del evento o sesión colaborativa de la cual se derivó el documento</label>
-					<input name="nombre_ensayo" id="nombre_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="" data-parsley-maxlength="100">
-					
-					<label for="">Frase que describe el evento</label>
-					<label for="">Comparte una frase que describa el evento/sesión de trabajo</label>
-					<input name="frase_ensayo" id="frase_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="" data-parsley-maxlength="120">
-					
-					<label for="">Fechas en las que sesionó el grupo de trabajo</label>
-					<input type="text" name="fechaInicio" class="[ width-50 ] date-ensayo" required="">
-					<input type="text" name="fechaFinal" class="[ width-50 ] date-ensayo-fin" disabled>
-					
-					<label for="">Resumen. Describe a continuación las reflexiones o propuestas centrales de la sesión de trabajo y el contexto en el que esta se llevó a cabo.</label>
-					<textarea name="resumen_ensayo" id="resumen_ensayo" style="width:100%;" maxlength="200" rows="7" placeholder="Máximo 250 palabras"></textarea>
-					
-					<label for="">Palabras Clave</label>
-					<label for="">Señala a continuación 3 palabras clave vinculadas a este documento</label>
-					<input name="palabra_a" id="palabra_a" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 1" required="">
-					<input name="palabra_b" id="palabra_b" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 2" required="">
-					<input name="palabra_c" id="palabra_c" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 3" required="">
-
-					<label for="">Frase -Mensaje central</label>
-					<label for="">Comparte en una frase un mensaje central de la relatoría o ensayo</label>
-					<textarea name="mensaje_central" id="mensaje_central" style="width:100%;" maxlength="120" rows="7" placeholder="Máximo 120 caracteres"></textarea>
-					
-					<label for="">Autores</label>
-					<label for="">Lista a continuación el nombre de todos los autores separados por comas</label>
-					<input name="autores_ensayo" id="autores_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
-					
-					<label for="">Institución u organización</label>
-					<label for="">En caso de que este ensayo o relatoría haya sido elaborado por una institución u organización señala abajo cuales. En caso de más de una, separar por comas.</label>
-					<input name="institucion-u-organizacion" id="institucion-u-organizacion" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
-
-					<label for="">Fotografías</label>
-					<label for="">Comparte fotografías del grupo que trabajó este documento. Copia a continuación la liga a google drive, dropbox o onedrive. </label>
-					<input name="fotografias_ensayo" id="fotografias_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
-					
-					<label for="">Comparte también fotografías con una liga a flicker, instagram o blog  </label>
-					<input name="fotografias_redes_ensayo" id="fotografias_redes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]">
-
-					<label for="">Lista de asistentes</label>
-					<label for="">Comparte la lista de asistentes firmada de los participantes de la sesión/evento con una liga a google drive, dropbox o onedrive</label>
-					<input name="lista_asistentes_ensayo" id="lista_asistentes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
-
-					<label for="">Compartir documento</label>
-					<label for="">Copia a continuación la liga a google drive, dropbox o onedrive. Este deberá estar en formato .docx (Microsoft Word) y no deberá exceder 8 páginas. </label>
-					<a href="">Aqui puedes descargar una guía para compartir el texto.</a>
-					<input name="compartir_documento_ensayo" id="compartir_documento_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
-					
-					<label for="">Correo Electrónico </label>
-					<label for="">Señala a continuación un correo electrónico para contactar al grupo que preparó este documento</label>
-					<input name="correo_electronico_ensayo" id="correo_electronico_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
-
-					<label for="">Página Web (si es el caso) </label>
-					<input name="pagina_web_ensayo" id="pagina_web_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]">
-
-					<label for='recibir_mas_informacion' class='label-paquetes'>Quieres recibir más información: </label><br><br> 
-					<input type="radio" name="recibir_mas_informacion" value="si" checked> Si<br>
-  					<input type="radio" name="recibir_mas_informacion" value="no"> No<br>
-
-					<input name="accion" id="accion" type="hidden" value="guarda-ensayo">
-					<button type="submit" class="[ btn btn-secondary ][ pull-right ]">enviar</button>
-				</form>
-			</div>
-
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
 				<p>En esta sección podrás registrar acontecimientos que sean espacios de diálogo relacionados a la construcción de la Constitución de la Ciudad de México. Estos pueden ser sesiones de trabajo colaborativas, foros, asambleas, talleres o conferencias.</p>
 
@@ -302,7 +233,7 @@ if( isset( $result['success'] ) ): ?>
 						<label for=""><strong class="[ color-primary ]">Liga oficial</strong><i class="[ color-gray--light ]"> (Campo No obligatorio) </i> Copia a continuación la liga del sitio oficial del acontecimiento, la cuenta de Facebook o de Twitter </label>
 						<input type="text" name="liga_oficial_evento" id="liga_oficial_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Liga oficial (Campo No obligatorio) ">
 						<label for=""><strong class="[ color-primary ]">Fechas</strong> (Puede ser un sólo día) </label>
-						<input class="[ input-primary border-gray ][ margin-bottom--large ] date-ensayo" name="fecha_evento" id="fecha_evento" required="" type="text">
+						<input class="[ input-primary border-gray ][ margin-bottom--large ] date-ensayo" name="fecha_evento" id="fecha_evento" placeholder="yyyy-mm-dd" required="" type="text">
 						<label for=""><strong class="[ color-primary ]">Ubicación</strong> Señala abajo dónde se llevara a cabo </label>
 						<input type="text" name="ubicacion_evento" id="ubicacion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Ubicación">
 					</div>
@@ -340,48 +271,52 @@ if( isset( $result['success'] ) ): ?>
 		<h2 class="[ margin-top--large ]">Ensayos</h2>
 		<div class="[ box-shadow--form ]">
 			<h2 class="[ margin-bottom ]">Formulario para compartir ensayos y relatorías de eventos</h2>
-			<form action="" >
+			<form id="form-ensayos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="" >
 				<div class="[ row ]">
 					<div class="[ form-group ][ col-xs-12 col-sm-6 ]">
 						<label for=""><span class="[ color-primary ]">Título del ensayo</span> o de la relatoría</label>
-						<input type="text" name="tipo_ensayo" id="tipo_ensayo" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="">
+						<input type="text" name="titulo_ensayo" id="titulo_ensayo" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="" data-parsley-maxlength="100">
 						<label for=""><span class="[ color-primary ]">Nombre del evento</span> o sesión colaborativa de la cual se derivó el documento</label>
-						<input name="nombre_evento" id="nombre_evento" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="">
+						<input name="nombre_ensayo" id="nombre_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres"  required="" data-parsley-maxlength="100">
 						<label for=""><span class="[ color-primary ]">Frase que describe el evento</span> <span>Comparte una frase que describa el evento/sesión de trabajo</span></label>
-						<input name="frase_evento" id="frase_evento" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="">
-						<label for=""><span class="[ color-primary ]">Fechas en las que sesionó</span> el grupo de trabajo</label>
-						<input type="date" name="fecha" class="[ input-primary ][ margin-bottom--large ][ width-50 ]">
-						<input type="date" name="fecha" class="[ input-primary ][ margin-bottom--large ][ width-50 pull-left ]">
+						<input name="frase_ensayo" id="frase_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres"  required="" data-parsley-maxlength="120">
+						<label for=""><span class="[ color-primary ]">Fechas en las que sesionó</span> el grupo de trabajo</label><br>
+						<label for="">Inicio</label>
+						<input type="text" name="fechaInicio" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo" placeholder="yyyy-mm-dd" required=""><br>
+						<label for="">Final</label>
+						<input type="text" name="fechaFinal" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo-fin" placeholder="yyyy-mm-dd" disabled>
 						<label for=""><span class="[ color-primary ]">Resumen</span> <span>Describe a continuación las reflexiones o propuestas centrales de la sesión de trabajo y el contexto en el que esta se llevó a cabo.</span></label>
-						<input name="resumen_ensayo" id="resumen_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 250 palabras" required="">
+						<input name="resumen_ensayo" id="resumen_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 250 palabras" required="" data-parsley-maxlength="120">
 						<label for=""><span class="[ color-primary ]">Palabras Clave</span> <span>Señala a continuación 3 palabras clave vinculadas a este documento</span></label>
-						<input name="palabras_ensayo" id="palabras_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Ej. vivienda, salario, comunidad" required="">
+						<input name="palabra_a" id="palabra_a" type="text" class="[ form-control ][ input-primary ][ margin-bottom ]" placeholder="Palabra 1" required="">
+						<input name="palabra_b" id="palabra_b" type="text" class="[ form-control ][ input-primary ][ margin-bottom ]" placeholder="Palabra 2" required="">
+						<input name="palabra_c" id="palabra_c" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 3" required="">
 						<label for=""><span class="[ color-primary ]">Frase -Mensaje central</span> <span>Comparte en una frase un mensaje central de la relatoría o ensayo</span></label>
-						<input name="mensaje_ensayo" id="mensaje_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="">
+						<input name="mensaje_central" id="mensaje_central" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="" data-parsley-maxlength="120">
 						<label for=""><span class="[ color-primary ]">Autores</span> <span>Lista a continuación el nombre de todos los autores separados por comas</span></label>
 						<input name="autores_ensayo" id="autores_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
 						<label for=""><span class="[ color-primary ]">Institución u organización</span> <span>En caso de que este ensayo o relatoría haya sido elaborado por una institución u organización señala abajo cuales. En caso de más de una, separar por comas.</span></label>
-						<input name="resumen_ensayo" id="resumen_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+						<input name="institucion-u-organizacion" id="institucion-u-organizacion" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
 					</div>
 					<div class="[ form-group ][ col-xs 12 col-sm-6 ]">
 						<label for=""><span class="[ color-primary ]">Fotografias</span> <span>Comparte fotografías del grupo que trabajó este documento. Copia a continuación la liga a google drive, dropbox o onedrive. </span></label>
 						<input name="fotografias_ensayo" id="fotografias_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
 						<label for=""><span class="[ color-primary ]">Comparte también fotografías</span> con una liga a flicker, instagram o blog</label>
-						<input name="fotografias1_ensayo" id="fotografias1_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]">
+						<input name="fotografias_redes_ensayo" id="fotografias_redes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]">
 						<label for=""><span class="[ color-primary ]">Lista de asistentes.</span> Comparte la lista de asistentes firmada de los participantes de la sesión/evento con una liga a google drive, dropbox o onedrive</label>
-						<input name="lista_ensayo" id="lista_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+						<input name="lista_asistentes_ensayo" id="lista_asistentes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
 						<label for=""><span class="[ color-primary ]">Compartir documento.</span> Copia a continuación la liga a google drive, dropbox o onedrive. Este deberá estar en formato .docx (Microsoft Word) y no deberá exceder 8 páginas. <a href="#" class="[ color-gray--light ][ fz--small ]">Aqui puedes descargar una guía para compartir el texto.</a></label>
-						<input name="doc_ensayo" id="doc_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+						<input name="compartir_documento_ensayo" id="compartir_documento_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
 						<label for=""><span class="[ color-primary ]">Correo Electrónico.</span> Señala a continuación un correo electrónico para contactar al grupo que preparó este documento.</label>
-						<input name="email_ensayo" id="email_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+						<input name="correo_electronico_ensayo" id="correo_electronico_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
 						<label for=""><span class="[ color-primary ]">Página Web</span></label>
-						<input name="pagina_ensayo" id="pagina_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Si es el caso">
+						<input name="pagina_web_ensayo" id="pagina_web_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Si es el caso">
 						<label for=""><span class="[ color-primary ]">Quieres recibir más información</span></label>
 						<label for="" class="[ inline-block ]">Sí</label>
-						<input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1" checked>
+						<input type="radio" name="recibir_mas_informacion" id="optionsRadios1" value="si" checked>
 						<label for="" class="[ margin-left ][ inline-block ]">No</label>
-						<input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2">
-						<input name="" id="" type="hidden" value="">
+						<input type="radio" name="recibir_mas_informacion" id="optionsRadios2" value="no">
+						<input name="accion" id="accion" type="hidden" value="guarda-ensayo">
 					</div>
 				</div>
 				<div class="[ text-center ]" id="voces_ciudadanas">

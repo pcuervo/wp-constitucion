@@ -161,7 +161,7 @@
                 }
             ];
             //draw
-            var piechart = new Chart(ctx).Pie(data);
+            new Chart(ctx).Pie(data);
         }
 
         function createLineChart(){
@@ -184,7 +184,7 @@
                     }
                 ]
             };
-            var barchart = new Chart(ctx).Bar(data);
+            new Chart(ctx).Bar(data);
         }
 
         /*------------------------------------*\
@@ -220,72 +220,71 @@
          */
 
         if (isHome == 1) {
-            initialize();
+            //initialize();
         };
 
+        // function initialize() {
 
-        function initialize() {
+        //     var data_kioskos = [];
+        //     var infoWindowContent = [];
 
-            var data_kioskos = [];
-            var infoWindowContent = [];
+        //     $.each( kioskos, function( key, value ) {
+        //         var cada_uno = [value.name, value.lat, value.long];
+        //         var data_uno = ['<div class="info_content"><h3>'+value.name+'</h3></div>'];
+        //         data_kioskos.push(cada_uno);
+        //         infoWindowContent.push(data_uno);
 
-            $.each( kioskos, function( key, value ) {
-                var cada_uno = [value.name, value.lat, value.long];
-                var data_uno = ['<div class="info_content"><h3>'+value.name+'</h3></div>'];
-                data_kioskos.push(cada_uno);
-                infoWindowContent.push(data_uno);
-
-            });
+        //     });
 
 
-            var map;
-            var bounds = new google.maps.LatLngBounds();
-            var mapOptions = {
-                mapTypeId: 'roadmap',
-                draggable: false,
-                scrollwheel: false,
-                zoom: 13
-            };
+        //     var map;
+        //     var bounds = new google.maps.LatLngBounds();
+        //     var mapOptions = {
+        //         mapTypeId: 'roadmap',
+        //         draggable: false,
+        //         scrollwheel: false,
+        //         zoom: 13
+        //     };
 
-            // Display a map on the page
-            map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-            map.setTilt(45);
+        //     // Display a map on the page
+        //     map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+        //     map.setTilt(45);
 
-            // Multiple Markers
-            var markers = data_kioskos;
+        //     // Multiple Markers
+        //     var markers = data_kioskos;
 
-            // Display multiple markers on a map
-            var infoWindow = new google.maps.InfoWindow(), marker, i;
+        //     // Display multiple markers on a map
+        //     var infoWindow = new google.maps.InfoWindow(), marker, i;
 
-            // Loop through our array of markers & place each one on the map
-            for( i = 0; i < markers.length; i++ ) {
-                var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-                bounds.extend(position);
-                marker = new google.maps.Marker({
-                    position: position,
-                    map: map,
-                    title: markers[i][0]
-                });
+        //     // Loop through our array of markers & place each one on the map
+        //     for( i = 0; i < markers.length; i++ ) {
+        //         var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+        //         bounds.extend(position);
+        //         marker = new google.maps.Marker({
+        //             position: position,
+        //             map: map,
+        //             title: markers[i][0]
+        //         });
 
-                // Allow each marker to have an info window
-                google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                    return function() {
-                        infoWindow.setContent(infoWindowContent[i][0]);
-                        infoWindow.open(map, marker);
-                    }
-                })(marker, i));
+        //         // Allow each marker to have an info window
+        //         google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        //             return function() {
+        //                 infoWindow.setContent(infoWindowContent[i][0]);
+        //                 infoWindow.open(map, marker);
+        //             }
+        //         })(marker, i));
 
-                // Automatically center the map fitting all markers on the screen
-                map.fitBounds(bounds);
-            }
+        //         // Automatically center the map fitting all markers on the screen
+        //         map.fitBounds(bounds);
+        //     }
 
-            // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
-            var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-                // this.setZoom(14);
-                google.maps.event.removeListener(boundsListener);
-            });
+        //     // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
+        //     var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+        //         // this.setZoom(14);
+        //         google.maps.event.removeListener(boundsListener);
+        //     });
 
-        }
+        // }
 
         $('#js-btn-cdmx a').click(function(e){
             e.preventDefault();

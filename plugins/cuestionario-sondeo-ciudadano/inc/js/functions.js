@@ -46,7 +46,7 @@ $ = jQuery.noConflict();
         }
     })
 
-    $('#js-grandes-retos button').click(function(e){
+    $('#js-grandes-retos a').click(function(e){
         e.preventDefault();
         $(this).addClass('disabled');
         var $grandesRetos = $('#js-grandes-retos input').val();

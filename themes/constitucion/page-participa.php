@@ -62,7 +62,6 @@ if( isset( $result['success'] ) ): ?>
 			</div>
 		</article>
 	</section>
-
 	<article class="[ space-id ]" id="imagina_ciudad">
 		<section class="[ container padding--sides--xsm--large ][ text-center ]">
 			<h2 class="[ no-margin-top margin-bottom ]">Imagina tu ciudad</h2>

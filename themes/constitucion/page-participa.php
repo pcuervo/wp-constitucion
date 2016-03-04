@@ -77,7 +77,7 @@ if( isset( $result['success'] ) ): ?>
 	<article class="[ padding--header--id ]" id="imagina_ciudad">
 		<section class="[ container padding--header--id padding--sides--xsm--large ][ text-center ]">
 			<h2 class="[ no-margin-top margin-bottom ]">Imagina tu ciudad</h2>
-			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis maiores, mollitia at qui aperiam illo cumque inventore eveniet facere quos, recusandae assumenda, delectus autem corporis cupiditate necessitatibus odio enim deserunt?</p>
 			</div>
 			<div class="[ clear ]"></div>

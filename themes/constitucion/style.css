@@ -4325,6 +4325,16 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
+header ul li.active,
+header ul li.active #dropdown--header,
+.dropdown-menu--header > li.active > a,
+.dropdown-menu--top > li.active > a,
+ul.menu-home > li.active > a,
+.collapse--menu > li.active > a,
+ul.menu-mobile > li.active > a,
+header > nav > ul > li.active > a {
+  color: #e80e8a;
+}
 .navbar {
   position: relative;
   min-height: 50px;

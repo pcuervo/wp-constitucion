@@ -6911,41 +6911,74 @@ ul.horizontal-slide li[class*="col"]:first-child {
   bottom: inherit;
   top: 0;
 }
-/* Responsive   slider style
-
-.slides {
-  position: relative;
-  list-style: none;
-  overflow: hidden;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  }
-
-.slides li {
-  -webkit-backface-visibility: hidden;
+ol.flex-control-nav.flex-control-paging {
   position: absolute;
-  display: none;
-  width: 100%;
-  left: 0;
-  top: 0;
-  }
-
-.slides li:first-child {
-  position: relative;
+  left: 40%;
+  bottom: 10px;
   display: block;
-  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  list-style: none;
+  padding-left: 0px;
+}
+@media (min-width: 768px) {
+  ol.flex-control-nav.flex-control-paging {
+    left: 42%;
   }
-
-.slides img {
-  display: block;
-  height: auto;
-  float: left;
+}
+ol.flex-control-nav.flex-control-paging li {
+  display: inline;
+}
+ol.flex-control-nav.flex-control-paging li a {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  text-indent: -9999px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background: none;
+  display: inline-block;
+  margin: 3px;
+  width: 10px;
+  height: 10px;
+}
+@media (min-width: 768px) {
+  ol.flex-control-nav.flex-control-paging li a {
+    margin: 15px;
+    width: 15px;
+    height: 15px;
+  }
+}
+ol.flex-control-nav.flex-control-paging li a:hover,
+ol.flex-control-nav.flex-control-paging li a:focus,
+ol.flex-control-nav.flex-control-paging li a.focus {
+  background-color: #fff;
+}
+ol.flex-control-nav.flex-control-paging li a:active,
+ol.flex-control-nav.flex-control-paging li a.active {
+  background-color: #fff;
+}
+ul.flex-direction-nav {
+  position: absolute;
+  bottom: 50%;
+}
+a.flex-prev {
+  background: url("../icons/prev.svg") no-repeat left top;
+  z-index: 1650;
+}
+a.flex-next {
+  background: url("../icons/next.svg") no-repeat left top;
+}
+ul.flex-direction-nav {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+ul.slides li img {
   width: 100%;
-  border: 0;
-  }
-  
- */
+}
 .clearfix:before,
 .clearfix:after,
 .dl-horizontal dd:before,

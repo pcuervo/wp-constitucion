@@ -2,8 +2,8 @@
 
     "use strict";
 
-    $(function(){
-
+    $(function(){  
+ 
         /**
          * INIT FLEXSLIDER
          */

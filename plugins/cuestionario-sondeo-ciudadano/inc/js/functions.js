@@ -553,7 +553,7 @@ function saveSurvey( answersObj ){
         function( response ){
             console.log( response );
             $('.js-codigo-referencia span').text( response );
-            $('#modal-agradecimiento').modal('toggle')
+            $('#modal-agradecimiento').modal('toggle');
         }
     );
 }

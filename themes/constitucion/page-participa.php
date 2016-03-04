@@ -232,6 +232,7 @@ if( isset( $result['success'] ) ): ?>
 							<input name="" id="" type="hidden" value="">
 						</div>
 					</div>
+
 					<div class="[ text-center ]">
 						<button type="submit" class="[ btn btn-primary btn--large ]"><strong>enviar</strong></button>
 					</div>

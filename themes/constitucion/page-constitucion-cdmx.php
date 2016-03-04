@@ -8,18 +8,13 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 		<h2 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Acerca de la Constitución</h2>
 	</div>
 </section>
-<section class="[ container padding--sides--xsm ][ margin-bottom--large ]">
-	<div class="[ margin-bottom--large ]">
-		<?php the_content(); ?>
-	</div>
-	<img class="[ img-responsive ][ margin-auto ]" src="<?php echo $url_image_constirucion; ?>" id="jefe_gobierno">
-</section>
 
 <section class="[ container ]"  >
-	<h2>Mensaje del jefe de gobierno</h2>
+	
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 			<div class="[ content-mensaje-jefegob ]">
+				<h3>Mensaje del jefe de gobierno</h3>
 				<blockquote>
 					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
 				</blockquote>
@@ -40,10 +35,10 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <section class="[ container ]">
-	<h2>Sobre la constitución</h2>
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 				<div class="[ content-acerca-de ]">
+					<h3>Sobre la constitución</h3>
 					<blockquote>
 						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
 					</blockquote>
@@ -78,7 +73,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 
 				<div class="[ content-acerca-de ]">
-					<h3>Subtítulo</h3>
+					<h3>Grupo de trabajo</h3>
 					<blockquote>
 						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris</p>
 					</blockquote>
@@ -99,10 +94,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</div>
 </section>
 
-
-
 <section class="[ container ]">
-	<h2 class="[ margin-bottom ]">Grupo de trabajo</h2>
 	<div class="[ row ]">
 		<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
 			<a data-toggle="modal" data-target="#trabajador">
@@ -291,11 +283,11 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 <article class="[ bg-gray--fondo padding--top-bottom ]" id="sobre_plataforma">
 	<section class="[ container ]">
-		<h2>Sobre la plataforma</h2>
 		<div class="[ row ]">
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 
 				<div class="[ content-acerca-de ]">
+					<h3>Sobre la plataforma</h3>
 					<blockquote>
 						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
 					</blockquote>
@@ -323,11 +315,12 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
 </section>
 <section class="[ container ]">
-	<h2>Hacia el constituyente</h2>
+	
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]" id="constitución_wiki">
 
 			<div class="[ content-acerca-de ]">
+				<h3>Hacia el constituyente</h3>
 				<blockquote>
 					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
 				</blockquote>
@@ -403,7 +396,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	<a href="#"><p>Lorem ipsum dolor sit amet, elit.</p></a>
 </section>
 
-
+<!-- 
 <article class="[ bg-gray-light ][ margin-top-bottom--large padding--top-bottom--xlarge ]">
 	<section class="[ container padding--sides--xsm ]">
 		<?php $proceso = get_page_by_path('proceso-participativo'); ?>
@@ -467,13 +460,13 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 			<?php if ( $attachment != '' ) echo '</a>'; ?>
 		</div>
 	</section>
-</article>
-
+</article> -->
+<!-- 
 <?php $experiencias = get_page_by_path('experiencias-y-buenas-practicas-globales');
 $url_image_experiencias = attachment_image_url( $experiencias->ID, 'full' );?>
 <section class="[ container padding--sides--xsm ][ margin-bottom--large ]">
 	<h2><?php echo $experiencias->post_title; ?></h2>
 	<?php echo $experiencias->post_content; ?>
 </section>
-<section class="[ bg-image rectangle ][ margin-bottom ][ relative ]" style="background-image: url('<?php echo $url_image_experiencias; ?>');"></section>
+<section class="[ bg-image rectangle ][ margin-bottom ][ relative ]" style="background-image: url('<?php echo $url_image_experiencias; ?>');"></section> -->
 <?php get_footer(); ?>

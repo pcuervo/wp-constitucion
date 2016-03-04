@@ -6,8 +6,15 @@ if( isset( $result['success'] ) ): ?>
 	<div class="[ bg-success btn-lg text-center ]"><?php echo $result['success']; ?></div>
 <?php endif;  ?>
 
+	<section class="[ bg-image rectangle-small ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo $img_constitucion_cdmx; ?>');">
+		<div class="[ bg-dark--opacity width-100 height-100 ]">
+			<h2 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Participa</h2>
+		</div>
+	</section>
+
 	<section class="[ bg-gray-light ][ margin--header margin-bottom--large padding--top-bottom--xlarge ]">
 		<article class="[ container ]">
+			<h2>Instrucciones</h2>
 			<div class="[ padding--sides--xsm ]">
 				<?php the_content(); ?>
 			</div>
@@ -78,10 +85,6 @@ if( isset( $result['success'] ) ): ?>
 			</div>
 		</form>
 	</section>
-	<section class="[ container ]" id="peticiones">
-		<h2>Resultados</h2>
-		<a class="[ btn btn-primary btn-large ][ margin-bottom ]" data-toggle="modal" data-target="#participador">Obten tu certificado</a>
-	</section>
 
 	<!-- Modal participador -->
 	<div id="participador" class="modal fade" role="dialog">
@@ -122,7 +125,12 @@ if( isset( $result['success'] ) ): ?>
 		</div>
 	</div>
 	<section class="[ container ]" id="dialogos_publicos">
-		<h2>Peticiones</h2>
+		<h2 class="[ margin-top--large ]">Peticiones</h2>
+		<div class="[ row ]">
+			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+				<p>En esta sección podrás registrar acontecimientos que sean espacios de diálogo relacionados a la construcción de la Constitución de la Ciudad de México. Estos pueden ser sesiones de trabajo colaborativas, foros, asambleas, talleres o conferencias.</p>
+			</div>
+		</div>
 	</section>
 	<section class="[ container ]">
 		<h2 class="[ margin-top--large ]">Diálogos Públicos</h2>

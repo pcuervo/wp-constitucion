@@ -3,7 +3,7 @@
 	<div class="[ relative bg-gray--xxlight height-home-video ]">
 		<!-- <div class="[ js-video-wrapper ]"> -->
 				<!-- <iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/7Ezz0wnzdiQ" frameborder="0" allowfullscreen></iframe> -->
-				<video class="[ video--home ]" autoplay="">
+				<video class="[ video--home ][ js-video-wrapper ]" controls>
 					<source src="<?php echo THEMEPATH; ?>video/video-prueba.mp4" type="video/mp4">
 					Your browser does not support the video tag.
 				</video>
@@ -173,14 +173,6 @@
 	</ul>
 	</div>
 </div><!-- fin slider -->
-<?php $img_kioskos = get_option( 'img_kioskos' ); ?>
-<section class="[ bg-image rectangle-small ][ relative ]" style="background-image: url('<?php echo $img_kioskos; ?>');">
-	<div class="[ bg-dark--opacity width-100 height-100 ][ text-center ]">
-		<h2 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ fw-semibold ]">¡Participa en nuestros kioskos!</h2>
-	</div>
-</section>
-<div id="map_canvas" class="mapping" style="width: 100%; height: 500px;"></div>
-
 
 <!-- Linea tiempo -->
 <div class="[ container ]">

@@ -153,7 +153,7 @@
          */
 
         if (isHome == 1) {
-            initialize();
+            //initialize();
         };
 
 

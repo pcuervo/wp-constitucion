@@ -16,7 +16,7 @@ class Pdf {
 	  	$html = ob_get_clean();
 		$mipdf = new DOMPDF();
 		 
-		$mipdf->set_paper("A4", "portrait");
+		$mipdf->set_paper("A4", "landscape");
 		$mipdf->load_html( utf8_decode( utf8_encode($html) ) );
 		$mipdf->render();
 		$mipdf->stream('Certificado-Constitucion-CDMX.pdf', array("Attachment"=>0));

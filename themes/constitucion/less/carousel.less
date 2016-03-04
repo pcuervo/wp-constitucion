@@ -296,16 +296,18 @@ display: inline-block;
 float: none;
 position: relative;
 margin-right: -4px;
-width: 150px;
+width: 165px;
 height: 248px;
 vertical-align: middle;
-text-align: center;
+text-align: left;
 }
 
 .fz-small.top-date{ height: 78px;padding-top: 66px;}
 
-.text--large { height: 60px; margin-bottom: 0px;}
-.text--small { height: 33px; margin-bottom: 0px;}
+.text--large { height: 60px; margin-bottom: 0px; left: 20px; top: -17px;}
+.text--small { height: 33px; margin-bottom: 0px; left: 20px; top: -17px;}
+
+.text--destacado { top: 17px;}
 
 .margin-top--date { margin-top: 17px; margin-bottom: (@margin-base/2);}
 .margin-bottom--date { margin-top: (@margin-base/2); margin-bottom: 113px;}
@@ -315,20 +317,20 @@ text-align: center;
 
 .box-li{
   &.ya-paso{
-    a{ color: rgba(204, 204, 204, 0.75); 
+    a{ color: rgba(204, 204, 204, 0.75);
       &:hover{text-decoration: none;}
     }
     p{color: rgba(204, 204, 204, 0.75);}
   }
   &.nota-destacada{
-    a{ color: #E80E89; 
+    a{ color: #E80E89;
       &:hover{text-decoration: none;}
     }
     p{color: #E80E89;}
-    .circle-xsmall{background-color:#E80E89;}
-    .vertical-line{border-left:2px solid #E80E89;}
+    .circle-xsmall{border:2px solid #E80E89;}
+    .vertical-line, .vertical-line--large{border-left:2px solid #E80E89;}
   }
-  a{ color: #333333; 
+  a{ color: #333333;
     &:hover{text-decoration: none;}
   }
   p{color: #333333;}
@@ -336,9 +338,13 @@ text-align: center;
 
 .box-li .vertical-line {
   height: 35px;
-  width: 49%;
-  margin-left: 49%;
+  margin-left: 3.5px;
   border-left: 2px solid @gray;
+}
+.box-li .vertical-line--large {
+  height: 45px;
+  margin-left: 3.5px;
+  border-left: 2px solid @primary;
 }
 
 .box-li .circle-xsmall{
@@ -347,12 +353,12 @@ text-align: center;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background-color: @gray;
+  border:2px solid @gray;
 }
 
 .box-li:hover{
   & .vertical-line{ border-left: 2px solid @primary; }
-  & .circle-xsmall{ background-color: @primary;}
+  & .circle-xsmall{ border: 2px solid @primary;}
 }
 
 .evento{width: 148px; overflow: hidden; white-space: normal; height: auto; position: absolute; left: 0%; bottom: 0; margin-bottom: 0;}

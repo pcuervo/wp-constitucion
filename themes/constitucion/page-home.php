@@ -2,8 +2,7 @@
 <section>
 	<div class="[ relative bg-gray--xxlight height-home-video ]">
 		<video class="[ width-100 ][ center-bottom ]" autoplay loop>
-			<source src="<?php echo THEMEPATH; ?>video/constitucion.mov" type="video/mov">
-			<!-- <source src="<?php echo THEMEPATH; ?>video/video.mp4" type="video/mp4"> -->
+			<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
 		</video>
 		<div class="[ logo-video ]">
 			<img class="[ width-40 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
@@ -150,7 +149,7 @@
 	</div>
 </div><!--/container-->
 <!-- slider -->
-<div>
+<div class="[ container ]">
 	<div class="flexslider relative">
 	<ul class="slides">
 		<li>

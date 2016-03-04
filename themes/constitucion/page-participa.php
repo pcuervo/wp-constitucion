@@ -81,7 +81,7 @@ if( isset( $result['success'] ) ): ?>
 			</form>
 		</section>
 	</article>
-	<article class="[ bg-gray--fondo padding--header--id ]">
+	<article class="[ bg-gray--fondo space-id ]">
 		<section class="[ container ][ text-center ]">
 			<h2>Resultados</h2>
 			<a class="[ btn btn-primary btn-large ]" href="#"><strong>Obten tu certificado</strong></a> <!-- certificado.pdf -->
@@ -149,24 +149,22 @@ if( isset( $result['success'] ) ): ?>
 									if($count%2 == 0): ?>
 										<li class="[ box-li <?php echo $class_status; ?> ]">
 											<a href="<?php the_permalink(); ?>">
-												<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ]"><?php echo $date; ?></p>
+												<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ][ text-uppercase ]"><?php echo $date; ?></p>
 												<div class="[ border-gray--large ]"></div>
-												<div class="[ circle-xsmall ][ margin-auto ]"></div>
 												<div class="[ vertical-line ]"></div>
+												<div class="[ circle-xsmall ]"></div>
 												<div class="[ text--large relative ]">
 													<p class="[ evento evento-bottom ]"><?php the_title(); ?></p>
 												</div>
 											</a>
 										</li>
 									<?php else: ?>
-
-										<li class="[ box-li <?php echo $class_status; ?> ]">
+										<li class="[ box-li <?php echo $class_status; ?> ]">		<!-- estilo evento destacado -->
 											<a href="<?php the_permalink(); ?>">
-												<div class="[ text--large relative ]">
+												<div class="[ text--large text--destacado relative ]">
 													<p class="[ evento ]"><?php the_title(); ?></p>
 												</div>
-												<div class="[ vertical-line ]"></div>
-												<div class="[ circle-xsmall ][ margin-auto ]"></div>
+												<div class="[ vertical-line--large ]"></div>
 												<div class="[ border-gray--large ]"></div>
 												<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]"><?php echo $date; ?></p>
 											</a>
@@ -334,7 +332,5 @@ if( isset( $result['success'] ) ): ?>
 			</div>
 		</article>
 	</section>
-
-
 
 <?php get_footer(); ?>

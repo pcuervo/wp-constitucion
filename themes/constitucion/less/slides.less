@@ -1,35 +1,90 @@
-/* Responsive   slider style
+// Slides style
+// --------------------------------------------------
 
-.slides {
-  position: relative;
-  list-style: none;
-  overflow: hidden;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  }
 
-.slides li {
-  -webkit-backface-visibility: hidden;
-  position: absolute;
-  display: none;
-  width: 100%;
-  left: 0;
-  top: 0;
-  }
+ol.flex-control-nav.flex-control-paging{
+    .absolute;
+    .width-100;
+    bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    list-style: none;
+    padding-left: 0px;
+}
 
-.slides li:first-child {
-  position: relative;
-  display: block;
-  float: left;
-  }
 
-.slides img {
-  display: block;
-  height: auto;
-  float: left;
-  width: 100%;
-  border: 0;
-  }
-  
- */
+ol.flex-control-nav.flex-control-paging li{
+    display:inline;
+}
+
+ol.flex-control-nav.flex-control-paging li a {
+    .box-shadow(0 5px 15px rgba(0,0,0,.5));
+    text-indent: -9999px;
+    overflow: hidden;
+    border: 3px solid @light;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background: none;
+    display: inline-block;
+    margin: 3px;
+    width: 10px;
+    height: 10px; 
+    @media (min-width: @screen-sm){
+        margin: 15px;
+        width: 15px;
+        height: 15px;  
+    }
+
+    &:hover,
+    &:focus,
+    &.focus {
+        background-color: @light;
+    }
+
+    &:active,
+    &.active {
+        background-color: @light;
+    }
+}
+
+ul.flex-direction-nav{
+    .absolute;
+    .width-100;
+    bottom: 45%;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+
+a.flex-prev{
+    z-index:100;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5%;
+    width: 30px;
+    background-image: url('icons/prev.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+a.flex-next{
+    z-index:1050;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5%;
+    width: 30px;
+    background-image: url('icons/next.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+ul.slides li img{
+    .width-100;
+}

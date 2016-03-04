@@ -10,7 +10,7 @@ header{
 	.width-100;
 	height: 55px;
 	@media (min-width: @screen-sm){ height: 70px; }
-	@media (min-width: @screen-md){ height: 110px; }
+	@media (min-width: @screen-md){ height: 90px; }
 	z-index: 1050;
 }
 
@@ -31,7 +31,7 @@ header > nav > ul >li > a {
 
 ul.menu-desktop > li{
 	padding: 3% 1%;
-	@media (min-width: @screen-md) {padding: 3% 1.5%;}
+	@media (min-width: @screen-md) {padding: 30px 1.5%;}
 	border-right: 1px solid lighten(@gray, 57%);
 	}
 
@@ -48,7 +48,8 @@ ul.menu-home > li a:hover {
 	&,
 &:hover,
 &:focus,
-&:active {
+&:active,
+&.active, {
 	text-decoration: none;
 	.transition;
 	.color-primary;
@@ -134,6 +135,10 @@ ul.menu-home >li > a,
 	margin: 0 0 0 -5px;
 }
 
+.dropdown-menu--header,
+.dropdown-menu--top{
+	& a{ padding: 10px 20px!important;}
+}
 // menu mobile
 // -----------
 
@@ -193,5 +198,22 @@ ul.menu-mobile >li > a,
  header ul{ padding-left: 0px;}
 
 .text-header{
+
+}
+
+#dropdown--header:hover, 
+.dropdown-menu--header>li>a:hover, 
+.dropdown-menu--top>li>a:hover, 
+ul.menu-home>li>a:hover {
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		.transition;
+		.color-primary;
+	}
+}
+
+button.dropdown-toogle:hover{
 
 }

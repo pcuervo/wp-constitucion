@@ -29,7 +29,7 @@ class Pdf {
 	  	$html = utf8_decode($guia->post_content);
 		$mipdf = new DOMPDF();
 		 
-		$mipdf->set_paper("A4", "landscape");
+		$mipdf->set_paper("A4", "portrait");
 		$mipdf->load_html( $html );
 		$mipdf->render();
 		$mipdf->stream('guia-para-compartir-el-texto.pdf', array("Attachment"=>0));

@@ -150,16 +150,23 @@
 }
 
 .modal--contacto{
-  .no-margin;
-  width: 100%;
-  min-height: 100vh;
-  & .close{
+  @media (max-width: @screen-sm){
+    width: 100%;
+    margin: 0px;
+  }
+  @media (min-width: @screen-sm){
+    margin-top: 80px;
+    width: 500px;
+  }
+  @media (min-width: @screen-md){ margin-top: 120px; }
+    & .close{
     opacity: 0.7;
-    .padding;
+    position: relative;
+    z-index: 1000;
   }
   & .modal-content{
     border-radius: 0px;
-    min-height: 100vh;
+    @media (max-width: @screen-sm){    min-height: 100vh;}
   }
 }
 
@@ -168,7 +175,11 @@
     width: 100%;
     margin: 0px;
   }
-  @media (min-width: @screen-sm){width: 400px;}
+  @media (min-width: @screen-sm){
+    margin-top: 80px;
+    width: 400px;
+  }
+    @media (min-width: @screen-md){ margin-top: 120px; }
   & .close{
     opacity: 0.7;
     padding: 24px;

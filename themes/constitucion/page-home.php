@@ -1,6 +1,7 @@
 <?php get_header(); the_post();  ?>
 <section>
 	<div class="[ relative bg-gray--xxlight height-home-video ]">
+<<<<<<< HEAD
 		<!-- <div class="[ js-video-wrapper ]"> -->
 				<!-- <iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/7Ezz0wnzdiQ" frameborder="0" allowfullscreen></iframe>--> 
 				<video class="[ width-100 ][ center-bottom ]" autoplay="" loop="" muted="">
@@ -11,6 +12,11 @@
 		<!-- </div> -->
 		<!-- <div class="[ bg-image height-home-video ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/home.png');"></div> -->
 
+=======
+		<video class="[ width-100 ][ center-bottom ]" autoplay loop>
+			<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
+		</video>
+>>>>>>> bfc876134ed4fad9f19d16926e947206b9023366
 		<div class="[ logo-video ]">
 			<img class="[ width-40 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
 			<span class="[ lead text-italic ][ color-gray ]">punto<br>de encuentro</span>
@@ -148,8 +154,8 @@
 
 <div class="[ container ]">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-sm-6 ][ margin-top-bottom--large ]">
-			<h1 class="[ text-sm-caps text-center ]">ConstituciónCDMX</h1>
+		<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ][ margin-top-bottom--large ]">
+			<h1 class="[ text-sm-caps text-center ]">¿una constitución para la ciudad de méxico?</h1>
 			<?php $home = get_page_by_path('home');
 			echo wpautop( $home->post_content ); ?>
 		</div>
@@ -157,7 +163,7 @@
 </div><!--/container-->
 <!-- slider -->
 <div class="[ container ]">
-	<div class="flexslider">
+	<div class="flexslider relative">
 	<ul class="slides">
 		<li>
 			<img src="<?php echo THEMEPATH; ?>images/1.jpg">
@@ -207,7 +213,7 @@
 						$date = '';
 						if ($date_event != '') {
 							$date_arr = getDateTransform($date_event);
-							$date = $date_arr[1].' '.$date_arr[0].' de '.$date_arr[2];
+							$date = '<span class="[ color-primary ]"><strong>'. $date_arr[0] . '</strong></span> ' . $date_arr[1] . ' de ' . $date_arr[2];
 						}
 
 						$class_tipo = ($tipo_evento == 3) ? 'nota-destacada ' : '';
@@ -217,10 +223,10 @@
 						    <li class="[ box-li <?php echo $class_status.$class_tipo; ?> ]">
 
 						    	<?php if($tipo_evento != 3) echo '<a href="'.$url.'">'; ?>
-									<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ]"><?php echo $date; ?></p>
+									<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ][ text-uppercase ]"><?php echo $date; ?></p>
 									<div class="[ border-gray--large ]"></div>
-									<div class="[ circle-xsmall ][ margin-auto ]"></div>
 									<div class="[ vertical-line ]"></div>
+									<div class="[ circle-xsmall ]"></div>
 									<div class="[ text--large relative ]">
 										<p class="[ evento evento-bottom ]"><?php the_title(); ?></p>
 									</div>
@@ -232,11 +238,10 @@
 
 							<li class="[ box-li <?php echo $class_status.$class_tipo; ?> ]">
 								<?php if($tipo_evento != 3) echo '<a href="'.$url.'">'; ?>
-									<div class="[ text--large relative ]">
+									<div class="[ text--large text--destacado relative ]">
 										<p class="[ evento ]"><?php the_title(); ?></p>
 									</div>
-									<div class="[ vertical-line ]"></div>
-									<div class="[ circle-xsmall ][ margin-auto ]"></div>
+									<div class="[ vertical-line--large ]"></div>
 									<div class="[ border-gray--large ]"></div>
 									<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]"><?php echo $date; ?></p>
 								<?php if($tipo_evento != 3) echo '</a>'; ?>
@@ -288,7 +293,7 @@
 			</div>
 		</div>
 <!-- con 2 noticias -->
-		<div class="[ row ][ margin-bottom--large ]">
+		<!-- <div class="[ row ][ margin-bottom--large ]">
 			<div class="[ col-xs-12 col-sm-offset-2 col-sm-4 ]">
 				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
 				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
@@ -301,16 +306,16 @@
 				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
 				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
 			</div>
-		</div>
+		</div> -->
 <!-- con 1 noticia -->
-		<div class="[ row ][ margin-bottom--large ]">
+		<!-- <div class="[ row ][ margin-bottom--large ]">
 			<div class="[ col-xs-12 col-sm-offset-4 col-sm-4 ]">
 				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
 				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
 				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
 				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
 			</div>
-		</div>
+		</div> -->
 
 	</div> <!-- /container -->
 

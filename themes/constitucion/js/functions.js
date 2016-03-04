@@ -11,6 +11,17 @@
             animation: "slide"
         });
 
+        /** 
+         * DATOS MODAL GRUPO DE TRABAJO
+         */
+        $('.content-trabajo').on('click', function(){
+            var bio = $(this).children('a').children('.biografia').html();
+            var name = $(this).children('a').children('.nombre').html();
+
+            $('.biografia-modal').empty().html(bio);
+            $('.nombre-modal').empty().html(name);
+        }); 
+
         /**------ FORMULARIOS -------*/
             /** 
              * DATEPIKER

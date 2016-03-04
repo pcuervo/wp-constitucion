@@ -14,6 +14,8 @@
 		add_meta_box( 'meta-box-video_voces', 'Insertar video', 'show_metabox_video_voces', 'voces-ciudadanas');
 		add_meta_box( 'meta-box-extras_noticias', 'Extras', 'show_metabox_extras_noticias', 'post', 'side', 'high');
 		add_meta_box( 'meta-box-info_ensayo', 'Información del ensayo', 'show_metabox_info_ensayo', 'ensayos');
+		add_meta_box( 'meta-box-info_integrante', 'Información extra', 'show_metabox_info_integrante', 'grupo-de-trabajo', 'side', 'high');
+
 
 
 		if ($post->post_name == 'participa' || $post->post_name == 'proceso-participativo'){
@@ -203,6 +205,14 @@
 	}
 
 
+	function show_metabox_info_integrante($post){
+		wp_nonce_field(__FILE__, '_info_integrante_nonce');
+		$cargo_integrante = get_post_meta( $post->ID, 'cargo_integrante', true );
+
+		echo "<label for='cargo_integrante' class='label-paquetes'>Cargo: </label>";
+		echo "<input type='text' class='widefat' id='cargo_integrante' name='cargo_integrante' value='$cargo_integrante'/><br><br>";
+	}
+
 	function show_metabox_extras_noticias($post){
 		global $post;
 		wp_nonce_field(__FILE__, '_extras_noticia_nonce');
@@ -262,11 +272,17 @@
 			update_post_meta($post_id, 'contenido_extra', $_POST['contenido_extra']);
 		}
 
+		if ( isset($_POST['cargo_integrante']) and check_admin_referer(__FILE__, '_info_integrante_nonce') ){
+			update_post_meta($post_id, 'cargo_integrante', $_POST['cargo_integrante']);
+		}
+
 		if ( isset($_POST['destacado_noticia']) and check_admin_referer(__FILE__, '_extras_noticia_nonce')){
 			update_post_meta($post_id, 'destacado_noticia', $_POST['destacado_noticia']);
 		}else if ( ! defined('DOING_AJAX') ){
 			delete_post_meta($post_id, 'destacado_noticia');
 		}
+
+		
 
 		// Guardar correctamente los checkboxes
 		/*if ( isset($_POST['_checkbox_meta']) and check_admin_referer(__FILE__, '_checkbox_nonce') ){

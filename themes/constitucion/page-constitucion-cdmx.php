@@ -101,175 +101,28 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	<section class="[ container ]">
 		<h2 class="[ margin-bottom ]">Grupo de trabajo</h2>
 		<div class="[ row ]">
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-				<!-- <a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a> -->
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsumddddd</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
-				<a data-toggle="modal" data-target="#trabajador">
-					<img src="<?php echo THEMEPATH; ?>images/4.jpg">
-					<h3>Nombre lorem ipsum</h3>
-				</a>
-			</div>
+			<?php $grupoTrabajo = new WP_Query(array(
+					'post_type'      => 'grupo-de-trabajo',
+					'posts_per_page' => -1,
+					'orderby'  => 'post_title',
+					'order'    => 'ASC'
+				));
+
+			if ( $grupoTrabajo->have_posts() ) :
+				while ( $grupoTrabajo->have_posts() ) : $grupoTrabajo->the_post(); 
+					$url_img = attachment_image_url($post->ID, 'thumbnail');?>
+					<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
+						<a data-toggle="modal" data-target="#trabajador">
+							<img src="<?php echo $url_img; ?>">
+							<h3 class="nombre"><?php the_title(); ?></h3>
+							<div class="biografia hidden"><?php the_content(); ?></div>
+						</a>
+						<!-- <a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a> -->
+					</div>
+				<?php endwhile;
+			endif;
+			wp_reset_postdata();?>
+		
 		</div>
 
 		<!-- Modal grupo de trabajo -->
@@ -279,8 +132,8 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 				<div class="modal-content">
 					<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
 					<div class="modal-body">
-						<h3>Nombre lorem ipsum</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum incidunt id quo. Ea assumenda doloremque earum, excepturi iure reiciendis eum. Officia, vero atque. Quae provident voluptas, facilis adipisci! Aperiam, necessitatibus.</p>
+						<h3 class="nombre-modal"></h3>
+						<div class="biografia-modal"></div>
 					</div><!-- modal-body -->
 				</div>
 			</div>

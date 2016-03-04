@@ -30,8 +30,9 @@
 		.fz--small{ font-size: 12px; }
 		.margin-top--xsmall{ margin-top: 30px; }
 		.margin-top--small{ margin-top: 50px; }
-		.margin-top{ margin-top: 115px; }
+		.margin-top{ margin-top: 110px; }
 		.margin-top--large{ margin-top: 180px; }
+		.padding{ padding: 50px; }
 		.border-primary{
 			border: 1px solid #e80e8a;
 			width: 930px; height: 560px;
@@ -54,7 +55,6 @@
 			padding: 0px; width: 1000px;
 			height: 630px;
 		}
-		.padding{ padding: 50px; }
 	</style>
 	<body class="[ border--black--large ]" >
 		<div class="[ border--black ]">
@@ -64,7 +64,7 @@
 						<div class="[ padding ]">
 							<div class="[ col col-1 ]">
 								<img class="[ img-logo ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
-								<p class="[ color-gray ][ margin-top--large ]">Con el folio núm. <span class="[ color-primary ][ fz--small ]">000000</span><br>
+								<p class="[ color-gray ][ fz--small ][ text-uppercase ][ margin-top--large ]">Con el folio núm. <span class="[ color-primary ][ fz--small ]">000000</span><br>
 								podrás darle seguimiento <br>
 								a tu participación</p>
 							</div>

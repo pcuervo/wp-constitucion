@@ -4,12 +4,73 @@
 
     $(function(){
 
+        /**
+         * INIT FLEXSLIDER
+         */
+        $('.flexslider').flexslider({
+            animation: "slide"
+        });
 
-        // if( parseInt( isPageSondeo ) ){
-        //     //return;
-        // }
+        /**------ FORMULARIOS -------*/
+            /** 
+             * DATEPIKER
+             */
+            $('.date-ensayo').datepicker({
+                dateFormat : 'yy-mm-dd',
+                minDate: 0,
+                onSelect: function(dateText, inst) { 
+                    window.dateInicio = dateText;
+                    $('.date-ensayo-fin').removeAttr("disabled");
+               }
+            });
 
-        // imgToSvg();
+            $('.date-ensayo-fin').datepicker({
+                dateFormat : 'yy-mm-dd',
+                minDate: 0
+            });
+
+            /** 
+             * VALIDAR LIGAS DE ARCHIVOS
+             */
+            $('#form-ensayos').on('submit', function(event){
+                event.preventDefault();
+                var result_a = getValidateDocs('fotografias_ensayo');
+                var result_b = getValidateDocs('lista_asistentes_ensayo');
+                var result_c = getValidateDocs('compartir_documento_ensayo');
+
+                if (result_a && result_b && result_c) {
+                    var form = document.getElementById("form-ensayos");
+                    form.submit();
+                };
+                
+            });
+
+            function getValidateDocs(id_object){
+                var text = $('#'+id_object).val();
+                var docs = /docs.google.com/.test(text);
+                var dropbox = /dropbox.com/.test(text);
+                var onedrive = /onedrive.live.com/.test(text);
+
+                if (docs || dropbox || onedrive) {
+                    return true;
+                };
+
+                $('#'+id_object).addClass('parsley-error');
+                
+                return false;
+
+            }
+        /**------ FORMULARIOS -------*/
+
+        $('.nota-destacada a').on('click', function(event){
+            event.preventDefault();
+        });
+
+        if( parseInt( isPageSondeo ) ){
+            //return;
+        }
+
+        imgToSvg();
         $('.js-video-wrapper').fitVids();
 
         if( parseInt( isPageCDMX ) ){
@@ -236,19 +297,6 @@
                 $( ".soy-cdmx" ).addClass('js-hidden');
             });
         }
-
-        console.log('hola');
-        /**
-         * INIT FLEXSLIDER
-         */
-        $('.flexslider').flexslider({
-            animation: "slide"
-        });
-
-        $('.nota-destacada a').on('click', function(event){
-            event.preventDefault();
-        });
-
 
     });
 

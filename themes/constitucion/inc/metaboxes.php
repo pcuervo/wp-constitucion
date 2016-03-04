@@ -130,7 +130,6 @@
 		$frase_ensayo = get_post_meta( $post->ID, 'frase_ensayo', true );
 		$fechaInicio = get_post_meta( $post->ID, 'fechaInicio', true );
 		$fechaFinal = get_post_meta( $post->ID, 'fechaFinal', true );
-		$resumen_ensayo = get_post_meta( $post->ID, 'resumen_ensayo', true );
 		$palabra_a = get_post_meta( $post->ID, 'palabra_a', true );
 		$palabra_b = get_post_meta( $post->ID, 'palabra_b', true );
 		$palabra_c = get_post_meta( $post->ID, 'palabra_c', true );
@@ -156,9 +155,6 @@
 
 		echo "<label for='fechaFinal' class='label-paquetes'>Fechas Final: </label>";
 		echo "<input type='text' class='widefat date-ensayo-fin' id='fechaFinal' name='fechaFinal' value='$fechaFinal' disabled/><br><br>";
-
-		echo "<label for='resumen_ensayo' class='label-paquetes'>Resumen: </label><br>";
-		echo "<textarea name='resumen_ensayo' id='resumen_ensayo'/></textarea><br><br>";
 
 		echo "<label class='label-paquetes'>Palabras: </label><br><br>";
 		echo "<label for='palabra_a' class='label-paquetes'>Palabra 1: </label>";
@@ -201,8 +197,8 @@
 		$default = ($checked_1 == '' AND $checked_2 == '') ? 'checked' : '';
 
 		echo "<label for='recibir_mas_informacion' class='label-paquetes'>Quieres recibir más información: </label><br><br> ";
-		echo '<input type="radio" name="recibir_mas_informacion" value="si" <?php echo $checked_1; ?><?php echo $default; ?> > Tipo 1<br>';
-  		echo '<input type="radio" name="recibir_mas_informacion" value="no" <?php echo $checked_2; ?> > Tipo 2<br>';
+		echo '<input type="radio" name="recibir_mas_informacion" value="si" '.$checked_1.' '.$default.'> Si<br>';
+  		echo '<input type="radio" name="recibir_mas_informacion" value="no" '.$checked_2.' > No<br>';
 
 	}
 

@@ -1,6 +1,8 @@
 <?php global $result;
 
 if(isset($_POST['accion']) AND $_POST['accion'] == 'guarda-formulario') storeForm($_POST);
+if(isset($_POST['accion']) AND $_POST['accion'] == 'guarda-ensayo') storeFormTest($_POST);
+
 
 // RENAME THE DEFAULT POST TYPE
 
@@ -37,12 +39,14 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	add_action( 'wp_enqueue_scripts', function(){
 
 		// scripts
-		// wp_enqueue_script( 'jquery', 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js', array(), '2.0.3', true );
+		wp_enqueue_script( 'jquery', 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js', array(), '2.0.3', true );
+		wp_enqueue_script('jquery-ui-datepicker');
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js', array('jquery'), '3.1.0', true );
 		wp_enqueue_script( 'api-google', 'https://maps.googleapis.com/maps/api/js', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'chart', JSPATH.'Chart.js', array('jquery'), '1.0', false );
-		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
+		wp_enqueue_script( 'functions', JSPATH.'functions.min.js', array('plugins'), '1.0', true );
+
 		
 		// localize scripts
 		wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
@@ -50,6 +54,8 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		wp_localize_script( 'functions', 'isPageSondeo', (string)is_page( 'sondeo-masivo' ) );
 		wp_localize_script( 'functions', 'isPageCDMX', (string)is_page( 'cdmx' ) );
 		wp_localize_script( 'functions', 'isHome', (string)is_page( 'home' ) );
+
+
 		if ( is_page( 'home' ) ) {
 			wp_localize_script( 'functions', 'kioskos', getKioskos() );
 		}
@@ -57,6 +63,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		// styles
 		//wp_enqueue_style( 'styles', get_stylesheet_uri() );
 		wp_enqueue_style( 'styles', THEMEPATH . 'style.min.css' );
+		wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
 
 	});
 
@@ -288,6 +295,37 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		$result['success'] = 'Se envío el mensaje con exito';
 
 		return true;
+	}
+
+	/**
+	 * STORE FORM TEST 
+	 */
+	function storeFormTest($data){
+		if (empty($data)) return false;
+
+		$contact_new = array(
+		  'post_title'    => $data['titulo_ensayo'],
+		  'post_content'  => $data['resumen_ensayo'],
+		  'post_type'     => 'ensayos',
+		  'post_author'   => 1,
+		);
+
+		$post_id = wp_insert_post( $contact_new );
+
+		if ($post_id) {
+			saveMetaDataTest($post_id, $data);
+		}
+
+	}
+
+	function saveMetaDataTest($post_id, $data){
+
+		foreach ($data as $meta_key => $meta_value):
+			if ($meta_key != $data['titulo_ensayo'] AND $meta_key != $data['resumen_ensayo'] AND $meta_key != $data['accion']):
+				update_post_meta($post_id, $meta_key, $meta_value);
+			endif;
+		endforeach;
+
 	}
 
 	/**

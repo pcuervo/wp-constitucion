@@ -6,8 +6,118 @@ if( isset( $result['success'] ) ): ?>
 	<div class="[ bg-success btn-lg text-center ]"><?php echo $result['success']; ?></div>
 <?php endif;  ?>
 
-	<section class="[ bg-gray-light ][ margin--header margin-bottom--large padding--top-bottom--xlarge ]">
+	<section class="[ bg-image rectangle-small ][ margin--header ][ relative ]" style="background-image: ">
+		<div class="[ bg-dark--opacity width-100 height-100 ]">
+			<h1 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Participa</h1>
+		</div>
+	</section>
 
+
+<div id="navbar">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+              <a class="navbar-brand" href="#">Brand</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Active Link</a></li>
+                    <li><a href="#">Link</a></li>
+
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu">
+                          <li class="kopie"><a href="#">Dropdown</a></li>
+                            <li><a href="#">Dropdown Link 1</a></li>
+                            <li class="active"><a href="#">Dropdown Link 2</a></li>
+                            <li><a href="#">Dropdown Link 3</a></li>
+
+                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Link 4</a>
+								<ul class="dropdown-menu">
+                                    <li class="kopie"><a href="#">Dropdown Link 4</a></li>
+									<li><a href="#">Dropdown Submenu Link 4.1</a></li>
+									<li><a href="#">Dropdown Submenu Link 4.2</a></li>
+									<li><a href="#">Dropdown Submenu Link 4.3</a></li>
+									<li><a href="#">Dropdown Submenu Link 4.4</a></li>
+
+								</ul>
+							</li>
+
+                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Link 5</a>
+								<ul class="dropdown-menu">
+                                    <li class="kopie"><a href="#">Dropdown Link 5</a></li>
+									<li><a href="#">Dropdown Submenu Link 5.1</a></li>
+									<li><a href="#">Dropdown Submenu Link 5.2</a></li>
+									<li><a href="#">Dropdown Submenu Link 5.3</a></li>
+
+									<li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Submenu Link 5.4</a>
+										<ul class="dropdown-menu">
+                                            <li class="kopie"><a href="#">Dropdown Submenu Link 5.4</a></li>
+											<li><a href="#">Dropdown Submenu Link 5.4.1</a></li>
+											<li><a href="#">Dropdown Submenu Link 5.4.2</a></li>
+
+
+										</ul>
+									</li>
+								</ul>
+							</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown2 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="kopie"><a href="#">Dropdown2</a></li>
+                            <li><a href="#">Dropdown2 Link 1</a></li>
+                            <li><a href="#">Dropdown2 Link 2</a></li>
+                            <li><a href="#">Dropdown2 Link 3</a></li>
+
+                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown2 Link 4</a>
+								<ul class="dropdown-menu">
+                                    <li class="kopie"><a href="#">Dropdown2 Link 4</a></li>
+									<li><a href="#">Dropdown2 Submenu Link 4.1</a></li>
+									<li><a href="#">Dropdown2 Submenu Link 4.2</a></li>
+									<li><a href="#">Dropdown2 Submenu Link 4.3</a></li>
+									<li><a href="#">Dropdown2 Submenu Link 4.4</a></li>
+
+								</ul>
+							</li>
+                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown2 Link 5</a>
+								<ul class="dropdown-menu">
+                                    <li class="kopie"><a href="#">Dropdown Link 5</a></li>
+									<li><a href="#">Dropdown2 Submenu Link 5.1</a></li>
+									<li><a href="#">Dropdown2 Submenu Link 5.2</a></li>
+									<li><a href="#">Dropdown2 Submenu Link 5.3</a></li>
+									<li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Submenu Link 5.4</a>
+										<ul class="dropdown-menu">
+                                            <li class="kopie"><a href="#">Dropdown2 Submenu Link 5.4</a></li>
+											<li><a href="#">Dropdown2 Submenu Link 5.4.1</a></li>
+											<li><a href="#">Dropdown2 Submenu Link 5.4.2</a></li>
+
+										</ul>
+									</li>
+								</ul>
+							</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+</div>
+
+	<section class="[ container ][ padding--header--id ]">
+		<div class="[ row ]">
+			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi eum, cupiditate voluptatum dicta libero iure! Accusamus accusantium ea neque eius officiis, dolor et, iusto numquam. Officia voluptas impedit, delectus vel.</p>
+			</div>
+		</div>
+	</section>
+	<section class="[ bg-gray-light ][ padding--header--id margin-bottom--large padding--top-bottom--xlarge ]">
 		<article class="[ container ]">
 			<h2 class="[ no-margin-top ]">Instrucciones</h2>
 			<div class="[ padding--sides--xsm ]">
@@ -65,27 +175,28 @@ if( isset( $result['success'] ) ): ?>
 	<article class="[ space-id ]" id="imagina_ciudad">
 		<section class="[ container padding--sides--xsm--large ][ text-center ]">
 			<h2 class="[ no-margin-top margin-bottom ]">Imagina tu ciudad</h2>
-			<a class="[ btn btn-primary btn-large ][ margin-bottom ]" href="<?php echo site_url('/sondeo-masivo/'); ?> "><strong>Participa</strong></a>
+			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis maiores, mollitia at qui aperiam illo cumque inventore eveniet facere quos, recusandae assumenda, delectus autem corporis cupiditate necessitatibus odio enim deserunt?</p>
+			</div>
+			<div class="[ clear ]"></div>
+			<a class="[ btn btn-primary btn-large ][ margin-top-bottom ]" href="<?php echo site_url('/sondeo-masivo/'); ?> "><strong>Participa</strong></a>
 			<h2>¿Ya participaste?</h2>
 			<p class="[ text-uppercase ]">Ingresa tu número de folio para obtener tu certificado</p>
 			<form class="[ form-inline ]">
 				<div class="[ input-group ]">
-					<input type="text" class="[ form-control input--search ][ height-40 ]" placeholder="1456788049">
+					<input type="text" class="[ form-control input--search ][ height-70 ][ fz-xxlarge ]" placeholder="1456788049">
 					<span class="[ input-group-btn ]">
-						<button class="[ btn btn-secondary ][ height-40 ]" type="button" id="resultados">
-							<img class="[ svg icon icon--iconed--small icon--thickness-2 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/search.svg">
+						<button class="[ btn btn-secondary ][ height-70 ]" type="button" id="resultados">
+							<img class="[ svg icon icon--iconed--small icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/search.svg">
 						</button>
 					</span>
 				</div>
 			</form>
 		</section>
 	</article>
-	<article class="[ bg-gray--fondo space-id ]">
-		<section class="[ container ][ text-center ]">
-			<h2>Resultados</h2>
-			<a class="[ btn btn-primary btn-large ]" href="#"><strong>Obten tu certificado</strong></a> <!-- certificado.pdf -->
-		</section>
-	</article>
+	<section class="[ descanso-visual ]" id="sobre_constitucion">
+		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
+	</section>
 	<article class="[ space-id ]"  id="peticiones">
 		<section class="[ container ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
@@ -93,12 +204,12 @@ if( isset( $result['success'] ) ): ?>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit in suscipit similique tempore ab quam voluptatibus, quos modi fuga iusto earum incidunt repellendus quis tempora? Perspiciatis officia accusantium temporibus esse.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum possimus dolorum quam illo veniam id placeat nulla repellat vero debitis ratione consectetur eos praesentium, delectus doloremque dolor, ipsa deserunt eaque.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem consequuntur error illum. Atque esse, et iure rerum fugiat consequuntur repellendus est dignissimos alias officia fugit culpa nam consequatur exercitationem quae!</p>
 			</div>
-			<div class="[ text-center ][ margin-top--large ]">
-				<a class="[ btn btn-primary btn-large ]" data-toggle="modal" data-target="#trabajador"><strong>Realizar petición</strong></a>
+			<div class="[ text-center ][ clear ]">
+				<a class="[ btn btn-primary btn-large ][ margin-top ]" data-toggle="modal" data-target="#trabajador"><strong>Realizar petición</strong></a>
 			</div>
 		</section>
 	</article>
-	<article class="[ bg-gray--fondo space-id ]" id="dialogos_publicos">
+	<article class="[ bg-gray--fondo space-id no-margin ]" id="dialogos_publicos">
 		<section class="[ container ]">
 				<div class="[ row ]">
 					<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
@@ -142,7 +253,7 @@ if( isset( $result['success'] ) ): ?>
 									$date = '';
 									if ($date_event != '') {
 										$date_arr = getDateTransform($date_event);
-										$date = '<span class="[ color-primary ]">'. $date_arr[0] . '</span> ' . $date_arr[1] . ' de ' . $date_arr[2];
+										$date = '<span class="[ color-primary ]"><strong>'. $date_arr[0] . '</strong></span> ' . $date_arr[1] . ' de ' . $date_arr[2];
 									}
 
 									if($count%2 == 0): ?>
@@ -235,7 +346,9 @@ if( isset( $result['success'] ) ): ?>
 				</div>
 			</section>
 	</article>
-
+	<section class="[ descanso-visual ]" id="sobre_constitucion">
+		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
+	</section>
 	<article class="[ space-id ]" id="ensayos">
 		<section class="[ container ]">
 			<div class="[ box-shadow--form ]">

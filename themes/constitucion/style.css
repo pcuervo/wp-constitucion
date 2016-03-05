@@ -6974,11 +6974,11 @@ ol.flex-control-nav.flex-control-paging li a {
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
-  background: none;
   display: inline-block;
   margin: 3px;
   width: 10px;
   height: 10px;
+  cursor: auto;
 }
 @media (min-width: 768px) {
   ol.flex-control-nav.flex-control-paging li a {
@@ -6989,9 +6989,7 @@ ol.flex-control-nav.flex-control-paging li a {
 }
 ol.flex-control-nav.flex-control-paging li a:hover,
 ol.flex-control-nav.flex-control-paging li a:focus,
-ol.flex-control-nav.flex-control-paging li a.focus {
-  background-color: #fff;
-}
+ol.flex-control-nav.flex-control-paging li a.focus,
 ol.flex-control-nav.flex-control-paging li a:active,
 ol.flex-control-nav.flex-control-paging li a.active {
   background-color: #fff;

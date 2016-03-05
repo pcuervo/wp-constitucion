@@ -6,7 +6,7 @@
 			<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
 		</video>
 		<div class="[ logo-video ]">
-			<img class="[ width-40 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
+			<img class="[ width-40 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/Vertical_Blanco.gif">
 			<span class="[ lead text-italic ][ color-gray ]">punto<br>de encuentro</span>
 		</div>
 		<div class="[ visible-xs ][ btn-nav-home ]">

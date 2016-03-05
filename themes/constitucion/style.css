@@ -5993,6 +5993,11 @@ button.list-group-item-danger.active:focus {
 }
 @media (min-width: 992px) {
   .video--home {
+    height: 600px;
+  }
+}
+@media (min-width: 1200px) {
+  .video--home {
     height: 800px;
   }
 }
@@ -7022,6 +7027,9 @@ a.flex-next {
   background-repeat: no-repeat;
   background-position: center center;
 }
+ul.slides {
+  padding-left: 0;
+}
 ul.slides li img {
   width: 100%;
 }
@@ -7779,6 +7787,11 @@ ul.slides li img {
   }
 }
 @media (min-width: 992px) {
+  .height-home-video {
+    height: 600px;
+  }
+}
+@media (min-width: 1200px) {
   .height-home-video {
     height: 800px;
   }

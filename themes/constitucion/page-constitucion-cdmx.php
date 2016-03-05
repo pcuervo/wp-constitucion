@@ -3,7 +3,7 @@ the_title();
 $url_image_constirucion = attachment_image_url( $post->ID, 'full' );
 $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
-<section class="[ bg-image rectangle-small ][ margin--header ][ relative ]" style="background-image: url('<?php echo $img_constitucion_cdmx; ?>');">
+<section class="[ bg-image rectangle-small ][ margin--header ][ relative ]" style="background-image: url('<?php echo $img_constitucion_cdmx; ?>');"> 
 	<div class="[ bg-dark--opacity width-100 height-100 ]">
 		<h1 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Acerca de la Constitución</h1>
 	</div>
@@ -33,7 +33,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
 
 <section class="[ descanso-visual ]" id="sobre_constitucion">
-	<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/IMG_6028.jpg" alt="">
 </section>
 
 <section class="[ container ]">
@@ -66,7 +66,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <section class="[ descanso-visual ]">
-	<img src="<?php echo THEMEPATH; ?>images/cd3.png" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/IMG_5956.jpg" alt="">
 </section>
 
 <section>
@@ -171,7 +171,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</section>
 </article>
 <section class="[ descanso-visual ]">
-	<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/IMG_5993.jpg" alt="">
 </section>
 
 <article class="[ space-id ]" id="hacia_constituyente">
@@ -219,7 +219,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</section>
 </article>
 <section class="[ descanso-visual ]">
-	<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/IMG_6107.jpg" alt="">
 </section>
 <article class="[ bg-gray--fondo padding--header--id ]" id="preguntas_frecuentes">
 	<section class="[ container padding--top--xlarge padding--sides--xsm ][ margin-bottom--large ]">
@@ -250,7 +250,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</section>
 </article>
 <section class="[ descanso-visual ]">
-	<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/IMG_5747.jpg" alt="">
 </section>
 <article class="[ space-id ]" id="biblioteca">
 	<section class="[ container ][ content-biblioteca ]">

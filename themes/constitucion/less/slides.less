@@ -1,7 +1,6 @@
 // Slides style
 // --------------------------------------------------
 
-
 ol.flex-control-nav.flex-control-paging{
     .absolute;
     .width-100;
@@ -27,11 +26,11 @@ ol.flex-control-nav.flex-control-paging li a {
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;
-    background: none;
     display: inline-block;
     margin: 3px;
     width: 10px;
     height: 10px; 
+    cursor: auto;
     @media (min-width: @screen-sm){
         margin: 15px;
         width: 15px;
@@ -40,10 +39,7 @@ ol.flex-control-nav.flex-control-paging li a {
 
     &:hover,
     &:focus,
-    &.focus {
-        background-color: @light;
-    }
-
+    &.focus,
     &:active,
     &.active {
         background-color: @light;
@@ -85,6 +81,9 @@ a.flex-next{
     background-position: center center;
 }
 
+ul.slides{padding-left:0;}
+
 ul.slides li img{
     .width-100;
 }
+

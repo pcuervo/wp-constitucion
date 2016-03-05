@@ -16,6 +16,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 			<div class="[ col-xs-12 ]">
 
 				<div class="[ content-cronica-cdmx ]">
+					<h3>Crónica</h3>
 					<blockquote>
 
 						<p>Sed dignissimligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu<canvas class="[ inline-block ]" id="pie-data" width="100px" height="100px"></canvas></p>
@@ -37,6 +38,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<ul class="slides">
 		<li>
 			<img src="<?php echo THEMEPATH; ?>images/cd4.png">
+			
 		</li>
 		<li>
 			<img src="<?php echo THEMEPATH; ?>images/cd1.png">
@@ -75,6 +77,9 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 </section>
 
 <section class="[ margin-top-bottom--xxlarge ]">
+	<div class="[ container ]">
+		<h2 class="[ margin-bottom ]">Expansión urbana</h2>
+	</div>
 	<img class="[ width-100 ]" src="<?php echo THEMEPATH; ?>images/logo-horizontal.gif" alt="">
 </section>
 

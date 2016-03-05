@@ -72,7 +72,8 @@
 								<h2 class="[ text-uppercase ][ margin-top ][ color-gray ]"><?php echo $nombre . ' ' . $apellidos ?></h2>
 								<p class="[ color-gray--strong ][ margin-top--small ]">El grupo de trabajo redactor del proyecto de constitución Política de la Ciudad de México otorga la presente constancia por haber contribuido con ideas, reflexiones y propuestas.</p>
 								<p class="[ color-gray--strong ][ margin-top--xsmall ]">La Ciudad de México somos todas y todos. Gracias por ser parte de este proceso histórico.</p>
-								<p class="[ text-uppercase ][ color-gray ][ fz--small ][ margin-top--xsmall ]">Ciudad de México a 2 de marzo de 2016</p>
+								<?php $date = getDateTransform(date('Y-m-d'));  ?>
+								<p class="[ text-uppercase ][ color-gray ][ fz--small ][ margin-top--xsmall ]">Ciudad de México a <?php echo $date[0].' de '.$date['1'].' de '.$date[2]; ?> </p>
 							</div>
 						</div>
 					</div>

@@ -1,25 +1,12 @@
 <?php get_header(); the_post();  ?>
 <section>
 	<div class="[ relative bg-gray--xxlight height-home-video ]">
-<<<<<<< HEAD
-		<!-- <div class="[ js-video-wrapper ]"> -->
-				<!-- <iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/7Ezz0wnzdiQ" frameborder="0" allowfullscreen></iframe>--> 
-				<video class="[ width-100 ][ center-bottom ]" autoplay="" loop="" muted="">
-					<source src="<?php echo THEMEPATH; ?>video/video.mp4" type="video/mp4">
-					<source src="<?php echo THEMEPATH; ?>video/video.webm" type="video/webm">
-					<source src="<?php echo THEMEPATH; ?>video/video.ogv" type="video/ogg">
-				</video>
-		<!-- </div> -->
-		<!-- <div class="[ bg-image height-home-video ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/home.png');"></div> -->
 
-=======
 		<video class="[ width-100 ][ center-bottom ]" autoplay loop>
 			<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
 		</video>
->>>>>>> bfc876134ed4fad9f19d16926e947206b9023366
 		<div class="[ logo-video ]">
-			<img class="[ width-40 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
-			<span class="[ lead text-italic ][ color-gray ]">punto<br>de encuentro</span>
+			<img class="[ width-80 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/Logotipo_Blanco-03.png">
 		</div>
 		<div class="[ visible-xs ][ btn-nav-home ]">
 			<a type="button" data-toggle="modal" data-target="#modal-menu-home"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ][ pull-right ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
@@ -42,29 +29,11 @@
 					</div>
 					<div class="[ bg-light-cdmx ][ text-center ]">
 						<ul class="[ menu-mobile ]">
-							<li class="[ text-uppercase ]"><a data-toggle="collapse" data-target="#acerca--home">Acerca de la constitución</a><!--  Constitución CDMX- page-constitucion-cdmx.php--></li>
-								<ul id="acerca--home" class="collapse [ text-uppercase ][ no-padding ][ collapse--menu ]">
-									<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe_gobierno">Mensaje del jefe de gobierno</a></li>
-									<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_constitucion">Sobre la constitución</a></li>
-									<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#grupo_trabajo">Grupo de trabajo</a></li>
-									<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_plataforma">Sobre la plataforma</a></li>
-									<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#hacia_constituyente">Hacia el constituyente</a></li>
-									<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#constitución_wiki">Constitución en Wiki</a></li>
-									<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#preguntas_frecuentes">Preguntas frecuentes</a></li>
-									<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#biblioteca">Biblioteca</a></li>
-								</ul>
+							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Acerca de la constitución</a></li>
 							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
-							<li class="[ text-uppercase ]"><a data-toggle="collapse" data-target="#participa--home">Participa</a></li>
-								<ul id="participa--home" class="collapse [ text-uppercase ][ no-padding ][ collapse--menu ]">
-									<li><a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">Imagina tu ciudad</a></li>
-									<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Resultados</a></li>
-									<li><a href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
-									<li><a href="<?php echo site_url('/participa/'); ?>#dialogos_publicos">Diálogos públicos</a></li>
-									<li><a href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
-									<li><a href="<?php echo site_url('/participa/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
-								</ul>
+							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a></li>
 							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-							<li><a type="button" data-toggle="modal" data-target="#SoyCDMX-mobile-home">#SoyCDMX</a></li>
+							<li><a type="button" data-toggle="modal" data-target="#SoyCDMX-mobile-home">#SomosCDMX</a></li>
 						</ul>
 					</div>
 					<img class="[ width-60 ][ margin-top-bottom--large ][ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png">
@@ -79,7 +48,7 @@
 								<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
 							</div>
 							<div class="[ col-xs-10 ]">
-								<h1>#SoyCDMX</h1>
+								<h1>#SomosCDMX</h1>
 							</div>
 						</div>
 
@@ -111,12 +80,9 @@
 <!-- menu desktop home -->
 <ul class="[ menu-home ][ text-center ][ hidden-xs hideen-sm ]">
 	<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
-	<li class="[ dropdown ]">
-		<button class="dropdown-toggle [ text-uppercase btn-dropdown ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-			Acerca de la constitución
-			<span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu [ dropdown-menu--header ] [ text-uppercase ]" aria-labelledby="dropdown--header">
+	<li class="[ dropdown--hover ][ text-uppercase ]">
+		<span><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Acerca de la constitución<span class="caret"></span></a></span>
+		<ul class="dropdown-content dropdown-menu [ text-uppercase ]" aria-labelledby="dropdown--header">
 			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe_gobierno">Mensaje del jefe de gobierno</a></li>
 			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_constitucion">Sobre la constitución</a></li>
 			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#grupo_trabajo">Grupo de trabajo</a></li>
@@ -128,14 +94,11 @@
 		</ul>
 	</li>
 	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
-	<li class="[ dropdown ]">
-		<button class="dropdown-toggle [ text-uppercase btn-dropdown ]" type="button" id="dropdown--header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-			Participa
-			<span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu [ dropdown-menu--top ] [ text-uppercase ]" aria-labelledby="dropdown--header">
+	<li class="[ dropdown--hover ][ text-uppercase ]">
+		<span><a href="<?php echo site_url('/participa/'); ?>">Participa<span class="caret"></span></a></span>
+		<ul class="dropdown-content dropdown-menu [ text-uppercase ]" aria-labelledby="dropdown--header">
 			<li><a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">Imagina tu ciudad</a></li>
-			<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Resultados</a></li>
+		<!-- 	<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Resultados</a></li> -->
 			<li><a href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
 			<li><a href="<?php echo site_url('/participa/'); ?>#dialogos_publicos">Diálogos públicos</a></li>
 			<li><a href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
@@ -147,7 +110,7 @@
 	<li id="js-btn-cdmx">
 		<a href="#">
 			<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
-			#SoyCDMX<!-- Contacto - page-contacto.php-->
+			#SomosCDMX<!-- Contacto - page-contacto.php-->
 		</a>
 	</li>
 </ul>
@@ -161,25 +124,27 @@
 		</div>
 	</div>
 </div><!--/container-->
+
 <!-- slider -->
-<div class="[ container ]">
 	<div class="flexslider relative">
 	<ul class="slides">
 		<li>
-			<img src="<?php echo THEMEPATH; ?>images/1.jpg">
+			<img src="<?php echo THEMEPATH; ?>images/slides-01.jpg">
 		</li>
 		<li>
-			<img src="<?php echo THEMEPATH; ?>images/2.jpg">
+			<img src="<?php echo THEMEPATH; ?>images/slides-02.jpg">
 		</li>
 		<li>
-			<img src="<?php echo THEMEPATH; ?>images/3.jpg">
+			<img src="<?php echo THEMEPATH; ?>images/slides-03.jpg">
 		</li>
 		<li>
-			<img src="<?php echo THEMEPATH; ?>images/1.jpg">
+			<img src="<?php echo THEMEPATH; ?>images/slides-04.jpg">
+		</li>
+		<li>
+			<img src="<?php echo THEMEPATH; ?>images/slides-05.jpg">
 		</li>
 	</ul>
-	</div>
-</div><!-- fin slider -->
+	</div><!-- fin slider -->
 
 <!-- Linea tiempo -->
 <div class="[ container ]">
@@ -243,7 +208,7 @@
 									</div>
 									<div class="[ vertical-line--large ]"></div>
 									<div class="[ border-gray--large ]"></div>
-									<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]"><?php echo $date; ?></p>
+									<p class="[ color-gray ][ fz-small ][ margin-bottom--date ][ text-uppercase ]"><?php echo $date; ?></p>
 								<?php if($tipo_evento != 3) echo '</a>'; ?>
 							</li>
 
@@ -254,7 +219,7 @@
 
 					$data = '';
 					if ($cronologia->found_posts >= 7 AND $count_pasados > 0):
-						$recorre = ($count_pasados - 1 ) * 150;
+						$recorre = ($count_pasados - 1 ) * 165;
 						echo '<input type="hidden" id="recorre" value="'.$recorre.'">';
 					endif;
 				else:
@@ -273,24 +238,24 @@
 		<h3 class="[ margin-top--xlarge ][ text-uppercase text-center ][ color-primary ]">Noticias</h3>
 		<div class="[ row ][ margin-top-bottom--large ]">
 <!-- 3 noticias -->
-			<div class="[ col-xs-12 col-sm-4 ]">
-				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
-				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
-				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
-				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
-			</div>
-			<div class="[ col-xs-12 col-sm-4 ]">
-				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
-				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
-				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
-				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
-			</div>
-			<div class="[ col-xs-12 col-sm-4 ]">
-				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
-				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
-				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
-				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
-			</div>
+			<?php $noticias = new WP_Query(array(
+					'post_type'      => 'post',
+					'posts_per_page' => 3
+				));
+
+			if ( $noticias->have_posts() ) :
+				while ( $noticias->have_posts() ) : $noticias->the_post(); 
+					$url_image = attachment_image_url( $post->ID, 'medium' );?>
+					<div class="[ col-xs-12 col-sm-4 ]">
+						<a href="<?php the_permalink(); ?>">
+							<img class="[ img-responsive ]" src="<?php echo $url_image; ?>">
+							<h4 class="[ color-gray ][ text-uppercase ]"><?php the_title(); ?></h4>
+							<p class="[ color-gray ]"><?php echo wp_trim_words( get_the_excerpt(), 28 ) ?></p>
+						</a>
+					</div>
+				<?php endwhile;
+			endif; ?>
+			
 		</div>
 <!-- con 2 noticias -->
 		<!-- <div class="[ row ][ margin-bottom--large ]">

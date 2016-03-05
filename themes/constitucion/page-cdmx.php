@@ -77,7 +77,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 </section>
 
 <section class="[ margin-top-bottom--xxlarge ]">
-	<div class="[ container ]">
+	<div class="[ container ][ hidden ]">
 		<h2 class="[ margin-bottom ]">Expansión urbana</h2>
 	</div>
 	<img class="[ width-100 ]" src="<?php echo THEMEPATH; ?>images/expansion-urbana.gif" alt="">

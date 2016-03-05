@@ -115,6 +115,8 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 							<img src="<?php echo $url_img; ?>">
 							<h3 class="nombre"><?php the_title(); ?></h3>
 							<div class="biografia hidden"><?php the_content(); ?></div>
+							<div class="cargo hidden"><?php echo get_post_meta( $post->ID, 'cargo_integrante', true ); ?></div>
+
 						</a>
 						<!-- <a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a> -->
 					</div>
@@ -131,7 +133,9 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 				<div class="modal-content">
 					<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
 					<div class="modal-body">
+						<img src="" class="imagen-modal">
 						<h3 class="nombre-modal"></h3>
+						<p class="cargo-modal"></p>
 						<div class="biografia-modal"></div>
 					</div><!-- modal-body -->
 				</div>

@@ -17,9 +17,14 @@
         $('.content-trabajo').on('click', function(){
             var bio = $(this).children('a').children('.biografia').html();
             var name = $(this).children('a').children('.nombre').html();
+            var imagen = $(this).children('a').children('img').attr('src');
+            var cargo = $(this).children('a').children('.cargo').html();
 
             $('.biografia-modal').empty().html(bio);
             $('.nombre-modal').empty().html(name);
+            $('.imagen-modal').attr('src', '').attr('src', imagen);
+            $('.cargo-modal').empty().html(cargo);
+
         }); 
 
         /**------ FORMULARIOS -------*/

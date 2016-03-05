@@ -6,8 +6,7 @@
 			<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
 		</video>
 		<div class="[ logo-video ]">
-			<img class="[ width-40 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/Vertical_Blanco.gif">
-			<span class="[ lead text-italic ][ color-gray ]">punto<br>de encuentro</span>
+			<img class="[ width-80 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/Logotipo_Blanco-03.png">
 		</div>
 		<div class="[ visible-xs ][ btn-nav-home ]">
 			<a type="button" data-toggle="modal" data-target="#modal-menu-home"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ][ pull-right ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
@@ -239,24 +238,24 @@
 		<h3 class="[ margin-top--xlarge ][ text-uppercase text-center ][ color-primary ]">Noticias</h3>
 		<div class="[ row ][ margin-top-bottom--large ]">
 <!-- 3 noticias -->
-			<div class="[ col-xs-12 col-sm-4 ]">
-				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
-				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
-				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
-				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
-			</div>
-			<div class="[ col-xs-12 col-sm-4 ]">
-				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
-				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
-				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
-				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
-			</div>
-			<div class="[ col-xs-12 col-sm-4 ]">
-				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
-				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
-				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
-				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
-			</div>
+			<?php $noticias = new WP_Query(array(
+					'post_type'      => 'post',
+					'posts_per_page' => 3
+				));
+
+			if ( $noticias->have_posts() ) :
+				while ( $noticias->have_posts() ) : $noticias->the_post(); 
+					$url_image = attachment_image_url( $post->ID, 'medium' );?>
+					<div class="[ col-xs-12 col-sm-4 ]">
+						<a href="<?php the_permalink(); ?>">
+							<img class="[ img-responsive ]" src="<?php echo $url_image; ?>">
+							<h4 class="[ color-gray ][ text-uppercase ]"><?php the_title(); ?></h4>
+							<p class="[ color-gray ]"><?php echo wp_trim_words( get_the_excerpt(), 28 ) ?></p>
+						</a>
+					</div>
+				<?php endwhile;
+			endif; ?>
+			
 		</div>
 <!-- con 2 noticias -->
 		<!-- <div class="[ row ][ margin-bottom--large ]">

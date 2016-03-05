@@ -3576,7 +3576,7 @@ input[type="button"].btn-block {
   border-radius: 6px;
 }
 .btn-primary:hover {
-  background-color: #999999;
+  background-color: #e80e8a;
   color: #fff;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;

@@ -98,7 +98,6 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
 <article class="[ space-id ]" id="grupo_trabajo">
 	<section class="[ container ]">
-		<h2 class="[ margin-bottom ]">Grupo de trabajo</h2>
 		<div class="[ row ]">
 			<?php $grupoTrabajo = new WP_Query(array(
 					'post_type'      => 'grupo-de-trabajo',
@@ -115,6 +114,8 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 							<img src="<?php echo $url_img; ?>">
 							<h3 class="nombre"><?php the_title(); ?></h3>
 							<div class="biografia hidden"><?php the_content(); ?></div>
+							<div class="cargo hidden"><?php echo get_post_meta( $post->ID, 'cargo_integrante', true ); ?></div>
+
 						</a>
 						<!-- <a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a> -->
 					</div>
@@ -131,7 +132,9 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 				<div class="modal-content">
 					<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
 					<div class="modal-body">
+						<img src="" class="imagen-modal">
 						<h3 class="nombre-modal"></h3>
+						<p class="cargo-modal"></p>
 						<div class="biografia-modal"></div>
 					</div><!-- modal-body -->
 				</div>
@@ -214,7 +217,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 			</div>
 		</div>
 		<div class="[ text-center ][ margin-top--large ]">
-			<a class="[ btn btn-primary btn-large ][ margin-bottom--large ]" data-toggle="modal" data-target="#trabajador"><strong>Visitar sitio</strong></a>
+			<a class="[ btn btn-primary btn-large ][ margin-bottom--large ]" disabled><strong>Próximamente</strong></a>
 		</div>
 	</section>
 </article>
@@ -263,78 +266,4 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</section>
 </article>
 
-
-<!--
-<article class="[ bg-gray-light ][ margin-top-bottom--large padding--top-bottom--xlarge ]">
-	<section class="[ container padding--sides--xsm ]">
-		<?php $proceso = get_page_by_path('proceso-participativo'); ?>
-		<h2 class="[ no-margin-top ]"><?php echo $proceso->post_title; ?></h2>
-		<?php echo $proceso->post_content; ?>
-
-		<div class="[ row ][ margin-top-bottom ]">
-			<div class="[ col-xs-6 col-sm-3 ]">
-				<div class="[ row ]">
-					<div class="[ col-xs-8 ]">
-						<p class="[ fz-xlarge ]">Paso 1</p>
-						<p class="[ fz-small ]"><?php echo get_post_meta($proceso->ID, 'paso_a', true);?></p>
-					</div>
-					<div class="[ col-xs-4 no-padding--sides ]">
-						<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH ?>images/flecha.png" alt="" /></div>
-					</div>
-				</div>
-
-			<div class="[ col-xs-6 col-sm-3 ]">
-				<div class="[ row ]">
-					<div class="[ col-xs-8 ]">
-						<p class="[ fz-xlarge ]">Paso 2</p>
-						<p class="[ fz-small ]"><?php echo get_post_meta($proceso->ID, 'paso_b', true);?></p>
-
-					</div>
-					<div class="[ col-xs-4 no-padding--sides ]">
-						<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH ?>images/flecha.png" alt="" />
-					</div>
-				</div>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 ]">
-				<div class="[ row ]">
-					<div class="[ col-xs-8 ]">
-						<p class="[ fz-xlarge ]">Paso 3</p>
-						<p class="[ fz-small ]"><?php echo get_post_meta($proceso->ID, 'paso_c', true);?></p>
-					</div>
-					<div class="[ col-xs-4 no-padding--sides ]">
-						<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH ?>images/flecha.png" alt="" />
-					</div>
-				</div>
-			</div>
-			<div class="[ col-xs-6 col-sm-3 ]">
-				<div class="[ row ]">
-					<div class="[ col-xs-8 ]">
-						<p class="[ fz-xlarge ]">Paso 4</p>
-						<p class="[ fz-small ]"><?php echo get_post_meta($proceso->ID, 'paso_d', true);?></p>
-					</div>
-					<div class="[ col-xs-4 no-padding--sides ]">
-						<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH ?>images/flecha.png" alt="" /></div>
-					</div>
-				</div>
-		</div>
-
-		<div>
-			<?php $attachment = get_attachment_pdf($proceso->ID);
-			if ( $attachment != '' ) : ?>
-				<a href="<?php echo $attachment; ?>" target="_blank" class="descargar-doc">
-			<?php endif; ?>
-				<p class="[ inline-block middle ][ text-uppercase ]">Descarga los documentos oficiales aquí</p>
-				<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/file-pdf.svg">
-			<?php if ( $attachment != '' ) echo '</a>'; ?>
-		</div>
-	</section>
-</article> -->
-<!--
-<?php $experiencias = get_page_by_path('experiencias-y-buenas-practicas-globales');
-$url_image_experiencias = attachment_image_url( $experiencias->ID, 'full' );?>
-<section class="[ container padding--sides--xsm ][ margin-bottom--large ]">
-	<h2><?php echo $experiencias->post_title; ?></h2>
-	<?php echo $experiencias->post_content; ?>
-</section>
-<section class="[ bg-image rectangle ][ margin-bottom ][ relative ]" style="background-image: url('<?php echo $url_image_experiencias; ?>');"></section> -->
 <?php get_footer(); ?>

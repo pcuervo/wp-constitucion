@@ -108,7 +108,7 @@ if( isset( $result['success'] ) ): ?>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem consequuntur error illum. Atque esse, et iure rerum fugiat consequuntur repellendus est dignissimos alias officia fugit culpa nam consequatur exercitationem quae!</p>
 			</div>
 			<div class="[ text-center ][ clear ]">
-				<a href="https://www.change.org/movements/voces-ciudadanas-en-la-nueva-constituci%C3%B3n-de-la-cdmx" target="_blank" class="[ btn btn-primary btn-large ][ margin-top ]" data-toggle="modal" data-target="#trabajador"><strong>Realizar petición</strong></a>
+				<a href="https://www.change.org/movements/voces-ciudadanas-en-la-nueva-constituci%C3%B3n-de-la-cdmx" target="_blank" class="[ btn btn-primary btn-large ][ margin-top ]"><strong>Realizar petición</strong></a>
 			</div>
 		</section>
 	</article>
@@ -205,7 +205,7 @@ if( isset( $result['success'] ) ): ?>
 								<label for=""><strong class="[ color-primary ]">Frase que describe el acontecimiento</strong> Comparte una frase que describa el evento/sesión de trabajo/diálogo público</label>
 								<input type="text" name="frace_evento" id="frace_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder=" (120 caracteres) " required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">
 								<label for=""><strong class="[ color-primary ]">Descripción</strong> Describe los objetivos, alcances y perfil de asistentes de tu acontecimiento </label>
-								<textarea type="text" name="descripcion_evento" id="descripcion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder=" (120 palabras) " required="" data-parsley-maxwords="200" data-parsley-required-message="La descripción es obligatoria"></textarea>
+								<textarea type="text" name="descripcion_evento" id="descripcion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder=" (120 palabras) " required="" data-parsley-maxwords="120" data-parsley-required-message="La descripción es obligatoria" data-parsley-maxwords-message="La descripción no puede exceder 120 palabras"></textarea>
 								<label for=""><strong class="[ color-primary ]">Liga oficial</strong>Copia a continuación la liga del sitio oficial del acontecimiento, la cuenta de Facebook o de Twitter </label>
 								<input type="text" name="liga_oficial_evento" id="liga_oficial_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Liga oficial">
 								<label for=""><strong class="[ color-primary ]">Fechas</strong> (Puede ser un sólo día) </label>
@@ -271,7 +271,7 @@ if( isset( $result['success'] ) ): ?>
 							<label for="">Final</label>
 							<input type="text" name="fechaFinal" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo-fin" placeholder="yyyy-mm-dd" disabled>
 							<label for=""><span class="[ color-primary ]">Resumen</span> <span>Describe a continuación las reflexiones o propuestas centrales de la sesión de trabajo y el contexto en el que esta se llevó a cabo.</span></label>
-							<textarea name="resumen_ensayo" id="resumen_ensayo" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 250 palabras" required="" maxlength="120" data-parsley-error-message="El resumen es obligatorio"></textarea>
+							<textarea name="resumen_ensayo" id="resumen_ensayo" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 250 palabras" required="" data-parsley-maxwords="250" data-parsley-required-message="El resumen es obligatorio" data-parsley-maxwords-message="El resumen no puede exceder 250 palabras"></textarea>
 							<label for=""><span class="[ color-primary ]">Palabras Clave</span> <span>Señala a continuación 3 palabras clave vinculadas a este documento</span></label>
 							<input name="palabra_a" id="palabra_a" type="text" class="[ form-control ][ input-primary ][ margin-bottom ]" placeholder="Palabra 1" required="" data-parsley-error-message="Palabra obligatoria">
 							<input name="palabra_b" id="palabra_b" type="text" class="[ form-control ][ input-primary ][ margin-bottom ]" placeholder="Palabra 2" required="" data-parsley-error-message="Palabra obligatoria">

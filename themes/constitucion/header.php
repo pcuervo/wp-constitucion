@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta name="google-site-verification" content="Byb1H1rs62xSD29RXSfE63bDOr6AfaSq7YoUIRs3Bl0" />
 		<title><?php print_title(); ?></title>
 		<!-- Sets initial viewport load and disables zooming -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +12,7 @@
 		<!-- Compatibility -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta http-equiv="cleartype" content="on">
+		
 		<!-- Favicon - generated with http://www.favicomatic.com/ -->
 		<link rel="shortcut icon" href="<?php echo THEMEPATH; ?>images/favicon.ico">
 		<!-- Google font(s) -->
@@ -30,6 +32,16 @@
 	</head>
 
 	<body>
+		<!­­ Google Tag Manager ­­>
+			<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM­52W5VS"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM­52W5VS');</script>
+
+		<!­­ End Google Tag Manager ­­>
 		<?php $activeAcerca = is_page('constitucion-cdmx') ? 'active' : '';
 		$activeCdmx = is_page('cdmx') ? 'active' : '';
 		$activeParticipa = is_page('participa') ? 'active' : '';

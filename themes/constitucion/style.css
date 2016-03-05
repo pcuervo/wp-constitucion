@@ -7022,6 +7022,9 @@ a.flex-next {
   background-repeat: no-repeat;
   background-position: center center;
 }
+ul.slides {
+  padding-left: 0;
+}
 ul.slides li img {
   width: 100%;
 }

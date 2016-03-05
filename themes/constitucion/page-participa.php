@@ -121,10 +121,8 @@ if( isset( $result['success'] ) ): ?>
 				</div>
 			<!-- scroll horizontal -->
 				<div class="[ row ][ margin-bottom ]">
-					<div class="[ col-md-2 ]">
-						<img class="img-slide" src="<?php echo THEMEPATH; ?>/images/cdmx.png"/>
-					</div>
-					<div class="[ col-md-10 ]">
+				
+					<div class="[ col-md-12 ]">
 						<ul id="scroll" class="[ scroll-cronologia ][ horizontal-slide ][ text-center ]">
 
 							<?php $cronologia = new WP_Query(array(

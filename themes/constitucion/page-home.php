@@ -34,7 +34,7 @@
 							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
 							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a></li>
 							<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-							<li><a type="button" data-toggle="modal" data-target="#SoyCDMX-mobile-home">#SoyCDMX</a></li>
+							<li><a type="button" data-toggle="modal" data-target="#SoyCDMX-mobile-home">#SomosCDMX</a></li>
 						</ul>
 					</div>
 					<img class="[ width-60 ][ margin-top-bottom--large ][ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png">
@@ -49,7 +49,7 @@
 								<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
 							</div>
 							<div class="[ col-xs-10 ]">
-								<h1>#SoyCDMX</h1>
+								<h1>#SomosCDMX</h1>
 							</div>
 						</div>
 
@@ -111,7 +111,7 @@
 	<li id="js-btn-cdmx">
 		<a href="#">
 			<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
-			#SoyCDMX<!-- Contacto - page-contacto.php-->
+			#SomosCDMX<!-- Contacto - page-contacto.php-->
 		</a>
 	</li>
 </ul>
@@ -206,7 +206,7 @@
 									</div>
 									<div class="[ vertical-line--large ]"></div>
 									<div class="[ border-gray--large ]"></div>
-									<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]"><?php echo $date; ?></p>
+									<p class="[ color-gray ][ fz-small ][ margin-bottom--date ][ text-uppercase ]"><?php echo $date; ?></p>
 								<?php if($tipo_evento != 3) echo '</a>'; ?>
 							</li>
 

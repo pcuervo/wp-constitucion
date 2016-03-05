@@ -172,7 +172,7 @@ if( isset( $result['success'] ) ): ?>
 												</div>
 												<div class="[ vertical-line--large ]"></div>
 												<div class="[ border-gray--large ]"></div>
-												<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]"><?php echo $date; ?></p>
+												<p class="[ color-gray ][ fz-small ][ margin-bottom--date ][ text-uppercase ]"><?php echo $date; ?></p>
 											</a>
 										</li>
 
@@ -195,7 +195,7 @@ if( isset( $result['success'] ) ): ?>
 				</div> <!-- row -->
 
 				<div class="[ box-shadow--form ]">
-					<h2 class="[ margin-bottom--large ]">Formato para registrar eventos</h2>
+					<h2 class="[ margin-bottom--large ]">Regristra tu evento</h2>
 					<form id="form-eventos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
 						<div class="[ row ]">
 							<div class="[ col-xs-12 col-sm-6 ]">
@@ -247,8 +247,14 @@ if( isset( $result['success'] ) ): ?>
 	</section>
 	<article class="[ space-id ]" id="ensayos">
 		<section class="[ container ]">
+			<div class="[ row ][ margin-bottom ]">
+					<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+						<h2 class="[ no-margin-top ]">Ensayo</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ducimus soluta. Tempora recusandae cum cumque odit consequatur, laborum nulla atque accusamus doloribus rem placeat, optio libero delectus voluptatem repellendus facilis.</p>
+					</div>
+				</div>
 			<div class="[ box-shadow--form ]">
-				<h2 class="[ margin-bottom ]">Formulario para compartir ensayos y relatorías de eventos</h2>
+				<h2 class="[ margin-bottom ]">Comparte tu ensayo o relatoria</h2>
 				<form id="form-ensayos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="" >
 					<div class="[ row ]">
 						<div class="[ form-group ][ col-xs-12 col-sm-6 ]">

@@ -37,6 +37,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<ul class="slides">
 		<li>
 			<img src="<?php echo THEMEPATH; ?>images/cd4.png">
+			
 		</li>
 		<li>
 			<img src="<?php echo THEMEPATH; ?>images/cd1.png">

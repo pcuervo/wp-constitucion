@@ -5996,7 +5996,7 @@ button.list-group-item-danger.active:focus {
 }
 @media (min-width: 992px) {
   .video--home {
-    height: 500px;
+    height: 800px;
   }
 }
 .well {
@@ -7783,7 +7783,7 @@ ul.slides li img {
 }
 @media (min-width: 992px) {
   .height-home-video {
-    height: 500px;
+    height: 800px;
   }
 }
 .rectangle--light {

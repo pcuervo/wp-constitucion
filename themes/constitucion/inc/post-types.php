@@ -96,7 +96,7 @@
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 6,
-			'supports'           => array( 'title', 'editor', 'custom-fields' )
+			'supports'           => array( 'title', 'editor', 'custom-fields', 'thumbnail' )
 		);
 		register_post_type( 'eventos', $args );
 

@@ -32,16 +32,16 @@
 	</head>
 
 	<body>
-		<!­­ Google Tag Manager ­­>
-			<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM­52W5VS"
+		<!--Google Tag Manager ­­-->
+			<noscript><iframe src="http://www.googletagmanager.com/ns.html?id=GTM­52W5VS"
 			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 			})(window,document,'script','dataLayer','GTM­52W5VS');</script>
-
-		<!­­ End Google Tag Manager ­­>
+		<!--Google Tag Manager ­­-->
+		
 		<?php $activeAcerca = is_page('constitucion-cdmx') ? 'active' : '';
 		$activeCdmx = is_page('cdmx') ? 'active' : '';
 		$activeParticipa = is_page('participa') ? 'active' : '';

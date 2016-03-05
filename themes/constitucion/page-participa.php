@@ -174,7 +174,7 @@ if( isset( $result['success'] ) ): ?>
 												</div>
 												<div class="[ vertical-line--large ]"></div>
 												<div class="[ border-gray--large ]"></div>
-												<p class="[ color-gray ][ fz-small ][ margin-bottom--date ]"><?php echo $date; ?></p>
+												<p class="[ color-gray ][ fz-small ][ margin-bottom--date ][ text-uppercase ]"><?php echo $date; ?></p>
 											</a>
 										</li>
 

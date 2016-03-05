@@ -8656,6 +8656,11 @@ ul.menu-home > li > a:hover:active {
   -o-transition: all 0.3s ease;
   color: #e80e8a;
 }
+nav a:hover,
+nav a:active,
+nav a:focus {
+  color: #e80e8a;
+}
 footer {
   padding-top: 12px;
   padding-bottom: 12px;

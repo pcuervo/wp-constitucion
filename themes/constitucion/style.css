@@ -8093,9 +8093,12 @@ ul.slides li img {
 .content-cronica-cdmx blockquote canvas {
   margin-left: 20px;
 }
+.content-biblioteca {
+  margin-bottom: 80px;
+}
 .content-biblioteca a {
   color: #4a4a4a;
-  text-decoration: none;
+  text-decoration: underline;
 }
 @media (min-width: 768px) {
   .content-biblioteca a {

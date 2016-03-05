@@ -1,8 +1,8 @@
 <?php get_header(); the_post();  ?>
 <section>
-	<div class="[ relative bg-gray--xxlight height-home-video ]">
+	<div class="[ bg-gray--xxlight hero_video ]">
 
-		<video class="[ width-100 ][ center-bottom ]" autoplay loop>
+		<video class="[ width-100 ][ center-full ]" autoplay loop>
 			<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
 		</video>
 		<div class="[ logo-video ]">

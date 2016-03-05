@@ -8199,6 +8199,11 @@ ul.slides li img {
     display: inline-block !important;
   }
 }
+@media (max-width: 768px) {
+  #voces_ciudadanas {
+    display: none;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-md {
     display: block !important;

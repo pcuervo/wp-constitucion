@@ -3601,25 +3601,22 @@ input[type="button"].btn-block {
   -o-transition: all 0.3s ease;
 }
 .btn-tertiary {
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 3px;
-  background-color: #999999;
   border: 2px solid #999999;
   text-transform: uppercase;
-  color: #fff;
-  font-weight: lighter;
   font-family: "Alegreya Sans", sans-serif;
   margin-bottom: 5px;
 }
 .btn-tertiary:hover {
-  background-color: transparent;
-  color: #999999;
+  background-color: #999999;
+  color: #fff;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
+}
+.btn-tertiary.active {
+  background-color: #999999;
+  color: #fff;
 }
 .btn-dropdown {
   border: 0px;
@@ -7174,7 +7171,7 @@ ul.slides li img {
   top: 20px;
 }
 .top-8 {
-  top: -8px;
+  top: 8px;
 }
 .bottom-10 {
   bottom: 10px;
@@ -8406,7 +8403,7 @@ header {
 }
 @media (min-width: 992px) {
   header {
-    height: 90px;
+    height: 100px;
   }
 }
 header li,
@@ -8414,19 +8411,32 @@ ul.menu-home > li {
   text-decoration: none;
   display: inline;
 }
-header > nav > ul > li > a {
+header > nav > ul > li > a,
+header > nav > ul > li > span > a,
+ul.dropdown-content > li > span > a,
+li > span > a,
+.dropdown-content > li > a {
   font-family: 'Alegreya Sans', sans-serif;
   font-weight: bold;
   text-decoration: none;
   color: #4a4a4a;
 }
+ul.dropdown-content > li > a {
+  margin-bottom: 10px;
+}
+.sticky ul.menu-desktop > li.dropdown--hover--acerca {
+  padding: 1px 1%;
+}
+.menu-desktop li.dropdown--hover--acerca {
+  padding: 1px 1%;
+}
 ul.menu-desktop > li {
-  padding: 3% 1%;
+  padding: 15px 1%;
   border-right: 1px solid #dbdbdb;
 }
 @media (min-width: 992px) {
   ul.menu-desktop > li {
-    padding: 30px 1.5%;
+    padding: 15px 1.5%;
   }
 }
 ul.menu-desktop > li:last-child {
@@ -8437,14 +8447,34 @@ ul.menu-desktop {
 }
 ul.menu-desktop li a:hover,
 ul.menu-home > li a:hover,
+ul.menu-desktop li span a:hover,
+ul.menu-home > li span a:hover,
+li > span > a > :hover,
+.dropdown-content > li > a:hover,
 ul.menu-desktop li a:hover:hover,
 ul.menu-home > li a:hover:hover,
+ul.menu-desktop li span a:hover:hover,
+ul.menu-home > li span a:hover:hover,
+li > span > a > :hover:hover,
+.dropdown-content > li > a:hover:hover,
 ul.menu-desktop li a:hover:focus,
 ul.menu-home > li a:hover:focus,
+ul.menu-desktop li span a:hover:focus,
+ul.menu-home > li span a:hover:focus,
+li > span > a > :hover:focus,
+.dropdown-content > li > a:hover:focus,
 ul.menu-desktop li a:hover:active,
 ul.menu-home > li a:hover:active,
+ul.menu-desktop li span a:hover:active,
+ul.menu-home > li span a:hover:active,
+li > span > a > :hover:active,
+.dropdown-content > li > a:hover:active,
 ul.menu-desktop li a:hover.active,
-ul.menu-home > li a:hover.active {
+ul.menu-home > li a:hover.active,
+ul.menu-desktop li span a:hover.active,
+ul.menu-home > li span a:hover.active,
+li > span > a > :hover.active,
+.dropdown-content > li > a:hover.active {
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -8456,12 +8486,12 @@ ul.submenu {
   display: none !important;
 }
 .sticky ul.menu-desktop > li {
-  padding: 3% 1%;
+  padding: 15px 1%;
   border-right: 1px solid #dbdbdb;
 }
 @media (min-width: 992px) {
   .sticky ul.menu-desktop > li {
-    padding: 3% 1.5%;
+    padding: 15 1.5%;
   }
 }
 .sticky ul.menu-desktop > li:last-child {
@@ -8511,6 +8541,21 @@ ul.menu-home > li > a,
   font-weight: bold;
   text-decoration: none;
   color: #4a4a4a;
+}
+.dropdown--hover {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+}
+.dropdown--hover:hover .dropdown-content {
+  display: block;
 }
 .dropdown-menu--header {
   border-top: 0px;
@@ -8643,4 +8688,3 @@ footer a:hover {
   color: #e80e8a;
   text-decoration: none;
 }
-/*# sourceMappingURL=style.css.map */

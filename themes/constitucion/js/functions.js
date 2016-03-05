@@ -67,13 +67,12 @@
                     var form = document.getElementById("form-eventos");
                     form.submit();
                 };
-                
+                 
             });
-
-
+ 
             function getValidateDocs(id_object){
                 var text = $('#'+id_object).val();
-                var docs = /docs.google.com/.test(text);
+                var docs = /docs.google.com/.test(text);  
                 var dropbox = /dropbox.com/.test(text);
                 var onedrive = /onedrive.live.com/.test(text);
 
@@ -89,13 +88,13 @@
 
             }
         /**------ FORMULARIOS -------*/
-
+ 
         $('.nota-destacada a').on('click', function(event){
             event.preventDefault();
-        });
-
-        if( parseInt( isPageSondeo ) ){
-            //return;
+        });  
+ 
+        if( parseInt( isPageSondeo ) ){ 
+            $('[data-parsley-certificado]').parsley();
         }
 
         imgToSvg();

@@ -13,7 +13,7 @@ $date_arr = getDateTransform( $post->post_date ); ?>
 				<p><?php echo $date_arr[4].' '.$date_arr[1].' '.$date_arr[2] ?></p>
 				<h2><?php the_title(); ?></h2>
 				<?php the_content(); ?>
-				<a class="[ btn btn-primary btn-large ]" href="<?php echo site_url('/noticias/'); ?>">Regresar</a>
+				<a class="[ btn btn-primary btn-large ]" href="<?php echo site_url('/noticias/'); ?>"><strong>Regresar</strong></a>
 			</section>
 		</div>
 	</div>

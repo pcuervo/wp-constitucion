@@ -11,7 +11,7 @@ $ = jQuery.noConflict();
                 $('#js-delegaciones-estados-paises').empty();
                 switch( lugar ){
                     case 'cdmx':
-                        showDelegaciones( lugar, '');
+                        showDelegaciones( lugar, '' );
                         break;
                     case 'zmvm':
                         showMunicipios( '' );
@@ -48,8 +48,23 @@ $ = jQuery.noConflict();
 
     $('#js-grandes-retos a').click(function(e){
         e.preventDefault();
-        $(this).addClass('disabled');
         var $grandesRetos = $('#js-grandes-retos input').val();
+
+        if( $(this).hasClass('active') ){
+            $(this).removeClass('active');
+            console.log( $(this).text() );
+            if( $grandesRetos.indexOf( $(this).text() + ',' ) > -1 ){
+                $grandesRetos = $grandesRetos.replace( $(this).text() + ',', '' );
+                $('#js-grandes-retos input').val( $grandesRetos );
+            }
+            if( $grandesRetos.indexOf( $(this).text() ) > -1 ){
+                $grandesRetos = $grandesRetos.replace( $(this).text() + ',', '' );
+                $('#js-grandes-retos input').val( $grandesRetos );
+            }
+            return;
+        }
+
+        $(this).addClass('active');
         if( '' == $grandesRetos ){
             $('#js-grandes-retos input').val( $(this).text() );
         } else {
@@ -550,10 +565,11 @@ function saveSurvey( answersObj ){
             answers:    answersObj,
             action:     'save_user_answers'
         },
-        function( response ){
-            console.log( response );
-            $('.js-codigo-referencia span').text( response );
+        function( codigo ){
+            console.log( codigo );
+            $('.js-codigo-referencia span').text( codigo );
             $('#modal-agradecimiento').modal('toggle');
+            $('input[name="referencia"]').val( codigo )
         }
     );
 }

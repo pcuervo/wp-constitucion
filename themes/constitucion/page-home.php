@@ -130,16 +130,19 @@
 	<div class="flexslider relative">
 	<ul class="slides">
 		<li>
-			<img src="<?php echo THEMEPATH; ?>images/1.jpg">
+			<img src="<?php echo THEMEPATH; ?>images/slides-01.jpg">
 		</li>
 		<li>
-			<img src="<?php echo THEMEPATH; ?>images/2.jpg">
+			<img src="<?php echo THEMEPATH; ?>images/slides-02.jpg">
 		</li>
 		<li>
-			<img src="<?php echo THEMEPATH; ?>images/3.jpg">
+			<img src="<?php echo THEMEPATH; ?>images/slides-03.jpg">
 		</li>
 		<li>
-			<img src="<?php echo THEMEPATH; ?>images/1.jpg">
+			<img src="<?php echo THEMEPATH; ?>images/slides-04.jpg">
+		</li>
+		<li>
+			<img src="<?php echo THEMEPATH; ?>images/slides-05.jpg">
 		</li>
 	</ul>
 	</div><!-- fin slider -->

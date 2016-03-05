@@ -107,7 +107,7 @@ if( isset( $result['success'] ) ): ?>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem consequuntur error illum. Atque esse, et iure rerum fugiat consequuntur repellendus est dignissimos alias officia fugit culpa nam consequatur exercitationem quae!</p>
 			</div>
 			<div class="[ text-center ][ clear ]">
-				<a href="https://www.change.org/movements/voces-ciudadanas-en-la-nueva-constituci%C3%B3n-de-la-cdmx" class="[ btn btn-primary btn-large ][ margin-top ]" data-toggle="modal" data-target="#trabajador"><strong>Realizar petición</strong></a>
+				<a href="https://www.change.org/movements/voces-ciudadanas-en-la-nueva-constituci%C3%B3n-de-la-cdmx" target="_blank" class="[ btn btn-primary btn-large ][ margin-top ]" data-toggle="modal" data-target="#trabajador"><strong>Realizar petición</strong></a>
 			</div>
 		</section>
 	</article>

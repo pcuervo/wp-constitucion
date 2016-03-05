@@ -8412,13 +8412,22 @@ ul.menu-home > li {
   display: inline;
 }
 header > nav > ul > li > a,
-header > nav > ul > li > span {
+header > nav > ul > li > span > a,
+ul.dropdown-content > li > span > a,
+li > span > a,
+.dropdown-content > li > a {
   font-family: 'Alegreya Sans', sans-serif;
   font-weight: bold;
   text-decoration: none;
   color: #4a4a4a;
 }
+ul.dropdown-content > li > a {
+  margin-bottom: 10px;
+}
 .sticky ul.menu-desktop > li.dropdown--hover--acerca {
+  padding: 1px 1%;
+}
+.menu-desktop li.dropdown--hover--acerca {
   padding: 1px 1%;
 }
 ul.menu-desktop > li {
@@ -8427,7 +8436,7 @@ ul.menu-desktop > li {
 }
 @media (min-width: 992px) {
   ul.menu-desktop > li {
-    padding: 30px 1.5%;
+    padding: 15px 1.5%;
   }
 }
 ul.menu-desktop > li:last-child {
@@ -8438,14 +8447,34 @@ ul.menu-desktop {
 }
 ul.menu-desktop li a:hover,
 ul.menu-home > li a:hover,
+ul.menu-desktop li span a:hover,
+ul.menu-home > li span a:hover,
+li > span > a > :hover,
+.dropdown-content > li > a:hover,
 ul.menu-desktop li a:hover:hover,
 ul.menu-home > li a:hover:hover,
+ul.menu-desktop li span a:hover:hover,
+ul.menu-home > li span a:hover:hover,
+li > span > a > :hover:hover,
+.dropdown-content > li > a:hover:hover,
 ul.menu-desktop li a:hover:focus,
 ul.menu-home > li a:hover:focus,
+ul.menu-desktop li span a:hover:focus,
+ul.menu-home > li span a:hover:focus,
+li > span > a > :hover:focus,
+.dropdown-content > li > a:hover:focus,
 ul.menu-desktop li a:hover:active,
 ul.menu-home > li a:hover:active,
+ul.menu-desktop li span a:hover:active,
+ul.menu-home > li span a:hover:active,
+li > span > a > :hover:active,
+.dropdown-content > li > a:hover:active,
 ul.menu-desktop li a:hover.active,
-ul.menu-home > li a:hover.active {
+ul.menu-home > li a:hover.active,
+ul.menu-desktop li span a:hover.active,
+ul.menu-home > li span a:hover.active,
+li > span > a > :hover.active,
+.dropdown-content > li > a:hover.active {
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;

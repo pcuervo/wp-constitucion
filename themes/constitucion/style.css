@@ -6965,6 +6965,9 @@ ol.flex-control-nav.flex-control-paging {
 ol.flex-control-nav.flex-control-paging li {
   display: inline;
 }
+ol.flex-control-nav.flex-control-paging li a.flex-active {
+  background-color: #fff;
+}
 ol.flex-control-nav.flex-control-paging li a {
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);

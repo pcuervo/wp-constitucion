@@ -8199,6 +8199,19 @@ ul.slides li img {
     display: inline-block !important;
   }
 }
+@media (max-width: 768px) {
+  .hero_video .video_home {
+    display: none;
+  }
+  .hero_video .imagen_video_home {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .hero_video .imagen_video_home {
+    display: none;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-md {
     display: block !important;

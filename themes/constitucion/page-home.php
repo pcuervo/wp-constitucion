@@ -1,8 +1,7 @@
 <?php get_header(); the_post();  ?>
 <section>
-	<div class="[ bg-gray--xxlight hero_video ]">
-
-		<video class="[ width-100 ][ center-full ]" autoplay loop>
+	<div class="[ bg-gray--xxlight hero_video ]" style="background-image: url('http://pcuervo.com/constitucion/wp-content/uploads/2016/03/Captura-de-pantalla-2016-03-04-a-las-22.16.06.png'); background-size: cover;">
+		<video class="[ width-100 ][ center-full video_home ]" autoplay loop>
 			<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
 		</video>
 		<div class="[ logo-video ]">

@@ -1,6 +1,7 @@
 <?php get_header(); the_post();  ?>
 <section>
 	<div class="[ relative bg-gray--xxlight height-home-video ]">
+
 		<video class="[ width-100 ][ center-bottom ]" autoplay loop>
 			<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
 		</video>
@@ -124,8 +125,8 @@
 		</div>
 	</div>
 </div><!--/container-->
+
 <!-- slider -->
-<div class="[ container ]">
 	<div class="flexslider relative">
 	<ul class="slides">
 		<li>
@@ -141,8 +142,7 @@
 			<img src="<?php echo THEMEPATH; ?>images/1.jpg">
 		</li>
 	</ul>
-	</div>
-</div><!-- fin slider -->
+	</div><!-- fin slider -->
 
 <!-- Linea tiempo -->
 <div class="[ container ]">
@@ -217,7 +217,7 @@
 
 					$data = '';
 					if ($cronologia->found_posts >= 7 AND $count_pasados > 0):
-						$recorre = ($count_pasados - 1 ) * 150;
+						$recorre = ($count_pasados - 1 ) * 165;
 						echo '<input type="hidden" id="recorre" value="'.$recorre.'">';
 					endif;
 				else:

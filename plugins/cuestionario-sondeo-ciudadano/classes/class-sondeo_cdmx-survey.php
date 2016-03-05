@@ -50,7 +50,7 @@ class Sondeo_CDMX_Survey {
 			add_action( 'init', array( $this, 'register_retos_pt' ) );
 			return;
 		}
-		
+
 		add_action( 'template_redirect', array( $this, 'load_script_is_page' ) );
 	}
 
@@ -115,8 +115,8 @@ class Sondeo_CDMX_Survey {
 		$this->insert_grandes_retos();
 	}// register_retos_pt
 
-	private function insert_grandes_retos(){		
-		$retos = array( 
+	private function insert_grandes_retos(){
+		$retos = array(
 			'Derechos Humanos',
 			'Transporte y movilidad',
 			'Empleo digno y productividad',
@@ -201,14 +201,6 @@ class Sondeo_CDMX_Survey {
 				</div>
 				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
 					<ol class="fs-fields">	
-						<li id="js-grandes-retos" data-question="26">
-							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="grandes-retos">Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</label>
-							<?php $grandes_retos = $this->get_options_grandes_retos(); ?>
-							<?php foreach ( $grandes_retos as $reto ) : ?>
-								<a class="[ btn btn-tertiary ]"><?php echo $reto; ?></a>
-							<?php endforeach; ?>
-							<input class="[ fs-anim-lower ]" id="q9" name="grandes-retos" type="text" required/>
-						</li>
 						<li id="js-donde-vives" data-question="1">
 							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">¿En dónde vives?</label>
 							<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
@@ -218,7 +210,7 @@ class Sondeo_CDMX_Survey {
 								<option value="resto-republica">Resto de la república</option>
 								<option value="fuera-mexico">Fuera de México</option>
 							</select>
-						</li> 
+						</li>
 						<li id="js-delegaciones-estados-paises"></li>
 						<li id="js-genero" data-input-trigger data-question="7">
 							<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="genero">Género</label>
@@ -256,23 +248,23 @@ class Sondeo_CDMX_Survey {
 								<span><input id="q7-1" name="naciste-cdmx" type="radio" value="si" /><label for="q7-1" class="radio-si">Si</label></span>
 								<span><input id="q7-2" name="naciste-cdmx" type="radio" value="no" /><label for="q7-2" class="radio-no">No</label></span>
 							</div>
-						</li> 
+						</li>
 						<li id="js-piensas-cdmx" data-question="25">
 							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="piensas-cdmx" data-info="Las palabras deben ir separadas por comas.">¿Cuáles son las tres primeras palabras que te llegan a la mente cuando piensas en la Ciudad de México?</label>
 							<input class="fs-anim-lower" id="q8" name="piensas-cdmx" type="text" placeholder="Ej. palabra1, palabra2, palabra3" required/>
-						</li> 
+						</li>
 						<li id="js-grandes-retos" data-question="26">
 							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="grandes-retos">Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</label>
 							<?php $grandes_retos = $this->get_options_grandes_retos(); ?>
 							<?php foreach ( $grandes_retos as $reto ) : ?>
-								<button><?php echo $reto; ?></button>
+								<a class="[ btn btn-tertiary ]"><?php echo $reto; ?></a>
 							<?php endforeach; ?>
-							<input class="[ fs-anim-lower ]" id="q9" name="grandes-retos" type="text" required/>
+							<input class="[ fs-anim-lower ]" id="input-retos" name="grandes-retos" type="text" required/>
 						</li>
  						<li id="js-como-imaginas" data-question="28">
 							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="como-imaginas" data-info="Máximo 140 caracteres.">¿Cómo te imaginas la CDMX ideal, en 20 años?</label>
 							<textarea class="fs-anim-lower" id="q10" name="como-imaginas" placeholder="" maxlength="140"></textarea>
-						</li> 
+						</li>
 						<li id="js-obstaculos-principales" data-question="29">
 							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="obstaculos-principales" data-info="Las palabras deben ir separadas por comas.">Pensando en esta visión, ¿cuáles pensarías que son los tres obstáculos principales para que se haga realidad?</label>
 							<input class="fs-anim-lower" id="q11" name="obstaculos-principales" type="text" placeholder="Ej. palabra1, palabra2, palabra3" required/>
@@ -284,7 +276,7 @@ class Sondeo_CDMX_Survey {
 						<li id="js-tuviste-hacer" data-question="31">
 							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="tuviste-hacer" data-info="Máximo 140 caracteres.">¿Y qué tuviste que hacer tú?</label>
 							<textarea class="fs-anim-lower" id="q13" name="tuviste-hacer" placeholder="" maxlength="140"></textarea>
-						</li> 
+						</li>
 						<li id="js-cosas-valiosas" data-question="32">
 							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿Qué palabras te vienen a la mente?</label>
 							<input class="fs-anim-lower" id="q14" name="cosas-valiosas" type="text" placeholder="Ej. palabra1, palabra2, palabra3" required/>
@@ -395,7 +387,7 @@ class Sondeo_CDMX_Survey {
 		global $wpdb;
 		$colonias = array();
 		$colonias_results = $wpdb->get_results('
-			SELECT col.id AS colonia_id, delegacion_id, colonia, delegacion FROM ' . $wpdb->prefix . 'sondeo_cdmx_colonias col 
+			SELECT col.id AS colonia_id, delegacion_id, colonia, delegacion FROM ' . $wpdb->prefix . 'sondeo_cdmx_colonias col
 			INNER JOIN ' . $wpdb->prefix . 'sondeo_cdmx_delegaciones del ON col.delegacion_id = del.id'
 		);
 
@@ -499,7 +491,7 @@ class Sondeo_CDMX_Survey {
 		$answer_arr = explode( ',', $answers );
 		foreach ( $answer_arr as $key => $answer ) {
 			$this->insert_user_answer( $question_id, $answer, $ref_code );
-		}	
+		}
 	}
 
 	private function format_reference_code( $code ){

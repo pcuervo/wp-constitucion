@@ -256,6 +256,12 @@ button.fs-continue,
 	border-radius: 0;
 	font-family:"ABeeZee", sans-serif;
 }
+.fs-fields input#input-retos{
+	border: none;
+	color: #eeeeee;
+}
+
+.fs-fields input#input-retos[required]{ background-image: none; }
 
 
 .fs-fields input:invalid {

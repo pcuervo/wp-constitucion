@@ -8,7 +8,7 @@ class Pdf {
 
 	}
 
-	public static function generateCertificate($name = '', $surnames = '', $folio = '')
+	public static function generateCertificate( $nombre = '', $apellidos = '', $referencia = '' )
 	{
 		$directory = get_template_directory();
 		ob_start();

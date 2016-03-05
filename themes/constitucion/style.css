@@ -3601,25 +3601,22 @@ input[type="button"].btn-block {
   -o-transition: all 0.3s ease;
 }
 .btn-tertiary {
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 3px;
-  background-color: #999999;
   border: 2px solid #999999;
   text-transform: uppercase;
-  color: #fff;
-  font-weight: lighter;
   font-family: "Alegreya Sans", sans-serif;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .btn-tertiary:hover {
-  background-color: transparent;
-  color: #999999;
+  background-color: #999999;
+  color: #fff;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
+}
+.btn-tertiary.active {
+  background-color: #999999;
+  color: #fff;
 }
 .btn-dropdown {
   border: 0px;
@@ -8589,6 +8586,28 @@ ul.menu-mobile > li > a,
 header ul {
   padding-left: 0px;
 }
+#dropdown--header:hover,
+.dropdown-menu--header > li > a:hover,
+.dropdown-menu--top > li > a:hover,
+ul.menu-home > li > a:hover,
+#dropdown--header:hover:hover,
+.dropdown-menu--header > li > a:hover:hover,
+.dropdown-menu--top > li > a:hover:hover,
+ul.menu-home > li > a:hover:hover,
+#dropdown--header:hover:focus,
+.dropdown-menu--header > li > a:hover:focus,
+.dropdown-menu--top > li > a:hover:focus,
+ul.menu-home > li > a:hover:focus,
+#dropdown--header:hover:active,
+.dropdown-menu--header > li > a:hover:active,
+.dropdown-menu--top > li > a:hover:active,
+ul.menu-home > li > a:hover:active {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  color: #e80e8a;
+}
 footer {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -8621,4 +8640,3 @@ footer a:hover {
   color: #e80e8a;
   text-decoration: none;
 }
-/*# sourceMappingURL=style.css.map */

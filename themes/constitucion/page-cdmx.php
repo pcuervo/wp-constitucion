@@ -31,9 +31,25 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<?php echo wpautop( do_shortcode(get_post_meta($post->ID, 'contenido_extra', true) ) ); ?>
 </section>
 
-<section class="[ descanso-visual ]">
-	<img src="<?php echo THEMEPATH; ?>images/cd4.png" alt="">
-</section>
+<!-- slider -->
+<div>
+	<div class="flexslider relative">
+	<ul class="slides">
+		<li>
+			<img src="<?php echo THEMEPATH; ?>images/cd4.png">
+		</li>
+		<li>
+			<img src="<?php echo THEMEPATH; ?>images/cd1.png">
+		</li>
+		<li>
+			<img src="<?php echo THEMEPATH; ?>images/cd2.png">
+		</li>
+		<li>
+			<img src="<?php echo THEMEPATH; ?>images/cd3.png">
+		</li>
+	</ul>
+	</div>
+</div><!-- fin slider -->
 
 <section>
 	<div class="[ container ]">

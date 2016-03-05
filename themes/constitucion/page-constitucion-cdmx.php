@@ -98,7 +98,6 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
 <article class="[ space-id ]" id="grupo_trabajo">
 	<section class="[ container ]">
-		<h2 class="[ margin-bottom ]">Grupo de trabajo</h2>
 		<div class="[ row ]">
 			<?php $grupoTrabajo = new WP_Query(array(
 					'post_type'      => 'grupo-de-trabajo',

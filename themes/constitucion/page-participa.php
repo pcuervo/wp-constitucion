@@ -1,12 +1,13 @@
 <?php get_header(); the_post();
 the_title();
+$img_participa = get_option( 'img_participa' );
 
 global $result;
 if( isset( $result['success'] ) ): ?>
 	<div class="[ bg-success btn-lg text-center ]"><?php echo $result['success']; ?></div>
 <?php endif;  ?>
 
-	<section class="[ bg-image rectangle-small ][ margin--header ][ relative ]" style="background-image: ">
+	<section class="[ bg-image rectangle-small ][ margin--header ][ relative ]" style="background-image: url('<?php echo $img_participa; ?>'); ">
 		<div class="[ bg-dark--opacity width-100 height-100 ]">
 			<h1 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Participa</h1>
 		</div>

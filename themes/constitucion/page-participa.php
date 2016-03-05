@@ -84,11 +84,11 @@ if( isset( $result['success'] ) ): ?>
 			<a class="[ btn btn-primary btn-large ][ margin-top-bottom ]" href="<?php echo site_url('/sondeo-masivo/'); ?> "><strong>Participa</strong></a>
 			<h2>¿Ya participaste?</h2>
 			<p class="[ text-uppercase ]">Ingresa tu número de folio para obtener tu certificado</p>
-			<form class="[ form-inline ]">
-				<div class="[ input-group ]">
-					<input type="text" class="[ form-control input--search ][ height-70 ][ fz-xxlarge ]" placeholder="1456788049">
+			<form class="[ form-inline ][ js-check-reference-code ]" data-parsley-certificado>
+				<div class="[ input-group ]" >
+					<input type="text" name="ref_code" class="[ form-control input--search ][ height-70 ][ fz-xxlarge ]" placeholder="CM5697CX08" required="" data-parsley-required-message="El número de folio es obligatorio">
 					<span class="[ input-group-btn ]">
-						<button class="[ btn btn-secondary ][ height-70 ]" type="button" id="resultados">
+						<button class="[ btn btn-secondary ][ height-70 ]" type="submit" id="resultados">
 							<img class="[ svg icon icon--iconed--small icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/search.svg">
 						</button>
 					</span>
@@ -202,23 +202,23 @@ if( isset( $result['success'] ) ): ?>
 						<div class="[ row ]">
 							<div class="[ col-xs-12 col-sm-6 ]">
 								<label for=""><strong class="[ color-primary ]">Nombre</strong> del acontecimiento</label>
-								<input type="text" name="nombre_evento" id="nombre_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="(máximo 100 caracteres)" required="" data-parsley-maxlength="100">
+								<input type="text" name="nombre_evento" id="nombre_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="(máximo 100 caracteres)" required="" maxlength="100" data-parsley-error-message="El nombre obligatorio">
 								<label for=""><strong class="[ color-primary ]">Frase que describe el acontecimiento</strong> Comparte una frase que describa el evento/sesión de trabajo/diálogo público</label>
-								<input type="text" name="frace_evento" id="frace_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder=" (120 caracteres) " required="" data-parsley-maxlength="120">
+								<input type="text" name="frace_evento" id="frace_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder=" (120 caracteres) " required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">
 								<label for=""><strong class="[ color-primary ]">Descripción</strong> Describe los objetivos, alcances y perfil de asistentes de tu acontecimiento </label>
-								<input type="text" name="descripcion_evento" id="descripcion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder=" (120 palabras) " required="" data-parsley-maxlength="120">
-								<label for=""><strong class="[ color-primary ]">Liga oficial</strong><i class="[ color-gray--light ]"> (Campo No obligatorio) </i> Copia a continuación la liga del sitio oficial del acontecimiento, la cuenta de Facebook o de Twitter </label>
-								<input type="text" name="liga_oficial_evento" id="liga_oficial_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Liga oficial (Campo No obligatorio) ">
+								<textarea type="text" name="descripcion_evento" id="descripcion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder=" (120 palabras) " required="" data-parsley-maxwords="200" data-parsley-required-message="La descripción es obligatoria"></textarea>
+								<label for=""><strong class="[ color-primary ]">Liga oficial</strong>Copia a continuación la liga del sitio oficial del acontecimiento, la cuenta de Facebook o de Twitter </label>
+								<input type="text" name="liga_oficial_evento" id="liga_oficial_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Liga oficial">
 								<label for=""><strong class="[ color-primary ]">Fechas</strong> (Puede ser un sólo día) </label>
-								<input class="[ input-primary border-gray ][ margin-bottom--large ] date-ensayo" name="fecha_evento" id="fecha_evento" placeholder="yyyy-mm-dd" required="" type="text">
+								<input class="[ input-primary border-gray ][ margin-bottom--large ] date-ensayo" name="fecha_evento" id="fecha_evento" placeholder="yyyy-mm-dd" required="" type="text" data-parsley-required-message="La fecha es obligatoria">
 								<label for=""><strong class="[ color-primary ]">Ubicación</strong> Señala abajo dónde se llevara a cabo </label>
-								<input type="text" name="ubicacion_evento" id="ubicacion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Ubicación">
+								<input type="text" name="ubicacion_evento" id="ubicacion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Ubicación" data-parsley-required-message="La ubicación es obligatoria">
 							</div>
 							<div class="[ col-xs-12 col-sm-6 ]">
 								<label for=""><strong class="[ color-primary ]">Horario</strong> ¿En qué momentos se llevará a cabo el evento? </label>
-								<input type="text" name="horarios_evento" id="horarios_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Horario">
+								<input type="text" name="horarios_evento" id="horarios_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Horario" data-parsley-required-message="El horario es obligatorio">
 								<label for=""><strong class="[ color-primary ]">Institución u organización.</strong> Si este acontecimiento es organizado por una institución u organización, señala abajo cuál. En caso de más de una, separar por comas. Si son un grupo de personas, nombren su equipo de trabajo. </label>
-								<input type="text" name="institucion_evento" id="institucion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Institución u organización.">
+								<input type="text" name="institucion_evento" id="institucion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Institución u organización." data-parsley-required-message="La institución u organización es obligatoria">
 								<label for=""><strong class="[ color-primary ]">Asistentes</strong></label>
 								<div class="[ margin-bottom--large ]">
 									<div>
@@ -233,7 +233,7 @@ if( isset( $result['success'] ) ): ?>
 								<label for=""><strong class="[ color-primary ]">Fotografía de cartel o publicidad del acontecimiento.</strong> (Campo No obligatorio) Coloca el archivo de la fotografía en google drive, dropbox o onedrive y a continuación copia la liga.</label>
 								<input name="fotografia_evento" id="fotografia_evento"  class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" type="text" >
 								<label for=""><strong class="[ color-primary ]">Correo Electrónico</strong> Señala a continuación un correo electrónico</label>
-								<input name="correo_evento" id="correo_evento" type="email" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Correo Electrónico">
+								<input name="correo_evento" id="correo_evento" type="email" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Correo Electrónico" data-parsley-required-message="El correo es obligatorio" data-parsley-type-message="Por favor escribe un correo válido">
 							</div>
 						</div>
 						<div class="[ text-center ]">
@@ -255,40 +255,40 @@ if( isset( $result['success'] ) ): ?>
 					<div class="[ row ]">
 						<div class="[ form-group ][ col-xs-12 col-sm-6 ]">
 							<label for=""><span class="[ color-primary ]">Título del ensayo</span> o de la relatoría</label>
-							<input type="text" name="titulo_ensayo" id="titulo_ensayo" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="" data-parsley-maxlength="100">
+							<input type="text" name="titulo_ensayo" id="titulo_ensayo" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="" maxlength="100" data-parsley-error-message="El título es obligatorio">
 							<label for=""><span class="[ color-primary ]">Nombre del evento</span> o sesión colaborativa de la cual se derivó el documento</label>
-							<input name="nombre_ensayo" id="nombre_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres"  required="" data-parsley-maxlength="100">
+							<input name="nombre_ensayo" id="nombre_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres"  required="" maxlength="100" data-parsley-error-message="El nombre es obligatorio">
 							<label for=""><span class="[ color-primary ]">Frase que describe el evento</span> <span>Comparte una frase que describa el evento/sesión de trabajo</span></label>
-							<input name="frase_ensayo" id="frase_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres"  required="" data-parsley-maxlength="120">
+							<input name="frase_ensayo" id="frase_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres"  required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">
 							<label for=""><span class="[ color-primary ]">Fechas en las que sesionó</span> el grupo de trabajo</label><br>
 							<label for="">Inicio</label>
-							<input type="text" name="fechaInicio" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo" placeholder="yyyy-mm-dd" required=""><br>
+							<input type="text" name="fechaInicio" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo" placeholder="yyyy-mm-dd" required="" data-parsley-error-message="La fecha es obligatoria"><br>
 							<label for="">Final</label>
 							<input type="text" name="fechaFinal" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo-fin" placeholder="yyyy-mm-dd" disabled>
 							<label for=""><span class="[ color-primary ]">Resumen</span> <span>Describe a continuación las reflexiones o propuestas centrales de la sesión de trabajo y el contexto en el que esta se llevó a cabo.</span></label>
-							<input name="resumen_ensayo" id="resumen_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 250 palabras" required="" data-parsley-maxlength="120">
+							<textarea name="resumen_ensayo" id="resumen_ensayo" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 250 palabras" required="" maxlength="120" data-parsley-error-message="El resumen es obligatorio"></textarea>
 							<label for=""><span class="[ color-primary ]">Palabras Clave</span> <span>Señala a continuación 3 palabras clave vinculadas a este documento</span></label>
-							<input name="palabra_a" id="palabra_a" type="text" class="[ form-control ][ input-primary ][ margin-bottom ]" placeholder="Palabra 1" required="">
-							<input name="palabra_b" id="palabra_b" type="text" class="[ form-control ][ input-primary ][ margin-bottom ]" placeholder="Palabra 2" required="">
-							<input name="palabra_c" id="palabra_c" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 3" required="">
+							<input name="palabra_a" id="palabra_a" type="text" class="[ form-control ][ input-primary ][ margin-bottom ]" placeholder="Palabra 1" required="" data-parsley-error-message="Palabra obligatoria">
+							<input name="palabra_b" id="palabra_b" type="text" class="[ form-control ][ input-primary ][ margin-bottom ]" placeholder="Palabra 2" required="" data-parsley-error-message="Palabra obligatoria">
+							<input name="palabra_c" id="palabra_c" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 3" required="" data-parsley-error-message="Palabra obligatoria">
 							<label for=""><span class="[ color-primary ]">Frase -Mensaje central</span> <span>Comparte en una frase un mensaje central de la relatoría o ensayo</span></label>
-							<input name="mensaje_central" id="mensaje_central" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="" data-parsley-maxlength="120">
+							<input name="mensaje_central" id="mensaje_central" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">
 							<label for=""><span class="[ color-primary ]">Autores</span> <span>Lista a continuación el nombre de todos los autores separados por comas</span></label>
-							<input name="autores_ensayo" id="autores_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
-							<label for=""><span class="[ color-primary ]">Institución u organización</span> <span>En caso de que este ensayo o relatoría haya sido elaborado por una institución u organización señala abajo cuales. En caso de más de una, separar por comas.</span></label>
-							<input name="institucion-u-organizacion" id="institucion-u-organizacion" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+							<input name="autores_ensayo" id="autores_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="Los autores son obligatorios">
 						</div>
 						<div class="[ form-group ][ col-xs 12 col-sm-6 ]">
+							<label for=""><span class="[ color-primary ]">Institución u organización</span> <span>En caso de que este ensayo o relatoría haya sido elaborado por una institución u organización señala abajo cuales. En caso de más de una, separar por comas.</span></label>
+							<input name="institucion-u-organizacion" id="institucion-u-organizacion" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="La institución u organización es obligatoria">
 							<label for=""><span class="[ color-primary ]">Fotografias</span> <span>Comparte fotografías del grupo que trabajó este documento. Copia a continuación la liga a google drive, dropbox o onedrive. </span></label>
-							<input name="fotografias_ensayo" id="fotografias_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+							<input name="fotografias_ensayo" id="fotografias_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="Las fotografías son obligatoria">
 							<label for=""><span class="[ color-primary ]">Comparte también fotografías</span> con una liga a flicker, instagram o blog</label>
 							<input name="fotografias_redes_ensayo" id="fotografias_redes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]">
 							<label for=""><span class="[ color-primary ]">Lista de asistentes.</span> Comparte la lista de asistentes firmada de los participantes de la sesión/evento con una liga a google drive, dropbox o onedrive</label>
-							<input name="lista_asistentes_ensayo" id="lista_asistentes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+							<input name="lista_asistentes_ensayo" id="lista_asistentes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="La lista de asistentes es obligatoria">
 							<label for=""><span class="[ color-primary ]">Compartir documento.</span> Copia a continuación la liga a google drive, dropbox o onedrive. Este deberá estar en formato .docx (Microsoft Word) y no deberá exceder 8 páginas. <a href="<?php echo site_url('/guia-para-compartir-el-texto/'); ?>" target="_blank" class="[ color-gray--light ][ fz--small ]">Aqui puedes descargar una guía para compartir el texto.</a></label>
-							<input name="compartir_documento_ensayo" id="compartir_documento_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+							<input name="compartir_documento_ensayo" id="compartir_documento_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="El documento obligatorio">
 							<label for=""><span class="[ color-primary ]">Correo Electrónico.</span> Señala a continuación un correo electrónico para contactar al grupo que preparó este documento.</label>
-							<input name="correo_electronico_ensayo" id="correo_electronico_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="">
+							<input name="correo_electronico_ensayo" id="correo_electronico_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-required-message="El correo es obligatorio" data-parsley-type-message="Por favor escribe un correo válido">
 							<label for=""><span class="[ color-primary ]">Página Web</span></label>
 							<input name="pagina_web_ensayo" id="pagina_web_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Si es el caso">
 							<label for=""><span class="[ color-primary ]">Quieres recibir más información</span></label>
@@ -346,5 +346,34 @@ if( isset( $result['success'] ) ): ?>
 			</div>
 		</article>
 	</section>
+
+	<div id="modal-agradecimiento" class="modal fade" role="dialog">
+		<div class="modal-dialog [ margin-top--xlarge ][ padding--sides--xsm ]">
+			<!-- Modal content-->
+			<div class="[ row ]">
+				<div class="[ col-xs-12  col-sm-10 col-sm-offset-1 ]">
+					<div class="modal-content [ no-border-radius ]">
+						<div class="modal-body [ padding--bottom--xxlarge padding--sides padding--sides--large--sm ]">
+							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif">
+							<h2 class="[ text-center text-uppercase ]">¡Gracias por participar!</h2>
+							<p class="[ text-center ][ js-codigo-referencia ]">Tu número de folio es: <span></span></p>
+							<p class="[ text-center text-uppercase ]">Escribe tu nombre y apellido para obtener tu certificado de participación</p>
+							<form class="[ row ]" action="<?php echo site_url('pdf-certificado-de-participacion'); ?>" method="POST" data-parsley-certificado>
+								<div class="[ col-xs-12 col-sm-6  ]">
+									<input type="text" name="nombre" class="form-control [ margin-bottom ][ input--search ] " placeholder="Nombre(s)" required="">
+								</div>
+								<div class="[ col-xs-12 col-sm-6 ]">
+									<input type="text" name="apellidos" class="form-control [ margin-bottom ][ input--search ] " placeholder="Apellidos" required="">
+								</div>
+								<input type="hidden" name="referencia">
+								<button type="submit" class="[ col-xs-12 ][ btn btn-secondary color-gray ][ center-block ]">obtener certificado</button>
+								<a href="<?php echo site_url('participa') ?>" class="[ col-xs-12 ][ btn btn-secondary btn-sm color-gray ][ center-block ][ margin-top ]">No, gracias</a>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 <?php get_footer(); ?>

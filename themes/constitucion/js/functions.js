@@ -67,7 +67,6 @@
                     var form = document.getElementById("form-eventos");
                     form.submit();
                 };
-                 
             });
  
             function getValidateDocs(id_object){
@@ -95,6 +94,13 @@
  
         if( parseInt( isPageSondeo ) ){ 
             $('[data-parsley-certificado]').parsley();
+        }
+        if( parseInt( isPageParticipa ) ){ 
+            $('[data-parsley-certificado]').parsley();
+            $('.js-check-reference-code').submit(function(e){
+                e.preventDefault();
+                surveyExists( $('input[name="ref_code"]').val() );
+            });
         }
 
         imgToSvg();
@@ -225,77 +231,6 @@
 
         }
 
-        /**
-         * MAPS
-         */
-
-        if (isHome == 1) {
-            //initialize();
-        };
-
-        // function initialize() {
-
-        //     var data_kioskos = [];
-        //     var infoWindowContent = [];
-
-        //     $.each( kioskos, function( key, value ) {
-        //         var cada_uno = [value.name, value.lat, value.long];
-        //         var data_uno = ['<div class="info_content"><h3>'+value.name+'</h3></div>'];
-        //         data_kioskos.push(cada_uno);
-        //         infoWindowContent.push(data_uno);
-
-        //     });
-
-
-        //     var map;
-        //     var bounds = new google.maps.LatLngBounds();
-        //     var mapOptions = {
-        //         mapTypeId: 'roadmap',
-        //         draggable: false,
-        //         scrollwheel: false,
-        //         zoom: 13
-        //     };
-
-        //     // Display a map on the page
-        //     map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-        //     map.setTilt(45);
-
-        //     // Multiple Markers
-        //     var markers = data_kioskos;
-
-        //     // Display multiple markers on a map
-        //     var infoWindow = new google.maps.InfoWindow(), marker, i;
-
-        //     // Loop through our array of markers & place each one on the map
-        //     for( i = 0; i < markers.length; i++ ) {
-        //         var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-        //         bounds.extend(position);
-        //         marker = new google.maps.Marker({
-        //             position: position,
-        //             map: map,
-        //             title: markers[i][0]
-        //         });
-
-        //         // Allow each marker to have an info window
-        //         google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        //             return function() {
-        //                 infoWindow.setContent(infoWindowContent[i][0]);
-        //                 infoWindow.open(map, marker);
-        //             }
-        //         })(marker, i));
-
-        //         // Automatically center the map fitting all markers on the screen
-        //         map.fitBounds(bounds);
-        //     }
-
-        //     // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
-        //     var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-        //         // this.setZoom(14);
-        //         google.maps.event.removeListener(boundsListener);
-        //     });
-
-        // }
-
         $('#js-btn-cdmx a').click(function(e){
             e.preventDefault();
             toggleTwitter();
@@ -303,7 +238,7 @@
 
         $('#js-hide-twitter').click(function(e){
             e.preventDefault();
-            toggleTwitter()
+            toggleTwitter();
         })
 
         function toggleTwitter(){
@@ -322,6 +257,26 @@
             }, 500, function() {
                 $( ".soy-cdmx" ).addClass('js-hidden');
             });
+        }
+
+        function surveyExists( refCode ){
+            console.log( refCode );
+            $.post(
+                ajax_url,
+                {
+                    reference_code:     refCode,
+                    action:             'survey_exists'
+                },
+                function( response ){
+                    if( '0' == response ){
+                        alert( 'No existe ninguna encuesta con folio: ' + refCode );
+                        return;
+                    }
+                    $('.js-codigo-referencia span').text( response );
+                    $('#modal-agradecimiento').modal('toggle');
+                    $('input[name="referencia"]').val( response )
+                }
+            );
         }
 
     });

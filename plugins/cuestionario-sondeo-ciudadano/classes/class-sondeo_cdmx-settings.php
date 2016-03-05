@@ -63,7 +63,7 @@ class Sondeo_CDMX_Settings {
 				<thead>
 					<tr>
 						<th>#</th>
-						<th>Código de referencia</th>
+						<th>Número de folio</th>
 						<th>Fecha y hora</th>
 						<th>Ver respuestas</th>
 					</tr>
@@ -99,7 +99,7 @@ class Sondeo_CDMX_Settings {
 		<div class="[ wrap ]">
 			<a href="<?php echo admin_url( '/admin.php?page=menu_sondeo_cdmx', 'http' ) ?>">Ver todas las encuestas</a>
 			<h1>Sondeo CDMX</h1>
-			<p>Encuesta con código de referencia <?php echo $answered_surveys[0]['reference_code'] ?> creada el <?php echo $answered_surveys[0]['created_at'] ?></p>
+			<p>Encuesta con número de folio <?php echo $answered_surveys[0]['reference_code'] ?> creada el <?php echo $answered_surveys[0]['created_at'] ?></p>
 			<hr>
 			<table class="[ form-table ]">
 				<thead>

@@ -2,7 +2,6 @@ $ = jQuery.noConflict();
 
 (function() {
 
-
     var formWrap = document.getElementById( 'fs-form-wrap' );
     [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {    
         new SelectFx( el, {
@@ -79,7 +78,6 @@ $ = jQuery.noConflict();
             $('button.fs-continue').click();
         }  
     });
-
 })();
 
 function hasFourChallenges( challenges ){
@@ -570,6 +568,26 @@ function saveSurvey( answersObj ){
             $('.js-codigo-referencia span').text( codigo );
             $('#modal-agradecimiento').modal('toggle');
             $('input[name="referencia"]').val( codigo )
+        }
+    );
+}
+
+function surveyExists( refCode ){
+    console.log( refCode );
+    $.post(
+        ajax_url,
+        {
+            reference_code:     refCode,
+            action:             'survey_exists'
+        },
+        function( response ){
+            if( '0' == response ){
+                alert( 'No existe ninguna encuesta con folio: ' + refCode );
+                return;
+            }
+            $('.js-codigo-referencia span').text( response );
+            $('#modal-agradecimiento').modal('toggle');
+            $('input[name="referencia"]').val( response )
         }
     );
 }

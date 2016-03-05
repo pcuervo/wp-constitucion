@@ -46,6 +46,9 @@ class Sondeo_CDMX_Survey {
 		add_action( 'wp_ajax_nopriv_save_user_answers', array( $this, 'save_user_answers' ) );
 		add_action( 'wp_ajax_save_user_answers', array( $this, 'save_user_answers' ) );
 
+		add_action( 'wp_ajax_nopriv_survey_exists', array( $this, 'survey_exists' ) );
+		add_action( 'wp_ajax_survey_exists', array( $this, 'survey_exists' ) );
+
 		if( is_admin() ){
 			add_action( 'init', array( $this, 'register_retos_pt' ) );
 			return;
@@ -197,7 +200,7 @@ class Sondeo_CDMX_Survey {
 		<div class="[ survey-container ][ padding--header ]">
 			<div class="[ fs-form-wrap ]" id="fs-form-wrap">
 				<div class="fs-title [ container ][ text-center ]">
-					<h1 class="[ margin-top ]">Sondeo Masivo CDMX</h1>
+					<h1 class="[ margin-top ]">Imagina tu ciudad</h1>
 				</div>
 				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
 					<ol class="fs-fields">	
@@ -543,4 +546,20 @@ class Sondeo_CDMX_Survey {
 		return $survey_answers;
 	}// get_survey
 
+	public function survey_exists(){
+		global $wpdb;
+		$ref_code = $_POST['reference_code'];
+		$ref_code_results = $wpdb->get_results('
+			SELECT reference_code FROM wp_sondeo_cdmx_user_answers 
+			WHERE reference_code = "' . $ref_code . '"'
+		);
+
+		if( empty( $ref_code_results ) ){
+			echo 0;
+			wp_die();
+		}
+		echo $ref_code_results[0]->reference_code;
+		wp_die();
+		
+	}// survey_exists
 }// Sondeo_CDMX_Survey

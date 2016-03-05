@@ -59,26 +59,30 @@ class Sondeo_CDMX_Settings {
 			<h1>Sondeo CDMX</h1>
 			<p>Aquí podrás consultar las encuestas del Sondeo Masivo de la Constitución CDMX</p>
 			<hr>
-			<table class="[ form-table ]">
-				<thead>
-					<tr>
-						<th>#</th>
-						<th>Número de folio</th>
-						<th>Fecha y hora</th>
-						<th>Ver respuestas</th>
-					</tr>
-				</thead>
-				<tbody>
-					<?php foreach ( $answered_surveys as $key => $survey ) : ?>
+			<?php if( empty( $answered_surveys ) ) : ?>
+				<p>Por el momento no hay ninguna encuesta.</p>
+			<?php else: ?>
+				<table class="[ form-table ]">
+					<thead>
 						<tr>
-							<td><?php echo $key+1 ?></td>
-							<td><?php echo $survey['reference_code'] ?></td>
-							<td><?php echo $survey['created_at'] ?></td>
-							<td><a href="<?php echo admin_url( '/admin.php?page=respuestas_sondeo_cdmx', 'http' ) . '&reference_code=' . $survey['reference_code']?>">Abrir</a></td>
+							<th>#</th>
+							<th>Número de folio</th>
+							<th>Fecha y hora</th>
+							<th>Ver respuestas</th>
 						</tr>
-					<?php endforeach; ?>
-				</tbody>
-			</table>
+					</thead>
+					<tbody>
+						<?php foreach ( $answered_surveys as $key => $survey ) : ?>
+							<tr>
+								<td><?php echo $key+1 ?></td>
+								<td><?php echo $survey['reference_code'] ?></td>
+								<td><?php echo $survey['created_at'] ?></td>
+								<td><a href="<?php echo admin_url( '/admin.php?page=respuestas_sondeo_cdmx', 'http' ) . '&reference_code=' . $survey['reference_code']?>">Abrir</a></td>
+							</tr>
+						<?php endforeach; ?>
+					</tbody>
+				</table>
+			<?php endif; ?>
 		</div>
 		<?php
 	}// add_sondeo_cdmx_page

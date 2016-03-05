@@ -126,7 +126,7 @@
 </div><!--/container-->
 
 <!-- slider -->
-	<div class="flexslider relative">
+<div class="flexslider relative">
 	<ul class="slides">
 		<li>
 			<img src="<?php echo THEMEPATH; ?>images/slides-01.jpg">
@@ -144,7 +144,7 @@
 			<img src="<?php echo THEMEPATH; ?>images/slides-05.jpg">
 		</li>
 	</ul>
-	</div><!-- fin slider -->
+</div><!-- fin slider -->
 
 <!-- Linea tiempo -->
 <div class="[ container ]">

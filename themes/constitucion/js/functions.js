@@ -209,9 +209,22 @@
             new Chart(ctx).Bar(data);
         }
 
-        /*------------------------------------*\
-            ANIMATED STICKY HEADER
-        \*------------------------------------*/
+        if( parseInt( isHome ) ){
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 400){
+                    $('header').addClass("sticky");
+                    $('header').removeClass("hidden");
+                }
+                else{
+                    $('header').removeClass("sticky");
+                    $('header').addClass("hidden");
+                }
+            });
+
+        }
+
+        $('.flex-prev, .flex-next').addClass('hidden-xs');
 
         $(window).scroll(function() {
 

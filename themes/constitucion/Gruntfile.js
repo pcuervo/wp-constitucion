@@ -139,7 +139,10 @@ module.exports = function (grunt) {
       js: {
         files: {
           'js/functions.min.js': ['js/functions.js'],
-          'js/plugins.min.js': ['js/plugins.js']
+          'js/plugins.min.js': ['js/plugins.js'],
+          '../../plugins/cuestionario-sondeo-ciudadano/inc/js/functions.js': ['../../plugins/cuestionario-sondeo-ciudadano/inc/js/plugins.min.js/functions.min.js'],
+          '../plugins/cuestionario-sondeo-ciudadano/inc/js/functions.js': ['../plugins/cuestionario-sondeo-ciudadano/inc/js/plugins.min.js/functions.min.js'],
+          '../../../plugins/cuestionario-sondeo-ciudadano/inc/js/functions.js': ['../../../plugins/cuestionario-sondeo-ciudadano/inc/js/plugins.min.js/functions.min.js']
         }
       }
     },

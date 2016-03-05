@@ -148,7 +148,7 @@ class Sondeo_CDMX_Survey {
 			  	'post_title'    => $reto,
 			  	'post_status'   => 'publish'
 			);
-			wp_insert_post( $post_reto );
+			//wp_insert_post( $post_reto );
 		}
 	}
 

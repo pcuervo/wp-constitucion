@@ -127,7 +127,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
 		<!-- Modal grupo de trabajo -->
 		<div id="trabajador" class="modal fade" role="dialog">
-			<div class="modal-dialog modal--trabajador">
+			<div class="modal-dialog">
 				<!-- Modal content-->
 				<div class="modal-content">
 					<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>

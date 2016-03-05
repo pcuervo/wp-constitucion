@@ -7847,12 +7847,6 @@ ul.slides li img {
   margin-top: 0;
   color: #e80e8a;
 }
-@media (min-width: 992px) {
-  .content-user h2 {
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-}
 .content-user p:nth-child(3) {
   color: #e80e8a;
 }

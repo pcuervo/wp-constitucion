@@ -1,7 +1,7 @@
 <?php get_header(); the_post();  ?>
 <section>
 	<div class="[ relative bg-gray--xxlight height-home-video ]">
-<<<<<<< HEAD
+
 		<!-- <div class="[ js-video-wrapper ]"> -->
 				<!-- <iframe class="[ embed-responsive-item ]" src="https://www.youtube.com/embed/7Ezz0wnzdiQ" frameborder="0" allowfullscreen></iframe>--> 
 				<video class="[ width-100 ][ center-bottom ]" autoplay="" loop="" muted="">
@@ -12,11 +12,6 @@
 		<!-- </div> -->
 		<!-- <div class="[ bg-image height-home-video ]" style="background-image: url('<?php echo THEMEPATH; ?>/images/home.png');"></div> -->
 
-=======
-		<video class="[ width-100 ][ center-bottom ]" autoplay loop>
-			<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
-		</video>
->>>>>>> bfc876134ed4fad9f19d16926e947206b9023366
 		<div class="[ logo-video ]">
 			<img class="[ width-40 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
 			<span class="[ lead text-italic ][ color-gray ]">punto<br>de encuentro</span>
@@ -254,7 +249,7 @@
 
 					$data = '';
 					if ($cronologia->found_posts >= 7 AND $count_pasados > 0):
-						$recorre = ($count_pasados - 1 ) * 150;
+						$recorre = ($count_pasados - 1 ) * 165;
 						echo '<input type="hidden" id="recorre" value="'.$recorre.'">';
 					endif;
 				else:

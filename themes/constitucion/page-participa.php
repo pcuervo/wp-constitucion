@@ -183,7 +183,7 @@ if( isset( $result['success'] ) ): ?>
 
 								$data = '';
 								if ($cronologia->found_posts >= 7 AND $count_pasados > 0) {
-									$recorre = ($count_pasados - 1 ) * 150;
+									$recorre = ($count_pasados - 1 ) * 165;
 									echo '<input type="hidden" id="recorre" value="'.$recorre.'">';
 								}
 

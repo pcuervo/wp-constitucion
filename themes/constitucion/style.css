@@ -3576,7 +3576,7 @@ input[type="button"].btn-block {
   border-radius: 6px;
 }
 .btn-primary:hover {
-  background-color: #999999;
+  background-color: #e80e8a;
   color: #fff;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -8657,6 +8657,11 @@ ul.menu-home > li > a:hover:active {
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
+  color: #e80e8a;
+}
+nav a:hover,
+nav a:active,
+nav a:focus {
   color: #e80e8a;
 }
 footer {

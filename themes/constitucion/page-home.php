@@ -149,7 +149,7 @@
 <section class="[ container ]">
 	<div class="[ row ]">
 		<div class="[ col-sm-12 ]">
-			<h2 class="[ text-uppercase text-center ]">Línea del tiempo</h2>
+			<h2 class="[ text-uppercase text-center ]">Hacia una ConstituciónCDMX</h2>
 			<ul id="scroll" class="[ scroll-cronologia ][ horizontal-slide ][ text-center ]">
 
 				<?php $cronologia = new WP_Query(array(
@@ -235,7 +235,7 @@
 			<!-- 3 noticias -->
 			<?php $noticias = new WP_Query(array(
 					'post_type'      => 'post',
-					'posts_per_page' => 3
+					'posts_per_page' => 6
 				));
 
 			if ( $noticias->have_posts() ) :

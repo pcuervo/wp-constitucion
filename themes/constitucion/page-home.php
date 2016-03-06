@@ -1,42 +1,5 @@
 <?php get_header(); the_post();  ?>
-<!-- menu desktop home -->
-<ul class="[ menu-home ][ text-center ][ hidden-xs hideen-sm ]">
-	<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
-	<li class="[ dropdown--hover ]">
-		<span><a class="[ text-uppercase ]" href="<?php echo site_url('/constitucion-cdmx/'); ?>">Acerca de la constitución<span class="caret"></span></a></span>
-		<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe_gobierno">Mensaje del jefe de gobierno</a></li>
-			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_constitucion">Sobre la constitución</a></li>
-			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#grupo_trabajo">Grupo de trabajo</a></li>
-			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_plataforma">Sobre la plataforma</a></li>
-			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#hacia_constituyente">Hacia el constituyente</a></li>
-			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#constitución_wiki">Constitución en Wiki</a></li>
-			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#preguntas_frecuentes">Preguntas frecuentes</a></li>
-			<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#biblioteca">Biblioteca</a></li>
-		</ul>
-	</li>
-	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
-	<li class="[ dropdown--hover ]">
-		<span><a class="[ text-uppercase ]" href="<?php echo site_url('/participa/'); ?>">Participa<span class="caret"></span></a></span>
-		<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-			<li><a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">Imagina tu ciudad</a></li>
-		<!-- 	<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Resultados</a></li> -->
-			<li><a href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
-			<li><a href="<?php echo site_url('/participa/'); ?>#dialogos_publicos">Diálogos públicos</a></li>
-			<li><a href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
-			<li><a href="<?php echo site_url('/participa/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
-		</ul>
-	</li>
-	<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-<!-- #SoyCDMX desktop home -->
-	<li id="js-btn-cdmx">
-		<a href="#">
-			<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
-			#SomosCDMX<!-- Contacto - page-contacto.php-->
-		</a>
-	</li>
-</ul>
-<section>
+<div>
 	<!-- modal menu mobile -->
 	<div class="modal fade" id="modal-menu-home" tabindex="-1" role="dialog">
 		<div class="[ modal-dialog modal-content ][ width-100 height-100 ][ no-margin ]">
@@ -109,6 +72,46 @@
 		</div>
 	</div>
 
+</div>
+
+<!-- menu desktop home -->
+<section>
+	<ul class="[ menu-home ][ text-center ][ hidden-xs hideen-sm ]">
+		<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
+		<li class="[ dropdown--hover ]">
+			<span><a class="[ text-uppercase ]" href="<?php echo site_url('/constitucion-cdmx/'); ?>">Acerca de la constitución<span class="caret"></span></a></span>
+			<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
+				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe_gobierno">Mensaje del jefe de gobierno</a></li>
+				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_constitucion">Sobre la constitución</a></li>
+				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#grupo_trabajo">Grupo de trabajo</a></li>
+				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_plataforma">Sobre la plataforma</a></li>
+				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#hacia_constituyente">Hacia el constituyente</a></li>
+				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#constitución_wiki">Constitución en Wiki</a></li>
+				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#preguntas_frecuentes">Preguntas frecuentes</a></li>
+				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#biblioteca">Biblioteca</a></li>
+			</ul>
+		</li>
+		<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
+		<li class="[ dropdown--hover ]">
+			<span><a class="[ text-uppercase ]" href="<?php echo site_url('/participa/'); ?>">Participa<span class="caret"></span></a></span>
+			<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
+				<li><a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">Imagina tu ciudad</a></li>
+			<!-- 	<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Resultados</a></li> -->
+				<li><a href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
+				<li><a href="<?php echo site_url('/participa/'); ?>#dialogos_publicos">Diálogos públicos</a></li>
+				<li><a href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
+				<li><a href="<?php echo site_url('/participa/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
+			</ul>
+		</li>
+		<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
+	<!-- #SoyCDMX desktop home -->
+		<li id="js-btn-cdmx">
+			<a href="#">
+				<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+				#SomosCDMX<!-- Contacto - page-contacto.php-->
+			</a>
+		</li>
+	</ul>
 </section>
 
 <section class="[ container ]">

@@ -178,30 +178,6 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 
 
-	add_action( 'pre_get_posts', function($query){
-
-		if ( $query->is_main_query() and ! is_admin() ) {
-			if ( is_home() ) {
-				$query->set( 'posts_per_page', 1 );
-				$query->set( 'post_type', 'post' );
-
-				$meta_q = array(
-							array(
-								'key'     => 'destacado_noticia',
-								'value'   => '1',
-								'compare' => '=',
-							),
-						);
-				$query->set( 'meta_query', $meta_q );
-
-			}
-		}
-		return $query;
-
-	});
-
-
-
 // THE EXECRPT FORMAT AND LENGTH /////////////////////////////////////////////////////
 
 

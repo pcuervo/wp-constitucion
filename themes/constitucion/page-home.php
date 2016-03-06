@@ -174,16 +174,14 @@
 						$date = '';
 						if ($date_event != '') {
 							$date_arr = getDateTransform($date_event);
-							$date = '<span class="[ color-primary ]"><strong>'. $date_arr[0] . '</strong></span> ' . $date_arr[1] . ' de ' . $date_arr[2];
+							$date = '<span class="[ color-primary ]"><strong>'. $date_arr[0] . '</strong></span> ' . $date_arr[1];
 						}
 
-						$class_tipo = ($tipo_evento == 3) ? 'nota-destacada ' : '';
-						$url = ($tipo_evento != 3) ? get_permalink() : '';
 
-						if($count%2 == 0): ?>
-						    <li class="[ box-li <?php echo $class_status.$class_tipo; ?> ]">
+						if($tipo_evento != 3): ?>
+						    <li class="[ box-li <?php echo $class_status; ?> ]">
 
-						    	<?php if($tipo_evento != 3) echo '<a href="'.$url.'">'; ?>
+						    	<a href="<?php echo get_permalink(); ?>">
 									<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ][ text-uppercase ]"><?php echo $date; ?></p>
 									<div class="[ border-gray--large ]"></div>
 									<div class="[ vertical-line ]"></div>
@@ -191,21 +189,18 @@
 									<div class="[ text--large relative ]">
 										<p class="[ evento evento-bottom ]"><?php the_title(); ?></p>
 									</div>
-								<?php if($tipo_evento != 3) echo '</a>'; ?>
-
 								</a>
 							</li>
 						<?php else: ?>
 
-							<li class="[ box-li <?php echo $class_status.$class_tipo; ?> ]">
-								<?php if($tipo_evento != 3) echo '<a href="'.$url.'">'; ?>
-									<div class="[ text--large text--destacado relative ]">
-										<p class="[ evento ]"><?php the_title(); ?></p>
-									</div>
-									<div class="[ vertical-line--large ]"></div>
-									<div class="[ border-gray--large ]"></div>
-									<p class="[ color-gray ][ fz-small ][ margin-bottom--date ][ text-uppercase ]"><?php echo $date; ?></p>
-								<?php if($tipo_evento != 3) echo '</a>'; ?>
+							<li class="[ box-li nota-destacada ]">
+								<div class="[ text--large text--destacado relative ]">
+									<p class="[ evento ]"><?php the_title(); ?></p>
+								</div>
+								<div class="[ vertical-line--large ]"></div>
+								<div class="[ border-gray--large ]"></div>
+								<p class="[ color-gray ][ fz-small ][ margin-bottom--date ][ text-uppercase ]"></p>
+								
 							</li>
 
 						<?php endif;

@@ -143,6 +143,7 @@ if( isset( $result['success'] ) ): ?>
 								$count = 0;
 								$count_pasados = 0;
 								while ( $cronologia->have_posts() ) : $cronologia->the_post();
+									$tipo_evento = get_post_meta( $post->ID, 'tipo-de-evento', true );
 									$date_event = get_post_meta($post->ID, 'fecha_evento', true);
 									$count_pasados = strtotime($date_event) < strtotime( date('Y-m-d') ) ? $count_pasados + 1 : $count_pasados;
 									$class_status = strtotime($date_event) < strtotime( date('Y-m-d') ) ? 'ya-paso ' : '';
@@ -150,12 +151,13 @@ if( isset( $result['success'] ) ): ?>
 									$date = '';
 									if ($date_event != '') {
 										$date_arr = getDateTransform($date_event);
-										$date = '<span class="[ color-primary ]"><strong>'. $date_arr[0] . '</strong></span> ' . $date_arr[1] . ' de ' . $date_arr[2];
+										$date = '<span class="[ color-primary ]"><strong>'. $date_arr[0] . '</strong></span> ' . $date_arr[1];
 									}
 
-									if($count%2 == 0): ?>
-										<li class="[ box-li <?php echo $class_status; ?> ]">
-											<a href="<?php the_permalink(); ?>">
+									if($tipo_evento != 3): ?>
+									    <li class="[ box-li <?php echo $class_status; ?> ]">
+
+									    	<a href="<?php echo get_permalink(); ?>">
 												<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ][ text-uppercase ]"><?php echo $date; ?></p>
 												<div class="[ border-gray--large ]"></div>
 												<div class="[ vertical-line ]"></div>
@@ -166,15 +168,15 @@ if( isset( $result['success'] ) ): ?>
 											</a>
 										</li>
 									<?php else: ?>
-										<li class="[ box-li <?php echo $class_status; ?> ]">		<!-- estilo evento destacado -->
-											<a href="<?php the_permalink(); ?>">
-												<div class="[ text--large text--destacado relative ]">
-													<p class="[ evento ]"><?php the_title(); ?></p>
-												</div>
-												<div class="[ vertical-line--large ]"></div>
-												<div class="[ border-gray--large ]"></div>
-												<p class="[ color-gray ][ fz-small ][ margin-bottom--date ][ text-uppercase ]"><?php echo $date; ?></p>
-											</a>
+
+										<li class="[ box-li nota-destacada ]">
+											<div class="[ text--large text--destacado relative ]">
+												<p class="[ evento ]"><?php the_title(); ?></p>
+											</div>
+											<div class="[ vertical-line--large ]"></div>
+											<div class="[ border-gray--large ]"></div>
+											<p class="[ color-gray ][ fz-small ][ margin-bottom--date ][ text-uppercase ]"></p>
+											
 										</li>
 
 									<?php endif;

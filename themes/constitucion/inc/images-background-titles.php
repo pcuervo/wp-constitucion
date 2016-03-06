@@ -14,7 +14,8 @@ function vew_setings_constitucion(){ ?>
 				<?php $img_kioskos = get_option( 'img_kioskos' );
 				$img_cdmx = get_option( 'img_cdmx' );
 				$img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' );
-				$img_participa = get_option( 'img_participa' ); ?>
+				$img_participa = get_option( 'img_participa' ); 
+				$img_noticias = get_option( 'img_noticias' );?>
 				<tr>
 					<th><label for="img_kioskos">Imagen Kioskos</label></th>
 					<td>
@@ -37,6 +38,12 @@ function vew_setings_constitucion(){ ?>
 					<th><label for="img_participa">Imagen Participa</label></th>
 					<td>
 						<input type='text' class='widefat' id='img_participa' name='img_participa' value="<?php echo $img_participa; ?>"/>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="img_noticias">Imagen Noticias</label></th>
+					<td>
+						<input type='text' class='widefat' id='img_noticias' name='img_noticias' value="<?php echo $img_noticias; ?>"/>
 					</td>
 				</tr>
 

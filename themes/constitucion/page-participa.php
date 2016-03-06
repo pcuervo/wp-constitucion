@@ -15,15 +15,15 @@ if( isset( $result['success'] ) ): ?>
 
 	<section class="[ container ][ padding--header--id ]">
 		<div class="[ row ]">
-			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptas molestias officia blanditiis quidem tempore ut, ea, sint voluptatem hic ipsa odio, pariatur cum at! Voluptates, obcaecati maiores error velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi eum, cupiditate voluptatum dicta libero iure! Accusamus accusantium ea neque eius officiis, dolor et, iusto numquam. Officia voluptas impedit, delectus vel.</p>
+			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
+				<p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptas molestias officia blanditiis quidem tempore ut, ea, sint voluptatem hic ipsa odio, pariatur cum at! Voluptates, obcaecati maiores error velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi eum, cupiditate voluptatum dicta libero iure! Accusamus accusantium ea neque eius officiis, dolor et, iusto numquam. Officia voluptas impedit, delectus vel.</p>
 			</div>
 		</div>
 	</section>
 	<section class="[ bg-gray-light ][ padding--header--id padding--top-bottom--xlarge ]">
 		<article class="[ container ]">
 			<h2 class="[ no-margin-top ]">Instrucciones</h2>
-			<div class="[ padding--sides--xsm ]">
+			<div class="[ padding--sides--xsm ][ text-justify ]">
 				<?php the_content(); ?>
 			</div>
 			<div class="[ row ][ margin-top-bottom ][ padding--sides--xsm ]">
@@ -77,8 +77,9 @@ if( isset( $result['success'] ) ): ?>
 	</section>
 	<article class="[ padding--header--id ]" id="imagina_ciudad">
 		<section class="[ container padding--header--id padding--sides--xsm--large ][ text-center ]">
-			<h2 class="[ no-margin-top margin-bottom ]">Imagina tu ciudad</h2>
-			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+			
+			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ][ text-justify ]">
+				<h2 class="[ no-margin-top margin-bottom ]">Imagina tu ciudad</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis maiores, mollitia at qui aperiam illo cumque inventore eveniet facere quos, recusandae assumenda, delectus autem corporis cupiditate necessitatibus odio enim deserunt?</p>
 			</div>
 			<div class="[ clear ]"></div>
@@ -102,7 +103,7 @@ if( isset( $result['success'] ) ): ?>
 	</section>
 	<article class="[ space-id ]"  id="peticiones">
 		<section class="[ container ]">
-			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ] [ text-justify ]">
 				<h2 class="[ no-margin-top margin-bottom ]">Peticiones</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit in suscipit similique tempore ab quam voluptatibus, quos modi fuga iusto earum incidunt repellendus quis tempora? Perspiciatis officia accusantium temporibus esse.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum possimus dolorum quam illo veniam id placeat nulla repellat vero debitis ratione consectetur eos praesentium, delectus doloremque dolor, ipsa deserunt eaque.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem consequuntur error illum. Atque esse, et iure rerum fugiat consequuntur repellendus est dignissimos alias officia fugit culpa nam consequatur exercitationem quae!</p>
@@ -115,7 +116,7 @@ if( isset( $result['success'] ) ): ?>
 	<article class="[ bg-gray--fondo space-id no-margin ]" id="dialogos_publicos">
 		<section class="[ container ]">
 				<div class="[ row ]">
-					<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+					<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
 						<h2 class="[ no-margin-top ]">Diálogos Públicos</h2>
 						<p>En esta sección podrás registrar acontecimientos que sean espacios de diálogo relacionados a la construcción de la Constitución de la Ciudad de México. Estos pueden ser sesiones de trabajo colaborativas, foros, asambleas, talleres o conferencias.</p>
 					</div>
@@ -251,7 +252,7 @@ if( isset( $result['success'] ) ): ?>
 	<article class="[ space-id ]" id="ensayos">
 		<section class="[ container ]">
 			<div class="[ row ][ margin-bottom ]">
-					<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+					<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
 						<h2 class="[ no-margin-top ]">Ensayo</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ducimus soluta. Tempora recusandae cum cumque odit consequatur, laborum nulla atque accusamus doloribus rem placeat, optio libero delectus voluptatem repellendus facilis.</p>
 					</div>

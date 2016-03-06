@@ -210,7 +210,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 <article class="[ bg-gray--fondo space-id ]" id="constitución_wiki">
 	<section class="[ container ]">
 		<div class="[ row ]">
-			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
 				<h2 class="[ margin-bottom ]">Constitución en wiki</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit in suscipit similique tempore ab quam voluptatibus, quos modi fuga iusto earum incidunt repellendus quis tempora? Perspiciatis officia accusantium temporibus esse.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum possimus dolorum quam illo veniam id placeat nulla repellat vero debitis ratione consectetur eos praesentium, delectus doloremque dolor, ipsa deserunt eaque.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem consequuntur error illum. Atque esse, et iure rerum fugiat consequuntur repellendus est dignissimos alias officia fugit culpa nam consequatur exercitationem quae!</p>

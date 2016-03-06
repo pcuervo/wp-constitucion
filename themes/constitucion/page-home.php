@@ -241,7 +241,7 @@
 						<a href="<?php the_permalink(); ?>">
 							<img class="[ img-responsive ]" src="<?php echo $url_image; ?>">
 							<h4 class="[ color-gray ][ text-uppercase ]"><?php the_title(); ?></h4>
-							<p class="[ color-gray ]"><?php echo wp_trim_words( get_the_excerpt(), 28 ) ?></p>
+							<p class="[ color-gray ][ text-justify ]"><?php echo wp_trim_words( get_the_excerpt(), 28 ) ?></p>
 						</a>
 					</div>
 				<?php endwhile;

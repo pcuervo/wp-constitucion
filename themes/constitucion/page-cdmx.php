@@ -7,7 +7,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 		<h1 class=" [ text-uppercase text-center ][ width-100 ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Ciudad de México</h1>
 	</div>
 </section>
-<section class="[ container padding--sides--xsm ][ margin-bottom--large ]">
+<section class="[ container padding--sides--xsm ][ margin-bottom--large ][ text-justify ]">
 	<div class="[ margin-bottom--large ]">
 		<?php the_content(); ?>
 	</div>
@@ -58,7 +58,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 		<div class="[ row ]">
 			<div class="[ col-xs-12 ]">
 
-				<div class="[ content-cronica-cdmx ]">
+				<div class="[ content-cronica-cdmx ][ text-justify ]">
 					<h4></h4>
 					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi explicabo doloremque, temporibus? 	Similique nam molestias enim eius quibusdam neque incidunt quam cum, hic sint dolorem accusamus itatis commodi! Optio, cupiditate!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae  amet aperiam pariatur ea iste officia facilis, eligendi rem modi reiciendis delectus impedit quibusdam consectetur possimus eaque nihil facere reprehenderit nisi.
 					Praesent quis enim mollis, molestie nisl non, dapibus tellus.

@@ -176,25 +176,19 @@
             var data = [
                 {
                     value: 60,
-                    color: "#e80e8a",
+                    color: "#457390",
                     highlight: "#222",
                     label: "nombre"
                 },
                 {
-                    value: 10,
-                    color: "#cccccc",
+                    value: 15,
+                    color: "#d1d8e4",
                     highlight: "#222",
                     label: "nombre"
                 },
                 {
-                    value: 10,
-                    color: "#555",
-                    highlight: "#222",
-                    label: "nombre"
-                },
-                {
-                    value: 20,
-                    color: "#4a4a4a",
+                    value: 25,
+                    color: "#363636",
                     highlight: "#222",
                     label: "nombre"
                 }
@@ -213,12 +207,12 @@
                 datasets: [
                     {
                         label: '2010 customers #',
-                        fillColor: '#382765',
+                        fillColor: '#457390',
                         data: [2500, 1902, 1041, 610, 1245, 952]
                     },
                     {
                         label: '2014 customers #',
-                        fillColor: '#7BC225',
+                        fillColor: '#363636',
                         data: [3104, 1689, 1318, 589, 1199, 1436]
                     }
                 ]

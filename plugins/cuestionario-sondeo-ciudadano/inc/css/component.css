@@ -21,7 +21,7 @@
 }
 
 .fs-title h1 {
-	margin: 30px 0 0 0;
+	margin: 8px 0 0 0;
 }
 
 /* Form */
@@ -39,7 +39,7 @@
 .fs-form-full {
 	top: 32%;
 	margin: 0 auto;
-	width: 70%;
+	width: 100%;
 }
 
 .fs-form-full,
@@ -203,7 +203,7 @@ button.fs-continue,
 	font-weight: 700;
 	font-style: italic;
 	font-size: 14px;
-	font-family: Georgia, serif;
+	font-family: "Alegreya Sans", sans-serif;
 	line-height: 20px;
 	cursor: pointer;
 	pointer-events: auto;
@@ -313,7 +313,6 @@ button.fs-continue,
 	text-align: center;
 	font-weight: 700;
 	font-size: 70%;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .fs-fields > li .fs-radio-custom span label {
@@ -332,7 +331,6 @@ button.fs-continue,
 
 .fs-fields > li .fs-radio-custom label {
 	display: block;
-	padding-top: 100%;
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
@@ -353,27 +351,6 @@ button.fs-continue,
 	transition: opacity 0.2s;
 	-webkit-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
-}
-
-
-.fs-fields .fs-radio-custom label.radio-hombre::after {
-	background-image: url(../img/hombre.svg);
-}
-
-.fs-fields .fs-radio-custom label.radio-mujer::after {
-	background-image: url(../img/mujer.svg);
-}
-
-.fs-fields .fs-radio-custom label.radio-otro::after {
-	background-image: url(../img/otro.svg);
-}
-
-.fs-fields .fs-radio-custom label.radio-si::after {
-	background-image: url(../img/si.svg);
-}
-
-.fs-fields .fs-radio-custom label.radio-no::after {
-	background-image: url(../img/no.svg);
 }
 
 .fs-fields .fs-radio-custom label.radio-conversion::after {
@@ -534,9 +511,9 @@ button.fs-continue,
 /* Progress bar */
 .fs-progress {
 	position: absolute;
-	top: 0;
+	top: -8px;
 	width: 0%;
-	height: 0.5em;
+	height: 0.35em;
 	background: #fffed8;
 	-webkit-transition: width 0.3s ease-in-out;
 	transition: width 0.3s ease-in-out;
@@ -545,15 +522,13 @@ button.fs-continue,
 /* Number indicator */
 .fs-numbers {
 	position: absolute;
-	top: 0;
+	top: -76px;
 	right: 0;
 	overflow: hidden;
 	color: rgba(0,0,0,0.4);
-	margin: 40px;
 	width: 3em;
 	font-weight: 700;
 	font-size: 2em;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	cursor: default;
 }
 
@@ -671,13 +646,10 @@ button.fs-continue {
 	color: #232529;
 }
 
-button.fs-continue {
+.fs-continue {
 	position: absolute;
-	right: 0;
-	bottom: -80px;
-	margin: 100px 60px 0;
-	padding: 3px 6px;
-	font-size: 1.25em;
+	right: 15px;
+	bottom: -250px;
 }
 
 button.fs-submit:hover,
@@ -842,7 +814,6 @@ input[type=text]::-ms-clear {
 		// top: 6em;
 		right: 2em;
 		left: 0;
-		padding: 0 3.75em 0 1em;
 		width: auto;
 		font-size: 1.5em;
 	}
@@ -859,7 +830,7 @@ input[type=text]::-ms-clear {
 	}
 
 	.fs-numbers {
-		margin: 20px;
+		//margin: 20px;
 	}
 
 	.fs-nav-dots {

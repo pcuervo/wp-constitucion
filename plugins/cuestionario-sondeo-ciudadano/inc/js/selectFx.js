@@ -102,7 +102,7 @@
             if( 'title' == el.className ){
                 optclass = 'title clear';
                 return '<li class="' + optclass + '"><span>' + el.textContent + '</span></li>';
-            }			
+            }
 
 			if( el.selectedOpt && !this.foundSelected && !this.hasDefaultPlaceholder && isTitle ) {
 				classes += 'cs-selected ';
@@ -141,7 +141,7 @@
 			}
 		} );
 
-		var opts_el = '<div class="cs-options [ padding--header ]"><ul>' + options + '</ul></div>';
+		var opts_el = '<div class="[ cs-options ][ padding--header ]"><ul class="[ container ]">' + options + '</ul></div>';
 		this.selEl = document.createElement( 'div' );
 		this.selEl.className = this.el.className;
 		this.selEl.tabIndex = this.el.tabIndex;

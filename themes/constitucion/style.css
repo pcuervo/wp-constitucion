@@ -7111,6 +7111,75 @@ ul.slides {
 ul.slides li img {
   width: 100%;
 }
+/**
+ * Clear
+**/
+.clear {
+  clear: both;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  font-size: 1px;
+  line-height: 0;
+}
+@media (max-width: 480px) {
+  .clear--xs {
+    clear: both;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+    line-height: 0;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .clear--xs {
+    clear: none;
+  }
+  .clear--xsm {
+    clear: both;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+    line-height: 0;
+  }
+}
+@media (min-width: 768px) {
+  .clear--xs {
+    clear: none;
+  }
+  .clear--xsm {
+    clear: none;
+  }
+  .clear--sm {
+    clear: both;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+    line-height: 0;
+  }
+}
+@media (min-width: 992px) {
+  .clear--xs {
+    clear: none;
+  }
+  .clear--xsm {
+    clear: none;
+  }
+  .clear--sm {
+    clear: none;
+  }
+  .clear--md {
+    clear: both;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+    line-height: 0;
+  }
+}
 .clearfix:before,
 .clearfix:after,
 .dl-horizontal dd:before,

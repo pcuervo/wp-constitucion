@@ -3,6 +3,35 @@
 // --------------------------------------------------
 
 
+
+/**
+ * Clear
+**/
+.clear { clear:both; height:1px; margin:0; padding:0; font-size: 1px; line-height: 0; }
+
+@media ( max-width: @screen-xs ) {
+	.clear--xs { .clear; }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+	.clear--xs{ clear: none; }
+	.clear--xsm{ .clear; }
+}
+
+@media ( min-width: @screen-sm ) {
+	.clear--xs{ clear: none; }
+	.clear--xsm{ clear: none; }
+	.clear--sm { .clear; }
+}
+
+@media ( min-width: @screen-md ){
+	.clear--xs{ clear: none; }
+	.clear--xsm{ clear: none; }
+	.clear--sm{ clear: none; }
+	.clear--md { .clear; }
+}
+
+
 // Floats
 // -------------------------
 

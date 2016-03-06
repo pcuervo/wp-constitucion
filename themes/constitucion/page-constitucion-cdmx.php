@@ -91,12 +91,14 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
 	<article class="[ space-id ]">
 		<div class="[ row ]">
-			<?php $grupoTrabajo = new WP_Query(array(
-					'post_type'      => 'grupo-de-trabajo',
-					'posts_per_page' => -1,
-					'orderby'  => 'post_title',
-					'order'    => 'ASC'
-				));
+			<?php
+			$query_count = 1;
+			$grupoTrabajo = new WP_Query(array(
+				'post_type'      => 'grupo-de-trabajo',
+				'posts_per_page' => -1,
+				'orderby'  => 'post_title',
+				'order'    => 'ASC'
+			));
 
 			if ( $grupoTrabajo->have_posts() ) :
 				while ( $grupoTrabajo->have_posts() ) : $grupoTrabajo->the_post();
@@ -110,7 +112,14 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 						</a>
 						<!-- <a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a> -->
 					</div>
-				<?php endwhile;
+
+					<?php
+						if($query_count % 2 == 0) {echo '<div class="[ clear--xs ]"></div>';}
+						if($query_count % 3 == 0) {echo '<div class="[ clear--xsm ]"></div>';}
+						if($query_count % 4 == 0) {echo '<div class="[ clear--sm ]"></div>';}
+						if($query_count % 6 == 0) {echo '<div class="[ clear--md ]"></div>';}
+						?>
+				<?php $query_count++; endwhile;
 			endif;
 			wp_reset_postdata();?>
 

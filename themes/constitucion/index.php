@@ -11,12 +11,12 @@ global $wp_query; ?>
 </div>
 
 <section class="[ container ]">
-	<?php $noticias = new WP_Query(array(
-			'post_type'      => 'post',
-			'posts_per_page' => 6,
-			'paged' => $pagina
-
-		));
+	<?php
+	$noticias = new WP_Query(array(
+		'post_type'      => 'post',
+		'posts_per_page' => 6,
+		'paged' => $pagina
+	));
 	if ( $noticias->have_posts() ) :
 
 		while ( $noticias->have_posts() ) : $noticias->the_post();
@@ -41,10 +41,11 @@ global $wp_query; ?>
 					</a>
 				</div>
 			</div>
+
 		<?php endwhile;
 	endif;
 	wp_reset_postdata(); ?>
-	<section class="[ text-center ]">
+	<div class="[ text-center ]">
 		<?php if($noticias->max_num_pages > 1):
 			$url = site_url('/noticias/');
 			pagenavi($pagina, $noticias->max_num_pages, $url, true, '?', 'pagina');

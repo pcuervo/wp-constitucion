@@ -3,6 +3,35 @@
 // --------------------------------------------------
 
 
+
+/**
+ * Clear
+**/
+.clear { clear:both; height:1px; margin:0; padding:0; font-size: 1px; line-height: 0; }
+
+@media ( max-width: @screen-xs ) {
+	.clear--xs { .clear; }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+	.clear--xs{ clear: none; }
+	.clear--xsm{ .clear; }
+}
+
+@media ( min-width: @screen-sm ) {
+	.clear--xs{ clear: none; }
+	.clear--xsm{ clear: none; }
+	.clear--sm { .clear; }
+}
+
+@media ( min-width: @screen-md ){
+	.clear--xs{ clear: none; }
+	.clear--xsm{ clear: none; }
+	.clear--sm{ clear: none; }
+	.clear--md { .clear; }
+}
+
+
 // Floats
 // -------------------------
 
@@ -130,6 +159,7 @@
 // -------------------------
 
 .no-padding{ padding: 0 !important; }
+.no-padding--bottom{ padding-bottom: 0 !important; }
 
 .padding{ padding: (@padding-base-vertical*2) (@padding-base-horizontal*2); }
 .padding--small{ padding: (@padding-base-vertical) (@padding-base-horizontal); }
@@ -216,6 +246,7 @@
 // -------------------------
 
 .no-margin{ margin: 0 !important; }
+.no-margin--bottom{ margin-bottom: 0 !important; }
 .margin-auto{ margin: auto; }
 .margin{ margin: @margin-base; }
 
@@ -235,7 +266,7 @@
 .margin-top--xxlarge{ margin-top: (@margin-base*8); }
 
 .margin--header{
-	margin-top: 55px;
+	margin-top: 55px; margin-bottom: 50px;
 	@media (min-width: @screen-sm){ margin-top: 50px; }
 	@media (min-width: @screen-md){ margin-top: 70px; }
  }
@@ -270,29 +301,6 @@
 .margin-top-bottom--small{ margin-top: (@margin-base/2); margin-bottom: (@margin-base/2); }
 .margin-top-bottom--large{ margin-top: (@margin-base*2); margin-bottom: (@margin-base*2); }
 
-
-
- .padding--header--id{
-	padding-top: 30px;padding-bottom: 30px;
-	@media (min-width: @screen-sm){ padding-top: 40px; padding-bottom: 40px;}
-	@media (min-width: @screen-md){ padding-top: 60px; padding-bottom: 60px;}
- }
-  .margin--header--id{
-	border-top: 30px solid @light; margin: 5px 0;
-	@media (min-width: @screen-sm){
-		border-top: 40px solid @light;
-		margin: 5px 0;
-	}
-	@media (min-width: @screen-md){
-		border-top: 60px solid @light;
-		margin: 5px 0;
-	}
- }
- .space-id{
-	.padding--header--id;
-	.margin--header--id;
- }
-
 // Border
 // -------------------------
 .no-border{ border: none!important; }
@@ -305,7 +313,6 @@
 
 .border-box-shadow{
 	border-radius: 10px;
-	.box-shadow(0 5px 15px rgba(0,0,0,.5));
 }
 
 // Color
@@ -398,7 +405,6 @@
 	}
 	& h2{
 		.no-margin-top;
-		.color-primary;
 	}
 	& p:nth-child(3){
 		.color-primary;
@@ -480,71 +486,64 @@
 }
 
 .content-acerca-de{
-	.margin-top--large;
-	h3{
-		font-weight: bold;
-		text-transform: uppercase;
-		margin-left: 32%;
-		color: @primary;
-	}
+	h2{ margin-left: 32%; }
 	p:nth-child(2),p:nth-child(3) {
 		width: 100%;
 		display: inline-block;
-		padding: 20px;
+		padding-left: 20px;
 		text-align: justify;
-		}
-		blockquote {
-			margin-top: 10px;
-			width: 100%;
-			display: inline-block;
-			border-left: none ;
-			vertical-align: top;
-			border-top: dotted @primary;
-			border-left: none ;
-		}
-		blockquote p{
-			text-align: right;
-			color: lighten(@gray, 10%);
-		}
+	}
+	blockquote {
+		margin-top: 4px;
+		width: 100%;
+		display: inline-block;
+		border-left: none ;
+		vertical-align: top;
+		border-top: 1px dotted @primary;
+		border-left: none ;
+	}
+	blockquote p{
+		text-align: right;
+		color: lighten(@gray, 20%);
+		font-style: italic; font-size: 80%;
+	}
 
 	@media (min-width: @screen-sm-min){
 		p:nth-child(2),p:nth-child(3) {
-		width: 60%;
-		padding: 10px;
+			width: 60%;
+			padding-left: 10px;
 		}
 		blockquote {
 			width: 30%;
-			padding: 10px;
+			padding: 10px 0;
 		}
 		blockquote p{
-			padding-top: 20px;
 			text-align: right;
 		}
 	}
 
 }
 
-.content-mensaje-jefegob{
+.content-mensaje-jefegob,
+.content-sobre-la-plataforma{
 	.content-acerca-de;
-		blockquote {
-		border-top: dotted @gray;
-	}
 }
+
+.content-sobre-la-plataforma{ margin-top: 0; }
 
 .content-cronica-cdmx{
 	.content-acerca-de;
+	padding-left: 0; padding-right: 10px;
 	blockquote {
-		padding: 50px 0;
-		border-bottom: dotted @primary;
+		margin-left: 10px;
+		border-bottom: 1px dotted @primary;
 	}
 	blockquote p{
 		display: inline-flex;
+		padding-left: 0 !important;
 	}
 	blockquote p:nth-child(2){
-		width: 100%
-	}
-	blockquote canvas{
-		margin-left: 20px;
+		width: 100%;
 	}
 }
 

@@ -3,7 +3,7 @@
     "use strict";
 
     $(function(){
-        /** 
+        /**
          * VIDEO FULL
          */
         if (document.getElementById("container_video") ){
@@ -11,12 +11,12 @@
             $( window ).resize(function() {
                 videoHome();
             });
-            
+
         }
-        
+
         function videoHome(){
             var ancho_nuevo = $(window).width();
-            var alto_nuevo = $(window).height() - 30;
+            var alto_nuevo = $(window).height() - 100;
 
             $('#container_video').css({'width': ancho_nuevo, 'height': alto_nuevo});
         }
@@ -28,7 +28,7 @@
             animation: "slide"
         });
 
-        /** 
+        /**
          * DATOS MODAL GRUPO DE TRABAJO
          */
         $('.content-trabajo').on('click', function(){
@@ -42,16 +42,16 @@
             $('.imagen-modal').attr('src', '').attr('src', imagen);
             $('.cargo-modal').empty().html(cargo);
 
-        }); 
+        });
 
         /**------ FORMULARIOS -------*/
-            /** 
+            /**
              * DATEPIKER
              */
             $('.date-ensayo').datepicker({
                 dateFormat : 'yy-mm-dd',
                 minDate: 0,
-                onSelect: function(dateText, inst) { 
+                onSelect: function(dateText, inst) {
                     window.dateInicio = dateText;
                     $('.date-ensayo-fin').removeAttr("disabled");
                }
@@ -62,7 +62,7 @@
                 minDate: 0
             });
 
-            /** 
+            /**
              * VALIDAR LIGAS DE ARCHIVOS
              */
             $('#form-ensayos').on('submit', function(event){
@@ -75,10 +75,10 @@
                     var form = document.getElementById("form-ensayos");
                     form.submit();
                 };
-                
+
             });
 
-            /** 
+            /**
              * VALIDAR LIGAS DE ARCHIVOS
              */
             $('#form-eventos').on('submit', function(event){
@@ -90,10 +90,10 @@
                     form.submit();
                 };
             });
- 
+
             function getValidateDocs(id_object){
                 var text = $('#'+id_object).val();
-                var docs = /docs.google.com/.test(text);  
+                var docs = /docs.google.com/.test(text);
                 var dropbox = /dropbox.com/.test(text);
                 var onedrive = /onedrive.live.com/.test(text);
 
@@ -109,15 +109,15 @@
 
             }
         /**------ FORMULARIOS -------*/
- 
+
         $('.nota-destacada a').on('click', function(event){
             event.preventDefault();
-        });  
- 
-        if( parseInt( isPageSondeo ) ){ 
+        });
+
+        if( parseInt( isPageSondeo ) ){
             $('[data-parsley-certificado]').parsley();
         }
-        if( parseInt( isPageParticipa ) ){ 
+        if( parseInt( isPageParticipa ) ){
             addWordValidator();
             $('[data-parsley-certificado]').parsley();
             $('.js-check-reference-code').submit(function(e){

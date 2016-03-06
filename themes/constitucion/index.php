@@ -1,9 +1,9 @@
 <?php get_header();
 $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
-$img_participa = get_option( 'img_noticias' ); 
+$img_participa = get_option( 'img_noticias' );
 global $wp_query; ?>
 <br>
-<section class="[ bg-image rectangle-small ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo $img_participa; ?>'); ">
+<section class="[ bg-image rectangle-small ][ margin--header ][ relative ]" style="background-image: url('<?php echo $img_participa; ?>'); ">
 	<div class="[ bg-dark--opacity width-100 height-100 ]">
 		<h1 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Noticias</h1>
 	</div>
@@ -13,11 +13,11 @@ global $wp_query; ?>
 			'post_type'      => 'post',
 			'posts_per_page' => 10,
 			'paged' => $pagina
-			
+
 		));
-	if ( $noticias->have_posts() ) : 
-		
-		while ( $noticias->have_posts() ) : $noticias->the_post(); 
+	if ( $noticias->have_posts() ) :
+
+		while ( $noticias->have_posts() ) : $noticias->the_post();
 			$date_arr = getDateTransform( $post->post_date );
 			$url_image = attachment_image_url( $post->ID, 'medium' );?>
 			<div class="[ row ][ margin-bottom--large ]">
@@ -37,15 +37,15 @@ global $wp_query; ?>
 					</a>
 				</div>
 			</div>
-		<?php endwhile; 
-	endif; 
+		<?php endwhile;
+	endif;
 	wp_reset_postdata(); ?>
 	<section class="[ text-center ]">
 		<?php if($noticias->max_num_pages > 1):
 			$url = site_url('/noticias/');
-			pagenavi($pagina, $noticias->max_num_pages, $url, true, '?', 'pagina'); 
+			pagenavi($pagina, $noticias->max_num_pages, $url, true, '?', 'pagina');
 		endif; ?>
 	</div>
-	
+
 </section>
 <?php get_footer(); ?>

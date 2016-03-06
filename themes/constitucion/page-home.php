@@ -224,7 +224,7 @@
 </section><!--/container-->
 
 
-<section class="[ section--bg bg-gray-light ]">
+<section class="[ section--bg bg-gray-light ][ no-margin--bottom ]">
 	<div class="[ container ]">
 		<h2 class="[ text-uppercase text-center ][ color-primary ]">Noticias</h2>
 		<div class="[ row ]">

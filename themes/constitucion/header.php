@@ -56,7 +56,7 @@
 		$tweets = $tweet->feedTwitter();
 
 		if ( is_page('home') ): ?>
-			<header class="[ hidden ]">
+			<header class="header-home [ hidden ]">
 				<nav>
 <!-- menu desktop home -->
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs ]">

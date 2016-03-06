@@ -3,6 +3,23 @@
     "use strict";
 
     $(function(){
+        /** 
+         * VIDEO FULL
+         */
+        if (document.getElementById("container_video") ){
+            videoHome();
+            $( window ).resize(function() {
+                videoHome();
+            });
+            
+        }
+        
+        function videoHome(){
+            var ancho_nuevo = $(window).width();
+            var alto_nuevo = $(window).height() - 30;
+
+            $('#container_video').css({'width': ancho_nuevo, 'height': alto_nuevo});
+        }
 
         /**
          * INIT FLEXSLIDER
@@ -217,7 +234,7 @@
 
             if( parseInt( isHome ) ){
 
-                if ($(this).scrollTop() > 400){
+                if ($(this).scrollTop() > 40){
                     $('header').addClass("sticky");
                     $('header').removeClass("hidden");
                 }

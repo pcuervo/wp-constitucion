@@ -8566,8 +8566,8 @@ ul.submenu {
 ul.menu-home {
   position: relative;
   z-index: 1000;
-  margin-top: 10px;
-  padding-left: 0px;
+  margin: 10px 0 7px 0;
+  padding: 0px;
 }
 ul.menu-home > li {
   border-left: 1px solid #dbdbdb;
@@ -8705,6 +8705,25 @@ nav a:hover,
 nav a:active,
 nav a:focus {
   color: #e80e8a;
+}
+#container_video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+.header-home {
+  margin-top: -10px;
+  height: 0px;
+  transition: height 2s;
+}
+.header-home.sticky {
+  margin-top: -10px;
+  height: 100px;
+  transition: height 2s;
 }
 footer {
   padding-top: 12px;

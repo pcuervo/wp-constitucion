@@ -621,7 +621,6 @@ class Sondeo_CDMX_Survey {
 			INNER JOIN ' . $wpdb->prefix . 'sondeo_cdmx_questions Q ON Q.id = UA.question_id
 			WHERE UA.reference_code = "' . $ref_code . '"
 			GROUP BY question_id, text, reference_code, created_at'
-
 		);
 
 		foreach ( $survey_results as $key => $survey ) {

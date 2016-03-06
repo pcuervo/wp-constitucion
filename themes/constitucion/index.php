@@ -3,11 +3,13 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
 $img_participa = get_option( 'img_noticias' );
 global $wp_query; ?>
 <br>
-<section class="[ bg-image rectangle-small ][ margin--header ][ relative ]" style="background-image: url('<?php echo $img_participa; ?>'); ">
+
+<div class="[ bg-image rectangle-small ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo $img_participa; ?>');">
 	<div class="[ bg-dark--opacity width-100 height-100 ]">
-		<h1 class=" [ text-uppercase ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Noticias</h1>
+		<h1 class="[ container ][ text-uppercase text-center ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Noticias</h1>
 	</div>
-</section>
+</div>
+
 <section class="[ container ]">
 	<?php $noticias = new WP_Query(array(
 			'post_type'      => 'post',
@@ -27,9 +29,11 @@ global $wp_query; ?>
 					</div>
 				</a>
 				<div class="[ col-xs-7 ]">
-					<a href="<?php the_permalink(); ?>">
-						<h2 class="[ no-margin-top ][ color-primary ][ fw-semibold ]"><?php the_title(); ?></h2>
-					</a>
+					<h2 class="[ fw-semibold ]">
+						<a class="[ color-gray ]" href="<?php the_permalink(); ?>">
+							<?php the_title(); ?>
+						</a>
+					</h2>
 					<p class="[ color-primary ]"><?php echo $date_arr[4].' '.$date_arr[1].' '.$date_arr[2] ?></p>
 					<p><?php echo wp_trim_words( get_the_excerpt(), 23 ) ?></p>
 					<a href="<?php the_permalink(); ?>">

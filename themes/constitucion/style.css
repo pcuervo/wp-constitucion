@@ -1112,6 +1112,9 @@ section.space-id {
   padding-top: 70px;
   margin-bottom: 70px;
 }
+section.space-id article {
+  margin-bottom: 35px;
+}
 section.section--bg.space-id {
   padding-top: 70px;
   padding-bottom: 70px;

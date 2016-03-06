@@ -6870,6 +6870,9 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .text--destacado {
   top: 17px;
 }
+.text--destacado p {
+  font-size: 12px;
+}
 .margin-top--date {
   margin-top: 17px;
   margin-bottom: 10px;

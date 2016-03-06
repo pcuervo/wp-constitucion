@@ -7001,6 +7001,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
   left: 0%;
   bottom: 0;
   margin-bottom: 0;
+  text-align: left;
 }
 .evento-bottom {
   bottom: inherit;

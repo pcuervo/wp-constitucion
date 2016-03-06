@@ -8756,18 +8756,21 @@ nav a:focus {
 }
 footer {
   padding-top: 12px;
-  padding-bottom: 12px;
   background-color: #313131;
   text-align: center;
 }
 footer img {
-  margin-bottom: 20px;
   width: 150px;
+  margin-right: 20px;
 }
 @media (min-width: 480px) {
   footer img {
     width: 180px;
   }
+}
+.links-footer {
+  text-align: center;
+  padding-bottom: 12px;
 }
 footer a {
   text-decoration: none;

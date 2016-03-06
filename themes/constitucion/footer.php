@@ -1,11 +1,15 @@
 			</div><!-- container -->
 			<footer>
-				<img class="[ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx2.png">
-				<div>
-					<a href="#">Términos y condiciones</a>
-					<a data-toggle="modal" data-target="#contacto">Contacto</a>
-					<a href="#">Transparencia</a>
+				<div class="[ container ][ text-justify ]">
+					
+					<div class="links-footer">
+						<img  class="imagen-footer" src="<?php echo THEMEPATH; ?>images/logocdmx2.png">
+						<a href="#">Términos y condiciones</a>
+						<a data-toggle="modal" data-target="#contacto">Contacto</a>
+						<a href="#">Transparencia</a>
+					</div>
 				</div>
+				
 			</footer>
 
 			<!-- Modal -->

@@ -3,6 +3,23 @@
     "use strict";
 
     $(function(){
+        /**
+         * VIDEO FULL
+         */
+        if (document.getElementById("container_video") ){
+            videoHome();
+            $( window ).resize(function() {
+                videoHome();
+            });
+
+        }
+
+        function videoHome(){
+            var ancho_nuevo = $(window).width();
+            var alto_nuevo = $(window).height() - 100;
+
+            $('#container_video').css({'width': ancho_nuevo, 'height': alto_nuevo});
+        }
 
         /**
          * INIT FLEXSLIDER
@@ -11,7 +28,7 @@
             animation: "slide"
         });
 
-        /** 
+        /**
          * DATOS MODAL GRUPO DE TRABAJO
          */
         $('.content-trabajo').on('click', function(){
@@ -25,16 +42,16 @@
             $('.imagen-modal').attr('src', '').attr('src', imagen);
             $('.cargo-modal').empty().html(cargo);
 
-        }); 
+        });
 
         /**------ FORMULARIOS -------*/
-            /** 
+            /**
              * DATEPIKER
              */
             $('.date-ensayo').datepicker({
                 dateFormat : 'yy-mm-dd',
                 minDate: 0,
-                onSelect: function(dateText, inst) { 
+                onSelect: function(dateText, inst) {
                     window.dateInicio = dateText;
                     $('.date-ensayo-fin').removeAttr("disabled");
                }
@@ -45,7 +62,7 @@
                 minDate: 0
             });
 
-            /** 
+            /**
              * VALIDAR LIGAS DE ARCHIVOS
              */
             $('#form-ensayos').on('submit', function(event){
@@ -58,10 +75,10 @@
                     var form = document.getElementById("form-ensayos");
                     form.submit();
                 };
-                
+
             });
 
-            /** 
+            /**
              * VALIDAR LIGAS DE ARCHIVOS
              */
             $('#form-eventos').on('submit', function(event){
@@ -73,10 +90,10 @@
                     form.submit();
                 };
             });
- 
+
             function getValidateDocs(id_object){
                 var text = $('#'+id_object).val();
-                var docs = /docs.google.com/.test(text);  
+                var docs = /docs.google.com/.test(text);
                 var dropbox = /dropbox.com/.test(text);
                 var onedrive = /onedrive.live.com/.test(text);
 
@@ -92,15 +109,15 @@
 
             }
         /**------ FORMULARIOS -------*/
- 
+
         $('.nota-destacada a').on('click', function(event){
             event.preventDefault();
-        });  
- 
-        if( parseInt( isPageSondeo ) ){ 
+        });
+
+        if( parseInt( isPageSondeo ) ){
             $('[data-parsley-certificado]').parsley();
         }
-        if( parseInt( isPageParticipa ) ){ 
+        if( parseInt( isPageParticipa ) ){
             addWordValidator();
             $('[data-parsley-certificado]').parsley();
             $('.js-check-reference-code').submit(function(e){
@@ -159,25 +176,19 @@
             var data = [
                 {
                     value: 60,
-                    color: "#e80e8a",
+                    color: "#457390",
                     highlight: "#222",
                     label: "nombre"
                 },
                 {
-                    value: 10,
-                    color: "#cccccc",
+                    value: 15,
+                    color: "#d1d8e4",
                     highlight: "#222",
                     label: "nombre"
                 },
                 {
-                    value: 10,
-                    color: "#555",
-                    highlight: "#222",
-                    label: "nombre"
-                },
-                {
-                    value: 20,
-                    color: "#4a4a4a",
+                    value: 25,
+                    color: "#363636",
                     highlight: "#222",
                     label: "nombre"
                 }
@@ -196,12 +207,12 @@
                 datasets: [
                     {
                         label: '2010 customers #',
-                        fillColor: '#382765',
+                        fillColor: '#457390',
                         data: [2500, 1902, 1041, 610, 1245, 952]
                     },
                     {
                         label: '2014 customers #',
-                        fillColor: '#7BC225',
+                        fillColor: '#363636',
                         data: [3104, 1689, 1318, 589, 1199, 1436]
                     }
                 ]
@@ -230,7 +241,7 @@
 
             if( parseInt( isHome ) ){
 
-                if ($(this).scrollTop() > 400){
+                if ($(this).scrollTop() > 40){
                     $('header').addClass("sticky");
                     $('header').removeClass("hidden");
                 }

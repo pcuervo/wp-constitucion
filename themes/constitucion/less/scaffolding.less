@@ -60,6 +60,48 @@ a {
   }
 }
 
+// Sections and articles
+
+section {
+  margin-bottom: 50px;
+
+  &.section--bg{
+    padding: 50px 0;
+  }
+
+  &.space-id{
+    padding-top: 70px; margin-bottom: 70px;
+
+    article{
+      margin-bottom: 35px;
+    }
+  }
+
+  &.section--bg.space-id{
+    padding-top: 70px; padding-bottom: 70px;
+  }
+
+  p{
+    &:last-of-type{ margin-bottom: 0; }
+  }
+
+  article{
+    margin-bottom: 25px;
+
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+article{
+
+  &.space-id{
+    //padding-top: 60px;
+    //margin-bottom: 60px;
+  }
+}
 
 // Figures
 //

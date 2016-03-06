@@ -297,7 +297,7 @@ get_header(); the_post();
 						<label for="">Lista a continuación el nombre de todos los autores separados por comas</label>
 						<input name="autores_ensayo" id="autores_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="Los autores son obligatorios">
 					</div>
-					<div class="[ form-group ][ col-xs 12 col-sm-6 ]">
+					<div class="[ form-group ][ col-xs-12 col-sm-6 ]">
 						<label for="">En caso de que este ensayo o relatoría haya sido elaborado por una institución u organización señala abajo cual es. En caso de más de una, separar por comas.</label>
 						<input name="institucion-u-organizacion" id="institucion-u-organizacion" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="La institución u organización es obligatoria">
 						<label for="">Comparte fotografías del grupo que trabajó este documento.</label>

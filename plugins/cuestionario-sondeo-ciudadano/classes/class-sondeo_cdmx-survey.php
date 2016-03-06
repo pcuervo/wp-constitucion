@@ -115,29 +115,37 @@ class Sondeo_CDMX_Survey {
 			'supports'           => array( 'title' )
 		);
 		register_post_type( 'grandes-retos', $args );
-		$this->insert_grandes_retos();
+		//$this->insert_grandes_retos();
 	}// register_retos_pt
 
 
 	private function insert_grandes_retos(){
 		$retos = array(
-			'Derechos Humanos',
 			'Transporte y movilidad',
-			'Empleo digno y productividad',
+			'Empleo',
+			'Salario Mínimo',
 			'Pobreza y desigualdad económica',
-			'Educación de calidad permanente',
-			'Salud pública y bienestar',
-			'Vivienda y uso de suelo',
-			'Coordinación Metropolitana',
-			'Transparencia y Rendición de Cuentas',
+			'Educación de calidad',
+			'Población sana',
+			'Vivienda',
+			'Planificación urbana y uso de suelo',
+			'Espacio Público',
 			'Agua',
-			'Sustentabilidad del Medio Ambiente',
-			'Servicios Urbanos',
-			'Desarrollo barrial participativo',
+			'Sustentabilidad ambiental',
+			'Participación comunitaria',
+			'Coordinación Metropolitana',
+			'Corrupción',
 			'Finanzas públicas',
+			'Servidores públicos capaces',
+			'Instituciones públicas sólidas y confiables',
+			'Equidad de género',
+			'Oportunidades para jóvenes',
+			'Derechos de los niños',
+			'Derechos LGBTTTI',
+			'Grupos vulnerables ',
+			'Vejez digna',
 			'Legalidad y Justicia',
-			'Igualdad de género',
-			'Infraestructura',
+			'Derechos Humanos',
 			'Otro',
 		);
 		foreach ( $retos as $reto ) {
@@ -149,7 +157,7 @@ class Sondeo_CDMX_Survey {
 			  	'post_title'    => $reto,
 			  	'post_status'   => 'publish'
 			);
-			//wp_insert_post( $post_reto );
+			wp_insert_post( $post_reto );
 		}
 	}
 
@@ -223,6 +231,7 @@ class Sondeo_CDMX_Survey {
 									<span><input id="q1-1" name="genero" type="radio" value="mujer" /><label for="q1-1" class="radio-mujer">Mujer</label></span>
 									<span><input id="q1-2" name="genero" type="radio" value="hombre" /><label for="q1-2" class="radio-hombre">Hombre</label></span>
 									<span><input id="q1-3" name="genero" type="radio" value="otro" /><label for="q1-3" class="radio-otro">Otro</label></span>
+									<span><input id="q1-3" name="genero" type="radio" value="ninguno" /><label for="q1-3" class="radio-otro">Ninguno</label></span>
 								</div>
 							</li>
 							<li id="js-edad" data-question="8">

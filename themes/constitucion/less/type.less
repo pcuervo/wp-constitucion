@@ -8,6 +8,7 @@
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
   font-family: "Alegreya Sans", sans-serif;
   font-weight: @headings-font-weight;
   line-height: @headings-line-height;
@@ -22,9 +23,22 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1,
+h2, .h2 {
+  font-size: 30px; font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 + h2,
+h1 + .h2,
+.h1 + h2,
+.h1 + .h2 {
+  font-size: 26px;
+  text-transform: none;
+}
+
+h1, .h1,
 h2, .h2,
 h3, .h3 {
-  margin-top: @line-height-computed;
   margin-bottom: (@line-height-computed / 2);
 
   small,
@@ -35,7 +49,6 @@ h3, .h3 {
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: (@line-height-computed / 2);
   margin-bottom: (@line-height-computed / 2);
 
   small,
@@ -56,9 +69,10 @@ h6, .h6 { font-size: @font-size-h6; }
 // -------------------------
 
 p {
-  margin: 0 0 (@line-height-computed / 2);
+  margin: 0 0 (@line-height-computed / 2) 0;
   font-family: "ABeeZee", sans-serif;
   font-size: 14px;
+  text-align: justify;
   @media (min-width: @screen-sm){ font-size: 16px; }
 }
 

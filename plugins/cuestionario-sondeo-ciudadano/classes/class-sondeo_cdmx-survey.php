@@ -118,6 +118,7 @@ class Sondeo_CDMX_Survey {
 		$this->insert_grandes_retos();
 	}// register_retos_pt
 
+
 	private function insert_grandes_retos(){
 		$retos = array(
 			'Derechos Humanos',
@@ -158,7 +159,7 @@ class Sondeo_CDMX_Survey {
 	 */
 	private function reto_exists( $title ) {
 		global $wpdb;
-		return $wpdb->get_row( "SELECT * FROM wp_posts WHERE post_title = '" . $title . "'", 'ARRAY_A' );
+		return $wpdb->get_row( "SELECT * FROM " . $wpdb->prefix . "posts WHERE post_title = '" . $title . "'", 'ARRAY_A' );
 	}
 
 	/**
@@ -595,7 +596,7 @@ class Sondeo_CDMX_Survey {
 		global $wpdb;
 		$surveys = array();
 		$survey_results = $wpdb->get_results('
-			SELECT id, reference_code, created_at FROM wp_sondeo_cdmx_user_answers
+			SELECT id, reference_code, created_at FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
 			GROUP BY reference_code
 			ORDER BY created_at DESC'
 		);
@@ -615,10 +616,11 @@ class Sondeo_CDMX_Survey {
 		global $wpdb;
 		$survey_answers = array();
 		$survey_results = $wpdb->get_results('
-			SELECT question_id, text, GROUP_CONCAT(answer SEPARATOR ",") AS answer, reference_code, created_at FROM wp_sondeo_cdmx_user_answers UA
-				INNER JOIN wp_sondeo_cdmx_questions Q ON Q.id = UA.question_id
-				WHERE UA.reference_code = "' . $ref_code . '"
-				GROUP BY question_id, text, reference_code, created_at'
+			SELECT question_id, text, GROUP_CONCAT(answer SEPARATOR ",") AS answer, reference_code, created_at FROM 
+			' . $wpdb->prefix . 'sondeo_cdmx_user_answers UA
+			INNER JOIN ' . $wpdb->prefix . 'sondeo_cdmx_questions Q ON Q.id = UA.question_id
+			WHERE UA.reference_code = "' . $ref_code . '"
+			GROUP BY question_id, text, reference_code, created_at'
 
 		);
 
@@ -638,7 +640,7 @@ class Sondeo_CDMX_Survey {
 		global $wpdb;
 		$ref_code = $_POST['reference_code'];
 		$ref_code_results = $wpdb->get_results('
-			SELECT reference_code FROM wp_sondeo_cdmx_user_answers
+			SELECT reference_code FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
 			WHERE reference_code = "' . $ref_code . '"'
 		);
 

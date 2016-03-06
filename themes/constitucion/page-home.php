@@ -111,18 +111,18 @@
 
 </section>
 
-<div class="[ container ]">
+<section class="[ container ]">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ][ margin-top-bottom--large ]">
-			<h1 class="[ text-sm-caps text-center ]">¿una constitución para la ciudad de méxico?</h1>
+		<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ]">
+			<h1 class="[ text-center ]">¿una constitución para la ciudad de méxico?</h1>
 			<?php $home = get_page_by_path('home');
 			echo wpautop( $home->post_content ); ?>
 		</div>
 	</div>
-</div><!--/container-->
+</section><!--/container-->
 
 <!-- slider -->
-	<div class="flexslider relative">
+<section class="flexslider relative">
 	<ul class="slides">
 		<li>
 			<img src="<?php echo THEMEPATH; ?>images/slides-01.jpg">
@@ -140,13 +140,13 @@
 			<img src="<?php echo THEMEPATH; ?>images/slides-05.jpg">
 		</li>
 	</ul>
-	</div><!-- fin slider -->
+</section><!-- fin slider -->
 
 <!-- Linea tiempo -->
-<div class="[ container ]">
+<section class="[ container ]">
 	<div class="[ row ]">
-		<div class="[ col-sm-12 ][ margin-top-bottom--large ]">
-			<h3 class="[ text-uppercase text-center ]">Línea del tiempo</h3>
+		<div class="[ col-sm-12 ]">
+			<h2 class="[ text-uppercase text-center ]">Línea del tiempo</h2>
 			<ul id="scroll" class="[ scroll-cronologia ][ horizontal-slide ][ text-center ]">
 
 				<?php $cronologia = new WP_Query(array(
@@ -200,7 +200,7 @@
 								<div class="[ vertical-line--large ]"></div>
 								<div class="[ border-gray--large ]"></div>
 								<p class="[ color-gray ][ fz-small ][ margin-bottom--date ][ text-uppercase ]"></p>
-								
+
 							</li>
 
 						<?php endif;
@@ -221,21 +221,21 @@
 			</ul>
 		</div>
 	</div>
-</div><!--/container-->
+</section><!--/container-->
 
 
-<div class="[ bg-gray-light ]">
+<section class="[ section--bg bg-gray-light ]">
 	<div class="[ container ]">
-		<h3 class="[ margin-top--xlarge ][ text-uppercase text-center ][ color-primary ]">Noticias</h3>
-		<div class="[ row ][ margin-top-bottom--large ]">
-<!-- 3 noticias -->
+		<h2 class="[ text-uppercase text-center ][ color-primary ]">Noticias</h2>
+		<div class="[ row ]">
+			<!-- 3 noticias -->
 			<?php $noticias = new WP_Query(array(
 					'post_type'      => 'post',
 					'posts_per_page' => 3
 				));
 
 			if ( $noticias->have_posts() ) :
-				while ( $noticias->have_posts() ) : $noticias->the_post(); 
+				while ( $noticias->have_posts() ) : $noticias->the_post();
 					$url_image = attachment_image_url( $post->ID, 'medium' );?>
 					<div class="[ col-xs-12 col-sm-4 ]">
 						<a href="<?php the_permalink(); ?>">
@@ -246,7 +246,7 @@
 					</div>
 				<?php endwhile;
 			endif; ?>
-			
+
 		</div>
 <!-- con 2 noticias -->
 		<!-- <div class="[ row ][ margin-bottom--large ]">
@@ -275,7 +275,7 @@
 
 	</div> <!-- /container -->
 
-</div>
+</section>
 
 
 

@@ -66,7 +66,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </div>
 
 <section class="[ container ][ space-id ]" id="grupo_trabajo">
-	<div class="[ row ]">
+	<article class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 
 			<div class="[ content-acerca-de ]">
@@ -87,7 +87,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 				</p>
 			</div>
 		</div>
-	</div>
+	</article>
 
 	<article class="[ space-id ]">
 		<div class="[ row ]">

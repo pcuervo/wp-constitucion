@@ -340,7 +340,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .box-li .vertical-line {
   height: 35px;
   margin-left: 3.5px;
-  border-left: 2px solid @gray;
+  border-left: 2px solid @gray-xlight;
 }
 .box-li .vertical-line--large {
   height: 45px;
@@ -354,12 +354,21 @@ ul.horizontal-slide li[class*="col"]:first-child {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  border:2px solid @gray;
+  border: 2px solid @gray-xlight;
 }
 
 .box-li:hover{
   & .vertical-line{ border-left: 2px solid @primary; }
   & .circle-xsmall{ border: 2px solid @primary;}
+}
+
+.nota-destacada .box-li__lines{
+  position: relative;
+  top: -66px;
+}
+
+.nota-destacada .text--destacado{
+  top: -50px;
 }
 
 .evento{width: 148px; overflow: hidden; white-space: normal; height: auto; position: absolute; left: 0%; bottom: 0; margin-bottom: 0;}

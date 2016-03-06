@@ -3721,7 +3721,7 @@ tbody.collapse.in {
   float: left;
   min-width: 160px;
   padding: 5px 0;
-  margin: 2px 0 0;
+  margin: 0;
   list-style: none;
   font-size: 14px;
   text-align: left;
@@ -3745,7 +3745,7 @@ tbody.collapse.in {
 }
 .dropdown-menu > li > a {
   display: block;
-  padding: 3px 20px;
+  padding: 0;
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
@@ -6964,7 +6964,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .box-li .vertical-line {
   height: 35px;
   margin-left: 3.5px;
-  border-left: 2px solid #4a4a4a;
+  border-left: 2px solid #999999;
 }
 .box-li .vertical-line--large {
   height: 45px;
@@ -6977,13 +6977,20 @@ ul.horizontal-slide li[class*="col"]:first-child {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  border: 2px solid #4a4a4a;
+  border: 2px solid #999999;
 }
 .box-li:hover .vertical-line {
   border-left: 2px solid #e80e8a;
 }
 .box-li:hover .circle-xsmall {
   border: 2px solid #e80e8a;
+}
+.nota-destacada .box-li__lines {
+  position: relative;
+  top: -66px;
+}
+.nota-destacada .text--destacado {
+  top: -50px;
 }
 .evento {
   width: 148px;
@@ -7023,10 +7030,11 @@ ul.horizontal-slide li[class*="col"]:first-child {
 ol.flex-control-nav.flex-control-paging {
   position: absolute;
   width: 100%;
-  bottom: 10px;
+  bottom: 6px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0;
   text-align: center;
   list-style: none;
   padding-left: 0px;
@@ -7038,25 +7046,25 @@ ol.flex-control-nav.flex-control-paging li a.flex-active {
   background-color: #fff;
 }
 ol.flex-control-nav.flex-control-paging li a {
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   text-indent: -9999px;
   overflow: hidden;
-  border: 3px solid #fff;
+  border: 1px solid #fff;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
   display: inline-block;
-  margin: 3px;
-  width: 10px;
-  height: 10px;
+  margin: 5px;
+  width: 8px;
+  height: 8px;
   cursor: auto;
 }
 @media (min-width: 768px) {
   ol.flex-control-nav.flex-control-paging li a {
-    margin: 15px;
-    width: 15px;
-    height: 15px;
+    margin: 8px;
+    width: 10px;
+    height: 10px;
   }
 }
 ol.flex-control-nav.flex-control-paging li a:hover,
@@ -7858,7 +7866,6 @@ ul.slides li img {
 }
 .content-user h2 {
   margin-top: 0;
-  color: #e80e8a;
 }
 .content-user p:nth-child(3) {
   color: #e80e8a;

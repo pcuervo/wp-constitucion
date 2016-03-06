@@ -262,7 +262,7 @@ function getHTMLDondeTrabajas(){
         <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
             <option value="" disabled selected>Selecciona una opción</option>
             <option value="cdmx">CDMX</option>
-            <option value="zmvm">ZMVM</option>
+            <option value="zmvm">Zona Metropolitana</option>
             <option value="resto-republica">Resto de la república</option>
             <option value="fuera-mexico">Fuera de México</option>
         </select>
@@ -275,7 +275,7 @@ function getHTMLDondeEstudias(){
         <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
             <option value="" disabled selected>Selecciona una opción</option>
             <option value="cdmx">CDMX</option>
-            <option value="zmvm">ZMVM</option>
+            <option value="zmvm">Zona Metropolitana</option>
             <option value="resto-republica">Resto de la república</option>
             <option value="fuera-mexico">Fuera de México</option>
         </select>
@@ -296,7 +296,7 @@ function getHTMLDelegacionesCDMX( section ){
     var delegaciones = `
         <label class="[ fs-field-label fs-anim-upper ][ color-gray ]">` + pregunta + `</label>
         <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
-            <option value="" disabled selected>Selecciona tu delgación</option>
+            <option value="" disabled selected>Selecciona tu delegación</option>
         `;
     $.each( allDelegaciones, function(i, val){
         delegaciones += '<option value="' + val.delegacion + '">' + val.delegacion + '</option>';

@@ -221,6 +221,7 @@ class Sondeo_CDMX_Survey {
 								<span><input id="q1-1" name="genero" type="radio" value="mujer" /><label for="q1-1" class="radio-mujer">Mujer</label></span>
 								<span><input id="q1-2" name="genero" type="radio" value="hombre" /><label for="q1-2" class="radio-hombre">Hombre</label></span>
 								<span><input id="q1-3" name="genero" type="radio" value="otro" /><label for="q1-3" class="radio-otro">Otro</label></span>
+								<span><input id="q1-4" name="genero" type="radio" value="otro" /><label for="q1-4" class="radio-otro">Ninguno</label></span>
 							</div>
 						</li>
 						<li id="js-edad" data-question="8">

@@ -8048,9 +8048,6 @@ ul.slides li img {
   max-width: 100%;
   height: auto;
 }
-.content-acerca-de h2 {
-  text-align: center;
-}
 .content-acerca-de p:nth-child(2),
 .content-acerca-de p:nth-child(3) {
   width: 100%;
@@ -8073,6 +8070,9 @@ ul.slides li img {
   font-size: 80%;
 }
 @media (min-width: 768px) {
+  .content-acerca-de h2 {
+    padding-left: 32%;
+  }
   .content-acerca-de p:nth-child(2),
   .content-acerca-de p:nth-child(3) {
     width: 60%;
@@ -8085,10 +8085,6 @@ ul.slides li img {
   .content-acerca-de blockquote p {
     text-align: right;
   }
-}
-.content-mensaje-jefegob h2,
-.content-sobre-la-plataforma h2 {
-  text-align: center;
 }
 .content-mensaje-jefegob p:nth-child(2),
 .content-sobre-la-plataforma p:nth-child(2),
@@ -8116,6 +8112,10 @@ ul.slides li img {
   font-size: 80%;
 }
 @media (min-width: 768px) {
+  .content-mensaje-jefegob h2,
+  .content-sobre-la-plataforma h2 {
+    padding-left: 32%;
+  }
   .content-mensaje-jefegob p:nth-child(2),
   .content-sobre-la-plataforma p:nth-child(2),
   .content-mensaje-jefegob p:nth-child(3),
@@ -8140,9 +8140,6 @@ ul.slides li img {
   padding-left: 0;
   padding-right: 10px;
 }
-.content-cronica-cdmx h2 {
-  text-align: center;
-}
 .content-cronica-cdmx p:nth-child(2),
 .content-cronica-cdmx p:nth-child(3) {
   width: 100%;
@@ -8165,6 +8162,9 @@ ul.slides li img {
   font-size: 80%;
 }
 @media (min-width: 768px) {
+  .content-cronica-cdmx h2 {
+    padding-left: 32%;
+  }
   .content-cronica-cdmx p:nth-child(2),
   .content-cronica-cdmx p:nth-child(3) {
     width: 60%;

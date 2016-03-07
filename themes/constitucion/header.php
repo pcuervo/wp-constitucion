@@ -13,7 +13,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta http-equiv="cleartype" content="on">
 
-		<!-- Favicon - generated with http://www.favicomatic.com/ -->
+		<!-- Favicon - generated with http://www.favicomatic.com/-->
 		<link rel="shortcut icon" href="<?php echo THEMEPATH; ?>images/favicon.png">
 		<!-- Google font(s) -->
 		<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>

@@ -121,7 +121,7 @@ if( isset( $result['success'] ) ): ?>
 				</div>
 			<!-- scroll horizontal -->
 				<div class="[ row ][ margin-bottom ]">
-				
+
 					<div class="[ col-md-12 ]">
 						<ul id="scroll" class="[ scroll-cronologia ][ horizontal-slide ][ text-center ]">
 

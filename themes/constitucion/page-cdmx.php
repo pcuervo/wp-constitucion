@@ -75,7 +75,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<img class="[ width-100 ]" src="<?php echo THEMEPATH; ?>images/expansion-urbana.gif" alt="">
 </section>
 
-
 <section class="[ container ][ space-id ]" id="hacia_el_constituyente">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">

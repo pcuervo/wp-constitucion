@@ -240,7 +240,7 @@ class Sondeo_CDMX_Survey {
 							</li>
 							<li id="js-dedicas" data-question="9">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q4">¿A qué te dedicas?</label>
-								<textarea class="fs-anim-lower" id="q4" name="q4" placeholder="Ocupación"></textarea>
+								<textarea class="fs-anim-lower" id="q4" name="q4" placeholder=""></textarea>
 							</li>
 							<li id="js-trabajas" data-input-trigger data-question="10">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="trabajas">¿Trabajas?</label>

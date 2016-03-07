@@ -74,58 +74,6 @@
 
 </div>
 
-<!-- menu desktop home -->
-<section>
-	<ul class="[ menu-home ][ text-center ][ hidden-xs hideen-sm ]">
-		<li class="[ dropdown--hover ]">
-			<span>
-				<a class="[ text-uppercase ]" href="<?php echo site_url('/constitucion-cdmx/'); ?>">
-					Acerca de la constitución<span class="caret"></span>
-				</a>
-			</span>
-			<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Mensaje del jefe de gobierno</a></li><!-- #jefe_gobierno -->
-				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_constitucion">Sobre la constitución</a></li>
-				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#grupo_trabajo">Grupo de trabajo</a></li>
-				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_plataforma">Sobre la plataforma</a></li>
-				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#constitución_wiki">Constitución en Wiki</a></li>
-				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#preguntas_frecuentes">Preguntas frecuentes</a></li>
-				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#biblioteca">Biblioteca</a></li>
-			</ul>
-		</li>
-		<li class="[ dropdown--hover ]">
-			<span>
-				<a class="[ text-uppercase ]" href="<?php echo site_url('/cdmx/'); ?>">
-					Ciudad de México<span class="caret"></span>
-				</a>
-			</span>
-			<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-				<li><a href="<?php echo site_url('/cdmx/'); ?>">Crónica</a></li><!-- #cronica -->
-				<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia_el_constituyente">Hacia el constituyente</a></li>
-				<li><a href="<?php echo site_url('/cdmx/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
-			</ul>
-		</li>
-		<li class="[ dropdown--hover ]">
-			<span><a class="[ text-uppercase ]" href="<?php echo site_url('/participa/'); ?>">Participa<span class="caret"></span></a></span>
-			<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-				<li><a href="<?php echo site_url('/participa/'); ?>">Imagina tu ciudad</a></li><!-- #imagina_ciudad -->
-				<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Da seguimiento a tu participación</a></li>
-				<li><a href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
-				<li><a href="<?php echo site_url('/participa/'); ?>#dialogos_publicos">Diálogos públicos</a></li>
-				<li><a href="<?php echo site_url('/participa/'); ?>#registra_tu_evento">Registra tu evento</a></li>
-				<li><a href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
-			</ul>
-		</li>
-		<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-	<!-- #SoyCDMX desktop home -->
-		<li id="js-btn-cdmx">
-			<a href="#">
-				<img class="[ svg icon icon--iconed--small icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
-				#SomosCDMX<!-- Contacto - page-contacto.php-->
-			</a>
-		</li>
-	</ul>
-</section>
 
 <section class="[ container ]" id="js-home-scroll-point">
 	<div class="[ row ]">

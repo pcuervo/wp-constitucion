@@ -6,11 +6,6 @@
 	<div class="[ logo-video ]">
 		<img class="[ width-80 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/Logotipo_Blanco-03.png">
 	</div>
-	<div class="[ container ]">
-		<div class="[ visible-xs ][ btn-nav-home ]">
-			<a type="button" data-toggle="modal" data-target="#modal-menu-home"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ][ pull-right ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
-		</div>
-	</div>
 	<div class="[ hero_video__scroll ][ text-center ][ js-hero_video__scroll ]">
 		<p class="[ text-center ][ color-light ][ margin-bottom--small ]">Conoce más</p>
 		<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/arrow-down-9.svg">

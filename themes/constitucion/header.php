@@ -31,7 +31,7 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body>
+	<body <?php body_class(); ?>>
 		<!-- Google Tag Manager -->
 		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-52W5VS"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -50,13 +50,11 @@
 			<p class="chromeframe">Estás usando una versión <strong>vieja</strong> de tu explorador. Por favor <a href="http://browsehappy.com/" target="_blank"> actualiza tu explorador</a> para tener una experiencia completa.</p>
 		<![endif]-->
 
-		<div><!-- class="container" -->
-
 		<?php $tweet = new Twitter;
 		$tweets = $tweet->feedTwitter();
 
 		if ( is_page('home') ): ?>
-			<header class="header-home [ hidden ]">
+			<header class="[ header-home ][ hidden ]">
 				<nav>
 <!-- menu desktop home -->
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs ]">
@@ -78,7 +76,18 @@
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#biblioteca">Biblioteca</a></li>
 							</ul>
 						</li>
-						<li class="[ text-uppercase ] <?php echo $activeCdmx; ?>"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
+						<li class="[ dropdown--hover ]<?php echo $activeCdmx; ?>">
+							<span>
+								<a class="[ text-uppercase ]" href="<?php echo site_url('/cdmx/'); ?>">
+									Ciudad de México<span class="caret"></span>
+								</a>
+							</span>
+							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
+								<li><a href="<?php echo site_url('/cdmx/'); ?>#cronica">Crónica</a></li>
+								<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia_el_constituyente">Hacia el constituyente</a></li>
+								<li><a href="<?php echo site_url('/cdmx/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
+							</ul>
+						</li>
 						<li class="[ dropdown--hover ]">
 							<span><a class="[ text-uppercase ]" href="<?php echo site_url('/participa/'); ?>">Participa<span class="caret"></span></a></span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
@@ -103,15 +112,15 @@
 <!-- nav header movil home -->
 					<div class="[ bg-light ][ visible-xs ]">
 						<div class="[ container ]">
-							<div class="[ row ]">
-								<div class="[ col-xs-9 ]">
-									<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"  alt="logo vertical de Ciudad de México"></a>
-									<span class="[ text-italic fz-xsmall ][ relative ]">punto</span>
-									<span class="[ text-italic fz-xsmall ][ relative top-12 right-32 ]">de encuentro</span> <!-- - page-home.php -->
-								</div>
-								<div class="[ col-xs-3 ][ text-center ][ padding--top padding--left--xlarge ]">
-									<a type="button" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg" alt="icono para desplegar navegador"></a>
-								</div>
+							<div class="[ width-col-9 ][ inline-block align-middle ]">
+								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"  alt="logo vertical de Ciudad de México"></a>
+								<span class="[ text-italic fz-xsmall ][ relative ]">punto</span>
+								<span class="[ text-italic fz-xsmall ][ relative top-12 right-32 ]">de encuentro</span> <!-- - page-home.php -->
+							</div><div
+								class="[ width-col-3 ][ inline-block align-middle ][ text-center ]">
+								<a class="[ pull-right ]" href="#" data-toggle="modal" data-target="#modal-menu">
+									<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg" alt="icono para desplegar navegador">
+								</a>
 							</div>
 						</div>
 					</div>
@@ -199,7 +208,18 @@
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#biblioteca">Biblioteca</a></li>
 							</ul>
 						</li>
-						<li class="[ text-uppercase ] <?php echo $activeCdmx; ?>"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
+						<li class="[ dropdown--hover ]<?php echo $activeCdmx; ?>">
+							<span>
+								<a class="[ text-uppercase ]" href="<?php echo site_url('/cdmx/'); ?>">
+									Ciudad de México<span class="caret"></span>
+								</a>
+							</span>
+							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
+								<li><a href="<?php echo site_url('/cdmx/'); ?>#cronica">Crónica</a></li>
+								<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia_el_constituyente">Hacia el constituyente</a></li>
+								<li><a href="<?php echo site_url('/cdmx/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
+							</ul>
+						</li>
 						<li class="[ dropdown--hover ]">
 							<span><a class="[ text-uppercase ]" href="<?php echo site_url('/participa/'); ?>">Participa<span class="caret"></span></a></span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
@@ -299,7 +319,7 @@
 					<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg">
 				</a>
 			</div>
-			<h1>#SomosCDMX</h1>
+			<h3>#SomosCDMX</h3>
 			<?php $tweet = new Twitter;
 			$tweets = $tweet->feedTwitter();
 			if (! empty($tweets) ):
@@ -313,3 +333,5 @@
 				<?php endforeach;
 			endif; ?>
 		</div>
+
+		<div class="[ main ]">

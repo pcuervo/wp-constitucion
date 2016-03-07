@@ -1,9 +1,10 @@
-<?php get_header(); the_post();
-the_title();
+<?php
+get_header();
+the_post();
 $url_image_constirucion = attachment_image_url( $post->ID, 'full' );
 $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
-<div class="[ bg-image rectangle-small ][ margin--header ][ relative ]" style="background-image: url('<?php echo $img_constitucion_cdmx; ?>');">
+<div class="[ bg-image rectangle-small ][ relative ]" style="background-image: url('<?php echo $img_constitucion_cdmx; ?>');">
 	<div class="[ bg-dark--opacity width-100 height-100 ]">
 		<h1 class="[ container ][ text-uppercase text-center ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Acerca de la Constitución</h1>
 	</div>

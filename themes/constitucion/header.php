@@ -60,9 +60,7 @@
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs ][ height-100 ]">
 						<li class="[ no-padding--sides ][ menu-desktop__logo ]">
 							<a class="[ inline-block ]" href="<?php echo site_url('/'); ?> ">
-								<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif" alt="logo vertical de Ciudad de México">
-								<span class="[ text-italic ][ relative bottom-10 ]">punto</span>
-								<span class="[ text-italic ][ relative top-20 right-42 ][ margin-right--31 ]">de encuentro</span> <!-- - page-home.php -->
+								<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="logo vertical de Ciudad de México">
 							</a>
 						</li><li
 						class="[ dropdown--hover dropdown--hover--acerca ][ menu-desktop__acerca ]">

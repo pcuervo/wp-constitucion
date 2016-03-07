@@ -1324,6 +1324,10 @@ h6,
 .h6 {
   font-size: 12px;
 }
+h2 {
+  letter-spacing: 2px;
+  font-family: "ABeeZee", sans-serif;
+}
 p {
   margin: 0 0 20px 0;
   font-family: "ABeeZee", sans-serif;
@@ -8063,7 +8067,7 @@ ul.slides li img {
 }
 @media (min-width: 768px) {
   .content-acerca-de h2 {
-    padding-left: 32%;
+    padding-left: 31%;
   }
   .content-acerca-de p:nth-child(2),
   .content-acerca-de p:nth-child(3) {
@@ -8106,7 +8110,7 @@ ul.slides li img {
 @media (min-width: 768px) {
   .content-mensaje-jefegob h2,
   .content-sobre-la-plataforma h2 {
-    padding-left: 32%;
+    padding-left: 31%;
   }
   .content-mensaje-jefegob p:nth-child(2),
   .content-sobre-la-plataforma p:nth-child(2),
@@ -8155,7 +8159,7 @@ ul.slides li img {
 }
 @media (min-width: 768px) {
   .content-cronica-cdmx h2 {
-    padding-left: 32%;
+    padding-left: 31%;
   }
   .content-cronica-cdmx p:nth-child(2),
   .content-cronica-cdmx p:nth-child(3) {

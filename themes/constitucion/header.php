@@ -161,9 +161,9 @@
 									foreach ($tweets as $tweet): ?>
 										<div class="[ row ]">
 											<div class="[ col-xs-12 ][ color-gray ]">
-												<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-												<p><?php echo $tweet['text']; ?></p>
-												<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
+												<p class="[ fz-xsmall ][ no-margin ][ color-primary ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
+												<p class="[ margin-bottom--small ]"><?php echo $tweet['text']; ?></p>
+												<p class="[ text-italic fz-xsmall ][ margin-bottom--small ][ text-right ]"><?php echo $tweet['date']; ?></p>
 												<hr class="[ border-bottom-gray ]">
 											</div>
 										</div>
@@ -279,8 +279,8 @@
 								<?php if (! empty($tweets) ):
 									foreach ($tweets as $tweet): ?>
 										<div>
-											<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-											<p><?php echo $tweet['text']; ?></p>
+											<p class="[ fz-xsmall ][ no-margin ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
+											<p class="[ margin-bottom--small ]"><?php echo $tweet['text']; ?></p>
 											<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
 											<hr class="[ border-bottom-gray ]">
 										</div>
@@ -305,9 +305,9 @@
 			if (! empty($tweets) ):
 				foreach ($tweets as $tweet): ?>
 					<div>
-						<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-						<p><?php echo $tweet['text']; ?></p>
-						<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
+						<p class="[ fz-xsmall ][ no-margin ][ color-primary ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
+						<p class="[ margin-bottom--small ]"><?php echo $tweet['text']; ?></p>
+						<p class="[ text-italic fz-xsmall ][ margin-bottom--small ][ text-right ]"><?php echo $tweet['date']; ?></p>
 						<hr class="[ border-bottom-gray ]">
 					</div>
 				<?php endforeach;

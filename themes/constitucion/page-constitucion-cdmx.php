@@ -106,7 +106,9 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 					$url_img = attachment_image_url($post->ID, 'thumbnail');?>
 					<div class="[ col-xs-6 col-sm-3 col-md-2 ][ content-trabajo ][ text-center ][ margin-bottom ]">
 						<a data-toggle="modal" data-target="#trabajador">
-							<img src="<?php echo $url_img; ?>">
+							<div class="[ content-trabajo__img ]">
+								<img src="<?php echo $url_img; ?>">
+							</div>
 							<h3 class="nombre"><?php the_title(); ?></h3>
 							<div class="biografia hidden"><?php the_content(); ?></div>
 							<div class="cargo hidden"><?php echo get_post_meta( $post->ID, 'cargo_integrante', true ); ?></div>

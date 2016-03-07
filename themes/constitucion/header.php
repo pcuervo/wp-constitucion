@@ -230,7 +230,7 @@
 						</li><li
 						id="js-btn-cdmx">
 							<a href="#">
-								<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
+								<img class="[ svg icon icon--iconed--small icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 								#SomosCDMX<!-- Contacto - page-contacto.php-->
 							</a>
 						</li>

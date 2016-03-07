@@ -11,7 +11,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<?php the_content(); ?>
 </section>
 
-<section class="[ container padding--sides--xsm ][ space-id ]" id="cronica">
+<section class="[ container padding--sides--xsm ]" id="cronica">
 	<div class="[ row ][ margin-bottom--large ]">
 		<div class="[ col-xs-12 ]">
 			<div class="[ content-cronica-cdmx ]">

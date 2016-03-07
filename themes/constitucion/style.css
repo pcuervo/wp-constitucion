@@ -8190,6 +8190,12 @@ ul.slides li img {
 .content-cronica-cdmx blockquote p:nth-child(2) {
   width: 100%;
 }
+@media (min-width: 768px) {
+  .content-cronica-cdmx p + p:last-child {
+    width: 60%;
+    margin-left: 32%;
+  }
+}
 .content-biblioteca {
   margin-bottom: 80px;
 }

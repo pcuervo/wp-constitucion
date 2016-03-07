@@ -179,35 +179,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	<img src="<?php echo THEMEPATH; ?>images/IMG_5993.jpg" alt="">
 </div>
 
-<section class="[ container ][ space-id ]" id="hacia_constituyente">
-	<div class="[ row ]">
-		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
-			<div class="[ content-acerca-de ][ margin-bottom--large ]">
-				<h2>Hacia el constituyente</h2>
-				<blockquote>
-					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
-				</blockquote>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-					accumsan lorem id porttitor porttitor. In pulvinar pellentesque ornare. Morbi facilisis sem molestie sapien euismod,
-					vel ornare mi sagittis. Nulla at porta arcu, ut lacinia dui. In semper.Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
-				</p>
-			</div>
-
-			<div class="[ content-acerca-de ]" >
-				<blockquote>
-					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
-				</blockquote>
-				<p>
-					Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
-				</p>
-			</div>
-
-		</div>
-	</div>
-</section>
-
-<section class="[ bg-gray--fondo ][ container ][ space-id ]" id="constitución_wiki">
+<section class="[ container ][ space-id ]" id="constitución_wiki">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ][ text-justify ]">
 			<h2 class="[ margin-bottom ][ text-center ]">Constitución en wiki</h2>

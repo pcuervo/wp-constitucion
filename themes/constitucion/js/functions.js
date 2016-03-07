@@ -16,10 +16,14 @@
 
         function videoHome(){
             var ancho_nuevo = $(window).width();
-            var alto_nuevo = $(window).height() - 100;
+            var alto_nuevo = $(window).height();
 
             $('#container_video').css({'width': ancho_nuevo, 'height': alto_nuevo});
         }
+
+        $('.js-hero_video__scroll').on('click', function(){
+            $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 80 }, '700');
+        });
 
         /**
          * INIT FLEXSLIDER
@@ -158,11 +162,11 @@
 
         $(window).scroll(function(){
             setMainPaddingTop();
-        }
+        });
 
         $(window).resize(function(){
             setMainPaddingTop();
-        }
+        });
 
         /*------------------------------------*\
             #GENERAL FUNCTIONS
@@ -255,11 +259,9 @@
             $(window).scroll(function() {
                 if ($(this).scrollTop() > 400){
                     $('header').addClass("sticky");
-                    $('header').removeClass("hidden");
                 }
                 else{
                     $('header').removeClass("sticky");
-                    $('header').addClass("hidden");
                 }
             });
 
@@ -273,11 +275,9 @@
 
                 if ($(this).scrollTop() > 40){
                     $('header').addClass("sticky");
-                    $('header').removeClass("hidden");
                 }
                 else{
                     $('header').removeClass("sticky");
-                    $('header').addClass("hidden");
                 }
             }
         });

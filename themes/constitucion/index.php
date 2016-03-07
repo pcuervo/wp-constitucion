@@ -4,8 +4,8 @@ $img_participa = get_option( 'img_noticias' );
 global $wp_query; ?>
 
 <div class="[ bg-image rectangle-small ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo $img_participa; ?>');">
-	<div class="[ bg-dark--opacity width-100 height-100 ]">
-		<h1 class="[ container ][ text-uppercase text-center ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Noticias</h1>
+	<div class="[ width-100 height-100 ]">
+		<h1 class="[ container ][ text-uppercase text-center ][ no-margin ][ center-full ][ color-light ][ letter-spacing ][ hidden ]">Noticias</h1>
 	</div>
 </div>
 
@@ -13,7 +13,7 @@ global $wp_query; ?>
 	<?php
 	$noticias = new WP_Query(array(
 		'post_type'      => 'post',
-		'posts_per_page' => 6,
+		'posts_per_page' => 3,
 		'paged' => $pagina
 	));
 	if ( $noticias->have_posts() ) :
@@ -22,11 +22,11 @@ global $wp_query; ?>
 			$date_arr = getDateTransform( $post->post_date );
 			$url_image = attachment_image_url( $post->ID, 'medium' );?>
 			<div class="[ row ][ margin-bottom--large ]">
-				<a href="<?php the_permalink(); ?>">
-					<div class="[ col-xs-5 no-padding--right ]">
+				<div class="[ col-xs-5 no-padding--right ]">
+					<a href="<?php the_permalink(); ?>">
 						<img class="[ img-responsive ]" src="<?php echo $url_image; ?>">
-					</div>
-				</a>
+					</a>
+				</div>
 				<div class="[ col-xs-7 ]">
 					<h2 class="[ fw-semibold ]">
 						<a class="[ color-gray ]" href="<?php the_permalink(); ?>">
@@ -44,6 +44,7 @@ global $wp_query; ?>
 		<?php endwhile;
 	endif;
 	wp_reset_postdata(); ?>
+
 	<div class="[ text-center ]">
 		<?php if($noticias->max_num_pages > 1):
 			$url = site_url('/noticias/');

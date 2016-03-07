@@ -13,6 +13,23 @@ header{
 	z-index: 1050;
 }
 
+.header-home{
+	height: 0px;
+	overflow: hidden;
+	.transition;
+
+	nav{ display: none; }
+}
+
+.header-home.sticky{
+	height: 55px;
+	overflow: visible;
+
+	@media (min-width: @screen-sm){ height: 70px; }
+
+	nav{ display: block; }
+}
+
 header li, ul.menu-home > li {
 	text-decoration: none;
 	display:inline;
@@ -76,15 +93,6 @@ li>span>a>:hover,
 ul.submenu{ .hidden; }
 
 .sticky{
-	ul.menu-desktop > li{
-		padding: 15px 1%;
-		@media (min-width: @screen-md) {padding: 15 1.5%;}
-		border-right: 1px solid lighten(@gray, 57%);
-	}
-
-	ul.menu-desktop > li:last-child {
-		border-right: none;
-	}
 
 	ul.menu-desktop{ .no-margin; }
 
@@ -260,10 +268,3 @@ nav a{
 	width: auto;
 	height: auto;
 }
-
-.header-home{
-	height: 0px;
-	.transition;
-}
-
-.header-home.sticky{ height: 60px; }

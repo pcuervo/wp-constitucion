@@ -72,6 +72,10 @@
 				<a type="button" data-toggle="modal" data-target="#modal-menu-home"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ][ pull-right ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
 			</div>
 		</div>
+		<div class="[ hero_video__scroll ][ text-center ][ js-hero_video__scroll ]">
+			<p class="[ text-center ][ color-light ][ margin-bottom--small ]">Conoce más</p>
+			<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/arrow-down-9.svg">
+		</div>
 	</div>
 
 </div>
@@ -79,7 +83,6 @@
 <!-- menu desktop home -->
 <section>
 	<ul class="[ menu-home ][ text-center ][ hidden-xs hideen-sm ]">
-		<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
 		<li class="[ dropdown--hover ]">
 			<span>
 				<a class="[ text-uppercase ]" href="<?php echo site_url('/constitucion-cdmx/'); ?>">
@@ -113,9 +116,10 @@
 			<span><a class="[ text-uppercase ]" href="<?php echo site_url('/participa/'); ?>">Participa<span class="caret"></span></a></span>
 			<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
 				<li><a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">Imagina tu ciudad</a></li>
-			<!-- 	<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Resultados</a></li> -->
+				<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Da seguimiento a tu participación</a></li>
 				<li><a href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
 				<li><a href="<?php echo site_url('/participa/'); ?>#dialogos_publicos">Diálogos públicos</a></li>
+				<li><a href="<?php echo site_url('/participa/'); ?>#registra_tu_evento">Registra tu evento</a></li>
 				<li><a href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
 				<li><a href="<?php echo site_url('/participa/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
 			</ul>
@@ -131,7 +135,7 @@
 	</ul>
 </section>
 
-<section class="[ container ]">
+<section class="[ container ]" id="js-home-scroll-point">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ]">
 			<h1 class="[ text-center ]">¿una constitución para la ciudad de méxico?</h1>
@@ -145,19 +149,29 @@
 <section class="flexslider relative">
 	<ul class="slides">
 		<li>
-			<img src="<?php echo THEMEPATH; ?>images/slides-01.jpg">
+			<a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">
+				<img src="<?php echo THEMEPATH; ?>images/slides-01.jpg">
+			</a>
 		</li>
 		<li>
-			<img src="<?php echo THEMEPATH; ?>images/slides-02.jpg">
+			<a href="<?php echo site_url('/participa/'); ?>#peticiones">
+				<img src="<?php echo THEMEPATH; ?>images/slides-02.jpg">
+			</a>
 		</li>
 		<li>
-			<img src="<?php echo THEMEPATH; ?>images/slides-03.jpg">
+			<a href="<?php echo site_url('/participa/' ); ?>#dialogos_publicos">
+				<img src="<?php echo THEMEPATH; ?>images/slides-03.jpg">
+			</a>
 		</li>
 		<li>
-			<img src="<?php echo THEMEPATH; ?>images/slides-04.jpg">
+			<a href="<?php echo site_url('/participa/' ); ?>#ensayos">
+				<img src="<?php echo THEMEPATH; ?>images/slides-04.jpg">
+			</a>
 		</li>
 		<li>
-			<img src="<?php echo THEMEPATH; ?>images/slides-05.jpg">
+			<a href="<?php echo site_url('/participa/' ); ?>#voces_ciudadanas">
+				<img src="<?php echo THEMEPATH; ?>images/slides-05.jpg">
+			</a>
 		</li>
 	</ul>
 </section><!-- fin slider -->
@@ -247,7 +261,7 @@
 
 <section class="[ section--bg bg-gray-light ][ no-margin--bottom ]">
 	<div class="[ container ]">
-		<h2 class="[ text-uppercase text-center ][ color-primary ]">Noticias</h2>
+		<h2 class="[ text-uppercase text-center ]">Noticias</h2>
 		<div class="[ row ]">
 			<!-- 3 noticias -->
 			<?php $noticias = new WP_Query(array(
@@ -262,7 +276,6 @@
 						<a href="<?php the_permalink(); ?>">
 							<img class="[ img-responsive ][ margin-bottom--small ]" src="<?php echo $url_image; ?>">
 							<h4 class="[ color-gray ][ text-uppercase ]"><?php the_title(); ?></h4>
-							<p class="[ color-gray ][ text-justify ]"><?php echo wp_trim_words( get_the_excerpt(), 28 ) ?></p>
 						</a>
 					</div>
 				<?php endwhile;

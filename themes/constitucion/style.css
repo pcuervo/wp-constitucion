@@ -1112,14 +1112,8 @@ section.section--bg {
   padding: 50px 0;
 }
 section.space-id {
-  padding-top: 70px;
-  margin-bottom: 70px;
-}
-@media screen and (min-width: 992px) {
-  section.space-id {
-    padding-top: 110px;
-    margin-bottom: 110px;
-  }
+  padding-top: 80px;
+  margin-bottom: 80px;
 }
 section.space-id article {
   margin-bottom: 35px;
@@ -8534,6 +8528,13 @@ ul.slides li img {
     height: 70vh;
   }
 }
+.hero_video__scroll {
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  cursor: pointer;
+}
 header {
   position: fixed;
   background-color: #fff;
@@ -8545,6 +8546,29 @@ header {
   header {
     height: 70px;
   }
+}
+.header-home {
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.header-home nav {
+  display: none;
+}
+.header-home.sticky {
+  height: 55px;
+  overflow: visible;
+}
+@media (min-width: 768px) {
+  .header-home.sticky {
+    height: 70px;
+  }
+}
+.header-home.sticky nav {
+  display: block;
 }
 header li,
 ul.menu-home > li {
@@ -8624,18 +8648,6 @@ li > span > a > :hover.active,
 }
 ul.submenu {
   display: none !important;
-}
-.sticky ul.menu-desktop > li {
-  padding: 15px 1%;
-  border-right: 1px solid #dbdbdb;
-}
-@media (min-width: 992px) {
-  .sticky ul.menu-desktop > li {
-    padding: 15 1.5%;
-  }
-}
-.sticky ul.menu-desktop > li:last-child {
-  border-right: none;
 }
 .sticky ul.menu-desktop {
   margin: 0 !important;
@@ -8807,16 +8819,6 @@ nav a:focus {
   min-height: 100%;
   width: auto;
   height: auto;
-}
-.header-home {
-  height: 0px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-}
-.header-home.sticky {
-  height: 60px;
 }
 footer {
   padding-top: 12px;

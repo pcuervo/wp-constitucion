@@ -141,7 +141,7 @@
 			}
 		} );
 
-		var opts_el = '<div class="[ cs-options ][ padding--header ]"><ul class="[ container ]">' + options + '</ul></div>';
+		var opts_el = '<div class="[ cs-options ][ padding--header paddig--bottom--large ]"><ul class="[ container ]">' + options + '</ul></div>';
 		this.selEl = document.createElement( 'div' );
 		this.selEl.className = this.el.className;
 		this.selEl.tabIndex = this.el.tabIndex;

@@ -75,4 +75,122 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<img class="[ width-100 ]" src="<?php echo THEMEPATH; ?>images/expansion-urbana.gif" alt="">
 </section>
 
+<section class="[ bg-gray-light section--bg space-id ][ no-margin--bottom ]" id="voces_ciudadanas">
+		<div class="[ container padding--sides--xsm padding--bottom--large ]">
+			<h2 class="[ no-margin-top ]">Voces ciudadanas</h2>
+			<div class="[ row ][ margin-bottom ]">
+				<?php $voces_ciudadanas = new WP_Query(array(
+						'post_type'      => 'voces-ciudadanas',
+						'posts_per_page' => 8,
+						'meta_query' => array(
+							array(
+								'key'     => 'video_voces',
+								'value'   => '',
+								'compare' => '!=',
+							),
+						),
+					));
+
+				if ( $voces_ciudadanas->have_posts() ) :
+					$count = 0;
+					$count_pasados = 0;
+					while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
+						<div class="[ col-xs-12 col-sm-6 col-lg-3 ][ margin-bottom ]">
+							<div class="[ js-video-wrapper ]">
+
+								<?php $video = get_post_meta( $post->ID, 'video_voces', true );
+								preg_match('/src="([^"]+)"/', $video, $match);
+								$url_video = $match[1]; ?>
+								<iframe class="[ embed-responsive-item ]" src="<?php echo $url_video; ?>" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</div>
+					<?php endwhile;
+				endif;
+				wp_reset_postdata(); ?>
+
+			</div>
+			<div class="[ text-right ]">
+				<a href="https://www.youtube.com/channel/UC3-12ySVHF-iItCbSdZ2z-Q" class="[ btn btn-primary btn-large ]" target="_blank">Ver más</a>
+			</div>
+		</div>
+
+		<div class="[ container padding--sides--xsm padding--bottom--large ]">
+			<h2 class="[ no-margin-top ]">Grupo de trabajo</h2>
+			<div class="[ row ][ margin-bottom ]">
+				<?php $voces_ciudadanas = new WP_Query(array(
+						'post_type'      => 'voces-ciudadanas',
+						'posts_per_page' => 3,
+						'meta_query' => array(
+							array(
+								'key'     => 'video_voces',
+								'value'   => '',
+								'compare' => '!=',
+							),
+						),
+					));
+
+				if ( $voces_ciudadanas->have_posts() ) :
+					$count = 0;
+					$count_pasados = 0;
+					while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
+						<div class="[ col-xs-12 col-sm-4 ][ margin-bottom ]">
+							<div class="[ js-video-wrapper ]">
+
+								<?php $video = get_post_meta( $post->ID, 'video_voces', true );
+								preg_match('/src="([^"]+)"/', $video, $match);
+								$url_video = $match[1]; ?>
+								<iframe class="[ embed-responsive-item ]" src="<?php echo $url_video; ?>" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</div>
+					<?php endwhile;
+				endif;
+				wp_reset_postdata(); ?>
+
+			</div>
+			<div class="[ text-right ]">
+				<a href="https://www.youtube.com/channel/UC3-12ySVHF-iItCbSdZ2z-Q" class="[ btn btn-primary btn-large ]" target="_blank">Ver más</a>
+			</div>
+		</div>
+
+		<div class="[ container padding--sides--xsm padding--bottom--large ]">
+			<h2 class="[ no-margin-top ]">"Más ciudadanas y ciudadanos:"</h2>
+			<div class="[ row ][ margin-bottom ]">
+
+					<?php $voces_ciudadanas = new WP_Query(array(
+						'post_type'      => 'voces-ciudadanas',
+						'posts_per_page' => 5,
+						'meta_query' => array(
+							array(
+								'key'     => 'video_voces',
+								'value'   => '',
+								'compare' => '!=',
+							),
+						),
+					));
+
+					if ( $voces_ciudadanas->have_posts() ) :
+						$count = 0;
+						$count_pasados = 0;
+						while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
+							<div class="[ col-xs-12 col-sm-4 col-md-2-5 ][ margin-bottom ]">
+								<div class="[ js-video-wrapper ]">
+
+									<?php $video = get_post_meta( $post->ID, 'video_voces', true );
+									preg_match('/src="([^"]+)"/', $video, $match);
+									$url_video = $match[1]; ?>
+									<iframe class="[ embed-responsive-item ]" src="<?php echo $url_video; ?>" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+						<?php endwhile;
+					endif;
+					wp_reset_postdata(); ?>
+
+			</div>
+			<div class="[ text-right ]">
+				<a href="https://www.youtube.com/channel/UC3-12ySVHF-iItCbSdZ2z-Q" class="[ btn btn-primary btn-large ]" target="_blank">Ver más</a>
+			</div>
+		</div>
+
+	</section>
+
 <?php get_footer(); ?>

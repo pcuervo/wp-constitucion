@@ -121,7 +121,6 @@
 				<li><a href="<?php echo site_url('/participa/'); ?>#dialogos_publicos">Diálogos públicos</a></li>
 				<li><a href="<?php echo site_url('/participa/'); ?>#registra_tu_evento">Registra tu evento</a></li>
 				<li><a href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
-				<li><a href="<?php echo site_url('/participa/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
 			</ul>
 		</li>
 		<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>

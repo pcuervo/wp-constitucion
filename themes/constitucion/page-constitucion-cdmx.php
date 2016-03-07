@@ -210,7 +210,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 <section class="[ container ][ space-id ]" id="constitución_wiki">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ][ text-justify ]">
-			<h2 class="[ margin-bottom ]">Constitución en wiki</h2>
+			<h2 class="[ margin-bottom ][ text-center ]">Constitución en wiki</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit in suscipit similique tempore ab quam voluptatibus, quos modi fuga iusto earum incidunt repellendus quis tempora? Perspiciatis officia accusantium temporibus esse.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum possimus dolorum quam illo veniam id placeat nulla repellat vero debitis ratione consectetur eos praesentium, delectus doloremque dolor, ipsa deserunt eaque.</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem consequuntur error illum. Atque esse, et iure rerum fugiat consequuntur repellendus est dignissimos alias officia fugit culpa nam consequatur exercitationem quae!</p>
 		</div>
@@ -226,7 +226,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
 <section class="[ space-id ]" id="preguntas_frecuentes">
 	<div class="[ container ]">
-		<h2 class="[ margin-bottom ]">Preguntas frecuentes</h2>
+		<h2 class="[ margin-bottom ][ text-center ]">Preguntas frecuentes</h2>
 		<?php $preguntas = new WP_Query(array(
 				'post_type'      => 'preguntas-frecuentes',
 				'posts_per_page' => -1,
@@ -259,7 +259,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
 
 <section class="[ container ][ space-id ][ content-biblioteca ]" id="biblioteca">
-	<h2 class="[ margin-bottom no-margin-top ]" id="biblioteca">Biblioteca</h2>
+	<h2 class="[ margin-bottom no-margin-top ][ text-center ]" id="biblioteca">Biblioteca</h2>
 	<a href="#"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></a>
 	<a href="#"><p>Lorem ipsum dolor sit amet,  adipisicing elit.</p></a>
 	<a href="#"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></a>

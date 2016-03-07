@@ -2654,8 +2654,6 @@ output {
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
@@ -8052,7 +8050,7 @@ ul.slides li img {
   height: auto;
 }
 .content-acerca-de h2 {
-  margin-left: 32%;
+  text-align: center;
 }
 .content-acerca-de p:nth-child(2),
 .content-acerca-de p:nth-child(3) {
@@ -8091,7 +8089,7 @@ ul.slides li img {
 }
 .content-mensaje-jefegob h2,
 .content-sobre-la-plataforma h2 {
-  margin-left: 32%;
+  text-align: center;
 }
 .content-mensaje-jefegob p:nth-child(2),
 .content-sobre-la-plataforma p:nth-child(2),
@@ -8144,7 +8142,7 @@ ul.slides li img {
   padding-right: 10px;
 }
 .content-cronica-cdmx h2 {
-  margin-left: 32%;
+  text-align: center;
 }
 .content-cronica-cdmx p:nth-child(2),
 .content-cronica-cdmx p:nth-child(3) {
@@ -8826,6 +8824,8 @@ footer {
   text-align: center;
 }
 footer img {
+  display: inline-block;
+  vertical-align: bottom;
   width: 150px;
   margin-right: 20px;
 }
@@ -8839,8 +8839,11 @@ footer img {
   padding-bottom: 12px;
 }
 footer a {
+  display: inline-block;
+  vertical-align: bottom;
   text-decoration: none;
   font-size: 12px;
+  line-height: 9px;
   margin-left: 20px;
   margin-right: 20px;
   color: #cccccc;

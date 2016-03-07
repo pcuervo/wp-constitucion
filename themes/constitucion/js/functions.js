@@ -3,6 +3,27 @@
     "use strict";
 
     $(function(){
+        /**
+         * VIDEO FULL
+         */
+        if (document.getElementById("container_video") ){
+            videoHome();
+            $( window ).resize(function() {
+                videoHome();
+            });
+
+        }
+
+        function videoHome(){
+            var ancho_nuevo = $(window).width();
+            var alto_nuevo = $(window).height();
+
+            $('#container_video').css({'width': ancho_nuevo, 'height': alto_nuevo});
+        }
+
+        $('.js-hero_video__scroll').on('click', function(){
+            $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 80 }, '700');
+        });
 
         /**
          * INIT FLEXSLIDER
@@ -11,90 +32,103 @@
             animation: "slide"
         });
 
-        /** 
+        /**
          * DATOS MODAL GRUPO DE TRABAJO
          */
         $('.content-trabajo').on('click', function(){
             var bio = $(this).children('a').children('.biografia').html();
             var name = $(this).children('a').children('.nombre').html();
+            var imagen = $(this).children('a').children('img').attr('src');
+            var cargo = $(this).children('a').children('.cargo').html();
 
             $('.biografia-modal').empty().html(bio);
             $('.nombre-modal').empty().html(name);
-        }); 
+            $('.imagen-modal').attr('src', '').attr('src', imagen);
+            $('.cargo-modal').empty().html(cargo);
+
+        });
 
         /**------ FORMULARIOS -------*/
-            /** 
-             * DATEPIKER
-             */
-            $('.date-ensayo').datepicker({
-                dateFormat : 'yy-mm-dd',
-                minDate: 0,
-                onSelect: function(dateText, inst) { 
-                    window.dateInicio = dateText;
-                    $('.date-ensayo-fin').removeAttr("disabled");
-               }
-            });
+        /**
+         * DATEPIKER
+         */
+        $('.date-ensayo').datepicker({
+            dateFormat : 'yy-mm-dd',
+            minDate: 0,
+            onSelect: function(dateText, inst) {
+                window.dateInicio = dateText;
+                $('.date-ensayo-fin').removeAttr("disabled");
+           }
+        });
 
-            $('.date-ensayo-fin').datepicker({
-                dateFormat : 'yy-mm-dd',
-                minDate: 0
-            });
+        $('.date-ensayo-fin').datepicker({
+            dateFormat : 'yy-mm-dd',
+            minDate: 0
+        });
 
-            /** 
-             * VALIDAR LIGAS DE ARCHIVOS
-             */
-            $('#form-ensayos').on('submit', function(event){
-                event.preventDefault();
-                var result_a = getValidateDocs('fotografias_ensayo');
-                var result_b = getValidateDocs('lista_asistentes_ensayo');
-                var result_c = getValidateDocs('compartir_documento_ensayo');
+        /**
+         * VALIDAR LIGAS DE ARCHIVOS
+         */
+        $('#form-ensayos').on('submit', function(event){
+            event.preventDefault();
+            var result_a = getValidateDocs('fotografias_ensayo');
+            var result_b = getValidateDocs('lista_asistentes_ensayo');
+            var result_c = getValidateDocs('compartir_documento_ensayo');
 
-                if (result_a && result_b && result_c) {
-                    var form = document.getElementById("form-ensayos");
-                    form.submit();
-                };
-                
-            });
+            if (result_a && result_b && result_c) {
+                var form = document.getElementById("form-ensayos");
+                form.submit();
+            };
 
-            /** 
-             * VALIDAR LIGAS DE ARCHIVOS
-             */
-            $('#form-eventos').on('submit', function(event){
-                event.preventDefault();
-                var result_a = getValidateDocs('fotografia_evento');
+        });
 
-                if (result_a) {
-                    var form = document.getElementById("form-eventos");
-                    form.submit();
-                };
-                 
-            });
- 
-            function getValidateDocs(id_object){
-                var text = $('#'+id_object).val();
-                var docs = /docs.google.com/.test(text);  
-                var dropbox = /dropbox.com/.test(text);
-                var onedrive = /onedrive.live.com/.test(text);
+        /**
+         * VALIDAR LIGAS DE ARCHIVOS
+         */
+        $('#form-eventos').on('submit', function(event){
+            event.preventDefault();
+            var result_a = getValidateDocs('fotografia_evento');
 
-                if (docs || dropbox || onedrive ) {
-                    return true;
-                }else if(text == ''){
-                    return true;
-                };
+            if (result_a) {
+                var form = document.getElementById("form-eventos");
+                form.submit();
+            };
+        });
 
-                $('#'+id_object).addClass('parsley-error');
+        function getValidateDocs(id_object){
+            var text = $('#'+id_object).val();
+            var docs = /docs.google.com/.test(text);
+            var dropbox = /dropbox.com/.test(text);
+            var onedrive = /onedrive.live.com/.test(text);
 
-                return false;
+            if (docs || dropbox || onedrive ) {
+                return true;
+            }else if(text == ''){
+                return true;
+            };
 
-            }
+            $('#'+id_object).addClass('parsley-error');
+
+            return false;
+
+        }
+
         /**------ FORMULARIOS -------*/
- 
+
         $('.nota-destacada a').on('click', function(event){
             event.preventDefault();
-        });  
- 
-        if( parseInt( isPageSondeo ) ){ 
+        });
+
+        if( parseInt( isPageSondeo ) ){
             $('[data-parsley-certificado]').parsley();
+        }
+        if( parseInt( isPageParticipa ) ){
+            addWordValidator();
+            $('[data-parsley-certificado]').parsley();
+            $('.js-check-reference-code').submit(function(e){
+                e.preventDefault();
+                surveyExists( $('input[name="ref_code"]').val() );
+            });
         }
 
         imgToSvg();
@@ -104,6 +138,35 @@
             createPieChart();
             createLineChart();
         }
+
+        /*------------------------------------*\
+            #GET/SET FUNCTIONS
+        \*------------------------------------*/
+
+        /**
+         * Get header's height
+         */
+        function getHeaderHeight(){
+            return $('header').outerHeight();
+        }// getHeaderHeight
+
+        /**
+         * Set main's padding top
+         */
+        function setMainPaddingTop(){
+            var headerHeight = getHeaderHeight();
+            $('.main').css('padding-top', headerHeight);
+        }// setMainPaddingTop
+
+        setMainPaddingTop();
+
+        $(window).scroll(function(){
+            setMainPaddingTop();
+        });
+
+        $(window).resize(function(){
+            setMainPaddingTop();
+        });
 
         /*------------------------------------*\
             #GENERAL FUNCTIONS
@@ -147,25 +210,19 @@
             var data = [
                 {
                     value: 60,
-                    color: "#e80e8a",
+                    color: "#457390",
                     highlight: "#222",
                     label: "nombre"
                 },
                 {
-                    value: 10,
-                    color: "#cccccc",
+                    value: 15,
+                    color: "#d1d8e4",
                     highlight: "#222",
                     label: "nombre"
                 },
                 {
-                    value: 10,
-                    color: "#555",
-                    highlight: "#222",
-                    label: "nombre"
-                },
-                {
-                    value: 20,
-                    color: "#4a4a4a",
+                    value: 25,
+                    color: "#363636",
                     highlight: "#222",
                     label: "nombre"
                 }
@@ -184,12 +241,12 @@
                 datasets: [
                     {
                         label: '2010 customers #',
-                        fillColor: '#382765',
+                        fillColor: '#457390',
                         data: [2500, 1902, 1041, 610, 1245, 952]
                     },
                     {
                         label: '2014 customers #',
-                        fillColor: '#7BC225',
+                        fillColor: '#363636',
                         data: [3104, 1689, 1318, 589, 1199, 1436]
                     }
                 ]
@@ -197,21 +254,30 @@
             new Chart(ctx).Bar(data);
         }
 
-        /*------------------------------------*\
-            ANIMATED STICKY HEADER
-        \*------------------------------------*/
+        if( parseInt( isHome ) ){
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 400){
+                    $('header').addClass("sticky");
+                }
+                else{
+                    $('header').removeClass("sticky");
+                }
+            });
+
+        }
+
+        $('.flex-prev, .flex-next').addClass('hidden-xs');
 
         $(window).scroll(function() {
 
             if( parseInt( isHome ) ){
 
-                if ($(this).scrollTop() > 400){
+                if ($(this).scrollTop() > 40){
                     $('header').addClass("sticky");
-                    $('header').removeClass("hidden");
                 }
                 else{
                     $('header').removeClass("sticky");
-                    $('header').addClass("hidden");
                 }
             }
         });
@@ -225,77 +291,6 @@
 
         }
 
-        /**
-         * MAPS
-         */
-
-        if (isHome == 1) {
-            //initialize();
-        };
-
-        // function initialize() {
-
-        //     var data_kioskos = [];
-        //     var infoWindowContent = [];
-
-        //     $.each( kioskos, function( key, value ) {
-        //         var cada_uno = [value.name, value.lat, value.long];
-        //         var data_uno = ['<div class="info_content"><h3>'+value.name+'</h3></div>'];
-        //         data_kioskos.push(cada_uno);
-        //         infoWindowContent.push(data_uno);
-
-        //     });
-
-
-        //     var map;
-        //     var bounds = new google.maps.LatLngBounds();
-        //     var mapOptions = {
-        //         mapTypeId: 'roadmap',
-        //         draggable: false,
-        //         scrollwheel: false,
-        //         zoom: 13
-        //     };
-
-        //     // Display a map on the page
-        //     map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-        //     map.setTilt(45);
-
-        //     // Multiple Markers
-        //     var markers = data_kioskos;
-
-        //     // Display multiple markers on a map
-        //     var infoWindow = new google.maps.InfoWindow(), marker, i;
-
-        //     // Loop through our array of markers & place each one on the map
-        //     for( i = 0; i < markers.length; i++ ) {
-        //         var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-        //         bounds.extend(position);
-        //         marker = new google.maps.Marker({
-        //             position: position,
-        //             map: map,
-        //             title: markers[i][0]
-        //         });
-
-        //         // Allow each marker to have an info window
-        //         google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        //             return function() {
-        //                 infoWindow.setContent(infoWindowContent[i][0]);
-        //                 infoWindow.open(map, marker);
-        //             }
-        //         })(marker, i));
-
-        //         // Automatically center the map fitting all markers on the screen
-        //         map.fitBounds(bounds);
-        //     }
-
-        //     // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
-        //     var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-        //         // this.setZoom(14);
-        //         google.maps.event.removeListener(boundsListener);
-        //     });
-
-        // }
-
         $('#js-btn-cdmx a').click(function(e){
             e.preventDefault();
             toggleTwitter();
@@ -303,7 +298,7 @@
 
         $('#js-hide-twitter').click(function(e){
             e.preventDefault();
-            toggleTwitter()
+            toggleTwitter();
         })
 
         function toggleTwitter(){
@@ -322,6 +317,58 @@
             }, 500, function() {
                 $( ".soy-cdmx" ).addClass('js-hidden');
             });
+        }
+
+        function surveyExists( refCode ){
+            console.log( refCode );
+            $.post(
+                ajax_url,
+                {
+                    reference_code:     refCode,
+                    action:             'survey_exists'
+                },
+                function( response ){
+                    if( '0' == response ){
+                        alert( 'No existe ninguna encuesta con folio: ' + refCode );
+                        return;
+                    }
+                    $('.js-codigo-referencia span').text( response );
+                    $('#modal-agradecimiento').modal('toggle');
+                    $('input[name="referencia"]').val( response )
+                }
+            );
+        }
+
+        function addWordValidator(){
+            // minwords, maxwords, words extra validators
+            var countWords = function (string) {
+              return string
+                  .replace( /(^\s*)|(\s*$)/gi, "" )
+                  .replace( /\s+/gi, " " )
+                  .split(' ').length;
+            };
+
+            window.Parsley.addValidator(
+              'minwords',
+              function (value, nbWords) {
+                return countWords(value) >= nbWords;
+              }, 32)
+              .addMessage('en', 'minwords', 'This value needs more words');
+
+            window.Parsley.addValidator(
+              'maxwords',
+              function (value, nbWords) {
+                return countWords(value) <= nbWords;
+              }, 32)
+              .addMessage('en', 'maxwords', 'This value needs fewer words');
+
+            window.Parsley.addValidator(
+              'words',
+              function (value, arrayRange) {
+                var length = countWords(value);
+                return length >= arrayRange[0] && length <= arrayRange[1];
+              }, 32)
+              .addMessage('en', 'words', 'This value has the incorrect number of words');
         }
 
     });

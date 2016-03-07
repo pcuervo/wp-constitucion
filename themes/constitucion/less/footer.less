@@ -3,20 +3,27 @@
 // --------------------------------------------------
 
 footer{
-	.padding--top-bottom;
+	.padding--top;
 	.bg-gray-darken;
 	.text-center
 }
 
 footer img{
-	.margin-bottom;
+	display: inline-block;
+	vertical-align: bottom;
 	width: 150px;
+	.margin-right;
 	 @media (min-width: 480px){ width: 180px; }
 }
 
+.links-footer{text-align:center;padding-bottom: 12px;}
+
 footer a{
+	display: inline-block;
+	vertical-align: bottom;
 	text-decoration: none;
 	.fz-small;
+	line-height: 9px;
 	.margin-sides;
 	.color-gray--xlight;
 	@media (max-width: 480px){

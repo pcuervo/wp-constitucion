@@ -43,7 +43,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		// scripts
 		wp_enqueue_script( 'jquery', 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js', array(), '2.0.3', true );
 		wp_enqueue_script('jquery-ui-datepicker');
-		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '1.0', true );
+		wp_enqueue_script( 'plugins', JSPATH.'plugins.min.js', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js', array('jquery'), '3.1.0', true );
 		wp_enqueue_script( 'api-google', 'https://maps.googleapis.com/maps/api/js', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'chart', JSPATH.'Chart.js', array('jquery'), '1.0', false );
@@ -175,30 +175,6 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 
 // MODIFICAR EL MAIN QUERY ///////////////////////////////////////////////////////////
-
-
-
-	add_action( 'pre_get_posts', function($query){
-
-		if ( $query->is_main_query() and ! is_admin() ) {
-			if ( is_home() ) {
-				$query->set( 'posts_per_page', 1 );
-				$query->set( 'post_type', 'post' );
-
-				$meta_q = array(
-							array(
-								'key'     => 'destacado_noticia',
-								'value'   => '1',
-								'compare' => '=',
-							),
-						);
-				$query->set( 'meta_query', $meta_q );
-
-			}
-		}
-		return $query;
-
-	});
 
 
 

@@ -156,17 +156,13 @@
 					</div>
 
 <!-- #SoyCDMX mobile home -->
-					<div class="modal fade" id="SoyCDMX-mobile--home" tabindex="-1" role="dialog">
-						<div class="[ modal-content ][ width-100 ][ no-margin ]">
-							<div class="[ container ]">
-								<div class="[ row ]">
-									<div class="[ col-xs-2 ][ padding--top-bottom--large ]">
-										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
-									</div>
-									<div class="[ col-xs-10 ]">
-										<h1>#SoyCDM</h1>
-									</div>
+					<div class="modal fade [ bg-light ]" id="SoyCDMX-mobile--home" tabindex="-1" role="dialog">
+						<div class="[ modal-content no-border-radius width--100 ][ width-100 ][ no-margin ]">
+							<div class="[ container ][ padding--top ]">
+								<div class="[ absolute right-10 ]">
+									<a type="button" class="close [ opacity-7 ]" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
 								</div>
+								<h3>#SomosCDMX</h3>
 								<?php if (! empty($tweets) ):
 									foreach ($tweets as $tweet): ?>
 										<div class="[ row ]">
@@ -285,17 +281,13 @@
 					</div>
 
 <!-- #SoyCDMX mobile not-home -->
-					<div class="modal fade" id="SoyCDMX-mobile" tabindex="-1" role="dialog">
-						<div class="[ modal-content ][ width-100 ][ no-margin ]">
-							<div class="[ container ]">
-								<div class="[ row ]">
-									<div class="[ col-xs-2 ][ padding--top-bottom--large ]">
-										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
-									</div>
-									<div class="[ col-xs-10 ]">
-										<h1>#SoyCDM</h1>
-									</div>
+					<div class="modal fade [ bg-light ]" id="SoyCDMX-mobile" tabindex="-1" role="dialog">
+						<div class="[ modal-content no-border-radius width--100 ][ no-margin ]">
+							<div class="[ container ][ padding--top ]">
+								<div class="[ absolute right-10 ]">
+									<a type="button" class="close [ opacity-7 ]" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
 								</div>
+								<h3>#SomosCDMX</h3>
 								<?php if (! empty($tweets) ):
 									foreach ($tweets as $tweet): ?>
 										<div>
@@ -314,7 +306,7 @@
 		<?php endif; ?>
 
 		<div class="[ soy-cdmx right-370 ][ js-hidden ]">
-			<div class="[ opacity-7 ][ padding--top-bottom--large ][ absolute right-10 ]">
+			<div class="[ opacity-7 ][ absolute right-10 ]">
 				<a id="js-hide-twitter" href="#">
 					<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg">
 				</a>

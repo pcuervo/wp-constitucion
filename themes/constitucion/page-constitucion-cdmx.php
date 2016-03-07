@@ -207,7 +207,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</div>
 </section>
 
-<section class="[ container ][ space-id ]" id="constitución_wiki">
+<section class="[ bg-gray--fondo ][ container ][ space-id ]" id="constitución_wiki">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ][ text-justify ]">
 			<h2 class="[ margin-bottom ][ text-center ]">Constitución en wiki</h2>

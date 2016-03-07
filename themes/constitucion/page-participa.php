@@ -291,8 +291,8 @@ get_header(); the_post();
 						<label for="">Describe a continuación las reflexiones o propuestas centrales de la sesión de trabajo y el contexto en el que esta se llevó a cabo.</label>
 						<textarea name="resumen_ensayo" id="resumen_ensayo" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 250 palabras" required="" data-parsley-maxwords="250" data-parsley-required-message="El resumen es obligatorio" data-parsley-maxwords-message="El resumen no puede exceder 250 palabras"></textarea>
 						<label for="">Señala a continuación 3 palabras clave vinculadas a este documento</label>
-						<input name="palabra_a" id="palabra_a" type="text" class="[ form-control ][ input-primary ][ margin-bottom ]" placeholder="Palabra 1" required="" data-parsley-error-message="Palabra obligatoria">
-						<input name="palabra_b" id="palabra_b" type="text" class="[ form-control ][ input-primary ][ margin-bottom ]" placeholder="Palabra 2" required="" data-parsley-error-message="Palabra obligatoria">
+						<input name="palabra_a" id="palabra_a" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 1" required="" data-parsley-error-message="Palabra obligatoria">
+						<input name="palabra_b" id="palabra_b" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 2" required="" data-parsley-error-message="Palabra obligatoria">
 						<input name="palabra_c" id="palabra_c" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 3" required="" data-parsley-error-message="Palabra obligatoria">
 						<label for="">Comparte en una frase un mensaje central de la relatoría o ensayo</label>
 						<input name="mensaje_central" id="mensaje_central" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">

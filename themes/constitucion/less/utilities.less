@@ -454,8 +454,8 @@
 	& h3{
 		color: @gray;
 		.margin-top--xsmall;
-		@media (max-width: @screen-sm){ font-size: 16px; }
-		@media (min-width: @screen-sm){ font-size: 18px; }
+		font-size: 16px;
+		font-weight: 400;
 		&:hover, &:focus{
 			text-decoration: none;
 			color: @gray-light;
@@ -475,7 +475,6 @@
 }
 
 .content-acerca-de{
-	h2{ text-align: center; }
 	p:nth-child(2),p:nth-child(3) {
 		width: 100%;
 		display: inline-block;
@@ -498,6 +497,7 @@
 	}
 
 	@media (min-width: @screen-sm-min){
+		h2{ padding-left: 31%;}
 		p:nth-child(2),p:nth-child(3) {
 			width: 60%;
 			padding-left: 10px;

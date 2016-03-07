@@ -13,7 +13,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta http-equiv="cleartype" content="on">
 
-		<!-- Favicon - generated with http://www.favicomatic.com/ -->
+		<!-- Favicon - generated with http://www.favicomatic.com/-->
 		<link rel="shortcut icon" href="<?php echo THEMEPATH; ?>images/favicon.png">
 		<!-- Google font(s) -->
 		<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>
@@ -90,7 +90,8 @@
 						class="[ dropdown--hover ]">
 							<span><a class="[ text-uppercase ]" href="<?php echo site_url('/participa/'); ?>">Participa<span class="caret"></span></a></span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-								<li><a href="<?php echo site_url('/participa/'); ?>">Imagina tu ciudad</a></li><!-- #imagina_ciudad -->
+								<li><a href="<?php echo site_url('/participa/'); ?>">Instrucciones</a></li>
+								<li><a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">Imagina tu ciudad</a></li><!-- #imagina_ciudad -->
 								<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Da seguimiento a tu participación</a></li>
 								<li><a href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
 								<li><a href="<?php echo site_url('/participa/'); ?>#dialogos_publicos">Diálogos públicos</a></li>
@@ -211,7 +212,8 @@
 						class="[ dropdown--hover ]">
 							<span><a class="[ text-uppercase ]" href="<?php echo site_url('/participa/'); ?>">Participa<span class="caret"></span></a></span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-								<li><a href="<?php echo site_url('/participa/'); ?>">Imagina tu ciudad</a></li><!-- #imagina_ciudad -->
+								<li><a href="<?php echo site_url('/participa/'); ?>">Instrucciones</a></li>
+								<li><a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">Imagina tu ciudad</a></li><!-- #imagina_ciudad -->
 								<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Da seguimiento a tu participación</a></li>
 								<li><a href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
 								<li><a href="<?php echo site_url('/participa/'); ?>#dialogos_publicos">Diálogos públicos</a></li>

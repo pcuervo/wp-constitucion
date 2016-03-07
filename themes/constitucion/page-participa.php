@@ -265,68 +265,70 @@ get_header(); the_post();
 		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
 	</div>
 
-	<section class="[ container ][ space-id ]" id="ensayos">
-		<article class="[ row ][ margin-bottom ]">
-			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
-				<h2 class="[ no-margin-top ]">Ensayo</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ducimus soluta. Tempora recusandae cum cumque odit consequatur, laborum nulla atque accusamus doloribus rem placeat, optio libero delectus voluptatem repellendus facilis.</p>
-			</div>
-		</article>
-		<article class="">
-			<h2 class="[ margin-bottom ]">Comparte tu ensayo o relatoria</h2>
-			<form id="form-ensayos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="" >
-				<div class="[ row ]">
-					<div class="[ form-group ][ col-xs-12 col-sm-6 ]">
-						<label for="">Título del ensayo o de la relatoría</label>
-						<input type="text" name="titulo_ensayo" id="titulo_ensayo" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="" maxlength="100" data-parsley-error-message="El título es obligatorio">
-						<label for="">Nombre del evento o sesión colaborativa de la cual se derivó el documento</label>
-						<input name="nombre_ensayo" id="nombre_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres"  required="" maxlength="100" data-parsley-error-message="El nombre es obligatorio">
-						<label for="">Comparte una frase que describa el evento/sesión de trabajo</label>
-						<input name="frase_ensayo" id="frase_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres"  required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">
-						<label for="">Fechas en las que sesionó el grupo de trabajo</label><br>
-						<label for="">Inicio</label>
-						<input type="text" name="fechaInicio" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo" placeholder="yyyy-mm-dd" required="" data-parsley-error-message="La fecha es obligatoria"><br>
-						<label for="">Final</label>
-						<input type="text" name="fechaFinal" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo-fin" placeholder="yyyy-mm-dd" disabled>
-						<label for="">Describe a continuación las reflexiones o propuestas centrales de la sesión de trabajo y el contexto en el que esta se llevó a cabo.</label>
-						<textarea name="resumen_ensayo" id="resumen_ensayo" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 250 palabras" required="" data-parsley-maxwords="250" data-parsley-required-message="El resumen es obligatorio" data-parsley-maxwords-message="El resumen no puede exceder 250 palabras"></textarea>
-						<label for="">Señala a continuación 3 palabras clave vinculadas a este documento</label>
-						<input name="palabra_a" id="palabra_a" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 1" required="" data-parsley-error-message="Palabra obligatoria">
-						<input name="palabra_b" id="palabra_b" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 2" required="" data-parsley-error-message="Palabra obligatoria">
-						<input name="palabra_c" id="palabra_c" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 3" required="" data-parsley-error-message="Palabra obligatoria">
-						<label for="">Comparte en una frase un mensaje central de la relatoría o ensayo</label>
-						<input name="mensaje_central" id="mensaje_central" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">
-						<label for="">Lista a continuación el nombre de todos los autores separados por comas</label>
-						<input name="autores_ensayo" id="autores_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="Los autores son obligatorios">
-					</div>
-					<div class="[ form-group ][ col-xs-12 col-sm-6 ]">
-						<label for="">En caso de que este ensayo o relatoría haya sido elaborado por una institución u organización señala abajo cual es. En caso de más de una, separar por comas.</label>
-						<input name="institucion-u-organizacion" id="institucion-u-organizacion" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="La institución u organización es obligatoria">
-						<label for="">Comparte fotografías del grupo que trabajó este documento.</label>
-						<input name="fotografias_ensayo" id="fotografias_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="Las fotografías son obligatoria">
-						<label for="">Comparte también fotografías con una liga a flicker, instagram o blog</label>
-						<input name="fotografias_redes_ensayo" id="fotografias_redes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]">
-						<label for="">Comparte la lista de asistentes firmada de los participantes de la sesión/evento con una liga a Google Drive, Dropbox o OneDrive</label>
-						<input name="lista_asistentes_ensayo" id="lista_asistentes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="La lista de asistentes es obligatoria">
-						<label for="">Copia a continuación la liga a Google Drive, Dropbox o OneDrive. Este deberá estar en formato .docx (Microsoft Word) y no deberá exceder 8 páginas. <a href="<?php echo site_url('/guia-para-compartir-el-texto/'); ?>" target="_blank" class="[ color-gray--light ][ fz--small ]">Aqui puedes descargar una guía para compartir el texto.</a></label>
-						<input name="compartir_documento_ensayo" id="compartir_documento_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="El documento obligatorio">
-						<label for="">Señala a continuación un correo electrónico para contactar al grupo que preparó este documento.</label>
-						<input name="correo_electronico_ensayo" id="correo_electronico_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-required-message="El correo es obligatorio" data-parsley-type-message="Por favor escribe un correo válido">
-						<label for="">Página Web</label>
-						<input name="pagina_web_ensayo" id="pagina_web_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Si es el caso">
-						<label for="">¿Quieres recibir más información?</label>
-						<label for="" class="[ inline-block ]">Sí</label>
-						<input type="radio" name="recibir_mas_informacion" id="optionsRadios1" value="si" checked>
-						<label for="" class="[ margin-left ][ inline-block ]">No</label>
-						<input type="radio" name="recibir_mas_informacion" id="optionsRadios2" value="no">
-						<input name="accion" id="accion" type="hidden" value="guarda-ensayo">
-					</div>
+	<section class="[ bg-gray--fondo ][ no-margin--bottom padding--bottom--xxlarge ]">
+		<div class="[ container ][ space-id ]" id="ensayos">
+			<article class="[ row ][ margin-bottom ]">
+				<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
+					<h2 class="[ margin-top ]">Ensayo</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ducimus soluta. Tempora recusandae cum cumque odit consequatur, laborum nulla atque accusamus doloribus rem placeat, optio libero delectus voluptatem repellendus facilis.</p>
 				</div>
-				<div class="[ text-center ]" id="voces_ciudadanas">
-					<button type="submit" class="[ btn btn-primary btn--large ]">enviar</button>
-				</div>
-			</form>
-		</article>
+			</article>
+			<article class="[ box-shadow--form ]">
+				<h2 class="[ margin-bottom ]">Comparte tu ensayo o relatoria</h2>
+				<form id="form-ensayos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="" >
+					<div class="[ row ]">
+						<div class="[ form-group ][ col-xs-12 col-sm-6 ]">
+							<label for="">Título del ensayo o de la relatoría</label>
+							<input type="text" name="titulo_ensayo" id="titulo_ensayo" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="" maxlength="100" data-parsley-error-message="El título es obligatorio">
+							<label for="">Nombre del evento o sesión colaborativa de la cual se derivó el documento</label>
+							<input name="nombre_ensayo" id="nombre_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres"  required="" maxlength="100" data-parsley-error-message="El nombre es obligatorio">
+							<label for="">Comparte una frase que describa el evento/sesión de trabajo</label>
+							<input name="frase_ensayo" id="frase_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres"  required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">
+							<label for="">Fechas en las que sesionó el grupo de trabajo</label><br>
+							<label for="">Inicio</label>
+							<input type="text" name="fechaInicio" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo" placeholder="yyyy-mm-dd" required="" data-parsley-error-message="La fecha es obligatoria"><br>
+							<label for="">Final</label>
+							<input type="text" name="fechaFinal" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo-fin" placeholder="yyyy-mm-dd" disabled>
+							<label for="">Describe a continuación las reflexiones o propuestas centrales de la sesión de trabajo y el contexto en el que esta se llevó a cabo.</label>
+							<textarea name="resumen_ensayo" id="resumen_ensayo" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 250 palabras" required="" data-parsley-maxwords="250" data-parsley-required-message="El resumen es obligatorio" data-parsley-maxwords-message="El resumen no puede exceder 250 palabras"></textarea>
+							<label for="">Señala a continuación 3 palabras clave vinculadas a este documento</label>
+							<input name="palabra_a" id="palabra_a" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 1" required="" data-parsley-error-message="Palabra obligatoria">
+							<input name="palabra_b" id="palabra_b" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 2" required="" data-parsley-error-message="Palabra obligatoria">
+							<input name="palabra_c" id="palabra_c" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 3" required="" data-parsley-error-message="Palabra obligatoria">
+							<label for="">Comparte en una frase un mensaje central de la relatoría o ensayo</label>
+							<input name="mensaje_central" id="mensaje_central" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">
+							<label for="">Lista a continuación el nombre de todos los autores separados por comas</label>
+							<input name="autores_ensayo" id="autores_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="Los autores son obligatorios">
+						</div>
+						<div class="[ form-group ][ col-xs-12 col-sm-6 ]">
+							<label for="">En caso de que este ensayo o relatoría haya sido elaborado por una institución u organización señala abajo cual es. En caso de más de una, separar por comas.</label>
+							<input name="institucion-u-organizacion" id="institucion-u-organizacion" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="La institución u organización es obligatoria">
+							<label for="">Comparte fotografías del grupo que trabajó este documento.</label>
+							<input name="fotografias_ensayo" id="fotografias_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="Las fotografías son obligatoria">
+							<label for="">Comparte también fotografías con una liga a flicker, instagram o blog</label>
+							<input name="fotografias_redes_ensayo" id="fotografias_redes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]">
+							<label for="">Comparte la lista de asistentes firmada de los participantes de la sesión/evento con una liga a Google Drive, Dropbox o OneDrive</label>
+							<input name="lista_asistentes_ensayo" id="lista_asistentes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="La lista de asistentes es obligatoria">
+							<label for="">Copia a continuación la liga a Google Drive, Dropbox o OneDrive. Este deberá estar en formato .docx (Microsoft Word) y no deberá exceder 8 páginas. <a href="<?php echo site_url('/guia-para-compartir-el-texto/'); ?>" target="_blank" class="[ color-gray--light ][ fz--small ]">Aqui puedes descargar una guía para compartir el texto.</a></label>
+							<input name="compartir_documento_ensayo" id="compartir_documento_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="El documento obligatorio">
+							<label for="">Señala a continuación un correo electrónico para contactar al grupo que preparó este documento.</label>
+							<input name="correo_electronico_ensayo" id="correo_electronico_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-required-message="El correo es obligatorio" data-parsley-type-message="Por favor escribe un correo válido">
+							<label for="">Página Web</label>
+							<input name="pagina_web_ensayo" id="pagina_web_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Si es el caso">
+							<label for="">¿Quieres recibir más información?</label>
+							<label for="" class="[ inline-block ]">Sí</label>
+							<input type="radio" name="recibir_mas_informacion" id="optionsRadios1" value="si" checked>
+							<label for="" class="[ margin-left ][ inline-block ]">No</label>
+							<input type="radio" name="recibir_mas_informacion" id="optionsRadios2" value="no">
+							<input name="accion" id="accion" type="hidden" value="guarda-ensayo">
+						</div>
+					</div>
+					<div class="[ text-center ]" id="voces_ciudadanas">
+						<button type="submit" class="[ btn btn-primary btn--large ]">enviar</button>
+					</div>
+				</form>
+			</article>	
+		</div> <!-- /container -->
 	</section>
 
 	<div id="modal-agradecimiento" class="modal fade" role="dialog">

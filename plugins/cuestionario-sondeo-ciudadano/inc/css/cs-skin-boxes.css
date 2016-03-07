@@ -258,4 +258,28 @@ div.cs-skin-boxes:focus > span {
 	cursor: default;
 }
 
+.btn-skin-boxes{
+	width: 100%;
+	border: 2px solid #999;
+    text-transform: uppercase;
+    font-family: "Alegreya Sans",sans-serif;
+    margin-bottom: 5px;
+}
+@media screen and (min-width: 468px){
+	.btn-skin-boxes{ width: 275px; }
+}
+
+.btn-skin-boxes:hover{
+	background-color: #999;
+	color: #fff;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+}
+
+.btn-skin-boxes.active {
+    background-color: #e80e8a;
+    color: #fff;
+ }
 

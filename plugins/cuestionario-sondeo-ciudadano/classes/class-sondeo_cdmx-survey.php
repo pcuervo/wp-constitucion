@@ -271,7 +271,7 @@ class Sondeo_CDMX_Survey {
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="grandes-retos">Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</label>
 								<?php $grandes_retos = $this->get_options_grandes_retos(); ?>
 								<?php foreach ( $grandes_retos as $reto ) : ?>
-									<a class="[ btn btn-tertiary ]"><?php echo $reto; ?></a>
+									<a class="[ btn btn-skin-boxes ]"><?php echo $reto; ?></a>
 								<?php endforeach; ?>
 								<input class="[ fs-anim-lower ]" id="input-retos" name="grandes-retos" type="text" required/>
 							</li>
@@ -361,7 +361,7 @@ class Sondeo_CDMX_Survey {
 							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="grandes-retos">Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</label>
 							<?php $grandes_retos = $this->get_options_grandes_retos(); ?>
 							<?php foreach ( $grandes_retos as $reto ) : ?>
-								<a class="[ btn btn-tertiary ]"><?php echo $reto; ?></a>
+								<a class="[ btn btn-skin-boxes ]"><?php echo $reto; ?></a>
 							<?php endforeach; ?>
 							<input class="[ fs-anim-lower ]" id="input-retos" name="grandes-retos" type="text" required/>
 						</li>

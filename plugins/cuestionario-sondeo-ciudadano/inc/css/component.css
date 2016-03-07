@@ -320,10 +320,10 @@ button.fs-continue,
 
 .fs-fields > li .fs-radio-custom span:hover{
 	background-color: #e80e8a;
-	-webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+	-webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
 }
 
 
@@ -662,8 +662,8 @@ button.fs-continue {
 		position: fixed;
 		right: 15px;
 		bottom: 20px;
-		z-index: 998;
-		background-color: #EEE;
+		z-index: 1000;
+		background: #EEE;
 }
 
 @media screen and (min-width: 468px){
@@ -901,5 +901,5 @@ input[type=text]::-ms-clear {
 }
 
 span#charNum{
-	font-size: 1.3em;
+	font-size: 1.5em;
 }

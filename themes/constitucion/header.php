@@ -60,7 +60,7 @@
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs ][ height-100 ]">
 						<li class="[ no-padding--sides ][ menu-desktop__logo ]">
 							<a class="[ inline-block ]" href="<?php echo site_url('/'); ?> ">
-								<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="logo vertical de Ciudad de México">
+								<img class="[ logo ][ margin-right ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="logo vertical de Ciudad de México">
 							</a>
 						</li><li
 						class="[ dropdown--hover dropdown--hover--acerca ][ menu-desktop__acerca ]">
@@ -113,9 +113,7 @@
 					<div class="[ bg-light ][ visible-xs ]">
 						<div class="[ container ]">
 							<div class="[ width-col-9 ][ inline-block align-middle ]">
-								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"  alt="logo vertical de Ciudad de México"></a>
-								<span class="[ text-italic fz-xsmall ][ relative ]">punto</span>
-								<span class="[ text-italic fz-xsmall ][ relative top-12 right-32 ]">de encuentro</span> <!-- - page-home.php -->
+								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"  alt="logo vertical de Ciudad de México"></a>
 							</div><div
 								class="[ width-col-3 ][ inline-block align-middle ][ text-center ]">
 								<a class="[ pull-right ]" href="#" data-toggle="modal" data-target="#modal-menu">
@@ -131,9 +129,7 @@
 							<div class="[ container ][ bg-light ]">
 								<div class="[ row ]">
 									<div class="[ col-xs-10 ]">
-										<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
-										<span class="[ text-italic fz-xsmall ][ relative ]">punto</span>
-										<span class="[ text-italic fz-xsmall ][ relative top-12 right-32 ]">de encuentro</span> <!-- - page-home.php -->
+										<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"></a>
 									</div>
 									<div class="[ col-xs-2 ][ text-center ][ padding--top ]">
 										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
@@ -185,9 +181,7 @@
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs ][ height-100 ]"> <!-- hidden-sm -->
 						<li class="[ no-padding--sides ][ menu-desktop__logo ]">
 							<a class="[ inline-block ]" href="<?php echo site_url('/'); ?>">
-								<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif">
-								<span class="[ text-italic ][ relative ]">punto</span>
-								<span class="[ text-italic ][ relative top-20 right-42 ][ margin-right--31 ]">de encuentro</span> <!-- - page-home.php -->
+								<img class="[ logo ][ margin-right ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png">
 							</a>
 						</li><li
 						class="[ dropdown--hover dropdown--hover--acerca ][ menu-desktop__acerca ]">
@@ -240,9 +234,7 @@
 					<div class="[ bg-light ][ visible-xs ]">
 						<div class="[ container ]">
 							<div class="[ width-col-9 ][ inline-block align-middle ]">
-								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
-								<span class="[ text-italic fz-xsmall ][ relative ]">punto</span>
-								<span class="[ text-italic fz-xsmall ][ relative top-12 right-32 ]">de encuentro</span> <!-- - page-home.php -->
+								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"></a>
 							</div><div
 							class="[ width-col-3 ][ inline-block align-middle ][ text-center ]">
 								<a href="#" class="[ pull-right ]" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
@@ -256,9 +248,7 @@
 							<div class="[ container ][ bg-light ]">
 								<div class="[ row ]">
 									<div class="[ col-xs-10 ]">
-										<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
-										<span class="[ text-italic fz-xsmall ][ relative ]">punto</span>
-										<span class="[ text-italic fz-xsmall ][ relative top-12 right-32 ]">de encuentro</span> <!-- - page-home.php -->
+										<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"></a>
 									</div>
 									<div class="[ col-xs-2 ][ text-center ][ padding--top ]">
 										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>

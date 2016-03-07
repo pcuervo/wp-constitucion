@@ -1,7 +1,7 @@
 <?php get_header(); the_post();
 $img_cdmx = get_option( 'img_cdmx' ); ?>
 
-<div class="[ bg-image rectangle-small ][ margin--header ][ relative ]" style="background-image: url('<?php echo $img_cdmx; ?>');">
+<div class="[ bg-image rectangle-small ][ relative ]" style="background-image: url('<?php echo $img_cdmx; ?>');">
 	<div class="[ width-100 height-100 ]">
 		<h1 class="[ container ][ text-uppercase text-center ][ no-margin ][ center-full ][ color-light ][ letter-spacing ][ hidden ]">Ciudad de México</h1>
 	</div>

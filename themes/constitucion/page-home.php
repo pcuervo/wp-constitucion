@@ -6,9 +6,7 @@
 			<div class="[ container ][ bg-light ]">
 				<div class="[ row ]">
 					<div class="[ col-xs-10 ]">
-						<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
-						<span class="[ text-italic fz-xsmall ][ relative ]">punto</span>
-						<span class="[ text-italic fz-xsmall ][ relative top-12 right-32 ]">de encuentro</span> <!-- - page-home.php -->
+						<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"></a>
 					</div>
 					<div class="[ col-xs-2 ][ text-center ][ padding--top ]">
 						<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>

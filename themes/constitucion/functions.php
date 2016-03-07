@@ -315,7 +315,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	}
 
 	function saveMetaDataTest($post_id, $data){
-
+		update_post_meta($post_id, 'tipo-de-evento', 2);
 		foreach ($data as $meta_key => $meta_value):
 			if ($meta_key != 'titulo_ensayo' AND $meta_key != 'resumen_ensayo' AND $meta_key != 'accion'):
 				update_post_meta($post_id, $meta_key, $meta_value);
@@ -325,7 +325,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	}
 
 	function saveMetaDataEvent($post_id, $data){
-
+		update_post_meta($post_id, 'tipo-de-evento', 2);
 		foreach ($data as $meta_key => $meta_value):
 			if ($meta_key != 'nombre_evento' AND $meta_key != 'descripcion_evento' AND $meta_key != 'accion'):
 				update_post_meta($post_id, $meta_key, $meta_value);

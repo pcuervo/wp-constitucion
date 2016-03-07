@@ -86,7 +86,7 @@
 				</a>
 			</span>
 			<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe_gobierno">Mensaje del jefe de gobierno</a></li>
+				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Mensaje del jefe de gobierno</a></li><!-- #jefe_gobierno -->
 				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_constitucion">Sobre la constitución</a></li>
 				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#grupo_trabajo">Grupo de trabajo</a></li>
 				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_plataforma">Sobre la plataforma</a></li>
@@ -102,7 +102,7 @@
 				</a>
 			</span>
 			<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-				<li><a href="<?php echo site_url('/cdmx/'); ?>#cronica">Crónica</a></li>
+				<li><a href="<?php echo site_url('/cdmx/'); ?>">Crónica</a></li><!-- #cronica -->
 				<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia_el_constituyente">Hacia el constituyente</a></li>
 				<li><a href="<?php echo site_url('/cdmx/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
 			</ul>
@@ -110,7 +110,7 @@
 		<li class="[ dropdown--hover ]">
 			<span><a class="[ text-uppercase ]" href="<?php echo site_url('/participa/'); ?>">Participa<span class="caret"></span></a></span>
 			<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-				<li><a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">Imagina tu ciudad</a></li>
+				<li><a href="<?php echo site_url('/participa/'); ?>">Imagina tu ciudad</a></li><!-- #imagina_ciudad -->
 				<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Da seguimiento a tu participación</a></li>
 				<li><a href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
 				<li><a href="<?php echo site_url('/participa/'); ?>#dialogos_publicos">Diálogos públicos</a></li>

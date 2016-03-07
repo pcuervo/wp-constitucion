@@ -8314,7 +8314,7 @@ ul.slides li img {
   }
   .post_compact:hover div {
     max-width: 473px;
-    line-height: 240px !important;
+    line-height: 168px !important;
   }
 }
 @media (min-width: 768px) {
@@ -8323,6 +8323,19 @@ ul.slides li img {
   }
   .post_compact:hover div {
     line-height: 118px !important;
+  }
+}
+@media (max-width: 615px) {
+  .post_compact:hover div {
+    line-height: 129px !important;
+  }
+}
+@media (max-width: 496px) {
+  .post_compact {
+    width: 100%;
+  }
+  .post_compact:hover div {
+    line-height: 224px !important;
   }
 }
 @media (max-width: 450px) {
@@ -8888,9 +8901,6 @@ footer a:hover {
   bottom: 20px;
   left: 0;
   cursor: pointer;
-}
-.post_compact:hover {
-  transition: all 2s;
 }
 .post_compact:hover div {
   display: block;

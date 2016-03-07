@@ -8013,16 +8013,8 @@ ul.slides li img {
 .content-trabajo h3 {
   color: #4a4a4a;
   margin-top: 5px;
-}
-@media (max-width: 768px) {
-  .content-trabajo h3 {
-    font-size: 16px;
-  }
-}
-@media (min-width: 768px) {
-  .content-trabajo h3 {
-    font-size: 18px;
-  }
+  font-size: 16px;
+  font-weight: 400;
 }
 .content-trabajo h3:hover,
 .content-trabajo h3:focus {

@@ -90,7 +90,8 @@
 						class="[ dropdown--hover ]">
 							<span><a class="[ text-uppercase ]" href="<?php echo site_url('/participa/'); ?>">Participa<span class="caret"></span></a></span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-								<li><a href="<?php echo site_url('/participa/'); ?>">Imagina tu ciudad</a></li><!-- #imagina_ciudad -->
+								<li><a href="<?php echo site_url('/participa/'); ?>">Instrucciones</a></li>
+								<li><a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">Imagina tu ciudad</a></li><!-- #imagina_ciudad -->
 								<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Da seguimiento a tu participación</a></li>
 								<li><a href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
 								<li><a href="<?php echo site_url('/participa/'); ?>#dialogos_publicos">Diálogos públicos</a></li>
@@ -211,7 +212,8 @@
 						class="[ dropdown--hover ]">
 							<span><a class="[ text-uppercase ]" href="<?php echo site_url('/participa/'); ?>">Participa<span class="caret"></span></a></span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-								<li><a href="<?php echo site_url('/participa/'); ?>">Imagina tu ciudad</a></li><!-- #imagina_ciudad -->
+								<li><a href="<?php echo site_url('/participa/'); ?>">Instrucciones</a></li>
+								<li><a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">Imagina tu ciudad</a></li><!-- #imagina_ciudad -->
 								<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Da seguimiento a tu participación</a></li>
 								<li><a href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
 								<li><a href="<?php echo site_url('/participa/'); ?>#dialogos_publicos">Diálogos públicos</a></li>

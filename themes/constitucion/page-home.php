@@ -1,79 +1,21 @@
 <?php get_header(); the_post();  ?>
-<div>
-	<!-- modal menu mobile -->
-	<div class="modal fade" id="modal-menu-home" tabindex="-1" role="dialog">
-		<div class="[ modal-dialog modal-content ][ width-100 height-100 ][ no-margin ]">
-			<div class="[ container ][ bg-light ]">
-				<div class="[ row ]">
-					<div class="[ col-xs-10 ]">
-						<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"></a>
-					</div>
-					<div class="[ col-xs-2 ][ text-center ][ padding--top ]">
-						<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
-					</div>
-				</div>
-			</div>
-			<div class="[ bg-light-cdmx ][ text-center ]">
-				<ul class="[ menu-mobile ]">
-					<li class="[ text-uppercase ]"><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Acerca de la constitución</a></li>
-					<li class="[ text-uppercase ]"><a href="<?php echo site_url('/cdmx/'); ?>">Ciudad de México</a><!--  - page-cdmx.php--></li>
-					<li class="[ text-uppercase ]"><a href="<?php echo site_url('/participa/'); ?>">Participa</a></li>
-					<li class="[ text-uppercase ]"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-					<li><a type="button" data-toggle="modal" data-target="#SoyCDMX-mobile-home">#SomosCDMX</a></li>
-				</ul>
-			</div>
-			<img class="[ width-60 ][ margin-top-bottom--large ][ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png">
+<div id="container_video" class="[ bg-gray--xxlight hero_video ]" style="background-image: url('http://pcuervo.com/constitucion/wp-content/uploads/2016/03/Captura-de-pantalla-2016-03-04-a-las-22.16.06.png'); background-size: cover;">
+	<video class="[ width-100 ][ center-full video_home ]" autoplay loop>
+		<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
+	</video>
+	<div class="[ logo-video ]">
+		<img class="[ width-80 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/Logotipo_Blanco-03.png">
+	</div>
+	<div class="[ container ]">
+		<div class="[ visible-xs ][ btn-nav-home ]">
+			<a type="button" data-toggle="modal" data-target="#modal-menu-home"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ][ pull-right ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
 		</div>
 	</div>
-	<!-- #SoyCDMX mobile -->
-	<div class="modal fade [ bg-light ]" id="SoyCDMX-mobile-home" tabindex="-1" role="dialog">
-		<div class="[ modal-content no-border-radius width--100 ][ no-margin ]">
-			<div class="[ container ][ padding--top ]">
-				<div class="[ absolute right-10 ]">
-					<a type="button" class="close [ opacity-7 ]" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
-				</div>
-				<h3>#SomosCDMX</h3>
-
-				<?php $tweet = new Twitter;
-				$tweets = $tweet->feedTwitter();
-				if (! empty($tweets) ):
-					foreach ($tweets as $tweet): ?>
-						<div class="[ row ]">
-							<div class="[ col-xs-12 ][ color-gray ]">
-								<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name'];  ?></p>
-								<p><?php echo $tweet['text'];  ?></p>
-								<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
-								<hr class="[ border-bottom-gray ]">
-							</div>
-						</div>
-					<?php endforeach;
-				endif; ?>
-
-
-			</div>
-		</div>
+	<div class="[ hero_video__scroll ][ text-center ][ js-hero_video__scroll ]">
+		<p class="[ text-center ][ color-light ][ margin-bottom--small ]">Conoce más</p>
+		<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/arrow-down-9.svg">
 	</div>
-
-	<div id="container_video" class="[ bg-gray--xxlight hero_video ]" style="background-image: url('http://pcuervo.com/constitucion/wp-content/uploads/2016/03/Captura-de-pantalla-2016-03-04-a-las-22.16.06.png'); background-size: cover;">
-		<video class="[ width-100 ][ center-full video_home ]" autoplay loop>
-			<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
-		</video>
-		<div class="[ logo-video ]">
-			<img class="[ width-80 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/Logotipo_Blanco-03.png">
-		</div>
-		<div class="[ container ]">
-			<div class="[ visible-xs ][ btn-nav-home ]">
-				<a type="button" data-toggle="modal" data-target="#modal-menu-home"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ][ pull-right ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
-			</div>
-		</div>
-		<div class="[ hero_video__scroll ][ text-center ][ js-hero_video__scroll ]">
-			<p class="[ text-center ][ color-light ][ margin-bottom--small ]">Conoce más</p>
-			<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/arrow-down-9.svg">
-		</div>
-	</div>
-
 </div>
-
 
 <section class="[ container ]" id="js-home-scroll-point">
 	<div class="[ row ]">

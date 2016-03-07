@@ -275,9 +275,10 @@ class Sondeo_CDMX_Survey {
 								<?php endforeach; ?>
 								<input class="[ fs-anim-lower ]" id="input-retos" name="grandes-retos" type="text" required/>
 							</li>
-	 						<li id="js-como-imaginas" data-question="28">
+							<li id="js-como-imaginas" data-question="28">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="como-imaginas" data-info="Máximo 140 caracteres.">¿Cómo te imaginas la CDMX ideal, en 20 años?</label>
-								<textarea class="fs-anim-lower" id="q10" name="como-imaginas" placeholder="" maxlength="140"></textarea>
+								<textarea class="fs-anim-lower" id="q10" name="como-imaginas" placeholder="" maxlength="140" onkeyup="countChar(this, 140)"></textarea>
+								<span id="charNum"></span>
 							</li>
 							<li id="js-obstaculos-principales" data-question="29">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="obstaculos-principales" data-info="Las palabras deben ir separadas por comas.">Pensando en esta visión, ¿cuáles pensarías que son los tres obstáculos principales para que se haga realidad?</label>
@@ -285,11 +286,13 @@ class Sondeo_CDMX_Survey {
 							</li>
 							<li id="js-vision-realidad" data-question="30">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="vision-realidad" data-info="Máximo 140 caracteres.">Imagina que es el año 2036. Tu visión se hizo realidad ¿Qué tuvo que hacer el gobierno para que esto sucediera?</label>
-								<textarea class="fs-anim-lower" id="q12" name="vision-realidad" placeholder="" maxlength="140"></textarea>
+								<textarea class="fs-anim-lower" id="q12" name="vision-realidad" placeholder="" maxlength="140" onkeyup="countChar(this, 140)"></textarea>
+								<span id="charNum"></span>
 							</li>
 							<li id="js-tuviste-hacer" data-question="31">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="tuviste-hacer" data-info="Máximo 140 caracteres.">¿Y qué tuviste que hacer tú?</label>
-								<textarea class="fs-anim-lower" id="q13" name="tuviste-hacer" placeholder="" maxlength="140"></textarea>
+								<textarea class="fs-anim-lower" id="q13" name="tuviste-hacer" placeholder="" maxlength="140" onkeyup="countChar(this, 140)"></textarea>
+								<span id="charNum"></span>
 							</li>
 							<li id="js-cosas-valiosas" data-question="32">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿Qué palabras te vienen a la mente?</label>

@@ -612,3 +612,12 @@ function getLugarResidencia( slug ){
     return lugar;
 }
 
+function countChar(val, maxlength) {
+    var len = val.value.length;
+    if (len >= maxlength) {
+      val.value = val.value.substring(0, maxlength);
+    } else {
+      $('#charNum').text(maxlength - len);
+    }
+  };
+

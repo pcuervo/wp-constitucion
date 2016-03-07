@@ -151,10 +151,18 @@
          */
         function setMainPaddingTop(){
             var headerHeight = getHeaderHeight();
-            $('.main').css('padding-top', headerHeight + 20);
+            $('.main').css('padding-top', headerHeight);
         }// setMainPaddingTop
 
         setMainPaddingTop();
+
+        $(window).scroll(function(){
+            setMainPaddingTop();
+        }
+
+        $(window).resize(function(){
+            setMainPaddingTop();
+        }
 
         /*------------------------------------*\
             #GENERAL FUNCTIONS

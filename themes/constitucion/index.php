@@ -2,7 +2,6 @@
 $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
 $img_participa = get_option( 'img_noticias' );
 global $wp_query; ?>
-<br>
 
 <div class="[ bg-image rectangle-small ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo $img_participa; ?>');">
 	<div class="[ bg-dark--opacity width-100 height-100 ]">

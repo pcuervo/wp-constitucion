@@ -3567,7 +3567,7 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-nav-home {
   z-index: 1000;
-  position: absolute;
+  position: relative;
   top: 10px;
   right: 10px;
 }
@@ -3723,7 +3723,7 @@ tbody.collapse.in {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: -5px;
+  left: -1px;
   z-index: 1000;
   display: none;
   float: left;
@@ -3735,7 +3735,7 @@ tbody.collapse.in {
   text-align: left;
   background-color: #fff;
   border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid #dbdbdb;
   background-clip: padding-box;
 }
 .dropdown-menu.pull-right {
@@ -6105,11 +6105,6 @@ button.close {
 .logo {
   width: 80px;
 }
-@media (min-width: 992px) {
-  .logo {
-    width: 130px;
-  }
-}
 .height-line {
   height: 30px;
 }
@@ -7735,18 +7730,7 @@ ul.slides li img {
   margin-top: 160px;
 }
 .margin--header {
-  margin-top: 55px;
   margin-bottom: 50px;
-}
-@media (min-width: 768px) {
-  .margin--header {
-    margin-top: 50px;
-  }
-}
-@media (min-width: 992px) {
-  .margin--header {
-    margin-top: 70px;
-  }
 }
 .no-margin-top-bottom {
   margin-top: 0;
@@ -7957,18 +7941,7 @@ ul.slides li img {
 .content-user img:first-child {
   margin-bottom: 20px;
   width: 100%;
-  margin-top: 55px;
   margin-bottom: 50px;
-}
-@media (min-width: 768px) {
-  .content-user img:first-child {
-    margin-top: 50px;
-  }
-}
-@media (min-width: 992px) {
-  .content-user img:first-child {
-    margin-top: 70px;
-  }
 }
 @media (max-width: 768px) {
   .content-user img:first-child {
@@ -8573,11 +8546,6 @@ header {
     height: 70px;
   }
 }
-@media (min-width: 992px) {
-  header {
-    height: 100px;
-  }
-}
 header li,
 ul.menu-home > li {
   text-decoration: none;
@@ -8597,26 +8565,25 @@ ul.dropdown-content > li > a {
   margin-bottom: 10px;
   font-weight: 400;
 }
-.sticky ul.menu-desktop > li.dropdown--hover--acerca {
-  padding: 1px 1%;
-}
-.menu-desktop li.dropdown--hover--acerca {
-  padding: 1px 1%;
+ul.menu-desktop {
+  margin: 0 !important;
 }
 ul.menu-desktop > li {
-  padding: 15px 1%;
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  padding: 26px 10px 10px 10px;
   border-right: 1px solid #dbdbdb;
-}
-@media (min-width: 992px) {
-  ul.menu-desktop > li {
-    padding: 15px 1.5%;
-  }
 }
 ul.menu-desktop > li:last-child {
   border-right: none;
 }
-ul.menu-desktop {
-  margin: 0 !important;
+.menu-desktop__logo a {
+  position: relative;
+  top: -26px;
+}
+.menu-desktop__acerca {
+  padding-top: 18px !important;
 }
 ul.menu-desktop li a:hover,
 ul.menu-home > li a:hover,

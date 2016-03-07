@@ -63,7 +63,7 @@
 							<span class="[ text-italic ][ relative bottom-10 ]">punto</span>
 							<span class="[ text-italic ][ relative top-10 right-42 ]">de encuentro</span> <!-- - page-home.php -->
 						</li>
-						<li class="[ dropdown--hover dropdown--hover--acerca ][ top-8 ]">
+						<li class="[ dropdown--hover dropdown--hover--acerca ]">
 							<span><a class="[ text-uppercase ]" href="<?php echo site_url('/constitucion-cdmx/'); ?>">Acerca de la<br>constitución<span class="caret"></span></a></span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe_gobierno">Mensaje del jefe de gobierno</a></li>
@@ -185,18 +185,19 @@
 				</nav>
 			</header>
 		<?php else: ?>
-			<header class="not-home">
-				<nav>
-<!-- menu desktop not home -->
-					<ul class="[ menu-desktop ][ text-center ][ hidden-xs  ]"> <!-- hidden-sm -->
-						<li class="[ no-padding--sides ]"><a href="<?php echo site_url('/'); ?> ">
-							<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
-							<span class="[ text-italic ][ relative ]">punto</span>
-							<span class="[ text-italic ][ relative top-20 right-42 ][ margin-right--31 ]">de encuentro</span> <!-- - page-home.php -->
-						</li>
-						<!-- <li class="[ text-uppercase ]"><a href="<?php echo site_url('/'); ?> ">Home</a>- page-home.php --></li>
-						<li class="[ dropdown--hover dropdown--hover--acerca ][ top-8 ]">
-							<span><a class="[ text-uppercase ]" href="<?php echo site_url('/constitucion-cdmx/'); ?>">Acerca de la<br>constitución<span class="caret"></span></a></span>
+			<header class="[ not-home ]">
+				<nav class="[ height-100 ]">
+					<!-- menu desktop not home -->
+					<ul class="[ menu-desktop ][ text-center ][ hidden-xs ][ height-100 ]"> <!-- hidden-sm -->
+						<li class="[ no-padding--sides ][ menu-desktop__logo ]">
+							<a class="[ inline-block ]" href="<?php echo site_url('/'); ?>">
+								<img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif">
+								<span class="[ text-italic ][ relative ]">punto</span>
+								<span class="[ text-italic ][ relative top-20 right-42 ][ margin-right--31 ]">de encuentro</span> <!-- - page-home.php -->
+							</a>
+						</li><li
+						class="[ dropdown--hover dropdown--hover--acerca ][ menu-desktop__acerca ]">
+							<a class="[ text-uppercase ]" href="<?php echo site_url('/constitucion-cdmx/'); ?>">Acerca de la<br>constitución<span class="caret"></span></a>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe_gobierno">Mensaje del jefe de gobierno</a></li>
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_constitucion">Sobre la constitución</a></li>
@@ -207,8 +208,8 @@
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#preguntas_frecuentes">Preguntas frecuentes</a></li>
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#biblioteca">Biblioteca</a></li>
 							</ul>
-						</li>
-						<li class="[ dropdown--hover ]<?php echo $activeCdmx; ?>">
+						</li><li
+						class="[ dropdown--hover ]<?php echo $activeCdmx; ?>">
 							<span>
 								<a class="[ text-uppercase ]" href="<?php echo site_url('/cdmx/'); ?>">
 									Ciudad de México<span class="caret"></span>
@@ -219,8 +220,8 @@
 								<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia_el_constituyente">Hacia el constituyente</a></li>
 								<li><a href="<?php echo site_url('/cdmx/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
 							</ul>
-						</li>
-						<li class="[ dropdown--hover ]">
+						</li><li
+						class="[ dropdown--hover ]">
 							<span><a class="[ text-uppercase ]" href="<?php echo site_url('/participa/'); ?>">Participa<span class="caret"></span></a></span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
 								<li><a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">Imagina tu ciudad</a></li>
@@ -229,10 +230,11 @@
 								<li><a href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
 								<li><a href="<?php echo site_url('/participa/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
 							</ul>
-						</li>
-						<li class="[ text-uppercase ] <?php echo $activeNoticias; ?>"><a href="<?php echo site_url('/noticias/'); ?>">Noticias</a><!--  - index.php--></li>
-<!-- #SoyCDMX desktop not home -->
-						<li id="js-btn-cdmx">
+						</li><li
+							class="[ text-uppercase ] <?php echo $activeNoticias; ?>">
+							<a href="<?php echo site_url('/noticias/'); ?>">Noticias</a>
+						</li><li
+						id="js-btn-cdmx">
 							<a href="#">
 								<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 								#SomosCDMX<!-- Contacto - page-contacto.php-->
@@ -243,15 +245,13 @@
 <!-- nav header movil not home -->
 					<div class="[ bg-light ][ visible-xs ]">
 						<div class="[ container ]">
-							<div class="[ row ]">
-								<div class="[ col-xs-9 ]">
-									<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
-									<span class="[ text-italic fz-xsmall ][ relative ]">punto</span>
-									<span class="[ text-italic fz-xsmall ][ relative top-12 right-32 ]">de encuentro</span> <!-- - page-home.php -->
-								</div>
-								<div class="[ col-xs-3 ][ text-center ][ padding--top padding--left--xlarge ]">
-									<a type="button" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
-								</div>
+							<div class="[ width-col-9 ][ inline-block align-middle ]">
+								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
+								<span class="[ text-italic fz-xsmall ][ relative ]">punto</span>
+								<span class="[ text-italic fz-xsmall ][ relative top-12 right-32 ]">de encuentro</span> <!-- - page-home.php -->
+							</div><div
+							class="[ width-col-3 ][ inline-block align-middle ][ text-center ]">
+								<a href="#" class="[ pull-right ]" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
 							</div>
 						</div>
 					</div>

@@ -1,5 +1,4 @@
 <?php get_header(); the_post();
-the_title();
 $img_cdmx = get_option( 'img_cdmx' ); ?>
 
 <div class="[ bg-image rectangle-small ][ margin--header ][ relative ]" style="background-image: url('<?php echo $img_cdmx; ?>');">

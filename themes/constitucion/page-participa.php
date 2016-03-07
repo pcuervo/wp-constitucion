@@ -1,6 +1,5 @@
 <?php
 get_header(); the_post();
-	the_title();
 	$img_participa = get_option( 'img_participa' );
 
 	global $result;

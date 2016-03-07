@@ -304,19 +304,31 @@ button.fs-continue,
 }
 
 .fs-fields > li .fs-radio-custom span {
-	float: left;
 	position: relative;
-	margin-right: 6%;
-	padding: 10px;
-	max-width: 200px;
-	width: 30%;
+	float: left;
+	width: 150px;
 	text-align: center;
 	font-weight: 700;
-	font-size: 70%;
+	font-size: 16px;
+	background: #4a4a4a;
+	border-radius: 5px;
+	color: #f5f5f5;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
 }
 
+.fs-fields > li .fs-radio-custom span:hover{
+	background-color: #e80e8a;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
 .fs-fields > li .fs-radio-custom span label {
-	color: rgba(0,0,0,0.4);
+	color: #fff;
 	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
 }
@@ -378,8 +390,8 @@ button.fs-continue,
 	border: 2px solid rgba(0,0,0,0.2);
 	background-color: transparent;
 	color: #777;
-	font-weight: 700;
-	font-size: 0.85em;
+	font-weight: 400;
+	font-size: 1.2em;
 	resize: none;
 }
 
@@ -647,9 +659,20 @@ button.fs-continue {
 }
 
 .fs-continue {
-	position: absolute;
-	right: 15px;
-	bottom: -250px;
+		position: fixed;
+		right: 15px;
+		bottom: 20px;
+		z-index: 998;
+		background-color: #EEE;
+}
+
+@media screen and (min-width: 468px){
+	.fs-continue {
+		position: absolute;
+		right: 15px;
+		bottom: -250px;
+		z-index: 0;
+	}
 }
 
 button.fs-submit:hover,
@@ -844,8 +867,11 @@ input[type=text]::-ms-clear {
 		height: 50px;
 		font-size: 2em;
 	}
+
 	@media (min-width: 0px) and (max-width: 480px) {
-	button.fs-continue{ bottom: 60px;}
+		button.fs-continue{ 
+			bottom: 60px;
+		}
 	}
 
 	.fs-continue::after {
@@ -857,18 +883,23 @@ input[type=text]::-ms-clear {
 		font-size: 1.25em;
 	}
 
-	.fs-message-error {
-		bottom: 0.5em;
-		left: 0;
-		padding: 0 90px 0 2em;
-		width: 100%;
-		font-size: 1.5em;
-		-webkit-transform: translate3d(0,-5px,0);
-		transform: translate3d(0,-5px,0);
+	.fs-message-error{
+		    bottom: 5em;
+			left: -10px;
+			padding: 0 90px 0 2em;
+			width: 100%;
+			font-size: 1.5em;
+			-webkit-transform: translate3d(0,-5px,0);
+			transform: translate3d(0,-5px,0);
+			position: fixed;
 	}
 
 	.fs-message-error.fs-show {
 		-webkit-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
 	}
+}
+
+span#charNum{
+	font-size: 1.3em;
 }

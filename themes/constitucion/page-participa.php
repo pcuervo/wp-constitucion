@@ -1,6 +1,5 @@
 <?php
 get_header(); the_post();
-	the_title();
 	$img_participa = get_option( 'img_participa' );
 
 	global $result;
@@ -9,8 +8,8 @@ get_header(); the_post();
 	<?php endif;  ?>
 
 	<div class="[ bg-image rectangle-small ][ margin--header ][ relative ]" style="background-image: url('<?php echo $img_participa; ?>');">
-		<div class="[ bg-dark--opacity width-100 height-100 ]">
-			<h1 class="[ container ][ text-uppercase text-center ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Participa</h1>
+		<div class="[ width-100 height-100 ]">
+			<h1 class="[ container ][ text-uppercase text-center ][ no-margin ][ center-full ][ color-light ][ letter-spacing ][ hidden ]">Participa</h1>
 		</div>
 	</div>
 
@@ -78,35 +77,35 @@ get_header(); the_post();
 		</div>
 	</section>
 
-	<section class="[ container ][ padding--header--id padding--sides--xsm--large ][ space-id ]" id="imagina_ciudad">
-
-		<article class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+	<section class="[ container ][ padding--sides--xsm--large ][ space-id ]" id="imagina_ciudad">
+		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
 			<h2 class="[ no-margin-top margin-bottom ]">Imagina tu ciudad</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis maiores, mollitia at qui aperiam illo cumque inventore eveniet facere quos, recusandae assumenda, delectus autem corporis cupiditate necessitatibus odio enim deserunt?</p>
-			<div class="[ text-center ]">
+			<div class="[ text-center ][ margin-top ]">
 				<a class="[ btn btn-primary btn-large ]" href="<?php echo site_url('/sondeo-masivo/'); ?> ">
 					Participa
 				</a>
 			</div>
-		</article>
+		</div>
+	</section>
 
-		<div class="[ clear ]"></div>
+	<div class="[ clear ]"></div>
 
-		<article class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+	<section class="[ container ][ padding--sides--xsm--large ][ space-id ]" id="resultados">
+		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
 			<h2>¿Ya participaste?</h2>
 			<p class="">Ingresa tu número de folio para obtener tu certificado</p>
-			<form class="[ form-inline ][ js-check-reference-code ]" data-parsley-certificado>
+			<form class="[ form-inline ][ js-check-reference-code ][ margin-top ]" data-parsley-certificado>
 				<div class="[ input-group ]" >
 					<input type="text" name="ref_code" class="[ form-control input--search ][ height-70 ][ fz-xxlarge ]" placeholder="CM5697CX08" required="" data-parsley-required-message="El número de folio es obligatorio">
 					<span class="[ input-group-btn ]">
-						<button class="[ btn btn-secondary ][ height-70 ]" type="submit" id="resultados">
+						<button class="[ btn btn-secondary ][ height-70 ]" type="submit">
 							<img class="[ svg icon icon--iconed--small icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/search.svg">
 						</button>
 					</span>
 				</div>
 			</form>
-		</article>
-
+		</div>
 	</section>
 
 	<div class="[ descanso-visual ]" id="sobre_constitucion">
@@ -120,23 +119,24 @@ get_header(); the_post();
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit in suscipit similique tempore ab quam voluptatibus, quos modi fuga iusto earum incidunt repellendus quis tempora? Perspiciatis officia accusantium temporibus esse.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum possimus dolorum quam illo veniam id placeat nulla repellat vero debitis ratione consectetur eos praesentium, delectus doloremque dolor, ipsa deserunt eaque.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem consequuntur error illum. Atque esse, et iure rerum fugiat consequuntur repellendus est dignissimos alias officia fugit culpa nam consequatur exercitationem quae!</p>
 			</div>
-			<div class="[ text-center ][ clear ]">
-				<a href="https://www.change.org/movements/voces-ciudadanas-en-la-nueva-constituci%C3%B3n-de-la-cdmx" target="_blank" class="[ btn btn-primary btn-large ]">Realizar petición</a>
+			<div class="[ clear ]"></div>
+			<div class="[ text-center ][ margin-top ]">
+				<a href="https://www.change.org/movements/voces-ciudadanas-en-la-nueva-constituci%C3%B3n-de-la-cdmx" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ]">Realizar petición</a>
 			</div>
 		</section>
 	</section>
 
-	<section class="[ bg-gray--fondo space-id section--bg no-margin ]" id="dialogos_publicos">
+	<div class="[ bg-gray--fondo section--bg no-margin ]">
 		<div class="[ container ]">
-			<article class="[ row ]">
+			<section class="[ row ][ space-id ]" id="dialogos_publicos">
 				<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
 					<h2 class="[ no-margin-top ]">Diálogos Públicos</h2>
 					<p>En esta sección podrás registrar acontecimientos que sean espacios de diálogo relacionados a la construcción de la Constitución de la Ciudad de México. Estos pueden ser sesiones de trabajo colaborativas, foros, asambleas, talleres o conferencias.</p>
 				</div>
-			</article>
+			</section>
 
 			<!-- scroll horizontal -->
-			<article class="[ row ]">
+			<section class="[ row ]">
 				<div class="[ col-md-12 ]">
 					<ul id="scroll" class="[ scroll-cronologia ][ horizontal-slide ][ text-center ]">
 
@@ -208,56 +208,58 @@ get_header(); the_post();
 
 					</ul>
 				</div>
-			</article> <!-- row -->
+			</section> <!-- row -->
 
-			<article class="[ box-shadow--form ]">
-				<h2 class="[ margin-bottom--large ]">Registra tu evento</h2>
-				<form id="form-eventos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
-					<div class="[ row ]">
-						<div class="[ col-xs-12 col-sm-6 ]">
-							<label for="">Nombre del acontecimiento</label>
-							<input type="text" name="nombre_evento" id="nombre_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="(máximo 100 caracteres)" required="" maxlength="100" data-parsley-error-message="El nombre obligatorio">
-							<label for="">Comparte una frase que describa el evento/sesión de trabajo/diálogo público</label>
-							<input type="text" name="frace_evento" id="frace_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder=" (120 caracteres) " required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">
-							<label for="">Describe los objetivos, alcances y perfil de asistentes de tu acontecimiento </label>
-							<textarea type="text" name="descripcion_evento" id="descripcion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder=" (120 palabras) " required="" data-parsley-maxwords="120" data-parsley-required-message="La descripción es obligatoria" data-parsley-maxwords-message="La descripción no puede exceder 120 palabras"></textarea>
-							<label for="">Copia a continuación la liga del sitio oficial del acontecimiento, la cuenta de Facebook o de Twitter </label>
-							<input type="text" name="liga_oficial_evento" id="liga_oficial_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Liga oficial">
-							<label for="">Fechas (Puede ser un sólo día) </label>
-							<input class="[ input-primary border-gray ][ margin-bottom--large ] date-ensayo" name="fecha_evento" id="fecha_evento" placeholder="yyyy-mm-dd" required="" type="text" data-parsley-required-message="La fecha es obligatoria">
-							<label for="">Señala abajo dónde se llevara a cabo el evento</label>
-							<input type="text" name="ubicacion_evento" id="ubicacion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Ubicación" data-parsley-required-message="La ubicación es obligatoria">
-						</div>
-						<div class="[ col-xs-12 col-sm-6 ]">
-							<label for="">¿En qué momentos se llevará a cabo el evento? </label>
-							<input type="text" name="horarios_evento" id="horarios_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Horario" data-parsley-required-message="El horario es obligatorio">
-							<label for="">Si este acontecimiento es organizado por una institución u organización, señala abajo cuál. En caso de más de una, separar por comas. Si son un grupo de personas, nombren su equipo de trabajo. </label>
-							<input type="text" name="institucion_evento" id="institucion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Institución u organización." data-parsley-required-message="La institución u organización es obligatoria">
-							<label for="">Asistentes</label>
-							<div class="[ margin-bottom--large ]">
-								<div>
-									<input  type="radio" name="asistencia_invitacion" id="asistencia_invitacion" value="no" checked>
-									La asistencia es libre
-								</div>
-								<div>
-									<input type="radio" name="asistencia_invitacion" id="asistencia_invitacion1" value="si" >
-									Por invitación
-								</div>
+			<section class="[ space-id ]" id="registra_tu_evento">
+				<div class="[ box-shadow--form ]">
+					<h2 class="[ margin-bottom--large ]">Registra tu evento</h2>
+					<form id="form-eventos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
+						<div class="[ row ]">
+							<div class="[ col-xs-12 col-sm-6 ]">
+								<label for="">Nombre del acontecimiento</label>
+								<input type="text" name="nombre_evento" id="nombre_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="(máximo 100 caracteres)" required="" maxlength="100" data-parsley-error-message="El nombre obligatorio">
+								<label for="">Comparte una frase que describa el evento/sesión de trabajo/diálogo público</label>
+								<input type="text" name="frace_evento" id="frace_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]"placeholder=" (120 caracteres) " required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">
+								<label for="">Describe los objetivos, alcances y perfil de asistentes de tu acontecimiento </label>
+								<textarea type="text" name="descripcion_evento" id="descripcion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder=" (120 palabras) " required="" data-parsley-maxwords="120" data-parsley-required-message="La descripción es obligatoria" data-parsley-maxwords-message="La descripción no puede exceder 120 palabras"></textarea>
+								<label for="">Copia a continuación la liga del sitio oficial del acontecimiento, la cuenta de Facebook o de Twitter </label>
+								<input type="text" name="liga_oficial_evento" id="liga_oficial_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Liga oficial">
+								<label for="">Fechas (Puede ser un sólo día) </label>
+								<input class="[ input-primary border-gray ][ margin-bottom--large ] date-ensayo" name="fecha_evento" id="fecha_evento" placeholder="yyyy-mm-dd" required="" type="text" data-parsley-required-message="La fecha es obligatoria">
+								<label for="">Señala abajo dónde se llevara a cabo el evento</label>
+								<input type="text" name="ubicacion_evento" id="ubicacion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Ubicación" data-parsley-required-message="La ubicación es obligatoria">
 							</div>
-							<label for="">Fotografía de cartel o publicidad del acontecimiento. Coloca el archivo de la fotografía en Google Drive, Dropbox o OneDrive y a continuación copia la liga.</label>
-							<input name="fotografia_evento" id="fotografia_evento"  class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" type="text" >
-							<label for="">Señala a continuación un correo electrónico</label>
-							<input name="correo_evento" id="correo_evento" type="email" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Correo Electrónico" data-parsley-required-message="El correo es obligatorio" data-parsley-type-message="Por favor escribe un correo válido">
+							<div class="[ col-xs-12 col-sm-6 ]">
+								<label for="">¿En qué momentos se llevará a cabo el evento? </label>
+								<input type="text" name="horarios_evento" id="horarios_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Horario" data-parsley-required-message="El horario es obligatorio">
+								<label for="">Si este acontecimiento es organizado por una institución u organización, señala abajo cuál. En caso de más de una, separar por comas. Si son un grupo de personas, nombren su equipo de trabajo. </label>
+								<input type="text" name="institucion_evento" id="institucion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Institución u organización." data-parsley-required-message="La institución u organización es obligatoria">
+								<label for="">Asistentes</label>
+								<div class="[ margin-bottom--large ]">
+									<div>
+										<input  type="radio" name="asistencia_invitacion" id="asistencia_invitacion" value="no" checked>
+										La asistencia es libre
+									</div>
+									<div>
+										<input type="radio" name="asistencia_invitacion" id="asistencia_invitacion1" value="si" >
+										Por invitación
+									</div>
+								</div>
+								<label for="">Fotografía de cartel o publicidad del acontecimiento. Coloca el archivo de la fotografía en Google Drive, Dropbox o OneDrive y a continuación copia la liga.</label>
+								<input name="fotografia_evento" id="fotografia_evento"  class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" type="text" >
+								<label for="">Señala a continuación un correo electrónico</label>
+								<input name="correo_evento" id="correo_evento" type="email" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Correo Electrónico" data-parsley-required-message="El correo es obligatorio" data-parsley-type-message="Por favor escribe un correo válido">
+							</div>
 						</div>
-					</div>
-					<div class="[ text-center ]">
-						<input name="accion" id="accion" type="hidden" value="guarda-evento">
-						<button type="submit" class="[ btn btn-primary btn--large ]">enviar</button>
-					</div>
-				</form>
-			</article>
+						<div class="[ text-center ]">
+							<input name="accion" id="accion" type="hidden" value="guarda-evento">
+							<button type="submit" class="[ btn btn-primary btn--large ]">enviar</button>
+						</div>
+					</form>
+				</div>
+			</section>
 		</div>
-	</section>
+	</div>
 
 	<div class="[ descanso-visual ]" id="sobre_constitucion">
 		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
@@ -289,8 +291,8 @@ get_header(); the_post();
 						<label for="">Describe a continuación las reflexiones o propuestas centrales de la sesión de trabajo y el contexto en el que esta se llevó a cabo.</label>
 						<textarea name="resumen_ensayo" id="resumen_ensayo" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 250 palabras" required="" data-parsley-maxwords="250" data-parsley-required-message="El resumen es obligatorio" data-parsley-maxwords-message="El resumen no puede exceder 250 palabras"></textarea>
 						<label for="">Señala a continuación 3 palabras clave vinculadas a este documento</label>
-						<input name="palabra_a" id="palabra_a" type="text" class="[ form-control ][ input-primary ][ margin-bottom ]" placeholder="Palabra 1" required="" data-parsley-error-message="Palabra obligatoria">
-						<input name="palabra_b" id="palabra_b" type="text" class="[ form-control ][ input-primary ][ margin-bottom ]" placeholder="Palabra 2" required="" data-parsley-error-message="Palabra obligatoria">
+						<input name="palabra_a" id="palabra_a" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 1" required="" data-parsley-error-message="Palabra obligatoria">
+						<input name="palabra_b" id="palabra_b" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 2" required="" data-parsley-error-message="Palabra obligatoria">
 						<input name="palabra_c" id="palabra_c" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 3" required="" data-parsley-error-message="Palabra obligatoria">
 						<label for="">Comparte en una frase un mensaje central de la relatoría o ensayo</label>
 						<input name="mensaje_central" id="mensaje_central" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">
@@ -325,124 +327,6 @@ get_header(); the_post();
 				</div>
 			</form>
 		</article>
-	</section>
-
-	<section class="[ bg-gray-light section--bg space-id ][ no-margin--bottom ]" id="voces_ciudadanas">
-		<div class="[ container padding--sides--xsm padding--bottom--large ]">
-			<h2 class="[ no-margin-top ]">Voces ciudadanas</h2>
-			<div class="[ row ][ margin-bottom ]">
-				<?php $voces_ciudadanas = new WP_Query(array(
-						'post_type'      => 'voces-ciudadanas',
-						'posts_per_page' => 8,
-						'meta_query' => array(
-							array(
-								'key'     => 'video_voces',
-								'value'   => '',
-								'compare' => '!=',
-							),
-						),
-					));
-
-				if ( $voces_ciudadanas->have_posts() ) :
-					$count = 0;
-					$count_pasados = 0;
-					while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
-						<div class="[ col-xs-12 col-sm-6 col-lg-3 ][ margin-bottom ]">
-							<div class="[ js-video-wrapper ]">
-
-								<?php $video = get_post_meta( $post->ID, 'video_voces', true );
-								preg_match('/src="([^"]+)"/', $video, $match);
-								$url_video = $match[1]; ?>
-								<iframe class="[ embed-responsive-item ]" src="<?php echo $url_video; ?>" frameborder="0" allowfullscreen></iframe>
-							</div>
-						</div>
-					<?php endwhile;
-				endif;
-				wp_reset_postdata(); ?>
-
-			</div>
-			<div class="[ text-right ]">
-				<a href="https://www.youtube.com/channel/UC3-12ySVHF-iItCbSdZ2z-Q" class="[ btn btn-primary btn-large ]" target="_blank">Ver más</a>
-			</div>
-		</div>
-
-		<div class="[ container padding--sides--xsm padding--bottom--large ]">
-			<h2 class="[ no-margin-top ]">Grupo de trabajo</h2>
-			<div class="[ row ][ margin-bottom ]">
-				<?php $voces_ciudadanas = new WP_Query(array(
-						'post_type'      => 'voces-ciudadanas',
-						'posts_per_page' => 3,
-						'meta_query' => array(
-							array(
-								'key'     => 'video_voces',
-								'value'   => '',
-								'compare' => '!=',
-							),
-						),
-					));
-
-				if ( $voces_ciudadanas->have_posts() ) :
-					$count = 0;
-					$count_pasados = 0;
-					while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
-						<div class="[ col-xs-12 col-sm-4 ][ margin-bottom ]">
-							<div class="[ js-video-wrapper ]">
-
-								<?php $video = get_post_meta( $post->ID, 'video_voces', true );
-								preg_match('/src="([^"]+)"/', $video, $match);
-								$url_video = $match[1]; ?>
-								<iframe class="[ embed-responsive-item ]" src="<?php echo $url_video; ?>" frameborder="0" allowfullscreen></iframe>
-							</div>
-						</div>
-					<?php endwhile;
-				endif;
-				wp_reset_postdata(); ?>
-
-			</div>
-			<div class="[ text-right ]">
-				<a href="https://www.youtube.com/channel/UC3-12ySVHF-iItCbSdZ2z-Q" class="[ btn btn-primary btn-large ]" target="_blank">Ver más</a>
-			</div>
-		</div>
-
-		<div class="[ container padding--sides--xsm padding--bottom--large ]">
-			<h2 class="[ no-margin-top ]">"Más ciudadanas y ciudadanos:"</h2>
-			<div class="[ row ][ margin-bottom ]">
-
-					<?php $voces_ciudadanas = new WP_Query(array(
-						'post_type'      => 'voces-ciudadanas',
-						'posts_per_page' => 5,
-						'meta_query' => array(
-							array(
-								'key'     => 'video_voces',
-								'value'   => '',
-								'compare' => '!=',
-							),
-						),
-					));
-
-					if ( $voces_ciudadanas->have_posts() ) :
-						$count = 0;
-						$count_pasados = 0;
-						while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
-							<div class="[ col-xs-12 col-sm-4 col-md-2-5 ][ margin-bottom ]">
-								<div class="[ js-video-wrapper ]">
-
-									<?php $video = get_post_meta( $post->ID, 'video_voces', true );
-									preg_match('/src="([^"]+)"/', $video, $match);
-									$url_video = $match[1]; ?>
-									<iframe class="[ embed-responsive-item ]" src="<?php echo $url_video; ?>" frameborder="0" allowfullscreen></iframe>
-								</div>
-							</div>
-						<?php endwhile;
-					endif;
-					wp_reset_postdata(); ?>
-
-			</div>
-			<div class="[ text-right ]">
-				<a href="https://www.youtube.com/channel/UC3-12ySVHF-iItCbSdZ2z-Q" class="[ btn btn-primary btn-large ]" target="_blank">Ver más</a>
-			</div>
-		</div>
-
 	</section>
 
 	<div id="modal-agradecimiento" class="modal fade" role="dialog">

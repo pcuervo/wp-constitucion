@@ -1,11 +1,12 @@
-<?php get_header(); the_post();
-the_title();
+<?php
+get_header();
+the_post();
 $url_image_constirucion = attachment_image_url( $post->ID, 'full' );
 $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
-<div class="[ bg-image rectangle-small ][ margin--header ][ relative ]" style="background-image: url('<?php echo $img_constitucion_cdmx; ?>');">
-	<div class="[ bg-dark--opacity width-100 height-100 ]">
-		<h1 class="[ container ][ text-uppercase text-center ][ no-margin ][ center-full ][ color-light ][ letter-spacing ]">Acerca de la Constitución</h1>
+<div class="[ bg-image rectangle-small ][ relative ]" style="background-image: url('<?php echo $img_constitucion_cdmx; ?>');">
+	<div class="[ width-100 height-100 ]">
+		<h1 class="[ container ][ text-uppercase text-center ][ no-margin ][ center-full ][ color-light ][ letter-spacing ][ hidden ]">Acerca de la Constitución</h1>
 	</div>
 </div>
 
@@ -178,38 +179,10 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	<img src="<?php echo THEMEPATH; ?>images/IMG_5993.jpg" alt="">
 </div>
 
-<section class="[ container ][ space-id ]" id="hacia_constituyente">
-	<div class="[ row ]">
-		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
-			<div class="[ content-acerca-de ][ margin-bottom--large ]">
-				<h2>Hacia el constituyente</h2>
-				<blockquote>
-					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
-				</blockquote>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-					accumsan lorem id porttitor porttitor. In pulvinar pellentesque ornare. Morbi facilisis sem molestie sapien euismod,
-					vel ornare mi sagittis. Nulla at porta arcu, ut lacinia dui. In semper.Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
-				</p>
-			</div>
-
-			<div class="[ content-acerca-de ]" >
-				<blockquote>
-					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
-				</blockquote>
-				<p>
-					Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
-				</p>
-			</div>
-
-		</div>
-	</div>
-</section>
-
 <section class="[ container ][ space-id ]" id="constitución_wiki">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ][ text-justify ]">
-			<h2 class="[ margin-bottom ]">Constitución en wiki</h2>
+			<h2 class="[ margin-bottom ][ text-center ]">Constitución en wiki</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit in suscipit similique tempore ab quam voluptatibus, quos modi fuga iusto earum incidunt repellendus quis tempora? Perspiciatis officia accusantium temporibus esse.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum possimus dolorum quam illo veniam id placeat nulla repellat vero debitis ratione consectetur eos praesentium, delectus doloremque dolor, ipsa deserunt eaque.</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem consequuntur error illum. Atque esse, et iure rerum fugiat consequuntur repellendus est dignissimos alias officia fugit culpa nam consequatur exercitationem quae!</p>
 		</div>
@@ -225,7 +198,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
 <section class="[ space-id ]" id="preguntas_frecuentes">
 	<div class="[ container ]">
-		<h2 class="[ margin-bottom ]">Preguntas frecuentes</h2>
+		<h2 class="[ margin-bottom ][ text-center ]">Preguntas frecuentes</h2>
 		<?php $preguntas = new WP_Query(array(
 				'post_type'      => 'preguntas-frecuentes',
 				'posts_per_page' => -1,
@@ -258,7 +231,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
 
 <section class="[ container ][ space-id ][ content-biblioteca ]" id="biblioteca">
-	<h2 class="[ margin-bottom no-margin-top ]" id="biblioteca">Biblioteca</h2>
+	<h2 class="[ margin-bottom no-margin-top ][ text-center ]" id="biblioteca">Biblioteca</h2>
 	<a href="#"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></a>
 	<a href="#"><p>Lorem ipsum dolor sit amet,  adipisicing elit.</p></a>
 	<a href="#"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></a>

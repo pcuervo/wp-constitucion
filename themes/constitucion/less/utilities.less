@@ -134,6 +134,7 @@
 //-----------
 .width-auto { width: auto!important;}
 .width-100  { width: 100%;}
+.width--100  { width: 100vw;}
 .width-90   { width: 90%;}
 .width-80   { width: 80%;}
 .width-70   { width: 70%;}
@@ -149,11 +150,24 @@
 .width-200   { width: 200px;}
 
 .height-100   { height: 100%;}
-.height-120    { height: 120px;}
+.height-120   { height: 120px;}
 .height-80    { height: 80px;}
 .height-70    { height: 70px;}
 .height-40    { height: 40px;}
 .height-200   { height: 200px;}
+
+.width-col-1 { width: 8.33333333%;}
+.width-col-2 { width: 16.66666667%;}
+.width-col-3 { width: 25%;}
+.width-col-4 { width: 33.33333333%;}
+.width-col-5 { width: 41.66666667%;}
+.width-col-6 { width: 50%;}
+.width-col-7 { width: 58.33333333%;}
+.width-col-8 { width: 66.66666667%;}
+.width-col-9 { width: 75%;}
+.width-col-10 { width: 83.33333333%;}
+.width-col-11 { width: 91.66666667%;}
+.width-col-12 { width: 100%;}
 
 // Padding
 // -------------------------
@@ -265,11 +279,7 @@
 .margin-top--xlarge{ margin-top: (@margin-base*4); }
 .margin-top--xxlarge{ margin-top: (@margin-base*8); }
 
-.margin--header{
-	margin-top: 55px; margin-bottom: 50px;
-	@media (min-width: @screen-sm){ margin-top: 50px; }
-	@media (min-width: @screen-md){ margin-top: 70px; }
- }
+.margin--header{ margin-bottom: 50px; }
 
 .no-margin-top-bottom{ margin-top:0; margin-bottom:0; }
 .margin-top-bottom{ margin-top: (@margin-base); margin-bottom: (@margin-base); }
@@ -362,27 +372,6 @@
 	position: absolute;
 	top: 150px; right: 0px;
 }
-
-// .question{
-// 	& .circle {
-// 		 width: 100px;
-// 		 height: 100px;
-// 		 -moz-border-radius: 50%;
-// 		 -webkit-border-radius: 50%;
-// 		 border-radius: 50%;
-// 		 background-color: @gray-xxlight;
-// 	}
-// 	&:hover{
-// 			& .circle{
-// 				background-color: @light;
-// 			border: 3px solid @gray-light;
-// 			.transition
-// 			}
-// 			& p{
-// 				font-weight: bold;
-// 			}
-// 		 }
-// }
 
 .float-top--sm{
 	@media (min-width: @screen-sm){
@@ -486,7 +475,7 @@
 }
 
 .content-acerca-de{
-	h2{ margin-left: 32%; }
+	h2{ text-align: center; }
 	p:nth-child(2),p:nth-child(3) {
 		width: 100%;
 		display: inline-block;
@@ -542,8 +531,14 @@
 		display: inline-flex;
 		padding-left: 0 !important;
 	}
-	blockquote p:nth-child(2){
+	blockquote p{
 		width: 100%;
+	}
+	@media (min-width: @screen-sm-min){
+	p + p:last-child {
+		width: 60%;
+		margin-left: 32.5%;
+		}
 	}
 }
 
@@ -561,4 +556,9 @@
 			color: @primary;
 		}
 	}
+}
+
+#ui-datepicker-div{
+	position: absolute;
+	top: 0px;
 }

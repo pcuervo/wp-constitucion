@@ -1102,6 +1102,9 @@ a:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
+body.home .main {
+  padding-top: 0 !important;
+}
 section {
   margin-bottom: 50px;
 }
@@ -1109,8 +1112,8 @@ section.section--bg {
   padding: 50px 0;
 }
 section.space-id {
-  padding-top: 70px;
-  margin-bottom: 70px;
+  padding-top: 80px;
+  margin-bottom: 80px;
 }
 section.space-id article {
   margin-bottom: 35px;
@@ -2651,8 +2654,6 @@ output {
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
@@ -3558,15 +3559,9 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-nav-home {
   z-index: 1000;
-  position: absolute;
-  top: 15%;
-  left: 95%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  padding-top: 12px;
-  padding-right: 12px;
+  position: relative;
+  top: 10px;
+  right: 10px;
 }
 .btn-lg,
 .btn-group-lg > .btn {
@@ -3720,22 +3715,19 @@ tbody.collapse.in {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -1px;
   z-index: 1000;
   display: none;
   float: left;
   min-width: 160px;
-  padding: 5px 0;
+  padding: 5px 0 3px 0;
   margin: 0;
   list-style: none;
   font-size: 14px;
   text-align: left;
   background-color: #fff;
   border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  border: 1px solid #dbdbdb;
   background-clip: padding-box;
 }
 .dropdown-menu.pull-right {
@@ -3752,7 +3744,7 @@ tbody.collapse.in {
   display: block;
   padding: 0;
   clear: both;
-  font-weight: normal;
+  font-weight: 300;
   line-height: 1.42857143;
   color: #333333;
   white-space: nowrap;
@@ -6103,12 +6095,7 @@ button.close {
   height: 300px;
 }
 .logo {
-  width: 80px;
-}
-@media (min-width: 992px) {
-  .logo {
-    width: 130px;
-  }
+  width: 135px;
 }
 .height-line {
   height: 30px;
@@ -7014,7 +7001,7 @@ ul.horizontal-slide li[class*="col"]:first-child {
   font-size: 12px;
 }
 /* Let's get this party started */
-::-webkit-scrollbar {
+#scroll::-webkit-scrollbar {
   width: 12px;
 }
 /* Track */
@@ -7373,6 +7360,9 @@ ul.slides li img {
 .width-100 {
   width: 100%;
 }
+.width--100 {
+  width: 100vw;
+}
 .width-90 {
   width: 90%;
 }
@@ -7429,6 +7419,42 @@ ul.slides li img {
 }
 .height-200 {
   height: 200px;
+}
+.width-col-1 {
+  width: 8.33333333%;
+}
+.width-col-2 {
+  width: 16.66666667%;
+}
+.width-col-3 {
+  width: 25%;
+}
+.width-col-4 {
+  width: 33.33333333%;
+}
+.width-col-5 {
+  width: 41.66666667%;
+}
+.width-col-6 {
+  width: 50%;
+}
+.width-col-7 {
+  width: 58.33333333%;
+}
+.width-col-8 {
+  width: 66.66666667%;
+}
+.width-col-9 {
+  width: 75%;
+}
+.width-col-10 {
+  width: 83.33333333%;
+}
+.width-col-11 {
+  width: 91.66666667%;
+}
+.width-col-12 {
+  width: 100%;
 }
 .no-padding {
   padding: 0 !important;
@@ -7699,18 +7725,7 @@ ul.slides li img {
   margin-top: 160px;
 }
 .margin--header {
-  margin-top: 55px;
   margin-bottom: 50px;
-}
-@media (min-width: 768px) {
-  .margin--header {
-    margin-top: 50px;
-  }
-}
-@media (min-width: 992px) {
-  .margin--header {
-    margin-top: 70px;
-  }
 }
 .no-margin-top-bottom {
   margin-top: 0;
@@ -7921,18 +7936,7 @@ ul.slides li img {
 .content-user img:first-child {
   margin-bottom: 20px;
   width: 100%;
-  margin-top: 55px;
   margin-bottom: 50px;
-}
-@media (min-width: 768px) {
-  .content-user img:first-child {
-    margin-top: 50px;
-  }
-}
-@media (min-width: 992px) {
-  .content-user img:first-child {
-    margin-top: 70px;
-  }
 }
 @media (max-width: 768px) {
   .content-user img:first-child {
@@ -8049,7 +8053,7 @@ ul.slides li img {
   height: auto;
 }
 .content-acerca-de h2 {
-  margin-left: 32%;
+  text-align: center;
 }
 .content-acerca-de p:nth-child(2),
 .content-acerca-de p:nth-child(3) {
@@ -8088,7 +8092,7 @@ ul.slides li img {
 }
 .content-mensaje-jefegob h2,
 .content-sobre-la-plataforma h2 {
-  margin-left: 32%;
+  text-align: center;
 }
 .content-mensaje-jefegob p:nth-child(2),
 .content-sobre-la-plataforma p:nth-child(2),
@@ -8141,7 +8145,7 @@ ul.slides li img {
   padding-right: 10px;
 }
 .content-cronica-cdmx h2 {
-  margin-left: 32%;
+  text-align: center;
 }
 .content-cronica-cdmx p:nth-child(2),
 .content-cronica-cdmx p:nth-child(3) {
@@ -8186,8 +8190,14 @@ ul.slides li img {
   display: inline-flex;
   padding-left: 0 !important;
 }
-.content-cronica-cdmx blockquote p:nth-child(2) {
+.content-cronica-cdmx blockquote p {
   width: 100%;
+}
+@media (min-width: 768px) {
+  .content-cronica-cdmx p + p:last-child {
+    width: 60%;
+    margin-left: 32.5%;
+  }
 }
 .content-biblioteca {
   margin-bottom: 80px;
@@ -8206,6 +8216,10 @@ ul.slides li img {
 .content-biblioteca a:hover,
 .content-biblioteca a:focus {
   color: #e80e8a;
+}
+#ui-datepicker-div {
+  position: absolute;
+  top: 0px;
 }
 @-ms-viewport {
   width: device-width;
@@ -8525,6 +8539,13 @@ ul.slides li img {
     height: 70vh;
   }
 }
+.hero_video__scroll {
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  cursor: pointer;
+}
 header {
   position: fixed;
   background-color: #fff;
@@ -8537,10 +8558,28 @@ header {
     height: 70px;
   }
 }
-@media (min-width: 992px) {
-  header {
-    height: 100px;
+.header-home {
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.header-home nav {
+  display: none;
+}
+.header-home.sticky {
+  height: 55px;
+  overflow: visible;
+}
+@media (min-width: 768px) {
+  .header-home.sticky {
+    height: 70px;
   }
+}
+.header-home.sticky nav {
+  display: block;
 }
 header li,
 ul.menu-home > li {
@@ -8559,27 +8598,27 @@ li > span > a,
 }
 ul.dropdown-content > li > a {
   margin-bottom: 10px;
+  font-weight: 400;
 }
-.sticky ul.menu-desktop > li.dropdown--hover--acerca {
-  padding: 1px 1%;
-}
-.menu-desktop li.dropdown--hover--acerca {
-  padding: 1px 1%;
+ul.menu-desktop {
+  margin: 0 !important;
 }
 ul.menu-desktop > li {
-  padding: 15px 1%;
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  padding: 26px 10px 10px 10px;
   border-right: 1px solid #dbdbdb;
-}
-@media (min-width: 992px) {
-  ul.menu-desktop > li {
-    padding: 15px 1.5%;
-  }
 }
 ul.menu-desktop > li:last-child {
   border-right: none;
 }
-ul.menu-desktop {
-  margin: 0 !important;
+.menu-desktop__logo a {
+  position: relative;
+  top: -26px;
+}
+.menu-desktop__acerca {
+  padding-top: 18px !important;
 }
 ul.menu-desktop li a:hover,
 ul.menu-home > li a:hover,
@@ -8620,18 +8659,6 @@ li > span > a > :hover.active,
 }
 ul.submenu {
   display: none !important;
-}
-.sticky ul.menu-desktop > li {
-  padding: 15px 1%;
-  border-right: 1px solid #dbdbdb;
-}
-@media (min-width: 992px) {
-  .sticky ul.menu-desktop > li {
-    padding: 15 1.5%;
-  }
-}
-.sticky ul.menu-desktop > li:last-child {
-  border-right: none;
 }
 .sticky ul.menu-desktop {
   margin: 0 !important;
@@ -8685,10 +8712,8 @@ ul.menu-home > li > a,
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 12px 16px;
+  padding: 12px 16px 0 16px;
 }
 .dropdown--hover:hover .dropdown-content {
   display: block;
@@ -8806,22 +8831,14 @@ nav a:focus {
   width: auto;
   height: auto;
 }
-.header-home {
-  margin-top: -10px;
-  height: 0px;
-  transition: height 2s;
-}
-.header-home.sticky {
-  margin-top: -10px;
-  height: 100px;
-  transition: height 2s;
-}
 footer {
   padding-top: 12px;
   background-color: #313131;
   text-align: center;
 }
 footer img {
+  display: inline-block;
+  vertical-align: bottom;
   width: 150px;
   margin-right: 20px;
 }
@@ -8835,8 +8852,11 @@ footer img {
   padding-bottom: 12px;
 }
 footer a {
+  display: inline-block;
+  vertical-align: bottom;
   text-decoration: none;
   font-size: 12px;
+  line-height: 9px;
   margin-left: 20px;
   margin-right: 20px;
   color: #cccccc;

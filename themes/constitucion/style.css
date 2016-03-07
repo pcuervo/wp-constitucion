@@ -6095,7 +6095,7 @@ button.close {
   height: 300px;
 }
 .logo {
-  width: 80px;
+  width: 135px;
 }
 .height-line {
   height: 30px;
@@ -8196,7 +8196,7 @@ ul.slides li img {
 @media (min-width: 768px) {
   .content-cronica-cdmx p + p:last-child {
     width: 60%;
-    margin-left: 32%;
+    margin-left: 32.5%;
   }
 }
 .content-biblioteca {

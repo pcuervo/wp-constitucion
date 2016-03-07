@@ -26,17 +26,13 @@
 		</div>
 	</div>
 	<!-- #SoyCDMX mobile -->
-	<div class="modal fade" id="SoyCDMX-mobile-home" tabindex="-1" role="dialog">
-		<div class="[ modal-content ][ width-100 ][ no-margin ]">
-			<div class="[ container ]">
-				<div class="[ row ]">
-					<div class="[ col-xs-2 ][ padding--top-bottom--large ]">
-						<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/back.svg"></a>
-					</div>
-					<div class="[ col-xs-10 ]">
-						<h1>#SomosCDMX</h1>
-					</div>
+	<div class="modal fade [ bg-light ]" id="SoyCDMX-mobile-home" tabindex="-1" role="dialog">
+		<div class="[ modal-content no-border-radius width--100 ][ no-margin ]">
+			<div class="[ container ][ padding--top ]">
+				<div class="[ absolute right-10 ]">
+					<a type="button" class="close [ opacity-7 ]" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
 				</div>
+				<h3>#SomosCDMX</h3>
 
 				<?php $tweet = new Twitter;
 				$tweets = $tweet->feedTwitter();

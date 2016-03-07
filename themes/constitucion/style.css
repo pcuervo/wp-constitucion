@@ -7360,6 +7360,9 @@ ul.slides li img {
 .width-100 {
   width: 100%;
 }
+.width--100 {
+  width: 100vw;
+}
 .width-90 {
   width: 90%;
 }

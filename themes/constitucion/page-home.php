@@ -6,9 +6,7 @@
 			<div class="[ container ][ bg-light ]">
 				<div class="[ row ]">
 					<div class="[ col-xs-10 ]">
-						<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-vertical.gif"></a>
-						<span class="[ text-italic fz-xsmall ][ relative ]">punto</span>
-						<span class="[ text-italic fz-xsmall ][ relative top-12 right-32 ]">de encuentro</span> <!-- - page-home.php -->
+						<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"></a>
 					</div>
 					<div class="[ col-xs-2 ][ text-center ][ padding--top ]">
 						<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
@@ -86,7 +84,7 @@
 				</a>
 			</span>
 			<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe_gobierno">Mensaje del jefe de gobierno</a></li>
+				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Mensaje del jefe de gobierno</a></li><!-- #jefe_gobierno -->
 				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_constitucion">Sobre la constitución</a></li>
 				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#grupo_trabajo">Grupo de trabajo</a></li>
 				<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_plataforma">Sobre la plataforma</a></li>
@@ -102,7 +100,7 @@
 				</a>
 			</span>
 			<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-				<li><a href="<?php echo site_url('/cdmx/'); ?>#cronica">Crónica</a></li>
+				<li><a href="<?php echo site_url('/cdmx/'); ?>">Crónica</a></li><!-- #cronica -->
 				<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia_el_constituyente">Hacia el constituyente</a></li>
 				<li><a href="<?php echo site_url('/cdmx/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
 			</ul>
@@ -110,7 +108,7 @@
 		<li class="[ dropdown--hover ]">
 			<span><a class="[ text-uppercase ]" href="<?php echo site_url('/participa/'); ?>">Participa<span class="caret"></span></a></span>
 			<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-				<li><a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">Imagina tu ciudad</a></li>
+				<li><a href="<?php echo site_url('/participa/'); ?>">Imagina tu ciudad</a></li><!-- #imagina_ciudad -->
 				<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Da seguimiento a tu participación</a></li>
 				<li><a href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
 				<li><a href="<?php echo site_url('/participa/'); ?>#dialogos_publicos">Diálogos públicos</a></li>

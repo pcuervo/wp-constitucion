@@ -152,7 +152,9 @@
 					<div class="[ col-xs-12 col-sm-4 ][ margin-bottom ][ post_compact ]">
 						<a href="<?php the_permalink(); ?>">
 							<img class="[ img-responsive ][ margin-bottom--small ]" src="<?php echo $url_image; ?>">
-							<h4 class="[ color-gray ][ text-uppercase ]"><?php the_title(); ?></h4>
+							<div>
+								<h4 class="[ color-gray ][ text-uppercase ]"><?php the_title(); ?></h4>
+							</div>
 						</a>
 					</div>
 				<?php endwhile;

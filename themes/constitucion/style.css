@@ -8867,87 +8867,27 @@ footer a:hover {
   left: 0;
   cursor: pointer;
 }
-ol.flex-control-nav.flex-control-paging {
-  position: absolute;
-  width: 100%;
-  bottom: 6px;
+.post_compact:hover div {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0;
-  text-align: center;
-  list-style: none;
-  padding-left: 0px;
+  border-top: 0;
+  border-right: 0;
+  line-height: 190px;
 }
-ol.flex-control-nav.flex-control-paging li {
-  display: inline;
+.post_compact div {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 15px;
+  right: 15px;
+  background-color: rgba(238, 238, 238, 0.76);
+  color: #333;
 }
-ol.flex-control-nav.flex-control-paging li a.flex-active {
-  background-color: #fff;
-}
-ol.flex-control-nav.flex-control-paging li a {
-  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
-  text-indent: -9999px;
-  overflow: hidden;
-  border: 1px solid #fff;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+.post_compact div h4 {
   display: inline-block;
-  margin: 5px;
-  width: 8px;
-  height: 8px;
-  cursor: auto;
-}
-@media (min-width: 768px) {
-  ol.flex-control-nav.flex-control-paging li a {
-    margin: 8px;
-    width: 10px;
-    height: 10px;
-  }
-}
-ol.flex-control-nav.flex-control-paging li a:hover,
-ol.flex-control-nav.flex-control-paging li a:focus,
-ol.flex-control-nav.flex-control-paging li a.focus,
-ol.flex-control-nav.flex-control-paging li a:active,
-ol.flex-control-nav.flex-control-paging li a.active {
-  background-color: #fff;
-}
-ul.flex-direction-nav {
-  position: absolute;
+  vertical-align: middle;
   width: 100%;
-  bottom: 45%;
-  text-indent: -9999px;
-  overflow: hidden;
-}
-a.flex-prev {
-  z-index: 100;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 5%;
-  width: 30px;
-  background-image: url('icons/prev.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-a.flex-next {
-  z-index: 1050;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 5%;
-  width: 30px;
-  background-image: url('icons/next.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-ul.slides {
-  padding-left: 0;
-}
-ul.slides li img {
-  width: 100%;
+  line-height: 16px;
+  padding: 0 15px;
+  text-align: center;
 }

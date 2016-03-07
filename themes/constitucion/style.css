@@ -1111,10 +1111,6 @@ section {
 section.section--bg {
   padding: 50px 0;
 }
-section.space-id {
-  padding-top: 80px;
-  margin-bottom: 80px;
-}
 section.space-id article {
   margin-bottom: 35px;
 }
@@ -8570,7 +8566,7 @@ header {
 }
 @media (min-width: 768px) {
   header {
-    height: 70px;
+    height: 100px;
   }
 }
 .header-home {
@@ -8590,7 +8586,7 @@ header {
 }
 @media (min-width: 768px) {
   .header-home.sticky {
-    height: 70px;
+    height: 100px;
   }
 }
 .header-home.sticky nav {
@@ -8599,7 +8595,6 @@ header {
 header li,
 ul.menu-home > li {
   text-decoration: none;
-  display: inline;
 }
 header > nav > ul > li > a,
 header > nav > ul > li > span > a,
@@ -8612,7 +8607,7 @@ li > span > a,
   color: #4a4a4a;
 }
 ul.dropdown-content > li > a {
-  margin-bottom: 10px;
+  padding: 4px 10px;
   font-weight: 400;
 }
 ul.menu-desktop {
@@ -8622,7 +8617,7 @@ ul.menu-desktop > li {
   display: inline-block;
   vertical-align: middle;
   height: 100%;
-  padding: 26px 10px 10px 10px;
+  padding: 42px 10px 10px 10px;
   border-right: 1px solid #dbdbdb;
 }
 ul.menu-desktop > li:last-child {
@@ -8633,7 +8628,7 @@ ul.menu-desktop > li:last-child {
   top: -26px;
 }
 .menu-desktop__acerca {
-  padding-top: 18px !important;
+  padding-top: 34px !important;
 }
 ul.menu-desktop li a:hover,
 ul.menu-home > li a:hover,
@@ -8728,7 +8723,7 @@ ul.menu-home > li > a,
   display: none;
   position: absolute;
   min-width: 160px;
-  padding: 12px 16px 0 16px;
+  padding: 0;
 }
 .dropdown--hover:hover .dropdown-content {
   display: block;

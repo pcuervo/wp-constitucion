@@ -8187,7 +8187,7 @@ ul.slides li img {
   display: inline-flex;
   padding-left: 0 !important;
 }
-.content-cronica-cdmx blockquote p:nth-child(2) {
+.content-cronica-cdmx blockquote p {
   width: 100%;
 }
 .content-biblioteca {
@@ -8207,6 +8207,10 @@ ul.slides li img {
 .content-biblioteca a:hover,
 .content-biblioteca a:focus {
   color: #e80e8a;
+}
+#ui-datepicker-div {
+  position: absolute;
+  top: 0px;
 }
 @-ms-viewport {
   width: device-width;

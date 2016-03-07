@@ -3,7 +3,7 @@
     "use strict";
 
     $(function(){
-        /** 
+        /**
          * VIDEO FULL
          */
         if (document.getElementById("container_video") ){
@@ -11,15 +11,19 @@
             $( window ).resize(function() {
                 videoHome();
             });
-            
+
         }
-        
+
         function videoHome(){
             var ancho_nuevo = $(window).width();
-            var alto_nuevo = $(window).height() - 30;
+            var alto_nuevo = $(window).height();
 
             $('#container_video').css({'width': ancho_nuevo, 'height': alto_nuevo});
         }
+
+        $('.js-hero_video__scroll').on('click', function(){
+            $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 80 }, '700');
+        });
 
         /**
          * INIT FLEXSLIDER
@@ -28,7 +32,7 @@
             animation: "slide"
         });
 
-        /** 
+        /**
          * DATOS MODAL GRUPO DE TRABAJO
          */
         $('.content-trabajo').on('click', function(){
@@ -42,82 +46,83 @@
             $('.imagen-modal').attr('src', '').attr('src', imagen);
             $('.cargo-modal').empty().html(cargo);
 
-        }); 
+        });
 
         /**------ FORMULARIOS -------*/
-            /** 
-             * DATEPIKER
-             */
-            $('.date-ensayo').datepicker({
-                dateFormat : 'yy-mm-dd',
-                minDate: 0,
-                onSelect: function(dateText, inst) { 
-                    window.dateInicio = dateText;
-                    $('.date-ensayo-fin').removeAttr("disabled");
-               }
-            });
+        /**
+         * DATEPIKER
+         */
+        $('.date-ensayo').datepicker({
+            dateFormat : 'yy-mm-dd',
+            minDate: 0,
+            onSelect: function(dateText, inst) {
+                window.dateInicio = dateText;
+                $('.date-ensayo-fin').removeAttr("disabled");
+           }
+        });
 
-            $('.date-ensayo-fin').datepicker({
-                dateFormat : 'yy-mm-dd',
-                minDate: 0
-            });
+        $('.date-ensayo-fin').datepicker({
+            dateFormat : 'yy-mm-dd',
+            minDate: 0
+        });
 
-            /** 
-             * VALIDAR LIGAS DE ARCHIVOS
-             */
-            $('#form-ensayos').on('submit', function(event){
-                event.preventDefault();
-                var result_a = getValidateDocs('fotografias_ensayo');
-                var result_b = getValidateDocs('lista_asistentes_ensayo');
-                var result_c = getValidateDocs('compartir_documento_ensayo');
+        /**
+         * VALIDAR LIGAS DE ARCHIVOS
+         */
+        $('#form-ensayos').on('submit', function(event){
+            event.preventDefault();
+            var result_a = getValidateDocs('fotografias_ensayo');
+            var result_b = getValidateDocs('lista_asistentes_ensayo');
+            var result_c = getValidateDocs('compartir_documento_ensayo');
 
-                if (result_a && result_b && result_c) {
-                    var form = document.getElementById("form-ensayos");
-                    form.submit();
-                };
-                
-            });
+            if (result_a && result_b && result_c) {
+                var form = document.getElementById("form-ensayos");
+                form.submit();
+            };
 
-            /** 
-             * VALIDAR LIGAS DE ARCHIVOS
-             */
-            $('#form-eventos').on('submit', function(event){
-                event.preventDefault();
-                var result_a = getValidateDocs('fotografia_evento');
+        });
 
-                if (result_a) {
-                    var form = document.getElementById("form-eventos");
-                    form.submit();
-                };
-            });
- 
-            function getValidateDocs(id_object){
-                var text = $('#'+id_object).val();
-                var docs = /docs.google.com/.test(text);  
-                var dropbox = /dropbox.com/.test(text);
-                var onedrive = /onedrive.live.com/.test(text);
+        /**
+         * VALIDAR LIGAS DE ARCHIVOS
+         */
+        $('#form-eventos').on('submit', function(event){
+            event.preventDefault();
+            var result_a = getValidateDocs('fotografia_evento');
 
-                if (docs || dropbox || onedrive ) {
-                    return true;
-                }else if(text == ''){
-                    return true;
-                };
+            if (result_a) {
+                var form = document.getElementById("form-eventos");
+                form.submit();
+            };
+        });
 
-                $('#'+id_object).addClass('parsley-error');
+        function getValidateDocs(id_object){
+            var text = $('#'+id_object).val();
+            var docs = /docs.google.com/.test(text);
+            var dropbox = /dropbox.com/.test(text);
+            var onedrive = /onedrive.live.com/.test(text);
 
-                return false;
+            if (docs || dropbox || onedrive ) {
+                return true;
+            }else if(text == ''){
+                return true;
+            };
 
-            }
+            $('#'+id_object).addClass('parsley-error');
+
+            return false;
+
+        }
+
         /**------ FORMULARIOS -------*/
- 
+
         $('.nota-destacada a').on('click', function(event){
             event.preventDefault();
-        });  
- 
-        if( parseInt( isPageSondeo ) ){ 
+        });
+
+        if( parseInt( isPageSondeo ) ){
             $('[data-parsley-certificado]').parsley();
         }
-        if( parseInt( isPageParticipa ) ){ 
+        if( parseInt( isPageParticipa ) ){
             addWordValidator();
             $('[data-parsley-certificado]').parsley();
             $('.js-check-reference-code').submit(function(e){
@@ -133,6 +138,35 @@
             createPieChart();
             createLineChart();
         }
+
+        /*------------------------------------*\
+            #GET/SET FUNCTIONS
+        \*------------------------------------*/
+
+        /**
+         * Get header's height
+         */
+        function getHeaderHeight(){
+            return $('header').outerHeight();
+        }// getHeaderHeight
+
+        /**
+         * Set main's padding top
+         */
+        function setMainPaddingTop(){
+            var headerHeight = getHeaderHeight();
+            $('.main').css('padding-top', headerHeight);
+        }// setMainPaddingTop
+
+        setMainPaddingTop();
+
+        $(window).scroll(function(){
+            setMainPaddingTop();
+        });
+
+        $(window).resize(function(){
+            setMainPaddingTop();
+        });
 
         /*------------------------------------*\
             #GENERAL FUNCTIONS
@@ -220,9 +254,20 @@
             new Chart(ctx).Bar(data);
         }
 
-        /*------------------------------------*\
-            ANIMATED STICKY HEADER
-        \*------------------------------------*/
+        if( parseInt( isHome ) ){
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 400){
+                    $('header').addClass("sticky");
+                }
+                else{
+                    $('header').removeClass("sticky");
+                }
+            });
+
+        }
+
+        $('.flex-prev, .flex-next').addClass('hidden-xs');
 
         $(window).scroll(function() {
 
@@ -230,11 +275,9 @@
 
                 if ($(this).scrollTop() > 40){
                     $('header').addClass("sticky");
-                    $('header').removeClass("hidden");
                 }
                 else{
                     $('header').removeClass("sticky");
-                    $('header').addClass("hidden");
                 }
             }
         });

@@ -292,21 +292,20 @@ ul.horizontal-slide li[class*="col"]:first-child {
 }
 
 .box-li{
-display: inline-block;
-float: none;
-position: relative;
-margin-right: -4px;
-width: 165px;
-height: 248px;
-vertical-align: middle;
-text-align: left;
+  display: inline-block;
+  float: none;
+  position: relative;
+  margin-right: -4px;
+  width: 165px;
+  vertical-align: middle;
+  text-align: left;
 }
 
-.fz-small.top-date{ height: 78px;padding-top: 66px; font-size: 14px;}
-.fz-small.top-date span{font-weight: bold;font-size: 16px;}
+.fz-small.top-date{ padding-top: 30px; font-size: 14px; }
+.fz-small.top-date span{ font-weight: bold; font-size: 16px; }
 
-.text--large { height: 60px; margin-bottom: 0px; left: 20px; top: -17px;}
-.text--small { height: 33px; margin-bottom: 0px; left: 20px; top: -17px;}
+.text--large { height: 60px; margin-bottom: 0px; left: 18px; top: -14px;}
+.text--small { height: 33px; margin-bottom: 0px; left: 18px; top: -14px;}
 
 .text--destacado { top: 17px;}
 .text--destacado p{font-size:12px;}
@@ -341,7 +340,7 @@ text-align: left;
 .box-li .vertical-line {
   height: 35px;
   margin-left: 3.5px;
-  border-left: 2px solid @gray;
+  border-left: 2px solid @gray-xlight;
 }
 .box-li .vertical-line--large {
   height: 45px;
@@ -355,7 +354,7 @@ text-align: left;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  border:2px solid @gray;
+  border: 2px solid @gray-xlight;
 }
 
 .box-li:hover{
@@ -363,28 +362,37 @@ text-align: left;
   & .circle-xsmall{ border: 2px solid @primary;}
 }
 
-.evento{width: 148px; overflow: hidden; white-space: normal; height: auto; position: absolute; left: 0%; bottom: 0; margin-bottom: 0;}
+.nota-destacada .box-li__lines{
+  position: relative;
+  top: -66px;
+}
+
+.nota-destacada .text--destacado{
+  top: -50px;
+}
+
+.evento{ width: 148px; overflow: hidden; white-space: normal; height: auto; position: absolute; left: 0%; bottom: 0; margin-bottom: 0; text-align: left;}
 .evento-bottom{bottom:inherit; top:0; font-size:12px;}
 
 /* Let's get this party started */
 #scroll::-webkit-scrollbar {
     width: 12px;
 }
- 
+
 /* Track */
 #scroll::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
- 
+
 /* Handle */
 #scroll::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(221,221,221,0.8); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background: rgba(221,221,221,0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 #scroll::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(221,221,221,0.4); 
+  background: rgba(221,221,221,0.4);
 }

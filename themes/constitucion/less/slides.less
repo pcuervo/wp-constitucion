@@ -4,10 +4,9 @@
 ol.flex-control-nav.flex-control-paging{
     .absolute;
     .width-100;
-    bottom: 10px;
+    bottom: 6px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto; margin-right: auto; margin-bottom: 0;
     text-align: center;
     list-style: none;
     padding-left: 0px;
@@ -23,22 +22,22 @@ ol.flex-control-nav.flex-control-paging li a.flex-active{
 }
 
 ol.flex-control-nav.flex-control-paging li a {
-    .box-shadow(0 5px 15px rgba(0,0,0,.5));
+    .box-shadow(0 5px 5px rgba(0,0,0,.3));
     text-indent: -9999px;
     overflow: hidden;
-    border: 3px solid @light;
+    border: 1px solid @light;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;
     display: inline-block;
-    margin: 3px;
-    width: 10px;
-    height: 10px; 
+    margin: 5px;
+    width: 8px;
+    height: 8px;
     cursor: auto;
     @media (min-width: @screen-sm){
-        margin: 15px;
-        width: 15px;
-        height: 15px;  
+        margin: 8px;
+        width: 10px;
+        height: 10px;
     }
 
     &:hover,

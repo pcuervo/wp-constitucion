@@ -670,7 +670,7 @@ button.fs-continue {
 	.fs-continue {
 		position: absolute;
 		right: 15px;
-		bottom: -250px;
+		bottom: -275px;
 		z-index: 0;
 	}
 }

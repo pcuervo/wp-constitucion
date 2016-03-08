@@ -1320,10 +1320,6 @@ h6,
 .h6 {
   font-size: 12px;
 }
-h2 {
-  letter-spacing: 2px;
-  font-family: "ABeeZee", sans-serif;
-}
 p {
   margin: 0 0 20px 0;
   font-family: "ABeeZee", sans-serif;
@@ -6095,7 +6091,7 @@ button.close {
   height: 300px;
 }
 .logo {
-  width: 135px;
+  width: 200px;
 }
 .height-line {
   height: 30px;
@@ -7478,6 +7474,9 @@ ul.slides li img {
 .padding--top {
   padding-top: 12px;
 }
+.padding--top--xsmall {
+  padding-top: 3px;
+}
 .padding--top--small {
   padding-top: 6px;
 }
@@ -7505,6 +7504,9 @@ ul.slides li img {
   .padding--header {
     padding-top: 110px;
   }
+}
+.padding--header-logo {
+  padding-top: 20px !important;
 }
 .padding--bottom {
   padding-bottom: 12px;
@@ -8651,6 +8653,7 @@ ul.menu-desktop {
   margin: 0 !important;
 }
 ul.menu-desktop > li {
+  text-align: left;
   display: inline-block;
   vertical-align: middle;
   height: 100%;

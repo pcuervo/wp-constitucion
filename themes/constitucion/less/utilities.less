@@ -489,13 +489,22 @@
 		display: inline-block;
 		border-left: none ;
 		vertical-align: top;
-		border-top: 1px dotted @primary;
+		border-top: 2px dotted @gray-light;;
+		border-bottom: 2px dotted @gray-light;;
 		border-left: none ;
 	}
+
 	blockquote p{
-		text-align: right;
-		color: lighten(@gray, 20%);
-		font-style: italic; font-size: 80%;
+		.width-100;
+		.margin-top;
+		text-transform: uppercase;
+		color: #457390;
+		font-size: 10px;
+	}
+
+	blockquote img{
+		.img-responsive;
+		margin: auto;
 	}
 
 	@media (min-width: @screen-sm-min){
@@ -508,8 +517,8 @@
 			width: 30%;
 			padding: 10px 0;
 		}
-		blockquote p{
-			text-align: right;
+		blockquote p:nth-child(2){
+		.width-100;
 		}
 	}
 
@@ -525,7 +534,7 @@
 .content-cronica-cdmx{
 	.content-acerca-de;
 	padding-left: 0; padding-right: 10px;
-	blockquote {
+	blockquote:last-child {
 		margin-left: 10px;
 		border-bottom: 1px dotted @primary;
 	}
@@ -535,6 +544,17 @@
 	}
 	blockquote p{
 		width: 100%;
+	}
+	blockquote p:nth-child(2){
+		width: 100%;
+	}
+	blockquote > p > canvas, 
+	blockquote > p > img,{
+		margin-left: 12px;
+		width: 250px;
+	}
+	blockquote img,{
+		.margin-bottom;
 	}
 	@media (min-width: @screen-sm-min){
 	p + p {

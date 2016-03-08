@@ -4,7 +4,7 @@
 		<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
 	</video>
 	<div class="[ logo-video ]">
-		<img class="[ width-80 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/vertical-blanco-con-slogan.gif">
+		<img class="[ width-100 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/Logotipo_Blanco-03.png">
 	</div>
 	<div class="[ hero_video__scroll ][ text-center ][ js-hero_video__scroll ]">
 		<p class="[ text-center ][ color-light ][ margin-bottom--small ]">Conoce más</p>
@@ -63,79 +63,7 @@
 	<div class="[ row ]">
 		<div class="[ col-sm-12 ]">
 			<h2 class="[ text-uppercase text-center ]">Hacia una ConstituciónCDMX</h2>
-			<ul id="scroll" class="[ scroll-cronologia ][ horizontal-slide ][ text-center ]">
-
-				<?php $cronologia = new WP_Query(array(
-						'post_type'      => 'linea-del-tiempo',
-						'posts_per_page' => -1,
-						'orderby'  => 'fecha_evento',
-						'order'    => 'ASC',
-						'meta_query' => array(
-							array(
-								'key'     => 'fecha_evento',
-							)
-
-						)
-					));
-
-				if ( $cronologia->have_posts() ) :
-					$count = 0;
-					$count_pasados = 0;
-					while ( $cronologia->have_posts() ) : $cronologia->the_post();
-						$tipo_evento = get_post_meta( $post->ID, 'tipo-de-evento', true );
-						$date_event = get_post_meta($post->ID, 'fecha_evento', true);
-						$count_pasados = strtotime($date_event) < strtotime( date('Y-m-d') ) ? $count_pasados + 1 : $count_pasados;
-						$class_status = strtotime($date_event) < strtotime( date('Y-m-d') ) ? 'ya-paso ' : '';
-
-						$date = '';
-						if ($date_event != '') {
-							$date_arr = getDateTransform($date_event);
-							$date = '<span class="[ color-primary ]"><strong>'. $date_arr[0] . '</strong></span> ' . $date_arr[1];
-						}
-
-
-						if($tipo_evento != 3): ?>
-						    <li class="[ box-li <?php echo $class_status; ?> ]">
-
-						    	<a href="<?php echo get_permalink(); ?>">
-									<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ][ text-uppercase ]"><?php echo $date; ?></p>
-									<div class="[ border-gray--large ]"></div>
-									<div class="[ vertical-line ]"></div>
-									<div class="[ circle-xsmall ]"></div>
-									<div class="[ text--large relative ]">
-										<p class="[ evento evento-bottom ]"><?php the_title(); ?></p>
-									</div>
-								</a>
-							</li>
-						<?php else: ?>
-
-							<li class="[ box-li nota-destacada ]">
-								<div class="[ text--large text--destacado relative ]">
-									<p class="[ evento ]"><?php the_title(); ?></p>
-								</div>
-								<div class="[ box-li__lines ]">
-									<div class="[ vertical-line--large ]"></div>
-									<div class="[ border-gray--large ]"></div>
-								</div>
-								<p class="[ color-gray ][ fz-small ][ margin-bottom--date ][ text-uppercase ]"></p>
-							</li>
-
-						<?php endif;
-
-						$count++;
-					endwhile;
-
-					$data = '';
-					if ($cronologia->found_posts >= 7 AND $count_pasados > 0):
-						$recorre = ($count_pasados - 1 ) * 165;
-						echo '<input type="hidden" id="recorre" value="'.$recorre.'">';
-					endif;
-				else:
-					echo '<p class="text-center">No existen eventos</p>';
-				endif;
-				wp_reset_postdata(); ?>
-
-			</ul>
+			<?php get_template_part('templates/eventos', 'timeLine'); ?>
 		</div>
 	</div>
 </section><!--/container-->

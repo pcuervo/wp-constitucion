@@ -110,12 +110,12 @@ get_header(); the_post();
 		</div>
 	</section>
 
-	<div class="[ descanso-visual ][ margin-bottom--large ]" id="sobre_constitucion">
+	<div class="[ descanso-visual ]" id="sobre_constitucion">
 		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
 	</div>
 
-	<section class="[ space-id ]"  id="peticiones">
-		<section class="[ container ]">
+	<section class="[ bg-gray--fondo section--bg ][ space-id ]"  id="peticiones">
+		<div class="[ container ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ] [ text-justify ]">
 				<h2 class="">Peticiones</h2>
 				<p>¿Tienes una propuesta concreta para el contenido del Proyecto de Constitución? Aprovecha la plataforma Change.org para hacer una petición, juntar firmas e interactuar directamente con el Grupo de Trabajo.</p>
@@ -127,20 +127,21 @@ get_header(); the_post();
 			<div class="[ text-center ][ margin-top ]">
 				<a href="https://www.change.org/movements/voces-ciudadanas-en-la-nueva-constituci%C3%B3n-de-la-cdmx" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ]">Conoce cómo realizar petición</a>
 			</div>
-		</section>
+		</div>
+	</section>
+
+	<section class="[ row ][ space-id ]" id="dialogos_publicos">
+		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
+			<h2 class="[ no-margin-top ]">Encuentros</h2>
+			<p>¿Te interesan los temas relacionados al proceso de Reforma Política de la Ciudad de México?</p>
+			<p>Esta sección te permite conocer dónde y cuándo se llevarán a cabo eventos relacionados a la redacción del Proyecto de Constitución de la Ciudad de México. Existen congresos, asambleas y otros foros, tanto oficiales como ciudadanos, que funcionan como espacios de diálogo y reflexión sobre este proceso histórico.</p>
+			<p>Organiza un encuentro con tu grupo, organización, institución o colonia y comparte los detalles llenando el siguiente formulario.</p>
+			<p>Escribe un ensayo a modo de relatoría del encuentro, integra las propuestas específicas abordadas por los participantes y compártelo a través de esta plataforma.</p>
+		</div>
 	</section>
 
 	<div class="[ bg-gray--fondo section--bg no-margin ]">
 		<div class="[ container ]">
-			<section class="[ row ][ section--bg ][ space-id ]" id="dialogos_publicos">
-				<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
-					<h2 class="[ no-margin-top ]">Encuentros</h2>
-					<p>¿Te interesan los temas relacionados al proceso de Reforma Política de la Ciudad de México?</p>
-					<p>Esta sección te permite conocer dónde y cuándo se llevarán a cabo eventos relacionados a la redacción del Proyecto de Constitución de la Ciudad de México. Existen congresos, asambleas y otros foros, tanto oficiales como ciudadanos, que funcionan como espacios de diálogo y reflexión sobre este proceso histórico.</p>
-					<p>Organiza un encuentro con tu grupo, organización, institución o colonia y comparte los detalles llenando el siguiente formulario.</p>
-					<p>Escribe un ensayo a modo de relatoría del encuentro, integra las propuestas específicas abordadas por los participantes y compártelo a través de esta plataforma.</p>
-				</div>
-			</section>
 
 			<!-- scroll horizontal -->
 			<section class="[ row ]">

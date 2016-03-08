@@ -303,7 +303,7 @@ class Sondeo_CDMX_Survey {
 					</form><!-- /fs-form -->
 				</div>
 				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
-					<ol class="fs-fields">	
+					<ol class="fs-fields">
 						<li id="js-donde-vives" data-question="1">
 							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">¿En dónde vives?</label>
 							<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
@@ -628,7 +628,7 @@ class Sondeo_CDMX_Survey {
 		global $wpdb;
 		$survey_answers = array();
 		$survey_results = $wpdb->get_results('
-			SELECT question_id, text, GROUP_CONCAT(answer SEPARATOR ",") AS answer, reference_code, created_at FROM 
+			SELECT question_id, text, GROUP_CONCAT(answer SEPARATOR ",") AS answer, reference_code, created_at FROM
 			' . $wpdb->prefix . 'sondeo_cdmx_user_answers UA
 			INNER JOIN ' . $wpdb->prefix . 'sondeo_cdmx_questions Q ON Q.id = UA.question_id
 			WHERE UA.reference_code = "' . $ref_code . '"

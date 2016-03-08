@@ -95,13 +95,12 @@ get_header(); the_post();
 
 	<section class="[ container ][ padding--sides--xsm--large ][ space-id ]" id="resultados">
 		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
-			<h2>¿Ya participaste?</h2>
-			<p class="">Ingresa tu número de folio para obtener tu certificado</p>
-			<form class="[ form-inline ][ js-check-reference-code ][ margin-top ]" data-parsley-certificado>
+			<p>Si ya participaste ingresa tu número de folio para obtener tu certificado</p>
+			<form class="[ form-inline ][ js-check-reference-code ][ margin-top ][ text-center ]" data-parsley-certificado>
 				<div class="[ input-group ]" >
-					<input type="text" name="ref_code" class="[ form-control input--search ][ height-70 ][ fz-xxlarge ]" placeholder="CM5697CX08" required="" data-parsley-required-message="El número de folio es obligatorio">
+					<input type="text" name="ref_code" class="[ form-control input--search ][ height-50 ][ fz-xxlarge ]" placeholder="CM5697CX08" required="" data-parsley-required-message="El número de folio es obligatorio">
 					<span class="[ input-group-btn ]">
-						<button class="[ btn btn-secondary ][ height-70 ]" type="submit">
+						<button class="[ btn btn-secondary ][ height-50 ]" type="submit">
 							<img class="[ svg icon icon--iconed--small icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/search.svg">
 						</button>
 					</span>

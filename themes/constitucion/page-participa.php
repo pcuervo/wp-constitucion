@@ -30,22 +30,22 @@ get_header(); the_post();
 			<div class="[ row ][ margin-top ][ padding--sides--xsm ]">
 				<div class="[ col-xs-6 col-sm-3 ]">
 					<div class="[ row ][ margin-bottom ]">
-						<div class="[ col-xs-8 ]">
+						<div class="[ col-xs-9 col-sm-10 ]">
 							<p class="[ fz-xlarge ]">Paso 1</p>
 							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_a', true);?></p>
 						</div>
-						<div class="[ col-xs-4 no-padding--sides ]">
+						<div class="[ col-xs-3 no-padding--sides col-sm-2 ]">
 							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 						</div>
 					</div>
 				</div>
 				<div class="[ col-xs-6 col-sm-3 ]">
 					<div class="[ row ][ margin-bottom ]">
-						<div class="[ col-xs-8 ]">
+						<div class="[ col-xs-9 col-sm-10 ]">
 							<p class="[ fz-xlarge ]">Paso 2</p>
 							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
 						</div>
-						<div class="[ col-xs-4 no-padding--sides ]">
+						<div class="[ col-xs-3 no-padding--sides col-sm-2 ]">
 							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 						</div>
 					</div>
@@ -53,22 +53,22 @@ get_header(); the_post();
 				<div class="[ clearfix ][ visible-xs ]"></div>
 				<div class="[ col-xs-6 col-sm-3 ]">
 					<div class="[ row ][ margin-bottom ]">
-						<div class="[ col-xs-8 ]">
+						<div class="[ col-xs-9 col-sm-10 ]">
 							<p class="[ fz-xlarge ]">Paso 3</p>
 							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
 						</div>
-						<div class="[ col-xs-4 no-padding--sides ]">
+						<div class="[ col-xs-3 no-padding--sides col-sm-2 ]">
 							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 						</div>
 					</div>
 				</div>
 				<div class="[ col-xs-6 col-sm-3 ]">
 					<div class="[ row ][ margin-bottom ]">
-						<div class="[ col-xs-8 ]">
+						<div class="[ col-xs-9 col-sm-10 ]">
 							<p class="[ fz-xlarge ]">Paso 4</p>
 							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
 						</div>
-						<div class="[ col-xs-4 no-padding--sides ]">
+						<div class="[ col-xs-3 no-padding--sides col-sm-2 ]">
 							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 						</div>
 					</div>

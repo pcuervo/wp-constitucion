@@ -25,6 +25,7 @@
             $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 80 }, '700');
         });
 
+
         $('#close-feedback').on('click', function(){
             $('#feedback, .modal-backdrop').remove();
         });
@@ -408,7 +409,7 @@
             event.preventDefault();
             var data = $(this).attr('data-date');
             $(this).addClass('hidden');
-            $('.date-'+data).removeClass('hidden');
+            $('.date-'+data).removeClass('hidden').fadeOut(0).fadeIn(1200);
         });
 
     });

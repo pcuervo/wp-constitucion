@@ -143,8 +143,7 @@
         $('.js-video-wrapper').fitVids();
 
         if( parseInt( isPageCDMX ) ){
-            createPieChart();
-            createLineChart();
+            //createLineChart();
         }
 
         /*------------------------------------*\
@@ -393,26 +392,36 @@
         function smoothScrollTo(anchor, offset) {
             var duration= 1000; //time (milliseconds) it takes to reach anchor point
             var targetY = $(anchor).offset().top;
-            console.log(targetY);
             $("body").animate({
                 scrollTop : targetY - offset
             }, duration );
         }
 
         $(window).bind("load", function() {
-           var hashURL = location.hash;
+            var hashURL = location.hash;
             if(hashURL != "" && hashURL.length > 1){
                 smoothScrollTo(hashURL, 110);
             }
         });
 
-        $('ul.dropdown-content>li>a').on('click', function(){
+        $('ul.dropdown-content > li > a').on('click', function(){
             var anchor = $(this).attr('href');
-            var anchor = anchor.split("#");
+            var anchor = anchor.split('#');
+            var anchorURLarray = anchor[0].split('/');
+            var anchorLast = $(anchorURLarray).get(-2);
 
-            smoothScrollTo('#'+anchor[1], 140);
+            var pathnameURL = location.pathname;
+            var pathnameURLarray = pathnameURL.split('/');
+            var pathnameURLarrayLast = $(pathnameURLarray).get(-2);
 
-            return false;
+            console.log( pathnameURLarrayLast );
+            console.log( anchorLast );
+
+            if( anchorLast == pathnameURLarrayLast ){
+                smoothScrollTo('#'+anchor[1], 140);
+                return false;
+            }
+
         });
 
     });

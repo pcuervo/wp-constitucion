@@ -8068,14 +8068,22 @@ ul.slides li img {
   width: 100%;
   display: inline-block;
   vertical-align: top;
-  border-top: 1px dotted #e80e8a;
+  border-top: 2px dotted #777777;
+  border-bottom: 2px dotted #777777;
   border-left: none ;
 }
 .content-acerca-de blockquote p {
-  text-align: right;
-  color: #7d7d7d;
-  font-style: italic;
-  font-size: 80%;
+  width: 100%;
+  margin-top: 20px;
+  text-transform: uppercase;
+  color: #457390;
+  font-size: 10px;
+}
+.content-acerca-de blockquote img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
 }
 @media (min-width: 768px) {
   .content-acerca-de h2,
@@ -8091,8 +8099,8 @@ ul.slides li img {
     width: 30%;
     padding: 10px 0;
   }
-  .content-acerca-de blockquote p {
-    text-align: right;
+  .content-acerca-de blockquote p:nth-child(2) {
+    width: 100%;
   }
 }
 .content-mensaje-jefegob p:nth-child(2),
@@ -8110,15 +8118,24 @@ ul.slides li img {
   width: 100%;
   display: inline-block;
   vertical-align: top;
-  border-top: 1px dotted #e80e8a;
+  border-top: 2px dotted #777777;
+  border-bottom: 2px dotted #777777;
   border-left: none ;
 }
 .content-mensaje-jefegob blockquote p,
 .content-sobre-la-plataforma blockquote p {
-  text-align: right;
-  color: #7d7d7d;
-  font-style: italic;
-  font-size: 80%;
+  width: 100%;
+  margin-top: 20px;
+  text-transform: uppercase;
+  color: #457390;
+  font-size: 10px;
+}
+.content-mensaje-jefegob blockquote img,
+.content-sobre-la-plataforma blockquote img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
 }
 @media (min-width: 768px) {
   .content-mensaje-jefegob h2,
@@ -8139,9 +8156,9 @@ ul.slides li img {
     width: 30%;
     padding: 10px 0;
   }
-  .content-mensaje-jefegob blockquote p,
-  .content-sobre-la-plataforma blockquote p {
-    text-align: right;
+  .content-mensaje-jefegob blockquote p:nth-child(2),
+  .content-sobre-la-plataforma blockquote p:nth-child(2) {
+    width: 100%;
   }
 }
 .content-sobre-la-plataforma {
@@ -8163,14 +8180,22 @@ ul.slides li img {
   width: 100%;
   display: inline-block;
   vertical-align: top;
-  border-top: 1px dotted #e80e8a;
+  border-top: 2px dotted #777777;
+  border-bottom: 2px dotted #777777;
   border-left: none ;
 }
 .content-cronica-cdmx blockquote p {
-  text-align: right;
-  color: #7d7d7d;
-  font-style: italic;
-  font-size: 80%;
+  width: 100%;
+  margin-top: 20px;
+  text-transform: uppercase;
+  color: #457390;
+  font-size: 10px;
+}
+.content-cronica-cdmx blockquote img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
 }
 @media (min-width: 768px) {
   .content-cronica-cdmx h2,
@@ -8186,11 +8211,11 @@ ul.slides li img {
     width: 30%;
     padding: 10px 0;
   }
-  .content-cronica-cdmx blockquote p {
-    text-align: right;
+  .content-cronica-cdmx blockquote p:nth-child(2) {
+    width: 100%;
   }
 }
-.content-cronica-cdmx blockquote {
+.content-cronica-cdmx blockquote:last-child {
   margin-left: 10px;
   border-bottom: 1px dotted #e80e8a;
 }
@@ -8207,6 +8232,7 @@ ul.slides li img {
 .content-cronica-cdmx blockquote > p > canvas,
 .content-cronica-cdmx blockquote > p > img {
   margin-left: 12px;
+  width: 250px;
 }
 .content-cronica-cdmx blockquote img {
   margin-bottom: 20px;

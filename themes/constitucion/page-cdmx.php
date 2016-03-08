@@ -15,7 +15,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ]">
 			
-			<div class="[ content-cronica-cdmx ]">
+			<div class="[ content-acerca-de ]">
 				<h2>Crónica</h2>
 				<blockquote>
 					<!--<canvas class="[ inline-block ]" id="bar-data" width="250px" height="250px"></canvas>-->
@@ -23,38 +23,23 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 					<p>La CDMX, incluyendo su zona metropolitana, es la ciudad más poblada de América y la cuarta del mundo.</p>
 				</blockquote>
 				<p>La Ciudad de México es un asentamiento cuya historia se remonta casi 700 años atrás, desde la fundación de Tenochtitlan en 1325 hasta la Ciudad de México que vivimos hoy. En estos años, la ciudad ha experimentado cambios dramáticos en su paisaje natural, físico, administrativo, político y social. Ha sido un espacio de lucha, de reinvención y vanguardia. Hoy nos encontramos en un momento histórico con la creación formal de la Ciudad de México, la cual se convierte en el entidad 32 del país, avanza en su autonomía y podrá contar con su propio congreso y constitución. <br><br>El año de 1985 constituye un punto de inflexión en la historia de la Ciudad de México. El sismo que tuvo lugar ese año impulsó la solidaridad entre ciudadanos, fortaleció la identidad colectiva y el deseo compartido por una ciudad donde sus habitantes pudieran ser actores en su construcción e incidir en las decisiones que se toman sobre ella. Este acontecimiento fue un catalizador de la democracia en la ciudad y el inicio de un proceso de la construcción de ciudad que tenemos hoy.</p>
-				<p>En 1997, por primera vez en su historia, la capital pudo elegir a su gobernante, el cual hasta ese punto era designado por el Presidente de la República mediante la figura del Regente. A casi veinte años de este acontecimiento, esta energía alcanza un punto cúspide con la formalización de la Ciudad de México y la creación colectiva de su constitución.</p>
 			</div>
 
 		</div>
+		
 		<div class="[ col-xs-12 ][ margin-top ]">
 			
-			<div class="[ content-cronica-cdmx ][ text-justify ]">
+			<div class="[ content-acerca-de ][ text-justify ]">
 				<blockquote>
+					<img src="<?php echo THEMEPATH; ?>images/graficos-15.png" alt="">	<!--<canvas id="pie-data" width="100px" height="100px"></canvas>-->
 					<p>La Zona Metropolitana del Valle de México la integran actualmente las 16 delegaciones de la CDMX, 59 municipios del Estado de México y un municipio del estado de Hidalgo.
-						<img src="<?php echo THEMEPATH; ?>images/graficos-15.png" alt="">
-						<!--<canvas id="pie-data" width="100px" height="100px"></canvas>-->
 					</p>
 				</blockquote>
-				<p>Nuestra ciudad es un espacio que enfrenta grandes retos pero sobretodo es un espacio de oportunidad. Es una concentración de casi 9 millones de mentes, sueños, historias y experiencias. A esto se suman casi 6 millones de personas que vienen diariamente a trabajar y estudiar. Esta es una ciudad donde en sus números, su diversidad de rostros, oficios, espacios y rituales yace su gran riqueza y potencial. <br><br> La constitución representa un instrumento para articular la capacidad e inteligencia colectiva para imaginar y crear juntos en favor del bien común de esta ciudad. Este es un gran momento histórico para la capital, la cual por fin conquista la autonomía que ha buscado durante más de 30 años, pero también lo es para el país y para el mundo de las ciudades.</p>
+				<p>En 1997, por primera vez en su historia, la capital pudo elegir a su gobernante, el cual hasta ese punto era designado por el Presidente de la República mediante la figura del Regente. A casi veinte años de este acontecimiento, esta energía alcanza un punto cúspide con la formalización de la Ciudad de México y la creación colectiva de su constitución. <br><br>Nuestra ciudad es un espacio que enfrenta grandes retos pero sobretodo es un espacio de oportunidad. Es una concentración de casi 9 millones de mentes, sueños, historias y experiencias. A esto se suman casi 6 millones de personas que vienen diariamente a trabajar y estudiar. Esta es una ciudad donde en sus números, su diversidad de rostros, oficios, espacios y rituales yace su gran riqueza y potencial. <br><br> La constitución representa un instrumento para articular la capacidad e inteligencia colectiva para imaginar y crear juntos en favor del bien común de esta ciudad. Este es un gran momento histórico para la capital, la cual por fin conquista la autonomía que ha buscado durante más de 30 años, pero también lo es para el país y para el mundo de las ciudades.</p>
 			</div>
 
 		</div>
-		<div class="[ col-xs-12 ][ margin-top ]">
-			
-			<div class="[ content-cronica-cdmx ][ text-justify ]">
-				<blockquote>
-					<p>Iztapalapa es la delegación más poblada de la CDMX (casi 2 millones de habitantes) y tiene más habitantes que países enteros como Estonia y Belice
-						<!--<canvas class="[ inline-block ]" id="bar-data" width="250px" height="250px"></canvas>-->
-						<img src="<?php echo THEMEPATH; ?>images/graficos-03.png" alt="">
-					</p>
-				</blockquote>
-				<p> 
-				Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
-				</p>
-			</div>
 
-		</div>
 	</div>
 	<?php echo wpautop( do_shortcode(get_post_meta($post->ID, 'contenido_extra', true) ) ); ?>
 </section>
@@ -83,7 +68,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ]">
 
-			<div class="[ content-cronica-cdmx ][ text-justify ]">
+			<div class="[ content-acerca-de ][ text-justify ]">
 				<h4></h4>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi explicabo doloremque, temporibus? 	Similique nam molestias enim eius quibusdam neque incidunt quam cum, hic sint dolorem accusamus itatis commodi! Optio, cupiditate!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae  amet aperiam pariatur ea iste officia facilis, eligendi rem modi reiciendis delectus impedit quibusdam consectetur possimus eaque nihil facere reprehenderit nisi.
 				Praesent quis enim mollis, molestie nisl non, dapibus tellus.
@@ -111,10 +96,13 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 <section class="[ container ][ space-id ]" id="hacia_el_constituyente">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
-			<div class="[ content-acerca-de ][ margin-bottom--large ]">
+			<div class="[ content-acerca-de ][ margin-bottom ]">
 				<h2>Hacia el constituyente</h2>
 				<blockquote>
-					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
+					<img src="<?php echo THEMEPATH; ?>images/graficos-10.png" alt="">
+					<p>
+						El diario the New York Times señaló a la CDMX como el destino número 1 para visitar en el 2016 y la describió como “la ciudad que lo tiene todo”.
+					</p>
 				</blockquote>
 				<p>
 					La Asamblea Constituyente de la Ciudad de México es el órgano encargado de recibir, enmendar y aprobar el Proyecto de Constitución que le presente el Jefe de Gobierno durante su primera sesión de trabajo, el 15 de septiembre de 2016. Será la Asamblea quien tenga la palabra final sobre la futura Constitución Política de la Ciudad de México. Es importante que la ciudadanía utilice esta plataforma para lograr un Proyecto incluyente que comprenda la voz de los que convivimos en la ciudad puesto que las maneras de participar en un momento posterior son limitadas.
@@ -134,7 +122,9 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 			<div class="[ content-acerca-de ]" >
 				<h3>Candidatos independientes</h3>
 				<blockquote>
-					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
+					<img src="<?php echo THEMEPATH; ?>images/graficos-09.png" alt="">
+					<p>La CDMX ocupa el primer lugar nacional en acceso a información pública de oficio.
+					</p>
 				</blockquote>
 				<p>
 					Las ciudadanas y ciudadanos que no están adscritos a un partido político pueden contender por un puesto en la Asamblea Constituyente como candidatos independientes. Para conocer más detalles de este proceso visita el sitio oficial de las Elecciones de la Asamblea Constituyente de la Ciudad de México.
@@ -144,7 +134,9 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 			<div class="[ content-acerca-de ]" >
 				<h3>La Asamblea Constituyente</h3>
 				<blockquote>
-					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
+					<img src="<?php echo THEMEPATH; ?>images/graficos-06.png" alt="">
+					<p>En la CDMX se realizan 14 millones de viajes al día en buses y microbuses.
+					</p>
 				</blockquote>
 				<p>
 					La Asamblea Constituyente se instalará el 15 de Septiembre de 2016 y deberá aprobar una Constitución Política a más tardar el 31 de Enero de 2017. Las sesiones de trabajo se llevarán a cabo en la Antigua sede del Senado de la República, en Xicoténcatl. La Asamblea Constituyente tiene la facultad de discutir, modificar, adicionar y votar el Proyecto de Constitución Política elaborado por el Grupo de Trabajo constituido para esta labor.
@@ -154,7 +146,8 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 			<div class="[ content-acerca-de ]" >
 				<h3>Participación ciudadana</h3>
 				<blockquote>
-					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
+					<img src="<?php echo THEMEPATH; ?>images/graficos-13.png" alt=""></p>
+					<p>En la CDMX se realizan 14 millones de viajes al día en buses y microbuses
 				</blockquote>
 				<p>
 					Dado que la participación directa de la ciudadanía en esta etapa es limitada, es de suma importancia que esta aproveche y utilice la plataforma Constitución CDMX para que su voz sea escuchada e incorporada al Proyecto de Constitución que envíe el Jefe de Gobierno a la Asamblea Constituyente. No importa cómo decidas participar, tu aportación es esencial para presentar un Proyecto más sólido e incluyente.

@@ -25,6 +25,10 @@
             $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 80 }, '700');
         });
 
+        $('#close-feedback').on('click', function(){
+            $('#feedback, .modal-backdrop').remove();
+        });
+
         /**
         * Scrolling sub-sections
         */

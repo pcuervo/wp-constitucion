@@ -1342,6 +1342,9 @@ p {
     font-size: 21px;
   }
 }
+h2 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
 small,
 .small {
   font-size: 85%;

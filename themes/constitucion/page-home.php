@@ -26,6 +26,11 @@
 <section class="flexslider relative">
 	<ul class="slides">
 		<li>
+			<a href="<?php echo site_url('/participa/' ); ?>">
+				<img src="<?php echo THEMEPATH; ?>images/slide-participa.jpg">
+			</a>
+		</li>
+		<li>
 			<a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">
 				<img src="<?php echo THEMEPATH; ?>images/slide-imagina.jpg">
 			</a>
@@ -38,11 +43,6 @@
 		<li>
 			<a href="<?php echo site_url('/participa/' ); ?>#dialogos_publicos">
 				<img src="<?php echo THEMEPATH; ?>images/slide-organiza.jpg">
-			</a>
-		</li>
-		<li>
-			<a href="<?php echo site_url('/participa/' ); ?>">
-				<img src="<?php echo THEMEPATH; ?>images/slide-participa.jpg">
 			</a>
 		</li>
 		<li>

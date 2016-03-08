@@ -217,12 +217,12 @@
 		global $post;
 		wp_nonce_field(__FILE__, '_extras_noticia_nonce');
 
-		$destacado = get_post_meta( $post->ID, 'destacado_noticia', true );
-		$checked = $destacado ? 'checked' : ''; ?>
+		$link_noticia = get_post_meta( $post->ID, 'link_noticia', true );
 
-		<input type="checkbox" name="destacado_noticia" id="destacado" value="1"  <?php echo $checked; ?> /> Check costo<br><br>
+		echo "<label for='link_noticia' class='label-paquetes'>Link noticia: </label>";
+		echo "<input type='text' class='widefat' id='link_noticia' name='link_noticia' value='$link_noticia' /><br><br>";
 		
-	<?php }
+	}
 
 
 
@@ -276,10 +276,10 @@
 			update_post_meta($post_id, 'cargo_integrante', $_POST['cargo_integrante']);
 		}
 
-		if ( isset($_POST['destacado_noticia']) and check_admin_referer(__FILE__, '_extras_noticia_nonce')){
-			update_post_meta($post_id, 'destacado_noticia', $_POST['destacado_noticia']);
+		if ( isset($_POST['link_noticia']) and check_admin_referer(__FILE__, '_extras_noticia_nonce')){
+			update_post_meta($post_id, 'link_noticia', $_POST['link_noticia']);
 		}else if ( ! defined('DOING_AJAX') ){
-			delete_post_meta($post_id, 'destacado_noticia');
+			delete_post_meta($post_id, 'link_noticia');
 		}
 
 		

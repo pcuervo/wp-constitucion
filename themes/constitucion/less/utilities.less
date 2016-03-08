@@ -447,21 +447,22 @@
 //content grupo de trabajo
 .content-trabajo{
 	@media (min-width: 480px) and (max-width: 767px) { width: 33%; } //col-xsm-4
-	& img{
-		.img-responsive;
-		margin: auto;
+	img{
+		width: 100%; height: auto;
+		margin: 0;
 	}
-	& h3{
+
+	h3{
 		color: @gray;
 		.margin-top--xsmall;
-		@media (max-width: @screen-sm){ font-size: 16px; }
-		@media (min-width: @screen-sm){ font-size: 18px; }
+		font-size: 16px;
+		font-weight: 400;
 		&:hover, &:focus{
 			text-decoration: none;
 			color: @gray-light;
 		}
 	}
-	& p{
+	p{
 		@media (max-width: @screen-sm){ font-size: 12px; }
 		@media (min-width: @screen-sm){ font-size: 14px; }
 	}
@@ -475,7 +476,6 @@
 }
 
 .content-acerca-de{
-	h2{ text-align: center; }
 	p:nth-child(2),p:nth-child(3) {
 		width: 100%;
 		display: inline-block;
@@ -498,6 +498,7 @@
 	}
 
 	@media (min-width: @screen-sm-min){
+		h2{ padding-left: 31%;}
 		p:nth-child(2),p:nth-child(3) {
 			width: 60%;
 			padding-left: 10px;

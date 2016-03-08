@@ -6862,8 +6862,7 @@ button.close {
 }
 ul.horizontal-slide {
   margin: 0;
-  padding: 0;
-  padding-right: 20px;
+  padding: 0 20px 30px;
   width: 100%;
   white-space: nowrap;
   overflow-x: auto;

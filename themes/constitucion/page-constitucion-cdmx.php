@@ -243,11 +243,15 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 <section class="[ container ][ space-id ][ content-biblioteca ]" id="biblioteca">
 	<h2 class="[ margin-bottom no-margin-top ]" id="biblioteca">Biblioteca</h2>
 	<p class="[ margin-bottom ]">La búsqueda de una Reforma Política para la Ciudad de México es un proceso que ha tomado mucho tiempo en su conceptualización y cuya ejecución no es expedita. En esta biblioteca podrás descargar documentos relacionados a la historia de la configuración política del Distrito Federal y nuestra ciudad.</p>
-	<a href="#"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></a>
-	<a href="#"><p>Lorem ipsum dolor sit amet,  adipisicing elit.</p></a>
-	<a href="#"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></a>
-	<a href="#"><p>Lorem ipsum sit amet, consectetur adipisicing elit.</p></a>
-	<a href="#"><p>Lorem ipsum dolor sit amet, elit.</p></a>
+	<a href="http://www.juridicas.unam.mx/publica/librev/rev/rap/cont/61/pr/pr21.pdf" target="_blank"><p>La Ley Orgánica del Distrito y Territorios Federales de 1928</p></a>
+	<a href="http://www.juridicas.unam.mx/publica/librev/rev/rap/cont/61/pr/pr23.pdf" target="_blank"><p>La Ley Orgánica del Departamento del Distrito Federal de 1970</p></a>
+	<a href="http://info4.juridicas.unam.mx/adprojus/leg/10/350/" target="_blank"><p>Estatuto de Gobierno del Distrito Federal de 1994.</p></a>
+	<a href="http://sil.gobernacion.gob.mx/Archivos/Documentos/2002/09/asun_57128_20020905_844595.pdf" target="_blank"><p>Iniciativa de Reforma Política de Andrés Manuel López Obrador, 2001</p></a>
+	<a href="http://sil.gobernacion.gob.mx/Archivos/Documentos/2010/04/asun_2663420_20100429_1272578740.pdf" target="_blank"><p>Iniciativa de Reforma Política de Marcelo Ebrard Casaubón, 2010</p></a>		
+	<a href="http://www.reformapolitica.cdmx.gob.mx/index.php/hacia-la-reforma-politica/140-el-proceso-de-la-reforma-politica/893-iniciativa-de-reforma-politica-de-la-ciudad-de-mexico-presentada-por-el-dr-miguel-angel-mancera-espinosa-jefe-de-gobierno-del-distrito-federal-13-de-agosto-2013" target="_blank"><p>Iniciativa de Reforma Política de Miguel Ángel Mancera, 2013</p></a>
+	<a href="http://www.dof.gob.mx/nota_detalle.php?codigo=5424043&fecha=29/01/2016" target="_blank"><p>Decreto de Reforma Política de la Ciudad de México 2016</p></a>
+	<a href="http://biblio.juridicas.unam.mx/libros/2/649/19.pdf" target="_blank"><p>El Distrito Federal Mexicano Gobierno y Democracia</p></a>
+	<a href="http://www.juridicas.unam.mx/publica/librev/rev/mexder/cont/9/cnt/cnt1.pdf" target="_blank"><p>El Distrito Federal Una Nueva Estructura Constitucional</p></a>
 </section>
 
 <?php get_footer(); ?>

@@ -20,22 +20,23 @@ global $wp_query; ?>
 
 		while ( $noticias->have_posts() ) : $noticias->the_post();
 			$date_arr = getDateTransform( $post->post_date );
-			$url_image = attachment_image_url( $post->ID, 'medium' );?>
+			$url_image = attachment_image_url( $post->ID, 'medium' );
+			$link_noticia = get_post_meta( $post->ID, 'link_noticia', true );?>
 			<div class="[ row ][ margin-bottom--large ]">
 				<div class="[ col-xs-5 no-padding--right ]">
-					<a href="<?php the_permalink(); ?>">
+					<a href="<?php echo $link_noticia; ?>" target="_blank">
 						<img class="[ img-responsive ]" src="<?php echo $url_image; ?>">
 					</a>
 				</div>
 				<div class="[ col-xs-7 ]">
 					<h2 class="[ fw-semibold ]">
-						<a class="[ color-gray ]" href="<?php the_permalink(); ?>">
+						<a class="[ color-gray ]" href="<?php echo $link_noticia; ?>" target="_blank">
 							<?php the_title(); ?>
 						</a>
 					</h2>
 					<p class="[ color-primary ]"><?php echo $date_arr[4].' '.$date_arr[1].' '.$date_arr[2] ?></p>
 					<p><?php echo wp_trim_words( get_the_excerpt(), 23 ) ?></p>
-					<a href="<?php the_permalink(); ?>">
+					<a href="<?php echo $link_noticia; ?>" target="_blank">
 						<p class="[ fz-small ][ color-primary ]">Leer más >></p>
 					</a>
 				</div>

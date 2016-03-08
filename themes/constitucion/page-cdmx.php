@@ -148,11 +148,16 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 								'compare' => '!=',
 							),
 						),
+						'tax_query' => array(
+							array(
+								'taxonomy' => 'taxonomy-voces-ciudadanas',
+								'field'    => 'slug',
+								'terms'    => 'grupo-de-trabajos',
+							),
+						)
 					));
 
 				if ( $voces_ciudadanas->have_posts() ) :
-					$count = 0;
-					$count_pasados = 0;
 					while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
 						<div class="[ col-xs-12 ][ margin-bottom ]">
 							<div class="[ js-video-wrapper ]">
@@ -183,6 +188,13 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 								'compare' => '!=',
 							),
 						),
+						'tax_query' => array(
+							array(
+								'taxonomy' => 'taxonomy-voces-ciudadanas',
+								'field'    => 'slug',
+								'terms'    => 'grupo-de-trabajo',
+							),
+						)	
 					));
 
 				if ( $voces_ciudadanas->have_posts() ) :
@@ -219,6 +231,13 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 								'compare' => '!=',
 							),
 						),
+						'tax_query' => array(
+							array(
+								'taxonomy' => 'taxonomy-voces-ciudadanas',
+								'field'    => 'slug',
+								'terms'    => 'mas-de-ciudadanos',
+							),
+						)
 					));
 
 					if ( $voces_ciudadanas->have_posts() ) :

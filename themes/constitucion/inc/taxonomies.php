@@ -9,18 +9,18 @@
 	function custom_taxonomies_callback(){
 
 		// AUTORES
-		/*if( ! taxonomy_exists('autores')){
+		if( ! taxonomy_exists('autores')){
 
 			$labels = array(
-				'name'              => 'Autores',
-				'singular_name'     => 'Autor',
+				'name'              => 'Taxonomy Voces ciudadanas',
+				'singular_name'     => 'Voz Ciudadana',
 				'search_items'      => 'Buscar',
 				'all_items'         => 'Todos',
-				'edit_item'         => 'Editar Autor',
-				'update_item'       => 'Actualizar Autor',
-				'add_new_item'      => 'Nuevo Autor',
-				'new_item_name'     => 'Nombre Nuevo Autor',
-				'menu_name'         => 'Autores'
+				'edit_item'         => 'Editar Voz Ciudadana',
+				'update_item'       => 'Actualizar Voz Ciudadana',
+				'add_new_item'      => 'Nueva Voz Ciudadana',
+				'new_item_name'     => 'Nombre Nueva Voz Ciudadana',
+				'menu_name'         => 'Taxonomy Voces ciudadanas'
 			);
 
 			$args = array(
@@ -30,17 +30,21 @@
 				'show_admin_column' => true,
 				'show_in_nav_menus' => true,
 				'query_var'         => true,
-				'rewrite'           => array( 'slug' => 'autores' ),
+				'rewrite'           => array( 'slug' => 'taxonomy-voces-ciudadanas' ),
 			);
 
-			register_taxonomy( 'autor', 'libro', $args );
-		}*/
+			register_taxonomy( 'taxonomy-voces-ciudadanas', 'voces-ciudadanas', $args );
+		}
 		
 		
 		// TERMS
-		/*if ( ! term_exists( 'some-term', 'autor' ) ){
-			wp_insert_term( 'Some term', 'category', array('slug' => 'some-term') );
-		}*/
+		if ( ! term_exists( 'grupo-de-trabajo', 'taxonomy-voces-ciudadanas' ) ){
+			wp_insert_term( 'Grupo de trabajo', 'taxonomy-voces-ciudadanas', array('slug' => 'grupo-de-trabajo') );
+		}
+
+		if ( ! term_exists( 'mas-de-ciudadanos', 'taxonomy-voces-ciudadanas' ) ){
+			wp_insert_term( 'Más de ciudadanos', 'taxonomy-voces-ciudadanas', array('slug' => 'mas-de-ciudadanos') );
+		}
 
 		/* // SUB TERMS CREATION
 		if(term_exists('parent-term', 'category')){

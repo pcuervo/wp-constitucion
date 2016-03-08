@@ -6195,6 +6195,12 @@ button.close {
 .modal-header .close {
   margin-top: -2px;
 }
+.modal-group-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 1000;
+}
 .modal-title {
   margin: 0;
   line-height: 1.42857143;
@@ -6856,8 +6862,7 @@ button.close {
 }
 ul.horizontal-slide {
   margin: 0;
-  padding: 0;
-  padding-right: 20px;
+  padding: 0 20px 30px;
   width: 100%;
   white-space: nowrap;
   overflow-x: auto;
@@ -8070,7 +8075,8 @@ ul.slides li img {
   font-size: 80%;
 }
 @media (min-width: 768px) {
-  .content-acerca-de h2 {
+  .content-acerca-de h2,
+  .content-acerca-de h3 {
     padding-left: 31%;
   }
   .content-acerca-de p:nth-child(2),
@@ -8113,7 +8119,9 @@ ul.slides li img {
 }
 @media (min-width: 768px) {
   .content-mensaje-jefegob h2,
-  .content-sobre-la-plataforma h2 {
+  .content-sobre-la-plataforma h2,
+  .content-mensaje-jefegob h3,
+  .content-sobre-la-plataforma h3 {
     padding-left: 31%;
   }
   .content-mensaje-jefegob p:nth-child(2),
@@ -8162,7 +8170,8 @@ ul.slides li img {
   font-size: 80%;
 }
 @media (min-width: 768px) {
-  .content-cronica-cdmx h2 {
+  .content-cronica-cdmx h2,
+  .content-cronica-cdmx h3 {
     padding-left: 31%;
   }
   .content-cronica-cdmx p:nth-child(2),
@@ -8190,7 +8199,7 @@ ul.slides li img {
   width: 100%;
 }
 @media (min-width: 768px) {
-  .content-cronica-cdmx p + p:last-child {
+  .content-cronica-cdmx p + p {
     width: 60%;
     margin-left: 32.5%;
   }

@@ -1344,6 +1344,7 @@ p {
 }
 h2 {
   font-family: 'Alegreya Sans SC', sans-serif;
+  letter-spacing: 2px;
 }
 small,
 .small {
@@ -7297,6 +7298,9 @@ ul.slides li img {
 .z-index--100 {
   z-index: 100;
 }
+.z-index--100 {
+  z-index: 1000;
+}
 .block {
   display: block;
 }
@@ -7416,6 +7420,9 @@ ul.slides li img {
 }
 .height-70 {
   height: 70px;
+}
+.height-50 {
+  height: 50px;
 }
 .height-40 {
   height: 40px;

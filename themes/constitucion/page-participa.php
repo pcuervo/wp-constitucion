@@ -196,7 +196,7 @@ get_header(); the_post();
 
 									if((int)$evento->type != 3): ?>
 									    <li class="[ box-li <?php echo $class_status.$class_visibility; ?> ][ <?php echo 'date-'.$data_attr; ?> ]">
-									    	<a href="<?php echo get_permalink(); ?>">
+									    	<a href="<?php echo get_permalink($evento->ID); ?>">
 												<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ][ text-uppercase ]"><?php echo $date; ?></p>
 												<div class="[ border-gray--large ]"></div>
 												<div class="[ vertical-line ]"></div>
@@ -207,17 +207,16 @@ get_header(); the_post();
 											</a>
 										</li>
 									<?php else: ?>
-
 										<li class="[ box-li nota-destacada ]">
 											<div class="[ text--large text--destacado relative ]">
 												<p class="[ evento ]"><?php echo $evento->post_title; ?></p>
 											</div>
-											<div class="[ vertical-line--large ]"></div>
-											<div class="[ border-gray--large ]"></div>
+											<div class="[ box-li__lines ]">
+												<div class="[ vertical-line--large ]"></div>
+												<div class="[ border-gray--large ]"></div>
+											</div>
 											<p class="[ color-gray ][ fz-small ][ margin-bottom--date ][ text-uppercase ]"></p>
-
 										</li>
-
 									<?php endif;
 
 									$count++;

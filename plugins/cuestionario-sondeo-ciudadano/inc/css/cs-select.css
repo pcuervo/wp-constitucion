@@ -114,9 +114,8 @@ div.cs-select:focus {
 
 .cs-select ul {
 	list-style: none;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
-	width: 100%;
 }
 
 .cs-select ul span {

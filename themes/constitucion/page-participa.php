@@ -22,7 +22,7 @@ get_header(); the_post();
 		</div>
 	</section>
 
-	<section class="[ bg-gray-light section--bg ][ padding--header--id ]">
+	<section class="[ bg-gray-light section--bg ][ padding--header--id ]" id="instrucciones">
 		<div class="[ container ]">
 			<div class="[ padding--sides--xsm ][ text-justify ]">
 				<?php the_content(); ?>
@@ -130,7 +130,7 @@ get_header(); the_post();
 		<div class="[ container ]">
 			<section class="[ row ][ section--bg ][ space-id ]" id="dialogos_publicos">
 				<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
-					<h2 class="[ no-margin-top ]">Diálogos Públicos</h2>
+					<h2 class="[ no-margin-top ]">Encuentros ciudadanos</h2>
 					<p>En esta sección podrás registrar acontecimientos que sean espacios de diálogo relacionados a la construcción de la Constitución de la Ciudad de México. Estos pueden ser sesiones de trabajo colaborativas, foros, asambleas, talleres o conferencias.</p>
 				</div>
 			</section>

@@ -275,10 +275,10 @@ get_header(); the_post();
 							<p class="[ text-center text-uppercase ]">Escribe tu nombre y apellido para obtener tu certificado de participación</p>
 							<form class="[ row ]" action="<?php echo site_url('pdf-certificado-de-participacion'); ?>" method="POST" data-parsley-certificado target="_blank">
 								<div class="[ col-xs-12 col-sm-6  ]">
-									<input type="text" name="nombre" class="form-control [ margin-bottom--large ][ input--search ] " placeholder="Nombre(s)" required="">
+									<input type="text" name="nombre" class="form-control [ margin-bottom--large ][ input-primary border-gray ]" placeholder="Nombre(s)" required="">
 								</div>
 								<div class="[ col-xs-12 col-sm-6 ]">
-									<input type="text" name="apellidos" class="form-control [ margin-bottom--large ][ input--search ] " placeholder="Apellidos" required="">
+									<input type="text" name="apellidos" class="form-control [ margin-bottom--large ][ input-primary border-gray ]" placeholder="Apellidos" required="">
 								</div>
 								<input type="hidden" name="referencia">
 								<button type="submit" class="[ col-xs-12 ][ btn btn-secondary color-gray ][ center-block ]">obtener certificado</button>

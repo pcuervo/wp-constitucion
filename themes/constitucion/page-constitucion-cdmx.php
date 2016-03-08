@@ -4,7 +4,7 @@ the_post();
 $url_image_constirucion = attachment_image_url( $post->ID, 'full' );
 $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 
-<div class="[ bg-image rectangle-small ][ relative ]" style="background-image: url('<?php echo $img_constitucion_cdmx; ?>');">
+<div class="[ bg-image rectangle-small ][ relative ][ margin--header ]" style="background-image: url('<?php echo $img_constitucion_cdmx; ?>');">
 	<div class="[ width-100 height-100 ]">
 		<h1 class="[ container ][ text-uppercase text-center ][ no-margin ][ center-full ][ color-light ][ letter-spacing ][ hidden ]">Acerca de la Constitución</h1>
 	</div>
@@ -49,11 +49,11 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 					<br><br>
 					Una constitución incorpora las aspiraciones y anhelos de quienes la suscriben, plasma cómo quieren que sea su vida colectiva y lo que es posible (y no) dentro de los bordes del espacio que comparten.
 					<br><br>
-					La estructura del poder en el Distrito Federal fue establecida por el Gobierno de la República y el Congreso de la Unión.  Aunque desde el Estatuto de Gobierno del Distrito Federal (1994) la ciudad cuenta con una Asamblea Legislativa capaz de aprobar y derogar leyes, este año se presenta la oportunidad para que, por primera vez, la opinión ciudadana tenga injerencia en la determinación de esta estructura. 
+					La estructura del poder en el Distrito Federal fue establecida por el Gobierno de la República y el Congreso de la Unión.  Aunque desde el Estatuto de Gobierno del Distrito Federal (1994) la ciudad cuenta con una Asamblea Legislativa capaz de aprobar y derogar leyes, este año se presenta la oportunidad para que, por primera vez, la opinión ciudadana tenga injerencia en la determinación de esta estructura.
 					<br><br>
-					Elaborar nuestra Constitución es acordar en conjunto un pacto social de suma importancia para todos los que habitamos y visitamos la Ciudad de México. Es un documento que nos dirigirá hacia el futuro y conservará el espíritu de la ciudad para futuras generaciones sin que sea alterado por el paso de distintos gobiernos. 
+					Elaborar nuestra Constitución es acordar en conjunto un pacto social de suma importancia para todos los que habitamos y visitamos la Ciudad de México. Es un documento que nos dirigirá hacia el futuro y conservará el espíritu de la ciudad para futuras generaciones sin que sea alterado por el paso de distintos gobiernos.
 					<br><br>
-					La sociedad capitalina ha estado detrás de las grandes conquistas sociales del país de las últimas décadas. Con la energía social y fuerza ciudadana característica de la Ciudad de México, la Constitución tiene el potencial de ser otro gran logro. 
+					La sociedad capitalina ha estado detrás de las grandes conquistas sociales del país de las últimas décadas. Con la energía social y fuerza ciudadana característica de la Ciudad de México, la Constitución tiene el potencial de ser otro gran logro.
 				</p>
 			</div>
 
@@ -84,11 +84,11 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris</p>
 				</blockquote>
 				<p>
-					El Jefe de Gobierno es la única persona facultada para presentar un Proyecto de Constitución a la <a href="<?php echo site_url( 'cdmx' ) ?>#hacia_el_constituyente">Asamblea Constituyente</a>. Para su elaboración, formó un Grupo de Trabajo de personajes notables de la ciudad conformado por representantes de sociedad civil, academia y especialistas, como espacio democrático y plural de participación social y ciudadana. 
+					El Jefe de Gobierno es la única persona facultada para presentar un Proyecto de Constitución a la <a href="<?php echo site_url( 'cdmx' ) ?>#hacia_el_constituyente">Asamblea Constituyente</a>. Para su elaboración, formó un Grupo de Trabajo de personajes notables de la ciudad conformado por representantes de sociedad civil, academia y especialistas, como espacio democrático y plural de participación social y ciudadana.
 					<br><br>
 					Además de apoyar en la redacción del Proyecto de Constitución, el Grupo de trabajo tiene como objetivo conocer y compilar las propuestas y opiniones de la ciudadanía y de las organizaciones políticas, civiles y sociales de la Ciudad de México. Dentro de sus funciones está evaluar y considerar la <a href="<?php echo site_url('participa'); ?>">opinión ciudadana</a> bajo los criterios de legalidad, calidad, viabilidad y beneficio social. Todos ellos seguirán de cerca las reflexiones e ideas que se concentren en esta plataforma ciudadana.
 					<br><br>
-					El Proyecto de Constitución Política de la Ciudad de México será remitido a la Asamblea Constituyente por el Jefe de Gobierno en su primera sesión de trabajo, el 15 de Septiembre de 2016. 
+					El Proyecto de Constitución Política de la Ciudad de México será remitido a la Asamblea Constituyente por el Jefe de Gobierno en su primera sesión de trabajo, el 15 de Septiembre de 2016.
 				</p>
 			</div>
 		</div>
@@ -163,7 +163,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 					<p>
 						El capital más valioso de la ciudad es la diversidad de personas e ideas que la componen. Nuestra época nos concede una capacidad sin precedentes para comunicarnos, compartir y procesar información. Por ello, el Grupo de Trabajo está decidido a aprovechar la tecnología y otros formatos de participación para facilitar que todas las voces que quieran contribuir al Proyecto de Constitución sean escuchadas. Este es un derecho social otorgado y respaldado por la Ley para Hacer de la Ciudad de México una Ciudad Abierta.
 						<br><br>
-						ConstituciónCDMX es una plataforma abierta que pone a disposición de la ciudadanía distintas formas de participación para concentrar ideas, reflexiones, eventos y propuestas en torno a la elaboración del Proyecto de la Constitución Política de la Ciudad de México. La plataforma tiene dos componentes, este sitio y una activación en sitio en 350 quioscos móviles para quienes no tienen acceso a plataformas digitales. 
+						ConstituciónCDMX es una plataforma abierta que pone a disposición de la ciudadanía distintas formas de participación para concentrar ideas, reflexiones, eventos y propuestas en torno a la elaboración del Proyecto de la Constitución Política de la Ciudad de México. La plataforma tiene dos componentes, este sitio y una activación en sitio en 350 quioscos móviles para quienes no tienen acceso a plataformas digitales.
 					</p>
 				</div>
 
@@ -172,9 +172,9 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
 					</blockquote>
 					<p>
-						El Grupo aprovechará las contribuciones que concentre esta plataforma para redactar el Proyecto de Constitución. Entre más nutrido sea el debate público y más ágil sea la creación colaborativa de propuestas, más consolidado será el proyecto que reciba, a nombre de todos, la Asamblea Constituyente. 
+						El Grupo aprovechará las contribuciones que concentre esta plataforma para redactar el Proyecto de Constitución. Entre más nutrido sea el debate público y más ágil sea la creación colaborativa de propuestas, más consolidado será el proyecto que reciba, a nombre de todos, la Asamblea Constituyente.
 						<br><br>
-						Además, este sitio permanecerá como un legado histórico del proceso y contendrá un vasto repositorio de ideas, reflexiones y propuestas representativas del espíritu de la Ciudad. 
+						Además, este sitio permanecerá como un legado histórico del proceso y contendrá un vasto repositorio de ideas, reflexiones y propuestas representativas del espíritu de la Ciudad.
 						<br><br>
 						Como cualquier proceso abierto, esta plataforma podrá transformarse y mejorarse con el tiempo para captar de cada vez mejor forma las voces ciudadanas.
 					</p>
@@ -247,7 +247,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	<a href="http://www.juridicas.unam.mx/publica/librev/rev/rap/cont/61/pr/pr23.pdf" target="_blank"><p>La Ley Orgánica del Departamento del Distrito Federal de 1970</p></a>
 	<a href="http://info4.juridicas.unam.mx/adprojus/leg/10/350/" target="_blank"><p>Estatuto de Gobierno del Distrito Federal de 1994.</p></a>
 	<a href="http://sil.gobernacion.gob.mx/Archivos/Documentos/2002/09/asun_57128_20020905_844595.pdf" target="_blank"><p>Iniciativa de Reforma Política de Andrés Manuel López Obrador, 2001</p></a>
-	<a href="http://sil.gobernacion.gob.mx/Archivos/Documentos/2010/04/asun_2663420_20100429_1272578740.pdf" target="_blank"><p>Iniciativa de Reforma Política de Marcelo Ebrard Casaubón, 2010</p></a>		
+	<a href="http://sil.gobernacion.gob.mx/Archivos/Documentos/2010/04/asun_2663420_20100429_1272578740.pdf" target="_blank"><p>Iniciativa de Reforma Política de Marcelo Ebrard Casaubón, 2010</p></a>
 	<a href="http://www.reformapolitica.cdmx.gob.mx/index.php/hacia-la-reforma-politica/140-el-proceso-de-la-reforma-politica/893-iniciativa-de-reforma-politica-de-la-ciudad-de-mexico-presentada-por-el-dr-miguel-angel-mancera-espinosa-jefe-de-gobierno-del-distrito-federal-13-de-agosto-2013" target="_blank"><p>Iniciativa de Reforma Política de Miguel Ángel Mancera, 2013</p></a>
 	<a href="http://www.dof.gob.mx/nota_detalle.php?codigo=5424043&fecha=29/01/2016" target="_blank"><p>Decreto de Reforma Política de la Ciudad de México 2016</p></a>
 	<a href="http://biblio.juridicas.unam.mx/libros/2/649/19.pdf" target="_blank"><p>El Distrito Federal Mexicano Gobierno y Democracia</p></a>

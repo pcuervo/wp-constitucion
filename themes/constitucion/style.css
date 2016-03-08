@@ -7976,15 +7976,21 @@ ul.slides li img {
 }
 .soy-cdmx {
   width: 350px;
+  height: 100%;
   min-height: 100vh;
+  padding: 12px 15px 12px 12px;
+  border: 1px solid #ccc;
+  border: 1px solid #dbdbdb;
   background-color: #eeeeee;
-  height: auto;
-  padding: 12px;
   text-align: left;
   position: fixed;
   top: 0px;
   z-index: 10000;
-  box-shadow: -1px 0px 20px 1px #4a4a4a;
+  box-shadow: 6px 0px 15px 1px #4a4a4a;
+  overflow-y: scroll;
+}
+.soy-cdmx h3 {
+  font-size: 20px;
 }
 .right-370 {
   right: -370px;

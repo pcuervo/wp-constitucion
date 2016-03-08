@@ -108,7 +108,7 @@ get_header(); the_post();
 		</div>
 	</section>
 
-	<div class="[ descanso-visual ]" id="sobre_constitucion">
+	<div class="[ descanso-visual ][ margin-bottom--large ]" id="sobre_constitucion">
 		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
 	</div>
 
@@ -128,7 +128,7 @@ get_header(); the_post();
 
 	<div class="[ bg-gray--fondo section--bg no-margin ]">
 		<div class="[ container ]">
-			<section class="[ row ][ space-id ]" id="dialogos_publicos">
+			<section class="[ row ][ section--bg ][ space-id ]" id="dialogos_publicos">
 				<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
 					<h2 class="[ no-margin-top ]">Diálogos Públicos</h2>
 					<p>En esta sección podrás registrar acontecimientos que sean espacios de diálogo relacionados a la construcción de la Constitución de la Ciudad de México. Estos pueden ser sesiones de trabajo colaborativas, foros, asambleas, talleres o conferencias.</p>
@@ -265,11 +265,11 @@ get_header(); the_post();
 		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
 	</div>
 
-	<section class="[ bg-gray--fondo ][ no-margin--bottom padding--bottom--xxlarge ]">
-		<div class="[ container ][ space-id ]" id="ensayos">
+	<section class="[ bg-gray--fondo section--bg ][ space-id ][ no-margin--bottom ]">
+		<div class="[ container ]" id="ensayos">
 			<article class="[ row ][ margin-bottom ]">
 				<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
-					<h2 class="[ margin-top ]">Ensayo</h2>
+					<h2 class="">Ensayo</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ducimus soluta. Tempora recusandae cum cumque odit consequatur, laborum nulla atque accusamus doloribus rem placeat, optio libero delectus voluptatem repellendus facilis.</p>
 				</div>
 			</article>
@@ -327,7 +327,7 @@ get_header(); the_post();
 						<button type="submit" class="[ btn btn-primary btn--large ]">enviar</button>
 					</div>
 				</form>
-			</article>	
+			</article>
 		</div> <!-- /container -->
 	</section>
 

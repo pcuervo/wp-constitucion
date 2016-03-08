@@ -9,7 +9,7 @@ header{
 	.bg-light;
 	.width-100;
 	height: 55px;
-	@media (min-width: @screen-sm){ height: 70px; }
+	@media (min-width: @screen-sm){ height: 100px; }
 	z-index: 1050;
 }
 
@@ -25,15 +25,12 @@ header{
 	height: 55px;
 	overflow: visible;
 
-	@media (min-width: @screen-sm){ height: 70px; }
+	@media (min-width: @screen-sm){ height: 100px; }
 
 	nav{ display: block; }
 }
 
-header li, ul.menu-home > li {
-	text-decoration: none;
-	display:inline;
-}
+header li, ul.menu-home > li { text-decoration: none; }
 
 header > nav > ul >li > a,
 header > nav > ul >li >span>a,
@@ -47,7 +44,7 @@ li>span>a>,
  }
 
 ul.dropdown-content>li>a>{
-	.margin-bottom--small;
+	padding: 4px 10px;
 	font-weight: 400;
 }
 
@@ -60,7 +57,7 @@ ul.menu-desktop > li{
 	display: inline-block;
 	vertical-align: middle;
 	height: 100%;
-	padding: 26px 10px 10px 10px; border-right: 1px solid lighten(@gray, 57%);
+	padding: 42px 10px 10px 10px; border-right: 1px solid lighten(@gray, 57%);
 }
 
 ul.menu-desktop > li:last-child { border-right: none; }
@@ -70,7 +67,7 @@ ul.menu-desktop > li:last-child { border-right: none; }
 }
 
 .menu-desktop__acerca{
-	padding-top: 18px !important;
+	padding-top: 34px !important;
 }
 
 ul.menu-desktop li a:hover,
@@ -156,7 +153,7 @@ ul.menu-home >li > a,
 	display: none;
 	position: absolute;
 	min-width: 160px;
-	padding: 12px 16px 0 16px;
+	padding: 0;
 }
 
 .dropdown--hover:hover .dropdown-content { display: block; }

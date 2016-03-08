@@ -210,7 +210,6 @@ class Sondeo_CDMX_Survey {
 			<div class="[ fs-form-wrap ]" id="fs-form-wrap">
 				<div class="fs-title [ container ][ text-center ]">
 					<h1 class="[ ]">Imagina tu ciudad</h1>
-					<div class="[ bg-progress ]"></div>
 				</div>
 				<div class="[ container ]">
 					<form id="myform" class="fs-form fs-form-full" autocomplete="off">

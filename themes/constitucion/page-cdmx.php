@@ -14,7 +14,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 <section class="[ space-id ][ container padding--sides--xsm ]" id="cronica">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ]">
-			
+
 			<div class="[ content-acerca-de ]">
 				<h2>Crónica</h2>
 				<blockquote>
@@ -26,9 +26,9 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 			</div>
 
 		</div>
-		
+
 		<div class="[ col-xs-12 ][ margin-top ]">
-			
+
 			<div class="[ content-acerca-de ][ text-justify ]">
 				<blockquote>
 					<img src="<?php echo THEMEPATH; ?>images/graficos-15.png" alt="">	<!--<canvas id="pie-data" width="100px" height="100px"></canvas>-->
@@ -84,13 +84,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 
 		</div> <!-- /col -->
 	</div> <!-- /row -->
-</section>
-
-<section class="[ container ]">
-	<div class="[ hidden ]">
-		<h2 class="[ margin-bottom ]">Expansión urbana</h2>
-	</div>
-	<img class="[ width-100 ]" src="<?php echo THEMEPATH; ?>images/expansion-urbana.gif" alt="">
 </section>
 
 <section class="[ container ][ space-id ]" id="hacia_el_constituyente">
@@ -218,7 +211,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 								'field'    => 'slug',
 								'terms'    => 'grupo-de-trabajo',
 							),
-						)	
+						)
 					));
 
 				if ( $voces_ciudadanas->have_posts() ) :

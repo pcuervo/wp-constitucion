@@ -52,7 +52,7 @@ div.cs-skin-boxes:focus > span {
 	width: 100%;
 	text-align: center;
 	box-shadow: inset 0 -6em 0 -2em #eeeeee;
-	color: #4a4a4a;
+	color: #E80E8A;
 	font-size: 18px;
 	cursor: default;
 }
@@ -79,10 +79,10 @@ div.cs-skin-boxes:focus > span {
 	opacity: 0;
 	color: #fff;
 	border: 10px solid transparent;
+	background-color: #4A4A4A;
 	background-clip: padding-box;
 	-webkit-transform: scale3d(0.8,0.8,1);
 	transform: scale3d(0.8,0.8,1);
-	box-shadow: inset 0 -6em 0 -2em #4a4a4a;
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
 	transition: transform 0.3s, opacity 0.3s;
 }
@@ -108,8 +108,13 @@ div.cs-skin-boxes:focus > span {
 	transform: scale3d(1,1,1);
 }
 .cs-skin-boxes.cs-active .cs-options li:hover{
-	opacity: 0.7;
+	background-color: #E80E8A;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
+
 
 .cs-skin-boxes .cs-options li.title:hover{ opacity: 1; }
 
@@ -225,6 +230,8 @@ div.cs-skin-boxes:focus > span {
 
 @media screen and (max-width: 30em) {
 	.cs-skin-boxes .cs-options li.cs-selected::after {
+		left: 90%;
+		color: #e80e8a;
 		-webkit-transform: translate3d(-50%,-50%,0);
 		transform: translate3d(-50%,-50%,0);
 	}
@@ -251,4 +258,30 @@ div.cs-skin-boxes:focus > span {
 	cursor: default;
 }
 
+.btn-skin-boxes{
+	width: 100%;
+	margin-bottom: 5px;
+	border: 2px solid #999;
+    text-transform: uppercase;
+    font-family: "Alegreya Sans",sans-serif;
+    color: #4a4a4a;
+    font-weight: bold;
+}
+@media screen and (min-width: 468px){
+	.btn-skin-boxes{ width: 275px; }
+}
+
+.btn-skin-boxes:hover{
+	background-color: #999;
+	color: #fff;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+}
+
+.btn-skin-boxes.active {
+    background-color: #e80e8a;
+    color: #fff;
+ }
 

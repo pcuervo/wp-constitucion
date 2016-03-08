@@ -1,3 +1,4 @@
+<?php global $result; ?>
 			<footer>
 				<div class="[ container ][ text-justify ]">
 
@@ -41,6 +42,25 @@
 			</div>
 		</div>
 
+		<!-- Modal -->
+		<?php if( isset( $result['success'] ) ): ?>
+			<div id="feedback" class="modal fade in" role="dialog" style="display:block;">
+				<div class="modal-dialog modal--contacto">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-body">
+							<a type="button" id="close-feedback" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
+							<div class="[ row padding--sides--xsm ]">
+								<div class="[ padding--top--xxlarge padding--bottom--xxlarge padding--sides--large--sm ]">
+									<div class="[ bg-success btn-lg text-center ]"><?php echo $result['success']; ?></div>
+								</div>
+							</div>	<!-- row -->
+						</div><!-- modal-body -->
+					</div>
+				</div>
+			</div>
+			<div class="modal-backdrop fade in"></div>
+		<?php endif; ?>
 		<?php wp_footer(); ?>
 	</body>
 

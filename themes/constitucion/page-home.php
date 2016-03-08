@@ -1,10 +1,10 @@
 <?php get_header(); the_post();  ?>
-<div id="container_video" class="[ bg-gray--xxlight hero_video ]" style="background-image: url('http://pcuervo.com/constitucion/wp-content/uploads/2016/03/Captura-de-pantalla-2016-03-04-a-las-22.16.06.png'); background-size: cover;">
+<div id="container_video" class="[ bg-gray--xxlight hero_video ][ margin-bottom--large ]" style="background-image: url('http://pcuervo.com/constitucion/wp-content/uploads/2016/03/Captura-de-pantalla-2016-03-04-a-las-22.16.06.png'); background-size: cover;">
 	<video class="[ width-100 ][ center-full video_home ]" autoplay loop>
 		<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
 	</video>
 	<div class="[ logo-video ]">
-		<img class="[ width-80 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/Logotipo_Blanco-03.png">
+		<img class="[ width-100 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/Logotipo_Blanco-03.png">
 	</div>
 	<div class="[ hero_video__scroll ][ text-center ][ js-hero_video__scroll ]">
 		<p class="[ text-center ][ color-light ][ margin-bottom--small ]">Conoce más</p>
@@ -27,27 +27,32 @@
 	<ul class="slides">
 		<li>
 			<a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">
-				<img src="<?php echo THEMEPATH; ?>images/slides-01.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-imagina.jpg">
 			</a>
 		</li>
 		<li>
 			<a href="<?php echo site_url('/participa/'); ?>#peticiones">
-				<img src="<?php echo THEMEPATH; ?>images/slides-02.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-peticion.jpg">
 			</a>
 		</li>
 		<li>
 			<a href="<?php echo site_url('/participa/' ); ?>#dialogos_publicos">
-				<img src="<?php echo THEMEPATH; ?>images/slides-03.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-organiza.jpg">
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo site_url('/participa/' ); ?>">
+				<img src="<?php echo THEMEPATH; ?>images/slide-participa.jpg">
 			</a>
 		</li>
 		<li>
 			<a href="<?php echo site_url('/participa/' ); ?>#ensayos">
-				<img src="<?php echo THEMEPATH; ?>images/slides-04.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-publica.jpg">
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('/participa/' ); ?>#voces_ciudadanas">
-				<img src="<?php echo THEMEPATH; ?>images/slides-05.jpg">
+			<a href="<?php echo site_url('/cdmx/' ); ?>#voces_ciudadanas">
+				<img src="<?php echo THEMEPATH; ?>images/slide-voces-ciudadanas.jpg">
 			</a>
 		</li>
 	</ul>
@@ -148,11 +153,14 @@
 
 			if ( $noticias->have_posts() ) :
 				while ( $noticias->have_posts() ) : $noticias->the_post();
-					$url_image = attachment_image_url( $post->ID, 'medium' );?>
-					<div class="[ col-xs-12 col-sm-4 ][ margin-bottom ][ post_compact ]">
-						<a href="<?php the_permalink(); ?>">
+					$url_image = attachment_image_url( $post->ID, 'medium' );
+					$link_noticia = get_post_meta( $post->ID, 'link_noticia', true );?>
+					<div class="[ col-xs-6 col-sm-4 ][ margin-bottom ][ post_compact ]">
+						<a href="<?php echo $link_noticia; ?>">
 							<img class="[ img-responsive ][ margin-bottom--small ]" src="<?php echo $url_image; ?>">
-							<h4 class="[ color-gray ][ text-uppercase ]"><?php the_title(); ?></h4>
+							<div>
+								<h4 class="[ color-gray ][ center-full ][ text-uppercase ]"><?php the_title(); ?></h4>
+							</div>
 						</a>
 					</div>
 				<?php endwhile;

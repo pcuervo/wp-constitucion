@@ -172,6 +172,9 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 	require_once('inc/images-background-titles.php');
 
+	require_once('inc/TimeLine.class.php');
+
+
 
 
 // MODIFICAR EL MAIN QUERY ///////////////////////////////////////////////////////////
@@ -374,7 +377,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 		global $wpdb;
 		$result = $wpdb->get_results(
-			"SELECT * FROM wp_posts
+			"SELECT * FROM {$wpdb->prefix}posts
 				WHERE post_parent      = '$post_id'
 					AND post_type      = 'attachment'
 					AND post_mime_type = 'application/pdf' LIMIT 1;", OBJECT

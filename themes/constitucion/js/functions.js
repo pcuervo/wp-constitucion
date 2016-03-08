@@ -25,6 +25,40 @@
             $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 80 }, '700');
         });
 
+
+        $('#close-feedback').on('click', function(){
+            $('#feedback, .modal-backdrop').remove();
+        });
+
+        /**
+        * Scrolling sub-sections
+        */
+
+        function smoothScrollTo(anchor, offset) {
+            var duration= 1000; //time (milliseconds) it takes to reach anchor point
+            var targetY = $(anchor).offset().top;
+            console.log(targetY);
+            $("body").animate({
+                scrollTop : targetY - offset
+            }, duration );
+        }
+
+        var hashURL = location.hash;
+        if(hashURL != "" && hashURL.length > 1){
+            smoothScrollTo(hashURL, 40);
+        }
+
+        $('ul.dropdown-content>li>a').on('click', function(){
+            var anchor = $(this).attr('href');
+            var anchor = anchor.split("#");
+            smoothScrollTo('#'+anchor[1], 140);
+            return false;
+        });
+
+
+
+
+
         /**
          * INIT FLEXSLIDER
          */
@@ -370,6 +404,13 @@
               }, 32)
               .addMessage('en', 'words', 'This value has the incorrect number of words');
         }
+
+        $('.mas-eventos').on('click', function(event){
+            event.preventDefault();
+            var data = $(this).attr('data-date');
+            $(this).addClass('hidden');
+            $('.date-'+data).removeClass('hidden').fadeOut(0).fadeIn(1200);
+        });
 
     });
 

@@ -20,9 +20,11 @@
 								<div class="[ col-xs-12 col-sm-6 ]">
 									<input type="text" name="apellidos" class="form-control [ margin-bottom ][ input-primary border-gray ]" placeholder="Apellidos" required="">
 								</div>
-								<input type="hidden" name="referencia">
-								<button type="submit" class="[ col-xs-12 ][ btn btn-secondary color-gray ][ center-block ]">obtener certificado</button>
-								<a href="<?php echo site_url('participa') ?>" class="[ col-xs-12 ][ btn btn-secondary btn-sm color-gray ][ center-block ][ margin-top ]">No, gracias</a>
+								<div class="[ col-xs-12 ]">
+									<input type="hidden" name="referencia">
+									<button type="submit" class="[ btn btn-secondary color-gray ][ width-100 ][ center-block ]">obtener certificado</button>
+									<a href="<?php echo site_url('participa') ?>" class="[ btn btn-secondary btn-sm color-gray ][ center-block ][ margin-top ]">No, gracias</a>									
+								</div>
 							</form>
 						</div>
 					</div>

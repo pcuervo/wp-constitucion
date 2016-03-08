@@ -17,12 +17,12 @@ get_header(); the_post();
 	<section class="[ container ][ padding--header--id ]">
 		<div class="[ row ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
-				<p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptas molestias officia blanditiis quidem tempore ut, ea, sint voluptatem hic ipsa odio, pariatur cum at! Voluptates, obcaecati maiores error velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi eum, cupiditate voluptatum dicta libero iure! Accusamus accusantium ea neque eius officiis, dolor et, iusto numquam. Officia voluptas impedit, delectus vel.</p>
+				<p>Todas y todos los que vivimos y visitamos la Ciudad de México podemos hacer propuestas al Grupo de Trabajo encargado de redactar el Proyecto de la Constitución. Hay cuatro formas de participar. </p>
 			</div>
 		</div>
 	</section>
 
-	<section class="[ bg-gray-light section--bg ][ padding--header--id ]">
+	<section class="[ bg-gray-light section--bg ][ padding--header--id ]" id="instrucciones">
 		<div class="[ container ]">
 			<div class="[ padding--sides--xsm ][ text-justify ]">
 				<?php the_content(); ?>
@@ -80,7 +80,9 @@ get_header(); the_post();
 	<section class="[ container ][ padding--sides--xsm--large ][ space-id ]" id="imagina_ciudad">
 		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
 			<h2 class="[ no-margin-top margin-bottom ]">Imagina tu ciudad</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis maiores, mollitia at qui aperiam illo cumque inventore eveniet facere quos, recusandae assumenda, delectus autem corporis cupiditate necessitatibus odio enim deserunt?</p>
+			<p>¿Cuál es el espíritu de nuestra Ciudad y qué queremos para su futuro?</p>
+			<p>Queremos conocer tu visión sobre la Ciudad de México. Nos interesa saber cuáles crees que son sus mayores retos y qué tipo de oportunidades te brinda. </p>
+			<p>Contestar este cuestionario toma aproximadamente 10 minutos. Al final, recibirás un certificado de participación a nombre del Grupo de Trabajo. </p>
 			<div class="[ text-center ][ margin-top ]">
 				<a class="[ btn btn-primary btn-large ]" href="<?php echo site_url('/sondeo-masivo/'); ?> ">
 					Participa
@@ -112,28 +114,34 @@ get_header(); the_post();
 		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
 	</div>
 
-	<section class="[ space-id ]"  id="peticiones">
-		<section class="[ container ]">
+	<section class="[ bg-gray--fondo section--bg ][ space-id ]"  id="peticiones">
+		<div class="[ container ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ] [ text-justify ]">
 				<h2 class="">Peticiones</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit in suscipit similique tempore ab quam voluptatibus, quos modi fuga iusto earum incidunt repellendus quis tempora? Perspiciatis officia accusantium temporibus esse.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum possimus dolorum quam illo veniam id placeat nulla repellat vero debitis ratione consectetur eos praesentium, delectus doloremque dolor, ipsa deserunt eaque.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem consequuntur error illum. Atque esse, et iure rerum fugiat consequuntur repellendus est dignissimos alias officia fugit culpa nam consequatur exercitationem quae!</p>
+				<p>¿Tienes una propuesta concreta para el contenido del Proyecto de Constitución? Aprovecha la plataforma Change.org para hacer una petición, juntar firmas e interactuar directamente con el Grupo de Trabajo.</p>
+				<p>Change.org es una plataforma mundial que empodera a las personas para generar cambio a través de peticiones que pueden ser firmadas por cualquier persona con acceso a internet. Estas firmas generan moméntum que consigue que gobiernos y empresas respondan y rindan cuentas.</p>
+				<p>Las peticiones en Change.org que rebasen las cinco mil firmas serán respondidas por la Secretaría Técnica del Grupo de Trabajo.</p>
+				<p>Las peticiones que rebasen las diez mil firmas recibirán una invitación para que tres representantes del Grupo de Trabajo reciban al iniciador y se presente su propuesta ante el pleno del Grupo.</p>
 			</div>
 			<div class="[ clear ]"></div>
 			<div class="[ text-center ][ margin-top ]">
-				<a href="https://www.change.org/movements/voces-ciudadanas-en-la-nueva-constituci%C3%B3n-de-la-cdmx" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ]">Realizar petición</a>
+				<a href="https://www.change.org/movements/voces-ciudadanas-en-la-nueva-constituci%C3%B3n-de-la-cdmx" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ]">Conoce cómo realizar petición</a>
 			</div>
-		</section>
+		</div>
+	</section>
+
+	<section class="[ row ][ space-id ]" id="dialogos_publicos">
+		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
+			<h2 class="[ no-margin-top ]">Encuentros ciudadanos</h2>
+			<p>¿Te interesan los temas relacionados al proceso de Reforma Política de la Ciudad de México?</p>
+			<p>Esta sección te permite conocer dónde y cuándo se llevarán a cabo eventos relacionados a la redacción del Proyecto de Constitución de la Ciudad de México. Existen congresos, asambleas y otros foros, tanto oficiales como ciudadanos, que funcionan como espacios de diálogo y reflexión sobre este proceso histórico.</p>
+			<p>Organiza un encuentro con tu grupo, organización, institución o colonia y comparte los detalles llenando el siguiente formulario.</p>
+			<p>Escribe un ensayo a modo de relatoría del encuentro, integra las propuestas específicas abordadas por los participantes y compártelo a través de esta plataforma.</p>
+		</div>
 	</section>
 
 	<div class="[ bg-gray--fondo section--bg no-margin ]">
 		<div class="[ container ]">
-			<section class="[ row ][ space-id ]" id="dialogos_publicos">
-				<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
-					<h2 class="[ no-margin-top ]">Diálogos Públicos</h2>
-					<p>En esta sección podrás registrar acontecimientos que sean espacios de diálogo relacionados a la construcción de la Constitución de la Ciudad de México. Estos pueden ser sesiones de trabajo colaborativas, foros, asambleas, talleres o conferencias.</p>
-				</div>
-			</section>
 
 			<!-- scroll horizontal -->
 			<section class="[ row ]">
@@ -152,59 +160,79 @@ get_header(); the_post();
 
 								)
 							));
+						if ( ! empty ($cronologia->posts)):
+							$timeLine = new TimeLine;
+							$fechas = $timeLine->elementsTimeLine($cronologia->posts);
 
-						if ( $cronologia->have_posts() ) :
 							$count = 0;
 							$count_pasados = 0;
-							while ( $cronologia->have_posts() ) : $cronologia->the_post();
-								$tipo_evento = get_post_meta( $post->ID, 'tipo-de-evento', true );
-								$date_event = get_post_meta($post->ID, 'fecha_evento', true);
-								$count_pasados = strtotime($date_event) < strtotime( date('Y-m-d') ) ? $count_pasados + 1 : $count_pasados;
-								$class_status = strtotime($date_event) < strtotime( date('Y-m-d') ) ? 'ya-paso ' : '';
+							$data_attr = '';
+							$class_visibility = "";
+							foreach ($fechas as $date_events => $eventos):
+								$date_arr = getDateTransform($date_events);
+								$date = '<span class="[ color-primary ]"><strong>'. $date_arr[0] . '</strong></span> ' . $date_arr[1];
+								$count_pasados = strtotime($date_events) < strtotime( date('Y-m-d') ) ? $count_pasados + 1 : $count_pasados;
+								$class_status = strtotime($date_events) < strtotime( date('Y-m-d') ) ? 'ya-paso ' : '';
+								$count_events = count($eventos);
 
-								$date = '';
-								if ($date_event != '') {
-									$date_arr = getDateTransform($date_event);
-									$date = '<span class="[ color-primary ]"><strong>'. $date_arr[0] . '</strong></span> ' . $date_arr[1];
-								}
-
-								if($tipo_evento != 3): ?>
-								    <li class="[ box-li <?php echo $class_status; ?> ]">
-								    	<a href="<?php echo get_permalink(); ?>">
+								if ($count_events > 1): ?>
+									<li class="[ box-li mas-eventos <?php echo $class_status; ?> ]" data-date="<?php echo $date_events; ?>">
+								    	<a href="">
 											<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ][ text-uppercase ]"><?php echo $date; ?></p>
 											<div class="[ border-gray--large ]"></div>
 											<div class="[ vertical-line ]"></div>
 											<div class="[ circle-xsmall ]"></div>
 											<div class="[ text--large relative ]">
-												<p class="[ evento evento-bottom ]"><?php the_title(); ?></p>
+												<p class="[ evento evento-bottom ]"><?php echo $count_events; ?> Eventos</p>
 											</div>
 										</a>
 									</li>
-								<?php else: ?>
 
-									<li class="[ box-li nota-destacada ]">
-										<div class="[ text--large text--destacado relative ]">
-											<p class="[ evento ]"><?php the_title(); ?></p>
-										</div>
-										<div class="[ vertical-line--large ]"></div>
-										<div class="[ border-gray--large ]"></div>
-										<p class="[ color-gray ][ fz-small ][ margin-bottom--date ][ text-uppercase ]"></p>
+									<?php $data_attr = $date_events;
+									$class_visibility = 'hidden ';
 
-									</li>
+								endif;
 
-								<?php endif;
+								foreach ($eventos as $evento):
 
-								$count++;
-							endwhile;
+									if((int)$evento->type != 3): ?>
+									    <li class="[ box-li <?php echo $class_status.$class_visibility; ?> ][ <?php echo 'date-'.$data_attr; ?> ]">
+									    	<a href="<?php echo get_permalink($evento->ID); ?>">
+												<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ][ text-uppercase ]"><?php echo $date; ?></p>
+												<div class="[ border-gray--large ]"></div>
+												<div class="[ vertical-line ]"></div>
+												<div class="[ circle-xsmall ]"></div>
+												<div class="[ text--large relative ]">
+													<p class="[ evento evento-bottom ]"><?php echo $evento->post_title; ?></p>
+												</div>
+											</a>
+										</li>
+									<?php else: ?>
+										<li class="[ box-li nota-destacada ]">
+											<div class="[ text--large text--destacado relative ]">
+												<p class="[ evento ]"><?php echo $evento->post_title; ?></p>
+											</div>
+											<div class="[ box-li__lines ]">
+												<div class="[ vertical-line--large ]"></div>
+												<div class="[ border-gray--large ]"></div>
+											</div>
+											<p class="[ color-gray ][ fz-small ][ margin-bottom--date ][ text-uppercase ]"></p>
+										</li>
+									<?php endif;
+
+									$count++;
+								endforeach;
+								$data_attr = '';
+								$class_visibility = '';
+							endforeach;
 
 							$data = '';
 							if ($cronologia->found_posts >= 7 AND $count_pasados > 0) {
-								$recorre = ($count_pasados - 1 ) * 165;
+								$recorre = ($count_pasados - 1 ) * 163;
 								echo '<input type="hidden" id="recorre" value="'.$recorre.'">';
 							}
+						endif; ?>
 
-						endif;
-						wp_reset_postdata(); ?>
 
 					</ul>
 				</div>
@@ -265,68 +293,73 @@ get_header(); the_post();
 		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
 	</div>
 
-	<section class="[ container ][ space-id ]" id="ensayos">
-		<article class="[ row ][ margin-bottom ]">
-			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
-				<h2 class="[ no-margin-top ]">Ensayo</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ducimus soluta. Tempora recusandae cum cumque odit consequatur, laborum nulla atque accusamus doloribus rem placeat, optio libero delectus voluptatem repellendus facilis.</p>
-			</div>
-		</article>
-		<article class="">
-			<h2 class="[ margin-bottom ]">Comparte tu ensayo o relatoria</h2>
-			<form id="form-ensayos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="" >
-				<div class="[ row ]">
-					<div class="[ form-group ][ col-xs-12 col-sm-6 ]">
-						<label for="">Título del ensayo o de la relatoría</label>
-						<input type="text" name="titulo_ensayo" id="titulo_ensayo" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="" maxlength="100" data-parsley-error-message="El título es obligatorio">
-						<label for="">Nombre del evento o sesión colaborativa de la cual se derivó el documento</label>
-						<input name="nombre_ensayo" id="nombre_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres"  required="" maxlength="100" data-parsley-error-message="El nombre es obligatorio">
-						<label for="">Comparte una frase que describa el evento/sesión de trabajo</label>
-						<input name="frase_ensayo" id="frase_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres"  required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">
-						<label for="">Fechas en las que sesionó el grupo de trabajo</label><br>
-						<label for="">Inicio</label>
-						<input type="text" name="fechaInicio" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo" placeholder="yyyy-mm-dd" required="" data-parsley-error-message="La fecha es obligatoria"><br>
-						<label for="">Final</label>
-						<input type="text" name="fechaFinal" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo-fin" placeholder="yyyy-mm-dd" disabled>
-						<label for="">Describe a continuación las reflexiones o propuestas centrales de la sesión de trabajo y el contexto en el que esta se llevó a cabo.</label>
-						<textarea name="resumen_ensayo" id="resumen_ensayo" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 250 palabras" required="" data-parsley-maxwords="250" data-parsley-required-message="El resumen es obligatorio" data-parsley-maxwords-message="El resumen no puede exceder 250 palabras"></textarea>
-						<label for="">Señala a continuación 3 palabras clave vinculadas a este documento</label>
-						<input name="palabra_a" id="palabra_a" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 1" required="" data-parsley-error-message="Palabra obligatoria">
-						<input name="palabra_b" id="palabra_b" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 2" required="" data-parsley-error-message="Palabra obligatoria">
-						<input name="palabra_c" id="palabra_c" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 3" required="" data-parsley-error-message="Palabra obligatoria">
-						<label for="">Comparte en una frase un mensaje central de la relatoría o ensayo</label>
-						<input name="mensaje_central" id="mensaje_central" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">
-						<label for="">Lista a continuación el nombre de todos los autores separados por comas</label>
-						<input name="autores_ensayo" id="autores_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="Los autores son obligatorios">
-					</div>
-					<div class="[ form-group ][ col-xs-12 col-sm-6 ]">
-						<label for="">En caso de que este ensayo o relatoría haya sido elaborado por una institución u organización señala abajo cual es. En caso de más de una, separar por comas.</label>
-						<input name="institucion-u-organizacion" id="institucion-u-organizacion" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="La institución u organización es obligatoria">
-						<label for="">Comparte fotografías del grupo que trabajó este documento.</label>
-						<input name="fotografias_ensayo" id="fotografias_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="Las fotografías son obligatoria">
-						<label for="">Comparte también fotografías con una liga a flicker, instagram o blog</label>
-						<input name="fotografias_redes_ensayo" id="fotografias_redes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]">
-						<label for="">Comparte la lista de asistentes firmada de los participantes de la sesión/evento con una liga a Google Drive, Dropbox o OneDrive</label>
-						<input name="lista_asistentes_ensayo" id="lista_asistentes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="La lista de asistentes es obligatoria">
-						<label for="">Copia a continuación la liga a Google Drive, Dropbox o OneDrive. Este deberá estar en formato .docx (Microsoft Word) y no deberá exceder 8 páginas. <a href="<?php echo site_url('/guia-para-compartir-el-texto/'); ?>" target="_blank" class="[ color-gray--light ][ fz--small ]">Aqui puedes descargar una guía para compartir el texto.</a></label>
-						<input name="compartir_documento_ensayo" id="compartir_documento_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="El documento obligatorio">
-						<label for="">Señala a continuación un correo electrónico para contactar al grupo que preparó este documento.</label>
-						<input name="correo_electronico_ensayo" id="correo_electronico_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-required-message="El correo es obligatorio" data-parsley-type-message="Por favor escribe un correo válido">
-						<label for="">Página Web</label>
-						<input name="pagina_web_ensayo" id="pagina_web_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Si es el caso">
-						<label for="">¿Quieres recibir más información?</label>
-						<label for="" class="[ inline-block ]">Sí</label>
-						<input type="radio" name="recibir_mas_informacion" id="optionsRadios1" value="si" checked>
-						<label for="" class="[ margin-left ][ inline-block ]">No</label>
-						<input type="radio" name="recibir_mas_informacion" id="optionsRadios2" value="no">
-						<input name="accion" id="accion" type="hidden" value="guarda-ensayo">
-					</div>
+	<section class="[ bg-gray--fondo section--bg ][ space-id ][ no-margin--bottom ]">
+		<div class="[ container ]" id="ensayos">
+			<article class="[ row ][ margin-bottom ]">
+				<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
+					<h2 class="">Ensayo</h2>
+					<p>Esta sección de la plataforma te permite consultar y compartir ensayos con propuestas específicas de contenido para el Proyecto de Constitución de la Ciudad de México.</p>
+					<p>Estos ensayos son públicos y están abiertos a comentarios. Hay dos tipos de ensayos: aquellos realizados por integrantes del Grupo de Trabajo y aquellos compartidos por otras agrupaciones, organizaciones de la sociedad civil, universidades, empresas y dependencias gubernamentales.</p>
+					<p>El Grupo de Trabajo considerará las propuestas contenidas en estos ensayos.</p>
+					<p>Comparte tu ensayo llenando el siguiente formulario. Verifica que cumpla con los requisitos de publicación aquí.</p>
 				</div>
-				<div class="[ text-center ]" id="voces_ciudadanas">
-					<button type="submit" class="[ btn btn-primary btn--large ]">enviar</button>
-				</div>
-			</form>
-		</article>
+			</article>
+			<article class="[ box-shadow--form ]">
+				<h2 class="[ margin-bottom ]">Comparte tu ensayo o relatoria</h2>
+				<form id="form-ensayos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="" >
+					<div class="[ row ]">
+						<div class="[ form-group ][ col-xs-12 col-sm-6 ]">
+							<label for="">Título del ensayo o de la relatoría</label>
+							<input type="text" name="titulo_ensayo" id="titulo_ensayo" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres" required="" maxlength="100" data-parsley-error-message="El título es obligatorio">
+							<label for="">Nombre del evento o sesión colaborativa de la cual se derivó el documento</label>
+							<input name="nombre_ensayo" id="nombre_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 100 caracteres"  required="" maxlength="100" data-parsley-error-message="El nombre es obligatorio">
+							<label for="">Comparte una frase que describa el evento/sesión de trabajo</label>
+							<input name="frase_ensayo" id="frase_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres"  required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">
+							<label for="">Fechas en las que sesionó el grupo de trabajo</label><br>
+							<label for="">Inicio</label>
+							<input type="text" name="fechaInicio" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo" placeholder="yyyy-mm-dd" required="" data-parsley-error-message="La fecha es obligatoria"><br>
+							<label for="">Final</label>
+							<input type="text" name="fechaFinal" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo-fin" placeholder="yyyy-mm-dd" disabled>
+							<label for="">Describe a continuación las reflexiones o propuestas centrales de la sesión de trabajo y el contexto en el que esta se llevó a cabo.</label>
+							<textarea name="resumen_ensayo" id="resumen_ensayo" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 250 palabras" required="" data-parsley-maxwords="250" data-parsley-required-message="El resumen es obligatorio" data-parsley-maxwords-message="El resumen no puede exceder 250 palabras"></textarea>
+							<label for="">Señala a continuación 3 palabras clave vinculadas a este documento</label>
+							<input name="palabra_a" id="palabra_a" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 1" required="" data-parsley-error-message="Palabra obligatoria">
+							<input name="palabra_b" id="palabra_b" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 2" required="" data-parsley-error-message="Palabra obligatoria">
+							<input name="palabra_c" id="palabra_c" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Palabra 3" required="" data-parsley-error-message="Palabra obligatoria">
+							<label for="">Comparte en una frase un mensaje central de la relatoría o ensayo</label>
+							<input name="mensaje_central" id="mensaje_central" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Máximo 120 caracteres" required="" maxlength="120" data-parsley-error-message="La frase es obligatoria">
+							<label for="">Lista a continuación el nombre de todos los autores separados por comas</label>
+							<input name="autores_ensayo" id="autores_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="Los autores son obligatorios">
+						</div>
+						<div class="[ form-group ][ col-xs-12 col-sm-6 ]">
+							<label for="">En caso de que este ensayo o relatoría haya sido elaborado por una institución u organización señala abajo cual es. En caso de más de una, separar por comas.</label>
+							<input name="institucion-u-organizacion" id="institucion-u-organizacion" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="La institución u organización es obligatoria">
+							<label for="">Comparte fotografías del grupo que trabajó este documento.</label>
+							<input name="fotografias_ensayo" id="fotografias_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="Las fotografías son obligatoria">
+							<label for="">Comparte también fotografías con una liga a flicker, instagram o blog</label>
+							<input name="fotografias_redes_ensayo" id="fotografias_redes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]">
+							<label for="">Comparte la lista de asistentes firmada de los participantes de la sesión/evento con una liga a Google Drive, Dropbox o OneDrive</label>
+							<input name="lista_asistentes_ensayo" id="lista_asistentes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="La lista de asistentes es obligatoria">
+							<label for="">Copia a continuación la liga a Google Drive, Dropbox o OneDrive. Este deberá estar en formato .docx (Microsoft Word) y no deberá exceder 8 páginas. <a href="<?php echo site_url('/guia-para-compartir-el-texto/'); ?>" target="_blank" class="[ color-gray--light ][ fz--small ]">Aqui puedes descargar una guía para compartir el texto.</a></label>
+							<input name="compartir_documento_ensayo" id="compartir_documento_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="El documento obligatorio">
+							<label for="">Señala a continuación un correo electrónico para contactar al grupo que preparó este documento.</label>
+							<input name="correo_electronico_ensayo" id="correo_electronico_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-required-message="El correo es obligatorio" data-parsley-type-message="Por favor escribe un correo válido">
+							<label for="">Página Web</label>
+							<input name="pagina_web_ensayo" id="pagina_web_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Si es el caso">
+							<label for="">¿Quieres recibir más información?</label>
+							<label for="" class="[ inline-block ]">Sí</label>
+							<input type="radio" name="recibir_mas_informacion" id="optionsRadios1" value="si" checked>
+							<label for="" class="[ margin-left ][ inline-block ]">No</label>
+							<input type="radio" name="recibir_mas_informacion" id="optionsRadios2" value="no">
+							<input name="accion" id="accion" type="hidden" value="guarda-ensayo">
+						</div>
+					</div>
+					<div class="[ text-center ]" id="voces_ciudadanas">
+						<button type="submit" class="[ btn btn-primary btn--large ]">enviar</button>
+					</div>
+				</form>
+			</article>
+		</div> <!-- /container -->
 	</section>
 
 	<div id="modal-agradecimiento" class="modal fade" role="dialog">

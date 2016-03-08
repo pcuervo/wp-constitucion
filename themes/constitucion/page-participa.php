@@ -135,7 +135,10 @@ get_header(); the_post();
 			<section class="[ row ][ section--bg ][ space-id ]" id="dialogos_publicos">
 				<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
 					<h2 class="[ no-margin-top ]">Encuentros</h2>
-					<p>En esta sección podrás registrar acontecimientos que sean espacios de diálogo relacionados a la construcción de la Constitución de la Ciudad de México. Estos pueden ser sesiones de trabajo colaborativas, foros, asambleas, talleres o conferencias.</p>
+					<p>¿Te interesan los temas relacionados al proceso de Reforma Política de la Ciudad de México?</p>
+					<p>Esta sección te permite conocer dónde y cuándo se llevarán a cabo eventos relacionados a la redacción del Proyecto de Constitución de la Ciudad de México. Existen congresos, asambleas y otros foros, tanto oficiales como ciudadanos, que funcionan como espacios de diálogo y reflexión sobre este proceso histórico.</p>
+					<p>Organiza un encuentro con tu grupo, organización, institución o colonia y comparte los detalles llenando el siguiente formulario.</p>
+					<p>Escribe un ensayo a modo de relatoría del encuentro, integra las propuestas específicas abordadas por los participantes y compártelo a través de esta plataforma.</p>
 				</div>
 			</section>
 
@@ -297,7 +300,10 @@ get_header(); the_post();
 			<article class="[ row ][ margin-bottom ]">
 				<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
 					<h2 class="">Ensayo</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ducimus soluta. Tempora recusandae cum cumque odit consequatur, laborum nulla atque accusamus doloribus rem placeat, optio libero delectus voluptatem repellendus facilis.</p>
+					<p>Esta sección de la plataforma te permite consultar y compartir ensayos con propuestas específicas de contenido para el Proyecto de Constitución de la Ciudad de México.</p>
+					<p>Estos ensayos son públicos y están abiertos a comentarios. Hay dos tipos de ensayos: aquellos realizados por integrantes del Grupo de Trabajo y aquellos compartidos por otras agrupaciones, organizaciones de la sociedad civil, universidades, empresas y dependencias gubernamentales.</p>
+					<p>El Grupo de Trabajo considerará las propuestas contenidas en estos ensayos.</p>
+					<p>Comparte tu ensayo llenando el siguiente formulario. Verifica que cumpla con los requisitos de publicación aquí.</p>
 				</div>
 			</article>
 			<article class="[ box-shadow--form ]">

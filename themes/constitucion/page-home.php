@@ -27,27 +27,32 @@
 	<ul class="slides">
 		<li>
 			<a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">
-				<img src="<?php echo THEMEPATH; ?>images/slides-01.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-imagina.jpg">
 			</a>
 		</li>
 		<li>
 			<a href="<?php echo site_url('/participa/'); ?>#peticiones">
-				<img src="<?php echo THEMEPATH; ?>images/slides-02.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-peticion.jpg">
 			</a>
 		</li>
 		<li>
 			<a href="<?php echo site_url('/participa/' ); ?>#dialogos_publicos">
-				<img src="<?php echo THEMEPATH; ?>images/slides-03.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-organiza.jpg">
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo site_url('/participa/' ); ?>">
+				<img src="<?php echo THEMEPATH; ?>images/slide-participa.jpg">
 			</a>
 		</li>
 		<li>
 			<a href="<?php echo site_url('/participa/' ); ?>#ensayos">
-				<img src="<?php echo THEMEPATH; ?>images/slides-04.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-publica.jpg">
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('/participa/' ); ?>#voces_ciudadanas">
-				<img src="<?php echo THEMEPATH; ?>images/slides-05.jpg">
+			<a href="<?php echo site_url('/cdmx/' ); ?>#voces_ciudadanas">
+				<img src="<?php echo THEMEPATH; ?>images/slide-voces-ciudadanas.jpg">
 			</a>
 		</li>
 	</ul>

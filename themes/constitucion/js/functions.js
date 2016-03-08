@@ -409,11 +409,9 @@
         $('ul.dropdown-content>li>a').on('click', function(){
             var anchor = $(this).attr('href');
             var anchor = anchor.split("#");
-            var hashURL = location.hash;
 
-            //if(hashURL != "" && hashURL.length > 1){
-                smoothScrollTo('#'+anchor[1], 140);
-            //}
+            smoothScrollTo('#'+anchor[1], 140);
+
             return false;
         });
 

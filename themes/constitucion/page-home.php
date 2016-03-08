@@ -4,7 +4,7 @@
 		<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
 	</video>
 	<div class="[ logo-video ]">
-		<img class="[ width-80 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/Logotipo_Blanco-03.png">
+		<img class="[ width-80 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/vertical-blanco-con-slogan.gif">
 	</div>
 	<div class="[ hero_video__scroll ][ text-center ][ js-hero_video__scroll ]">
 		<p class="[ text-center ][ color-light ][ margin-bottom--small ]">Conoce más</p>

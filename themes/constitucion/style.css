@@ -6279,6 +6279,10 @@ button.close {
     min-height: 100vh;
   }
 }
+.feedback--success {
+  font-size: large;
+  color: #e80e8a;
+}
 @media (max-width: 768px) {
   .modal--trabajador {
     width: 100%;

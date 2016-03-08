@@ -273,7 +273,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 		wp_insert_post( $contact_new );
 
-		$result['success'] = 'Se envío el mensaje con exito';
+		$result['success'] = 'Tu mensaje ha sido enviado exitosamente';
 
 		return true;
 	}

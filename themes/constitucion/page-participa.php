@@ -30,14 +30,14 @@ get_header(); the_post();
 			<div class="[ row ][ margin-top ][ padding--sides--xsm ]">
 				<div class="[ col-xs-6 col-sm-3 ]">
 					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">Paso 1</p>
+						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">1</p>
 						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
 					<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
 				</div>
 				<div class="[ col-xs-6 col-sm-3 ]">
 					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">Paso 2</p>
+						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">2</p>
 						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
 					<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
@@ -45,17 +45,19 @@ get_header(); the_post();
 				<div class="[ clearfix ][ visible-xs ]"></div>
 				<div class="[ col-xs-6 col-sm-3 ]">
 					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">Paso 3</p>
+						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">3</p>
 						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
 					<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
 				</div>
 				<div class="[ col-xs-6 col-sm-3 ]">
 					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">Paso 4</p>
+						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">4</p>
 						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
-					<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
+					<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucion.cdmx.gob.mx/ensayos">
+						<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
+					</a>
 				</div>
 			</div>
 		</div>

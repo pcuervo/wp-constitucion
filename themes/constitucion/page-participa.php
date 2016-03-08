@@ -17,7 +17,7 @@ get_header(); the_post();
 	<section class="[ container ][ padding--header--id ]">
 		<div class="[ row ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
-				<p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptas molestias officia blanditiis quidem tempore ut, ea, sint voluptatem hic ipsa odio, pariatur cum at! Voluptates, obcaecati maiores error velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi eum, cupiditate voluptatum dicta libero iure! Accusamus accusantium ea neque eius officiis, dolor et, iusto numquam. Officia voluptas impedit, delectus vel.</p>
+				<p>Todas y todos los que vivimos y visitamos la Ciudad de México podemos hacer propuestas al Grupo de Trabajo encargado de redactar el Proyecto de la Constitución. Hay cuatro formas de participar. </p>
 			</div>
 		</div>
 	</section>
@@ -80,7 +80,9 @@ get_header(); the_post();
 	<section class="[ container ][ padding--sides--xsm--large ][ space-id ]" id="imagina_ciudad">
 		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
 			<h2 class="[ no-margin-top margin-bottom ]">Imagina tu ciudad</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis maiores, mollitia at qui aperiam illo cumque inventore eveniet facere quos, recusandae assumenda, delectus autem corporis cupiditate necessitatibus odio enim deserunt?</p>
+			<p>¿Cuál es el espíritu de nuestra Ciudad y qué queremos para su futuro?</p> 
+			<p>Queremos conocer tu visión sobre la Ciudad de México. Nos interesa saber cuáles crees que son sus mayores retos y qué tipo de oportunidades te brinda. </p>
+			<p>Contestar este cuestionario toma aproximadamente 10 minutos. Al final, recibirás un certificado de participación a nombre del Grupo de Trabajo. </p>
 			<div class="[ text-center ][ margin-top ]">
 				<a class="[ btn btn-primary btn-large ]" href="<?php echo site_url('/sondeo-masivo/'); ?> ">
 					Participa
@@ -116,12 +118,14 @@ get_header(); the_post();
 		<section class="[ container ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ] [ text-justify ]">
 				<h2 class="">Peticiones</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit in suscipit similique tempore ab quam voluptatibus, quos modi fuga iusto earum incidunt repellendus quis tempora? Perspiciatis officia accusantium temporibus esse.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum possimus dolorum quam illo veniam id placeat nulla repellat vero debitis ratione consectetur eos praesentium, delectus doloremque dolor, ipsa deserunt eaque.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem consequuntur error illum. Atque esse, et iure rerum fugiat consequuntur repellendus est dignissimos alias officia fugit culpa nam consequatur exercitationem quae!</p>
+				<p>¿Tienes una propuesta concreta para el contenido del Proyecto de Constitución? Aprovecha la plataforma Change.org para hacer una petición, juntar firmas e interactuar directamente con el Grupo de Trabajo.</p>
+				<p>Change.org es una plataforma mundial que empodera a las personas para generar cambio a través de peticiones que pueden ser firmadas por cualquier persona con acceso a internet. Estas firmas generan moméntum que consigue que gobiernos y empresas respondan y rindan cuentas.</p>
+				<p>Las peticiones en Change.org que rebasen las cinco mil firmas serán respondidas por la Secretaría Técnica del Grupo de Trabajo.</p>
+				<p>Las peticiones que rebasen las diez mil firmas recibirán una invitación para que tres representantes del Grupo de Trabajo reciban al iniciador y se presente su propuesta ante el pleno del Grupo.</p>
 			</div>
 			<div class="[ clear ]"></div>
 			<div class="[ text-center ][ margin-top ]">
-				<a href="https://www.change.org/movements/voces-ciudadanas-en-la-nueva-constituci%C3%B3n-de-la-cdmx" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ]">Realizar petición</a>
+				<a href="https://www.change.org/movements/voces-ciudadanas-en-la-nueva-constituci%C3%B3n-de-la-cdmx" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ]">Conoce cómo realizar petición</a>
 			</div>
 		</section>
 	</section>
@@ -130,7 +134,7 @@ get_header(); the_post();
 		<div class="[ container ]">
 			<section class="[ row ][ section--bg ][ space-id ]" id="dialogos_publicos">
 				<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
-					<h2 class="[ no-margin-top ]">Diálogos Públicos</h2>
+					<h2 class="[ no-margin-top ]">Encuentros</h2>
 					<p>En esta sección podrás registrar acontecimientos que sean espacios de diálogo relacionados a la construcción de la Constitución de la Ciudad de México. Estos pueden ser sesiones de trabajo colaborativas, foros, asambleas, talleres o conferencias.</p>
 				</div>
 			</section>

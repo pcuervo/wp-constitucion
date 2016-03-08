@@ -14,16 +14,46 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 <section class="[ space-id ][ container padding--sides--xsm ]" id="cronica">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ]">
+			
 			<div class="[ content-cronica-cdmx ]">
 				<h2>Crónica</h2>
 				<blockquote>
-					<p>Sed dignissimligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu<canvas class="[ inline-block ]" id="pie-data" width="100px" height="100px"></canvas></p>
+					<!--<canvas class="[ inline-block ]" id="bar-data" width="250px" height="250px"></canvas>-->
+					<img src="<?php echo THEMEPATH; ?>images/graficos-02.png" alt="">
+					<p>La CDMX, incluyendo su zona metropolitana, es la ciudad más poblada de América y la cuarta del mundo.</p>
 				</blockquote>
-				<p>La Ciudad de México es un asentamiento cuya historia se remonta casi 700 años atrás, desde la fundación de Tenochtitlan en 1325 hasta la Ciudad de México que vivimos hoy. En estos años, la ciudad ha experimentado cambios dramáticos en su paisaje natural, físico, administrativo, político y social. Ha sido un espacio de lucha, de reinvención y vanguardia. Hoy nos encontramos en un momento histórico con la creación formal de la Ciudad de México, la cual se convierte en el entidad 32 del país, avanza en su autonomía y podrá contar con su propio congreso y constitución.</p><p>El año de 1985 constituye un punto de inflexión en la historia de la Ciudad de México. El sismo que tuvo lugar ese año impulsó la solidaridad entre ciudadanos, fortaleció la identidad colectiva y el deseo compartido por una ciudad donde sus habitantes pudieran ser actores en su construcción e incidir en las decisiones que se toman sobre ella. Este acontecimiento fue un catalizador de la democracia en la ciudad y el inicio de un proceso de la construcción de ciudad que tenemos hoy.</p>
+				<p>La Ciudad de México es un asentamiento cuya historia se remonta casi 700 años atrás, desde la fundación de Tenochtitlan en 1325 hasta la Ciudad de México que vivimos hoy. En estos años, la ciudad ha experimentado cambios dramáticos en su paisaje natural, físico, administrativo, político y social. Ha sido un espacio de lucha, de reinvención y vanguardia. Hoy nos encontramos en un momento histórico con la creación formal de la Ciudad de México, la cual se convierte en el entidad 32 del país, avanza en su autonomía y podrá contar con su propio congreso y constitución. <br><br>El año de 1985 constituye un punto de inflexión en la historia de la Ciudad de México. El sismo que tuvo lugar ese año impulsó la solidaridad entre ciudadanos, fortaleció la identidad colectiva y el deseo compartido por una ciudad donde sus habitantes pudieran ser actores en su construcción e incidir en las decisiones que se toman sobre ella. Este acontecimiento fue un catalizador de la democracia en la ciudad y el inicio de un proceso de la construcción de ciudad que tenemos hoy.</p>
 				<p>En 1997, por primera vez en su historia, la capital pudo elegir a su gobernante, el cual hasta ese punto era designado por el Presidente de la República mediante la figura del Regente. A casi veinte años de este acontecimiento, esta energía alcanza un punto cúspide con la formalización de la Ciudad de México y la creación colectiva de su constitución.</p>
-				<p>Nuestra ciudad es un espacio que enfrenta grandes retos pero sobretodo es un espacio de oportunidad. Es una concentración de casi 9 millones de mentes, sueños, historias y experiencias. A esto se suman casi 6 millones de personas que vienen diariamente a trabajar y estudiar. Esta es una ciudad donde en sus números, su diversidad de rostros, oficios, espacios y rituales yace su gran riqueza y potencial.</p>
-				<p>La constitución representa un instrumento para articular la capacidad e inteligencia colectiva para imaginar y crear juntos en favor del bien común de esta ciudad. Este es un gran momento histórico para la capital, la cual por fin conquista la autonomía que ha buscado durante más de 30 años, pero también lo es para el país y para el mundo de las ciudades.</p>
 			</div>
+
+		</div>
+		<div class="[ col-xs-12 ][ margin-top ]">
+			
+			<div class="[ content-cronica-cdmx ][ text-justify ]">
+				<blockquote>
+					<p>La Zona Metropolitana del Valle de México la integran actualmente las 16 delegaciones de la CDMX, 59 municipios del Estado de México y un municipio del estado de Hidalgo.
+						<img src="<?php echo THEMEPATH; ?>images/graficos-15.png" alt="">
+						<!--<canvas id="pie-data" width="100px" height="100px"></canvas>-->
+					</p>
+				</blockquote>
+				<p>Nuestra ciudad es un espacio que enfrenta grandes retos pero sobretodo es un espacio de oportunidad. Es una concentración de casi 9 millones de mentes, sueños, historias y experiencias. A esto se suman casi 6 millones de personas que vienen diariamente a trabajar y estudiar. Esta es una ciudad donde en sus números, su diversidad de rostros, oficios, espacios y rituales yace su gran riqueza y potencial. <br><br> La constitución representa un instrumento para articular la capacidad e inteligencia colectiva para imaginar y crear juntos en favor del bien común de esta ciudad. Este es un gran momento histórico para la capital, la cual por fin conquista la autonomía que ha buscado durante más de 30 años, pero también lo es para el país y para el mundo de las ciudades.</p>
+			</div>
+
+		</div>
+		<div class="[ col-xs-12 ][ margin-top ]">
+			
+			<div class="[ content-cronica-cdmx ][ text-justify ]">
+				<blockquote>
+					<p>Iztapalapa es la delegación más poblada de la CDMX (casi 2 millones de habitantes) y tiene más habitantes que países enteros como Estonia y Belice
+						<!--<canvas class="[ inline-block ]" id="bar-data" width="250px" height="250px"></canvas>-->
+						<img src="<?php echo THEMEPATH; ?>images/graficos-03.png" alt="">
+					</p>
+				</blockquote>
+				<p> 
+				Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
+				</p>
+			</div>
+
 		</div>
 	</div>
 	<?php echo wpautop( do_shortcode(get_post_meta($post->ID, 'contenido_extra', true) ) ); ?>
@@ -61,8 +91,9 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 				Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
 				</p>
 				<blockquote>
-					<canvas class="[ inline-block ]" id="bar-data" width="250px" height="250px"></canvas>
-					<p>Sed dignissimligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu</p>
+					<!--<canvas class="[ inline-block ]" id="bar-data" width="250px" height="250px"></canvas>-->
+					<img src="<?php echo THEMEPATH; ?>images/graficos-08.png" alt="">
+					<p>En el 2014 la CDMX recibió a 13 millones de turistas</p>
 				</blockquote>
 			</div>
 

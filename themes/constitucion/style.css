@@ -6928,6 +6928,9 @@ ul.horizontal-slide li[class*="col"]:first-child {
 .box-li.ya-paso p {
   color: rgba(204, 204, 204, 0.75);
 }
+.box-li.mas-eventos p.evento {
+  color: #E80E8A;
+}
 .box-li.nota-destacada a {
   color: #E80E89;
 }

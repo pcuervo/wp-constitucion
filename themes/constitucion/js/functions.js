@@ -375,6 +375,13 @@
               .addMessage('en', 'words', 'This value has the incorrect number of words');
         }
 
+        $('.mas-eventos').on('click', function(event){
+            event.preventDefault();
+            var data = $(this).attr('data-date');
+            $(this).addClass('hidden');
+            $('.date-'+data).removeClass('hidden');
+        });
+
     });
 
 })(jQuery);

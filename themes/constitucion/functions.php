@@ -172,6 +172,9 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 	require_once('inc/images-background-titles.php');
 
+	require_once('inc/TimeLine.class.php');
+
+
 
 
 // MODIFICAR EL MAIN QUERY ///////////////////////////////////////////////////////////

@@ -159,7 +159,7 @@
 						<a href="<?php echo $link_noticia; ?>">
 							<img class="[ img-responsive ][ margin-bottom--small ]" src="<?php echo $url_image; ?>">
 							<div>
-								<h4 class="[ color-gray ][ text-uppercase ]"><?php the_title(); ?></h4>
+								<h4 class="[ color-gray ][ center-full ][ text-uppercase ]"><?php the_title(); ?></h4>
 							</div>
 						</a>
 					</div>

@@ -29,49 +29,33 @@ get_header(); the_post();
 			</div>
 			<div class="[ row ][ margin-top ][ padding--sides--xsm ]">
 				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ row ][ margin-bottom ]">
-						<div class="[ col-xs-9 col-sm-10 ]">
-							<p class="[ fz-xlarge ]">Paso 1</p>
-							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_a', true);?></p>
-						</div>
-						<div class="[ col-xs-3 no-padding--sides col-sm-2 ]">
-							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-						</div>
+					<div class="[ margin-bottom--small ]">
+						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">Paso 1</p>
+						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
+					<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
 				</div>
 				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ row ][ margin-bottom ]">
-						<div class="[ col-xs-9 col-sm-10 ]">
-							<p class="[ fz-xlarge ]">Paso 2</p>
-							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
-						</div>
-						<div class="[ col-xs-3 no-padding--sides col-sm-2 ]">
-							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-						</div>
+					<div class="[ margin-bottom--small ]">
+						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">Paso 2</p>
+						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
+					<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
 				</div>
 				<div class="[ clearfix ][ visible-xs ]"></div>
 				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ row ][ margin-bottom ]">
-						<div class="[ col-xs-9 col-sm-10 ]">
-							<p class="[ fz-xlarge ]">Paso 3</p>
-							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
-						</div>
-						<div class="[ col-xs-3 no-padding--sides col-sm-2 ]">
-							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-						</div>
+					<div class="[ margin-bottom--small ]">
+						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">Paso 3</p>
+						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
+					<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
 				</div>
 				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ row ][ margin-bottom ]">
-						<div class="[ col-xs-9 col-sm-10 ]">
-							<p class="[ fz-xlarge ]">Paso 4</p>
-							<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
-						</div>
-						<div class="[ col-xs-3 no-padding--sides col-sm-2 ]">
-							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-						</div>
+					<div class="[ margin-bottom--small ]">
+						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">Paso 4</p>
+						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
+					<p class="[ fz-small ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
 				</div>
 			</div>
 		</div>

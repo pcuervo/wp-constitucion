@@ -193,9 +193,6 @@ get_header(); the_post();
 								endif;
 
 								foreach ($eventos as $evento): 
-									echo '<pre>';
-									print_r($evento);
-									echo '</pre>';
 
 									if((int)$evento->type != 3): ?>
 									    <li class="[ box-li <?php echo $class_status.$class_visibility; ?> ][ <?php echo 'date-'.$data_attr; ?> ]">

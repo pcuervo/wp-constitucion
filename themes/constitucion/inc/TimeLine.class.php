@@ -32,7 +32,7 @@ class TimeLine {
 
 				$this->newLine[$date][$count] = $event;
 				$this->newLine[$date][$count]->date = $date;
-				$this->newLine[$date][$count]->type = $type != 1;
+				$this->newLine[$date][$count]->type = $type;
 
 				$date_old = $date;
 			endforeach;

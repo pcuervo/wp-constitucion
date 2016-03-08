@@ -8190,7 +8190,7 @@ ul.slides li img {
   width: 100%;
 }
 @media (min-width: 768px) {
-  .content-cronica-cdmx p + p:last-child {
+  .content-cronica-cdmx p + p {
     width: 60%;
     margin-left: 32.5%;
   }

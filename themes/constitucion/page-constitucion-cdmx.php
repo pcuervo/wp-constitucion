@@ -137,7 +137,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 			<div class="modal-dialog">
 				<!-- Modal content-->
 				<div class="modal-content">
-					<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
+					<a type="button" class="close modal-group-close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>		
 					<div class="modal-body">
 						<img src="" class="[ imagen-modal ][ img-responsive ][ margin-bottom--small ]">
 						<h3 class="nombre-modal"></h3>

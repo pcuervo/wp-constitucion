@@ -6195,6 +6195,12 @@ button.close {
 .modal-header .close {
   margin-top: -2px;
 }
+.modal-group-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 1000;
+}
 .modal-title {
   margin: 0;
   line-height: 1.42857143;

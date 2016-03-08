@@ -8076,7 +8076,8 @@ ul.slides li img {
   font-size: 80%;
 }
 @media (min-width: 768px) {
-  .content-acerca-de h2 {
+  .content-acerca-de h2,
+  .content-acerca-de h3 {
     padding-left: 31%;
   }
   .content-acerca-de p:nth-child(2),
@@ -8119,7 +8120,9 @@ ul.slides li img {
 }
 @media (min-width: 768px) {
   .content-mensaje-jefegob h2,
-  .content-sobre-la-plataforma h2 {
+  .content-sobre-la-plataforma h2,
+  .content-mensaje-jefegob h3,
+  .content-sobre-la-plataforma h3 {
     padding-left: 31%;
   }
   .content-mensaje-jefegob p:nth-child(2),
@@ -8168,7 +8171,8 @@ ul.slides li img {
   font-size: 80%;
 }
 @media (min-width: 768px) {
-  .content-cronica-cdmx h2 {
+  .content-cronica-cdmx h2,
+  .content-cronica-cdmx h3 {
     padding-left: 31%;
   }
   .content-cronica-cdmx p:nth-child(2),

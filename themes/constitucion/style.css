@@ -7854,6 +7854,9 @@ ul.slides li img {
 .color-primary {
   color: #e80e8a;
 }
+.color-primary--hover:hover {
+  color: #e80e8a;
+}
 .color-gray {
   color: #4a4a4a;
 }

@@ -116,7 +116,7 @@ get_header(); the_post();
 	<section class="[ container ][ space-id ]" id="dialogos_publicos">
 		<div class="[ row ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
-				<h2 class="[ no-margin-top ]">Encuentros</h2>
+				<h2 class="[ no-margin-top ]">Encuentros ciudadanos</h2>
 				<p>¿Te interesan los temas relacionados al proceso de Reforma Política de la Ciudad de México?</p>
 				<p>Esta sección te permite conocer dónde y cuándo se llevarán a cabo eventos relacionados a la redacción del Proyecto de Constitución de la Ciudad de México. Existen congresos, asambleas y otros foros, tanto oficiales como ciudadanos, que funcionan como espacios de diálogo y reflexión sobre este proceso histórico.</p>
 				<p>Organiza un encuentro con tu grupo, organización, institución o colonia y comparte los detalles llenando el siguiente formulario.</p>
@@ -137,7 +137,7 @@ get_header(); the_post();
 
 			<section class="[ space-id ]" id="registra_tu_evento">
 				<div class="[ box-shadow--form ]">
-					<h2 class="[ margin-bottom--large ]">Registra tu evento</h2>
+					<h2 class="[ margin-bottom--large ]">Registra tu encuentros</h2>
 					<form id="form-eventos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
 						<div class="[ row ]">
 							<div class="[ col-xs-12 col-sm-6 ]">

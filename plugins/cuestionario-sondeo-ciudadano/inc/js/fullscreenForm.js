@@ -146,7 +146,7 @@
 
 		// progress bar
 		if( this.options.ctrlProgress ) {
-			this.ctrlProgress = createElement( 'div', { cName : 'fs-progress', appendTo : this.ctrls } );
+			this.ctrlProgress = createElement('div', { cName : 'fs-progress', appendTo : this.ctrls } );
 			this._showCtrl( this.ctrlProgress );
 		}
 	}

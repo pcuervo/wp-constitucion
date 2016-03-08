@@ -31,7 +31,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/IMG_6028.jpg" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/01.jpg" alt="">
 </div>
 
 <section class="[ container ][ space-id ]" id="sobre_constitucion">
@@ -71,7 +71,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/IMG_5956.jpg" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/02.jpg" alt="">
 </div>
 
 <section class="[ container ][ space-id ]" id="grupo_trabajo">
@@ -137,7 +137,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 			<div class="modal-dialog">
 				<!-- Modal content-->
 				<div class="modal-content">
-					<a type="button" class="close modal-group-close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>		
+					<a type="button" class="close modal-group-close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
 					<div class="modal-body">
 						<img src="" class="[ imagen-modal ][ img-responsive ][ margin-bottom--small ]">
 						<h3 class="nombre-modal"></h3>
@@ -186,7 +186,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/IMG_5993.jpg" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/04.jpg" alt="">
 </div>
 
 <section class="[ container ][ space-id ]" id="constitución_wiki">
@@ -203,7 +203,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/IMG_6107.jpg" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/05.jpg" alt="">
 </div>
 
 <section class="[ space-id ]" id="preguntas_frecuentes">
@@ -236,7 +236,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/IMG_5747.jpg" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/06.jpg" alt="">
 </div>
 
 

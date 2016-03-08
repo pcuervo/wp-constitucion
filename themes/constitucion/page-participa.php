@@ -130,13 +130,15 @@ get_header(); the_post();
 		</div>
 	</section>
 
-	<section class="[ row ][ space-id ]" id="dialogos_publicos">
-		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
-			<h2 class="[ no-margin-top ]">Encuentros</h2>
-			<p>¿Te interesan los temas relacionados al proceso de Reforma Política de la Ciudad de México?</p>
-			<p>Esta sección te permite conocer dónde y cuándo se llevarán a cabo eventos relacionados a la redacción del Proyecto de Constitución de la Ciudad de México. Existen congresos, asambleas y otros foros, tanto oficiales como ciudadanos, que funcionan como espacios de diálogo y reflexión sobre este proceso histórico.</p>
-			<p>Organiza un encuentro con tu grupo, organización, institución o colonia y comparte los detalles llenando el siguiente formulario.</p>
-			<p>Escribe un ensayo a modo de relatoría del encuentro, integra las propuestas específicas abordadas por los participantes y compártelo a través de esta plataforma.</p>
+	<section class="[ container ][ space-id ]" id="dialogos_publicos">
+		<div class="[ row ]">
+			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
+				<h2 class="[ no-margin-top ]">Encuentros</h2>
+				<p>¿Te interesan los temas relacionados al proceso de Reforma Política de la Ciudad de México?</p>
+				<p>Esta sección te permite conocer dónde y cuándo se llevarán a cabo eventos relacionados a la redacción del Proyecto de Constitución de la Ciudad de México. Existen congresos, asambleas y otros foros, tanto oficiales como ciudadanos, que funcionan como espacios de diálogo y reflexión sobre este proceso histórico.</p>
+				<p>Organiza un encuentro con tu grupo, organización, institución o colonia y comparte los detalles llenando el siguiente formulario.</p>
+				<p>Escribe un ensayo a modo de relatoría del encuentro, integra las propuestas específicas abordadas por los participantes y compártelo a través de esta plataforma.</p>
+			</div>
 		</div>
 	</section>
 

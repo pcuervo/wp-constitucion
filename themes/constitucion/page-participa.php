@@ -198,6 +198,9 @@ get_header(); the_post();
 					<p>Esta sección de la plataforma te permite consultar y compartir ensayos con propuestas específicas de contenido para el Proyecto de Constitución de la Ciudad de México.</p>
 					<p>Estos ensayos son públicos y están abiertos a comentarios. Hay dos tipos de ensayos: aquellos realizados por integrantes del Grupo de Trabajo y aquellos compartidos por otras agrupaciones, organizaciones de la sociedad civil, universidades, empresas y dependencias gubernamentales.</p>
 					<p>El Grupo de Trabajo considerará las propuestas contenidas en estos ensayos.</p>
+					<div class="[ text-center ][ margin-bottom ]">
+						<a href="http://constitucion.cdmx.gob.mx/ensayos" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ]">Consulta y comenta los ensayos</a>
+					</div>
 					<p>Comparte tu ensayo llenando el siguiente formulario. Verifica que cumpla con los requisitos de publicación aquí.</p>
 				</div>
 			</article>

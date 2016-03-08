@@ -110,7 +110,7 @@ get_header(); the_post();
 		</div>
 	</section>
 
-	<div class="[ descanso-visual ]" id="sobre_constitucion">
+	<div class="[ descanso-visual ]">
 		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
 	</div>
 
@@ -291,7 +291,7 @@ get_header(); the_post();
 		</div>
 	</div>
 
-	<div class="[ descanso-visual ]" id="sobre_constitucion">
+	<div class="[ descanso-visual ]">
 		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
 	</div>
 

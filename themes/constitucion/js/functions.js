@@ -30,6 +30,35 @@
         });
 
         /**
+        * Scrolling sub-sections
+        */
+
+        function smoothScrollTo(anchor, offset) {
+            var duration= 1000; //time (milliseconds) it takes to reach anchor point
+            var targetY = $(anchor).offset().top;
+            console.log(targetY);
+            $("body").animate({
+                scrollTop : targetY - offset
+            }, duration );
+        }
+
+        var hashURL = location.hash;
+        if(hashURL != "" && hashURL.length > 1){
+            smoothScrollTo(hashURL, 40);
+        }
+
+        $('ul.dropdown-content>li>a').on('click', function(){
+            var anchor = $(this).attr('href');
+            var anchor = anchor.split("#");
+            smoothScrollTo('#'+anchor[1], 140);
+            return false;
+        });
+
+
+
+
+
+        /**
          * INIT FLEXSLIDER
          */
         $('.flexslider').flexslider({

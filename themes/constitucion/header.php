@@ -66,7 +66,7 @@
 						class="[ dropdown--hover dropdown--hover--acerca ][ menu-desktop__acerca ]">
 							<a class="[ text-uppercase ]" href="<?php echo site_url('/constitucion-cdmx/'); ?>">Acerca de la<br>constitución<span class="caret"></span></a>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Mensaje del jefe de gobierno</a></li><!-- #jefe_gobierno -->
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe_gobierno">Mensaje del jefe de gobierno</a></li><!-- #jefe_gobierno -->
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_constitucion">Sobre la constitución</a></li>
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#grupo_trabajo">Grupo de trabajo</a></li>
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_plataforma">Sobre la plataforma</a></li>
@@ -82,7 +82,7 @@
 								</a>
 							</span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-								<li><a href="<?php echo site_url('/cdmx/'); ?>">Crónica</a></li><!-- #cronica -->
+								<li><a href="<?php echo site_url('/cdmx/'); ?>#cronica">Crónica</a></li><!-- #cronica -->
 								<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia_el_constituyente">Hacia el constituyente</a></li>
 								<li><a href="<?php echo site_url('/cdmx/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
 							</ul>
@@ -162,9 +162,9 @@
 									foreach ($tweets as $tweet): ?>
 										<div class="[ row ]">
 											<div class="[ col-xs-12 ][ color-gray ]">
-												<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-												<p><?php echo $tweet['text']; ?></p>
-												<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
+												<p class="[ fz-xsmall ][ no-margin ][ color-primary ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
+												<p class="[ margin-bottom--small ]"><?php echo $tweet['text']; ?></p>
+												<p class="[ text-italic fz-xsmall ][ margin-bottom--small ][ text-right ]"><?php echo $tweet['date']; ?></p>
 												<hr class="[ border-bottom-gray ]">
 											</div>
 										</div>
@@ -188,7 +188,7 @@
 						class="[ dropdown--hover dropdown--hover--acerca ][ menu-desktop__acerca ]">
 							<a class="[ text-uppercase ]" href="<?php echo site_url('/constitucion-cdmx/'); ?>">Acerca de la<br>constitución<span class="caret"></span></a>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>">Mensaje del jefe de gobierno</a></li><!-- #jefe_gobierno -->
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe_gobierno">Mensaje del jefe de gobierno</a></li><!-- #jefe_gobierno -->
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_constitucion">Sobre la constitución</a></li>
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#grupo_trabajo">Grupo de trabajo</a></li>
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_plataforma">Sobre la plataforma</a></li>
@@ -204,7 +204,7 @@
 								</a>
 							</span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-								<li><a href="<?php echo site_url('/cdmx/'); ?>">Crónica</a></li><!-- #cronica -->
+								<li><a href="<?php echo site_url('/cdmx/'); ?>#cronica">Crónica</a></li><!-- #cronica -->
 								<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia_el_constituyente">Hacia el constituyente</a></li>
 								<li><a href="<?php echo site_url('/cdmx/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
 							</ul>
@@ -281,8 +281,8 @@
 								<?php if (! empty($tweets) ):
 									foreach ($tweets as $tweet): ?>
 										<div>
-											<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-											<p><?php echo $tweet['text']; ?></p>
+											<p class="[ fz-xsmall ][ no-margin ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
+											<p class="[ margin-bottom--small ]"><?php echo $tweet['text']; ?></p>
 											<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
 											<hr class="[ border-bottom-gray ]">
 										</div>
@@ -307,9 +307,9 @@
 			if (! empty($tweets) ):
 				foreach ($tweets as $tweet): ?>
 					<div>
-						<p class="[ fz-xsmall ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
-						<p><?php echo $tweet['text']; ?></p>
-						<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
+						<p class="[ fz-xsmall ][ no-margin ][ color-primary ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
+						<p class="[ margin-bottom--small ]"><?php echo $tweet['text']; ?></p>
+						<p class="[ text-italic fz-xsmall ][ margin-bottom--small ][ text-right ]"><?php echo $tweet['date']; ?></p>
 						<hr class="[ border-bottom-gray ]">
 					</div>
 				<?php endforeach;

@@ -30,7 +30,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</div>
 </section>
 
-<div class="[ descanso-visual ]">
+<div class="[ descanso-visual ][ margin-bottom--large ]">
 	<img src="<?php echo THEMEPATH; ?>images/IMG_6028.jpg" alt="">
 </div>
 
@@ -62,7 +62,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</div>
 </section>
 
-<div class="[ descanso-visual ]">
+<div class="[ descanso-visual ][ margin-bottom--large ]">
 	<img src="<?php echo THEMEPATH; ?>images/IMG_5956.jpg" alt="">
 </div>
 
@@ -177,7 +177,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</div>
 </section>
 
-<div class="[ descanso-visual ]">
+<div class="[ descanso-visual ][ margin-bottom--large ]">
 	<img src="<?php echo THEMEPATH; ?>images/IMG_5993.jpg" alt="">
 </div>
 
@@ -194,7 +194,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</div>
 </section>
 
-<div class="[ descanso-visual ]">
+<div class="[ descanso-visual ][ margin-bottom--large ]">
 	<img src="<?php echo THEMEPATH; ?>images/IMG_6107.jpg" alt="">
 </div>
 
@@ -227,7 +227,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</div>
 </section>
 
-<div class="[ descanso-visual ]">
+<div class="[ descanso-visual ][ margin-bottom--large ]">
 	<img src="<?php echo THEMEPATH; ?>images/IMG_5747.jpg" alt="">
 </div>
 

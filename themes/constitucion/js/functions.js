@@ -26,6 +26,35 @@
         });
 
         /**
+        * Scrolling sub-sections
+        */
+
+        function smoothScrollTo(anchor) {
+            var duration= 1000; //time (milliseconds) it takes to reach anchor point
+            var targetY = $(anchor).offset().top;
+            console.log(targetY);
+            $("body").animate({
+                scrollTop : targetY - 100
+            }, duration );
+        }
+
+        var hashURL = location.hash;
+        if(hashURL != "" && hashURL.length > 1){
+            smoothScrollTo(hashURL);
+        }
+
+        $('ul.dropdown-content>li>a').on('click', function(){
+            var anchor = $(this).attr('href');
+            var anchor = anchor.split("#");
+            smoothScrollTo('#'+anchor[1]);
+            return false;
+        });
+
+
+
+
+
+        /**
          * INIT FLEXSLIDER
          */
         $('.flexslider').flexslider({

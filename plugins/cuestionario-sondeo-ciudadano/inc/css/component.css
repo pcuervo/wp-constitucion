@@ -670,7 +670,7 @@ button.fs-continue {
 	.fs-continue {
 		position: absolute;
 		right: 15px;
-		bottom: -250px;
+		bottom: -275px;
 		z-index: 0;
 	}
 }
@@ -703,7 +703,7 @@ button.fs-continue:hover {
 	left: 50%;
 	z-index: 800;
 	max-width: 960px;
-	width: 70%;
+	width: 100%;
 	color: #eb7e7f;
 	font-weight: 700;
 	font-size: 1em;
@@ -824,7 +824,7 @@ input[type=text]::-ms-clear {
 }
 
 /* Adjust form for smaller screens */
-@media screen and (max-width: 52.5em) {
+@media (max-width: 450px) {
 	body {
 		min-height: 500px;
 	}
@@ -868,12 +868,6 @@ input[type=text]::-ms-clear {
 		font-size: 2em;
 	}
 
-	@media (min-width: 0px) and (max-width: 480px) {
-		button.fs-continue{ 
-			bottom: 60px;
-		}
-	}
-
 	.fs-continue::after {
 		content: '';
 	}
@@ -884,14 +878,14 @@ input[type=text]::-ms-clear {
 	}
 
 	.fs-message-error{
-		    bottom: 5em;
-			left: -10px;
-			padding: 0 90px 0 2em;
-			width: 100%;
-			font-size: 1.5em;
-			-webkit-transform: translate3d(0,-5px,0);
-			transform: translate3d(0,-5px,0);
-			position: fixed;
+		bottom: 5em;
+		left: -10px;
+		padding: 0 90px 0 2em;
+		width: 100%;
+		font-size: 1.5em;
+		-webkit-transform: translate3d(0,-5px,0);
+		transform: translate3d(0,-5px,0);
+		position: fixed;
 	}
 
 	.fs-message-error.fs-show {
@@ -899,6 +893,29 @@ input[type=text]::-ms-clear {
 		transform: translate3d(0,0,0);
 	}
 }
+
+//@media (min-width: 0px) and (max-width: 480px) {
+//	button.fs-continue{ 
+//		bottom: 60px;
+//	}
+//}
+
+@media (min-width: 460px) {
+	.fs-message-error {
+		position: absolute;
+		left:55%;
+		bottom: 20%;
+		z-index: 800;
+		font-size: 1.2em;
+	}
+}
+
+@media (min-width: 768px) {
+	.fs-message-error {
+		left:51%;
+	}
+}
+
 
 span#charNum{
 	font-size: 1.5em;

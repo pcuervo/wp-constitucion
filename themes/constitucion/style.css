@@ -7290,6 +7290,9 @@ ul.slides li img {
 .z-index--100 {
   z-index: 100;
 }
+.z-index--100 {
+  z-index: 1000;
+}
 .block {
   display: block;
 }

@@ -3,7 +3,7 @@ $ = jQuery.noConflict();
 (function() {
 
     var formWrap = document.getElementById( 'fs-form-wrap' );
-    [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {    
+    [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
         new SelectFx( el, {
             stickyPlaceholder: false,
             onChange: function( lugar ){
@@ -73,9 +73,11 @@ $ = jQuery.noConflict();
             if( $grandesRetos.indexOf('Otro') > -1 ){
                 showOtrosRetos();
             }
+            // $('#js-grandes-retos a').fadeOut('fast', 0.5);
+
             $('#js-grandes-retos a').hide();
             $('button.fs-continue').click();
-        }  
+        }
     });
 })();
 
@@ -155,7 +157,7 @@ function showMunicipios( section ){
             $(el).attr( 'data-question', 21 );
         }
     }
-    
+
     $(el).append( getHTMLMunicipios( section ) );
     new SelectFx( $(el + ' .cs-select')[0], {
         stickyPlaceholder: false,
@@ -197,7 +199,7 @@ function showPaises( section ){
             $(el).attr( 'data-question', 23 );
         }
     }
-    
+
     $(el).append( getHTMLPaises( section ) );
     new SelectFx( $(el + ' .cs-select')[0], {
         stickyPlaceholder: false,
@@ -288,7 +290,7 @@ function getHTMLDondeEstudias(){
 
 function getHTMLDelegacionesCDMX( section ){
     switch( section ){
-        case 'trabajas': 
+        case 'trabajas':
             var pregunta = '¿En qué delegación trabajas?';
             break;
         case 'estudias':
@@ -296,7 +298,7 @@ function getHTMLDelegacionesCDMX( section ){
             break;
         default:
             var pregunta = '¿En qué delegación vives?';
-    }    
+    }
     var delegaciones = `
         <label class="[ fs-field-label fs-anim-upper ][ color-gray ]">` + pregunta + `</label>
         <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
@@ -332,7 +334,7 @@ function removeAccent( letter ){
 
 function getHTMLMunicipios( section ){
     switch( section ){
-        case 'trabajas': 
+        case 'trabajas':
             var pregunta = '¿En qué municipio trabajas?';
             break;
         case 'estudias':
@@ -340,7 +342,7 @@ function getHTMLMunicipios( section ){
             break;
         default:
             var pregunta = '¿En qué municipio vives?';
-    }   
+    }
     var municipios = `
         <label class="[ fs-field-label fs-anim-upper ][ color-gray ]">` + pregunta + `</label>
         <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
@@ -359,7 +361,7 @@ function getHTMLMunicipios( section ){
 
 function getHTMLEstados( section ){
     switch( section ){
-        case 'trabajas': 
+        case 'trabajas':
             var pregunta = '¿En qué estado trabajas?';
             break;
         case 'estudias':
@@ -367,7 +369,7 @@ function getHTMLEstados( section ){
             break;
         default:
             var pregunta = '¿En qué estado vives?';
-    }  
+    }
     var estados =  `
         <label class="[ fs-field-label fs-anim-upper ][ color-gray ]">` + pregunta + `</label>
         <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" name="state" id="state" >
@@ -381,7 +383,7 @@ function getHTMLEstados( section ){
 
 function getHTMLPaises( section ){
     switch( section ){
-        case 'trabajas': 
+        case 'trabajas':
             var pregunta = '¿En qué país trabajas?';
             break;
         case 'estudias':
@@ -389,7 +391,7 @@ function getHTMLPaises( section ){
             break;
         default:
             var pregunta = '¿En qué país vives?';
-    } 
+    }
     var paises =  `
         <label class="[ fs-field-label fs-anim-upper ][ color-gray ]">` + pregunta + `</label>
         <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ] select-paises" name="pais" id="pais" >
@@ -408,7 +410,7 @@ function getHTMLPaises( section ){
 
 function getHTMLColoniasCDMX( delegacion, section ){
     switch( section ){
-        case 'trabajas': 
+        case 'trabajas':
             var pregunta = '¿En qué colonia trabajas?';
             break;
         case 'estudias':
@@ -416,17 +418,17 @@ function getHTMLColoniasCDMX( delegacion, section ){
             break;
         default:
             var pregunta = '¿En qué colonia vives?';
-    }   
+    }
     var colonias = `
         <label class="[ fs-field-label fs-anim-upper ][ color-gray ]">` + pregunta + `</label>
         <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
             <option value="" disabled selected>Selecciona tu colonia</option>
         `;
-        
+
     var currentTitle = '';
     $.each( allColonias, function( del, col ){
         if( delegacion != del  ) return 1;
-        
+
         $.each( col, function( i, colonia ){
             if( currentTitle != colonia.charAt(0) ){
                 currentTitle = removeAccent( colonia.charAt(0) );

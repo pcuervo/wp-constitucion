@@ -155,6 +155,10 @@ get_header(); the_post();
 								<input class="[ input-primary border-gray ][ margin-bottom--large ] date-ensayo" name="fecha_evento" id="fecha_evento" placeholder="yyyy-mm-dd" required="" type="text" data-parsley-required-message="La fecha es obligatoria">
 								<label for="">Señala abajo dónde se llevara a cabo el evento</label>
 								<input type="text" name="ubicacion_evento" id="ubicacion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Ubicación" data-parsley-required-message="La ubicación es obligatoria">
+								<input type="hidden" name="latitud_evento" id="latitud_evento" value="">
+								<input type="hidden" name="longitud_evento" id="longitud_evento" value="">
+								<div class="iframe-cont"></div>
+
 							</div>
 							<div class="[ col-xs-12 col-sm-6 ]">
 								<label for="">¿En qué momentos se llevará a cabo el evento? </label>

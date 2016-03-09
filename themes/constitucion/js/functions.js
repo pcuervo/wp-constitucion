@@ -30,7 +30,24 @@
             $('#feedback, .modal-backdrop').remove();
         });
 
+        /**
+         * LUGA DEL EVENTO 
+         */
+        if (document.getElementById("ubicacion_evento")) {
+            var autocomplete = new google.maps.places.Autocomplete($("#ubicacion_evento")[0], {});
 
+            google.maps.event.addListener(autocomplete, 'place_changed', function() {
+                var place = autocomplete.getPlace();
+
+                $('#latitud_evento').val( place.geometry.location.lat() );
+                $('#longitud_evento').val( place.geometry.location.lng() );
+
+                var iframe = '<iframe width="100%" height="170" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q='+place.geometry.location.lat()+','+place.geometry.location.lng()+'&hl=es;z=14&amp;output=embed"></iframe>';
+                $('.iframe-cont').empty().append(iframe);
+
+            });
+
+        };
 
 
         /**
@@ -143,7 +160,7 @@
         $('.js-video-wrapper').fitVids();
 
         if( parseInt( isPageCDMX ) ){
-            //createLineChart();
+            createPieChart();
         }
 
         /*------------------------------------*\
@@ -210,6 +227,7 @@
             });
         } //imgToSvg
 
+
         function createPieChart(){
             var ctx = $("#pie-data").get(0).getContext("2d");
             //pie chart data
@@ -222,13 +240,25 @@
                     label: "nombre"
                 },
                 {
-                    value: 15,
+                    value: 14,
+                    color: "#4b7c9c",
+                    highlight: "#222",
+                    label: "nombre"
+                },
+                {
+                    value: 14,
+                    color: "#76a1bd",
+                    highlight: "#222",
+                    label: "nombre"
+                },
+                {
+                    value: 6,
                     color: "#d1d8e4",
                     highlight: "#222",
                     label: "nombre"
                 },
                 {
-                    value: 25,
+                    value: 6,
                     color: "#363636",
                     highlight: "#222",
                     label: "nombre"

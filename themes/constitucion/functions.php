@@ -44,6 +44,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		wp_enqueue_script( 'jquery', 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js', array(), '2.0.3', true );
 		wp_enqueue_script('jquery-ui-datepicker');
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.min.js', array('jquery'), '1.0', true );
+		wp_enqueue_script( 'api-google', 'http://maps.google.com/maps/api/js?libraries=places&language=en-AU', array('plugins'), '1.0', true );
 		wp_enqueue_script( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js', array('jquery'), '3.1.0', true );
 		wp_enqueue_script( 'api-google', 'https://maps.googleapis.com/maps/api/js', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'chart', JSPATH.'Chart.js', array('jquery'), '1.0', false );
@@ -273,13 +274,15 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 		wp_insert_post( $contact_new );
 
-		$result['success'] = 'Se envío el mensaje con exito';
+		$result['success'] = 'Tu mensaje ha sido enviado exitosamente';
 
 		return true;
 	}
 
 
 	function storeFormEvent($data){
+		global $result;
+
 		if (empty($data)) return false;
 
 		$contact_new = array(
@@ -294,12 +297,16 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		if ($post_id) {
 			saveMetaDataEvent($post_id, $data);
 		}
+
+		$result['success'] = 'Tú evento se mando correctamente';
 	}
 
 	/**
 	 * STORE FORM TEST 
 	 */
 	function storeFormTest($data){
+		global $result;
+
 		if (empty($data)) return false;
 
 		$contact_new = array(
@@ -314,6 +321,8 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		if ($post_id) {
 			saveMetaDataTest($post_id, $data);
 		}
+
+		$result['success'] = 'Tú ensayo se mando correctamente';
 
 	}
 

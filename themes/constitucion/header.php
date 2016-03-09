@@ -57,7 +57,7 @@
 			<header class="[ header-home ]">
 				<nav class="[ height-100 ]">
 <!-- menu desktop home -->
-					<ul class="[ menu-desktop ][ text-center ][ hidden-xs ][ height-100 ]">
+					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ][ height-100 ]">
 						<li class="[ no-padding--sides ][ menu-desktop__logo padding--header-logo ]">
 							<a class="[ inline-block ]" href="<?php echo site_url('/'); ?> ">
 								<img class="[ logo ][ margin-right ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="logo vertical de Ciudad de México">
@@ -111,7 +111,7 @@
 					</ul>
 
 <!-- nav header movil home -->
-					<div class="[ bg-light ][ visible-xs ]">
+					<div class="[ bg-light ][ visible-xs visible-sm ]">
 						<div class="[ container ]">
 							<div class="[ width-col-9 ][ inline-block align-middle ]">
 								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"  alt="logo vertical de Ciudad de México"></a>
@@ -179,7 +179,7 @@
 			<header class="[ not-home ]">
 				<nav class="[ height-100 ]">
 <!-- menu desktop not home -->
-					<ul class="[ menu-desktop ][ text-center ][ hidden-xs ][ height-100 ]"> <!-- hidden-sm -->
+					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ][ height-100 ]"> <!-- hidden-sm -->
 						<li class="[ no-padding--sides padding--top--xsmall padding--header-logo ][ menu-desktop__logo ]">
 							<a class="[ inline-block ]" href="<?php echo site_url('/'); ?>">
 								<img class="[ logo ][ margin-right ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png">
@@ -233,7 +233,7 @@
 					</ul>
 
 <!-- nav header movil not home -->
-					<div class="[ bg-light ][ visible-xs ]">
+					<div class="[ bg-light ][ visible-xs visible-sm ]">
 						<div class="[ container ]">
 							<div class="[ width-col-9 ][ inline-block align-middle ]">
 								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"></a>

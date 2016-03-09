@@ -322,14 +322,14 @@ button.fs-continue,
 	margin-right: 10px;
 	margin-bottom: 10px;
 	padding: 10px;
+	-webkit-transition: background-color 0.3s ease-out;
+	-moz-transition: background-color 0.3s ease-out;
+	-ms-transition: background-color 0.3s ease-out;
+	-o-transition: background-color 0.3s ease-out;
 }
 
 .fs-fields > li .fs-radio-custom span:hover{
 	background-color: #e80e8a;
-	-webkit-transition: background-color 0.5s ease;
-    -moz-transition: background-color 0.5s ease;
-    -o-transition: background-color 0.5s ease;
-    transition: background-color 0.5s ease;
 }
 
 
@@ -647,9 +647,9 @@ button.fs-continue {
 	font-family: "Alegreya Sans", sans-serif;
 	font-size: 16px;
 	&:hover{
+	.transition;
 	background-color: #777;
 	color: #fff;
-	.transition;
   }
 }
 
@@ -925,4 +925,16 @@ input[type=text]::-ms-clear {
 
 span#charNum{
 	font-size: 1.5em;
+}
+
+.fade-in{
+	opacity: 1;
+}
+
+.fade-out{
+//	opacity: 0;
+//	-webkit-transition: opacity 0.5s ease-in-out;
+//	-moz-transition: opacity 0.5s ease-in-out;
+//	-ms-transition: opacity 0.5s ease-in-out;
+//	-o-transition: opacity 0.5s ease-in-out; 	
 }

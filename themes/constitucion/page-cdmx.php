@@ -18,7 +18,8 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 			<div class="[ content-acerca-de ]">
 				<h2>Crónica</h2>
 				<blockquote>
-					<!--<canvas class="[ inline-block ]" id="bar-data" width="250px" height="250px"></canvas>-->
+					<!--<canvas class="[ inline-block ]" id="bar-data" width="250px" height="250px"></canvas>
+					-->
 					<img src="<?php echo THEMEPATH; ?>images/graficos-02.png" alt="">
 					<p>La CDMX, incluyendo su zona metropolitana, es la ciudad más poblada de América y la cuarta del mundo.</p>
 				</blockquote>
@@ -76,7 +77,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 				Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
 				</p>
 				<blockquote>
-					<!--<canvas class="[ inline-block ]" id="bar-data" width="250px" height="250px"></canvas>-->
 					<img src="<?php echo THEMEPATH; ?>images/graficos-08.png" alt="">
 					<p>En el 2014 la CDMX recibió a 13 millones de turistas</p>
 				</blockquote>
@@ -235,7 +235,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 		</div>
 
 		<div class="[ container padding--sides--xsm padding--bottom--large ]">
-			<h2 class="[ no-margin-top ]">"Más ciudadanas y ciudadanos:"</h2>
+			<h2 class="[ no-margin-top ]">Más ciudadanas y ciudadanos</h2>
 			<div class="[ row ][ margin-bottom ]">
 
 					<?php $voces_ciudadanas = new WP_Query(array(

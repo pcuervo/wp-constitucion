@@ -411,7 +411,7 @@
 	// TODO: this is a very basic validation function. Only checks for required fields..
 	FForm.prototype._validade = function() {
 		var fld = this.fields[ this.current ],
-			input = fld.querySelector( 'input[required]' ) || fld.querySelector( 'textarea[required]' ) || fld.querySelector( 'select[required]' ),
+			input = fld.querySelector( 'input[required]' ) || fld.querySelector( 'textarea[required]' ) || fld.querySelector( 'select[required]' ) || fld.querySelector( 'input[comma-required]' ),
 			error;
 
 		if( !input ) return true;
@@ -432,6 +432,12 @@
 				else if( input.value === '' ) {
 					error = 'NOVAL';
 				}
+                else if( input.hasAttribute( 'comma-required' ) ){
+                    var numCommas = ( input.value.match(/,/g) || [] ).length;
+                    if( numCommas < 2 ){
+                        error = 'MISSING_WORDS';
+                    }
+                }
 				break;
 
 			case 'select' :
@@ -463,6 +469,9 @@
 			case 'NOVAL' :
 				message = 'Por favor llena este campo antes de continuar.';
 				break;
+            case 'MISSING_WORDS':
+                message = 'Por favor ingresa 3 palabras separadas por comas. Ej. palabra1, palabra2, palabra3';
+                break;
 			case 'INVALIDEMAIL' :
 				message = 'Please fill a valid email address';
 				break;

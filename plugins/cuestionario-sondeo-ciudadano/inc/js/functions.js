@@ -73,10 +73,8 @@ $ = jQuery.noConflict();
             if( $grandesRetos.indexOf('Otro') > -1 ){
                 showOtrosRetos();
             }
-            // $('#js-grandes-retos a').fadeOut('fast', 0.5);
-
             $('#js-grandes-retos a').hide();
-            $('button.fs-continue').click();
+            $('a.fs-continue')[0].click();
         }
     });
 })();
@@ -614,12 +612,12 @@ function getLugarResidencia( slug ){
     return lugar;
 }
 
-function countChar(val, maxlength) {
+function countChar(val, maxlength, el) {
     var len = val.value.length;
     if (len >= maxlength) {
       val.value = val.value.substring(0, maxlength);
     } else {
-      $('#charNum').text(maxlength - len);
+      $( el ).text(maxlength - len);
     }
   };
 

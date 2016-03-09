@@ -932,9 +932,15 @@ span#charNum{
 }
 
 .fade-out{
-//	opacity: 0;
-//	-webkit-transition: opacity 0.5s ease-in-out;
-//	-moz-transition: opacity 0.5s ease-in-out;
-//	-ms-transition: opacity 0.5s ease-in-out;
-//	-o-transition: opacity 0.5s ease-in-out; 	
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-ms-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out; 	
+}
+div.fade-out:hover{
+	opacity: 1;
+}
+div.fade-out:active{
+	opacity: 1;
 }

@@ -143,7 +143,7 @@
         $('.js-video-wrapper').fitVids();
 
         if( parseInt( isPageCDMX ) ){
-            //createLineChart();
+            createPieChart();
         }
 
         /*------------------------------------*\
@@ -210,6 +210,7 @@
             });
         } //imgToSvg
 
+
         function createPieChart(){
             var ctx = $("#pie-data").get(0).getContext("2d");
             //pie chart data
@@ -222,13 +223,25 @@
                     label: "nombre"
                 },
                 {
-                    value: 15,
+                    value: 14,
+                    color: "#4b7c9c",
+                    highlight: "#222",
+                    label: "nombre"
+                },
+                {
+                    value: 14,
+                    color: "#76a1bd",
+                    highlight: "#222",
+                    label: "nombre"
+                },
+                {
+                    value: 6,
                     color: "#d1d8e4",
                     highlight: "#222",
                     label: "nombre"
                 },
                 {
-                    value: 25,
+                    value: 6,
                     color: "#363636",
                     highlight: "#222",
                     label: "nombre"

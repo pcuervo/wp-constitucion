@@ -1,8 +1,7 @@
 /* Main form wrapper */
 .fs-form-wrap {
 	position: relative;
-	width: 100%;
-	min-height: 450px;
+	height: 100%;
 	color: #fff;
 }
 
@@ -20,9 +19,7 @@
 	width: 100%;
 }
 
-.fs-title h1 {
-	margin: 8px 0 0 0;
-}
+//.fs-title h1 { margin: 8px 0 0 0; }
 
 /* Form */
 .fs-form {
@@ -37,7 +34,7 @@
 
 /* Views (fullscreen and overview)*/
 .fs-form-full {
-	top: 32%;
+	top: 0;
 	margin: 0 auto;
 	width: 100%;
 }
@@ -99,7 +96,7 @@
 .fs-nav-dots,
 .fs-progress,
 .fs-numbers,
-button.fs-continue,
+a.fs-continue,
 .fs-message-error,
 .fs-message-final {
 	visibility: hidden;
@@ -631,8 +628,7 @@ button.fs-continue,
 }
 
 /* Continue button and submit button */
-button.fs-submit,
-button.fs-continue {
+.fs-submit{
 	background-color: transparent;
 	border: 2px solid #777;
 	text-transform: uppercase;
@@ -659,18 +655,16 @@ button.fs-continue {
 }
 
 .fs-continue {
-		position: fixed;
-		right: 15px;
-		bottom: 20px;
-		z-index: 1000;
-		background: #EEE;
+	position: fixed;
+	right: 0px;
+	bottom: 20px;
+	z-index: 1000;
 }
 
 @media screen and (min-width: 468px){
 	.fs-continue {
 		position: absolute;
 		right: 15px;
-		bottom: -275px;
 		z-index: 0;
 	}
 }
@@ -895,7 +889,7 @@ input[type=text]::-ms-clear {
 }
 
 //@media (min-width: 0px) and (max-width: 480px) {
-//	button.fs-continue{ 
+//	button.fs-continue{
 //		bottom: 60px;
 //	}
 //}

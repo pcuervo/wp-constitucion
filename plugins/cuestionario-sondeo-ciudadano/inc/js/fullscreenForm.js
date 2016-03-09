@@ -112,7 +112,7 @@
 	 */
 	FForm.prototype._addControls = function() {
 		// main controls wrapper
-		this.ctrls = createElement( 'div', { cName : 'fs-controls container relative', appendTo : this.el } );
+		this.ctrls = createElement( 'div', { cName : 'fs-controls container', appendTo : this.el } );
 
 		// continue button (jump to next field)
 		this.ctrlContinue = createElement( 'a', { cName : '[ fs-continue btn btn-primary btn-large', inner : 'Siguiente', appendTo : this.ctrls } );

@@ -30,14 +30,14 @@ get_header(); the_post();
 			<div class="[ row ][ margin-top ][ padding--sides--xsm ]">
 				<div class="[ col-xs-6 col-sm-3 ]">
 					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">Paso 1</p>
+						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">1</p>
 						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
 					<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
 				</div>
 				<div class="[ col-xs-6 col-sm-3 ]">
 					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">Paso 2</p>
+						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">2</p>
 						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
 					<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
@@ -45,17 +45,19 @@ get_header(); the_post();
 				<div class="[ clearfix ][ visible-xs ]"></div>
 				<div class="[ col-xs-6 col-sm-3 ]">
 					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">Paso 3</p>
+						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">3</p>
 						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
 					<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
 				</div>
 				<div class="[ col-xs-6 col-sm-3 ]">
 					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">Paso 4</p>
+						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">4</p>
 						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
 					</div>
-					<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
+					<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucion.cdmx.gob.mx/ensayos">
+						<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -116,7 +118,7 @@ get_header(); the_post();
 	<section class="[ container ][ space-id ]" id="dialogos_publicos">
 		<div class="[ row ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
-				<h2 class="[ no-margin-top ]">Encuentros</h2>
+				<h2 class="[ no-margin-top ]">Encuentros ciudadanos</h2>
 				<p>¿Te interesan los temas relacionados al proceso de Reforma Política de la Ciudad de México?</p>
 				<p>Esta sección te permite conocer dónde y cuándo se llevarán a cabo eventos relacionados a la redacción del Proyecto de Constitución de la Ciudad de México. Existen congresos, asambleas y otros foros, tanto oficiales como ciudadanos, que funcionan como espacios de diálogo y reflexión sobre este proceso histórico.</p>
 				<p>Organiza un encuentro con tu grupo, organización, institución o colonia y comparte los detalles llenando el siguiente formulario.</p>
@@ -137,7 +139,7 @@ get_header(); the_post();
 
 			<section class="[ space-id ]" id="registra_tu_evento">
 				<div class="[ box-shadow--form ]">
-					<h2 class="[ margin-bottom--large ]">Registra tu evento</h2>
+					<h2 class="[ margin-bottom--large ]">Registra tu encuentros</h2>
 					<form id="form-eventos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
 						<div class="[ row ]">
 							<div class="[ col-xs-12 col-sm-6 ]">
@@ -153,6 +155,10 @@ get_header(); the_post();
 								<input class="[ input-primary border-gray ][ margin-bottom--large ] date-ensayo" name="fecha_evento" id="fecha_evento" placeholder="yyyy-mm-dd" required="" type="text" data-parsley-required-message="La fecha es obligatoria">
 								<label for="">Señala abajo dónde se llevara a cabo el evento</label>
 								<input type="text" name="ubicacion_evento" id="ubicacion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Ubicación" data-parsley-required-message="La ubicación es obligatoria">
+								<input type="hidden" name="latitud_evento" id="latitud_evento" value="">
+								<input type="hidden" name="longitud_evento" id="longitud_evento" value="">
+								<div class="iframe-cont"></div>
+
 							</div>
 							<div class="[ col-xs-12 col-sm-6 ]">
 								<label for="">¿En qué momentos se llevará a cabo el evento? </label>
@@ -198,6 +204,9 @@ get_header(); the_post();
 					<p>Esta sección de la plataforma te permite consultar y compartir ensayos con propuestas específicas de contenido para el Proyecto de Constitución de la Ciudad de México.</p>
 					<p>Estos ensayos son públicos y están abiertos a comentarios. Hay dos tipos de ensayos: aquellos realizados por integrantes del Grupo de Trabajo y aquellos compartidos por otras agrupaciones, organizaciones de la sociedad civil, universidades, empresas y dependencias gubernamentales.</p>
 					<p>El Grupo de Trabajo considerará las propuestas contenidas en estos ensayos.</p>
+					<div class="[ text-center ][ margin-bottom ]">
+						<a href="http://constitucion.cdmx.gob.mx/ensayos" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ]">Consulta y comenta los ensayos</a>
+					</div>
 					<p>Comparte tu ensayo llenando el siguiente formulario. Verifica que cumpla con los requisitos de publicación aquí.</p>
 				</div>
 			</article>
@@ -272,10 +281,10 @@ get_header(); the_post();
 							<p class="[ text-center text-uppercase ]">Escribe tu nombre y apellido para obtener tu certificado de participación</p>
 							<form class="[ row ]" action="<?php echo site_url('pdf-certificado-de-participacion'); ?>" method="POST" data-parsley-certificado target="_blank">
 								<div class="[ col-xs-12 col-sm-6  ]">
-									<input type="text" name="nombre" class="form-control [ margin-bottom--large ][ input--search ] " placeholder="Nombre(s)" required="">
+									<input type="text" name="nombre" class="form-control [ margin-bottom--large ][ input-primary border-gray ]" placeholder="Nombre(s)" required="">
 								</div>
 								<div class="[ col-xs-12 col-sm-6 ]">
-									<input type="text" name="apellidos" class="form-control [ margin-bottom--large ][ input--search ] " placeholder="Apellidos" required="">
+									<input type="text" name="apellidos" class="form-control [ margin-bottom--large ][ input-primary border-gray ]" placeholder="Apellidos" required="">
 								</div>
 								<input type="hidden" name="referencia">
 								<button type="submit" class="[ col-xs-12 ][ btn btn-secondary color-gray ][ center-block ]">obtener certificado</button>

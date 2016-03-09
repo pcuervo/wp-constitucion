@@ -6279,6 +6279,10 @@ button.close {
     min-height: 100vh;
   }
 }
+.feedback--success {
+  font-size: large;
+  color: #e80e8a;
+}
 @media (max-width: 768px) {
   .modal--trabajador {
     width: 100%;
@@ -7852,6 +7856,9 @@ ul.slides li img {
   border-radius: 10px;
 }
 .color-primary {
+  color: #e80e8a;
+}
+.color-primary--hover:hover {
   color: #e80e8a;
 }
 .color-gray {

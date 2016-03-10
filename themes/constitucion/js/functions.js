@@ -32,7 +32,7 @@
         });
 
         /**
-         * LUGA DEL EVENTO 
+         * LUGA DEL EVENTO
          */
         if (document.getElementById("ubicacion_evento")) {
             var autocomplete = new google.maps.places.Autocomplete($("#ubicacion_evento")[0], {});
@@ -61,10 +61,7 @@
         /**
          * slick slider
          */
-        $('.slick').slick({
-            animation: "slide"
-        });
-        $('.responsive').slick({
+        $('.slider.responsive').slick({
             dots: true,
             infinite: false,
             speed: 300,
@@ -494,7 +491,7 @@
             }
 
         });
-        
+
     });
 
 })(jQuery);

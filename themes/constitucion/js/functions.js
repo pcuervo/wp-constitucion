@@ -22,12 +22,13 @@
         }
 
         $('.js-hero_video__scroll').on('click', function(){
-            $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 80 }, '700');
+            $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 130 }, '700');
         });
 
 
         $('#close-feedback').on('click', function(){
             $('#feedback, .modal-backdrop').remove();
+            var $feedback = $('#feedback');
         });
 
         /**
@@ -56,6 +57,46 @@
         $('.flexslider').flexslider({
             animation: "slide"
         });
+
+        /**
+         * slick slider
+         */
+        $('.slick').slick({
+            animation: "slide"
+        });
+        $('.responsive').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                    }
+                    },
+                    {
+                    breakpoint: 600,
+                    settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
 
         /**
          * DATOS MODAL GRUPO DE TRABAJO
@@ -453,7 +494,7 @@
             }
 
         });
-
+        
     });
 
 })(jQuery);

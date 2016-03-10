@@ -11,10 +11,9 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<?php the_content(); ?>
 </section>
 
-<section class="[ space-id ][ container padding--sides--xsm ]" id="cronica">
+<section class="[ space-id ][ container padding--sides--xsm ]">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 ]">
-<canvas class="[ inline-block ]" id="bar-data" width="250px" height="250px"></canvas>
+		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 			<div class="[ content-acerca-de ]">
 				<h2>Crónica</h2>
 				<blockquote>
@@ -28,18 +27,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 
 		</div>
 
-		<div class="[ col-xs-12 ][ margin-top ]">
-
-			<div class="[ content-acerca-de ][ text-justify ]">
-				<blockquote>
-					<img src="<?php echo THEMEPATH; ?>images/graficos-15.png" alt="gráfica de pie zona metropolitana">	<!--<canvas class="[ inline-block ]" id="pie-data" width="100px" height="100px"></canvas>-->
-					<p>La Zona Metropolitana del Valle de México la integran actualmente las 16 delegaciones de la CDMX, 59 municipios del Estado de México y un municipio del estado de Hidalgo.
-					</p>
-				</blockquote>
-				<p>En 1997, por primera vez en su historia, la capital pudo elegir a su gobernante, el cual hasta ese punto era designado por el Presidente de la República mediante la figura del Regente. A casi veinte años de este acontecimiento, esta energía alcanza un punto cúspide con la formalización de la Ciudad de México y la creación colectiva de su constitución. <br><br>Nuestra ciudad es un espacio que enfrenta grandes retos pero sobretodo es un espacio de oportunidad. Es una concentración de casi 9 millones de mentes, sueños, historias y experiencias. A esto se suman casi 6 millones de personas que vienen diariamente a trabajar y estudiar. Esta es una ciudad donde en sus números, su diversidad de rostros, oficios, espacios y rituales yace su gran riqueza y potencial. <br><br> La constitución representa un instrumento para articular la capacidad e inteligencia colectiva para imaginar y crear juntos en favor del bien común de esta ciudad. Este es un gran momento histórico para la capital, la cual por fin conquista la autonomía que ha buscado durante más de 30 años, pero también lo es para el país y para el mundo de las ciudades.</p>
-			</div>
-
-		</div>
 
 	</div>
 	<?php echo wpautop( do_shortcode(get_post_meta($post->ID, 'contenido_extra', true) ) ); ?>
@@ -65,6 +52,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	</div>
 </section><!-- fin slider -->
 
+<<<<<<< HEAD
 <section class="[ container ]">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ]">
@@ -84,6 +72,16 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 
 		</div> <!-- /col -->
 	</div> <!-- /row -->
+=======
+<section>
+	<!-- slide slick -->
+	<div class=" slider responsive ">
+		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd1.png"></div>
+		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd2.png"></div>
+		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd3.png"></div>
+		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd4.png"></div>
+	</div>
+>>>>>>> 31979b258de9a35daabb5c90b4c9532f2aa59654
 </section>
 
 <section class="[ container ][ space-id ]" id="hacia_el_constituyente">
@@ -111,41 +109,49 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 					La organización de las elecciones de las diputadas y diputados de representación proporcional se llevará a cabo el día Domingo 5 de Junio de 2016. La organización de estas elecciones es facultad del Instituto Nacional Electoral (INE). Consulta el portal de este instituto para conocer los pormenores de las elecciones.
 				</p>
 			</div>
-
-			<div class="[ content-acerca-de ]" >
+			<div class="[ content-acerca-de ]">
 				<h3>Candidatos independientes</h3>
+<<<<<<< HEAD
 				<blockquote>
 					<img src="<?php echo THEMEPATH; ?>images/graficos-09.png" alt="gráfico primer lugar en acceso a la información">
 					<p>La CDMX ocupa el primer lugar nacional en acceso a información pública de oficio.
 					</p>
 				</blockquote>
 				<p>
+=======
+				<div>
+>>>>>>> 31979b258de9a35daabb5c90b4c9532f2aa59654
 					Las ciudadanas y ciudadanos que no están adscritos a un partido político pueden contender por un puesto en la Asamblea Constituyente como candidatos independientes. Para conocer más detalles de este proceso visita el sitio oficial de las Elecciones de la Asamblea Constituyente de la Ciudad de México.
-				</p>
+				</div>
 			</div>
-
 			<div class="[ content-acerca-de ]" >
 				<h3>La Asamblea Constituyente</h3>
 				<blockquote>
+<<<<<<< HEAD
 					<img src="<?php echo THEMEPATH; ?>images/graficos-06.png" alt="gráfico 14 millones de viajes al día">
 					<p>En la CDMX se realizan 14 millones de viajes al día en buses y microbuses.
+=======
+					<img src="<?php echo THEMEPATH; ?>images/graficos-09.png" alt="">
+					<p>La CDMX ocupa el primer lugar nacional en acceso a información pública de oficio.
+>>>>>>> 31979b258de9a35daabb5c90b4c9532f2aa59654
 					</p>
 				</blockquote>
 				<p>
 					La Asamblea Constituyente se instalará el 15 de Septiembre de 2016 y deberá aprobar una Constitución Política a más tardar el 31 de Enero de 2017. Las sesiones de trabajo se llevarán a cabo en la Antigua sede del Senado de la República, en Xicoténcatl. La Asamblea Constituyente tiene la facultad de discutir, modificar, adicionar y votar el Proyecto de Constitución Política elaborado por el Grupo de Trabajo constituido para esta labor.
 				</p>
-			</div>
-
-			<div class="[ content-acerca-de ]" >
 				<h3>Participación ciudadana</h3>
+<<<<<<< HEAD
 				<blockquote>
 					<img src="<?php echo THEMEPATH; ?>images/graficos-13.png" alt="gráfico 14 millones de viajes al día"></p>
 					<p>En la CDMX se realizan 14 millones de viajes al día en buses y microbuses
 				</blockquote>
 				<p>
+=======
+				<div>
+>>>>>>> 31979b258de9a35daabb5c90b4c9532f2aa59654
 					Dado que la participación directa de la ciudadanía en esta etapa es limitada, es de suma importancia que esta aproveche y utilice la plataforma Constitución CDMX para que su voz sea escuchada e incorporada al Proyecto de Constitución que envíe el Jefe de Gobierno a la Asamblea Constituyente. No importa cómo decidas participar, tu aportación es esencial para presentar un Proyecto más sólido e incluyente.
-				</p>
-			</div>
+				</div>
+			</div>		
 
 		</div>
 	</div>

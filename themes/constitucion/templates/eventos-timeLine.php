@@ -29,7 +29,7 @@
 
 			if ($count_events > 1): ?>
 				<li class="[ box-li mas-eventos <?php echo $class_status; ?> ]" data-date="<?php echo $date_events; ?>">
-			    	<a href="">
+			    	<a href="#">
 						<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ][ text-uppercase ]"><?php echo $date; ?></p>
 						<div class="[ border-gray--large ]"></div>
 						<div class="[ vertical-line ]"></div>

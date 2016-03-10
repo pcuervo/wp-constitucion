@@ -6,6 +6,8 @@
 		<title><?php print_title(); ?></title>
 		<!-- Sets initial viewport load and disables zooming -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Robots -->
+		<meta name="robots" content="index, follow">
 		<!-- SEO -->
 		<meta name="keywords" content="">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
@@ -66,11 +68,11 @@
 						class="[ dropdown--hover dropdown--hover--acerca ][ menu-desktop__acerca ]">
 							<a class="[ text-uppercase ]" href="<?php echo site_url('/constitucion-cdmx/'); ?>">Acerca de la<br>constitución<span class="caret"></span></a>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe_gobierno">Mensaje del jefe de gobierno</a></li><!-- #jefe_gobierno -->
-								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_constitucion">Sobre la constitución</a></li>
-								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#grupo_trabajo">Grupo de trabajo</a></li>
-								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_plataforma">Sobre la plataforma</a></li>
-								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#constitución_wiki">Constitución en Wiki</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe-gobierno">Mensaje del jefe de gobierno</a></li><!-- #jefe-gobierno -->
+								<li><a href="<?php echo site_urljefe('/constitucion-cdmx/'); ?>#sobre-constitucion">Sobre la constitución</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#grupo-trabajo">Grupo de trabajo</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre-plataforma">Sobre la plataforma</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#constitucion-wiki">Constitución en Wiki</a></li>
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#preguntas_frecuentes">Preguntas frecuentes</a></li>
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#biblioteca">Biblioteca</a></li>
 							</ul>
@@ -188,11 +190,11 @@
 						class="[ dropdown--hover dropdown--hover--acerca ][ menu-desktop__acerca ]">
 							<a class="[ text-uppercase ]" href="<?php echo site_url('/constitucion-cdmx/'); ?>">Acerca de la<br>constitución<span class="caret"></span></a>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe_gobierno">Mensaje del jefe de gobierno</a></li><!-- #jefe_gobierno -->
-								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_constitucion">Sobre la constitución</a></li>
-								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#grupo_trabajo">Grupo de trabajo</a></li>
-								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre_plataforma">Sobre la plataforma</a></li>
-								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#constitución_wiki">Constitución en Wiki</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#jefe-gobierno">Mensaje del jefe de gobierno</a></li><!-- #jefe-gobierno -->
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre-constitucion">Sobre la constitución</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#grupo-trabajo">Grupo de trabajo</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#sobre-plataforma">Sobre la plataforma</a></li>
+								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#constitucion-wiki">Constitución en Wiki</a></li>
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#preguntas_frecuentes">Preguntas frecuentes</a></li>
 								<li><a href="<?php echo site_url('/constitucion-cdmx/'); ?>#biblioteca">Biblioteca</a></li>
 							</ul>

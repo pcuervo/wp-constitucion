@@ -15,6 +15,8 @@
 		add_meta_box( 'meta-box-extras_noticias', 'Extras', 'show_metabox_extras_noticias', 'post', 'side', 'high');
 		add_meta_box( 'meta-box-info_ensayo', 'Información del ensayo', 'show_metabox_info_ensayo', 'ensayos');
 		add_meta_box( 'meta-box-info_evento', 'Información del evento', 'show_metabox_info_evento', 'eventos');
+		add_meta_box( 'meta-box-info_ensayos_pubpub', 'Ectras del ensayo', 'show_metabox_info_ensayos_pubpub', 'ensayos-pubpub');
+
 
 		add_meta_box( 'meta-box-info_integrante', 'Información extra', 'show_metabox_info_integrante', 'grupo-de-trabajo', 'side', 'high');
 
@@ -56,6 +58,18 @@
 			}
 
 		echo '</div>';
+	}
+
+	/**
+	 * DATOS EXTRA ENSAYOS PUBPUB
+	 */
+	function show_metabox_info_ensayos_pubpub($post){
+		wp_nonce_field(__FILE__, '_estra_pubpub_nonce');
+
+		$url_pubpub = get_post_meta($post->ID, 'url_pubpub', true);
+
+		echo "<label for='url_pubpub' class='label-paquetes'>Ingresa la Url del PubPub: </label>";
+		echo "<input type='text' class='widefat' id='url_pubpub' name='url_pubpub' value='$url_pubpub'/>";
 	}
 
 	/**
@@ -311,6 +325,13 @@
 			update_post_meta($post_id, 'longitud_kiosko', $_POST['longitud_kiosko']);
 			update_post_meta($post_id, 'ubicacion_kiosko', $_POST['ubicacion_kiosko']);
 		}
+
+		
+
+		if ( isset($_POST['url_pubpub']) and check_admin_referer(__FILE__, '_estra_pubpub_nonce') ){
+			update_post_meta($post_id, 'url_pubpub', $_POST['url_pubpub']);
+		}
+
 
 		if ( isset($_POST['paso_a']) and check_admin_referer(__FILE__, '_pasos_nonce') ){
 			update_post_meta($post_id, 'paso_a', $_POST['paso_a']);

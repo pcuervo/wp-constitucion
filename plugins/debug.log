@@ -1,0 +1,1 @@
+[10-Mar-2016 19:23:48 UTC] PHP Fatal error:  Class 'Abraham\TwitterOAuth\TwitterOAuth' not found in /homepages/29/d497100605/htdocs/cuervo/constitucion/wp-content/themes/constitucion/inc/Twitter.class.php on line 47

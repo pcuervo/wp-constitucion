@@ -48,7 +48,7 @@
 
 		<!-- Modal -->
 		<?php if( isset( $result['success'] ) ): ?>
-			<div id="feedback" class="modal fade in" role="dialog" style="display:block;">
+			<div id="feedback" class="modal fade in block" role="dialog">
 				<div class="modal-dialog modal--contacto">
 					<!-- Modal content-->
 					<div class="modal-content">

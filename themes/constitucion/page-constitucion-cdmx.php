@@ -205,7 +205,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	<img src="<?php echo THEMEPATH; ?>images/05.jpg" alt="">
 </div>
 
-<section class="[ space-id ]" id="preguntas_frecuentes">
+<section class="[ space-id ]" id="preguntas-frecuentes">
 	<div class="[ container ]">
 		<h2 class="[ margin-bottom ]">Preguntas frecuentes</h2>
 		<?php $preguntas = new WP_Query(array(

@@ -31,7 +31,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">
+			<a href="<?php echo site_url('/participa/'); ?>#imagina-ciudad">
 				<img src="<?php echo THEMEPATH; ?>images/slide-imagina.jpg">
 			</a>
 		</li>
@@ -80,6 +80,7 @@
 				));
 
 			if ( $noticias->have_posts() ) :
+				$current_noticia = 1;
 				while ( $noticias->have_posts() ) : $noticias->the_post();
 					$url_image = attachment_image_url( $post->ID, 'medium' );
 					$link_noticia = get_post_meta( $post->ID, 'link_noticia', true );?>
@@ -91,7 +92,10 @@
 							</div>
 						</a>
 					</div>
-				<?php endwhile;
+					<?php if ( $current_noticia % 3 == 0 ) : ?>
+						<div class="[ clear ]"></div>
+					<?php endif; ?>
+				<?php $current_noticia +=1; endwhile;
 			endif; ?>
 
 		</div>

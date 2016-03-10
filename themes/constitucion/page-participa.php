@@ -63,7 +63,7 @@ get_header(); the_post();
 		</div>
 	</section>
 
-	<section class="[ container ][ padding--sides--xsm--large ][ space-id ]" id="imagina_ciudad">
+	<section class="[ container ][ padding--sides--xsm--large ][ space-id ]" id="imagina-ciudad">
 		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
 			<h2 class="[ no-margin-top margin-bottom ]">Imagina tu ciudad</h2>
 			<p>¿Cuál es el espíritu de nuestra Ciudad y qué queremos para su futuro?</p>

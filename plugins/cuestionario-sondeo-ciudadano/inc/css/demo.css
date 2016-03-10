@@ -9,7 +9,7 @@ html, body {
 }
 
 .survey-container {
-	height: calc(100vh - 100px);;
+	height: calc(100vh - 0px);;
 	background: #eeeeee;
 }
 
@@ -134,5 +134,7 @@ h1{ color: #e80e8a;}
     from { opacity: 0.3; }
     to   { opacity: 1; }
 }
+
+
 
 

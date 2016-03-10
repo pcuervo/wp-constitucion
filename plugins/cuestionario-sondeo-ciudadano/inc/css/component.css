@@ -661,32 +661,24 @@ a.fs-continue,
 }
 
 .fs-continue {
-	position: fixed;
-	right: 20px;
-	bottom: 40px;
-	z-index: 2000;
-	background: #eee;
+    position: fixed;
+    right: 0px;
+    bottom: 20px;
+    z-index: 999;
+    background: #eee;
+    right: 15px;
 }
 
 @media screen and (min-width: 468px){
-	.fs-continue {
-		right: 30px;
-		bottom: 120px;
-	}
+    .fs-continue {
+        position: absolute;
+    }
 }
 
-@media screen and (min-width: 768px){
-	.fs-continue {
-		right: 100px;
-		bottom: 150px;
-	}
-}
-
-@media screen and (min-width: 991px){
-	.fs-continue {
-		right: 150px;
-		bottom: 250px;
-	}
+@media screen and (min-width: 992px){
+    .fs-continue {
+        right: 35px;
+    }
 }
 
 button.fs-submit:hover,
@@ -892,7 +884,7 @@ input[type=text]::-ms-clear {
 	}
 
 	.fs-message-error{
-		bottom: 5em;
+		bottom: 4em;
 		left: -10px;
 		padding: 0 90px 0 2em;
 		width: 100%;

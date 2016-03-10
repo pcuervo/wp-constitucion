@@ -18,7 +18,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 			<div class="[ content-acerca-de ]">
 				<h2>Crónica</h2>
 				<blockquote>
-					<!--<canvas class="[ inline-block ]" id="bar-data" width="250px" height="250px"></canvas>-->
 					<img class="[ inline-block ]" src="<?php echo THEMEPATH; ?>images/graficos-02.png" alt="">
 					<canvas id="pie-data" width="100px" height="100px"></canvas>
 					<p>La CDMX, incluyendo su zona metropolitana, es la ciudad más poblada de América y la cuarta del mundo.</p>
@@ -32,7 +31,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 
 			<div class="[ content-acerca-de ][ text-justify ]">
 				<blockquote>
-					<img src="<?php echo THEMEPATH; ?>images/graficos-15.png" alt="">	<!--<canvas class="[ inline-block ]" id="pie-data" width="100px" height="100px"></canvas>-->
+					<img src="<?php echo THEMEPATH; ?>images/graficos-15.png" alt="">
 					<p>La Zona Metropolitana del Valle de México la integran actualmente las 16 delegaciones de la CDMX, 59 municipios del Estado de México y un municipio del estado de Hidalgo.
 					</p>
 				</blockquote>

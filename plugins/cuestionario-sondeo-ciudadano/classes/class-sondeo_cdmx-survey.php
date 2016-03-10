@@ -13,7 +13,8 @@ class Sondeo_CDMX_Survey {
 	 * Get singleton instance of class
 	 * @return null or Sondeo_CDMX instance
 	 */
-	public static function get() {
+	public static function get() 
+	{
 		if ( self::$instance == null ) {
 			self::$instance = new self();
 		}

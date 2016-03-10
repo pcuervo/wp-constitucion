@@ -10,7 +10,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</div>
 </div>
 
-<section class="[ container ][ space-id ]" id="jefe_gobierno">
+<section class="[ container ][ space-id ]" id="jefe-gobierno">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 			<div class="[ content-mensaje-jefegob ]">
@@ -34,7 +34,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	<img src="<?php echo THEMEPATH; ?>images/01.jpg" alt="">
 </div>
 
-<section class="[ container ][ space-id ]" id="sobre_constitucion">
+<section class="[ container ][ space-id ]" id="sobre-constitucion">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 			<div class="[ content-acerca-de ]">
@@ -74,7 +74,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	<img src="<?php echo THEMEPATH; ?>images/02.jpg" alt="">
 </div>
 
-<section class="[ container ][ space-id ]" id="grupo_trabajo">
+<section class="[ container ][ space-id ]" id="grupo-trabajo">
 	<article class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 
@@ -117,7 +117,6 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 							<div class="biografia hidden"><?php the_content(); ?></div>
 							<div class="cargo hidden"><?php echo get_post_meta( $post->ID, 'cargo_integrante', true ); ?></div>
 						</a>
-						<!-- <a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a> -->
 					</div>
 
 					<?php
@@ -150,7 +149,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</article>
 </section>
 
-<section class="[ bg-gray--fondo section--bg ][ no-margin--bottom ][ space-id ]" id="sobre_plataforma">
+<section class="[ bg-gray--fondo section--bg ][ no-margin--bottom ][ space-id ]" id="sobre-plataforma">
 	<div class="[ container ]">
 		<div class="[ row ]">
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
@@ -189,7 +188,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	<img src="<?php echo THEMEPATH; ?>images/04.jpg" alt="">
 </div>
 
-<section class="[ container ][ space-id ]" id="constitución_wiki">
+<section class="[ container ][ space-id ]" id="constitucion-wiki">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ][ text-justify ]">
 			<h2 class="[ margin-bottom ]">Constitución en wiki</h2>

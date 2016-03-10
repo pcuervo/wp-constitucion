@@ -229,9 +229,9 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 	/**
 	 * Regresa la url del attachment especificado
-	 * @param  int     $post_id
-	 * @param  string  $size
-	 * @return string  url de la imagen
+	 * @param  int     	$post_id 
+	 * @param  string  	$size
+	 * @return [string]  url de la imagen
 	 */
 	function attachment_image_url($post_id, $size){
 		$image_id   = get_post_thumbnail_id($post_id);

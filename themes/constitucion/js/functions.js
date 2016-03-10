@@ -28,6 +28,7 @@
 
         $('#close-feedback').on('click', function(){
             $('#feedback, .modal-backdrop').remove();
+            var $feedback = $('#feedback');
         });
 
         /**

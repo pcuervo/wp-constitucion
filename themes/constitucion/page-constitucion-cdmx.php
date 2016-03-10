@@ -31,7 +31,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/01.jpg" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/01.jpg" alt="fotografía plaza de la revolución">
 </div>
 
 <section class="[ container ][ space-id ]" id="sobre_constitucion">
@@ -71,7 +71,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/02.jpg" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/02.jpg" alt="fotografía tlaxcoaque patineto">
 </div>
 
 <section class="[ container ][ space-id ]" id="grupo_trabajo">
@@ -186,7 +186,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/04.jpg" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/04.jpg" alt="fotografía lago de chapultepec">
 </div>
 
 <section class="[ container ][ space-id ]" id="constitución_wiki">
@@ -203,7 +203,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/05.jpg" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/05.jpg" alt="fotografía nopales con hombre">
 </div>
 
 <section class="[ space-id ]" id="preguntas_frecuentes">
@@ -236,7 +236,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/06.jpg" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/06.jpg" alt="fotografía lago de chapultepec">
 </div>
 
 

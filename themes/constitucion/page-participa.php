@@ -96,7 +96,7 @@ get_header(); the_post();
 	</section>
 
 	<div class="[ descanso-visual ]">
-		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
+		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="fotografía grafitti pared señorita">
 	</div>
 
 	<section class="[ bg-gray--fondo section--bg ][ space-id ]"  id="peticiones">
@@ -193,7 +193,7 @@ get_header(); the_post();
 	</div>
 
 	<div class="[ descanso-visual ]">
-		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="">
+		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="fotografía grafitti pared señorita">
 	</div>
 
 	<section class="[ bg-gray--fondo section--bg ][ space-id ][ no-margin--bottom ]">

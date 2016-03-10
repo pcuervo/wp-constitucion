@@ -24,10 +24,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 				</blockquote>
 				<p>La Ciudad de México es un asentamiento cuya historia se remonta casi 700 años atrás, desde la fundación de Tenochtitlan en 1325 hasta la Ciudad de México que vivimos hoy. En estos años, la ciudad ha experimentado cambios dramáticos en su paisaje natural, físico, administrativo, político y social. Ha sido un espacio de lucha, de reinvención y vanguardia. Hoy nos encontramos en un momento histórico con la creación formal de la Ciudad de México, la cual se convierte en el entidad 32 del país, avanza en su autonomía y podrá contar con su propio congreso y constitución. <br><br>El año de 1985 constituye un punto de inflexión en la historia de la Ciudad de México. El sismo que tuvo lugar ese año impulsó la solidaridad entre ciudadanos, fortaleció la identidad colectiva y el deseo compartido por una ciudad donde sus habitantes pudieran ser actores en su construcción e incidir en las decisiones que se toman sobre ella. Este acontecimiento fue un catalizador de la democracia en la ciudad y el inicio de un proceso de la construcción de ciudad que tenemos hoy.</p>
 			</div>
-
 		</div>
-
-
 	</div>
 	<?php echo wpautop( do_shortcode(get_post_meta($post->ID, 'contenido_extra', true) ) ); ?>
 </section>
@@ -52,7 +49,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	</div>
 </section><!-- fin slider -->
 
-<<<<<<< HEAD
 <section class="[ container ]">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ]">
@@ -72,16 +68,15 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 
 		</div> <!-- /col -->
 	</div> <!-- /row -->
-=======
-<section>
+
 	<!-- slide slick -->
 	<div class=" slider responsive ">
-		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd1.png"></div>
-		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd2.png"></div>
-		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd3.png"></div>
-		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd4.png"></div>
+		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="Imagen slick 1"></div>
+		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd2.png" alt="Imagen slick 2"></div>
+		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd3.png" alt="Imagen slick 3"></div>
+		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd4.png" alt="Imagen slick 4"></div>
 	</div>
->>>>>>> 31979b258de9a35daabb5c90b4c9532f2aa59654
+
 </section>
 
 <section class="[ container ][ space-id ]" id="hacia_el_constituyente">
@@ -111,44 +106,31 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 			</div>
 			<div class="[ content-acerca-de ]">
 				<h3>Candidatos independientes</h3>
-<<<<<<< HEAD
 				<blockquote>
 					<img src="<?php echo THEMEPATH; ?>images/graficos-09.png" alt="gráfico primer lugar en acceso a la información">
 					<p>La CDMX ocupa el primer lugar nacional en acceso a información pública de oficio.
 					</p>
 				</blockquote>
-				<p>
-=======
 				<div>
->>>>>>> 31979b258de9a35daabb5c90b4c9532f2aa59654
 					Las ciudadanas y ciudadanos que no están adscritos a un partido político pueden contender por un puesto en la Asamblea Constituyente como candidatos independientes. Para conocer más detalles de este proceso visita el sitio oficial de las Elecciones de la Asamblea Constituyente de la Ciudad de México.
 				</div>
 			</div>
 			<div class="[ content-acerca-de ]" >
 				<h3>La Asamblea Constituyente</h3>
 				<blockquote>
-<<<<<<< HEAD
-					<img src="<?php echo THEMEPATH; ?>images/graficos-06.png" alt="gráfico 14 millones de viajes al día">
-					<p>En la CDMX se realizan 14 millones de viajes al día en buses y microbuses.
-=======
-					<img src="<?php echo THEMEPATH; ?>images/graficos-09.png" alt="">
-					<p>La CDMX ocupa el primer lugar nacional en acceso a información pública de oficio.
->>>>>>> 31979b258de9a35daabb5c90b4c9532f2aa59654
-					</p>
+					<img src="<?php echo THEMEPATH; ?>images/graficos-09.png" alt="Primer lugar nacional acceso información.">
+					<p>La CDMX ocupa el primer lugar nacional en acceso a información pública de oficio.</p>
 				</blockquote>
 				<p>
 					La Asamblea Constituyente se instalará el 15 de Septiembre de 2016 y deberá aprobar una Constitución Política a más tardar el 31 de Enero de 2017. Las sesiones de trabajo se llevarán a cabo en la Antigua sede del Senado de la República, en Xicoténcatl. La Asamblea Constituyente tiene la facultad de discutir, modificar, adicionar y votar el Proyecto de Constitución Política elaborado por el Grupo de Trabajo constituido para esta labor.
 				</p>
 				<h3>Participación ciudadana</h3>
-<<<<<<< HEAD
 				<blockquote>
 					<img src="<?php echo THEMEPATH; ?>images/graficos-13.png" alt="gráfico 14 millones de viajes al día"></p>
 					<p>En la CDMX se realizan 14 millones de viajes al día en buses y microbuses
 				</blockquote>
 				<p>
-=======
 				<div>
->>>>>>> 31979b258de9a35daabb5c90b4c9532f2aa59654
 					Dado que la participación directa de la ciudadanía en esta etapa es limitada, es de suma importancia que esta aproveche y utilice la plataforma Constitución CDMX para que su voz sea escuchada e incorporada al Proyecto de Constitución que envíe el Jefe de Gobierno a la Asamblea Constituyente. No importa cómo decidas participar, tu aportación es esencial para presentar un Proyecto más sólido e incluyente.
 				</div>
 			</div>		

@@ -35,6 +35,33 @@
 
 			register_taxonomy( 'taxonomy-voces-ciudadanas', 'voces-ciudadanas', $args );
 		}
+
+		if( ! taxonomy_exists('taxonomy-grandes-retos')){
+
+			$labels = array(
+				'name'              => 'Taxonomy Grandes retos',
+				'singular_name'     => 'Reto',
+				'search_items'      => 'Buscar',
+				'all_items'         => 'Todos',
+				'edit_item'         => 'Editar Reto',
+				'update_item'       => 'Actualizar Reto',
+				'add_new_item'      => 'Nueva Reto',
+				'new_item_name'     => 'Nombre Nueva Reto',
+				'menu_name'         => 'Taxonomy Grandes retos'
+			);
+
+			$args = array(
+				'hierarchical'      => true,
+				'labels'            => $labels,
+				'show_ui'           => true,
+				'show_admin_column' => true,
+				'show_in_nav_menus' => true,
+				'query_var'         => true,
+				'rewrite'           => array( 'slug' => 'taxonomy-voces-ciudadanas' ),
+			);
+
+			register_taxonomy( 'taxonomy-grandes-retos', 'ensayos-pubpub', $args );
+		}
 		
 		
 		// TERMS

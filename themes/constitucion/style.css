@@ -8190,7 +8190,8 @@ ul.slides li img {
   color: #457390;
   font-size: 10px;
 }
-.content-acerca-de blockquote img {
+.content-acerca-de blockquote img,
+.content-acerca-de canvas {
   display: block;
   max-width: 100%;
   height: auto;
@@ -8255,7 +8256,9 @@ ul.slides li img {
   font-size: 10px;
 }
 .content-mensaje-jefegob blockquote img,
-.content-sobre-la-plataforma blockquote img {
+.content-sobre-la-plataforma blockquote img,
+.content-mensaje-jefegob canvas,
+.content-sobre-la-plataforma canvas {
   display: block;
   max-width: 100%;
   height: auto;
@@ -8330,7 +8333,8 @@ ul.slides li img {
   color: #457390;
   font-size: 10px;
 }
-.content-cronica-cdmx blockquote img {
+.content-cronica-cdmx blockquote img,
+.content-cronica-cdmx canvas {
   display: block;
   max-width: 100%;
   height: auto;
@@ -9043,7 +9047,6 @@ footer img {
   display: inline-block;
   vertical-align: bottom;
   width: 150px;
-  margin-right: 20px;
 }
 @media (min-width: 480px) {
   footer img {

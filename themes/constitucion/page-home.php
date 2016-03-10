@@ -86,7 +86,7 @@
 					$link_noticia = get_post_meta( $post->ID, 'link_noticia', true );?>
 					<div class="[ col-xs-6 col-sm-4 ][ margin-bottom ][ post_compact ]">
 						<a href="<?php echo $link_noticia; ?>">
-							<img class="[ img-responsive ][ margin-bottom--small ]" src="<?php echo $url_image; ?>" alt="<?php echo ?>">
+							<img class="[ img-responsive ][ margin-bottom--small ]" src="<?php echo $url_image; ?>" alt="<?php echo get_the_title(); ?>">
 							<div>
 								<h4 class="[ color-gray ][ center-full ][ text-uppercase ][ line-height ]"><?php the_title(); ?></h4>
 							</div>

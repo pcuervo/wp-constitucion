@@ -229,9 +229,9 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 	/**
 	 * Regresa la url del attachment especificado
-	 * @param  int     $post_id
-	 * @param  string  $size
-	 * @return string  url de la imagen
+	 * @param  int     	$post_id 
+	 * @param  string  	$size
+	 * @return [string]  url de la imagen
 	 */
 	function attachment_image_url($post_id, $size){
 		$image_id   = get_post_thumbnail_id($post_id);
@@ -248,7 +248,6 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		$dia_name = $dias[date('N', strtotime($fecha)) - 1];
 
 		$fecha = explode('-', $fecha);
-
 		$mes = array('01' => 'Enero', '02' => 'Febrero', '03' => 'Marzo', '04' => 'Abril', '05' => 'Mayo', '06' =>'Junio', '07' => 'Julio', '08' => 'Agosto', '09' => 'Septiembre', '10' => 'Octubre', '11' => 'Noviembre', '12' => 'Diciembre');
 
 		return array($fecha[2], $mes[$fecha[1]], $fecha[0], $dia_name, $fecha[1]);

@@ -1,15 +1,19 @@
 <?php global $result; ?>
 			<footer>
-				<div class="[ container ][ text-justify ]">
+				<div class="[ container ]">
 
-					<div class="links-footer">
-						<img  class="imagen-footer [ margin-right--xlarge ]" src="<?php echo THEMEPATH; ?>images/logocdmx2.png">
-						<a href="#">Términos y condiciones</a>
-						<a data-toggle="modal" data-target="#contacto">Contacto</a>
-						<a href="#">Transparencia</a>
+					<div class="[ row ]">
+						<div class="[ col-xs-12 col-sm-offset-1 col-sm-4 col-lg-offset-2 col-lg-4 ][ text-center ][ margin-top-bottom ]">
+							<img src="<?php echo THEMEPATH; ?>images/logocdmx2.png">						
+						</div>
+						<div class="[ col-xs-12 col-sm-6 col-lg-4 ][ text-center ][ margin-top-bottom ]">
+							<a href="#">Términos y condiciones</a>
+							<a data-toggle="modal" data-target="#contacto">Contacto</a>
+							<a href="#">Transparencia</a>
+						</div>
 					</div>
-				</div>
 
+				</div>
 			</footer>
 		</div>
 
@@ -27,10 +31,14 @@
 									<img class="[ inline-block align-middle ][ img-contacto ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif">
 								</div>
 								<form class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
+									<label for="mensaje_cdmx" class="[ hidden ]"></label>
 									<textarea name="mensaje_cdmx" id="mensaje_cdmx" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Escribe tu mensaje" required="" data-parsley-required-message="El mensaje es obligatorio"></textarea>
 									<h2 class="[ margin-bottom--large ][ fz-small--xs ]">Con respeto,</h2>
+									<label for="nombre_cdmx" class="[ hidden ]"></label>
 									<input name="nombre_cdmx" id="nombre_cdmx" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Tu nombre" required="" data-parsley-required-message="El nombre es obligatorio">
+									<label for="email_cdmx" class="[ hidden ]"></label>
 									<input name="email_cdmx" id="email_cdmx" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Correo Electrónico" required="" data-parsley-required-message="El correo es obligatorio" data-parsley-type-message="Por favor escribe un correo válido">
+									<label for="telefono_cdmx" class="[ hidden ]"></label>
 									<input name="telefono_cdmx" id="telefono_cdmx" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Teléfono">
 									<input name="accion" id="accion" type="hidden" value="guarda-formulario">
 									<button type="submit" class="[ btn btn-secondary ][ pull-right ]">enviar</button>
@@ -44,7 +52,7 @@
 
 		<!-- Modal -->
 		<?php if( isset( $result['success'] ) ): ?>
-			<div id="feedback" class="modal fade in" role="dialog" style="display:block;">
+			<div id="feedback" class="modal fade in block" role="dialog">
 				<div class="modal-dialog modal--contacto">
 					<!-- Modal content-->
 					<div class="modal-content">

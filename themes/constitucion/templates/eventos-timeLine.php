@@ -15,12 +15,12 @@
 	if ( ! empty ($cronologia->posts)):
 		$timeLine = new TimeLine;
 		$fechas = $timeLine->elementsTimeLine($cronologia->posts);
-
 		$count = 0;
 		$count_pasados = 0;
 		$data_attr = '';
 		$class_visibility = "";
 		foreach ($fechas as $date_events => $eventos):
+
 			$date_arr = getDateTransform($date_events);
 			$date = '<span class="[ color-primary ]"><strong>'. $date_arr[0] . '</strong></span> ' . $date_arr[1];
 			$count_pasados = strtotime($date_events) < strtotime( date('Y-m-d') ) ? $count_pasados + 1 : $count_pasados;
@@ -29,7 +29,7 @@
 
 			if ($count_events > 1): ?>
 				<li class="[ box-li mas-eventos <?php echo $class_status; ?> ]" data-date="<?php echo $date_events; ?>">
-			    	<a href="">
+			    	<a href="#">
 						<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ][ text-uppercase ]"><?php echo $date; ?></p>
 						<div class="[ border-gray--large ]"></div>
 						<div class="[ vertical-line ]"></div>

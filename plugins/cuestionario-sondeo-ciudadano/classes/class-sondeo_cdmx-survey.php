@@ -13,7 +13,8 @@ class Sondeo_CDMX_Survey {
 	 * Get singleton instance of class
 	 * @return null or Sondeo_CDMX instance
 	 */
-	public static function get() {
+	public static function get() 
+	{
 		if ( self::$instance == null ) {
 			self::$instance = new self();
 		}
@@ -206,102 +207,102 @@ class Sondeo_CDMX_Survey {
 		//$questions = $this->get_questions();
 		$next_question = 3;
 		?>
-		<div class="[ survey-container ][ padding--header ]">
-			<div class="[ fs-form-wrap ]" id="fs-form-wrap">
-				<div class="fs-title [ container ][ text-center ]">
+		<div class="[ survey-container ]">
+			<div class="[ fs-form-wrap ][ container ]" id="fs-form-wrap">
+				<div class="fs-title [ text-center ]">
 					<h1 class="[ ]">Imagina tu ciudad</h1>
 				</div>
-				<div class="[ container ]">
-					<form id="myform" class="fs-form fs-form-full" autocomplete="off">
-						<ol class="fs-fields">
-							<li id="js-donde-vives" data-question="1">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">¿En dónde vives?</label>
-								<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
-									<option value="" disabled selected>Selecciona una opción</option>
-									<option value="cdmx">CDMX</option>
-									<option value="zmvm">Zona Metropolitana</option>
-									<option value="resto-republica">Resto de la república</option>
-									<option value="fuera-mexico">Fuera de México</option>
-								</select>
-							</li>
-							<li id="js-delegaciones-estados-paises"></li>
-							<li id="js-genero" data-input-trigger data-question="7">
-								<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="genero">Género</label>
-								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q1-1" name="genero" type="radio" value="mujer" /><label for="q1-1" class="radio-mujer">Mujer</label></span>
-									<span><input id="q1-2" name="genero" type="radio" value="hombre" /><label for="q1-2" class="radio-hombre">Hombre</label></span>
-									<span><input id="q1-3" name="genero" type="radio" value="otro" /><label for="q1-3" class="radio-otro">Otro</label></span>
-									<span><input id="q1-3" name="genero" type="radio" value="ninguno" /><label for="q1-3" class="radio-otro">Ninguno</label></span>
-								</div>
-							</li>
-							<li id="js-edad" data-question="8">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Edad</label>
-								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="¿Cuántos años tienes?" required/>
-							</li>
-							<li id="js-dedicas" data-question="9">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q4">¿A qué te dedicas?</label>
-								<textarea class="fs-anim-lower" id="q4" name="q4" placeholder=""></textarea>
-							</li>
-							<li id="js-trabajas" data-input-trigger data-question="10">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="trabajas">¿Trabajas?</label>
-								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q5-1" name="trabajas" type="radio" value="si" /><label for="q5-1" class="radio-si">Si</label></span>
-									<span><input id="q5-2" name="trabajas" type="radio" value="no" /><label for="q5-2" class="radio-no">No</label></span>
-								</div>
-							</li>
-							<li id="js-estudias" data-input-trigger data-question="17">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="estudias">¿Estudias?</label>
-								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q6-1" name="estudias" type="radio" value="si" /><label for="q6-1" class="radio-si">Si</label></span>
-									<span><input id="q6-2" name="estudias" type="radio" value="no" /><label for="q6-2" class="radio-no">No</label></span>
-								</div>
-							</li>
-							<li id="js-naciste-cdmx" data-input-trigger data-question="24">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="naciste-cdmx">Naciste en la CDMX?</label>
-								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q7-1" name="naciste-cdmx" type="radio" value="si" /><label for="q7-1" class="radio-si">Si</label></span>
-									<span><input id="q7-2" name="naciste-cdmx" type="radio" value="no" /><label for="q7-2" class="radio-no">No</label></span>
-								</div>
-							</li>
-							<li id="js-piensas-cdmx" data-question="25">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="piensas-cdmx" data-info="Las palabras deben ir separadas por comas.">¿Cuáles son las tres primeras palabras que te llegan a la mente cuando piensas en la Ciudad de México?</label>
-								<input class="fs-anim-lower" id="q8" name="piensas-cdmx" type="text" placeholder="Ej. palabra1, palabra2, palabra3" required/>
-							</li>
-							<li id="js-grandes-retos" data-question="26">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="grandes-retos">Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</label>
-								<?php $grandes_retos = $this->get_options_grandes_retos(); ?>
-								<?php foreach ( $grandes_retos as $reto ) : ?>
-									<a class="[ btn btn-skin-boxes ]"><?php echo $reto; ?></a>
-								<?php endforeach; ?>
-								<input class="[ fs-anim-lower ]" id="input-retos" name="grandes-retos" type="text" required/>
-							</li>
-							<li id="js-como-imaginas" data-question="28">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="como-imaginas" data-info="Máximo 140 caracteres.">¿Cómo te imaginas la CDMX ideal, en 20 años?</label>
-								<textarea class="fs-anim-lower" id="q10" name="como-imaginas" placeholder="" maxlength="140" onkeyup="countChar(this, 140)"></textarea>
-								<span class="[ color-primary ]" id="charNum"></span>
-							</li>
-							<li id="js-obstaculos-principales" data-question="29">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="obstaculos-principales" data-info="Las palabras deben ir separadas por comas.">Pensando en esta visión, ¿cuáles pensarías que son los tres obstáculos principales para que se haga realidad?</label>
-								<input class="fs-anim-lower" id="q11" name="obstaculos-principales" type="text" placeholder="Ej. palabra1, palabra2, palabra3" required/>
-							</li>
-							<li id="js-vision-realidad" data-question="30">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="vision-realidad" data-info="Máximo 140 caracteres.">Imagina que es el año 2036. Tu visión se hizo realidad ¿Qué tuvo que hacer el gobierno para que esto sucediera?</label>
-								<textarea class="fs-anim-lower" id="q12" name="vision-realidad" placeholder="" maxlength="140" onkeyup="countChar(this, 140)"></textarea>
-								<span class="[ color-primary ]" id="charNum"></span>
-							</li>
-							<li id="js-tuviste-hacer" data-question="31">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="tuviste-hacer" data-info="Máximo 140 caracteres.">¿Y qué tuviste que hacer tú?</label>
-								<textarea class="fs-anim-lower" id="q13" name="tuviste-hacer" placeholder="" maxlength="140" onkeyup="countChar(this, 140)"></textarea>
-								<span class="[ color-primary ]" id="charNum"></span>
-							</li>
-							<li id="js-cosas-valiosas" data-question="32">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿Qué palabras te vienen a la mente?</label>
-								<input class="fs-anim-lower" id="q14" name="cosas-valiosas" type="text" placeholder="Ej. palabra1, palabra2, palabra3" required/>
-							</li>
-						</ol><!-- /fs-fields -->
-						<button class="fs-submit" type="submit">Enviar respuestas</button>
-					</form><!-- /fs-form -->
-				</div>
+
+				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
+					<ol class="fs-fields">
+						<li id="js-donde-vives" data-question="1">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">¿En dónde vives?</label>
+							<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
+								<option value="" disabled selected>Selecciona una opción</option>
+								<option value="cdmx">CDMX</option>
+								<option value="zmvm">Zona Metropolitana</option>
+								<option value="resto-republica">Resto de la república</option>
+								<option value="fuera-mexico">Fuera de México</option>
+							</select>
+						</li>
+						<li id="js-delegaciones-estados-paises"></li>
+						<li id="js-genero" data-input-trigger data-question="7">
+							<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="genero">Género</label>
+							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								<span><input id="q1-1" name="genero" type="radio" value="mujer" /><label for="q1-1" class="radio-mujer">Mujer</label></span>
+								<span><input id="q1-2" name="genero" type="radio" value="hombre" /><label for="q1-2" class="radio-hombre">Hombre</label></span>
+								<span><input id="q1-3" name="genero" type="radio" value="otro" /><label for="q1-3" class="radio-otro">Otro</label></span>
+								<span><input id="q1-3" name="genero" type="radio" value="ninguno" /><label for="q1-3" class="radio-otro">Ninguno</label></span>
+							</div>
+						</li>
+						<li id="js-edad" data-question="8">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Edad</label>
+							<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="¿Cuántos años tienes?" required/>
+						</li>
+						<li id="js-dedicas" data-question="9">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q4">¿A qué te dedicas?</label>
+							<textarea class="fs-anim-lower" id="q4" name="q4" placeholder=""></textarea>
+						</li>
+						<li id="js-trabajas" data-input-trigger data-question="10">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="trabajas">¿Trabajas?</label>
+							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								<span><input id="q5-1" name="trabajas" type="radio" value="si" /><label for="q5-1" class="radio-si">Si</label></span>
+								<span><input id="q5-2" name="trabajas" type="radio" value="no" /><label for="q5-2" class="radio-no">No</label></span>
+							</div>
+						</li>
+						<li id="js-estudias" data-input-trigger data-question="17">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="estudias">¿Estudias?</label>
+							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								<span><input id="q6-1" name="estudias" type="radio" value="si" /><label for="q6-1" class="radio-si">Si</label></span>
+								<span><input id="q6-2" name="estudias" type="radio" value="no" /><label for="q6-2" class="radio-no">No</label></span>
+							</div>
+						</li>
+						<li id="js-naciste-cdmx" data-input-trigger data-question="24">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="naciste-cdmx">Naciste en la CDMX?</label>
+							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								<span><input id="q7-1" name="naciste-cdmx" type="radio" value="si" /><label for="q7-1" class="radio-si">Si</label></span>
+								<span><input id="q7-2" name="naciste-cdmx" type="radio" value="no" /><label for="q7-2" class="radio-no">No</label></span>
+							</div>
+						</li>
+						<li id="js-piensas-cdmx" data-question="25">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="piensas-cdmx" data-info="Las palabras deben ir separadas por comas.">¿Cuáles son las tres primeras palabras que te llegan a la mente cuando piensas en la Ciudad de México?</label>
+							<input class="fs-anim-lower" id="q8" name="piensas-cdmx" type="text" placeholder="Ej. palabra1, palabra2, palabra3" required/>
+						</li>
+						<li id="js-grandes-retos" data-question="26">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="grandes-retos">Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</label>
+							<?php $grandes_retos = $this->get_options_grandes_retos(); ?>
+							<?php foreach ( $grandes_retos as $reto ) : ?>
+								<a class="[ btn btn-skin-boxes ]"><?php echo $reto; ?></a>
+							<?php endforeach; ?>
+							<input class="[ fs-anim-lower ]" id="input-retos" name="grandes-retos" type="text" required/>
+						</li>
+						<li id="js-como-imaginas" data-question="28">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="como-imaginas" data-info="Máximo 140 caracteres.">¿Cómo te imaginas la CDMX ideal, en 20 años?</label>
+							<textarea class="fs-anim-lower" id="q10" name="como-imaginas" placeholder="" maxlength="140" onkeyup="countChar(this, 140)"></textarea>
+							<span class="[ color-primary ]" id="charNum"></span>
+						</li>
+						<li id="js-obstaculos-principales" data-question="29">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="obstaculos-principales" data-info="Las palabras deben ir separadas por comas.">Pensando en esta visión, ¿cuáles pensarías que son los tres obstáculos principales para que se haga realidad?</label>
+							<input class="fs-anim-lower" id="q11" name="obstaculos-principales" type="text" placeholder="Ej. palabra1, palabra2, palabra3" required/>
+						</li>
+						<li id="js-vision-realidad" data-question="30">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="vision-realidad" data-info="Máximo 140 caracteres.">Imagina que es el año 2036. Tu visión se hizo realidad ¿Qué tuvo que hacer el gobierno para que esto sucediera?</label>
+							<textarea class="fs-anim-lower" id="q12" name="vision-realidad" placeholder="" maxlength="140" onkeyup="countChar(this, 140)"></textarea>
+							<span class="[ color-primary ]" id="charNum"></span>
+						</li>
+						<li id="js-tuviste-hacer" data-question="31">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="tuviste-hacer" data-info="Máximo 140 caracteres.">¿Y qué tuviste que hacer tú?</label>
+							<textarea class="fs-anim-lower" id="q13" name="tuviste-hacer" placeholder="" maxlength="140" onkeyup="countChar(this, 140)"></textarea>
+							<span class="[ color-primary ]" id="charNum"></span>
+						</li>
+						<li id="js-cosas-valiosas" data-question="32">
+							<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿Qué palabras te vienen a la mente?</label>
+							<input class="fs-anim-lower" id="q14" name="cosas-valiosas" type="text" placeholder="Ej. palabra1, palabra2, palabra3" required/>
+						</li>
+					</ol><!-- /fs-fields -->
+					<button class="fs-submit" type="submit">Enviar respuestas</button>
+				</form><!-- /fs-form -->
+
 				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
 					<ol class="fs-fields">
 						<li id="js-donde-vives" data-question="1">

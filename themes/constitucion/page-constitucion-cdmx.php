@@ -10,13 +10,15 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</div>
 </div>
 
-<section class="[ container ][ space-id ]" id="jefe_gobierno">
+<section class="[ container ][ space-id ]" id="jefe-gobierno">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 			<div class="[ content-mensaje-jefegob ]">
 				<h2>Mensaje del jefe de gobierno</h2>
 				<blockquote>
-					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
+					<img src="<?php echo THEMEPATH; ?>images/graficos-15.png" alt="">
+					<p>La Zona Metropolitana del Valle de México la integran actualmente las 16 delegaciones de la CDMX, 59 municipios del Estado de México y un municipio del estado de Hidalgo.
+					</p>
 				</blockquote>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
@@ -31,16 +33,17 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/01.jpg" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/01.jpg" alt="fotografía plaza de la revolución">
 </div>
 
-<section class="[ container ][ space-id ]" id="sobre_constitucion">
+<section class="[ container ][ space-id ]" id="sobre-constitucion">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 			<div class="[ content-acerca-de ]">
 				<h2>Sobre la constitución</h2>
 				<blockquote>
-					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
+					<img src="<?php echo THEMEPATH; ?>images/graficos-08.png" alt="">
+					<p>En el 2014 la CDMX recibió a 13 millones de turistas.</p>
 				</blockquote>
 				<p>
 					La capital de México concentra a millones de personas. Es una de las urbes más grandes y extensas del mundo. En ella encontramos una diversidad sorprendente de personas, infraestructura, geografías e historias. Pero hay algo muy importante que todos tenemos en común: un espacio geográfico y un futuro conjunto.
@@ -48,7 +51,15 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 					Elaborar una Constitución Política es un asunto trascendental para cualquier comunidad. Una Constitución le da forma y razón de ser a un Estado, delimita sus territorios, determina cómo funciona su gobierno y la gestión de los bienes públicos. También define los fundamentos de su sistema económico y reconoce los derechos, garantías individuales y deberes de sus ciudadanos.
 					<br><br>
 					Una constitución incorpora las aspiraciones y anhelos de quienes la suscriben, plasma cómo quieren que sea su vida colectiva y lo que es posible (y no) dentro de los bordes del espacio que comparten.
-					<br><br>
+				</p>
+			</div>
+			<div class="[ content-acerca-de ]">
+				<blockquote>
+					<img src="<?php echo THEMEPATH; ?>images/graficos-06.png" alt="">
+					<p>El metro de la ciudad mueve a casi 5 millones de usuarios al día.</p>
+				</blockquote>
+				<p>
+					<br>
 					La estructura del poder en el Distrito Federal fue establecida por el Gobierno de la República y el Congreso de la Unión.  Aunque desde el Estatuto de Gobierno del Distrito Federal (1994) la ciudad cuenta con una Asamblea Legislativa capaz de aprobar y derogar leyes, este año se presenta la oportunidad para que, por primera vez, la opinión ciudadana tenga injerencia en la determinación de esta estructura.
 					<br><br>
 					Elaborar nuestra Constitución es acordar en conjunto un pacto social de suma importancia para todos los que habitamos y visitamos la Ciudad de México. Es un documento que nos dirigirá hacia el futuro y conservará el espíritu de la ciudad para futuras generaciones sin que sea alterado por el paso de distintos gobiernos.
@@ -56,32 +67,23 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 					La sociedad capitalina ha estado detrás de las grandes conquistas sociales del país de las últimas décadas. Con la energía social y fuerza ciudadana característica de la Ciudad de México, la Constitución tiene el potencial de ser otro gran logro.
 				</p>
 			</div>
-
-			<div class="[ content-acerca-de ]" >
-				<blockquote>
-					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
-				</blockquote>
-				<p>
-					Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
-				</p>
-			</div>
-
 		</div>
 	</div>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/02.jpg" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/02.jpg" alt="fotografía tlaxcoaque patineto">
 </div>
 
-<section class="[ container ][ space-id ]" id="grupo_trabajo">
+<section class="[ container ][ space-id ]" id="grupo-trabajo">
 	<article class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 
 			<div class="[ content-acerca-de ]">
 				<h2>Grupo de trabajo</h2>
 				<blockquote>
-					<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris</p>
+					<img src="<?php echo THEMEPATH; ?>images/graficos-13.png" alt="">
+					<p>En la CDMX se realizan 14 millones de viajes al día en buses y microbuses.</p>
 				</blockquote>
 				<p>
 					El Jefe de Gobierno es la única persona facultada para presentar un Proyecto de Constitución a la <a href="<?php echo site_url( 'cdmx' ) ?>#hacia_el_constituyente">Asamblea Constituyente</a>. Para su elaboración, formó un Grupo de Trabajo de personajes notables de la ciudad conformado por representantes de sociedad civil, academia y especialistas, como espacio democrático y plural de participación social y ciudadana.
@@ -117,7 +119,6 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 							<div class="biografia hidden"><?php the_content(); ?></div>
 							<div class="cargo hidden"><?php echo get_post_meta( $post->ID, 'cargo_integrante', true ); ?></div>
 						</a>
-						<!-- <a class="[ btn btn-primary btn--small ][ margin-bottom ]" data-toggle="modal" data-target="#trabajador"><strong>Ver más</strong></a> -->
 					</div>
 
 					<?php
@@ -150,7 +151,7 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</article>
 </section>
 
-<section class="[ bg-gray--fondo section--bg ][ no-margin--bottom ][ space-id ]" id="sobre_plataforma">
+<section class="[ bg-gray--fondo section--bg ][ no-margin--bottom ][ space-id ]" id="sobre-plataforma">
 	<div class="[ container ]">
 		<div class="[ row ]">
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
@@ -158,7 +159,8 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 				<div class="[ content-sobre-la-plataforma ]">
 					<h2>Sobre la plataforma</h2>
 					<blockquote>
-						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
+						<img src="<?php echo THEMEPATH; ?>images/graficos-07.png" alt="">
+						<p>La CDMX tiene el índice de Desarrollo Humano más alto del país, es decir, cuenta con el grado de desarrollo más alto del país de acuerdo a este indicador.</p>
 					</blockquote>
 					<p>
 						El capital más valioso de la ciudad es la diversidad de personas e ideas que la componen. Nuestra época nos concede una capacidad sin precedentes para comunicarnos, compartir y procesar información. Por ello, el Grupo de Trabajo está decidido a aprovechar la tecnología y otros formatos de participación para facilitar que todas las voces que quieran contribuir al Proyecto de Constitución sean escuchadas. Este es un derecho social otorgado y respaldado por la Ley para Hacer de la Ciudad de México una Ciudad Abierta.
@@ -167,11 +169,13 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 					</p>
 				</div>
 
-				<div class="[ content-acerca-de ]" >
+				<div class="[ content-sobre-la-plataforma ]" >
 					<blockquote>
-						<p>Sed dignissim ligula id justo feugiat sodales.Mauris eu est arcu. Donec vestibulum rutrum feugiat sodales auris est.</p>
+						<img src="<?php echo THEMEPATH; ?>images/graficos-12.png" alt="">
+						<p>El 59% del territorio que ocupa la CDMX es suelo de conservación..</p>
 					</blockquote>
 					<p>
+						<br>
 						El Grupo aprovechará las contribuciones que concentre esta plataforma para redactar el Proyecto de Constitución. Entre más nutrido sea el debate público y más ágil sea la creación colaborativa de propuestas, más consolidado será el proyecto que reciba, a nombre de todos, la Asamblea Constituyente.
 						<br><br>
 						Además, este sitio permanecerá como un legado histórico del proceso y contendrá un vasto repositorio de ideas, reflexiones y propuestas representativas del espíritu de la Ciudad.
@@ -186,10 +190,10 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/04.jpg" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/04.jpg" alt="fotografía lago de chapultepec">
 </div>
 
-<section class="[ container ][ space-id ]" id="constitución_wiki">
+<section class="[ container ][ space-id ]" id="constitucion-wiki">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ][ text-justify ]">
 			<h2 class="[ margin-bottom ]">Constitución en wiki</h2>
@@ -203,10 +207,10 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/05.jpg" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/05.jpg" alt="fotografía nopales con hombre">
 </div>
 
-<section class="[ space-id ]" id="preguntas_frecuentes">
+<section class="[ space-id ]" id="preguntas-frecuentes">
 	<div class="[ container ]">
 		<h2 class="[ margin-bottom ]">Preguntas frecuentes</h2>
 		<?php $preguntas = new WP_Query(array(
@@ -236,22 +240,22 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/06.jpg" alt="">
+	<img src="<?php echo THEMEPATH; ?>images/06.jpg" alt="fotografía lago de chapultepec">
 </div>
 
 
 <section class="[ container ][ space-id ][ content-biblioteca ]" id="biblioteca">
 	<h2 class="[ margin-bottom--large no-margin-top ]" id="biblioteca">Biblioteca</h2>
 	<p class="[ margin-bottom--large ]">La búsqueda de una Reforma Política para la Ciudad de México es un proceso que ha tomado mucho tiempo en su conceptualización y cuya ejecución no es expedita. En esta biblioteca podrás descargar documentos relacionados a la historia de la configuración política del Distrito Federal y nuestra ciudad.</p>
-	<a class="[ margin-top ]" href="http://www.juridicas.unam.mx/publica/librev/rev/rap/cont/61/pr/pr21.pdf" target="_blank"><p>La Ley Orgánica del Distrito y Territorios Federales de 1928</p></a>
-	<a class="[ margin-top ]" href="http://www.juridicas.unam.mx/publica/librev/rev/rap/cont/61/pr/pr23.pdf" target="_blank"><p>La Ley Orgánica del Departamento del Distrito Federal de 1970</p></a>
-	<a class="[ margin-top ]" href="http://info4.juridicas.unam.mx/adprojus/leg/10/350/" target="_blank"><p>Estatuto de Gobierno del Distrito Federal de 1994.</p></a>
-	<a class="[ margin-top ]" href="http://sil.gobernacion.gob.mx/Archivos/Documentos/2002/09/asun_57128_20020905_844595.pdf" target="_blank"><p>Iniciativa de Reforma Política de Andrés Manuel López Obrador, 2001</p></a>
-	<a class="[ margin-top ]" href="http://sil.gobernacion.gob.mx/Archivos/Documentos/2010/04/asun_2663420_20100429_1272578740.pdf" target="_blank"><p>Iniciativa de Reforma Política de Marcelo Ebrard Casaubón, 2010</p></a>
-	<a class="[ margin-top ]" href="http://www.reformapolitica.cdmx.gob.mx/index.php/hacia-la-reforma-politica/140-el-proceso-de-la-reforma-politica/893-iniciativa-de-reforma-politica-de-la-ciudad-de-mexico-presentada-por-el-dr-miguel-angel-mancera-espinosa-jefe-de-gobierno-del-distrito-federal-13-de-agosto-2013" target="_blank"><p>Iniciativa de Reforma Política de Miguel Ángel Mancera, 2013</p></a>
-	<a class="[ margin-top ]" href="http://www.dof.gob.mx/nota_detalle.php?codigo=5424043&fecha=29/01/2016" target="_blank"><p>Decreto de Reforma Política de la Ciudad de México 2016</p></a>
-	<a class="[ margin-top ]" href="http://biblio.juridicas.unam.mx/libros/2/649/19.pdf" target="_blank"><p>El Distrito Federal Mexicano Gobierno y Democracia</p></a>
-	<a class="[ margin-top ]" href="http://www.juridicas.unam.mx/publica/librev/rev/mexder/cont/9/cnt/cnt1.pdf" target="_blank"><p>El Distrito Federal Una Nueva Estructura Constitucional</p></a>
+	<a href="http://www.juridicas.unam.mx/publica/librev/rev/rap/cont/61/pr/pr21.pdf" target="_blank"><p class="[ margin-top ]">La Ley Orgánica del Distrito y Territorios Federales de 1928</p></a>
+	<a href="http://www.juridicas.unam.mx/publica/librev/rev/rap/cont/61/pr/pr23.pdf" target="_blank"><p class="[ margin-top ]">La Ley Orgánica del Departamento del Distrito Federal de 1970</p></a>
+	<a href="http://info4.juridicas.unam.mx/adprojus/leg/10/350/" target="_blank"><p class="[ margin-top ]">Estatuto de Gobierno del Distrito Federal de 1994.</p></a>
+	<a href="http://sil.gobernacion.gob.mx/Archivos/Documentos/2002/09/asun_57128_20020905_844595.pdf" target="_blank"><p class="[ margin-top ]">Iniciativa de Reforma Política de Andrés Manuel López Obrador, 2001</p></a>
+	<a href="http://sil.gobernacion.gob.mx/Archivos/Documentos/2010/04/asun_2663420_20100429_1272578740.pdf" target="_blank"><p class="[ margin-top ]">Iniciativa de Reforma Política de Marcelo Ebrard Casaubón, 2010</p></a>
+	<a href="http://www.reformapolitica.cdmx.gob.mx/index.php/hacia-la-reforma-politica/140-el-proceso-de-la-reforma-politica/893-iniciativa-de-reforma-politica-de-la-ciudad-de-mexico-presentada-por-el-dr-miguel-angel-mancera-espinosa-jefe-de-gobierno-del-distrito-federal-13-de-agosto-2013" target="_blank"><p class="[ margin-top ]">Iniciativa de Reforma Política de Miguel Ángel Mancera, 2013</p></a>
+	<a href="http://www.dof.gob.mx/nota_detalle.php?codigo=5424043&fecha=29/01/2016" target="_blank"><p class="[ margin-top ]">Decreto de Reforma Política de la Ciudad de México 2016</p></a>
+	<a href="http://biblio.juridicas.unam.mx/libros/2/649/19.pdf" target="_blank"><p class="[ margin-top ]">El Distrito Federal Mexicano Gobierno y Democracia</p></a>
+	<a href="http://www.juridicas.unam.mx/publica/librev/rev/mexder/cont/9/cnt/cnt1.pdf" target="_blank"><p class="[ margin-top ]">El Distrito Federal Una Nueva Estructura Constitucional</p></a>
 </section>
 
 <?php get_footer(); ?>

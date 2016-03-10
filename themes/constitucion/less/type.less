@@ -24,8 +24,8 @@ h1, h2, h3, h4, h5, h6,
 
 h1, .h1,
 h2, .h2 {
-  font-size: 30px; font-weight: 300;
-  text-transform: uppercase;
+  font-size: 30px; 
+  font-weight: 300;
 }
 
 h1 + h2,
@@ -68,7 +68,7 @@ h6, .h6 { font-size: @font-size-h6; }
 // -------------------------
 
 p {
-  margin: 0 0 @line-height-computed 0;
+  margin: 0;
   font-family: "ABeeZee", sans-serif;
   font-size: 14px;
   text-align: justify;
@@ -87,9 +87,10 @@ p {
   }
 }
 
-h2{ 
+h1, h2{ 
   .text-sm-caps;
   .letter-spacing;
+  font-weight: 400;
 }
 
 // Emphasis & misc
@@ -330,7 +331,7 @@ address {
 
 //Font weight
 h1,h2{
-  font-weight: 300;
+  font-weight: 400;
   font-size: 26px;
   @media (min-width: @screen-sm){ font-size: 30px; }
 }
@@ -347,6 +348,7 @@ h1,h2{
 //letter-spacing
 .letter-spacing{ letter-spacing: 2px;}
 
+.line-height{ line-height: 1.25em !important;}
 //link
 a{
   cursor:pointer;

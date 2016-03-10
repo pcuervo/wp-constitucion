@@ -103,7 +103,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 				<div>
 					Dado que la participación directa de la ciudadanía en esta etapa es limitada, es de suma importancia que esta aproveche y utilice la plataforma Constitución CDMX para que su voz sea escuchada e incorporada al Proyecto de Constitución que envíe el Jefe de Gobierno a la Asamblea Constituyente. No importa cómo decidas participar, tu aportación es esencial para presentar un Proyecto más sólido e incluyente.
 				</div>
-			</div>		
+			</div>
 
 		</div>
 	</div>

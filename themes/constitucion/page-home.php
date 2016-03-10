@@ -83,6 +83,7 @@
 				$current_noticia = 1;
 				while ( $noticias->have_posts() ) : $noticias->the_post();
 					$url_image = attachment_image_url( $post->ID, 'medium' );
+
 					$link_noticia = get_post_meta( $post->ID, 'link_noticia', true );?>
 					<div class="[ col-xs-6 col-sm-4 ][ margin-bottom ][ post_compact ]">
 						<a href="<?php echo $link_noticia; ?>">

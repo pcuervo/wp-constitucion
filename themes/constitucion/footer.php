@@ -4,7 +4,7 @@
 
 					<div class="[ row ]">
 						<div class="[ col-xs-12 col-sm-offset-1 col-sm-4 col-lg-offset-2 col-lg-4 ][ text-center ][ margin-top-bottom ]">
-							<img src="<?php echo THEMEPATH; ?>images/logocdmx2.png">						
+							<img src="<?php echo THEMEPATH; ?>images/logocdmx2.png">
 						</div>
 						<div class="[ col-xs-12 col-sm-6 col-lg-4 ][ text-center ][ margin-top-bottom ]">
 							<a href="#">Términos y condiciones</a>

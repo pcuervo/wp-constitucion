@@ -4,11 +4,11 @@
 		<source src="<?php echo THEMEPATH; ?>video/CCCDMX.mp4" type="video/mp4">
 	</video>
 	<div class="[ logo-video ]">
-		<img class="[ width-100 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/horizontal_blanco.png">
+		<img class="[ width-100 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/horizontal_blanco.png" alt="Logo Constitución CDMX blanco">
 	</div>
 	<div class="[ hero_video__scroll ][ text-center ][ js-hero_video__scroll ]">
 		<p class="[ text-center ][ color-light ][ margin-bottom--small ]">Conoce más</p>
-		<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/arrow-down-9.svg">
+		<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/arrow-down-9.svg" alt="Ícono flecha abajo">
 	</div>
 </div>
 
@@ -27,32 +27,32 @@
 	<ul class="slides">
 		<li>
 			<a href="<?php echo site_url('/participa/' ); ?>">
-				<img src="<?php echo THEMEPATH; ?>images/slide-participa.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-participa.jpg" alt="">
 			</a>
 		</li>
 		<li>
 			<a href="<?php echo site_url('/participa/'); ?>#imagina-ciudad">
-				<img src="<?php echo THEMEPATH; ?>images/slide-imagina.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-imagina.jpg" alt="Imagina tu ciudad">
 			</a>
 		</li>
 		<li>
 			<a href="<?php echo site_url('/participa/'); ?>#peticiones">
-				<img src="<?php echo THEMEPATH; ?>images/slide-peticion.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-peticion.jpg" alt="Haz una petición">
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('/participa/' ); ?>#dialogos_publicos">
-				<img src="<?php echo THEMEPATH; ?>images/slide-organiza.jpg">
+			<a href="<?php echo site_url('/participa/' ); ?>#dialogos-publicos">
+				<img src="<?php echo THEMEPATH; ?>images/slide-organiza.jpg" alt="Organiza un encuentro ciudadano">
 			</a>
 		</li>
 		<li>
 			<a href="<?php echo site_url('/participa/' ); ?>#ensayos">
-				<img src="<?php echo THEMEPATH; ?>images/slide-publica.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-publica.jpg" alt="Publica o comenta un ensayo">
 			</a>
 		</li>
 		<li>
 			<a href="<?php echo site_url('/cdmx/' ); ?>#voces_ciudadanas">
-				<img src="<?php echo THEMEPATH; ?>images/slide-voces-ciudadanas.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-voces-ciudadanas.jpg" alt="Voces ciudadanas">
 			</a>
 		</li>
 	</ul>

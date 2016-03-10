@@ -87,7 +87,7 @@ get_header(); the_post();
 					<input type="text" name="ref_code" class="[ form-control input--search ][ height-50 ][ fz-xxlarge ]" placeholder="CM5697CX08" required="" data-parsley-required-message="El número de folio es obligatorio">
 					<span class="[ input-group-btn ]">
 						<button class="[ btn btn-secondary ][ height-50 ]" type="submit">
-							<img class="[ svg icon icon--iconed--small icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/search.svg">
+							<img class="[ svg icon icon--iconed--small icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/search.svg" alt="Botón de buscar">
 						</button>
 					</span>
 				</div>
@@ -115,7 +115,7 @@ get_header(); the_post();
 		</div>
 	</section>
 
-	<section class="[ container ][ space-id ]" id="dialogos_publicos">
+	<section class="[ container ][ space-id ]" id="dialogos-publicos">
 		<div class="[ row ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
 				<h2 class="[ no-margin-top ]">Encuentros ciudadanos</h2>
@@ -137,7 +137,7 @@ get_header(); the_post();
 				</div>
 			</section> <!-- row -->
 
-			<section class="[ space-id ]" id="registra_tu_evento">
+			<section class="[ space-id ]" id="registra-tu-evento">
 				<div class="[ box-shadow--form ]">
 					<h2 class="[ margin-bottom--large ]">Registra tu encuentros</h2>
 					<form id="form-eventos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
@@ -183,7 +183,7 @@ get_header(); the_post();
 							</div>
 						</div>
 						<div class="[ text-center ]">
-							<input name="accion" id="accion" type="hidden" value="guarda-evento">
+							<input name="accion" id="accion-evento" type="hidden" value="guarda-evento">
 							<button type="submit" class="[ btn btn-primary btn--large ]">enviar</button>
 						</div>
 					</form>
@@ -257,7 +257,7 @@ get_header(); the_post();
 							<input type="radio" name="recibir_mas_informacion" id="optionsRadios1" value="si" checked>
 							<label for="" class="[ margin-left ][ inline-block ]">No</label>
 							<input type="radio" name="recibir_mas_informacion" id="optionsRadios2" value="no">
-							<input name="accion" id="accion" type="hidden" value="guarda-ensayo">
+							<input name="accion" id="accion-ensayo" type="hidden" value="guarda-ensayo">
 						</div>
 					</div>
 					<div class="[ text-center ]" id="voces_ciudadanas">
@@ -275,7 +275,7 @@ get_header(); the_post();
 				<div class="[ col-xs-12  col-sm-10 col-sm-offset-1 ]">
 					<div class="modal-content [ no-border-radius ]">
 						<div class="modal-body [ padding--bottom--xxlarge padding--sides padding--sides--large--sm ]">
-							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif">
+							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif" alt="Logo horizontal Constitución CDMX">
 							<h2 class="[ text-center text-uppercase ]">¡Gracias por participar!</h2>
 							<p class="[ text-center ][ js-codigo-referencia ]">Tu número de folio es: <span></span></p>
 							<p class="[ text-center text-uppercase ]">Escribe tu nombre y apellido para obtener tu certificado de participación</p>

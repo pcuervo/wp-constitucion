@@ -35,7 +35,7 @@
 
 	<body <?php body_class(); ?>>
 		<!-- Google Tag Manager -->
-		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-52W5VS"
+		<noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-52W5VS"
 		height="0" width="0" class="[ invisible hidden ]"></iframe></noscript>
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -62,7 +62,7 @@
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ][ height-100 ]">
 						<li class="[ no-padding--sides ][ menu-desktop__logo padding--header-logo ]">
 							<a class="[ inline-block ]" href="<?php echo site_url('/'); ?> ">
-								<img class="[ logo ][ margin-right ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="logo vertical de Ciudad de México">
+								<img class="[ logo ][ margin-right ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="logo vertical de Ciudad de México" alt="Logo vertical Constitución CDMX">
 							</a>
 						</li><li
 						class="[ dropdown--hover dropdown--hover--acerca ][ menu-desktop__acerca ]">
@@ -96,8 +96,8 @@
 								<li><a href="<?php echo site_url('/participa/'); ?>#imagina-ciudad">Imagina tu ciudad</a></li><!-- #imagina-ciudad -->
 								<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Da seguimiento a tu participación</a></li>
 								<li><a href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
-								<li><a href="<?php echo site_url('/participa/'); ?>#dialogos_publicos">Encuentros ciudadanos</a></li>
-								<li><a href="<?php echo site_url('/participa/'); ?>#registra_tu_evento">Registra tu evento</a></li>
+								<li><a href="<?php echo site_url('/participa/'); ?>#dialogos-publicos">Encuentros ciudadanos</a></li>
+								<li><a href="<?php echo site_url('/participa/'); ?>#registra-tu-evento">Registra tu evento</a></li>
 								<li><a href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
 							</ul>
 						</li><li
@@ -116,7 +116,7 @@
 					<div class="[ bg-light ][ visible-xs visible-sm ]">
 						<div class="[ container ]">
 							<div class="[ width-col-9 ][ inline-block align-middle ]">
-								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"  alt="logo vertical de Ciudad de México"></a>
+								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"  alt="Logo vertical Constitución CDMX"></a>
 							</div><div
 								class="[ width-col-3 ][ inline-block align-middle ][ text-center ]">
 								<a class="[ pull-right ]" href="#" data-toggle="modal" data-target="#modal-menu">
@@ -132,10 +132,10 @@
 							<div class="[ container ][ bg-light ]">
 								<div class="[ row ]">
 									<div class="[ col-xs-10 ]">
-										<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"></a>
+										<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="Logo vertical Constitución CDMX"></a>
 									</div>
 									<div class="[ col-xs-2 ][ text-center ][ padding--top ]">
-										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
+										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>
 									</div>
 								</div>
 							</div>
@@ -148,7 +148,7 @@
 									<li><a type="button" data-toggle="modal" data-target="#SoyCDMX-mobile--home">#SomosCDMX</a></li>
 								</ul>
 							</div>
-							<img class="[ width-60 ][ margin-top-bottom--large ][ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png">
+							<img class="[ width-60 ][ margin-top-bottom--large ][ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png" alt="Logo Constitución CDMX">
 						</div>
 					</div>
 
@@ -157,7 +157,7 @@
 						<div class="[ modal-content no-border-radius width--100 ][ width-100 ][ no-margin ]">
 							<div class="[ container ][ padding--top ]">
 								<div class="[ absolute right-10 ]">
-									<a type="button" class="close [ opacity-7 ]" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
+									<a type="button" class="close [ opacity-7 ]" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>
 								</div>
 								<h3>#SomosCDMX</h3>
 								<?php if (! empty($tweets) ):
@@ -184,7 +184,7 @@
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ][ height-100 ]"> <!-- hidden-sm -->
 						<li class="[ no-padding--sides padding--top--xsmall padding--header-logo ][ menu-desktop__logo ]">
 							<a class="[ inline-block ]" href="<?php echo site_url('/'); ?>">
-								<img class="[ logo ][ margin-right ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png">
+								<img class="[ logo ][ margin-right ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="Logo vertical Constitución CDMX">
 							</a>
 						</li><li
 						class="[ dropdown--hover dropdown--hover--acerca ][ menu-desktop__acerca ]">
@@ -218,8 +218,8 @@
 								<li><a href="<?php echo site_url('/participa/'); ?>#imagina-ciudad">Imagina tu ciudad</a></li><!-- #imagina-ciudad -->
 								<li><a href="<?php echo site_url('/participa/'); ?>#resultados">Da seguimiento a tu participación</a></li>
 								<li><a href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
-								<li><a href="<?php echo site_url('/participa/'); ?>#dialogos_publicos">Encuentros ciudadanos</a></li>
-								<li><a href="<?php echo site_url('/participa/'); ?>#registra_tu_evento">Registra tu evento</a></li>
+								<li><a href="<?php echo site_url('/participa/'); ?>#dialogos-publicos">Encuentros ciudadanos</a></li>
+								<li><a href="<?php echo site_url('/participa/'); ?>#registra-tu-evento">Registra tu evento</a></li>
 								<li><a href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
 							</ul>
 						</li><li
@@ -238,7 +238,7 @@
 					<div class="[ bg-light ][ visible-xs visible-sm ]">
 						<div class="[ container ]">
 							<div class="[ width-col-9 ][ inline-block align-middle ]">
-								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"></a>
+								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="Logo vertical Constitución CDMX"></a>
 							</div><div
 							class="[ width-col-3 ][ inline-block align-middle ][ text-center ]">
 								<a href="#" class="[ pull-right ]" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
@@ -252,10 +252,10 @@
 							<div class="[ container ][ bg-light ]">
 								<div class="[ row ]">
 									<div class="[ col-xs-10 ]">
-										<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"></a>
+										<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="Logo vertical Constitución CDMX"></a>
 									</div>
 									<div class="[ col-xs-2 ][ text-center ][ padding--top ]">
-										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
+										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>
 									</div>
 								</div>
 							</div>
@@ -268,7 +268,7 @@
 									<li><a type="button" data-toggle="modal" data-target="#SoyCDMX-mobile">#SomosCDMX</a></li>
 								</ul>
 							</div>
-							<img class="[ width-60 ][ margin-top-bottom--large ][ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png">
+							<img class="[ width-60 ][ margin-top-bottom--large ][ center-block ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png" alt="Logo Constitución CDMX">
 						</div>
 					</div>
 
@@ -277,7 +277,7 @@
 						<div class="[ modal-content no-border-radius width--100 ][ no-margin ]">
 							<div class="[ container ][ padding--top ]">
 								<div class="[ absolute right-10 ]">
-									<a type="button" class="close [ opacity-7 ]" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg"></a>
+									<a type="button" class="close [ opacity-7 ]" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>
 								</div>
 								<h3>#SomosCDMX</h3>
 								<?php if (! empty($tweets) ):
@@ -300,7 +300,7 @@
 		<div class="[ soy-cdmx right-370 ][ js-hidden ]">
 			<div class="[ opacity-7 ][ absolute right-10 ]">
 				<a id="js-hide-twitter" href="#">
-					<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg">
+					<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar">
 				</a>
 			</div>
 			<h3>#SomosCDMX</h3>

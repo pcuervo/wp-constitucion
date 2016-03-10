@@ -38,3 +38,9 @@
 [10-Mar-2016 20:34:58 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 253
 [10-Mar-2016 20:34:58 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 253
 [10-Mar-2016 20:34:58 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 253
+[10-Mar-2016 22:41:30 UTC] PHP Fatal error:  Uncaught exception 'Abraham\TwitterOAuth\TwitterOAuthException' with message 'SSL connection timeout' in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php:344
+Stack trace:
+#0 /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(278): Abraham\TwitterOAuth\TwitterOAuth->request('https://api.twi...', 'GET', 'Authorization: ...', Array)
+#1 /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(249): Abraham\TwitterOAuth\TwitterOAuth->oAuthRequest('https://api.twi...', 'GET', Array)
+#2 /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(178): Abraham\TwitterOAuth\TwitterOAuth->http('GET', 'https://api.twi...', 'search/tweets', Array)
+#3 /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/themes/constitucio in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php on line 344

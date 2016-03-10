@@ -106,14 +106,9 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 			</div>
 			<div class="[ content-acerca-de ]">
 				<h3>Candidatos independientes</h3>
-				<blockquote>
-					<img src="<?php echo THEMEPATH; ?>images/graficos-09.png" alt="gráfico primer lugar en acceso a la información">
-					<p>La CDMX ocupa el primer lugar nacional en acceso a información pública de oficio.
-					</p>
-				</blockquote>
-				<div>
+				<p>
 					Las ciudadanas y ciudadanos que no están adscritos a un partido político pueden contender por un puesto en la Asamblea Constituyente como candidatos independientes. Para conocer más detalles de este proceso visita el sitio oficial de las Elecciones de la Asamblea Constituyente de la Ciudad de México.
-				</div>
+				</p>
 			</div>
 			<div class="[ content-acerca-de ]" >
 				<h3>La Asamblea Constituyente</h3>
@@ -125,14 +120,9 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 					La Asamblea Constituyente se instalará el 15 de Septiembre de 2016 y deberá aprobar una Constitución Política a más tardar el 31 de Enero de 2017. Las sesiones de trabajo se llevarán a cabo en la Antigua sede del Senado de la República, en Xicoténcatl. La Asamblea Constituyente tiene la facultad de discutir, modificar, adicionar y votar el Proyecto de Constitución Política elaborado por el Grupo de Trabajo constituido para esta labor.
 				</p>
 				<h3>Participación ciudadana</h3>
-				<blockquote>
-					<img src="<?php echo THEMEPATH; ?>images/graficos-13.png" alt="gráfico 14 millones de viajes al día"></p>
-					<p>En la CDMX se realizan 14 millones de viajes al día en buses y microbuses
-				</blockquote>
 				<p>
-				<div>
 					Dado que la participación directa de la ciudadanía en esta etapa es limitada, es de suma importancia que esta aproveche y utilice la plataforma Constitución CDMX para que su voz sea escuchada e incorporada al Proyecto de Constitución que envíe el Jefe de Gobierno a la Asamblea Constituyente. No importa cómo decidas participar, tu aportación es esencial para presentar un Proyecto más sólido e incluyente.
-				</div>
+				</p>
 			</div>		
 
 		</div>

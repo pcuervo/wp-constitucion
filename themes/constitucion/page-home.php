@@ -1,7 +1,7 @@
 <?php get_header(); the_post();  ?>
 <div id="container_video" class="[ bg-gray--xxlight hero_video ][ margin-bottom--large ]" style="background-image: url('http://pcuervo.com/constitucion/wp-content/uploads/2016/03/Captura-de-pantalla-2016-03-04-a-las-22.16.06.png'); background-size: cover;">
 	<video class="[ width-100 ][ center-full video_home ]" autoplay loop>
-		<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
+		<source src="<?php echo THEMEPATH; ?>video/CCCDMX.mp4" type="video/mp4">
 	</video>
 	<div class="[ logo-video ]">
 		<img class="[ width-100 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/horizontal_blanco.png">
@@ -15,7 +15,7 @@
 <section class="[ container ]" id="js-home-scroll-point">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ]">
-			<h1 class="[ text-center ]">¿una constitución para la ciudad de méxico?</h1>
+			<h1 class="[ text-center ]">¿Una constitución para la Ciudad de México?</h1>
 			<?php $home = get_page_by_path('home');
 			echo wpautop( $home->post_content ); ?>
 		</div>
@@ -62,7 +62,7 @@
 <section class="[ container ]">
 	<div class="[ row ]">
 		<div class="[ col-sm-12 ]">
-			<h2 class="[ text-uppercase text-center ]">Hacia una ConstituciónCDMX</h2>
+			<h2 class="[ text-center ]">Hacia una ConstituciónCDMX</h2>
 			<?php get_template_part('templates/eventos', 'timeLine'); ?>
 		</div>
 	</div>
@@ -88,7 +88,7 @@
 						<a href="<?php echo $link_noticia; ?>">
 							<img class="[ img-responsive ][ margin-bottom--small ]" src="<?php echo $url_image; ?>">
 							<div>
-								<h4 class="[ color-gray ][ center-full ][ text-uppercase ]"><?php the_title(); ?></h4>
+								<h4 class="[ color-gray ][ center-full ][ text-uppercase ][ line-height ]"><?php the_title(); ?></h4>
 							</div>
 						</a>
 					</div>

@@ -1,15 +1,19 @@
 <?php global $result; ?>
 			<footer>
-				<div class="[ container ][ text-justify ]">
+				<div class="[ container ]">
 
-					<div class="links-footer">
-						<img  class="imagen-footer [ margin-right--xlarge ]" src="<?php echo THEMEPATH; ?>images/logocdmx2.png">
-						<a href="#">Términos y condiciones</a>
-						<a data-toggle="modal" data-target="#contacto">Contacto</a>
-						<a href="#">Transparencia</a>
+					<div class="[ row ]">
+						<div class="[ col-xs-12 col-sm-offset-1 col-sm-4 col-lg-offset-2 col-lg-4 ][ text-center ][ margin-top-bottom ]">
+							<img src="<?php echo THEMEPATH; ?>images/logocdmx2.png">						
+						</div>
+						<div class="[ col-xs-12 col-sm-6 col-lg-4 ][ text-center ][ margin-top-bottom ]">
+							<a href="#">Términos y condiciones</a>
+							<a data-toggle="modal" data-target="#contacto">Contacto</a>
+							<a href="#">Transparencia</a>
+						</div>
 					</div>
-				</div>
 
+				</div>
 			</footer>
 		</div>
 

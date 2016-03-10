@@ -19,8 +19,8 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 				<blockquote>
 					<!--<canvas class="[ inline-block ]" id="bar-data" width="250px" height="250px"></canvas>-->
 					<img class="[ inline-block ]" src="<?php echo THEMEPATH; ?>images/graficos-02.png" alt="gráfico de ciudad más poblada">
-					<canvas id="pie-data" width="100px" height="100px"></canvas>
 					<p>La CDMX, incluyendo su zona metropolitana, es la ciudad más poblada de América y la cuarta del mundo.</p>
+					<canvas id="pie-data" width="100px" height="100px"></canvas>
 				</blockquote>
 				<p>La Ciudad de México es un asentamiento cuya historia se remonta casi 700 años atrás, desde la fundación de Tenochtitlan en 1325 hasta la Ciudad de México que vivimos hoy. En estos años, la ciudad ha experimentado cambios dramáticos en su paisaje natural, físico, administrativo, político y social. Ha sido un espacio de lucha, de reinvención y vanguardia. Hoy nos encontramos en un momento histórico con la creación formal de la Ciudad de México, la cual se convierte en el entidad 32 del país, avanza en su autonomía y podrá contar con su propio congreso y constitución. <br><br>El año de 1985 constituye un punto de inflexión en la historia de la Ciudad de México. El sismo que tuvo lugar ese año impulsó la solidaridad entre ciudadanos, fortaleció la identidad colectiva y el deseo compartido por una ciudad donde sus habitantes pudieran ser actores en su construcción e incidir en las decisiones que se toman sobre ella. Este acontecimiento fue un catalizador de la democracia en la ciudad y el inicio de un proceso de la construcción de ciudad que tenemos hoy.</p>
 			</div>
@@ -49,26 +49,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	</div>
 </section><!-- fin slider -->
 
-<section class="[ container ]">
-	<div class="[ row ]">
-		<div class="[ col-xs-12 ]">
-
-			<div class="[ content-acerca-de ][ text-justify ]">
-				<h4></h4>
-				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi explicabo doloremque, temporibus? 	Similique nam molestias enim eius quibusdam neque incidunt quam cum, hic sint dolorem accusamus itatis commodi! Optio, cupiditate!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae  amet aperiam pariatur ea iste officia facilis, eligendi rem modi reiciendis delectus impedit quibusdam consectetur possimus eaque nihil facere reprehenderit nisi.
-				Praesent quis enim mollis, molestie nisl non, dapibus tellus.
-				Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
-				Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
-				</p>
-				<blockquote>
-					<img src="<?php echo THEMEPATH; ?>images/graficos-08.png" alt="gráfico 13 millones de turistas">
-					<p>En el 2014 la CDMX recibió a 13 millones de turistas</p>
-				</blockquote>
-			</div>
-
-		</div> <!-- /col -->
-	</div> <!-- /row -->
-
+<section>
 	<!-- slide slick -->
 	<div class=" slider responsive ">
 		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="Imagen slick 1"></div>
@@ -76,7 +57,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd3.png" alt="Imagen slick 3"></div>
 		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd4.png" alt="Imagen slick 4"></div>
 	</div>
-
 </section>
 
 <section class="[ container ][ space-id ]" id="hacia_el_constituyente">
@@ -106,9 +86,9 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 			</div>
 			<div class="[ content-acerca-de ]">
 				<h3>Candidatos independientes</h3>
-				<p>
+				<div>
 					Las ciudadanas y ciudadanos que no están adscritos a un partido político pueden contender por un puesto en la Asamblea Constituyente como candidatos independientes. Para conocer más detalles de este proceso visita el sitio oficial de las Elecciones de la Asamblea Constituyente de la Ciudad de México.
-				</p>
+				</div>
 			</div>
 			<div class="[ content-acerca-de ]" >
 				<h3>La Asamblea Constituyente</h3>
@@ -120,9 +100,9 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 					La Asamblea Constituyente se instalará el 15 de Septiembre de 2016 y deberá aprobar una Constitución Política a más tardar el 31 de Enero de 2017. Las sesiones de trabajo se llevarán a cabo en la Antigua sede del Senado de la República, en Xicoténcatl. La Asamblea Constituyente tiene la facultad de discutir, modificar, adicionar y votar el Proyecto de Constitución Política elaborado por el Grupo de Trabajo constituido para esta labor.
 				</p>
 				<h3>Participación ciudadana</h3>
-				<p>
+				<div>
 					Dado que la participación directa de la ciudadanía en esta etapa es limitada, es de suma importancia que esta aproveche y utilice la plataforma Constitución CDMX para que su voz sea escuchada e incorporada al Proyecto de Constitución que envíe el Jefe de Gobierno a la Asamblea Constituyente. No importa cómo decidas participar, tu aportación es esencial para presentar un Proyecto más sólido e incluyente.
-				</p>
+				</div>
 			</div>		
 
 		</div>

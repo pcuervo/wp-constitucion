@@ -435,7 +435,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 			foreach ( $images as $image ) {
 				$img_url = wp_get_attachment_image_src($image->ID, 'images_gal_cdmx');
 				// render your gallery here
-				echo '<div class="[ col-xs-4 col-sm-3 ][ no-padding--right--xs ]"><img src="'.$img_url[0].'" class="[ img-responsive ][ margin-auto ]"></div>';
+				echo '<div class="[ col-xs-4 col-sm-3 ][ no-padding--right--xs ]"><img src="'.$img_url[0].'" class="[ img-responsive ][ margin-auto ]" alt="<?php echo get_the_title(); ?>"></div>';
 
 			}
 		echo "</div>";

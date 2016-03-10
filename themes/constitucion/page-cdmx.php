@@ -34,16 +34,16 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<div class="flexslider relative">
 		<ul class="slides">
 			<li>
-				<img src="<?php echo THEMEPATH; ?>images/cd4.png">
+				<img src="<?php echo THEMEPATH; ?>images/cd4.png" alt="Imagen slider 4">
 			</li>
 			<li>
-				<img src="<?php echo THEMEPATH; ?>images/cd1.png">
+				<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="Imagen slider 1">
 			</li>
 			<li>
-				<img src="<?php echo THEMEPATH; ?>images/cd2.png">
+				<img src="<?php echo THEMEPATH; ?>images/cd2.png" alt="Imagen slider 2">
 			</li>
 			<li>
-				<img src="<?php echo THEMEPATH; ?>images/cd3.png">
+				<img src="<?php echo THEMEPATH; ?>images/cd3.png" alt="Imagen slider 3">
 			</li>
 		</ul>
 	</div>

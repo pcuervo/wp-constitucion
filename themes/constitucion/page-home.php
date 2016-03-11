@@ -27,7 +27,7 @@
 	<ul class="slides">
 		<li>
 			<a href="<?php echo site_url('/participa/' ); ?>">
-				<img src="<?php echo THEMEPATH; ?>images/slide-participa.jpg" alt="">
+				<img src="<?php echo THEMEPATH; ?>images/slide-participa.jpg" alt="¿Cómo participo?">
 			</a>
 		</li>
 		<li>

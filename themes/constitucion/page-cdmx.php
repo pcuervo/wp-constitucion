@@ -17,7 +17,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 			<div class="[ content-acerca-de ]">
 				<h2>Crónica</h2>
 				<blockquote>
-					<!--<canvas class="[ inline-block ]" id="bar-data" width="250px" height="250px"></canvas>-->
 					<img class="[ inline-block ]" src="<?php echo THEMEPATH; ?>images/graficos-02.png" alt="gráfico de ciudad más poblada">
 					<p>La CDMX, incluyendo su zona metropolitana, es la ciudad más poblada de América y la cuarta del mundo.</p>
 					<canvas id="pie-data" width="100px" height="100px"></canvas>

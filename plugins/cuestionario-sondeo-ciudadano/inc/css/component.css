@@ -526,7 +526,7 @@ a.fs-continue,
 /* Progress bar */
 .fs-progress {
 	position: absolute;
-	top: -8px;
+	top: -20px;
 	width: 0%;
 	height: 0.35em;
 	background: #fffed8;
@@ -537,7 +537,7 @@ a.fs-continue,
 /* Number indicator */
 .fs-numbers {
 	position: absolute;
-	top: -76px;
+	top: -50px;
 	right: 0;
 	overflow: hidden;
 	color: rgba(0,0,0,0.4);
@@ -661,24 +661,24 @@ a.fs-continue,
 }
 
 .fs-continue {
-	position: fixed;
-	right: 0px;
-	bottom: 20px;
-	z-index: 999;
-	background: #eee;
-	right: 15px;
+    position: fixed;
+    right: 0px;
+    bottom: 20px;
+    z-index: 999;
+    background: #eee;
+    right: 15px;
 }
 
 @media screen and (min-width: 468px){
-	.fs-continue {
-		position: absolute;
-	}
+    .fs-continue {
+        position: absolute;
+    }
 }
 
 @media screen and (min-width: 992px){
-	.fs-continue {
-		right: 35px;
-	}
+    .fs-continue {
+        right: 35px;
+    }
 }
 
 button.fs-submit:hover,
@@ -909,8 +909,8 @@ input[type=text]::-ms-clear {
 @media (min-width: 460px) {
 	.fs-message-error {
 		position: absolute;
-		left:55%;
-		bottom: 20%;
+		left:50%;
+		bottom: -150%;
 		z-index: 800;
 		font-size: 1.2em;
 	}
@@ -936,7 +936,7 @@ span#charNum{
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
 	-ms-transition: opacity 0.5s ease-in-out;
-	-o-transition: opacity 0.5s ease-in-out; 	
+	-o-transition: opacity 0.5s ease-in-out;
 }
 div.fade-out:hover{
 	opacity: 1;

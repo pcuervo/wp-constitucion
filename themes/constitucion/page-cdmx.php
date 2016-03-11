@@ -62,9 +62,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	</div>
 </section>
 
-<section class="[ container ][ space-id ]" id="hacia_el_constituyente
-hacia-el-constituyente
-hacia-el-constituyente">
+<section class="[ container ][ space-id ]" id="hacia-el-constituyente">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 			<div class="[ content-acerca-de ][ margin-bottom ]">
@@ -114,11 +112,11 @@ hacia-el-constituyente">
 	</div>
 </section>
 
-<section class="[ bg-gray-light section--bg space-id ][ no-margin--bottom ]" id="voces_ciudadanas">
+<section class="[ bg-gray-light section--bg space-id ][ no-margin--bottom ]" id="voces-ciudadanas">
 		<div class="[ container padding--sides--xsm padding--bottom--large ]">
 			<h2 class="[ no-margin-top ][ text-center ]">Voces ciudadanas</h2>
 			<div class="[ row ][ margin-bottom ]">
-				<?php $voces_ciudadanas = new WP_Query(array(
+				<?php $voces-ciudadanas = new WP_Query(array(
 						'post_type'      => 'voces-ciudadanas',
 						'posts_per_page' => 1,
 						'meta_query' => array(
@@ -137,8 +135,8 @@ hacia-el-constituyente">
 						)
 					));
 
-				if ( $voces_ciudadanas->have_posts() ) :
-					while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
+				if ( $voces-ciudadanas->have_posts() ) :
+					while ( $voces-ciudadanas->have_posts() ) : $voces-ciudadanas->the_post(); ?>
 						<div class="[ col-xs-12 ][ margin-bottom ]">
 							<div class="[ js-video-wrapper ]">
 
@@ -158,7 +156,7 @@ hacia-el-constituyente">
 		<div class="[ container padding--sides--xsm padding--bottom--large ]">
 			<h2 class="[ no-margin-top ]">Grupo de trabajo</h2>
 			<div class="[ row ][ margin-bottom ]">
-				<?php $voces_ciudadanas = new WP_Query(array(
+				<?php $voces-ciudadanas = new WP_Query(array(
 						'post_type'      => 'voces-ciudadanas',
 						'posts_per_page' => 3,
 						'meta_query' => array(
@@ -177,10 +175,10 @@ hacia-el-constituyente">
 						)
 					));
 
-				if ( $voces_ciudadanas->have_posts() ) :
+				if ( $voces-ciudadanas->have_posts() ) :
 					$count = 0;
 					$count_pasados = 0;
-					while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
+					while ( $voces-ciudadanas->have_posts() ) : $voces-ciudadanas->the_post(); ?>
 						<div class="[ col-xs-12 col-sm-4 ][ margin-bottom ]">
 							<div class="[ js-video-wrapper ]">
 
@@ -201,7 +199,7 @@ hacia-el-constituyente">
 			<h2 class="[ no-margin-top ]">Más ciudadanas y ciudadanos</h2>
 			<div class="[ row ][ margin-bottom ]">
 
-					<?php $voces_ciudadanas = new WP_Query(array(
+					<?php $voces-ciudadanas = new WP_Query(array(
 						'post_type'      => 'voces-ciudadanas',
 						'posts_per_page' => 1,
 						'meta_query' => array(
@@ -220,10 +218,10 @@ hacia-el-constituyente">
 						)
 					));
 
-					if ( $voces_ciudadanas->have_posts() ) :
+					if ( $voces-ciudadanas->have_posts() ) :
 						$count = 0;
 						$count_pasados = 0;
-						while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
+						while ( $voces-ciudadanas->have_posts() ) : $voces-ciudadanas->the_post(); ?>
 							<div class="[ col-xs-12 ][ margin-bottom ]">
 								<div class="[ js-video-wrapper ]">
 

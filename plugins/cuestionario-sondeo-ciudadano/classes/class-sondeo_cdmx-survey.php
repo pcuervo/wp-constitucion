@@ -220,7 +220,7 @@ class Sondeo_CDMX_Survey {
 									<option value="" disabled selected>Selecciona una opción</option>
 									<option value="cdmx">CDMX</option>
 									<option value="zmvm">Zona Metropolitana</option>
-									<option value="resto-republica">Resto de la república</option>
+									<option value="resto-republica">Resto de la República</option>
 									<option value="fuera-mexico">Fuera de México</option>
 								</select>
 							</li>
@@ -245,21 +245,21 @@ class Sondeo_CDMX_Survey {
 							<li id="js-trabajas" data-input-trigger data-question="10">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="trabajas">¿Trabajas?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q5-1" name="trabajas" type="radio" value="si" /><label for="q5-1" class="radio-si">Si</label></span>
+									<span><input id="q5-1" name="trabajas" type="radio" value="si" /><label for="q5-1" class="radio-si">Sí</label></span>
 									<span><input id="q5-2" name="trabajas" type="radio" value="no" /><label for="q5-2" class="radio-no">No</label></span>
 								</div>
 							</li>
 							<li id="js-estudias" data-input-trigger data-question="17">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="estudias">¿Estudias?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q6-1" name="estudias" type="radio" value="si" /><label for="q6-1" class="radio-si">Si</label></span>
+									<span><input id="q6-1" name="estudias" type="radio" value="si" /><label for="q6-1" class="radio-si">Sí</label></span>
 									<span><input id="q6-2" name="estudias" type="radio" value="no" /><label for="q6-2" class="radio-no">No</label></span>
 								</div>
 							</li>
 							<li id="js-naciste-cdmx" data-input-trigger data-question="24">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="naciste-cdmx">Naciste en la CDMX?</label>
+								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="naciste-cdmx">¿Naciste en la CDMX?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q7-1" name="naciste-cdmx" type="radio" value="si" /><label for="q7-1" class="radio-si">Si</label></span>
+									<span><input id="q7-1" name="naciste-cdmx" type="radio" value="si" /><label for="q7-1" class="radio-si">Sí</label></span>
 									<span><input id="q7-2" name="naciste-cdmx" type="radio" value="no" /><label for="q7-2" class="radio-no">No</label></span>
 								</div>
 							</li>
@@ -271,7 +271,7 @@ class Sondeo_CDMX_Survey {
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="grandes-retos">Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</label>
 								<?php $grandes_retos = $this->get_options_grandes_retos(); ?>
 								<?php foreach ( $grandes_retos as $reto ) : ?>
-									<a class="[ btn btn-skin-boxes fs-show-next ]"><?php echo $reto; ?></a>
+									<a href="#" class="[ btn btn-skin-boxes fs-show-next ]"><?php echo $reto; ?></a>
 								<?php endforeach; ?>
 								<input class="[ fs-anim-lower ]" id="input-retos" name="grandes-retos" type="text" required/>
 							</li>
@@ -285,7 +285,7 @@ class Sondeo_CDMX_Survey {
 								<input class="fs-anim-lower" id="q11" name="obstaculos-principales" type="text" placeholder="Ej. palabra1, palabra2, palabra3" comma-required/>
 							</li>
 							<li id="js-vision-realidad" data-question="30">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="vision-realidad" data-info="Máximo 140 caracteres.">Imagina que es el año 2036. Tu visión se hizo realidad ¿Qué tuvo que hacer el gobierno para que esto sucediera?</label>
+								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="vision-realidad" data-info="Máximo 140 caracteres.">Imagina que es el año 2036. Tu visión se hizo realidad ¿qué tuvo que hacer el gobierno para que esto sucediera?</label>
 								<textarea class="fs-anim-lower" id="q12" name="vision-realidad" placeholder="" maxlength="140" onkeyup="countChar(this, 140, '#counter-vision')"></textarea>
 								<span class="[ color-primary ]" id="counter-vision">140</span>
 							</li>
@@ -295,11 +295,11 @@ class Sondeo_CDMX_Survey {
 								<span class="[ color-primary ]" id="counter-tuviste">140</span>
 							</li>
 							<li id="js-cosas-valiosas" data-question="32">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿Qué palabras te vienen a la mente?</label>
+								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿qué palabras te vienen a la mente?</label>
 								<input class="fs-anim-lower" id="q14" name="cosas-valiosas" type="text" placeholder="Ej. palabra1, palabra2, palabra3" comma-required/>
 							</li>
 							<li id="js-captcha" data-question="999">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Necesitamos asegurarnos de que no seas un robot. ¿Cuánto es <span>3</span> + <span>3</span>?</label>
+								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Necesitamos asegurarnos de que no seas un robot. ¿Cuánto es <span></span> + <span></span>?</label>
 								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="" captcha-required/>
 							</li>
 						</ol><!-- /fs-fields -->

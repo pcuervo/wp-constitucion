@@ -6,8 +6,6 @@
 		<title><?php print_title(); ?></title>
 		<!-- Sets initial viewport load and disables zooming -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Robots -->
-		<meta name="robots" content="index, follow">
 		<!-- SEO -->
 		<meta name="keywords" content="constitucion, constitucion cdmx, cdmx, hola cdmx, adios df, nueva constitucion, constitución, constitución cdmx, notables, constituyentes, asamblea constituyente, política, jefe de gobierno, alcaldías, contribuir, Ciudad de México, ciudad de mexico, México, DF, df, Mexico">
 		<meta name="description" content="<?php bloginfo('description'); ?>">

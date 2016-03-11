@@ -219,7 +219,7 @@ a.fs-continue,
     padding: 0 0 10px;
     min-width: 200px;
 	content: attr(data-info);
-	font-size: 0.4em;
+	font-size: 16px;
 	color: #6a7b7e;
     opacity: 0;
     -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -227,6 +227,11 @@ a.fs-continue,
     -webkit-transform: translate3d(0,-5px,0);
     transform: translate3d(0,-5px,0);
     pointer-events: none;
+}
+@media screen and (max-width: 468px){
+	.fs-form-full .fs-fields > li label[data-info]::before  {
+		font-size: 13px;
+	}
 }
 
 .fs-form-full .fs-fields > li label[data-info]:hover::before {
@@ -936,7 +941,7 @@ span#charNum{
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
 	-ms-transition: opacity 0.5s ease-in-out;
-	-o-transition: opacity 0.5s ease-in-out; 	
+	-o-transition: opacity 0.5s ease-in-out;
 }
 div.fade-out:hover{
 	opacity: 1;

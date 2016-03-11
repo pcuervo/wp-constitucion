@@ -1598,6 +1598,9 @@ h2 {
 .fz-small {
   font-size: 12px;
 }
+.fz-medium {
+  font-size: 14px;
+}
 @media (max-width: 768px) {
   .fz-small--xs {
     font-size: 20px;
@@ -6100,6 +6103,11 @@ button.close {
 }
 .logo {
   width: 200px;
+}
+@media (max-width: 992px) {
+  .logo {
+    width: 160px;
+  }
 }
 .height-line {
   height: 30px;

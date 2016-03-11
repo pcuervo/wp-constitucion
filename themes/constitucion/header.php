@@ -60,7 +60,7 @@
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ][ height-100 ]">
 						<li class="[ no-padding--sides ][ menu-desktop__logo padding--header-logo ]">
 							<a class="[ inline-block ]" href="<?php echo site_url('/'); ?> ">
-								<img class="[ logo ][ margin-right ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="logo vertical de Ciudad de México" alt="Logo vertical Constitución CDMX">
+								<img class="[ logo ][ margin-right margin-top ]" src="<?php echo THEMEPATH; ?>images/logo/logo_vertical.png" alt="logo vertical de Ciudad de México" alt="Logo vertical Constitución CDMX">
 							</a>
 						</li><li
 						class="[ dropdown--hover dropdown--hover--acerca ][ menu-desktop__acerca ]">
@@ -114,7 +114,7 @@
 					<div class="[ bg-light ][ visible-xs visible-sm ]">
 						<div class="[ container ]">
 							<div class="[ width-col-9 ][ inline-block align-middle ]">
-								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"  alt="Logo vertical Constitución CDMX"></a>
+								<a href="<?php echo site_url('/'); ?> "><img class="[ logo margin-top-bottom--small ]" src="<?php echo THEMEPATH; ?>images/logo/logo_vertical.png"  alt="Logo vertical Constitución CDMX"></a>
 							</div><div
 								class="[ width-col-3 ][ inline-block align-middle ][ text-center ]">
 								<a class="[ pull-right ]" href="#nada" data-toggle="modal" data-target="#modal-menu">
@@ -130,7 +130,7 @@
 							<div class="[ container ][ bg-light ]">
 								<div class="[ row ]">
 									<div class="[ col-xs-10 ]">
-										<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="Logo vertical Constitución CDMX"></a>
+										<a href="<?php echo site_url('/'); ?> "><img class="[ logo margin-top-bottom--small ]" src="<?php echo THEMEPATH; ?>images/logo/logo_vertical.png" alt="Logo vertical Constitución CDMX"></a>
 									</div>
 									<div class="[ col-xs-2 ][ text-center ][ padding--top ]">
 										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>
@@ -162,9 +162,9 @@
 									foreach ($tweets as $tweet): ?>
 										<div class="[ row ]">
 											<div class="[ col-xs-12 ][ color-gray ]">
-												<p class="[ fz-xsmall ][ no-margin ][ color-primary ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
+												<p class="[ fz-medium ][ no-margin ][ color-primary ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
 												<p class="[ margin-bottom--small ]"><?php echo $tweet['text']; ?></p>
-												<p class="[ text-italic fz-xsmall ][ margin-bottom--small ][ text-right ]"><?php echo $tweet['date']; ?></p>
+												<p class="[ text-italic fz-medium ][ margin-bottom--small ][ text-right ]"><?php echo $tweet['date']; ?></p>
 												<hr class="[ border-bottom-gray ]">
 											</div>
 										</div>
@@ -182,7 +182,7 @@
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ][ height-100 ]"> <!-- hidden-sm -->
 						<li class="[ no-padding--sides padding--top--xsmall padding--header-logo ][ menu-desktop__logo ]">
 							<a class="[ inline-block ]" href="<?php echo site_url('/'); ?>">
-								<img class="[ logo ][ margin-right ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="Logo vertical Constitución CDMX">
+								<img class="[ logo ][ margin-right margin-top-bottom--small ]" src="<?php echo THEMEPATH; ?>images/logo/logo_vertical.png" alt="Logo vertical Constitución CDMX">
 							</a>
 						</li><li
 						class="[ dropdown--hover dropdown--hover--acerca ][ menu-desktop__acerca ]">
@@ -236,7 +236,7 @@
 					<div class="[ bg-light ][ visible-xs visible-sm ]">
 						<div class="[ container ]">
 							<div class="[ width-col-9 ][ inline-block align-middle ]">
-								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="Logo vertical Constitución CDMX"></a>
+								<a href="<?php echo site_url('/'); ?> "><img class="[ logo margin-top-bottom--small ]" src="<?php echo THEMEPATH; ?>images/logo/logo_vertical.png" alt="Logo vertical Constitución CDMX"></a>
 							</div><div
 							class="[ width-col-3 ][ inline-block align-middle ][ text-center ]">
 								<a href="#nada" class="[ pull-right ]" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
@@ -250,7 +250,7 @@
 							<div class="[ container ][ bg-light ]">
 								<div class="[ row ]">
 									<div class="[ col-xs-10 ]">
-										<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="Logo vertical Constitución CDMX"></a>
+										<a href="<?php echo site_url('/'); ?> "><img class="[ logo margin-top-bottom--small ]" src="<?php echo THEMEPATH; ?>images/logo/logo_vertical.png" alt="Logo vertical Constitución CDMX"></a>
 									</div>
 									<div class="[ col-xs-2 ][ text-center ][ padding--top ]">
 										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>
@@ -281,9 +281,9 @@
 								<?php if (! empty($tweets) ):
 									foreach ($tweets as $tweet): ?>
 										<div>
-											<p class="[ fz-xsmall ][ no-margin ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
+											<p class="[ fz-medium ][ no-margin ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
 											<p class="[ margin-bottom--small ]"><?php echo $tweet['text']; ?></p>
-											<p class="[ text-italic fz-xsmall ]"><?php echo $tweet['date']; ?></p>
+											<p class="[ text-italic fz-medium ]"><?php echo $tweet['date']; ?></p>
 											<hr class="[ border-bottom-gray ]">
 										</div>
 									<?php endforeach;
@@ -307,9 +307,9 @@
 			if (! empty($tweets) ):
 				foreach ($tweets as $tweet): ?>
 					<div>
-						<p class="[ fz-xsmall ][ no-margin ][ color-primary ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
+						<p class="[ fz-medium ][ no-margin ][ color-primary ]"><?php echo $tweet['user_name'].' @'.$tweet['screen_name']; ?></p>
 						<p class="[ margin-bottom--small ]"><?php echo $tweet['text']; ?></p>
-						<p class="[ text-italic fz-xsmall ][ margin-bottom--small ][ text-right ]"><?php echo $tweet['date']; ?></p>
+						<p class="[ text-italic fz-medium ][ margin-bottom--small ][ text-right ]"><?php echo $tweet['date']; ?></p>
 						<hr class="[ border-bottom-gray ]">
 					</div>
 				<?php endforeach;

@@ -74,15 +74,18 @@
 		<h2 class="[ text-center ]">Noticias</h2>
 		<div class="[ row ]">
 			<!-- 3 noticias -->
-			<?php $noticias = new WP_Query(array(
-					'post_type'      => 'post',
-					'posts_per_page' => 6
-				));
+			<?php
+
+			$noticias = new WP_Query(array(
+				'post_type'      => 'post',
+				'posts_per_page' => 6
+			));
 
 			if ( $noticias->have_posts() ) :
 				$current_noticia = 1;
 				while ( $noticias->have_posts() ) : $noticias->the_post();
-					$url_image = attachment_image_url( $post->ID, 'medium' );
+					$url_image = attachment_image_url( $post->ID, 'images_news_cdmx' );
+
 					$link_noticia = get_post_meta( $post->ID, 'link_noticia', true );?>
 					<div class="[ col-xs-6 col-sm-4 ][ margin-bottom ][ post_compact ]">
 						<a href="<?php echo $link_noticia; ?>">

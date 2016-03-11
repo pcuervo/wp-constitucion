@@ -4,7 +4,7 @@
 
 					<div class="[ row ]">
 						<div class="[ col-xs-12 col-sm-offset-1 col-sm-4 col-lg-offset-2 col-lg-4 ][ text-center ][ margin-top-bottom ]">
-							<img src="<?php echo THEMEPATH; ?>images/logocdmx2.png" alt="Logo Constitución CDMX">						
+							<img src="<?php echo THEMEPATH; ?>images/logocdmx2.png" alt="Logo Constitución CDMX">
 						</div>
 						<div class="[ col-xs-12 col-sm-6 col-lg-4 ][ text-center ][ margin-top-bottom ]">
 							<a href="#nada">Términos y condiciones</a>

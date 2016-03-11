@@ -1,6 +1,9 @@
 // Slides style
 // --------------------------------------------------
 
+
+/* ------ FlEXSLIDER ------*/
+
 ol.flex-control-nav.flex-control-paging{
     .absolute;
     .width-100;
@@ -211,4 +214,80 @@ ul.slides li img{
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+
+
+.slick-arrow{
+    .absolute;
+    .width-100;
+    .hidden-xs;
+    bottom: 45%;
+    text-indent: -9999px;
+    overflow: hidden;
+    top:40%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    z-index: 40;
+    width: 30px;
+    height: 40px;
+}
+
+button.slick-prev.slick-arrow{
+    left: 5%;
+    background-image: url('icons/prev.png');
+
+}
+
+button.slick-next.slick-arrow{
+    right: 5%;
+    background-image: url('icons/next.png');
+}
+
+
+ul.slick-dots{
+    .width-100;
+    .text-center;
+    position: absolute;
+    bottom: 0px;
+    padding-left: 0px;
+}
+
+ul.slick-dots li{
+    display: inline;
+}
+
+
+ul.slick-dots li{
+    .box-shadow(0 5px 5px rgba(0,0,0,.3));
+    text-indent: -9999px;
+    overflow: hidden;
+    border: 1px solid @light;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 5px;
+    width: 8px;
+    height: 8px;
+    cursor: auto;
+    @media (min-width: @screen-sm){
+        margin: 8px;
+        width: 10px;
+        height: 10px;
+    }
+
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+        background-color: @light;
+    }
+}
+
+ul.slick-dots li.slick-active{
+    background-color: @light;
 }

@@ -55,6 +55,10 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd2.png" alt="Imagen slick 2"></div>
 		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd3.png" alt="Imagen slick 3"></div>
 		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd4.png" alt="Imagen slick 4"></div>
+		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="Imagen slick 1"></div>
+		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd2.png" alt="Imagen slick 2"></div>
+		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd3.png" alt="Imagen slick 3"></div>
+		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd4.png" alt="Imagen slick 4"></div>
 	</div>
 </section>
 

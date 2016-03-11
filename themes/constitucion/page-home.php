@@ -71,7 +71,7 @@
 
 <section class="[ section--bg bg-gray-light ][ no-margin--bottom ]">
 	<div class="[ container ]">
-		<h2 class="[ text-uppercase text-center ]">Noticias</h2>
+		<h2 class="[ text-center ]">Noticias</h2>
 		<div class="[ row ]">
 			<!-- 3 noticias -->
 			<?php $noticias = new WP_Query(array(

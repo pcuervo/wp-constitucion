@@ -6,8 +6,6 @@
 		<title><?php print_title(); ?></title>
 		<!-- Sets initial viewport load and disables zooming -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Robots -->
-		<meta name="robots" content="index, follow">
 		<!-- SEO -->
 		<meta name="keywords" content="constitucion, constitucion cdmx, cdmx, hola cdmx, adios df, nueva constitucion, constitución, constitución cdmx, notables, constituyentes, asamblea constituyente, política, jefe de gobierno, alcaldías, contribuir, Ciudad de México, ciudad de mexico, México, DF, df, Mexico">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
@@ -85,7 +83,9 @@
 							</span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
 								<li><a href="<?php echo site_url('/cdmx/'); ?>#cronica">Crónica</a></li><!-- #cronica -->
-								<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia_el_constituyente">Hacia el constituyente</a></li>
+								<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia_el_constituyente
+hacia-el-constituyente
+hacia-el-constituyente">Hacia el constituyente</a></li>
 								<li><a href="<?php echo site_url('/cdmx/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
 							</ul>
 						</li><li
@@ -207,7 +207,9 @@
 							</span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
 								<li><a href="<?php echo site_url('/cdmx/'); ?>#cronica">Crónica</a></li><!-- #cronica -->
-								<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia_el_constituyente">Hacia el constituyente</a></li>
+								<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia_el_constituyente
+hacia-el-constituyente
+hacia-el-constituyente">Hacia el constituyente</a></li>
 								<li><a href="<?php echo site_url('/cdmx/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
 							</ul>
 						</li><li

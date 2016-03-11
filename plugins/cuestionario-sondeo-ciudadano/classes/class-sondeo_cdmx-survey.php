@@ -224,7 +224,7 @@ class Sondeo_CDMX_Survey {
 									<option value="fuera-mexico">Fuera de México</option>
 								</select>
 							</li>
-							<li id="js-delegaciones-estados-paises"></li>
+							<!-- <li id="js-delegaciones-estados-paises"></li>
 							<li id="js-genero" data-input-trigger data-question="7">
 								<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="genero">Género</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
@@ -297,7 +297,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-cosas-valiosas" data-question="32">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿qué palabras te vienen a la mente?</label>
 								<input class="fs-anim-lower" id="q14" name="cosas-valiosas" type="text" placeholder="Ej. palabra1, palabra2, palabra3" comma-required/>
-							</li>
+							</li> -->
 							<li id="js-captcha" data-question="999">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Necesitamos asegurarnos de que no seas un robot. ¿Cuánto es <span></span> + <span></span>?</label>
 								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="" captcha-required/>

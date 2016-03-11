@@ -2,6 +2,9 @@
 <div id="container_video" class="[ bg-gray--xxlight hero_video ][ margin-bottom--large ]" style="background-image: url('<?php echo THEMEPATH; ?>images/Home-3.jpg'); background-size: cover;">
 	<video class="[ width-100 ][ center-full video_home ]" autoplay loop>
 		<source src="<?php echo THEMEPATH; ?>video/CCCDMX.mp4" type="video/mp4">
+		<source src="<?php echo THEMEPATH; ?>video/CCCDMX.webm" type="video/webm">
+		<source src="<?php echo THEMEPATH; ?>video/CCCDMX_1.ogv" type="video/ogg">
+		<source src="<?php echo THEMEPATH; ?>video/CCCDMX.ogg" type="video/ogg">
 	</video>
 	<div class="[ logo-video ]">
 		<img class="[ width-100 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/logo/logo_horizontal-blanco.png" alt="Logo Constitución CDMX blanco">

@@ -44,10 +44,8 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		wp_enqueue_script( 'jquery', 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js', array(), '2.0.3', true );
 		wp_enqueue_script('jquery-ui-datepicker');
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.min.js', array('jquery'), '1.0', true );
-		wp_enqueue_script( 'api-google', 'http://maps.google.com/maps/api/js?libraries=places&language=en-AU', array('plugins'), '1.0', true );
+		wp_enqueue_script( 'api-google', 'http://maps.google.com/maps/api/js?libraries=places&language=en-AU&key=AIzaSyBa-P_2_xm1FQOYfZ1h-86QDvI9KQdhxtI ', array('plugins'), '1.0', true );
 		wp_enqueue_script( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js', array('jquery'), '3.1.0', true );
-		wp_enqueue_script( 'api-google', 'https://maps.googleapis.com/maps/api/js', array('jquery'), '1.0', true );
-		wp_enqueue_script( 'chart', JSPATH.'Chart.js', array('jquery'), '1.0', false );
 		wp_enqueue_script( 'functions', JSPATH.'functions.min.js', array('plugins'), '1.0', true );
 
 		
@@ -229,9 +227,9 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 	/**
 	 * Regresa la url del attachment especificado
-	 * @param  int     $post_id
-	 * @param  string  $size
-	 * @return string  url de la imagen
+	 * @param  int     	$post_id 
+	 * @param  string  	$size
+	 * @return [string]  url de la imagen
 	 */
 	function attachment_image_url($post_id, $size){
 		$image_id   = get_post_thumbnail_id($post_id);
@@ -248,7 +246,6 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		$dia_name = $dias[date('N', strtotime($fecha)) - 1];
 
 		$fecha = explode('-', $fecha);
-
 		$mes = array('01' => 'Enero', '02' => 'Febrero', '03' => 'Marzo', '04' => 'Abril', '05' => 'Mayo', '06' =>'Junio', '07' => 'Julio', '08' => 'Agosto', '09' => 'Septiembre', '10' => 'Octubre', '11' => 'Noviembre', '12' => 'Diciembre');
 
 		return array($fecha[2], $mes[$fecha[1]], $fecha[0], $dia_name, $fecha[1]);
@@ -437,7 +434,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 			foreach ( $images as $image ) {
 				$img_url = wp_get_attachment_image_src($image->ID, 'images_gal_cdmx');
 				// render your gallery here
-				echo '<div class="[ col-xs-4 col-sm-3 ][ no-padding--right--xs ]"><img src="'.$img_url[0].'" class="[ img-responsive ][ margin-auto ]"></div>';
+				echo '<div class="[ col-xs-4 col-sm-3 ][ no-padding--right--xs ]"><img src="'.$img_url[0].'" class="[ img-responsive ][ margin-auto ]" alt="<?php echo get_the_title(); ?>"></div>';
 
 			}
 		echo "</div>";

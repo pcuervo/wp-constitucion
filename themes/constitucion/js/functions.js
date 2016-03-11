@@ -13,7 +13,7 @@
             });
 
         }
-
+ 
         function videoHome(){
             var ancho_nuevo = $(window).width();
             var alto_nuevo = $(window).height();
@@ -22,16 +22,17 @@
         }
 
         $('.js-hero_video__scroll').on('click', function(){
-            $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 80 }, '700');
+            $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 130 }, '700');
         });
 
 
         $('#close-feedback').on('click', function(){
             $('#feedback, .modal-backdrop').remove();
+            var $feedback = $('#feedback');
         });
 
         /**
-         * LUGA DEL EVENTO 
+         * LUGA DEL EVENTO
          */
         if (document.getElementById("ubicacion_evento")) {
             var autocomplete = new google.maps.places.Autocomplete($("#ubicacion_evento")[0], {});
@@ -42,7 +43,7 @@
                 $('#latitud_evento').val( place.geometry.location.lat() );
                 $('#longitud_evento').val( place.geometry.location.lng() );
 
-                var iframe = '<iframe width="100%" height="170" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q='+place.geometry.location.lat()+','+place.geometry.location.lng()+'&hl=es;z=14&amp;output=embed"></iframe>';
+                var iframe = '<iframe width="100%" height="170" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q='+place.geometry.location.lat()+','+place.geometry.location.lng()+'&hl=es;z=14&amp;output=embed" title="Mapa de lugar del evento"></iframe>';
                 $('.iframe-cont').empty().append(iframe);
 
             });
@@ -56,6 +57,43 @@
         $('.flexslider').flexslider({
             animation: "slide"
         });
+
+        /**
+         * slick slider
+         */
+        $('.slider.responsive').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                    }
+                    },
+                    {
+                    breakpoint: 600,
+                    settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
 
         /**
          * DATOS MODAL GRUPO DE TRABAJO

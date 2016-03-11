@@ -112,7 +112,7 @@
 	 */
 	FForm.prototype._addControls = function() {
 		// main controls wrapper
-		this.ctrls = createElement( 'div', { cName : 'fs-controls container relative', appendTo : this.el } );
+		this.ctrls = createElement( 'div', { cName : 'fs-controls container', appendTo : this.el } );
 
 		// continue button (jump to next field)
 		this.ctrlContinue = createElement( 'a', { cName : '[ fs-continue btn btn-primary btn-large', inner : 'Siguiente', appendTo : this.ctrls } );
@@ -219,6 +219,10 @@
 				}
 			}
 		} );
+
+        // initialize captcha
+        document.getElementById('js-captcha').getElementsByTagName('span')[0].innerHTML = Math.floor(Math.random() * 20) + 1  ;
+        document.getElementById('js-captcha').getElementsByTagName('span')[1].innerHTML = Math.floor(Math.random() * 20) + 1  ;
 	};
 
 	/**
@@ -411,7 +415,7 @@
 	// TODO: this is a very basic validation function. Only checks for required fields..
 	FForm.prototype._validade = function() {
 		var fld = this.fields[ this.current ],
-			input = fld.querySelector( 'input[required]' ) || fld.querySelector( 'textarea[required]' ) || fld.querySelector( 'select[required]' ) || fld.querySelector( 'input[comma-required]' ),
+			input = fld.querySelector( 'input[required]' ) || fld.querySelector( 'textarea[required]' ) || fld.querySelector( 'select[required]' ) || fld.querySelector( 'input[comma-required]' ) || fld.querySelector( 'input[captcha-required]' ),
 			error;
 
 		if( !input ) return true;
@@ -436,6 +440,17 @@
                     var numCommas = ( input.value.match(/,/g) || [] ).length;
                     if( numCommas < 2 ){
                         error = 'MISSING_WORDS';
+                    }
+                }
+                else if( input.hasAttribute( 'captcha-required' ) ){
+                    var firstNum = parseInt( document.getElementById('js-captcha').getElementsByTagName('span')[0].innerHTML );
+                    var secondNum = parseInt( document.getElementById('js-captcha').getElementsByTagName('span')[1].innerHTML );
+                    if( input.value != ( firstNum + secondNum ) ){
+                        document.getElementById('js-captcha').getElementsByTagName('span')[0].innerHTML = Math.floor(Math.random() * 10) + 1  ;
+                        document.getElementById('js-captcha').getElementsByTagName('span')[1].innerHTML = Math.floor(Math.random() * 10) + 1  ;
+                        input.value = '';
+                        input.focus();
+                        error = 'WRONG_CAPTCHA';
                     }
                 }
 				break;
@@ -471,6 +486,9 @@
 				break;
             case 'MISSING_WORDS':
                 message = 'Por favor ingresa 3 palabras separadas por comas. Ej. palabra1, palabra2, palabra3';
+                break;
+            case 'WRONG_CAPTCHA':
+                message = 'La respuesta es incorrecta, por favor inténtalo nuevamente.';
                 break;
 			case 'INVALIDEMAIL' :
 				message = 'Please fill a valid email address';

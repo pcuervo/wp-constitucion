@@ -1,21 +1,21 @@
 <?php get_header(); the_post();  ?>
 <div id="container_video" class="[ bg-gray--xxlight hero_video ][ margin-bottom--large ]" style="background-image: url('http://pcuervo.com/constitucion/wp-content/uploads/2016/03/Captura-de-pantalla-2016-03-04-a-las-22.16.06.png'); background-size: cover;">
 	<video class="[ width-100 ][ center-full video_home ]" autoplay loop>
-		<source src="<?php echo THEMEPATH; ?>video/ConstitucionCDMX.mp4" type="video/mp4">
+		<source src="<?php echo THEMEPATH; ?>video/CCCDMX.mp4" type="video/mp4">
 	</video>
 	<div class="[ logo-video ]">
-		<img class="[ width-100 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/horizontal_blanco.png">
+		<img class="[ width-100 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/horizontal_blanco.png" alt="Logo Constitución CDMX blanco">
 	</div>
 	<div class="[ hero_video__scroll ][ text-center ][ js-hero_video__scroll ]">
 		<p class="[ text-center ][ color-light ][ margin-bottom--small ]">Conoce más</p>
-		<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/arrow-down-9.svg">
+		<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-light ]" src="<?php echo THEMEPATH; ?>icons/arrow-down-9.svg" alt="Ícono flecha abajo">
 	</div>
 </div>
 
 <section class="[ container ]" id="js-home-scroll-point">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ]">
-			<h1 class="[ text-center ]">¿una constitución para la ciudad de méxico?</h1>
+			<h1 class="[ text-center ]">¿Una constitución para la Ciudad de México?</h1>
 			<?php $home = get_page_by_path('home');
 			echo wpautop( $home->post_content ); ?>
 		</div>
@@ -27,32 +27,32 @@
 	<ul class="slides">
 		<li>
 			<a href="<?php echo site_url('/participa/' ); ?>">
-				<img src="<?php echo THEMEPATH; ?>images/slide-participa.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-participa.jpg" alt="¿Cómo participo?">
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('/participa/'); ?>#imagina_ciudad">
-				<img src="<?php echo THEMEPATH; ?>images/slide-imagina.jpg">
+			<a href="<?php echo site_url('/participa/'); ?>#imagina-ciudad">
+				<img src="<?php echo THEMEPATH; ?>images/slide-imagina.jpg" alt="Imagina tu ciudad">
 			</a>
 		</li>
 		<li>
 			<a href="<?php echo site_url('/participa/'); ?>#peticiones">
-				<img src="<?php echo THEMEPATH; ?>images/slide-peticion.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-peticion.jpg" alt="Haz una petición">
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('/participa/' ); ?>#dialogos_publicos">
-				<img src="<?php echo THEMEPATH; ?>images/slide-organiza.jpg">
+			<a href="<?php echo site_url('/participa/' ); ?>#dialogos-publicos">
+				<img src="<?php echo THEMEPATH; ?>images/slide-organiza.jpg" alt="Organiza un encuentro ciudadano">
 			</a>
 		</li>
 		<li>
 			<a href="<?php echo site_url('/participa/' ); ?>#ensayos">
-				<img src="<?php echo THEMEPATH; ?>images/slide-publica.jpg">
+				<img src="<?php echo THEMEPATH; ?>images/slide-publica.jpg" alt="Publica o comenta un ensayo">
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('/cdmx/' ); ?>#voces_ciudadanas">
-				<img src="<?php echo THEMEPATH; ?>images/slide-voces-ciudadanas.jpg">
+			<a href="<?php echo site_url('/cdmx/' ); ?>#voces-ciudadanas">
+				<img src="<?php echo THEMEPATH; ?>images/slide-voces-ciudadanas.jpg" alt="Voces ciudadanas">
 			</a>
 		</li>
 	</ul>
@@ -62,7 +62,7 @@
 <section class="[ container ]">
 	<div class="[ row ]">
 		<div class="[ col-sm-12 ]">
-			<h2 class="[ text-uppercase text-center ]">Hacia una ConstituciónCDMX</h2>
+			<h2 class="[ text-center ]">Hacia una ConstituciónCDMX</h2>
 			<?php get_template_part('templates/eventos', 'timeLine'); ?>
 		</div>
 	</div>
@@ -71,7 +71,7 @@
 
 <section class="[ section--bg bg-gray-light ][ no-margin--bottom ]">
 	<div class="[ container ]">
-		<h2 class="[ text-uppercase text-center ]">Noticias</h2>
+		<h2 class="[ text-center ]">Noticias</h2>
 		<div class="[ row ]">
 			<!-- 3 noticias -->
 			<?php $noticias = new WP_Query(array(
@@ -80,46 +80,25 @@
 				));
 
 			if ( $noticias->have_posts() ) :
+				$current_noticia = 1;
 				while ( $noticias->have_posts() ) : $noticias->the_post();
 					$url_image = attachment_image_url( $post->ID, 'medium' );
 					$link_noticia = get_post_meta( $post->ID, 'link_noticia', true );?>
 					<div class="[ col-xs-6 col-sm-4 ][ margin-bottom ][ post_compact ]">
 						<a href="<?php echo $link_noticia; ?>">
-							<img class="[ img-responsive ][ margin-bottom--small ]" src="<?php echo $url_image; ?>">
+							<img class="[ img-responsive ][ margin-bottom--small ]" src="<?php echo $url_image; ?>" alt="<?php echo get_the_title(); ?>">
 							<div>
-								<h4 class="[ color-gray ][ center-full ][ text-uppercase ]"><?php the_title(); ?></h4>
+								<h4 class="[ color-gray ][ center-full ][ text-uppercase ][ line-height ]"><?php the_title(); ?></h4>
 							</div>
 						</a>
 					</div>
-				<?php endwhile;
+					<?php if ( $current_noticia % 3 == 0 ) : ?>
+						<div class="[ clear ]"></div>
+					<?php endif; ?>
+				<?php $current_noticia +=1; endwhile;
 			endif; ?>
 
 		</div>
-<!-- con 2 noticias -->
-		<!-- <div class="[ row ][ margin-bottom--large ]">
-			<div class="[ col-xs-12 col-sm-offset-2 col-sm-4 ]">
-				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
-				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
-				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
-				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
-			</div>
-			<div class="[ col-xs-12 col-sm-4 ]">
-				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
-				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
-				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
-				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
-			</div>
-		</div> -->
-<!-- con 1 noticia -->
-		<!-- <div class="[ row ][ margin-bottom--large ]">
-			<div class="[ col-xs-12 col-sm-offset-4 col-sm-4 ]">
-				<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/noticiashome.png">
-				<h4 class="[ color-gray ][ text-uppercase ]">Encabezado</h4>
-				<p class="[ color-gray ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pel-lentesque accumsan
-				 lorem id porttitor porttitor. In pulvinar pellentesque ornare. n lorem id porttitor porttitor.pulvinar pellentesque ornare.</p>
-			</div>
-		</div> -->
-
 	</div> <!-- /container -->
 
 </section>

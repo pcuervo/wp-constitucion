@@ -49,7 +49,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 </section><!-- fin slider -->
 
 <section>
-	<!-- slide slick -->
 	<div class=" slider responsive ">
 		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="Imagen slick 1"></div>
 		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd2.png" alt="Imagen slick 2"></div>

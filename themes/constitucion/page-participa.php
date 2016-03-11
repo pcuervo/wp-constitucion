@@ -15,48 +15,40 @@ get_header(); the_post();
 
 
 	<section class="[ container ][ padding--header--id ]">
-		<div class="[ row ]">
+		<div class="[ row ]">	
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
+				<h2>¿Cómo Participo?</h2>
 				<p>Todas y todos los que vivimos y visitamos la Ciudad de México podemos hacer propuestas al Grupo de Trabajo encargado de redactar el Proyecto de la Constitución. Hay cuatro formas de participar. </p>
 			</div>
 		</div>
-	</section>
-
-	<section class="[ bg-gray-light section--bg ][ padding--header--id ]" id="instrucciones">
-		<div class="[ container ]">
-			<div class="[ padding--sides--xsm ][ text-justify ]">
-				<?php the_content(); ?>
+		<div class="[ padding--sides--xsm ]">
+			<?php the_content(); ?>
+		</div>
+		<div class="[ row ][ margin-top ][ padding--sides--xsm ]" id="instrucciones">
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ bg-gray-light ][ padding padding--top-bottom--large ]">
+					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">1</p>
+					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
+				</div>
 			</div>
-			<div class="[ row ][ margin-top ][ padding--sides--xsm ]">
-				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">1</p>
-						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-					</div>
-					<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ bg-gray-light ][ padding padding--top-bottom--large ]">
+					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">2</p>
+					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>		
 				</div>
-				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">2</p>
-						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-					</div>
-					<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
+			</div>
+			<div class="[ clearfix ][ visible-xs ]"></div>
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ bg-gray-light ][ padding padding--top-bottom--large ]">
+					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">3</p>
+					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
 				</div>
-				<div class="[ clearfix ][ visible-xs ]"></div>
-				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">3</p>
-						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-					</div>
-					<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
-				</div>
-				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">4</p>
-						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-					</div>
+			</div>
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ bg-gray-light ][ padding padding--top-bottom--large ]">
+					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">4</p>
 					<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucion.cdmx.gob.mx/ensayos">
-						<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
+						<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
 					</a>
 				</div>
 			</div>
@@ -87,7 +79,7 @@ get_header(); the_post();
 					<input type="text" name="ref_code" class="[ form-control input--search ][ height-50 ][ fz-xxlarge ]" placeholder="CM5697CX08" required="" data-parsley-required-message="El número de folio es obligatorio">
 					<span class="[ input-group-btn ]">
 						<button class="[ btn btn-secondary ][ height-50 ]" type="submit">
-							<img class="[ svg icon icon--iconed--small icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/search.svg">
+							<img class="[ svg icon icon--iconed--small icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/search.svg" alt="Botón de buscar">
 						</button>
 					</span>
 				</div>
@@ -115,7 +107,7 @@ get_header(); the_post();
 		</div>
 	</section>
 
-	<section class="[ container ][ space-id ]" id="dialogos_publicos">
+	<section class="[ container ][ space-id ]" id="dialogos-publicos">
 		<div class="[ row ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
 				<h2 class="[ no-margin-top ]">Encuentros ciudadanos</h2>
@@ -137,7 +129,7 @@ get_header(); the_post();
 				</div>
 			</section> <!-- row -->
 
-			<section class="[ space-id ]" id="registra_tu_evento">
+			<section class="[ space-id ]" id="registra-tu-evento">
 				<div class="[ box-shadow--form ]">
 					<h2 class="[ margin-bottom--large ]">Registra tu encuentros</h2>
 					<form id="form-eventos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
@@ -183,7 +175,7 @@ get_header(); the_post();
 							</div>
 						</div>
 						<div class="[ text-center ]">
-							<input name="accion" id="accion" type="hidden" value="guarda-evento">
+							<input name="accion" id="accion-evento" type="hidden" value="guarda-evento">
 							<button type="submit" class="[ btn btn-primary btn--large ]">enviar</button>
 						</div>
 					</form>
@@ -204,7 +196,7 @@ get_header(); the_post();
 					<p>Esta sección de la plataforma te permite consultar y compartir ensayos con propuestas específicas de contenido para el Proyecto de Constitución de la Ciudad de México.</p>
 					<p>Estos ensayos son públicos y están abiertos a comentarios. Hay dos tipos de ensayos: aquellos realizados por integrantes del Grupo de Trabajo y aquellos compartidos por otras agrupaciones, organizaciones de la sociedad civil, universidades, empresas y dependencias gubernamentales.</p>
 					<p>El Grupo de Trabajo considerará las propuestas contenidas en estos ensayos.</p>
-					<div class="[ text-center ][ margin-bottom ]">
+					<div class="[ text-center ][ margin-bottom padding--top--large padding--bottom ]">
 						<a href="http://constitucion.cdmx.gob.mx/ensayos" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ]">Consulta y comenta los ensayos</a>
 					</div>
 					<p>Comparte tu ensayo llenando el siguiente formulario. Verifica que cumpla con los requisitos de publicación aquí.</p>
@@ -257,10 +249,10 @@ get_header(); the_post();
 							<input type="radio" name="recibir_mas_informacion" id="optionsRadios1" value="si" checked>
 							<label for="" class="[ margin-left ][ inline-block ]">No</label>
 							<input type="radio" name="recibir_mas_informacion" id="optionsRadios2" value="no">
-							<input name="accion" id="accion" type="hidden" value="guarda-ensayo">
+							<input name="accion" id="accion-ensayo" type="hidden" value="guarda-ensayo">
 						</div>
 					</div>
-					<div class="[ text-center ]" id="voces_ciudadanas">
+					<div class="[ text-center ]" id="voces-ciudadanas">
 						<button type="submit" class="[ btn btn-primary btn--large ]">enviar</button>
 					</div>
 				</form>
@@ -275,7 +267,7 @@ get_header(); the_post();
 				<div class="[ col-xs-12  col-sm-10 col-sm-offset-1 ]">
 					<div class="modal-content [ no-border-radius ]">
 						<div class="modal-body [ padding--bottom--xxlarge padding--sides padding--sides--large--sm ]">
-							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif">
+							<img class="[ img-responsive ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif" alt="Logo horizontal Constitución CDMX">
 							<h2 class="[ text-center text-uppercase ]">¡Gracias por participar!</h2>
 							<p class="[ text-center ][ js-codigo-referencia ]">Tu número de folio es: <span></span></p>
 							<p class="[ text-center text-uppercase ]">Escribe tu nombre y apellido para obtener tu certificado de participación</p>

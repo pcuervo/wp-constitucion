@@ -46,7 +46,6 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.min.js', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'api-google', 'http://maps.google.com/maps/api/js?libraries=places&language=en-AU&key=AIzaSyBa-P_2_xm1FQOYfZ1h-86QDvI9KQdhxtI ', array('plugins'), '1.0', true );
 		wp_enqueue_script( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js', array('jquery'), '3.1.0', true );
-		wp_enqueue_script( 'chart', JSPATH.'Chart.js', array('jquery'), '1.0', false );
 		wp_enqueue_script( 'functions', JSPATH.'functions.min.js', array('plugins'), '1.0', true );
 
 
@@ -436,7 +435,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 			foreach ( $images as $image ) {
 				$img_url = wp_get_attachment_image_src($image->ID, 'images_gal_cdmx');
 				// render your gallery here
-				echo '<div class="[ col-xs-4 col-sm-3 ][ no-padding--right--xs ]"><img src="'.$img_url[0].'" class="[ img-responsive ][ margin-auto ]"></div>';
+				echo '<div class="[ col-xs-4 col-sm-3 ][ no-padding--right--xs ]"><img src="'.$img_url[0].'" class="[ img-responsive ][ margin-auto ]" alt="<?php echo get_the_title(); ?>"></div>';
 
 			}
 		echo "</div>";

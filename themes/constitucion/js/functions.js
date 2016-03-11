@@ -13,7 +13,7 @@
             });
 
         }
-
+ 
         function videoHome(){
             var ancho_nuevo = $(window).width();
             var alto_nuevo = $(window).height();
@@ -43,7 +43,7 @@
                 $('#latitud_evento').val( place.geometry.location.lat() );
                 $('#longitud_evento').val( place.geometry.location.lng() );
 
-                var iframe = '<iframe width="100%" height="170" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q='+place.geometry.location.lat()+','+place.geometry.location.lng()+'&hl=es;z=14&amp;output=embed"></iframe>';
+                var iframe = '<iframe width="100%" height="170" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q='+place.geometry.location.lat()+','+place.geometry.location.lng()+'&hl=es;z=14&amp;output=embed" title="Mapa de lugar del evento"></iframe>';
                 $('.iframe-cont').empty().append(iframe);
 
             });
@@ -63,7 +63,7 @@
          */
         $('.slider.responsive').slick({
             dots: true,
-            infinite: false,
+            infinite: true,
             speed: 300,
             slidesToShow: 4,
             slidesToScroll: 4,

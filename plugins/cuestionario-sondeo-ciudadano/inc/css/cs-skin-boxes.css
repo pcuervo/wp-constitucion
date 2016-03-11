@@ -63,6 +63,7 @@ div.cs-skin-boxes:focus > span {
 	transition: opacity 0.3s;
 }
 
+
 .cs-skin-boxes .cs-options ul {
 	height: 100%;
 	padding: 10px;
@@ -263,6 +264,7 @@ div.cs-skin-boxes:focus > span {
 }
 
 .btn-skin-boxes{
+	opacity: 0;
 	width: 100%;
 	margin-bottom: 5px;
 	border: 2px solid #999;
@@ -270,10 +272,19 @@ div.cs-skin-boxes:focus > span {
     font-family: "Alegreya Sans",sans-serif;
     color: #4a4a4a;
     font-weight: bold;
+    -webkit-transition: opacity 1s;
+	transition: opacity 1s;
+	transition-delay: opacity 0.8s !important;
 	-webkit-transition: background-color 0.3s ease-out;
 	-moz-transition: background-color 0.3s ease-out;
 	-ms-transition: background-color 0.3s ease-out;
 	-o-transition: background-color 0.3s ease-out; 
+}
+#js-grandes-retos.fs-current .btn-skin-boxes {
+	opacity: 1;
+	-webkit-transition: opacity 1s;
+	transition: opacity 1s;
+	transition-delay: 0.8s !important;
 }
 
 @media screen and (min-width: 468px){
@@ -288,4 +299,20 @@ div.cs-skin-boxes:focus > span {
 .btn-skin-boxes.active {
     background-color: #e80e8a;
     color: #fff;
+ }
+#counter-vision, #counter-tuviste, #counter-imaginas{
+ 	opacity: 0;
+	webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+	transition-delay: 0.2s !important;
+ }
+
+.fs-current #counter-vision,
+.fs-current #counter-tuviste,
+.fs-current #counter-imaginas{
+ 	opacity: 1;
+	-webkit-transition: opacity 1s;
+	transition: opacity 1s;
+	transition-delay: 0.8s !important;
+
  }

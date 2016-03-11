@@ -62,7 +62,9 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	</div>
 </section>
 
-<section class="[ container ][ space-id ]" id="hacia_el_constituyente">
+<section class="[ container ][ space-id ]" id="hacia_el_constituyente
+hacia-el-constituyente
+hacia-el-constituyente">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 			<div class="[ content-acerca-de ][ margin-bottom ]">

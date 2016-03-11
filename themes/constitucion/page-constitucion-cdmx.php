@@ -86,7 +86,9 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 					<p>En la CDMX se realizan 14 millones de viajes al día en buses y microbuses.</p>
 				</blockquote>
 				<p>
-					El Jefe de Gobierno es la única persona facultada para presentar un Proyecto de Constitución a la <a href="<?php echo site_url( 'cdmx' ) ?>#hacia_el_constituyente">Asamblea Constituyente</a>. Para su elaboración, formó un Grupo de Trabajo de personajes notables de la ciudad conformado por representantes de sociedad civil, academia y especialistas, como espacio democrático y plural de participación social y ciudadana.
+					El Jefe de Gobierno es la única persona facultada para presentar un Proyecto de Constitución a la <a href="<?php echo site_url( 'cdmx' ) ?>#hacia_el_constituyente
+hacia-el-constituyente
+hacia-el-constituyente">Asamblea Constituyente</a>. Para su elaboración, formó un Grupo de Trabajo de personajes notables de la ciudad conformado por representantes de sociedad civil, academia y especialistas, como espacio democrático y plural de participación social y ciudadana.
 					<br><br>
 					Además de apoyar en la redacción del Proyecto de Constitución, el Grupo de trabajo tiene como objetivo conocer y compilar las propuestas y opiniones de la ciudadanía y de las organizaciones políticas, civiles y sociales de la Ciudad de México. Dentro de sus funciones está evaluar y considerar la <a href="<?php echo site_url('participa'); ?>">opinión ciudadana</a> bajo los criterios de legalidad, calidad, viabilidad y beneficio social. Todos ellos seguirán de cerca las reflexiones e ideas que se concentren en esta plataforma ciudadana.
 					<br><br>

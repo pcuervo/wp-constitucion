@@ -26,29 +26,29 @@ get_header(); the_post();
 		</div>
 		<div class="[ row ][ margin-top ][ padding--sides--xsm ]" id="instrucciones">
 			<div class="[ col-xs-6 col-sm-3 ]">
-				<div class="[ bg-gray-light ][ padding ]">
+				<div class="[ bg-gray-light ][ padding padding--top-bottom--large ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">1</p>
-					<p class="[ fz-small ][ text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
+					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
 				</div>
 			</div>
 			<div class="[ col-xs-6 col-sm-3 ]">
-				<div class="[ bg-gray-light ][ padding ]">
+				<div class="[ bg-gray-light ][ padding padding--top-bottom--large ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">2</p>
-					<p class="[ fz-small ][ text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>		
+					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>		
 				</div>
 			</div>
 			<div class="[ clearfix ][ visible-xs ]"></div>
 			<div class="[ col-xs-6 col-sm-3 ]">
-				<div class="[ bg-gray-light ][ padding ]">
+				<div class="[ bg-gray-light ][ padding padding--top-bottom--large ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">3</p>
-					<p class="[ fz-small ][ text-left ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
+					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
 				</div>
 			</div>
 			<div class="[ col-xs-6 col-sm-3 ]">
-				<div class="[ bg-gray-light ][ padding ]">
+				<div class="[ bg-gray-light ][ padding padding--top-bottom--large ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">4</p>
 					<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucion.cdmx.gob.mx/ensayos">
-						<p class="[ fz-small ][ text-left ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
+						<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
 					</a>
 				</div>
 			</div>

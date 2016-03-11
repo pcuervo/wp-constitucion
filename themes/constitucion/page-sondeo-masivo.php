@@ -11,7 +11,7 @@
 						<div class="modal-body [ padding--bottom--xxlarge padding--sides padding--sides--large--sm ]">
 							<img class="[ img-responsive ][ margin-auto margin-top-bottom--large ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif" alt="Logo horizontal Constitución CDMX">
 							<h2 class="[ text-center text-uppercase ]">¡Gracias por participar!</h2>
-							<p class="[ text-center ][ js-codigo-referencia ]">Tu número de folio es: <span></span></p>
+							<p class="[ text-center ][ js-codigo-referencia ]">Tu número de folio es: <span class="[ color-primary ]"></span></p>
 							<p class="[ text-center text-uppercase ][ margin-bottom ]">Escribe tu nombre y apellido para obtener tu certificado de participación</p>
 							<form class="[ row ]" action="<?php echo site_url('pdf-certificado-de-participacion'); ?>" method="POST" data-parsley-certificado target="_blank">
 								<div class="[ col-xs-12 col-sm-6  ]">

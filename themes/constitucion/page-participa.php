@@ -260,7 +260,7 @@ get_header(); the_post();
 							<input name="accion" id="accion-ensayo" type="hidden" value="guarda-ensayo">
 						</div>
 					</div>
-					<div class="[ text-center ]" id="voces_ciudadanas">
+					<div class="[ text-center ]" id="voces-ciudadanas">
 						<button type="submit" class="[ btn btn-primary btn--large ]">enviar</button>
 					</div>
 				</form>

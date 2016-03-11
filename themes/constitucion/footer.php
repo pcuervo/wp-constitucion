@@ -7,9 +7,9 @@
 							<img src="<?php echo THEMEPATH; ?>images/logocdmx2.png" alt="Logo Constitución CDMX">						
 						</div>
 						<div class="[ col-xs-12 col-sm-6 col-lg-4 ][ text-center ][ margin-top-bottom ]">
-							<a href="#">Términos y condiciones</a>
+							<a href="#nada">Términos y condiciones</a>
 							<a data-toggle="modal" data-target="#contacto">Contacto</a>
-							<a href="#">Transparencia</a>
+							<a href="#nada">Transparencia</a>
 						</div>
 					</div>
 

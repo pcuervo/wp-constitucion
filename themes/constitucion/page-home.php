@@ -51,7 +51,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('/cdmx/' ); ?>#voces_ciudadanas">
+			<a href="<?php echo site_url('/cdmx/' ); ?>#voces-ciudadanas">
 				<img src="<?php echo THEMEPATH; ?>images/slide-voces-ciudadanas.jpg" alt="Voces ciudadanas">
 			</a>
 		</li>

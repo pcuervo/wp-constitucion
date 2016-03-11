@@ -83,10 +83,8 @@
 							</span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
 								<li><a href="<?php echo site_url('/cdmx/'); ?>#cronica">Crónica</a></li><!-- #cronica -->
-								<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia_el_constituyente
-hacia-el-constituyente
-hacia-el-constituyente">Hacia el constituyente</a></li>
-								<li><a href="<?php echo site_url('/cdmx/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
+								<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia-el-constituyente">Hacia el constituyente</a></li>
+								<li><a href="<?php echo site_url('/cdmx/'); ?>#voces-ciudadanas">Voces ciudadanas</a></li>
 							</ul>
 						</li><li
 						class="[ dropdown--hover ]">
@@ -105,7 +103,7 @@ hacia-el-constituyente">Hacia el constituyente</a></li>
 							<a href="<?php echo site_url('/noticias/'); ?>">Noticias</a>
 						</li><li
 						id="js-btn-cdmx">
-							<a href="#">
+							<a href="#nada">
 								<img class="[ svg icon icon--iconed--small icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg" alt="icono de red social twitter">
 								#SomosCDMX<!-- Contacto - page-contacto.php-->
 							</a>
@@ -119,7 +117,7 @@ hacia-el-constituyente">Hacia el constituyente</a></li>
 								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png"  alt="Logo vertical Constitución CDMX"></a>
 							</div><div
 								class="[ width-col-3 ][ inline-block align-middle ][ text-center ]">
-								<a class="[ pull-right ]" href="#" data-toggle="modal" data-target="#modal-menu">
+								<a class="[ pull-right ]" href="#nada" data-toggle="modal" data-target="#modal-menu">
 									<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg" alt="icono para desplegar navegador">
 								</a>
 							</div>
@@ -207,10 +205,8 @@ hacia-el-constituyente">Hacia el constituyente</a></li>
 							</span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
 								<li><a href="<?php echo site_url('/cdmx/'); ?>#cronica">Crónica</a></li><!-- #cronica -->
-								<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia_el_constituyente
-hacia-el-constituyente
-hacia-el-constituyente">Hacia el constituyente</a></li>
-								<li><a href="<?php echo site_url('/cdmx/'); ?>#voces_ciudadanas">Voces ciudadanas</a></li>
+								<li><a href="<?php echo site_url('/cdmx/'); ?>#hacia-el-constituyente">Hacia el constituyente</a></li>
+								<li><a href="<?php echo site_url('/cdmx/'); ?>#voces-ciudadanas">Voces ciudadanas</a></li>
 							</ul>
 						</li><li
 						class="[ dropdown--hover ]">
@@ -229,7 +225,7 @@ hacia-el-constituyente">Hacia el constituyente</a></li>
 							<a href="<?php echo site_url('/noticias/'); ?>">Noticias</a>
 						</li><li
 						id="js-btn-cdmx">
-							<a href="#">
+							<a href="#nada">
 								<img class="[ svg icon icon--iconed--small icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg">
 								#SomosCDMX<!-- Contacto - page-contacto.php-->
 							</a>
@@ -243,7 +239,7 @@ hacia-el-constituyente">Hacia el constituyente</a></li>
 								<a href="<?php echo site_url('/'); ?> "><img class="[ logo ]" src="<?php echo THEMEPATH; ?>images/logo-gris-03.png" alt="Logo vertical Constitución CDMX"></a>
 							</div><div
 							class="[ width-col-3 ][ inline-block align-middle ][ text-center ]">
-								<a href="#" class="[ pull-right ]" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
+								<a href="#nada" class="[ pull-right ]" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
 							</div>
 						</div>
 					</div>
@@ -301,7 +297,7 @@ hacia-el-constituyente">Hacia el constituyente</a></li>
 
 		<div class="[ soy-cdmx right-370 ][ js-hidden ]">
 			<div class="[ opacity-7 ][ absolute right-10 ]">
-				<a id="js-hide-twitter" href="#">
+				<a id="js-hide-twitter" href="#nada">
 					<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar">
 				</a>
 			</div>

@@ -15,48 +15,40 @@ get_header(); the_post();
 
 
 	<section class="[ container ][ padding--header--id ]">
-		<div class="[ row ]">
+		<div class="[ row ]">	
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
+				<h2>¿Cómo Participo?</h2>
 				<p>Todas y todos los que vivimos y visitamos la Ciudad de México podemos hacer propuestas al Grupo de Trabajo encargado de redactar el Proyecto de la Constitución. Hay cuatro formas de participar. </p>
 			</div>
 		</div>
-	</section>
-
-	<section class="[ bg-gray-light section--bg ][ padding--header--id ]" id="instrucciones">
-		<div class="[ container ]">
-			<div class="[ padding--sides--xsm ][ text-justify ]">
-				<?php the_content(); ?>
+		<div class="[ padding--sides--xsm ]">
+			<?php the_content(); ?>
+		</div>
+		<div class="[ row ][ margin-top ][ padding--sides--xsm ]" id="instrucciones">
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ bg-gray-light ][ padding ]">
+					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">1</p>
+					<p class="[ fz-small ][ text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
+				</div>
 			</div>
-			<div class="[ row ][ margin-top ][ padding--sides--xsm ]">
-				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">1</p>
-						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-					</div>
-					<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ bg-gray-light ][ padding ]">
+					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">2</p>
+					<p class="[ fz-small ][ text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>		
 				</div>
-				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">2</p>
-						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-					</div>
-					<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
+			</div>
+			<div class="[ clearfix ][ visible-xs ]"></div>
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ bg-gray-light ][ padding ]">
+					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">3</p>
+					<p class="[ fz-small ][ text-left ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
 				</div>
-				<div class="[ clearfix ][ visible-xs ]"></div>
-				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">3</p>
-						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-					</div>
-					<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
-				</div>
-				<div class="[ col-xs-6 col-sm-3 ]">
-					<div class="[ margin-bottom--small ]">
-						<p class="[ fz-xlarge ][ inline-block align-middle margin-top--small ]">4</p>
-						<img class="[ width--20 ][ pull-right ][ inline-block align-middle ]" src="<?php echo THEMEPATH; ?>/images/flecha.png">
-					</div>
+			</div>
+			<div class="[ col-xs-6 col-sm-3 ]">
+				<div class="[ bg-gray-light ][ padding ]">
+					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">4</p>
 					<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucion.cdmx.gob.mx/ensayos">
-						<p class="[ fz-small ][ margin-right--large ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
+						<p class="[ fz-small ][ text-left ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
 					</a>
 				</div>
 			</div>
@@ -204,7 +196,7 @@ get_header(); the_post();
 					<p>Esta sección de la plataforma te permite consultar y compartir ensayos con propuestas específicas de contenido para el Proyecto de Constitución de la Ciudad de México.</p>
 					<p>Estos ensayos son públicos y están abiertos a comentarios. Hay dos tipos de ensayos: aquellos realizados por integrantes del Grupo de Trabajo y aquellos compartidos por otras agrupaciones, organizaciones de la sociedad civil, universidades, empresas y dependencias gubernamentales.</p>
 					<p>El Grupo de Trabajo considerará las propuestas contenidas en estos ensayos.</p>
-					<div class="[ text-center ][ margin-bottom ]">
+					<div class="[ text-center ][ margin-bottom padding--top--large padding--bottom ]">
 						<a href="http://constitucion.cdmx.gob.mx/ensayos" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ]">Consulta y comenta los ensayos</a>
 					</div>
 					<p>Comparte tu ensayo llenando el siguiente formulario. Verifica que cumpla con los requisitos de publicación aquí.</p>

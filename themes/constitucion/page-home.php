@@ -1,5 +1,5 @@
 <?php get_header(); the_post();  ?>
-<div id="container_video" class="[ bg-gray--xxlight hero_video ][ margin-bottom--large ]" style="background-image: url('http://pcuervo.com/constitucion/wp-content/uploads/2016/03/Captura-de-pantalla-2016-03-04-a-las-22.16.06.png'); background-size: cover;">
+<div id="container_video" class="[ bg-gray--xxlight hero_video ][ margin-bottom--large ]" style="background-image: url('<?php echo THEMEPATH; ?>images/Home-3.jpg'); background-size: cover;">
 	<video class="[ width-100 ][ center-full video_home ]" autoplay loop>
 		<source src="<?php echo THEMEPATH; ?>video/CCCDMX.mp4" type="video/mp4">
 	</video>

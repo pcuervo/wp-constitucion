@@ -25,7 +25,7 @@ global $wp_query; ?>
 			<div class="[ row ][ margin-bottom--large ]">
 				<div class="[ col-xs-5 no-padding--right ]">
 					<a href="<?php echo $link_noticia; ?>" target="_blank">
-						<img class="[ img-responsive ]" src="<?php echo $url_image; ?>">
+						<img class="[ img-responsive ]" src="<?php echo $url_image; ?>" alt="<?php echo get_the_title(); ?>">
 					</a>
 				</div>
 				<div class="[ col-xs-7 ]">

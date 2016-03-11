@@ -13,7 +13,7 @@
             });
 
         }
-
+ 
         function videoHome(){
             var ancho_nuevo = $(window).width();
             var alto_nuevo = $(window).height();

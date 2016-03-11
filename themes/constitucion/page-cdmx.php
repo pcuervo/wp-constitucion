@@ -116,7 +116,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 		<div class="[ container padding--sides--xsm padding--bottom--large ]">
 			<h2 class="[ no-margin-top ][ text-center ]">Voces ciudadanas</h2>
 			<div class="[ row ][ margin-bottom ]">
-				<?php $voces-ciudadanas = new WP_Query(array(
+				<?php $voces_ciudadanas = new WP_Query(array(
 						'post_type'      => 'voces-ciudadanas',
 						'posts_per_page' => 1,
 						'meta_query' => array(
@@ -135,8 +135,8 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 						)
 					));
 
-				if ( $voces-ciudadanas->have_posts() ) :
-					while ( $voces-ciudadanas->have_posts() ) : $voces-ciudadanas->the_post(); ?>
+				if ( $voces_ciudadanas->have_posts() ) :
+					while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
 						<div class="[ col-xs-12 ][ margin-bottom ]">
 							<div class="[ js-video-wrapper ]">
 
@@ -156,7 +156,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 		<div class="[ container padding--sides--xsm padding--bottom--large ]">
 			<h2 class="[ no-margin-top ]">Grupo de trabajo</h2>
 			<div class="[ row ][ margin-bottom ]">
-				<?php $voces-ciudadanas = new WP_Query(array(
+				<?php $voces_ciudadanas = new WP_Query(array(
 						'post_type'      => 'voces-ciudadanas',
 						'posts_per_page' => 3,
 						'meta_query' => array(
@@ -175,10 +175,10 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 						)
 					));
 
-				if ( $voces-ciudadanas->have_posts() ) :
+				if ( $voces_ciudadanas->have_posts() ) :
 					$count = 0;
 					$count_pasados = 0;
-					while ( $voces-ciudadanas->have_posts() ) : $voces-ciudadanas->the_post(); ?>
+					while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
 						<div class="[ col-xs-12 col-sm-4 ][ margin-bottom ]">
 							<div class="[ js-video-wrapper ]">
 
@@ -199,7 +199,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 			<h2 class="[ no-margin-top ]">Más ciudadanas y ciudadanos</h2>
 			<div class="[ row ][ margin-bottom ]">
 
-					<?php $voces-ciudadanas = new WP_Query(array(
+					<?php $voces_ciudadanas = new WP_Query(array(
 						'post_type'      => 'voces-ciudadanas',
 						'posts_per_page' => 1,
 						'meta_query' => array(
@@ -218,10 +218,10 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 						)
 					));
 
-					if ( $voces-ciudadanas->have_posts() ) :
+					if ( $voces_ciudadanas->have_posts() ) :
 						$count = 0;
 						$count_pasados = 0;
-						while ( $voces-ciudadanas->have_posts() ) : $voces-ciudadanas->the_post(); ?>
+						while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
 							<div class="[ col-xs-12 ][ margin-bottom ]">
 								<div class="[ js-video-wrapper ]">
 

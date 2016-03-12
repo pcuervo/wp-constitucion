@@ -234,3 +234,20 @@
 [11-Mar-2016 01:01:03 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
 [11-Mar-2016 01:01:03 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
 [11-Mar-2016 01:01:03 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 14:30:47 UTC] PHP Parse error:  syntax error, unexpected '=' in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/page-cdmx.php on line 119
+[11-Mar-2016 14:31:11 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 14:31:11 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 14:31:11 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 14:31:11 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 15:18:40 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 15:18:40 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 15:18:40 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 15:18:40 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 15:19:18 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 15:19:18 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 15:19:18 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 15:19:18 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 16:17:01 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 16:17:01 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 16:17:01 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[11-Mar-2016 16:17:01 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252

@@ -1,9 +1,9 @@
 <?php get_header(); the_post();  ?>
 <div id="container_video" class="[ bg-gray--xxlight hero_video ][ margin-bottom--large ]">
 	<video class="[ width-100 ][ center-full video_home ]" autoplay loop >
-		<!-- <source src="<?php echo THEMEPATH; ?>video/cccdmx.webm" type="video/webm">
+		<source src="<?php echo THEMEPATH; ?>video/cccdmx.webm" type="video/webm">
 		<source src="<?php echo THEMEPATH; ?>video/cccdmx.mp4" type="video/mp4">
-		<source src="<?php echo THEMEPATH; ?>video/cccdmx.ogg" type="video/ogg"> -->
+		<source src="<?php echo THEMEPATH; ?>video/cccdmx.ogg" type="video/ogg">
 	</video>
 	<div class="[ logo-video ]">
 		<img class="[ width-100 ][ pull-left ]" src="<?php echo THEMEPATH; ?>images/logo/logo_horizontal-blanco.png" alt="Logo Constitución CDMX blanco">

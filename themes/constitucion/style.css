@@ -8587,6 +8587,10 @@ ul.slick-dots li.slick-active {
     display: inline-block !important;
   }
 }
+.hero_video {
+  background-size: cover;
+  background: url('video/cccdmx.jpg') no-repeat center bottom;
+}
 @media (max-width: 768px) {
   .hero_video .video_home {
     display: none;

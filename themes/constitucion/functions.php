@@ -5,7 +5,6 @@ if(isset($_POST['accion']) AND $_POST['accion'] == 'guarda-ensayo') storeFormTes
 if(isset($_POST['accion']) AND $_POST['accion'] == 'guarda-evento') storeFormEvent($_POST);
 
 
-
 // RENAME THE DEFAULT POST TYPE
 
 function change_post_menu_label() {
@@ -172,6 +171,11 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	require_once('inc/images-background-titles.php');
 
 	require_once('inc/TimeLine.class.php');
+
+	require_once('inc/RetosParticipante.class.php');
+
+
+	
 
 
 

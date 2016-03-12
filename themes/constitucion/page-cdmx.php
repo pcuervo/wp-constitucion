@@ -11,9 +11,9 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<?php the_content(); ?>
 </section>
 
-<section class="[ space-id ][ container padding--sides--xsm ]">
+<section class="[ space-id ][ container padding--sides--xsm ]" id="cronica">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
+		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ][ margin-bottom--large ]">
 			<div class="[ content-acerca-de ]">
 				<h2>Crónica</h2>
 				<blockquote>
@@ -49,7 +49,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 </section><!-- fin slider -->
 
 <section>
-	<!-- slide slick -->
 	<div class=" slider responsive ">
 		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia.jpg" alt="Imagen slick 1"></div>
 		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia2.jpg" alt="Imagen slick 2"></div>

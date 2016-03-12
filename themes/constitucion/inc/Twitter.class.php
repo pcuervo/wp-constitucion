@@ -48,7 +48,7 @@ class Twitter {
 		// return $connection->get("account/verify_credentials");
 		$query = array(
 		  	"q" => "#SomosCDMX",
-		  	"count" => 10,
+		  	"count" => 8,
 		  	"result_type" => "recent"
 		);
 		 

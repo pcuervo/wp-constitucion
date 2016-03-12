@@ -47,7 +47,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		wp_enqueue_script( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js', array('jquery'), '3.1.0', true );
 		wp_enqueue_script( 'functions', JSPATH.'functions.min.js', array('plugins'), '1.0', true );
 
-		
+
 		// localize scripts
 		wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
 		wp_localize_script( 'functions', 'isPageParticipa', (string)is_page( 'participa' ) );
@@ -142,6 +142,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	if ( function_exists('add_image_size') ){
 
 		add_image_size( 'images_gal_cdmx', 263, 124, true );
+		add_image_size( 'images_news_cdmx', 473, 224, true );
 
 		// cambiar el tamaño del thumbnail
 
@@ -231,7 +232,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 	/**
 	 * Regresa la url del attachment especificado
-	 * @param  int     	$post_id 
+	 * @param  int     	$post_id
 	 * @param  string  	$size
 	 * @return [string]  url de la imagen
 	 */
@@ -303,7 +304,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	}
 
 	/**
-	 * STORE FORM TEST 
+	 * STORE FORM TEST
 	 */
 	function storeFormTest($data){
 		global $result;

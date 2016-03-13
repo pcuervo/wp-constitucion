@@ -8,7 +8,7 @@ html, body {
 }
 
 .survey-container {
-	height: calc(100vh - 0px);;
+	height: calc(100vh - 100px);;
 	background: #eeeeee;
 }
 

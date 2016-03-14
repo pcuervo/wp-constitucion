@@ -3609,11 +3609,17 @@ input[type="button"].btn-block {
   line-height: 1.5 !important;
 }
 .btn--large {
-  padding: 15px 24px !important;
-  border: 2px solid #e80e8a !important;
-  font-size: 27px !important;
-  line-height: 1.3333333 !important;
+  padding: 10px 16px;
+  border: 1px solid #e80e8a;
+  line-height: 1.3333333;
   font-weight: 500;
+}
+@media (min-width: 450px) {
+  .btn--large {
+    padding: 15px 24px;
+    border: 2px solid #e80e8a;
+    font-size: 27px;
+  }
 }
 .btn-primary {
   background-color: transparent;

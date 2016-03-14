@@ -59,7 +59,7 @@
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ][ height-100 ]">
 						<li class="[ no-padding--sides ][ menu-desktop__logo padding--header-logo ]">
 							<a class="[ inline-block ]" href="<?php echo site_url('/'); ?> ">
-								<img class="[ logo ][ margin-right margin-top ]" src="<?php echo THEMEPATH; ?>images/logo/logo_vertical.png" alt="logo vertical de Ciudad de México" alt="Logo vertical Constitución CDMX">
+								<img class="[ logo ][ margin-right margin-top ]" src="<?php echo THEMEPATH; ?>images/logo/logo_vertical.png" alt="logo Ciudad de México" alt="Logo vertical Constitución CDMX">
 							</a>
 						</li><li
 						class="[ dropdown--hover dropdown--hover--acerca ][ menu-desktop__acerca ]">

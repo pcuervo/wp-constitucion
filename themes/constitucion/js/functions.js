@@ -163,8 +163,10 @@
             var docs = /docs.google.com/.test(text);
             var dropbox = /dropbox.com/.test(text);
             var onedrive = /onedrive.live.com/.test(text);
+            var driveGoogle = /drive.google/.test(text);
 
-            if (docs || dropbox || onedrive ) {
+
+            if (docs || dropbox || onedrive || driveGoogle ) {
                 return true;
             }else if(text == ''){
                 return true;

@@ -207,7 +207,7 @@ class Sondeo_CDMX_Survey {
 		$next_question = 3;
 		?>
 		<div class="[ survey-container ]">
-			<div class="[ container ][ padding--header ]">
+			<div class="[ container ][ height-100 ]">
 				<div class="[ fs-form-wrap ]" id="fs-form-wrap">
 					<div class="[ fs-title ][ text-center ]">
 						<h1 class="[ ]">Imagina tu ciudad</h1>

@@ -3608,6 +3608,13 @@ input[type="button"].btn-block {
   font-size: 12px !important;
   line-height: 1.5 !important;
 }
+.btn--large {
+  padding: 15px 24px !important;
+  border: 2px solid #e80e8a !important;
+  font-size: 27px !important;
+  line-height: 1.3333333 !important;
+  font-weight: 500;
+}
 .btn-primary {
   background-color: transparent;
   border: 1px solid #e80e8a;
@@ -8586,6 +8593,10 @@ ul.slick-dots li.slick-active {
   .visible-sm-inline-block {
     display: inline-block !important;
   }
+}
+.hero_video {
+  background-size: cover;
+  background: url('video/cccdmx.jpg') no-repeat center bottom;
 }
 @media (max-width: 768px) {
   .hero_video .video_home {

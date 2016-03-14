@@ -43,7 +43,7 @@
 	    $('.date-ensayo').datepicker({
 	        dateFormat : 'yy-mm-dd',
 	        minDate: 0,
-	        onSelect: function(dateText, inst) { 
+	        onSelect: function(dateText, inst) {
 		      	window.dateInicio = dateText;
 		      	$('.date-ensayo-fin').removeAttr("disabled");
 		   }

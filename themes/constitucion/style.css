@@ -8533,7 +8533,7 @@ ul.slick-dots li.slick-active {
 .retos h2 {
   margin-bottom: 20px;
 }
-.retos img {
+.retos .svg {
   margin-bottom: 10px;
 }
 .retos p {
@@ -8829,10 +8829,6 @@ ul.slick-dots li.slick-active {
 .icon--iconed {
   width: 30px !important;
   height: 30px;
-}
-.icon--iconed--xlarge {
-  width: 70px !important;
-  height: 70px;
 }
 /*------------------------------------*\
   #COLOR

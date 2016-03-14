@@ -22,32 +22,32 @@
 		<div class="[ row ][ retos ]">
 			<div class="[ col-xs-12 col-sm-3 ][ margin-bottom--large ]">
 				<h3>Reto 1</h3><!-- reto 1 -->
-				<img class="[ svg icon icon--iconed--xlarge icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/.svg" alt="icono de ensayos">
+				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
 				<p>Titulo del ensayo lorem ipsum</p>
-				<img class="[ svg icon icon--iconed--xlarge icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/.svg" alt="icono de ensayos">
+				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
 				<p>Titulo del ensayo lorem ipsum sit amet</p>
 			</div>
 			<div class="[ col-xs-12 col-sm-3 ][ margin-bottom--large ]">
 				<h3>Reto 2</h3><!-- reto  2-->
-				<img class="[ svg icon icon--iconed--xlarge icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/.svg" alt="icono de ensayos">
+				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
 				<p>Titulo del ensayo lorem</p>
-				<img class="[ svg icon icon--iconed--xlarge icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/.svg" alt="icono de ensayos">
+				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
 				<p>Titulo del ensayo lorem ipsum sit</p>
 			</div>
 			<div class="[ col-xs-12 col-sm-3 ][ margin-bottom--large ]">
 				<h3>Reto 3</h3><!-- reto 3 -->
-				<img class="[ svg icon icon--iconed--xlarge icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/.svg" alt="icono de ensayos">
+				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
 				<p>Titulo del ensayo lorem ipsum sit amet</p>
-				<img class="[ svg icon icon--iconed--xlarge icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/.svg" alt="icono de ensayos">
+				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
 				<p>Titulo del ensayo</p>
-				<img class="[ svg icon icon--iconed--xlarge icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/.svg" alt="icono de ensayos">
+				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
 				<p>Titulo del ensayo lorem ipsum sit amet</p>
 			</div>
 			<div class="[ col-xs-12 col-sm-3 ][ margin-bottom--large ]">
 				<h3>Reto 4</h3><!-- reto 4 -->
-				<img class="[ svg icon icon--iconed--xlarge icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/.svg" alt="icono de ensayos">
+				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
 				<p>Titulo del ensayo</p>
-				<img class="[ svg icon icon--iconed--xlarge icon--thickness-2 icon--stoke ][ color-primary ]"  src="<?php echo THEMEPATH; ?>icons/.svg" alt="icono de ensayos">
+				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
 				<p>Titulo del ensayo lorem ipsum sit amet lorem consectetur adipisicing elit.</p>
 			</div>
 		</div>

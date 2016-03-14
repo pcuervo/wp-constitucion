@@ -285,10 +285,15 @@ a.fs-continue,
 		max-height: 100px;
 	}
 }
-
 @media screen and ( min-height: 567px ){
 	.long-answers--container{
 		max-height: 160px;
+	}
+}
+
+@media screen and ( min-height: 667px ){
+	.long-answers--container{
+		max-height: 225px;
 	}
 }
 
@@ -314,7 +319,7 @@ a.fs-continue,
 .fs-fields > li .fs-radio-custom span {
 	position: relative;
 	float: left;
-	width: 150px;
+	width: 23%;
 	text-align: center;
 	font-weight: 700;
 	font-size: 16px;

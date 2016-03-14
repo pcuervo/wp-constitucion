@@ -74,7 +74,7 @@ $ = jQuery.noConflict();
                 showOtrosRetos();
             }
             $('#js-grandes-retos a').hide();
-            $('a.fs-continue')[0].click();
+            $('.fs-continue')[0].click();
         }
     });
 })();

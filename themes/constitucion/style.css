@@ -7225,7 +7225,7 @@ ul.slides li img {
   bottom: 45%;
   text-indent: -9999px;
   overflow: hidden;
-  top: 40%;
+  top: 90%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -7240,6 +7240,11 @@ ul.slides li img {
     display: none !important;
   }
 }
+@media (min-width: 1200px) {
+  .slick-arrow {
+    top: 92%;
+  }
+}
 button.slick-prev.slick-arrow {
   left: 5%;
   background-image: url('icons/prev.png');
@@ -7251,9 +7256,16 @@ button.slick-next.slick-arrow {
 ul.slick-dots {
   width: 100%;
   text-align: center;
-  position: absolute;
+  position: relative;
   bottom: 0px;
   padding-left: 0px;
+  background-color: #4a4a4a;
+}
+@media (min-width: 768px) {
+  ul.slick-dots {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 ul.slick-dots li {
   display: inline;
@@ -7272,6 +7284,7 @@ ul.slick-dots li {
   width: 8px;
   height: 8px;
   cursor: auto;
+  margin-top: 10px;
 }
 @media (min-width: 768px) {
   ul.slick-dots li {

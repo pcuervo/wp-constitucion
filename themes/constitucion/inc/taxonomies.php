@@ -57,7 +57,7 @@
 				'show_admin_column' => true,
 				'show_in_nav_menus' => true,
 				'query_var'         => true,
-				'rewrite'           => array( 'slug' => 'taxonomy-voces-ciudadanas' ),
+				'rewrite'           => array( 'slug' => 'taxonomy-grandes-retos' ),
 			);
 
 			register_taxonomy( 'taxonomy-grandes-retos', 'ensayos-pubpub', $args );

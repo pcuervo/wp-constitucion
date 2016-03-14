@@ -515,8 +515,8 @@ a.fs-continue,
 /* Progress bar */
 .fs-progress {
 	position: absolute;
-	top: -20px;
-	width: 0%;
+	top: 0;
+	width: 0;
 	height: 0.35em;
 	background: #fffed8;
 	-webkit-transition: width 0.3s ease-in-out;
@@ -526,7 +526,7 @@ a.fs-continue,
 /* Number indicator */
 .fs-numbers {
 	position: absolute;
-	top: -50px;
+	top: 35px;
 	right: 0;
 	overflow: hidden;
 	color: rgba(0,0,0,0.4);
@@ -820,10 +820,6 @@ input[type=text]::-ms-clear {
 
 	.fs-title {
 		padding: 20px;
-	}
-
-	.fs-numbers {
-		//margin: 20px;
 	}
 
 	.fs-nav-dots {

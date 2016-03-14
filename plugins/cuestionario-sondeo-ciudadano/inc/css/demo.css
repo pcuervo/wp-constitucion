@@ -8,8 +8,12 @@ html, body {
 }
 
 .survey-container {
-	height: calc(100vh - 100px);;
+	height: calc(100vh - 55px);
 	background: #eeeeee;
+
+	@media (min-width: 992px) {
+		height: calc(100vh - 100px);
+	}
 }
 
 body {

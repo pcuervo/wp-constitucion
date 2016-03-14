@@ -270,9 +270,11 @@ class Sondeo_CDMX_Survey {
 							<li id="js-grandes-retos" data-question="26">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="grandes-retos">Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</label>
 								<?php $grandes_retos = $this->get_options_grandes_retos(); ?>
-								<?php foreach ( $grandes_retos as $reto ) : ?>
-									<a href="#" class="[ btn btn-skin-boxes fs-show-next ]"><?php echo $reto; ?></a>
-								<?php endforeach; ?>
+								<div class="[ long-answers--container ]">
+									<?php foreach ( $grandes_retos as $reto ) : ?>
+										<a href="#" class="[ btn btn-skin-boxes fs-show-next ]"><?php echo $reto; ?></a>
+									<?php endforeach; ?>
+								</div>
 								<input class="[ fs-anim-lower ]" id="input-retos" name="grandes-retos" type="text" required/>
 							</li>
 							<li id="js-como-imaginas" data-question="28">

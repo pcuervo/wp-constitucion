@@ -270,9 +270,11 @@ class Sondeo_CDMX_Survey {
 							<li id="js-grandes-retos" data-question="26">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="grandes-retos">Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</label>
 								<?php $grandes_retos = $this->get_options_grandes_retos(); ?>
-								<?php foreach ( $grandes_retos as $reto ) : ?>
-									<a href="#" class="[ btn btn-skin-boxes fs-show-next ]"><?php echo $reto; ?></a>
-								<?php endforeach; ?>
+								<div class="[ long-answers--container ]">
+									<?php foreach ( $grandes_retos as $reto ) : ?>
+										<a href="#" class="[ btn btn-skin-boxes fs-show-next ]"><?php echo $reto; ?></a>
+									<?php endforeach; ?>
+								</div>
 								<input class="[ fs-anim-lower ]" id="input-retos" name="grandes-retos" type="text" required/>
 							</li>
 							<li id="js-como-imaginas" data-question="28">
@@ -301,6 +303,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-captcha" data-question="999">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Necesitamos asegurarnos de que no seas un robot. ¿Cuánto es <span></span> + <span></span>?</label>
 								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="" captcha-required/>
+								<p class="[ margin-top--xlarge ][ color-primary ]">Al aceptar, estoy de acuerdo con las políticas de privacidad, términos y condiciones de la plataforma. <a href="">Ver más.</a></p>
 							</li>
 						</ol><!-- /fs-fields -->
 						<button class="fs-submit" type="submit">Enviar respuestas</button>

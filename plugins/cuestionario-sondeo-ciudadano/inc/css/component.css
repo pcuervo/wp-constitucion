@@ -212,6 +212,7 @@ a.fs-continue,
     transform: translate3d(0,-5px,0);
     pointer-events: none;
 }
+
 @media screen and (max-width: 468px){
 	.fs-form-full .fs-fields > li label[data-info]::before  {
 		font-size: 13px;
@@ -255,7 +256,6 @@ a.fs-continue,
 
 .fs-fields input#input-retos[required]{ background-image: none; }
 
-
 .fs-fields input:invalid {
 	box-shadow: none; /* removes red shadow in FF*/
 }
@@ -274,6 +274,22 @@ a.fs-continue,
 
 .fs-fields input:focus {
 	background-color: #eee; /* Fixes chrome bug with placeholder */
+}
+
+.long-answers--container{
+	max-height: 80px;
+	overflow-y: scroll;
+}
+@media screen and ( min-height: 481px ){
+	.long-answers--container{
+		max-height: 100px;
+	}
+}
+
+@media screen and ( min-height: 567px ){
+	.long-answers--container{
+		max-height: 160px;
+	}
 }
 
 .fs-form-overview .fs-fields input:focus {
@@ -822,16 +838,16 @@ input[type=text]::-ms-clear {
 		padding: 20px;
 	}
 
+	.fs-numbers {
+		top: 50px;
+	}
+
 	.fs-nav-dots {
 		right: 25px;
 	}
 
 	button.fs-continue {
-		right: 50px;
-		bottom: 50px;
-		margin: 0;
-		height: 50px;
-		font-size: 2em;
+		bottom: 20px;
 	}
 
 	.fs-continue::after {
@@ -844,26 +860,14 @@ input[type=text]::-ms-clear {
 	}
 
 	.fs-message-error{
-		bottom: 4em;
-		padding: 0 90px 0 2em;
-		width: 100%;
-		font-size: 1.5em;
-		-webkit-transform: translate3d(0,-5px,0);
-		transform: translate3d(0,-5px,0);
-		position: fixed;
+		font-size: 1.3em;
 	}
 
-	.fs-message-error.fs-show {
-		-webkit-transform: translate3d(0,0,0);
-		transform: translate3d(0,0,0);
+	.fs-fields > li .fs-radio-custom span{
+		width: 46%;
 	}
+
 }
-
-//@media (min-width: 0px) and (max-width: 480px) {
-//	button.fs-continue{
-//		bottom: 60px;
-//	}
-//}
 
 @media (min-width: 460px) {
 	.fs-message-error {

@@ -18,37 +18,55 @@
 		</form>
 	</section>
 	<section class="[ container ]">
-		<h2 class="[ margin-bottom ]">Conoce los ensayos relacionador con los retos que elegiste</h2>
+		<h2 class="[ margin-bottom ]">Conoce los ensayos relacionados con los retos que elegiste</h2>
 		<div class="[ row ][ retos ]">
 			<div class="[ col-xs-12 col-sm-3 ][ margin-bottom--large ]">
 				<h3>Reto 1</h3><!-- reto 1 -->
-				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
-				<p>Titulo del ensayo lorem ipsum</p>
-				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
-				<p>Titulo del ensayo lorem ipsum sit amet</p>
+				<a href="">
+					<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
+					<p>Titulo del ensayo lorem ipsum</p>
+				</a>
+				<a href="">
+					<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
+					<p>Titulo del ensayo lorem ipsum sit amet</p>
+				</a>
 			</div>
 			<div class="[ col-xs-12 col-sm-3 ][ margin-bottom--large ]">
 				<h3>Reto 2</h3><!-- reto  2-->
-				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
-				<p>Titulo del ensayo lorem</p>
-				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
-				<p>Titulo del ensayo lorem ipsum sit</p>
+				<a href="">
+					<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
+					<p>Titulo del ensayo lorem</p>
+				</a>
+				<a href="">
+					<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
+					<p>Titulo del ensayo lorem ipsum sit</p>
+				</a>
 			</div>
 			<div class="[ col-xs-12 col-sm-3 ][ margin-bottom--large ]">
 				<h3>Reto 3</h3><!-- reto 3 -->
-				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
-				<p>Titulo del ensayo lorem ipsum sit amet</p>
-				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
-				<p>Titulo del ensayo</p>
-				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
-				<p>Titulo del ensayo lorem ipsum sit amet</p>
+				<a href="">
+					<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
+					<p>Titulo del ensayo lorem ipsum sit amet</p>
+				</a>
+				<a href="">
+					<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
+					<p>Titulo del ensayo</p>
+				</a>
+				<a href="">
+					<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
+					<p>Titulo del ensayo lorem ipsum sit amet</p>
+				</a>
 			</div>
 			<div class="[ col-xs-12 col-sm-3 ][ margin-bottom--large ]">
 				<h3>Reto 4</h3><!-- reto 4 -->
-				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
-				<p>Titulo del ensayo</p>
-				<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
-				<p>Titulo del ensayo lorem ipsum sit amet lorem consectetur adipisicing elit.</p>
+				<a href="">
+					<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
+					<p>Titulo del ensayo</p>
+				</a>
+				<a href="">
+					<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
+					<p>Titulo del ensayo lorem ipsum sit amet lorem consectetur adipisicing elit.</p>
+				</a>
 			</div>
 		</div>
 	</section>

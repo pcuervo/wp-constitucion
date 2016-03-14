@@ -13,7 +13,7 @@
             });
 
         }
- 
+
         function videoHome(){
             var ancho_nuevo = $(window).width();
             var alto_nuevo = $(window).height();
@@ -117,7 +117,7 @@
          */
         $('.date-ensayo').datepicker({
             dateFormat : 'yy-mm-dd',
-            minDate: 0,
+            minDate: new Date(2015, 01 - 1, 01),
             onSelect: function(dateText, inst) {
                 window.dateInicio = dateText;
                 $('.date-ensayo-fin').removeAttr("disabled");
@@ -126,7 +126,7 @@
 
         $('.date-ensayo-fin').datepicker({
             dateFormat : 'yy-mm-dd',
-            minDate: 0
+            minDate: new Date(2015, 01 - 1, 01)
         });
 
         /**

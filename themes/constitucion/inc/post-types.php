@@ -133,8 +133,8 @@
 
 		// FORMULARIO
 		$labels = array(
-			'name'          => 'Formulario cdmx',
-			'singular_name' => 'Formulario cdmx',
+			'name'          => 'Formulario contacto',
+			'singular_name' => 'Formulario contacto',
 			'add_new'       => 'Nuevo mensaje',
 			'add_new_item'  => 'Nuevo mensaje',
 			'edit_item'     => 'Editar mensaje',
@@ -143,7 +143,7 @@
 			'view_item'     => 'Ver mensaje',
 			'search_items'  => 'Buscar mensaje',
 			'not_found'     => 'No se encontro',
-			'menu_name'     => 'Formulario cdmx'
+			'menu_name'     => 'Formulario contacto'
 		);
 
 		$args = array(
@@ -163,35 +163,35 @@
 		register_post_type( 'formulario-cdmx', $args );
 
 		// 
-		$labels = array(
-			'name'          => 'Linea del tiempo',
-			'singular_name' => 'Linea del tiempo',
-			'add_new'       => 'Nuevo evento',
-			'add_new_item'  => 'Nuevo evento',
-			'edit_item'     => 'Editar evento',
-			'new_item'      => 'Nuevo evento',
-			'all_items'     => 'Todos',
-			'view_item'     => 'Ver evento',
-			'search_items'  => 'Buscar evento',
-			'not_found'     => 'No se encontro',
-			'menu_name'     => 'Linea del tiempo'
-		);
+		// $labels = array(
+		// 	'name'          => 'Linea del tiempo',
+		// 	'singular_name' => 'Linea del tiempo',
+		// 	'add_new'       => 'Nuevo evento',
+		// 	'add_new_item'  => 'Nuevo evento',
+		// 	'edit_item'     => 'Editar evento',
+		// 	'new_item'      => 'Nuevo evento',
+		// 	'all_items'     => 'Todos',
+		// 	'view_item'     => 'Ver evento',
+		// 	'search_items'  => 'Buscar evento',
+		// 	'not_found'     => 'No se encontro',
+		// 	'menu_name'     => 'Linea del tiempo'
+		// );
 
-		$args = array(
-			'labels'             => $labels,
-			'public'             => true,
-			'publicly_queryable' => true,
-			'show_ui'            => true,
-			'show_in_menu'       => true,
-			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'linea-del-tiempo' ),
-			'capability_type'    => 'post',
-			'has_archive'        => true,
-			'hierarchical'       => false,
-			'menu_position'      => 6,
-			'supports'           => array( 'title', 'editor' )
-		);
-		register_post_type( 'linea-del-tiempo', $args );
+		// $args = array(
+		// 	'labels'             => $labels,
+		// 	'public'             => true,
+		// 	'publicly_queryable' => true,
+		// 	'show_ui'            => true,
+		// 	'show_in_menu'       => true,
+		// 	'query_var'          => true,
+		// 	'rewrite'            => array( 'slug' => 'linea-del-tiempo' ),
+		// 	'capability_type'    => 'post',
+		// 	'has_archive'        => true,
+		// 	'hierarchical'       => false,
+		// 	'menu_position'      => 6,
+		// 	'supports'           => array( 'title', 'editor' )
+		// );
+		// register_post_type( 'linea-del-tiempo', $args );
 
 		// ensayos
 		$labels = array(
@@ -286,3 +286,10 @@
 		register_post_type( 'ensayos-pubpub', $args );
 
 	});
+
+
+	add_action( 'admin_init', 'quitar_menus' );
+	function quitar_menus() { 
+		remove_menu_page('edit-comments.php');
+		remove_menu_page( 'edit.php?post_type=feedback' );
+	}

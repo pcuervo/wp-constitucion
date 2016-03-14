@@ -1,5 +1,49 @@
 <?php get_header();
+if( ! isset( $_POST['referencia'] ) || $_POST['referencia'] == '' ):
+	echo 'Referencia no registrada';
+else: 
+	$retos = new RetosParticipante($_POST['referencia']);
+	$retos = $retos->get_retos_relacionados(); ?>
 
-	echo 'Aqui maqueta para descargar el pdf y ver retos relacionados';
+	<section class="[ container ][ margin-top--large ][ text-center ]">
+		<img class="[ img-logo ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif" alt="Logo horizontal Constitución CDMX">
+		<h2 class="[ text-center text-uppercase ]">¡Gracias por participar!</h2>
+		<p class="[ text-center ][ js-codigo-referencia ]">Tu número de folio es: <span><?php echo $_POST['referencia']; ?></span></p>
+		<p class="[ text-center text-uppercase ]">Escribe tu nombre y apellido para obtener tu certificado de participación</p>
+		<form class="[ row ][ margin-top--large ][ padding--sides--xsm ]" action="<?php echo site_url('pdf-certificado-de-participacion'); ?>" method="POST" data-parsley-certificado target="_blank">
+			<div class="[ col-xs-12 col-sm-4 ]">
+				<input type="text" name="nombre" class="form-control [ margin-bottom--large ][ input-primary border-gray ]" placeholder="Nombre(s)" required="">
+			</div>
+			<div class="[ col-xs-12 col-sm-4 ]">
+				<input type="text" name="apellidos" class="form-control [ margin-bottom--large ][ input-primary border-gray ]" placeholder="Apellidos" required="">
+			</div>
+			<input type="hidden" name="referencia" value="<?php echo $_POST['referencia']; ?>">
+			<div class="[ col-xs-12 col-sm-4  ]">
+				<button type="submit" class="[ btn btn-secondary color-gray ][ center-block ]">obtener certificado</button>
+			</div>
+		</form>
+	</section>
+	<section class="[ container ]">
+		<h2 class="[ margin-bottom ]">Conoce los ensayos relacionados con los retos que elegiste</h2>
+		<div class="[ row ][ retos ]">
+			<?php if(! empty($retos)):
+				foreach ($retos as $key => $reto):
+					$term = get_term_by('id', $key, 'taxonomy-grandes-retos'); ?>
+					<div class="[ col-xs-12 col-sm-3 ][ margin-bottom--large ]">
+						<h3><?php echo $term->name ?></h3><!-- reto 1 -->
+						<?php foreach ($reto as $key => $pubpub): 
+							$url_pubpub = get_post_meta($pubpub->ID, 'url_pubpub', true); ?>
+							<a href="<?php echo $url_pubpub; ?>" target="_blank">
+								<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
+								<p><?php echo $pubpub->post_title; ?></p>
+							</a>
+						<?php endforeach; ?>
+					</div>
+				<?php endforeach;	
+			endif; ?>  
+		</div>
+	</section>
+<?php endif; ?>
 
-get_footer();
+
+<?php get_footer(); ?>

@@ -4,7 +4,7 @@
 
     $(function(){
         /**
-         * VIDEO FULL
+         * VIDEO FULL 
          */
         if (document.getElementById("container_video") ){
             videoHome();
@@ -190,10 +190,10 @@
         if( parseInt( isPageParticipa ) ){
             addWordValidator();
             $('[data-parsley-certificado]').parsley();
-            $('.js-check-reference-code').submit(function(e){
-                e.preventDefault();
-                surveyExists( $('input[name="ref_code"]').val() );
-            });
+            // $('.js-check-reference-code').submit(function(e){
+            //     e.preventDefault();
+            //     surveyExists( $('input[name="ref_code"]').val() );
+            // });
         }
 
         imgToSvg();
@@ -308,29 +308,6 @@
             new Chart(ctx).Pie(data);
         }
 
-        function createLineChart(){
-            //#piecanvas
-            var ctx = $("#bar-data").get(0).getContext("2d");
-            //pie chart data
-            //sum of values = 360
-            var data = {
-                labels: ['dato', 'dato', 'dato', 'dato', 'dato', 'dato'],
-                datasets: [
-                    {
-                        label: '2010 customers #',
-                        fillColor: '#457390',
-                        data: [2500, 1902, 1041, 610, 1245, 952]
-                    },
-                    {
-                        label: '2014 customers #',
-                        fillColor: '#363636',
-                        data: [3104, 1689, 1318, 589, 1199, 1436]
-                    }
-                ]
-            };
-            new Chart(ctx).Bar(data);
-        }
-
         if( parseInt( isHome ) ){
 
             $(window).scroll(function() {
@@ -394,26 +371,6 @@
             }, 500, function() {
                 $( ".soy-cdmx" ).addClass('js-hidden');
             });
-        }
-
-        function surveyExists( refCode ){
-            console.log( refCode );
-            $.post(
-                ajax_url,
-                {
-                    reference_code:     refCode,
-                    action:             'survey_exists'
-                },
-                function( response ){
-                    if( '0' == response ){
-                        alert( 'No existe ninguna encuesta con folio: ' + refCode );
-                        return;
-                    }
-                    $('.js-codigo-referencia span').text( response );
-                    $('#modal-agradecimiento').modal('toggle');
-                    $('input[name="referencia"]').val( response )
-                }
-            );
         }
 
         function addWordValidator(){

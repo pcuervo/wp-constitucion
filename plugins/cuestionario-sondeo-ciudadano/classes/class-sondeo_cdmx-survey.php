@@ -214,7 +214,7 @@ class Sondeo_CDMX_Survey {
 					</div>
 					<form id="myform" class="fs-form fs-form-full" autocomplete="off">
 						<ol class="fs-fields">
-							<li id="js-donde-vives" data-question="1">
+							<!-- <li id="js-donde-vives" data-question="1">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">¿En dónde vives?</label>
 								<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
 									<option value="" disabled selected>Selecciona una opción</option>
@@ -297,10 +297,11 @@ class Sondeo_CDMX_Survey {
 							<li id="js-cosas-valiosas" data-question="32">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿qué palabras te vienen a la mente?</label>
 								<input class="fs-anim-lower" id="q14" name="cosas-valiosas" type="text" placeholder="Ej. palabra1, palabra2, palabra3" comma-required/>
-							</li>
+							</li> -->
 							<li id="js-captcha" data-question="999">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Necesitamos asegurarnos de que no seas un robot. ¿Cuánto es <span></span> + <span></span>?</label>
 								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="" captcha-required/>
+								<p class="[ margin-top--xlarge ][ color-primary ]">Al aceptar, estoy de acuerdo con las políticas de privacidad, términos y condiciones de la plataforma. <a href="">Ver más.</a></p>
 							</li>
 						</ol><!-- /fs-fields -->
 						<button class="fs-submit" type="submit">Enviar respuestas</button>

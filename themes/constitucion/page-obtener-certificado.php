@@ -18,7 +18,7 @@
 		</form>
 	</section>
 	<section class="[ container ]">
-		<h2 class="[ margin-bottom ]">Conoce los ensayos relacionador con los retos que elegiste</h2>
+		<h2 class="[ margin-bottom ]">Conoce los ensayos relacionados con los retos que elegiste</h2>
 		<div class="[ row ][ retos ]">
 			<div class="[ col-xs-12 col-sm-3 ][ margin-bottom--large ]">
 				<h3>Reto 1</h3><!-- reto 1 -->

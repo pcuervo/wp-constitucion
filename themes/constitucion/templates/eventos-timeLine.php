@@ -49,7 +49,7 @@
 
 				if((int)$evento->type != 3): ?>
 				    <li class="[ box-li <?php echo $class_status.$class_visibility; ?> ][ <?php echo 'date-'.$data_attr; ?> ]">
-				    	<a href="<?php echo get_permalink($evento->ID); ?>">
+				    	<a class="gtm-btn-fecha" href="<?php echo get_permalink($evento->ID); ?>">
 							<p class="[ color-gray ][ fz-small top-date ][ margin-top--date ][ text-uppercase ]"><?php echo $date; ?></p>
 							<div class="[ border-gray--large ]"></div>
 							<div class="[ vertical-line ]"></div>

@@ -25,27 +25,27 @@ get_header(); the_post();
 			<?php the_content(); ?>
 		</div>
 		<div class="[ row ][ margin-top ][ padding--sides--xsm ]" id="instrucciones">
-			<div class="[ col-xs-6 col-sm-3 ]">
-				<div class="[ bg-gray-light ][ padding padding--top-bottom--large ]">
+			<div class="[ col-xs-6 col-md-3 ]">
+				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">1</p>
 					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
 				</div>
 			</div>
-			<div class="[ col-xs-6 col-sm-3 ]">
-				<div class="[ bg-gray-light ][ padding padding--top-bottom--large ]">
+			<div class="[ col-xs-6 col-md-3 ]">
+				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">2</p>
 					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
 				</div>
 			</div>
 			<div class="[ clearfix ][ visible-xs ]"></div>
-			<div class="[ col-xs-6 col-sm-3 ]">
-				<div class="[ bg-gray-light ][ padding padding--top-bottom--large ]">
+			<div class="[ col-xs-6 col-md-3 ]">
+				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">3</p>
 					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
 				</div>
 			</div>
-			<div class="[ col-xs-6 col-sm-3 ]">
-				<div class="[ bg-gray-light ][ padding padding--top-bottom--large ]">
+			<div class="[ col-xs-6 col-md-3 ]">
+				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">4</p>
 					<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucion.cdmx.gob.mx/ensayos">
 						<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
@@ -74,7 +74,7 @@ get_header(); the_post();
 	<section class="[ container ][ padding--sides--xsm--large ][ space-id ]" id="resultados">
 		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
 			<p>Si ya participaste ingresa tu número de folio para obtener tu certificado</p>
-			<form class="[ form-inline ][ js-check-reference-code ][ margin-top ][ text-center ]" data-parsley-certificado>
+			<form class="[ form-inline ][ js-check-reference-code ][ margin-top ][ text-center ]" action="<?php echo site_url('obtener-certificado'); ?>" method="POST" data-parsley-certificado>
 				<div class="[ input-group ]" >
 					<input type="text" name="ref_code" class="[ form-control input--search ][ height-50 ][ fz-xxlarge ]" placeholder="CM5697CX08" required="" data-parsley-required-message="El número de folio es obligatorio">
 					<span class="[ input-group-btn ]">

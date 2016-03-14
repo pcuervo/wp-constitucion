@@ -175,6 +175,9 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 	require_once('inc/RetosParticipante.class.php');
 
+	require_once('inc/relation-retos-taxonomy.php');
+
+
 
 
 

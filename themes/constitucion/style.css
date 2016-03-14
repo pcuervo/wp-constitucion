@@ -8519,6 +8519,33 @@ ul.slick-dots li.slick-active {
   position: absolute;
   top: 0px;
 }
+#parsley-id-84 {
+  margin-top: -20px;
+}
+.img-logo {
+  width: 280px;
+  margin-bottom: 20px;
+}
+.retos,
+.retos p {
+  text-align: center;
+}
+.retos h2 {
+  margin-bottom: 20px;
+}
+.retos .svg {
+  margin-bottom: 10px;
+}
+.retos a {
+  color: #4a4a4a;
+}
+.retos a:hover {
+  color: #e80e8a;
+  text-decoration: none;
+}
+.retos a > p {
+  margin-bottom: 20px;
+}
 @-ms-viewport {
   width: device-width;
 }

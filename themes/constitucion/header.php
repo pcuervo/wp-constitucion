@@ -2,13 +2,13 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="google-site-verification" content="Byb1H1rs62xSD29RXSfE63bDOr6AfaSq7YoUIRs3Bl0" />
 		<title><?php print_title(); ?></title>
 		<!-- Sets initial viewport load and disables zooming -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- SEO -->
 		<meta name="keywords" content="constitucion, constitucion cdmx, cdmx, hola cdmx, adios df, nueva constitucion, constitución, constitución cdmx, notables, constituyentes, asamblea constituyente, política, jefe de gobierno, alcaldías, contribuir, Ciudad de México, ciudad de mexico, México, DF, df, Mexico">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
+		<meta name="google-site-verification" content="7eiU4zOfeujNJJHI4tLwnGWucS5D-jAFRCGXKw8mwZs" />
 		<!-- Compatibility -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta http-equiv="cleartype" content="on">
@@ -31,6 +31,7 @@
 		<?php wp_head(); ?>
 	</head>
 
+	
 	<body <?php body_class(); ?>>
 		<noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-52W5VS"
 		height="0" width="0" class="[ invisible hidden ]"></iframe></noscript>

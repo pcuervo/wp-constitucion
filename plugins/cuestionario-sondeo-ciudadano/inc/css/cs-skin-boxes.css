@@ -293,7 +293,11 @@ div.cs-skin-boxes:focus > span {
 }
 
 @media screen and (min-width: 468px){
-	.btn-skin-boxes{ width: 275px; }
+	.btn-skin-boxes{ width: 49%; }
+}
+
+@media screen and (min-width: 768px){
+	.btn-skin-boxes{ width: 32%; }
 }
 
 .btn-skin-boxes:hover{

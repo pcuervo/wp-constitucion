@@ -261,3 +261,7 @@ Stack trace:
 #3 /datos/www/wp-content/themes/constitucion/inc/Twitter.class.php(55): Abraham\TwitterOAuth\TwitterOAuth->get('search/tweets', Array)
 #4 /datos/www/wp-content/themes/constitucion/inc/Twitter.class.php(22): Twitter->getSearchTweets( in /datos/www/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php on line 345
 >>>>>>> 3debab8f40d8763cb7e2e918bd54323e682c7637
+[14-Mar-2016 14:43:05 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[14-Mar-2016 14:43:05 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[14-Mar-2016 14:43:05 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+[14-Mar-2016 14:43:05 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252

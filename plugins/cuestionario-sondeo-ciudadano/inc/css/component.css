@@ -314,10 +314,6 @@ a.fs-continue,
 	-o-transition: background-color 0.3s ease-out;
 }
 
-@media(max-width: 450px){
-	.fs-fields > li .fs-radio-custom span{ width: 45%; }
-}
-
 .fs-fields > li .fs-radio-custom span:hover{
 	background-color: #e80e8a;
 }
@@ -530,7 +526,7 @@ a.fs-continue,
 /* Number indicator */
 .fs-numbers {
 	position: absolute;
-	top: 50px;
+	top: 35px;
 	right: 0;
 	overflow: hidden;
 	color: rgba(0,0,0,0.4);
@@ -831,8 +827,8 @@ input[type=text]::-ms-clear {
 	}
 
 	button.fs-continue {
-		right: 20px;
-		bottom: 20px;
+		right: 50px;
+		bottom: 50px;
 		margin: 0;
 		height: 50px;
 		font-size: 2em;
@@ -848,9 +844,8 @@ input[type=text]::-ms-clear {
 	}
 
 	.fs-message-error{
-		top: 25%;
-		left: 0;
-		padding: 10px;
+		bottom: 4em;
+		padding: 0 90px 0 2em;
 		width: 100%;
 		font-size: 1.5em;
 		-webkit-transform: translate3d(0,-5px,0);

@@ -15,7 +15,7 @@ get_header(); the_post();
 
 
 	<section class="[ container ][ padding--header--id ]">
-		<div class="[ row ]">	
+		<div class="[ row ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
 				<h2>¿Cómo Participo?</h2>
 				<p>Todas y todos los que vivimos y visitamos la Ciudad de México podemos hacer propuestas al Grupo de Trabajo encargado de redactar el Proyecto de la Constitución. Hay cuatro formas de participar. </p>
@@ -34,7 +34,7 @@ get_header(); the_post();
 			<div class="[ col-xs-6 col-sm-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">2</p>
-					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>		
+					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
 				</div>
 			</div>
 			<div class="[ clearfix ][ visible-xs ]"></div>
@@ -232,7 +232,7 @@ get_header(); the_post();
 						<div class="[ form-group ][ col-xs-12 col-sm-6 ]">
 							<label for="">En caso de que este ensayo o relatoría haya sido elaborado por una institución u organización señala abajo cual es. En caso de más de una, separar por comas.</label>
 							<input name="institucion-u-organizacion" id="institucion-u-organizacion" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="La institución u organización es obligatoria">
-							<label for="">Comparte fotografías del grupo que trabajó este documento.</label>
+							<label for="">Comparte fotografías del grupo que trabajó este documento. Coloca el archivo en Google Drive, Dropbox o OneDrive y a continuación copia la liga.</label>
 							<input name="fotografias_ensayo" id="fotografias_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="Las fotografías son obligatoria">
 							<label for="">Comparte también fotografías con una liga a flicker, instagram o blog</label>
 							<input name="fotografias_redes_ensayo" id="fotografias_redes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]">

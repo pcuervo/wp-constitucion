@@ -4,7 +4,7 @@ get_header(); the_post();
 
 	global $result;
 	if( isset( $result['success'] ) ): ?>
-		<div class="[ bg-success btn-lg text-center ]"><?php echo $result['success']; ?></div>
+		<div class="[ bg-success btn-lg text-center ][ hidden ]"><?php echo $result['success']; ?></div><!-- notice oculto -->
 	<?php endif;  ?>
 
 	<div class="[ bg-image rectangle-small ][ margin--header ][ relative ]" style="background-image: url('<?php echo $img_participa; ?>');">

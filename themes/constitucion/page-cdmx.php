@@ -11,9 +11,9 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<?php the_content(); ?>
 </section>
 
-<section class="[ space-id ][ container padding--sides--xsm ]">
+<section class="[ space-id ][ container padding--sides--xsm ]" id="cronica">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
+		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ][ margin-bottom--large ]">
 			<div class="[ content-acerca-de ]">
 				<h2>Crónica</h2>
 				<blockquote>
@@ -49,16 +49,39 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 </section><!-- fin slider -->
 
 <section>
-	<!-- slide slick -->
 	<div class=" slider responsive ">
-		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="Imagen slick 1"></div>
-		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd2.png" alt="Imagen slick 2"></div>
-		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd3.png" alt="Imagen slick 3"></div>
-		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd4.png" alt="Imagen slick 4"></div>
-		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="Imagen slick 1"></div>
-		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd2.png" alt="Imagen slick 2"></div>
-		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd3.png" alt="Imagen slick 3"></div>
-		<div class="[ item ]"><img src="<?php echo THEMEPATH; ?>images/cd4.png" alt="Imagen slick 4"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia.jpg" alt="Imagen slick 1"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia2.jpg" alt="Imagen slick 2"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia3.jpg" alt="Imagen slick 3"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia4.jpg" alt="Imagen slick 4"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia5.jpg" alt="Imagen slick 5"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia6.jpg" alt="Imagen slick 6"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia7.jpg" alt="Imagen slick 7"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia8.jpg" alt="Imagen slick 8"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia9.jpg" alt="Imagen slick 9"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia10.jpg" alt="Imagen slick 10"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia11.jpg" alt="Imagen slick 11"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia12.jpg" alt="Imagen slick 12"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia13.jpg" alt="Imagen slick 13"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia14.jpg" alt="Imagen slick 14"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia15.jpg" alt="Imagen slick 15"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia16.jpg" alt="Imagen slick 16"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia17.jpg" alt="Imagen slick 17"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia18.jpg" alt="Imagen slick 18"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia19.jpg" alt="Imagen slick 19"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia20.jpg" alt="Imagen slick 20"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia21.jpg" alt="Imagen slick 21"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia22.jpg" alt="Imagen slick 22"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia23.jpg" alt="Imagen slick 23"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia24.jpg" alt="Imagen slick 24"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia25.jpg" alt="Imagen slick 25"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia26.jpg" alt="Imagen slick 26"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia27.jpg" alt="Imagen slick 27"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia28.jpg" alt="Imagen slick 28"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia29.jpg" alt="Imagen slick 29"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia30.jpg" alt="Imagen slick 30"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia31.jpg" alt="Imagen slick 31"></div>
+		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia32.jpg" alt="Imagen slick 32"></div>
 	</div>
 </section>
 
@@ -106,7 +129,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 				<div>
 					Dado que la participación directa de la ciudadanía en esta etapa es limitada, es de suma importancia que esta aproveche y utilice la plataforma Constitución CDMX para que su voz sea escuchada e incorporada al Proyecto de Constitución que envíe el Jefe de Gobierno a la Asamblea Constituyente. No importa cómo decidas participar, tu aportación es esencial para presentar un Proyecto más sólido e incluyente.
 				</div>
-			</div>		
+			</div>
 
 		</div>
 	</div>
@@ -116,7 +139,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 		<div class="[ container padding--sides--xsm padding--bottom--large ]">
 			<h2 class="[ no-margin-top ][ text-center ]">Voces ciudadanas</h2>
 			<div class="[ row ][ margin-bottom ]">
-				<?php $voces-ciudadanas = new WP_Query(array(
+				<?php $voces_ciudadanas = new WP_Query(array(
 						'post_type'      => 'voces-ciudadanas',
 						'posts_per_page' => 1,
 						'meta_query' => array(
@@ -135,8 +158,8 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 						)
 					));
 
-				if ( $voces-ciudadanas->have_posts() ) :
-					while ( $voces-ciudadanas->have_posts() ) : $voces-ciudadanas->the_post(); ?>
+				if ( $voces_ciudadanas->have_posts() ) :
+					while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
 						<div class="[ col-xs-12 ][ margin-bottom ]">
 							<div class="[ js-video-wrapper ]">
 
@@ -156,7 +179,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 		<div class="[ container padding--sides--xsm padding--bottom--large ]">
 			<h2 class="[ no-margin-top ]">Grupo de trabajo</h2>
 			<div class="[ row ][ margin-bottom ]">
-				<?php $voces-ciudadanas = new WP_Query(array(
+				<?php $voces_ciudadanas = new WP_Query(array(
 						'post_type'      => 'voces-ciudadanas',
 						'posts_per_page' => 3,
 						'meta_query' => array(
@@ -175,10 +198,10 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 						)
 					));
 
-				if ( $voces-ciudadanas->have_posts() ) :
+				if ( $voces_ciudadanas->have_posts() ) :
 					$count = 0;
 					$count_pasados = 0;
-					while ( $voces-ciudadanas->have_posts() ) : $voces-ciudadanas->the_post(); ?>
+					while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
 						<div class="[ col-xs-12 col-sm-4 ][ margin-bottom ]">
 							<div class="[ js-video-wrapper ]">
 
@@ -199,7 +222,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 			<h2 class="[ no-margin-top ]">Más ciudadanas y ciudadanos</h2>
 			<div class="[ row ][ margin-bottom ]">
 
-					<?php $voces-ciudadanas = new WP_Query(array(
+					<?php $voces_ciudadanas = new WP_Query(array(
 						'post_type'      => 'voces-ciudadanas',
 						'posts_per_page' => 1,
 						'meta_query' => array(
@@ -218,10 +241,10 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 						)
 					));
 
-					if ( $voces-ciudadanas->have_posts() ) :
+					if ( $voces_ciudadanas->have_posts() ) :
 						$count = 0;
 						$count_pasados = 0;
-						while ( $voces-ciudadanas->have_posts() ) : $voces-ciudadanas->the_post(); ?>
+						while ( $voces_ciudadanas->have_posts() ) : $voces_ciudadanas->the_post(); ?>
 							<div class="[ col-xs-12 ][ margin-bottom ]">
 								<div class="[ js-video-wrapper ]">
 

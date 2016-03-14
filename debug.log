@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [10-Mar-2016 22:52:25 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
 [10-Mar-2016 22:52:25 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
 [10-Mar-2016 22:52:25 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
@@ -251,3 +252,12 @@
 [11-Mar-2016 16:17:01 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
 [11-Mar-2016 16:17:01 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
 [11-Mar-2016 16:17:01 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 252
+=======
+[11-Mar-2016 21:39:05 UTC] PHP Fatal error:  Uncaught exception 'Abraham\TwitterOAuth\TwitterOAuthException' with message 'Resolving timed out after 5519 milliseconds' in /datos/www/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php:345
+Stack trace:
+#0 /datos/www/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(278): Abraham\TwitterOAuth\TwitterOAuth->request('https://api.twi...', 'GET', 'Authorization: ...', Array)
+#1 /datos/www/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(249): Abraham\TwitterOAuth\TwitterOAuth->oAuthRequest('https://api.twi...', 'GET', Array)
+#2 /datos/www/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(178): Abraham\TwitterOAuth\TwitterOAuth->http('GET', 'https://api.twi...', 'search/tweets', Array)
+#3 /datos/www/wp-content/themes/constitucion/inc/Twitter.class.php(55): Abraham\TwitterOAuth\TwitterOAuth->get('search/tweets', Array)
+#4 /datos/www/wp-content/themes/constitucion/inc/Twitter.class.php(22): Twitter->getSearchTweets( in /datos/www/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php on line 345
+>>>>>>> 3debab8f40d8763cb7e2e918bd54323e682c7637

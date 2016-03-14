@@ -324,7 +324,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 			saveMetaDataTest($post_id, $data);
 		}
 
-		$result['success'] = 'Tú ensayo se mando correctamente';
+		$result['success'] = 'Tu ensayo se ha enviado correctamente';
 
 	}
 

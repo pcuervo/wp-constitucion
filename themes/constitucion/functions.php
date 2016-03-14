@@ -176,7 +176,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	require_once('inc/RetosParticipante.class.php');
 
 
-	
+
 
 
 
@@ -300,7 +300,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 			saveMetaDataEvent($post_id, $data);
 		}
 
-		$result['success'] = 'Tú evento se mando correctamente';
+		$result['success'] = 'Tu evento se ha enviado correctamente';
 	}
 
 	/**
@@ -324,7 +324,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 			saveMetaDataTest($post_id, $data);
 		}
 
-		$result['success'] = 'Tú ensayo se mando correctamente';
+		$result['success'] = 'Tu ensayo se ha enviado correctamente';
 
 	}
 

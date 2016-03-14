@@ -301,6 +301,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-captcha" data-question="999">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Necesitamos asegurarnos de que no seas un robot. ¿Cuánto es <span></span> + <span></span>?</label>
 								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="" captcha-required/>
+								<p class="[ margin-top--xlarge ][ color-primary ]">Al aceptar, estoy de acuerdo con las políticas de privacidad, términos y condiciones de la plataforma. <a href="">Ver más.</a></p>
 							</li>
 						</ol><!-- /fs-fields -->
 						<button class="fs-submit" type="submit">Enviar respuestas</button>

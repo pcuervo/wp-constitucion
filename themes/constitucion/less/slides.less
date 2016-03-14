@@ -224,7 +224,8 @@ ul.slides li img{
     bottom: 45%;
     text-indent: -9999px;
     overflow: hidden;
-    top:40%;
+    top:90%;
+    @media (min-width: @screen-lg){ top:92%;}
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -250,9 +251,11 @@ button.slick-next.slick-arrow{
 ul.slick-dots{
     .width-100;
     .text-center;
-    position: absolute;
+    position: relative;
     bottom: 0px;
     padding-left: 0px;
+    @media (min-width: @screen-sm){ padding-top: 15px; padding-bottom: 15px;}
+    background-color: @gray;
 }
 
 ul.slick-dots li{
@@ -273,6 +276,7 @@ ul.slick-dots li{
     width: 8px;
     height: 8px;
     cursor: auto;
+    margin-top: 10px;
     @media (min-width: @screen-sm){
         margin: 8px;
         width: 10px;

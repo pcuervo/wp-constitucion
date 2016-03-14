@@ -2,13 +2,13 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="google-site-verification" content="Byb1H1rs62xSD29RXSfE63bDOr6AfaSq7YoUIRs3Bl0" />
 		<title><?php print_title(); ?></title>
 		<!-- Sets initial viewport load and disables zooming -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- SEO -->
 		<meta name="keywords" content="constitucion, constitucion cdmx, cdmx, hola cdmx, adios df, nueva constitucion, constitución, constitución cdmx, notables, constituyentes, asamblea constituyente, política, jefe de gobierno, alcaldías, contribuir, Ciudad de México, ciudad de mexico, México, DF, df, Mexico">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
+		<meta name="google-site-verification" content="7eiU4zOfeujNJJHI4tLwnGWucS5D-jAFRCGXKw8mwZs" />
 		<!-- Compatibility -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta http-equiv="cleartype" content="on">
@@ -30,6 +30,7 @@
 
 		<?php wp_head(); ?>
 	</head>
+
 
 	<body <?php body_class(); ?>>
 		<noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-52W5VS"
@@ -58,7 +59,7 @@
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ][ height-100 ]">
 						<li class="[ no-padding--sides ][ menu-desktop__logo padding--header-logo ]">
 							<a class="[ inline-block ]" href="<?php echo site_url('/'); ?> ">
-								<img class="[ logo ][ margin-right margin-top ]" src="<?php echo THEMEPATH; ?>images/logo/logo_vertical.png" alt="logo vertical de Ciudad de México" alt="Logo vertical Constitución CDMX">
+								<img class="[ logo ][ margin-right margin-top--large ]" src="<?php echo THEMEPATH; ?>images/logo/logo_horizontal.png" alt="logo Ciudad de México" alt="Logo vertical Constitución CDMX">
 							</a>
 						</li><li
 						class="[ dropdown--hover dropdown--hover--acerca ][ menu-desktop__acerca ]">
@@ -112,7 +113,7 @@
 					<div class="[ bg-light ][ visible-xs visible-sm ]">
 						<div class="[ container ]">
 							<div class="[ width-col-9 ][ inline-block align-middle ]">
-								<a href="<?php echo site_url('/'); ?> "><img class="[ logo margin-top-bottom--small ]" src="<?php echo THEMEPATH; ?>images/logo/logo_vertical.png"  alt="Logo vertical Constitución CDMX"></a>
+								<a href="<?php echo site_url('/'); ?> "><img class="[ logo margin-top-bottom--small ]" src="<?php echo THEMEPATH; ?>images/logo/logo_horizontal.png"  alt="Logo vertical Constitución CDMX"></a>
 							</div><div
 								class="[ width-col-3 ][ inline-block align-middle ][ text-center ]">
 								<a class="[ pull-right ]" href="#nada" data-toggle="modal" data-target="#modal-menu">
@@ -128,7 +129,7 @@
 							<div class="[ container ][ bg-light ]">
 								<div class="[ row ]">
 									<div class="[ col-xs-10 ]">
-										<a href="<?php echo site_url('/'); ?> "><img class="[ logo margin-top-bottom--small ]" src="<?php echo THEMEPATH; ?>images/logo/logo_vertical.png" alt="Logo vertical Constitución CDMX"></a>
+										<a href="<?php echo site_url('/'); ?> "><img class="[ logo margin-top-bottom--small ]" src="<?php echo THEMEPATH; ?>images/logo/logo_horizontal.png" alt="Logo vertical Constitución CDMX"></a>
 									</div>
 									<div class="[ col-xs-2 ][ text-center ][ padding--top ]">
 										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>
@@ -180,7 +181,7 @@
 					<ul class="[ menu-desktop ][ text-center ][ hidden-xs hidden-sm ][ height-100 ]">
 						<li class="[ no-padding--sides padding--top--xsmall padding--header-logo ][ menu-desktop__logo ]">
 							<a class="[ inline-block ]" href="<?php echo site_url('/'); ?>">
-								<img class="[ logo ][ margin-right margin-top-bottom--small ]" src="<?php echo THEMEPATH; ?>images/logo/logo_vertical.png" alt="Logo vertical Constitución CDMX">
+								<img class="[ logo ][ margin-right margin-top--large ]" src="<?php echo THEMEPATH; ?>images/logo/logo_horizontal.png" alt="Logo vertical Constitución CDMX">
 							</a>
 						</li><li
 						class="[ dropdown--hover dropdown--hover--acerca ][ menu-desktop__acerca ]">
@@ -234,7 +235,7 @@
 					<div class="[ bg-light ][ visible-xs visible-sm ]">
 						<div class="[ container ]">
 							<div class="[ width-col-9 ][ inline-block align-middle ]">
-								<a href="<?php echo site_url('/'); ?> "><img class="[ logo margin-top-bottom--small ]" src="<?php echo THEMEPATH; ?>images/logo/logo_vertical.png" alt="Logo vertical Constitución CDMX"></a>
+								<a href="<?php echo site_url('/'); ?> "><img class="[ logo margin-top-bottom--small ]" src="<?php echo THEMEPATH; ?>images/logo/logo_horizontal.png" alt="Logo vertical Constitución CDMX"></a>
 							</div><div
 							class="[ width-col-3 ][ inline-block align-middle ][ text-center ]">
 								<a href="#nada" class="[ pull-right ]" data-toggle="modal" data-target="#modal-menu"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/navigation.svg"></a>
@@ -248,7 +249,7 @@
 							<div class="[ container ][ bg-light ]">
 								<div class="[ row ]">
 									<div class="[ col-xs-10 ]">
-										<a href="<?php echo site_url('/'); ?> "><img class="[ logo margin-top-bottom--small ]" src="<?php echo THEMEPATH; ?>images/logo/logo_vertical.png" alt="Logo vertical Constitución CDMX"></a>
+										<a href="<?php echo site_url('/'); ?> "><img class="[ logo margin-top-bottom--small ]" src="<?php echo THEMEPATH; ?>images/logo/logo_horizontal.png" alt="Logo vertical Constitución CDMX"></a>
 									</div>
 									<div class="[ col-xs-2 ][ text-center ][ padding--top ]">
 										<a type="button" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>

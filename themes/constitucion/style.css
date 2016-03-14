@@ -3608,6 +3608,13 @@ input[type="button"].btn-block {
   font-size: 12px !important;
   line-height: 1.5 !important;
 }
+.btn--large {
+  padding: 15px 24px !important;
+  border: 2px solid #e80e8a !important;
+  font-size: 27px !important;
+  line-height: 1.3333333 !important;
+  font-weight: 500;
+}
 .btn-primary {
   background-color: transparent;
   border: 1px solid #e80e8a;
@@ -8587,6 +8594,10 @@ ul.slick-dots li.slick-active {
     display: inline-block !important;
   }
 }
+.hero_video {
+  background-size: cover;
+  background: url('video/cccdmx.jpg') no-repeat center bottom;
+}
 @media (max-width: 768px) {
   .hero_video .video_home {
     display: none;
@@ -8840,7 +8851,7 @@ header {
   left: 0;
   z-index: 1050;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header {
     height: 100px;
   }
@@ -8860,7 +8871,7 @@ header {
   height: 55px;
   overflow: visible;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .header-home.sticky {
     height: 100px;
   }

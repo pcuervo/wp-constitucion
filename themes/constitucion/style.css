@@ -8851,7 +8851,7 @@ header {
   left: 0;
   z-index: 1050;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header {
     height: 100px;
   }
@@ -8871,7 +8871,7 @@ header {
   height: 55px;
   overflow: visible;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .header-home.sticky {
     height: 100px;
   }

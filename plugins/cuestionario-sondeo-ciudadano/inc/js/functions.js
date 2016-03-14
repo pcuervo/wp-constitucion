@@ -567,9 +567,7 @@ function saveSurvey( answersObj ){
             action:     'save_user_answers'
         },
         function( codigo ){
-            $('.js-codigo-referencia span').text( codigo );
-            $('#modal-agradecimiento').modal('toggle');
-            $('input[name="referencia"]').val( codigo )
+            window.location = siteUrl+"obtener-certificado/?referencia="+codigo;
         }
     );
 }

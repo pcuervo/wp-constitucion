@@ -190,10 +190,10 @@
         if( parseInt( isPageParticipa ) ){
             addWordValidator();
             $('[data-parsley-certificado]').parsley();
-            $('.js-check-reference-code').submit(function(e){
-                e.preventDefault();
-                surveyExists( $('input[name="ref_code"]').val() );
-            });
+            // $('.js-check-reference-code').submit(function(e){
+            //     e.preventDefault();
+            //     surveyExists( $('input[name="ref_code"]').val() );
+            // });
         }
 
         imgToSvg();

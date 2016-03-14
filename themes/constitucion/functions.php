@@ -54,6 +54,8 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		wp_localize_script( 'functions', 'isPageSondeo', (string)is_page( 'sondeo-masivo' ) );
 		wp_localize_script( 'functions', 'isPageCDMX', (string)is_page( 'cdmx' ) );
 		wp_localize_script( 'functions', 'isHome', (string)is_page( 'home' ) );
+		wp_localize_script( 'functions', 'siteUrl', SITEURL );
+
 
 
 		if ( is_page( 'home' ) ) {

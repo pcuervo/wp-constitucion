@@ -1,14 +1,14 @@
 <?php get_header();
-if( ! isset( $_POST['referencia'] ) || $_POST['referencia'] == '' ):
+if( ! isset( $_GET['referencia'] ) || $_GET['referencia'] == '' ):
 	echo 'Referencia no registrada';
 else: 
-	$retos = new RetosParticipante($_POST['referencia']);
+	$retos = new RetosParticipante($_GET['referencia']);
 	$retos = $retos->get_retos_relacionados(); ?>
 
 	<section class="[ container ][ margin-top--large ][ text-center ]">
 		<img class="[ img-logo ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif" alt="Logo horizontal Constitución CDMX">
 		<h2 class="[ text-center text-uppercase ]">¡Gracias por participar!</h2>
-		<p class="[ text-center ][ js-codigo-referencia ]">Tu número de folio es: <span><?php echo $_POST['referencia']; ?></span></p>
+		<p class="[ text-center ][ js-codigo-referencia ]">Tu número de folio es: <span><?php echo $_GET['referencia']; ?></span></p>
 		<p class="[ text-center text-uppercase ]">Escribe tu nombre y apellido para obtener tu certificado de participación</p>
 		<form class="[ row ][ margin-top--large ][ padding--sides--xsm ]" action="<?php echo site_url('pdf-certificado-de-participacion'); ?>" method="POST" data-parsley-certificado target="_blank">
 			<div class="[ col-xs-12 col-sm-4 ]">
@@ -17,7 +17,7 @@ else:
 			<div class="[ col-xs-12 col-sm-4 ]">
 				<input type="text" name="apellidos" class="form-control [ margin-bottom--large ][ input-primary border-gray ]" placeholder="Apellidos" required="">
 			</div>
-			<input type="hidden" name="referencia" value="<?php echo $_POST['referencia']; ?>">
+			<input type="hidden" name="referencia" value="<?php echo $_GET['referencia']; ?>">
 			<div class="[ col-xs-12 col-sm-4  ]">
 				<button type="submit" class="[ btn btn-secondary color-gray ][ center-block ]">obtener certificado</button>
 			</div>

@@ -8536,7 +8536,8 @@ ul.slick-dots li.slick-active {
 .retos .svg {
   margin-bottom: 10px;
 }
-.retos p {
+.retos a {
+  color: #4a4a4a;
   margin-bottom: 20px;
 }
 @-ms-viewport {

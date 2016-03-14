@@ -8538,6 +8538,12 @@ ul.slick-dots li.slick-active {
 }
 .retos a {
   color: #4a4a4a;
+}
+.retos a:hover {
+  color: #e80e8a;
+  text-decoration: none;
+}
+.retos a > p {
   margin-bottom: 20px;
 }
 @-ms-viewport {

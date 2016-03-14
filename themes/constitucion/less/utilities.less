@@ -612,8 +612,15 @@
 	&, p {.text-center;}
 	h2{ .margin-bottom;}
 	.svg{ .margin-bottom--small;}
-	a{
+	& a{
 		color: @gray;
-		.margin-bottom;
+
+		&:hover{
+			color: @primary;
+			text-decoration: none;
+		}
+		&>p{
+			.margin-bottom;
+		}
 	}
 }

@@ -3615,6 +3615,11 @@ input[type="button"].btn-block {
   line-height: 1.3333333 !important;
   font-weight: 500;
 }
+@media (max-width: 992px) {
+  .btn--large {
+    line-height: .8em !important;
+  }
+}
 .btn-primary {
   background-color: transparent;
   border: 1px solid #e80e8a;

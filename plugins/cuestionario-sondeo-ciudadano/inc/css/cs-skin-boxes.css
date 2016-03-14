@@ -273,6 +273,7 @@ div.cs-skin-boxes:focus > span {
 	width: 100%;
 	margin-bottom: 5px;
 	border: 2px solid #999;
+	background-color: #eee;
     text-transform: uppercase;
     font-family: "Alegreya Sans",sans-serif;
     color: #4a4a4a;

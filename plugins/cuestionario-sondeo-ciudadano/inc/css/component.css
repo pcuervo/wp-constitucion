@@ -674,6 +674,7 @@ button.fs-continue {
 	margin: 0;
 	font-size: 1.25em;
     position: absolute; right: 0; bottom: 60px;
+    z-index: 9999;
 }
 
 .fs-continue::after {
@@ -907,6 +908,10 @@ div.fade-out:active{
 	opacity: 1;
 }
 
+.accept-terms{
+	margin-top: 80px;
+}
+
 
 
 /*------------------------------------*\
@@ -927,5 +932,14 @@ div.fade-out:active{
 		position: relative; top: -20px;
 		max-height: 100px;
 	}
+
+	.fs-fields > li label.fs-field-label{
+		padding-bottom: 0.3em;
+		font-size: 22px;
+	}
+
+	.fs-fields input{ font-size: 1em; }
+
+	.accept-terms{ margin-top: 40px; }
 
 }

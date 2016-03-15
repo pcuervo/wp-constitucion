@@ -485,7 +485,7 @@
 				message = 'Por favor llena este campo antes de continuar.';
 				break;
             case 'MISSING_WORDS':
-                message = 'Por favor ingresa 3 palabras separadas por comas. Ej. palabra1, palabra2, palabra3';
+                message = 'Ingresa 3 palabras separadas por comas. Ej. ejemplo, término, palabra';
                 break;
             case 'WRONG_CAPTCHA':
                 message = 'La respuesta es incorrecta, por favor inténtalo nuevamente.';

@@ -56,6 +56,7 @@ get_header(); the_post();
 			</div>
 		</div>
 	</section>
+
 	<section class="">
 		<div class="[ container ][ margin-bottom ]">
 			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">

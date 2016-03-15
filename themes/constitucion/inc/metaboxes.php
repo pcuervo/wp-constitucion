@@ -106,12 +106,12 @@
 
 		$tipo = get_post_meta( $post->ID, 'tipo-de-evento', true );
 		$checked_1 = $tipo == 1 ? 'checked' : '';
-		$checked_2 = $tipo == 2 ? 'checked' : ''; 
-		$checked_3 = $tipo == 3 ? 'checked' : ''; 
+		$checked_2 = $tipo == 2 ? 'checked' : '';
+		$checked_3 = $tipo == 3 ? 'checked' : '';
 
 		echo "<label for='tipo-de-evento' class='label-paquetes'>Tipo de evento: </label>";?><br><br>
-		<input type="radio" name="tipo-de-evento" value="1" <?php echo $checked_1; ?> > Tipo 1<br>
-  		<input type="radio" name="tipo-de-evento" value="2" <?php echo $checked_2; ?> > Tipo 2<br>
+		<input type="radio" name="tipo-de-evento" value="1" <?php echo $checked_1; ?> > Institucional<br>
+  		<input type="radio" name="tipo-de-evento" value="2" <?php echo $checked_2; ?> > Ciudadano<br>
   		<input type="radio" name="tipo-de-evento" value="3" <?php echo $checked_3; ?> > Nota destacada<br>
 
 	<?php }
@@ -203,9 +203,9 @@
 		echo "<label for='pagina_web_ensayo' class='label-paquetes'>Página Web: </label>";
 		echo "<input type='text' class='widefat' id='pagina_web_ensayo' name='pagina_web_ensayo' value='$pagina_web_ensayo' /><br><br>";
 
-		
+
 		$checked_1 = $recibir_informacion == 'si' ? 'checked' : '';
-		$checked_2 = $recibir_informacion == 'no' ? 'checked' : ''; 
+		$checked_2 = $recibir_informacion == 'no' ? 'checked' : '';
 		$default = ($checked_1 == '' AND $checked_2 == '') ? 'checked' : '';
 
 		echo "<label for='recibir_mas_informacion' class='label-paquetes'>Quieres recibir más información: </label><br><br> ";
@@ -264,7 +264,7 @@
 		echo "<input type='text' class='widefat' id='institucion_evento' name='institucion_evento' value='$institucion_evento' /><br><br>";
 
 		$checked_1 = $asistencia_invitacion == 'si' ? 'checked' : '';
-		$checked_2 = $asistencia_invitacion == 'no' ? 'checked' : ''; 
+		$checked_2 = $asistencia_invitacion == 'no' ? 'checked' : '';
 		$default = ($checked_1 == '' AND $checked_2 == '') ? 'checked' : '';
 
 		echo "<label for='asistencia_invitacion' class='label-paquetes'>Asistentes: </label><br><br> ";
@@ -296,7 +296,7 @@
 
 		echo "<label for='link_noticia' class='label-paquetes'>Link noticia: </label>";
 		echo "<input type='text' class='widefat' id='link_noticia' name='link_noticia' value='$link_noticia' /><br><br>";
-		
+
 	}
 
 
@@ -308,15 +308,15 @@
 	add_action('save_post', function($post_id){
 
 
-		if ( ! current_user_can('edit_page', $post_id)) 
+		if ( ! current_user_can('edit_page', $post_id))
 			return $post_id;
 
 
-		if ( defined('DOING_AUTOSAVE') and DOING_AUTOSAVE ) 
+		if ( defined('DOING_AUTOSAVE') and DOING_AUTOSAVE )
 			return $post_id;
-		
-		
-		if ( wp_is_post_revision($post_id) OR wp_is_post_autosave($post_id) ) 
+
+
+		if ( wp_is_post_revision($post_id) OR wp_is_post_autosave($post_id) )
 			return $post_id;
 
 
@@ -326,7 +326,7 @@
 			update_post_meta($post_id, 'ubicacion_kiosko', $_POST['ubicacion_kiosko']);
 		}
 
-		
+
 
 		if ( isset($_POST['url_pubpub']) and check_admin_referer(__FILE__, '_estra_pubpub_nonce') ){
 			update_post_meta($post_id, 'url_pubpub', $_POST['url_pubpub']);
@@ -342,7 +342,7 @@
 
 		if ( isset($_POST['tipo-de-evento']) and check_admin_referer(__FILE__, '_evento_nonce') ){
 			update_post_meta($post_id, 'tipo-de-evento', $_POST['tipo-de-evento']);
-			
+
 		}
 
 		if ( isset($_POST['video_voces']) and check_admin_referer(__FILE__, '_video_nonce') ){
@@ -389,7 +389,7 @@
 			update_post_meta( $post_id, 'correo_electronico_ensayo', $_POST['correo_electronico_ensayo'] );
 			update_post_meta( $post_id, 'pagina_web_ensayo', $_POST['pagina_web_ensayo'] );
 			update_post_meta( $post_id, 'recibir_mas_informacion', $_POST['recibir_mas_informacion'] );
-		
+
 		}
 
 		if ( isset($_POST['link_noticia']) and check_admin_referer(__FILE__, '_extras_noticia_nonce')){
@@ -398,7 +398,7 @@
 			delete_post_meta($post_id, 'link_noticia');
 		}
 
-		
+
 
 		// Guardar correctamente los checkboxes
 		/*if ( isset($_POST['_checkbox_meta']) and check_admin_referer(__FILE__, '_checkbox_nonce') ){

@@ -17,12 +17,10 @@ get_header(); the_post();
 	<section class="[ container ][ padding--header--id ]">
 		<div class="[ row ][ margin-bottom ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
+				<?php $participa = get_page_by_path('participa'); ?>
 				<h2>¿Cómo Participo?</h2>
-				<p>Todas y todos los que vivimos y visitamos la Ciudad de México podemos hacer propuestas al Grupo de Trabajo encargado de redactar el Proyecto de la Constitución. Hay cuatro formas de participar. </p>
+				<?php the_content(); ?>
 			</div>
-		</div>
-		<div class="[ padding--sides--xsm ]">
-			<?php the_content(); ?>
 		</div>
 		<div class="[ row ][ margin-top ][ padding--sides--xsm ]" id="instrucciones">
 			<div class="[ col-xs-6 col-md-3 ]">
@@ -65,13 +63,13 @@ get_header(); the_post();
 		</div>
 		<div id="map_canvas" class="mapping" style="width: 100%; height: 500px;"></div>
 	</section>
-
+	<?php $imagina = get_page_by_path('imagina-tu-ciudad');
+	$image_imagina = attachment_image_url( $imagina->ID, 'full' ); ?>
 	<section class="[ container ][ padding--sides--xsm--large ][ space-id ]" id="imagina-ciudad">
 		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
-			<h2 class="[ no-margin-top margin-bottom ]">Imagina tu ciudad</h2>
-			<p>¿Cuál es el espíritu de nuestra Ciudad y qué queremos para su futuro?</p>
-			<p>Queremos conocer tu visión sobre la Ciudad de México. Nos interesa saber cuáles crees que son sus mayores retos y qué tipo de oportunidades te brinda. </p>
-			<p>Contestar este cuestionario toma aproximadamente 10 minutos. Al final, recibirás un certificado de participación a nombre del Grupo de Trabajo. </p>
+			
+			<h2 class="[ no-margin-top margin-bottom ]"><?php echo $imagina->post_title; ?></h2>
+			<?php echo wpautop( $imagina->post_content );  ?>
 			<div class="[ text-center ][ margin-top ]">
 				<a class="[ btn btn-primary btn-large ] gtm-btn-participa" href="<?php echo site_url('/sondeo-masivo/'); ?> ">
 					Participa
@@ -99,17 +97,20 @@ get_header(); the_post();
 	</section>
 
 	<div class="[ descanso-visual ]">
-		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="fotografía grafitti pared señorita">
+
+		<?php if ( has_post_thumbnail($imagina->ID) ): ?>
+			<img src="<?php echo $image_imagina; ?>" alt="fotografía plaza de la revolución">
+		<?php else: ?>
+			<p class="text-warning">Falta la Imagen de Sobre la constitución</p>
+		<?php endif; ?>
 	</div>
 
 	<section class="[ bg-gray--fondo section--bg ][ space-id ]"  id="peticiones">
 		<div class="[ container ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ] [ text-justify ]">
-				<h2 class="">Peticiones</h2>
-				<p>¿Tienes una propuesta concreta para el contenido del Proyecto de Constitución? Aprovecha la plataforma Change.org para hacer una petición, juntar firmas e interactuar directamente con el Grupo de Trabajo.</p>
-				<p>Change.org es una plataforma mundial que empodera a las personas para generar cambio a través de peticiones que pueden ser firmadas por cualquier persona con acceso a internet. Estas firmas generan moméntum que consigue que gobiernos y empresas respondan y rindan cuentas.</p>
-				<p>Las peticiones en Change.org que rebasen las cinco mil firmas serán respondidas por la Secretaría Técnica del Grupo de Trabajo.</p>
-				<p>Las peticiones que rebasen las diez mil firmas recibirán una invitación para que tres representantes del Grupo de Trabajo reciban al iniciador y se presente su propuesta ante el pleno del Grupo.</p>
+				<?php $peticiones = get_page_by_path('peticiones'); ?>
+				<h2 class="[ no-margin-top margin-bottom ]"><?php echo $peticiones->post_title; ?></h2>
+				<?php echo wpautop( $peticiones->post_content );  ?>
 			</div>
 			<div class="[ clear ]"></div>
 			<div class="[ text-center ][ margin-top ]">
@@ -117,15 +118,14 @@ get_header(); the_post();
 			</div>
 		</div>
 	</section>
-
+	<?php  $encuentros = get_page_by_path('encuentros-ciudadanos'); 
+	$image_encuentros = attachment_image_url( $encuentros->ID, 'full' ); ?>
 	<section class="[ container ][ space-id ]" id="dialogos-publicos">
 		<div class="[ row ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
-				<h2 class="[ no-margin-top ]">Encuentros ciudadanos</h2>
-				<p>¿Te interesan los temas relacionados al proceso de Reforma Política de la Ciudad de México?</p>
-				<p>Esta sección te permite conocer dónde y cuándo se llevarán a cabo eventos relacionados a la redacción del Proyecto de Constitución de la Ciudad de México. Existen congresos, asambleas y otros foros, tanto oficiales como ciudadanos, que funcionan como espacios de diálogo y reflexión sobre este proceso histórico.</p>
-				<p>Organiza un encuentro con tu grupo, organización, institución o colonia y comparte los detalles llenando el siguiente formulario.</p>
-				<p>Escribe un ensayo a modo de relatoría del encuentro, integra las propuestas específicas abordadas por los participantes y compártelo a través de esta plataforma.</p>
+				<?php  $encuentros = get_page_by_path('encuentros-ciudadanos'); ?>
+				<h2 class="[ no-margin-top ]"><?php echo $encuentros->post_title; ?></h2>
+				<?php echo wpautop( $encuentros->post_content );  ?>
 			</div>
 		</div>
 	</section>
@@ -196,17 +196,21 @@ get_header(); the_post();
 	</div>
 
 	<div class="[ descanso-visual ]">
-		<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="fotografía grafitti pared señorita">
+		<?php if ( has_post_thumbnail($imagina->ID) ): ?>
+			<img src="<?php echo $image_encuentros; ?>" alt="fotografía grafitti pared señorita">
+		<?php else: ?>
+			<p class="text-warning">Falta la Imagen de Sobre la constitución</p>
+		<?php endif; ?>
+		
 	</div>
 
 	<section class="[ bg-gray--fondo section--bg ][ space-id ][ no-margin--bottom ]">
 		<div class="[ container ]" id="ensayos">
 			<article class="[ row ][ margin-bottom ]">
 				<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
-					<h2 class="">Ensayo</h2>
-					<p>Esta sección de la plataforma te permite consultar y compartir ensayos con propuestas específicas de contenido para el Proyecto de Constitución de la Ciudad de México.</p>
-					<p>Estos ensayos son públicos y están abiertos a comentarios. Hay dos tipos de ensayos: aquellos realizados por integrantes del Grupo de Trabajo y aquellos compartidos por otras agrupaciones, organizaciones de la sociedad civil, universidades, empresas y dependencias gubernamentales.</p>
-					<p>El Grupo de Trabajo considerará las propuestas contenidas en estos ensayos.</p>
+					<?php $ensayo = get_page_by_path('ensayo'); ?> 
+					<h2 class=""><?php echo $ensayo->post_title; ?></h2>
+					<?php echo wpautop( $ensayo->post_content );  ?>
 					<div class="[ text-center ][ margin-bottom padding--top--large padding--bottom ]">
 						<a href="http://constitucioncdmx.pubpub.org/" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ][ gtm-btn-ensayo ]">Consulta y comenta los ensayos</a>
 					</div>

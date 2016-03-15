@@ -15,12 +15,12 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ][ margin-bottom--large ]">
 			<div class="[ content-acerca-de ]">
-				<h2>Crónica</h2>
-				<p>La Ciudad de México es un asentamiento cuya historia se remonta casi 700 años atrás, desde la fundación de Tenochtitlan en 1325 hasta la Ciudad de México que vivimos hoy. En estos años, la ciudad ha experimentado cambios dramáticos en su paisaje natural, físico, administrativo, político y social. Ha sido un espacio de lucha, de reinvención y vanguardia. Hoy nos encontramos en un momento histórico con la creación formal de la Ciudad de México, la cual se convierte en el entidad 32 del país, avanza en su autonomía y podrá contar con su propio congreso y constitución. <br><br>El año de 1985 constituye un punto de inflexión en la historia de la Ciudad de México. El sismo que tuvo lugar ese año impulsó la solidaridad entre ciudadanos, fortaleció la identidad colectiva y el deseo compartido por una ciudad donde sus habitantes pudieran ser actores en su construcción e incidir en las decisiones que se toman sobre ella. Este acontecimiento fue un catalizador de la democracia en la ciudad y el inicio de un proceso de la construcción de ciudad que tenemos hoy.</p>
+				<?php $cronica = get_page_by_path('cronica'); ?>
+				<h2><?php echo $cronica->post_title; ?></h2>
+				<?php echo wpautop( $cronica->post_content );  ?>
 			</div>
 		</div>
 	</div>
-	<?php echo wpautop( do_shortcode(get_post_meta($post->ID, 'contenido_extra', true) ) ); ?>
 </section>
 
 <!-- slider -->
@@ -84,36 +84,9 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 			<div class="[ content-acerca-de ][ margin-bottom ]">
-				<h2>Hacia el constituyente</h2>
-				<p>
-					La Asamblea Constituyente de la Ciudad de México es el órgano encargado de recibir, enmendar y aprobar el Proyecto de Constitución que le presente el Jefe de Gobierno durante su primera sesión de trabajo, el 15 de septiembre de 2016. Será la Asamblea quien tenga la palabra final sobre la futura Constitución Política de la Ciudad de México. Es importante que la ciudadanía utilice esta plataforma para lograr un Proyecto incluyente que comprenda la voz de los que convivimos en la ciudad puesto que las maneras de participar en un momento posterior son limitadas.
-
-					La creación de la Asamblea está estipulada en el Decreto de Reforma Política de la Ciudad de México, publicado el 29 de enero de 2015 en el Diario Oficial de la Federación tras extensas sesiones de trabajo entre el Gobierno del Distrito Federal, los partidos políticos y el poder Legislativo Federal. Su conformación fue decidida por las diputadas y diputados del Congreso de la Unión y es de la siguiente forma:
-
-					60 diputados electos por voto popular bajo principio de representación proporcional sobre una lista plurinominal de candidatos para una sola circunscripción electoral (la Ciudad de México).
-					14 senadores electos por dos tercios de los representantes en el Senado de la República.
-					14 diputados federales designados por voto de las dos terceras partes de los representantes en la Cámara de Diputados.
-					6 diputados designados por el Presidente de la República
-					6 diputados designados por el Jefe de Gobierno del Distrito Federal
-
-					La organización de las elecciones de las diputadas y diputados de representación proporcional se llevará a cabo el día Domingo 5 de Junio de 2016. La organización de estas elecciones es facultad del Instituto Nacional Electoral (INE). Consulta el portal de este instituto para conocer los pormenores de las elecciones.
-				</p>
-			</div>
-			<div class="[ content-acerca-de ]">
-				<h3>Candidatos independientes</h3>
-				<div>
-					Las ciudadanas y ciudadanos que no están adscritos a un partido político pueden contender por un puesto en la Asamblea Constituyente como candidatos independientes. Para conocer más detalles de este proceso visita el sitio oficial de las Elecciones de la Asamblea Constituyente de la Ciudad de México.
-				</div>
-			</div>
-			<div class="[ content-acerca-de ]" >
-				<h3>La Asamblea Constituyente</h3>
-				<p>
-					La Asamblea Constituyente se instalará el 15 de Septiembre de 2016 y deberá aprobar una Constitución Política a más tardar el 31 de Enero de 2017. Las sesiones de trabajo se llevarán a cabo en la Antigua sede del Senado de la República, en Xicoténcatl. La Asamblea Constituyente tiene la facultad de discutir, modificar, adicionar y votar el Proyecto de Constitución Política elaborado por el Grupo de Trabajo constituido para esta labor.
-				</p>
-				<h3>Participación ciudadana</h3>
-				<div>
-					Dado que la participación directa de la ciudadanía en esta etapa es limitada, es de suma importancia que esta aproveche y utilice la plataforma Constitución CDMX para que su voz sea escuchada e incorporada al Proyecto de Constitución que envíe el Jefe de Gobierno a la Asamblea Constituyente. No importa cómo decidas participar, tu aportación es esencial para presentar un Proyecto más sólido e incluyente.
-				</div>
+				<?php $hacia_constituyente = get_page_by_path('hacia-el-constituyente'); ?>
+				<h2><?php echo $hacia_constituyente->post_title; ?></h2>
+				<?php echo wpautop( $hacia_constituyente->post_content ); ?>
 			</div>
 
 		</div>

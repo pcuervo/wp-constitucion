@@ -227,5 +227,68 @@
 			wp_insert_post( $page, true );
 		}
 
+		if( ! get_page_by_path('cronica') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Crónica',
+				'post_name'   => 'cronica',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+
+		if( ! get_page_by_path('hacia-el-constituyente') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Hacia el constituyente',
+				'post_name'   => 'hacia-el-constituyente',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+
+		if( ! get_page_by_path('imagina-tu-ciudad') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Imagina tu ciudad',
+				'post_name'   => 'imagina-tu-ciudad',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+		if( ! get_page_by_path('peticiones') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Peticiones',
+				'post_name'   => 'peticiones',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+		if( ! get_page_by_path('encuentros-ciudadanos') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Encuentros ciudadanos',
+				'post_name'   => 'encuentros-ciudadanos',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+
+		if( ! get_page_by_path('ensayo') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Ensayo',
+				'post_name'   => 'ensayo',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
 
 	});

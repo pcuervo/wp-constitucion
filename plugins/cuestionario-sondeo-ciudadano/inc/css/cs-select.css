@@ -134,3 +134,15 @@ div.cs-select:focus {
 .cs-select li.cs-optgroup > span {
 	cursor: default;
 }
+
+
+
+/*------------------------------------*\
+    #Denky tablet specifics
+\*------------------------------------*/
+
+@media screen and ( height: 431px ){
+
+	.cs-select span{ padding: 0.5em; }
+
+}

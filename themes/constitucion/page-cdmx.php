@@ -1,7 +1,7 @@
 <?php get_header(); the_post();
 $img_cdmx = get_option( 'img_cdmx' ); ?>
 
-<div class="[ bg-image rectangle-small ][ relative ]" style="background-image: url('<?php echo $img_cdmx; ?>');">
+<div class="[ bg-image rectangle-small ][ relative gtm-btn-banner ]" style="background-image: url('<?php echo $img_cdmx; ?>');">
 	<div class="[ width-100 height-100 ]">
 		<h1 class="[ container ][ text-uppercase text-center ][ no-margin ][ center-full ][ color-light ][ letter-spacing ][ hidden ]">Ciudad de México</h1>
 	</div>
@@ -45,38 +45,38 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 
 <section>
 	<div class=" slider responsive ">
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia.jpg" alt="Imagen slick 1"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia2.jpg" alt="Imagen slick 2"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia3.jpg" alt="Imagen slick 3"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia4.jpg" alt="Imagen slick 4"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia5.jpg" alt="Imagen slick 5"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia6.jpg" alt="Imagen slick 6"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia7.jpg" alt="Imagen slick 7"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia8.jpg" alt="Imagen slick 8"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia9.jpg" alt="Imagen slick 9"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia10.jpg" alt="Imagen slick 10"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia11.jpg" alt="Imagen slick 11"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia12.jpg" alt="Imagen slick 12"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia13.jpg" alt="Imagen slick 13"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia14.jpg" alt="Imagen slick 14"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia15.jpg" alt="Imagen slick 15"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia16.jpg" alt="Imagen slick 16"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia17.jpg" alt="Imagen slick 17"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia18.jpg" alt="Imagen slick 18"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia19.jpg" alt="Imagen slick 19"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia20.jpg" alt="Imagen slick 20"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia21.jpg" alt="Imagen slick 21"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia22.jpg" alt="Imagen slick 22"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia23.jpg" alt="Imagen slick 23"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia24.jpg" alt="Imagen slick 24"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia25.jpg" alt="Imagen slick 25"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia26.jpg" alt="Imagen slick 26"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia27.jpg" alt="Imagen slick 27"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia28.jpg" alt="Imagen slick 28"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia29.jpg" alt="Imagen slick 29"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia30.jpg" alt="Imagen slick 30"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia31.jpg" alt="Imagen slick 31"></div>
-		<div class="[ item ]"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia32.jpg" alt="Imagen slick 32"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia.jpg" alt="Imagen slick 1"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1325'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia2.jpg" alt="Imagen slick 2"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1521'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia3.jpg" alt="Imagen slick 3"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1521'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia4.jpg" alt="Imagen slick 4"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1524'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia5.jpg" alt="Imagen slick 5"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1824'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia6.jpg" alt="Imagen slick 6"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1903'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia7.jpg" alt="Imagen slick 7"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1928'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia8.jpg" alt="Imagen slick 8"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1928'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia9.jpg" alt="Imagen slick 9"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1928'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia10.jpg" alt="Imagen slick 10"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1970'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia11.jpg" alt="Imagen slick 11"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1970'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia12.jpg" alt="Imagen slick 12"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1985'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia13.jpg" alt="Imagen slick 13"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1986'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia14.jpg" alt="Imagen slick 14"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1987'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia15.jpg" alt="Imagen slick 15"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1993'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia16.jpg" alt="Imagen slick 16"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1993'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia17.jpg" alt="Imagen slick 17"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1993'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia18.jpg" alt="Imagen slick 18"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1996'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia19.jpg" alt="Imagen slick 19"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-1997'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia20.jpg" alt="Imagen slick 20"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-2000'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia21.jpg" alt="Imagen slick 21"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-2001'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia22.jpg" alt="Imagen slick 22"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-2010'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia23.jpg" alt="Imagen slick 23"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-2013'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia24.jpg" alt="Imagen slick 24"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-2014'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia25.jpg" alt="Imagen slick 25"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-2015'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia26.jpg" alt="Imagen slick 26"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-2016'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia27.jpg" alt="Imagen slick 27"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-2016'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia28.jpg" alt="Imagen slick 28"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-2016'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia29.jpg" alt="Imagen slick 29"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-2016'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia30.jpg" alt="Imagen slick 30"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-2016'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia31.jpg" alt="Imagen slick 31"></div>
+		<div class="[ item ]" onclick="dataLayer.push({'event': 'cronica-2017'});"><img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>images/Cronologia/Cronologia32.jpg" alt="Imagen slick 32"></div>
 	</div>
 </section>
 
@@ -245,7 +245,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 
 			</div>
 			<div class="[ text-right ]">
-				<a href="https://www.youtube.com/channel/UC3-12ySVHF-iItCbSdZ2z-Q" class="[ btn btn-primary btn-large ]" target="_blank">Ver más</a>
+				<a href="https://www.youtube.com/channel/UC3-12ySVHF-iItCbSdZ2z-Q" class="[ btn btn-primary btn-large ] gtm-btn-ver" target="_blank">Ver más</a>
 			</div>
 		</div>
 

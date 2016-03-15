@@ -906,3 +906,26 @@ div.fade-out:hover{
 div.fade-out:active{
 	opacity: 1;
 }
+
+
+
+/*------------------------------------*\
+    #Denky tablet specifics
+\*------------------------------------*/
+
+@media screen and ( height: 431px ){
+
+	.fs-title{ padding: 20px; }
+
+	.fs-message-error{ top: 15%; }
+
+	.fs-numbers{ top: 15px; }
+
+	.fs-form-full{ top: 20%; }
+
+	.long-answers--container{
+		position: relative; top: -20px;
+		max-height: 100px;
+	}
+
+}

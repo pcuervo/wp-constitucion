@@ -58,7 +58,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 
 
-		if ( is_page( 'home' ) ) {
+		if ( is_page( 'participa' ) ) {
 			wp_localize_script( 'functions', 'kioskos', getKioskos() );
 		}
 

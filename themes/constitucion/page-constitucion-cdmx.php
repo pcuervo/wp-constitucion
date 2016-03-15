@@ -10,56 +10,48 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</div>
 </div>
 
+<?php $mensaje = get_page_by_path('mensaje-del-jefe-de-gobierno');
+$image_mensaje = attachment_image_url( $mensaje->ID, 'full' ); ?>
 <section class="[ container ][ space-id ]" id="jefe-gobierno">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 			<div class="[ content-mensaje-jefegob ]">
-				<h2>Mensaje del jefe de gobierno</h2>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-					accumsan lorem id porttitor porttitor. In pulvinar pellentesque ornare. Morbi facilisis sem molestie sapien euismod,
-					vel ornare mi sagittis. Nulla at porta arcu, ut lacinia dui. In semper. Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu-
-					lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu.
-					Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.Praesent quis enim mollis, molestie nisl non, dapibus tellus. Vestibu lum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed dignissim ligula id justo feugiat sodales. Mauris eu est arcu. Donec vestibulum rutrum arcu, quis molestie odio iaculis in. Nunc at rutrum risus.
-				</p>
+				<h2><?php echo $mensaje->post_title; ?></h2>
+				<?php echo wpautop( $mensaje->post_content ); ?>
 			</div>
 		</div>
 	</div>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/01.jpg" alt="fotografía plaza de la revolución">
+	<?php if ( has_post_thumbnail($mensaje->ID) ): ?>
+		<img src="<?php echo $image_mensaje; ?>" alt="fotografía plaza de la revolución">
+	<?php else: ?>
+		<p class="text-warning">Falta la Imagen de Sobre la constitución</p>
+	<?php endif; ?>
 </div>
 
+<?php $sobre = get_page_by_path('sobre-la-constitucion');
+$image_sobre = attachment_image_url( $sobre->ID, 'full' ); ?>
 <section class="[ container ][ space-id ]" id="sobre-constitucion">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 			<div class="[ content-acerca-de ]">
-				<h2>Sobre la constitución</h2>
-				<p>
-					La capital de México concentra a millones de personas. Es una de las urbes más grandes y extensas del mundo. En ella encontramos una diversidad sorprendente de personas, infraestructura, geografías e historias. Pero hay algo muy importante que todos tenemos en común: un espacio geográfico y un futuro conjunto.
-					<br><br>
-					Elaborar una Constitución Política es un asunto trascendental para cualquier comunidad. Una Constitución le da forma y razón de ser a un Estado, delimita sus territorios, determina cómo funciona su gobierno y la gestión de los bienes públicos. También define los fundamentos de su sistema económico y reconoce los derechos, garantías individuales y deberes de sus ciudadanos.
-					<br><br>
-					Una constitución incorpora las aspiraciones y anhelos de quienes la suscriben, plasma cómo quieren que sea su vida colectiva y lo que es posible (y no) dentro de los bordes del espacio que comparten.
-				</p>
-			</div>
-			<div class="[ content-acerca-de ]">
-				<p>
-					<br>
-					La estructura del poder en el Distrito Federal fue establecida por el Gobierno de la República y el Congreso de la Unión.  Aunque desde el Estatuto de Gobierno del Distrito Federal (1994) la ciudad cuenta con una Asamblea Legislativa capaz de aprobar y derogar leyes, este año se presenta la oportunidad para que, por primera vez, la opinión ciudadana tenga injerencia en la determinación de esta estructura.
-					<br><br>
-					Elaborar nuestra Constitución es acordar en conjunto un pacto social de suma importancia para todos los que habitamos y visitamos la Ciudad de México. Es un documento que nos dirigirá hacia el futuro y conservará el espíritu de la ciudad para futuras generaciones sin que sea alterado por el paso de distintos gobiernos.
-					<br><br>
-					La sociedad capitalina ha estado detrás de las grandes conquistas sociales del país de las últimas décadas. Con la energía social y fuerza ciudadana característica de la Ciudad de México, la Constitución tiene el potencial de ser otro gran logro.
-				</p>
+				<h2><?php echo $sobre->post_title; ?></h2>
+				<?php echo wpautop( $sobre->post_content ); ?>
+				
 			</div>
 		</div>
 	</div>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/02.jpg" alt="fotografía tlaxcoaque patineto">
+	<?php if ( has_post_thumbnail($sobre->ID) ): ?>
+		<img src="<?php echo $image_sobre; ?>" alt="fotografía tlaxcoaque patineto">
+	<?php else: ?>
+		<p class="text-warning">Falta la Imagen de Sobre la constitución</p>
+	<?php endif; ?>
+	
 </div>
 
 <section class="[ container ][ space-id ]" id="grupo-trabajo">
@@ -67,14 +59,9 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 
 			<div class="[ content-acerca-de ]">
-				<h2>Grupo de trabajo</h2>
-				<p>
-					El Jefe de Gobierno es la única persona facultada para presentar un Proyecto de Constitución a la <a href="<?php echo site_url( 'cdmx' ) ?>#hacia-el-constituyente">Asamblea Constituyente</a>. Para su elaboración, formó un Grupo de Trabajo de personajes notables de la ciudad conformado por representantes de sociedad civil, academia y especialistas, como espacio democrático y plural de participación social y ciudadana.
-					<br><br>
-					Además de apoyar en la redacción del Proyecto de Constitución, el Grupo de trabajo tiene como objetivo conocer y compilar las propuestas y opiniones de la ciudadanía y de las organizaciones políticas, civiles y sociales de la Ciudad de México. Dentro de sus funciones está evaluar y considerar la <a href="<?php echo site_url('participa'); ?>">opinión ciudadana</a> bajo los criterios de legalidad, calidad, viabilidad y beneficio social. Todos ellos seguirán de cerca las reflexiones e ideas que se concentren en esta plataforma ciudadana.
-					<br><br>
-					El Proyecto de Constitución Política de la Ciudad de México será remitido a la Asamblea Constituyente por el Jefe de Gobierno en su primera sesión de trabajo, el 15 de Septiembre de 2016.
-				</p>
+				<?php $grupo = get_page_by_path('grupo-de-trabajo'); ?>
+				<h2><?php echo $grupo->post_title; ?></h2>
+				<?php echo wpautop( $grupo->post_content ); ?>
 			</div>
 		</div>
 	</article>
@@ -134,29 +121,17 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</article>
 </section>
 
+<?php $plataforma = get_page_by_path('sobre-la-plataforma'); 
+$image_plataforma = attachment_image_url( $plataforma->ID, 'full' ); ?>
 <section class="[ bg-gray--fondo section--bg ][ no-margin--bottom ][ space-id ]" id="sobre-plataforma">
 	<div class="[ container ]">
 		<div class="[ row ]">
 			<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 
 				<div class="[ content-sobre-la-plataforma ]">
-					<h2>Sobre la plataforma</h2>
-					<p>
-						El capital más valioso de la ciudad es la diversidad de personas e ideas que la componen. Nuestra época nos concede una capacidad sin precedentes para comunicarnos, compartir y procesar información. Por ello, el Grupo de Trabajo está decidido a aprovechar la tecnología y otros formatos de participación para facilitar que todas las voces que quieran contribuir al Proyecto de Constitución sean escuchadas. Este es un derecho social otorgado y respaldado por la Ley para Hacer de la Ciudad de México una Ciudad Abierta.
-						<br><br>
-						ConstituciónCDMX es una plataforma abierta que pone a disposición de la ciudadanía distintas formas de participación para concentrar ideas, reflexiones, eventos y propuestas en torno a la elaboración del Proyecto de la Constitución Política de la Ciudad de México. La plataforma tiene dos componentes, este sitio y una activación en sitio en 350 quioscos móviles para quienes no tienen acceso a plataformas digitales.
-					</p>
-				</div>
-
-				<div class="[ content-sobre-la-plataforma ]" >
-					<p>
-						<br>
-						El Grupo aprovechará las contribuciones que concentre esta plataforma para redactar el Proyecto de Constitución. Entre más nutrido sea el debate público y más ágil sea la creación colaborativa de propuestas, más consolidado será el proyecto que reciba, a nombre de todos, la Asamblea Constituyente.
-						<br><br>
-						Además, este sitio permanecerá como un legado histórico del proceso y contendrá un vasto repositorio de ideas, reflexiones y propuestas representativas del espíritu de la Ciudad.
-						<br><br>
-						Como cualquier proceso abierto, esta plataforma podrá transformarse y mejorarse con el tiempo para captar de cada vez mejor forma las voces ciudadanas.
-					</p>
+					
+					<h2><?php echo $plataforma->post_title; ?></h2>
+					<?php echo wpautop( $plataforma->post_content ); ?>
 				</div>
 
 			</div>
@@ -165,15 +140,20 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/04.jpg" alt="fotografía lago de chapultepec">
+	<?php if ( has_post_thumbnail($plataforma->ID) ): ?>
+		<img src="<?php echo $image_plataforma; ?>" alt="fotografía lago de chapultepec">
+	<?php else: ?>
+		<p class="text-warning">Falta la Imagen de Sobre la plataforma</p>
+	<?php endif; ?>
 </div>
 
+<?php $wiki = get_page_by_path('constitucion-en-wiki');
+$image_wiki = attachment_image_url( $wiki->ID, 'full' ); ?>
 <section class="[ container ][ space-id ]" id="constitucion-wiki">
 	<div class="[ row ]">
 		<div class="[ col-xs-12 col-sm-offset-1 col-sm-10 ][ text-justify ]">
-			<h2 class="[ margin-bottom ]">Constitución en wiki</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit in suscipit similique tempore ab quam voluptatibus, quos modi fuga iusto earum incidunt repellendus quis tempora? Perspiciatis officia accusantium temporibus esse.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum possimus dolorum quam illo veniam id placeat nulla repellat vero debitis ratione consectetur eos praesentium, delectus doloremque dolor, ipsa deserunt eaque.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem consequuntur error illum. Atque esse, et iure rerum fugiat consequuntur repellendus est dignissimos alias officia fugit culpa nam consequatur exercitationem quae!</p>
+			<h2><?php echo $wiki->post_title; ?></h2>
+			<?php echo wpautop( $wiki->post_content ); ?>
 		</div>
 	</div>
 	<div class="[ text-center ][ margin-top--large ]">
@@ -182,7 +162,12 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 </section>
 
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/05.jpg" alt="fotografía nopales con hombre">
+	<?php if ( has_post_thumbnail($wiki->ID) ): ?>
+		<img src="<?php echo $image_wiki; ?>" alt="fotografía nopales con hombre">
+	<?php else: ?>
+		<p class="text-warning">Falta la Imagen de Constitución en wiki</p>
+	<?php endif; ?>
+	
 </div>
 
 <section class="[ space-id ]" id="preguntas-frecuentes">
@@ -214,13 +199,20 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 	</div>
 </section>
 
+<?php $biblioteca = get_page_by_path('biblioteca');
+$image_biblioteca = attachment_image_url( $biblioteca->ID, 'full' ); ?>
+
 <div class="[ descanso-visual ][ margin-bottom--large ]">
-	<img src="<?php echo THEMEPATH; ?>images/06.jpg" alt="fotografía lago de chapultepec">
+	<?php if ( has_post_thumbnail($biblioteca->ID) ): ?>
+		<img src="<?php echo $image_biblioteca; ?>" alt="fotografía lago de chapultepec">
+	<?php else: ?>
+		<p class="text-warning">Falta la Imagen de Biblioteca</p>
+	<?php endif; ?>
 </div>
 
 
 <section class="[ container ][ space-id ][ content-biblioteca ]" id="biblioteca">
-	<h2 class="[ margin-bottom--large no-margin-top ]" id="biblioteca">Biblioteca</h2>
+	<h2 class="[ margin-bottom--large no-margin-top ]" id="biblioteca"><?php echo $biblioteca->post_title; ?></h2>
 	<p class="[ margin-bottom--large ]">La búsqueda de una Reforma Política para la Ciudad de México es un proceso que ha tomado mucho tiempo en su conceptualización y cuya ejecución no es expedita. En esta biblioteca podrás descargar documentos relacionados a la historia de la configuración política del Distrito Federal y nuestra ciudad.</p>
 	<a href="http://www.juridicas.unam.mx/publica/librev/rev/rap/cont/61/pr/pr21.pdf" target="_blank"><p class="[ margin-top gtm-btn-liga ]">La Ley Orgánica del Distrito y Territorios Federales de 1928</p></a>
 	<a href="http://www.juridicas.unam.mx/publica/librev/rev/rap/cont/61/pr/pr23.pdf" target="_blank"><p class="[ margin-top gtm-btn-liga ]">La Ley Orgánica del Departamento del Distrito Federal de 1970</p></a>

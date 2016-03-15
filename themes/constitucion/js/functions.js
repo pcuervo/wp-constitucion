@@ -180,8 +180,8 @@
         }
 
         // initialize captcha
-        document.getElementById('js-contact-captcha').getElementsByTagName('span')[0].innerHTML = Math.floor(Math.random() * 20) + 1  ;
-        document.getElementById('js-contact-captcha').getElementsByTagName('span')[1].innerHTML = Math.floor(Math.random() * 20) + 1  ;
+        //document.getElementById('js-contact-captcha').getElementsByTagName('span')[0].innerHTML = Math.floor(Math.random() * 20) + 1  ;
+        //document.getElementById('js-contact-captcha').getElementsByTagName('span')[1].innerHTML = Math.floor(Math.random() * 20) + 1  ;
 
         /**------ FORMULARIOS -------*/
 

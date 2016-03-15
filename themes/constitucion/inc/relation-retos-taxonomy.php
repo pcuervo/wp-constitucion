@@ -1,17 +1,17 @@
 <?php
 function create_taxonomy_retos( $post_id, $post ) {
-	file_put_contents(
-		'/Users/alejandrosandoval/Desktop/php.txt',
-		var_export( $post, true )
-	);
-	
-	if ($post->post_type != 'grandes-retos' ) 
-		return ''; 
+	// file_put_contents(
+	// 	'/Users/alejandrosandoval/Desktop/php.txt',
+	// 	var_export( $post, true )
+	// );
+
+	if ($post->post_type != 'grandes-retos' )
+		return '';
 
 	if ($post->post_status == 'trash') {
 		$category = get_term_by('slug', $post->post_name, 'taxonomy-grandes-retos');
 		wp_delete_term( $category->term_id, 'taxonomy-grandes-retos' );
-		return ''; 
+		return '';
 	}
 
 	$term_name = trim($post->post_title);

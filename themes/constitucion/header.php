@@ -91,10 +91,8 @@
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#instrucciones">¿Cómo Participo?</a></li>
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#imagina-ciudad">Imagina tu ciudad</a></li>
-								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#resultados">Da seguimiento a tu participación</a></li>
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#dialogos-publicos">Encuentros ciudadanos</a></li>
-								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#registra-tu-evento">Registra tu evento</a></li>
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
 							</ul>
 						</li><li
@@ -213,10 +211,8 @@
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#instrucciones">¿Cómo Participo?</a></li>
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#imagina-ciudad">Imagina tu ciudad</a></li>
-								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#resultados">Da seguimiento a tu participación</a></li>
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#dialogos-publicos">Encuentros ciudadanos</a></li>
-								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#registra-tu-evento">Registra tu evento</a></li>
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
 							</ul>
 						</li><li

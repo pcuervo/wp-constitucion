@@ -3,7 +3,7 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
 $img_participa = get_option( 'img_noticias' );
 global $wp_query; ?>
 
-<div class="[ bg-image rectangle-small ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo $img_participa; ?>');">
+<div class="[ bg-image rectangle-small gtm-btn-banner ][ margin--header margin-bottom--large ][ relative ]" style="background-image: url('<?php echo $img_participa; ?>');">
 	<div class="[ width-100 height-100 ]">
 		<h1 class="[ container ][ text-uppercase text-center ][ no-margin ][ center-full ][ color-light ][ letter-spacing ][ hidden ]">Noticias</h1>
 	</div>
@@ -24,19 +24,19 @@ global $wp_query; ?>
 			$link_noticia = get_post_meta( $post->ID, 'link_noticia', true );?>
 			<div class="[ row ][ margin-bottom--large ]">
 				<div class="[ col-xs-5 no-padding--right ]">
-					<a href="<?php echo $link_noticia; ?>" target="_blank">
+					<a href="<?php echo $link_noticia; ?>" target="_blank" class="btn-noticia">
 						<img class="[ img-responsive ]" src="<?php echo $url_image; ?>" alt="<?php echo get_the_title(); ?>">
 					</a>
 				</div>
 				<div class="[ col-xs-7 ]">
 					<h2 class="[ fw-semibold ]">
-						<a class="[ color-gray ]" href="<?php echo $link_noticia; ?>" target="_blank">
+						<a class="[ color-gray ] gtm-btn-noticia" href="<?php echo $link_noticia; ?>" target="_blank">
 							<?php the_title(); ?>
 						</a>
 					</h2>
 					<p class="[ color-primary ]"><?php echo $date_arr[4].' '.$date_arr[1].' '.$date_arr[2] ?></p>
 					<p><?php echo wp_trim_words( get_the_excerpt(), 23 ) ?></p>
-					<a href="<?php echo $link_noticia; ?>" target="_blank">
+					<a href="<?php echo $link_noticia; ?>" class="gtm-btn-noticia" target="_blank">
 						<p class="[ fz-small ][ color-primary ]">Leer más >></p>
 					</a>
 				</div>

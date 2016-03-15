@@ -4,7 +4,7 @@ get_header(); the_post();
 
 	global $result;
 	if( isset( $result['success'] ) ): ?>
-		<div class="[ bg-success btn-lg text-center ][ hidden ]"><?php echo $result['success']; ?></div><!-- notice oculto -->
+		<div class="[ bg-success btn-lg text-center gtm-btn-banner ][ hidden ]"><?php echo $result['success']; ?></div><!-- notice oculto -->
 	<?php endif;  ?>
 
 	<div class="[ bg-image rectangle-small ][ margin--header ][ relative ]" style="background-image: url('<?php echo $img_participa; ?>');">
@@ -62,7 +62,7 @@ get_header(); the_post();
 			<p>Queremos conocer tu visión sobre la Ciudad de México. Nos interesa saber cuáles crees que son sus mayores retos y qué tipo de oportunidades te brinda. </p>
 			<p>Contestar este cuestionario toma aproximadamente 10 minutos. Al final, recibirás un certificado de participación a nombre del Grupo de Trabajo. </p>
 			<div class="[ text-center ][ margin-top ]">
-				<a class="[ btn btn-primary btn-large ]" href="<?php echo site_url('/sondeo-masivo/'); ?> ">
+				<a class="[ btn btn-primary btn-large ] gtm-btn-participa" href="<?php echo site_url('/sondeo-masivo/'); ?> ">
 					Participa
 				</a>
 			</div>
@@ -102,7 +102,7 @@ get_header(); the_post();
 			</div>
 			<div class="[ clear ]"></div>
 			<div class="[ text-center ][ margin-top ]">
-				<a href="https://www.change.org/movements/voces-ciudadanas-en-la-nueva-constituci%C3%B3n-de-la-cdmx" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ]">Conoce cómo realizar petición</a>
+				<a href="https://www.change.org/movements/voces-ciudadanas-en-la-nueva-constituci%C3%B3n-de-la-cdmx" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ] gtm-btn-participa">Conoce cómo realizar petición</a>
 			</div>
 		</div>
 	</section>
@@ -197,7 +197,7 @@ get_header(); the_post();
 					<p>Estos ensayos son públicos y están abiertos a comentarios. Hay dos tipos de ensayos: aquellos realizados por integrantes del Grupo de Trabajo y aquellos compartidos por otras agrupaciones, organizaciones de la sociedad civil, universidades, empresas y dependencias gubernamentales.</p>
 					<p>El Grupo de Trabajo considerará las propuestas contenidas en estos ensayos.</p>
 					<div class="[ text-center ][ margin-bottom padding--top--large padding--bottom ]">
-						<a href="http://constitucion.cdmx.gob.mx/ensayos" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ]">Consulta y comenta los ensayos</a>
+						<a href="http://constitucion.cdmx.gob.mx/ensayos" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ] gtm-btn-ensayo">Consulta y comenta los ensayos</a>
 					</div>
 					<p>Comparte tu ensayo llenando el siguiente formulario. Verifica que cumpla con los requisitos de publicación aquí.</p>
 				</div>

@@ -54,7 +54,18 @@ get_header(); the_post();
 			</div>
 		</div>
 	</section>
-
+	<section>
+		<div class="container">
+			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+				<h2 class="[ no-margin-top margin-bottom ]">Kioskos</h2>
+				<p>Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem</p>
+				<p>Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem</p>
+				<p>Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem</p>
+			</div>
+		</div>
+		<div id="map_canvas" class="mapping" style="width: 100%; height: 500px;"></div>
+	</section>
+	
 	<section class="[ container ][ padding--sides--xsm--large ][ space-id ]" id="imagina-ciudad">
 		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
 			<h2 class="[ no-margin-top margin-bottom ]">Imagina tu ciudad</h2>

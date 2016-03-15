@@ -8277,7 +8277,6 @@ ul.slick-dots li.slick-active {
 .content-acerca-de div {
   width: 100%;
   display: inline-block;
-  padding-left: 20px;
   text-align: justify;
 }
 .content-acerca-de blockquote {
@@ -8289,20 +8288,6 @@ ul.slick-dots li.slick-active {
   border-bottom: 2px dotted #777777;
   border-left: none ;
 }
-.content-acerca-de blockquote p {
-  width: 100%;
-  margin-top: 20px;
-  text-transform: uppercase;
-  color: #457390;
-  font-size: 10px;
-}
-.content-acerca-de blockquote img,
-.content-acerca-de canvas {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: auto;
-}
 .content-acerca-de div {
   margin: 0 0 20px 0;
   font-family: "ABeeZee", sans-serif;
@@ -8312,7 +8297,7 @@ ul.slick-dots li.slick-active {
 @media (min-width: 768px) {
   .content-acerca-de h2,
   .content-acerca-de h3 {
-    padding-left: 31%;
+    padding-left: 30%;
   }
   .content-acerca-de div {
     margin-left: 30%;
@@ -8322,7 +8307,7 @@ ul.slick-dots li.slick-active {
   .content-acerca-de p:nth-child(3),
   .content-acerca-de div {
     width: 60%;
-    padding-left: 10px;
+    margin-left: 30%;
   }
   .content-acerca-de blockquote {
     width: 30%;
@@ -8340,7 +8325,6 @@ ul.slick-dots li.slick-active {
 .content-sobre-la-plataforma div {
   width: 100%;
   display: inline-block;
-  padding-left: 20px;
   text-align: justify;
 }
 .content-mensaje-jefegob blockquote,
@@ -8352,23 +8336,6 @@ ul.slick-dots li.slick-active {
   border-top: 2px dotted #777777;
   border-bottom: 2px dotted #777777;
   border-left: none ;
-}
-.content-mensaje-jefegob blockquote p,
-.content-sobre-la-plataforma blockquote p {
-  width: 100%;
-  margin-top: 20px;
-  text-transform: uppercase;
-  color: #457390;
-  font-size: 10px;
-}
-.content-mensaje-jefegob blockquote img,
-.content-sobre-la-plataforma blockquote img,
-.content-mensaje-jefegob canvas,
-.content-sobre-la-plataforma canvas {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: auto;
 }
 .content-mensaje-jefegob div,
 .content-sobre-la-plataforma div {
@@ -8382,7 +8349,7 @@ ul.slick-dots li.slick-active {
   .content-sobre-la-plataforma h2,
   .content-mensaje-jefegob h3,
   .content-sobre-la-plataforma h3 {
-    padding-left: 31%;
+    padding-left: 30%;
   }
   .content-mensaje-jefegob div,
   .content-sobre-la-plataforma div {
@@ -8396,7 +8363,7 @@ ul.slick-dots li.slick-active {
   .content-mensaje-jefegob div,
   .content-sobre-la-plataforma div {
     width: 60%;
-    padding-left: 10px;
+    margin-left: 30%;
   }
   .content-mensaje-jefegob blockquote,
   .content-sobre-la-plataforma blockquote {
@@ -8420,7 +8387,6 @@ ul.slick-dots li.slick-active {
 .content-cronica-cdmx div {
   width: 100%;
   display: inline-block;
-  padding-left: 20px;
   text-align: justify;
 }
 .content-cronica-cdmx blockquote {
@@ -8432,20 +8398,6 @@ ul.slick-dots li.slick-active {
   border-bottom: 2px dotted #777777;
   border-left: none ;
 }
-.content-cronica-cdmx blockquote p {
-  width: 100%;
-  margin-top: 20px;
-  text-transform: uppercase;
-  color: #457390;
-  font-size: 10px;
-}
-.content-cronica-cdmx blockquote img,
-.content-cronica-cdmx canvas {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: auto;
-}
 .content-cronica-cdmx div {
   margin: 0 0 20px 0;
   font-family: "ABeeZee", sans-serif;
@@ -8455,7 +8407,7 @@ ul.slick-dots li.slick-active {
 @media (min-width: 768px) {
   .content-cronica-cdmx h2,
   .content-cronica-cdmx h3 {
-    padding-left: 31%;
+    padding-left: 30%;
   }
   .content-cronica-cdmx div {
     margin-left: 30%;
@@ -8465,7 +8417,7 @@ ul.slick-dots li.slick-active {
   .content-cronica-cdmx p:nth-child(3),
   .content-cronica-cdmx div {
     width: 60%;
-    padding-left: 10px;
+    margin-left: 30%;
   }
   .content-cronica-cdmx blockquote {
     width: 30%;

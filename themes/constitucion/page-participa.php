@@ -15,7 +15,7 @@ get_header(); the_post();
 
 
 	<section class="[ container ][ padding--header--id ]">
-		<div class="[ row ]">
+		<div class="[ row ][ margin-bottom ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
 				<h2>¿Cómo Participo?</h2>
 				<p>Todas y todos los que vivimos y visitamos la Ciudad de México podemos hacer propuestas al Grupo de Trabajo encargado de redactar el Proyecto de la Constitución. Hay cuatro formas de participar. </p>
@@ -28,7 +28,7 @@ get_header(); the_post();
 			<div class="[ col-xs-6 col-md-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">1</p>
-					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
+					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_a', true);?></p>
 				</div>
 			</div>
 			<div class="[ col-xs-6 col-md-3 ]">
@@ -47,9 +47,11 @@ get_header(); the_post();
 			<div class="[ col-xs-6 col-md-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">4</p>
-					<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucion.cdmx.gob.mx/ensayos">
-						<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_d', true);?></p>
-					</a>
+					<p class="[ fz-small text-left ]">
+						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucion.cdmx.gob.mx/ensayos">
+							<?php echo get_post_meta($post->ID, 'paso_d', true);?>
+						</a>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -197,7 +199,7 @@ get_header(); the_post();
 					<p>Estos ensayos son públicos y están abiertos a comentarios. Hay dos tipos de ensayos: aquellos realizados por integrantes del Grupo de Trabajo y aquellos compartidos por otras agrupaciones, organizaciones de la sociedad civil, universidades, empresas y dependencias gubernamentales.</p>
 					<p>El Grupo de Trabajo considerará las propuestas contenidas en estos ensayos.</p>
 					<div class="[ text-center ][ margin-bottom padding--top--large padding--bottom ]">
-						<a href="http://constitucion.cdmx.gob.mx/ensayos" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ]">Consulta y comenta los ensayos</a>
+						<a href="http://constitucioncdmx.pubpub.org/" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ]">Consulta y comenta los ensayos</a>
 					</div>
 					<p>Comparte tu ensayo llenando el siguiente formulario. Verifica que cumpla con los requisitos de publicación aquí.</p>
 				</div>

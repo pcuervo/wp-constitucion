@@ -16,11 +16,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ][ margin-bottom--large ]">
 			<div class="[ content-acerca-de ]">
 				<h2>Crónica</h2>
-				<blockquote>
-					<img class="[ inline-block ]" src="<?php echo THEMEPATH; ?>images/graficos-02.png" alt="gráfico de ciudad más poblada">
-					<p>La CDMX, incluyendo su zona metropolitana, es la ciudad más poblada de América y la cuarta del mundo.</p>
-					<canvas id="pie-data" width="100px" height="100px"></canvas>
-				</blockquote>
 				<p>La Ciudad de México es un asentamiento cuya historia se remonta casi 700 años atrás, desde la fundación de Tenochtitlan en 1325 hasta la Ciudad de México que vivimos hoy. En estos años, la ciudad ha experimentado cambios dramáticos en su paisaje natural, físico, administrativo, político y social. Ha sido un espacio de lucha, de reinvención y vanguardia. Hoy nos encontramos en un momento histórico con la creación formal de la Ciudad de México, la cual se convierte en el entidad 32 del país, avanza en su autonomía y podrá contar con su propio congreso y constitución. <br><br>El año de 1985 constituye un punto de inflexión en la historia de la Ciudad de México. El sismo que tuvo lugar ese año impulsó la solidaridad entre ciudadanos, fortaleció la identidad colectiva y el deseo compartido por una ciudad donde sus habitantes pudieran ser actores en su construcción e incidir en las decisiones que se toman sobre ella. Este acontecimiento fue un catalizador de la democracia en la ciudad y el inicio de un proceso de la construcción de ciudad que tenemos hoy.</p>
 			</div>
 		</div>
@@ -90,12 +85,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
 			<div class="[ content-acerca-de ][ margin-bottom ]">
 				<h2>Hacia el constituyente</h2>
-				<blockquote>
-					<img src="<?php echo THEMEPATH; ?>images/graficos-10.png" alt="gráfico destino número 1 new york times">
-					<p>
-						El diario the New York Times señaló a la CDMX como el destino número 1 para visitar en el 2016 y la describió como “la ciudad que lo tiene todo”.
-					</p>
-				</blockquote>
 				<p>
 					La Asamblea Constituyente de la Ciudad de México es el órgano encargado de recibir, enmendar y aprobar el Proyecto de Constitución que le presente el Jefe de Gobierno durante su primera sesión de trabajo, el 15 de septiembre de 2016. Será la Asamblea quien tenga la palabra final sobre la futura Constitución Política de la Ciudad de México. Es importante que la ciudadanía utilice esta plataforma para lograr un Proyecto incluyente que comprenda la voz de los que convivimos en la ciudad puesto que las maneras de participar en un momento posterior son limitadas.
 
@@ -118,10 +107,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 			</div>
 			<div class="[ content-acerca-de ]" >
 				<h3>La Asamblea Constituyente</h3>
-				<blockquote>
-					<img src="<?php echo THEMEPATH; ?>images/graficos-09.png" alt="Primer lugar nacional acceso información.">
-					<p>La CDMX ocupa el primer lugar nacional en acceso a información pública de oficio.</p>
-				</blockquote>
 				<p>
 					La Asamblea Constituyente se instalará el 15 de Septiembre de 2016 y deberá aprobar una Constitución Política a más tardar el 31 de Enero de 2017. Las sesiones de trabajo se llevarán a cabo en la Antigua sede del Senado de la República, en Xicoténcatl. La Asamblea Constituyente tiene la facultad de discutir, modificar, adicionar y votar el Proyecto de Constitución Política elaborado por el Grupo de Trabajo constituido para esta labor.
 				</p>

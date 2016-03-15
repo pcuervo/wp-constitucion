@@ -160,5 +160,72 @@
 			);
 			wp_insert_post( $page, true );
 		}
+
+		if( ! get_page_by_path('mensaje-del-jefe-de-gobierno') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Mensaje del jefe de gobierno',
+				'post_name'   => 'mensaje-del-jefe-de-gobierno',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+
+		if( ! get_page_by_path('sobre-la-constitucion') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Sobre la constitución',
+				'post_name'   => 'sobre-la-constitucion',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+
+		if( ! get_page_by_path('grupo-de-trabajo') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Grupo de trabajo',
+				'post_name'   => 'grupo-de-trabajo',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+
+		if( ! get_page_by_path('sobre-la-plataforma') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Sobre la plataforma',
+				'post_name'   => 'sobre-la-plataforma',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+
+		if( ! get_page_by_path('constitucion-en-wiki') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Constitución en wiki',
+				'post_name'   => 'constitucion-en-wiki',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+
+		if( ! get_page_by_path('biblioteca') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Biblioteca',
+				'post_name'   => 'biblioteca',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+		
 		
 	});

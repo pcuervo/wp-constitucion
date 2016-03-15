@@ -8274,6 +8274,7 @@ ul.slick-dots li.slick-active {
 }
 .content-acerca-de p:nth-child(2),
 .content-acerca-de p:nth-child(3),
+.content-acerca-de p:nth-child(4),
 .content-acerca-de div {
   width: 100%;
   display: inline-block;
@@ -8305,6 +8306,7 @@ ul.slick-dots li.slick-active {
   }
   .content-acerca-de p:nth-child(2),
   .content-acerca-de p:nth-child(3),
+  .content-acerca-de p:nth-child(4),
   .content-acerca-de div {
     width: 60%;
     margin-left: 30%;
@@ -8321,6 +8323,8 @@ ul.slick-dots li.slick-active {
 .content-sobre-la-plataforma p:nth-child(2),
 .content-mensaje-jefegob p:nth-child(3),
 .content-sobre-la-plataforma p:nth-child(3),
+.content-mensaje-jefegob p:nth-child(4),
+.content-sobre-la-plataforma p:nth-child(4),
 .content-mensaje-jefegob div,
 .content-sobre-la-plataforma div {
   width: 100%;
@@ -8360,6 +8364,8 @@ ul.slick-dots li.slick-active {
   .content-sobre-la-plataforma p:nth-child(2),
   .content-mensaje-jefegob p:nth-child(3),
   .content-sobre-la-plataforma p:nth-child(3),
+  .content-mensaje-jefegob p:nth-child(4),
+  .content-sobre-la-plataforma p:nth-child(4),
   .content-mensaje-jefegob div,
   .content-sobre-la-plataforma div {
     width: 60%;
@@ -8384,6 +8390,7 @@ ul.slick-dots li.slick-active {
 }
 .content-cronica-cdmx p:nth-child(2),
 .content-cronica-cdmx p:nth-child(3),
+.content-cronica-cdmx p:nth-child(4),
 .content-cronica-cdmx div {
   width: 100%;
   display: inline-block;
@@ -8415,6 +8422,7 @@ ul.slick-dots li.slick-active {
   }
   .content-cronica-cdmx p:nth-child(2),
   .content-cronica-cdmx p:nth-child(3),
+  .content-cronica-cdmx p:nth-child(4),
   .content-cronica-cdmx div {
     width: 60%;
     margin-left: 30%;

@@ -49,7 +49,7 @@
 		echo "<input type='text' class='widefat' id='ubicacion_kiosko' name='ubicacion_kiosko' value='$ubicacion_kiosko'/>";
 
 		echo "<input type='hidden' class='widefat' id='latitud_kiosko' name='latitud_kiosko' value='$latitud_kiosko'/>";
-		echo "<input type='hidden' class='widefat' id='longitud_kiosko' name='longitud_kiosko' value='$ubicacion_kiosko'/>";
+		echo "<input type='hidden' class='widefat' id='longitud_kiosko' name='longitud_kiosko' value='$longitud_kiosko'/>";
 
 
 		echo '<br><br><div class="iframe-cont">';

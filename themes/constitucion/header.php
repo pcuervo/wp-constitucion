@@ -73,20 +73,18 @@
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/constitucion-cdmx/'); ?>#preguntas-frecuentes">Preguntas frecuentes</a></li>
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/constitucion-cdmx/'); ?>#biblioteca">Biblioteca</a></li>
 							</ul>
-						</li><li
-						class="[ dropdown--hover ]<?php echo $activeCdmx; ?>">
+						</li><li class="[ dropdown--hover ]<?php echo $activeCdmx; ?>">
 							<span>
-								<a class="[ text-uppercase ]" href="<?php echo site_url('/cdmx/'); ?>">
+								<a class="[ text-uppercase gtm-btn-menu ]" href="<?php echo site_url('/cdmx/'); ?>">
 									Ciudad de México<span class="caret"></span>
 								</a>
 							</span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
-								<li><a class="gtm-btn-menu" href="<?php echo site_url('/cdmx/'); ?>#cronica">Crónica</a></li>
-								<li><a class="gtm-btn-menu" href="<?php echo site_url('/cdmx/'); ?>#hacia-el-constituyente">Hacia el constituyente</a></li>
-								<li><a class="gtm-btn-menu" href="<?php echo site_url('/cdmx/'); ?>#voces-ciudadanas">Voces ciudadanas</a></li>
+								<li><a class="gtm-btn-menu" href="<?php echo site_url('/cdmx/'); ?>#cronica">Crónica</a></li>
+								<li><a class="gtm-btn-menu" href="<?php echo site_url('/cdmx/'); ?>#hacia-el-constituyente">Hacia el constituyente</a></li>
+								<li><a class="gtm-btn-menu" href="<?php echo site_url('/cdmx/'); ?>#voces-ciudadanas">Voces ciudadanas</a></li>
 							</ul>
-						</li><li
-						class="[ dropdown--hover ]">
+						</li><li class="[ dropdown--hover ]">
 							<span><a class="[ text-uppercase ]" href="<?php echo site_url('/participa/'); ?>">Participa<span class="caret"></span></a></span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#instrucciones">¿Cómo Participo?</a></li>

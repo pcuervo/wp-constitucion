@@ -13,7 +13,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 
 <section class="[ space-id ][ container padding--sides--xsm ]" id="cronica">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 col-sm-3 ]">
+		<div class="[ col-xs-12 col-sm-3 ][ hidden-xs ]">
 			<h2>Datos Curiosos</h2>
 			<blockquote>
 				<p>La CDMX, incluyendo su zona metropolitana, es la ciudad más poblada de América y la cuarta del mundo.</p>
@@ -71,7 +71,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 
 <section class="[ container ][ space-id ]" id="hacia-el-constituyente">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 col-sm-3 ]">
+		<div class="[ col-xs-12 col-sm-3 ][ hidden-xs ]">
 			<blockquote>
 				<p>El 59% del territorio que ocupa la CDMX es suelo de conservación.</p>
 			</blockquote>

@@ -13,7 +13,16 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 
 <section class="[ space-id ][ container padding--sides--xsm ]" id="cronica">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ][ margin-bottom--large ]">
+		<div class="[ col-xs-12 col-sm-3 ]">
+			<h2>Datos Curiosos</h2>
+			<blockquote>
+				<p>La CDMX, incluyendo su zona metropolitana, es la ciudad más poblada de América y la cuarta del mundo.</p>
+			</blockquote>
+			<blockquote>
+				<p>La Zona Metropolitana del Valle de México la integran actualmente las 16 delegaciones de la CDMX, 59 municipios del Estado de México y un municipio del estado de Hidalgo.</p>
+			</blockquote>
+		</div>
+		<div class="[ col-xs-12 col-sm-offset-1 col-sm-8 col-sm-offset-2 col-md-6 ][ margin-bottom--large ]">
 			<div class="[ content-acerca-de ]">
 				<?php $cronica = get_page_by_path('cronica'); ?>
 				<h2><?php echo $cronica->post_title; ?></h2>
@@ -22,26 +31,6 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 		</div>
 	</div>
 </section>
-
-<!-- slider -->
-<section>
-	<div class="flexslider relative">
-		<ul class="slides">
-			<li>
-				<img src="<?php echo THEMEPATH; ?>images/cd4.png" alt="Imagen slider 4">
-			</li>
-			<li>
-				<img src="<?php echo THEMEPATH; ?>images/cd1.png" alt="Imagen slider 1">
-			</li>
-			<li>
-				<img src="<?php echo THEMEPATH; ?>images/cd2.png" alt="Imagen slider 2">
-			</li>
-			<li>
-				<img src="<?php echo THEMEPATH; ?>images/cd3.png" alt="Imagen slider 3">
-			</li>
-		</ul>
-	</div>
-</section><!-- fin slider -->
 
 <section>
 	<div class=" slider responsive ">
@@ -82,13 +71,35 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 
 <section class="[ container ][ space-id ]" id="hacia-el-constituyente">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 ][ col-sm-offset-1 col-sm-10 ]">
+		<div class="[ col-xs-12 col-sm-3 ]">
+			<blockquote>
+				<p>Iztapalapa es la delegación más poblada de la CDMX (casi 2 millones de habitantes) y tiene más habitantes que países enteros como Estonia y Belice</p>
+			</blockquote>
+			<blockquote>
+				<p>El 59% del territorio que ocupa la CDMX es suelo de conservación.</p>
+			</blockquote>
+			<blockquote>
+				<p>El Bosque de Chapultepec (847 hectáreas) es dos veces más grande que Central Park de Nueva York (341.15 hectáreas).</p>
+			</blockquote>
+			<blockquote>
+				<p>En la CDMX se realizan 14 millones de viajes al día en buses y microbuses.</p>
+			</blockquote>
+			<blockquote>
+				<p>El metro de la ciudad mueve a casi 5 millones de usuarios al día.</p>
+			</blockquote>
+			<blockquote>
+				<p>La CDMX contribuye a casi una quinta parte del producto interno bruto nacional.</p>
+			</blockquote>
+			<blockquote>
+				<p>El diario the New York Times señaló a la CDMX como el destino número 1 para visitar en el 2016 y la describió como “la ciudad que lo tiene todo”.</p>
+			</blockquote>
+		</div>
+		<div class="[ col-xs-12 col-sm-offset-1 col-sm-8 col-sm-offset-2 col-md-6 ]">
 			<div class="[ content-acerca-de ][ margin-bottom ]">
 				<?php $hacia_constituyente = get_page_by_path('hacia-el-constituyente'); ?>
 				<h2><?php echo $hacia_constituyente->post_title; ?></h2>
 				<?php echo wpautop( $hacia_constituyente->post_content ); ?>
 			</div>
-
 		</div>
 	</div>
 </section>

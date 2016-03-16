@@ -366,6 +366,33 @@
               .addMessage('en', 'words', 'This value has the incorrect number of words');
         }
 
+        /** 
+         * VALIDA CONTACT
+         */
+        window.Parsley.addValidator(
+          'captcha',
+          function (value) {
+            return validateCaptcha();
+          })
+          .addMessage('en', 'captcha', 'El valor es incorrecto');
+
+        function validateCaptcha(value){
+            var firstNum = parseInt( document.getElementById('js-contact-captcha-label').getElementsByTagName('span')[0].innerHTML );
+            var secondNum = parseInt( document.getElementById('js-contact-captcha-label').getElementsByTagName('span')[1].innerHTML );
+
+            var value = $('#contact-captcha').val();
+            var suma = parseInt(firstNum) + parseInt(secondNum);
+
+            if( value !== suma ){
+                document.getElementById('js-contact-captcha-label').getElementsByTagName('span')[0].innerHTML = Math.floor(Math.random() * 10) + 1  ;
+                document.getElementById('js-contact-captcha-label').getElementsByTagName('span')[1].innerHTML = Math.floor(Math.random() * 10) + 1  ;
+                
+            }
+            
+            return value == suma;
+          
+        }
+
         $('.mas-eventos').on('click', function(event){
             event.preventDefault();
             var data = $(this).attr('data-date');

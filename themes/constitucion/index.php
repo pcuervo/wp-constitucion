@@ -20,7 +20,7 @@ global $wp_query; ?>
 
 		while ( $noticias->have_posts() ) : $noticias->the_post();
 			$date_arr = getDateTransform( $post->post_date );
-			$url_image = attachment_image_url( $post->ID, 'medium' );
+			$url_image = attachment_image_url( $post->ID, 'images_news_cdmx' );
 			$link_noticia = get_post_meta( $post->ID, 'link_noticia', true );?>
 			<div class="[ row ][ margin-bottom--large ]">
 				<div class="[ col-xs-5 no-padding--right ]">

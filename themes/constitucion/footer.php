@@ -7,9 +7,9 @@
 							<img src="<?php echo THEMEPATH; ?>images/logocdmx2.png" alt="Logo Constitución CDMX">
 						</div>
 						<div class="[ col-xs-12 col-sm-6 col-lg-4 ][ text-center ][ margin-top-bottom ]">
-							<a href="<?php echo THEMEPATH; ?>pdf/Términos_y_condiciones-_Plataforma_de_Participación_Ciudadana_Constitución_CDMX_-_Punto_de_Encuentro.pdf" target="_blank" >Términos y condiciones</a>
+							<a href="<?php echo site_url('terminos-y-condiciones/' ); ?>" target="_blank" >Términos y condiciones</a>
 							<a data-toggle="modal" data-target="#contacto">Contacto</a>
-							<a href="#nada">Transparencia</a>
+							<a href="<?php echo THEMEPATH; ?>pdf/Transparencia.pdf" target="_blank">Transparencia</a>
 						</div>
 					</div>
 

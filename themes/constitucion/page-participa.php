@@ -61,13 +61,13 @@ get_header(); the_post();
 				<h2 class="[ no-margin-top margin-bottom ]">Conoce la ubicación de nuestros quioscos</h2>
 			</div>
 		</div>
-		<div id="map_canvas" class="mapping" style="width: 100%; height: 500px;"></div>
+		<div id="map_canvas" class="mapping" style="width: 100%; height: 400px;"></div>
 	</section>
 	<?php $imagina = get_page_by_path('imagina-tu-ciudad');
 	$image_imagina = attachment_image_url( $imagina->ID, 'full' ); ?>
 	<section class="[ container ][ padding--sides--xsm--large ][ space-id ]" id="imagina-ciudad">
 		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
-			
+
 			<h2 class="[ no-margin-top margin-bottom ]"><?php echo $imagina->post_title; ?></h2>
 			<?php echo wpautop( $imagina->post_content );  ?>
 			<div class="[ text-center ][ margin-top ]">
@@ -118,7 +118,7 @@ get_header(); the_post();
 			</div>
 		</div>
 	</section>
-	<?php  $encuentros = get_page_by_path('encuentros-ciudadanos'); 
+	<?php  $encuentros = get_page_by_path('encuentros-ciudadanos');
 	$image_encuentros = attachment_image_url( $encuentros->ID, 'full' ); ?>
 	<section class="[ container ][ space-id ]" id="dialogos-publicos">
 		<div class="[ row ]">
@@ -201,14 +201,14 @@ get_header(); the_post();
 		<?php else: ?>
 			<p class="text-warning">Falta la Imagen de Sobre la constitución</p>
 		<?php endif; ?>
-		
+
 	</div>
 
 	<section class="[ bg-gray--fondo section--bg ][ space-id ][ no-margin--bottom ]">
 		<div class="[ container ]" id="ensayos">
 			<article class="[ row ][ margin-bottom ]">
 				<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
-					<?php $ensayo = get_page_by_path('ensayo'); ?> 
+					<?php $ensayo = get_page_by_path('ensayo'); ?>
 					<h2 class=""><?php echo $ensayo->post_title; ?></h2>
 					<?php echo wpautop( $ensayo->post_content );  ?>
 					<div class="[ text-center ][ margin-bottom padding--top--large padding--bottom ]">

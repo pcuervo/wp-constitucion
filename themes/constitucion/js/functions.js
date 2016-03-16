@@ -402,8 +402,8 @@
             var pathnameURLarray = pathnameURL.split('/');
             var pathnameURLarrayLast = $(pathnameURLarray).get(-2);
 
-            console.log( pathnameURLarrayLast );
-            console.log( anchorLast );
+            //console.log( pathnameURLarrayLast );
+            //console.log( anchorLast );
 
             if( anchorLast == pathnameURLarrayLast ){
                 smoothScrollTo('#'+anchor[1], 140);
@@ -431,14 +431,13 @@
                 var data_uno = ['<div class="info_content"><h3>'+value.name+'</h3></div>'];
                 data_kioskos.push(cada_uno);
                 infoWindowContent.push(data_uno);
-
             });
-
 
             var map;
             var bounds = new google.maps.LatLngBounds();
             var mapOptions = {
-                mapTypeId: 'roadmap'
+                mapTypeId: 'roadmap',
+                scrollwheel: false,
             };
 
             // Display a map on the page

@@ -542,3 +542,19 @@ Stack trace:
 #1 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(249): Abraham\TwitterOAuth\TwitterOAuth->oAuthRequest('https://api.twi...', 'GET', Array)
 #2 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(178): Abraham\TwitterOAuth\TwitterOAuth->http('GET', 'https://api.twi...', 'search/tweets', Array)
 #3 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/ in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php on line 343
+[16-Mar-2016 01:41:06 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[16-Mar-2016 01:41:06 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[16-Mar-2016 01:41:06 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[16-Mar-2016 01:41:06 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[16-Mar-2016 01:41:07 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[16-Mar-2016 01:41:07 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[16-Mar-2016 01:41:07 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[16-Mar-2016 01:41:07 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[16-Mar-2016 01:41:31 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[16-Mar-2016 01:41:31 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[16-Mar-2016 01:41:31 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[16-Mar-2016 01:41:31 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[16-Mar-2016 01:41:33 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[16-Mar-2016 01:41:33 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[16-Mar-2016 01:41:33 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[16-Mar-2016 01:41:33 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261

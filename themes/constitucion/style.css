@@ -8285,6 +8285,7 @@ blockquote {
 }
 blockquote p {
   font-family: 'Alegreya Sans SC', sans-serif;
+  text-align: left;
   color: #457390;
 }
 blockquote canvas {

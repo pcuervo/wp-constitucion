@@ -45,8 +45,8 @@
 									<input name="telefono_cdmx" id="telefono_cdmx" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" placeholder="Teléfono">
 
 									<fieldset id="js-contact-captcha">
-										<label class="[ color-gray ]" for="contact-captcha">Necesitamos asegurarnos de que no seas un robot. ¿Cuánto es <span></span> + <span></span>?</label>
-										<input class="[ form-control ][ input-primary ][ margin-bottom--large ]" id="contact-captcha" name="contact-captcha" type="number" placeholder="" captcha-required/>
+										<label class="[ color-gray ]" for="contact-captcha" id="js-contact-captcha-label">Necesitamos asegurarnos de que no seas un robot. ¿Cuánto es <span></span> + <span></span>?</label>
+										<input class="[ form-control ][ input-primary ][ margin-bottom--large ]" id="contact-captcha" name="contact-captcha" type="number" placeholder="" required="" data-parsley-captcha="" captcha-required />
 									</fieldset>
 
 									<input name="accion" id="accion" type="hidden" value="guarda-formulario">

@@ -82,7 +82,7 @@ get_header(); the_post();
 
 	<section class="[ container ][ padding--sides--xsm--large ][ space-id ]" id="resultados">
 		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
-			<p>Si ya participaste ingresa tu número de folio para obtener tu certificado</p>
+			<p>Si ya participaste ingresa tu número de folio para obtener tu certificado y recibir sugerencias sobre ensayos que pueden interesarte.</p>
 			<form class="[ form-inline ][ margin-top ][ text-center ]" action="<?php echo site_url('obtener-certificado'); ?>" method="GET" data-parsley-certificado>
 				<div class="[ input-group ]" >
 					<input type="text" name="referencia" class="[ form-control input--search ][ height-50 ][ fz-xxlarge ]" placeholder="CM5697CX08" required="" data-parsley-required-message="El número de folio es obligatorio">
@@ -114,7 +114,7 @@ get_header(); the_post();
 			</div>
 			<div class="[ clear ]"></div>
 			<div class="[ text-center ][ margin-top ]">
-				<a href="https://www.change.org/movements/voces-ciudadanas-en-la-nueva-constituci%C3%B3n-de-la-cdmx" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ] gtm-btn-participa">Conoce cómo realizar petición</a>
+				<a href="https://www.change.org/movements/voces-ciudadanas-en-la-nueva-constituci%C3%B3n-de-la-cdmx" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ] gtm-btn-participa">Haz una petición</a>
 			</div>
 		</div>
 	</section>

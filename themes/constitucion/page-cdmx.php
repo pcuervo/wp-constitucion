@@ -73,19 +73,16 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 	<div class="[ row ]">
 		<div class="[ col-xs-12 col-sm-3 ]">
 			<blockquote>
-				<p>Iztapalapa es la delegación más poblada de la CDMX (casi 2 millones de habitantes) y tiene más habitantes que países enteros como Estonia y Belice</p>
-			</blockquote>
-			<blockquote>
 				<p>El 59% del territorio que ocupa la CDMX es suelo de conservación.</p>
 			</blockquote>
 			<blockquote>
 				<p>El Bosque de Chapultepec (847 hectáreas) es dos veces más grande que Central Park de Nueva York (341.15 hectáreas).</p>
 			</blockquote>
-			<blockquote>
-				<p>En la CDMX se realizan 14 millones de viajes al día en buses y microbuses.</p>
+			<blockquote class="[ text-center ]">
+				<canvas id="pie-data" width="120px" height="120px"></canvas>
 			</blockquote>
 			<blockquote>
-				<p>El metro de la ciudad mueve a casi 5 millones de usuarios al día.</p>
+				<p>La CDMX ocupa el primer lugar a nivel nacional en acceso a información pública de oficio.</p>
 			</blockquote>
 			<blockquote>
 				<p>La CDMX contribuye a casi una quinta parte del producto interno bruto nacional.</p>

@@ -8283,6 +8283,14 @@ blockquote {
   border-bottom: 2px dotted #777777;
   border-left: none ;
 }
+blockquote p {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  text-align: left;
+  color: #457390;
+}
+blockquote canvas {
+  margin: auto;
+}
 .content-acerca-de h3 {
   margin-top: 40px;
 }

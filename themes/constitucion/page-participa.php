@@ -142,7 +142,7 @@ get_header(); the_post();
 
 			<section class="[ space-id ]" id="registra-tu-evento">
 				<div class="[ box-shadow--form ]">
-					<h2 class="[ margin-bottom--large ]">Registra tu encuentros</h2>
+					<h2 class="[ margin-bottom--large ]">Registra tu encuentro</h2>
 					<form id="form-eventos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
 						<div class="[ row ]">
 							<div class="[ col-xs-12 col-sm-6 ]">

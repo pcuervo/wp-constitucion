@@ -43,7 +43,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		wp_enqueue_script( 'jquery', 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js', array(), '2.0.3', true );
 		wp_enqueue_script('jquery-ui-datepicker');
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.min.js', array('jquery'), '1.0', true );
-		wp_enqueue_script( 'api-google', 'http://maps.google.com/maps/api/js?libraries=places&language=es&key=AIzaSyBa-P_2_xm1FQOYfZ1h-86QDvI9KQdhxtI', array('plugins'), '1.0', true );
+		wp_enqueue_script( 'api-google', 'https://maps.google.com/maps/api/js?libraries=places&language=es&key=AIzaSyBa-P_2_xm1FQOYfZ1h-86QDvI9KQdhxtI', array('plugins'), '1.0', true );
 		wp_enqueue_script( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js', array('jquery'), '3.1.0', true );
 		wp_enqueue_script( 'functions', JSPATH.'functions.min.js', array('plugins'), '1.0', true );
 
@@ -65,7 +65,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		// styles
 		//wp_enqueue_style( 'styles', get_stylesheet_uri() );
 		wp_enqueue_style( 'styles', THEMEPATH . 'style.min.css' );
-		wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
+		wp_enqueue_style('jquery-style', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
 
 	});
 
@@ -79,7 +79,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 		// scripts
 		wp_enqueue_script('jquery-ui-datepicker');
-		wp_enqueue_script( 'api-google', 'http://maps.google.com/maps/api/js?libraries=places&language=en-AU&key=AIzaSyBa-P_2_xm1FQOYfZ1h-86QDvI9KQdhxtI', array('jquery'), '1.0', true );
+		wp_enqueue_script( 'api-google', 'https://maps.google.com/maps/api/js?libraries=places&language=en-AU&key=AIzaSyBa-P_2_xm1FQOYfZ1h-86QDvI9KQdhxtI', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'admin-js', JSPATH.'admin.js', array('api-google'), '1.0', true );
 
 		// localize scripts
@@ -87,7 +87,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 		// styles
 		wp_enqueue_style( 'admin-css', CSSPATH.'admin.css' );
-		wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
+		wp_enqueue_style('jquery-style', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
 
 	});
 

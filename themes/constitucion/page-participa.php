@@ -218,7 +218,7 @@ get_header(); the_post();
 				</div>
 			</article>
 			<article class="[ box-shadow--form ]">
-				<h2 class="[ margin-bottom ]">Comparte tu ensayo o relatoria</h2>
+				<h2 class="[ margin-bottom ]">Comparte tu ensayo</h2>
 				<form id="form-ensayos" class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="" >
 					<div class="[ row ]">
 						<div class="[ form-group ][ col-xs-12 col-sm-6 ]">

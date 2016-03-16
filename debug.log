@@ -74,3 +74,95 @@
 [14-Mar-2016 18:59:52 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 259
 [14-Mar-2016 18:59:52 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 259
 [14-Mar-2016 18:59:52 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 259
+[14-Mar-2016 21:28:33 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 259
+[14-Mar-2016 21:28:33 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 259
+[14-Mar-2016 21:28:33 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 259
+[14-Mar-2016 21:28:33 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 259
+[14-Mar-2016 21:28:37 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 259
+[14-Mar-2016 21:28:37 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 259
+[14-Mar-2016 21:28:37 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 259
+[14-Mar-2016 21:28:37 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 259
+[15-Mar-2016 21:11:11 UTC] PHP Warning:  file_put_contents(/Users/alejandrosandoval/Desktop/php.txt): failed to open stream: No such file or directory in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/relation-retos-taxonomy.php on line 6
+[15-Mar-2016 21:11:11 UTC] PHP Warning:  file_put_contents(/Users/alejandrosandoval/Desktop/php.txt): failed to open stream: No such file or directory in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/relation-retos-taxonomy.php on line 6
+[15-Mar-2016 21:11:11 UTC] PHP Warning:  file_put_contents(/Users/alejandrosandoval/Desktop/php.txt): failed to open stream: No such file or directory in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/relation-retos-taxonomy.php on line 6
+[15-Mar-2016 21:11:11 UTC] PHP Warning:  file_put_contents(/Users/alejandrosandoval/Desktop/php.txt): failed to open stream: No such file or directory in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/relation-retos-taxonomy.php on line 6
+[15-Mar-2016 21:11:11 UTC] PHP Warning:  file_put_contents(/Users/alejandrosandoval/Desktop/php.txt): failed to open stream: No such file or directory in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/relation-retos-taxonomy.php on line 6
+[15-Mar-2016 21:11:11 UTC] PHP Warning:  file_put_contents(/Users/alejandrosandoval/Desktop/php.txt): failed to open stream: No such file or directory in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/relation-retos-taxonomy.php on line 6
+[15-Mar-2016 21:11:11 UTC] PHP Warning:  file_put_contents(/Users/alejandrosandoval/Desktop/php.txt): failed to open stream: No such file or directory in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/relation-retos-taxonomy.php on line 6
+[15-Mar-2016 21:11:11 UTC] PHP Warning:  file_put_contents(/Users/alejandrosandoval/Desktop/php.txt): failed to open stream: No such file or directory in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/relation-retos-taxonomy.php on line 6
+[15-Mar-2016 21:11:11 UTC] PHP Warning:  file_put_contents(/Users/alejandrosandoval/Desktop/php.txt): failed to open stream: No such file or directory in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/relation-retos-taxonomy.php on line 6
+[15-Mar-2016 21:11:11 UTC] PHP Warning:  file_put_contents(/Users/alejandrosandoval/Desktop/php.txt): failed to open stream: No such file or directory in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/relation-retos-taxonomy.php on line 6
+[15-Mar-2016 21:11:11 UTC] PHP Warning:  file_put_contents(/Users/alejandrosandoval/Desktop/php.txt): failed to open stream: No such file or directory in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/relation-retos-taxonomy.php on line 6
+[15-Mar-2016 21:11:11 UTC] PHP Warning:  file_put_contents(/Users/alejandrosandoval/Desktop/php.txt): failed to open stream: No such file or directory in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/relation-retos-taxonomy.php on line 6
+[15-Mar-2016 21:11:13 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:11:13 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:11:13 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:11:13 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:11:19 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:11:19 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:11:19 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:11:19 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:13:35 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:13:36 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:13:36 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:13:36 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:13:42 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:13:42 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:13:42 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:13:42 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:17:49 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:17:49 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:17:49 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:17:49 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:18:04 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:18:04 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:18:04 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:18:04 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:25:49 UTC] PHP Fatal error:  Uncaught exception 'Abraham\TwitterOAuth\TwitterOAuthException' with message 'name lookup timed out' in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php:343
+Stack trace:
+#0 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(278): Abraham\TwitterOAuth\TwitterOAuth->request('https://api.twi...', 'GET', 'Authorization: ...', Array)
+#1 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(249): Abraham\TwitterOAuth\TwitterOAuth->oAuthRequest('https://api.twi...', 'GET', Array)
+#2 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(178): Abraham\TwitterOAuth\TwitterOAuth->http('GET', 'https://api.twi...', 'search/tweets', Array)
+#3 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/Twitter.class.php(55 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php on line 343
+[15-Mar-2016 21:26:23 UTC] PHP Fatal error:  Uncaught exception 'Abraham\TwitterOAuth\TwitterOAuthException' with message 'Operation timed out after 0 milliseconds with 0 out of 0 bytes received' in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php:343
+Stack trace:
+#0 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(278): Abraham\TwitterOAuth\TwitterOAuth->request('https://api.twi...', 'GET', 'Authorization: ...', Array)
+#1 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(249): Abraham\TwitterOAuth\TwitterOAuth->oAuthRequest('https://api.twi...', 'GET', Array)
+#2 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(178): Abraham\TwitterOAuth\TwitterOAuth->http('GET', 'https://api.twi...', 'search/tweets', Array)
+#3 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-co in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php on line 343
+[15-Mar-2016 21:26:40 UTC] PHP Fatal error:  Uncaught exception 'Abraham\TwitterOAuth\TwitterOAuthException' with message 'Operation timed out after 0 milliseconds with 0 out of 0 bytes received' in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php:343
+Stack trace:
+#0 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(278): Abraham\TwitterOAuth\TwitterOAuth->request('https://api.twi...', 'GET', 'Authorization: ...', Array)
+#1 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(249): Abraham\TwitterOAuth\TwitterOAuth->oAuthRequest('https://api.twi...', 'GET', Array)
+#2 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(178): Abraham\TwitterOAuth\TwitterOAuth->http('GET', 'https://api.twi...', 'search/tweets', Array)
+#3 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-co in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php on line 343
+[15-Mar-2016 21:26:59 UTC] PHP Fatal error:  Uncaught exception 'Abraham\TwitterOAuth\TwitterOAuthException' with message 'Operation timed out after 0 milliseconds with 0 out of 0 bytes received' in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php:343
+Stack trace:
+#0 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(278): Abraham\TwitterOAuth\TwitterOAuth->request('https://api.twi...', 'GET', 'Authorization: ...', Array)
+#1 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(249): Abraham\TwitterOAuth\TwitterOAuth->oAuthRequest('https://api.twi...', 'GET', Array)
+#2 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(178): Abraham\TwitterOAuth\TwitterOAuth->http('GET', 'https://api.twi...', 'search/tweets', Array)
+#3 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-co in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php on line 343
+[15-Mar-2016 21:27:51 UTC] PHP Fatal error:  Uncaught exception 'Abraham\TwitterOAuth\TwitterOAuthException' with message 'Operation timed out after 5001 milliseconds with 0 bytes received' in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php:343
+Stack trace:
+#0 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(278): Abraham\TwitterOAuth\TwitterOAuth->request('https://api.twi...', 'GET', 'Authorization: ...', Array)
+#1 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(249): Abraham\TwitterOAuth\TwitterOAuth->oAuthRequest('https://api.twi...', 'GET', Array)
+#2 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(178): Abraham\TwitterOAuth\TwitterOAuth->http('GET', 'https://api.twi...', 'search/tweets', Array)
+#3 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/ in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php on line 343
+[15-Mar-2016 21:28:17 UTC] PHP Fatal error:  Uncaught exception 'Abraham\TwitterOAuth\TwitterOAuthException' with message 'Operation timed out after 0 milliseconds with 0 out of 0 bytes received' in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php:343
+Stack trace:
+#0 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(278): Abraham\TwitterOAuth\TwitterOAuth->request('https://api.twi...', 'GET', 'Authorization: ...', Array)
+#1 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(249): Abraham\TwitterOAuth\TwitterOAuth->oAuthRequest('https://api.twi...', 'GET', Array)
+#2 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(178): Abraham\TwitterOAuth\TwitterOAuth->http('GET', 'https://api.twi...', 'search/tweets', Array)
+#3 /Users/pcuervo/Documents/sitios/wp-constitucion/wp-co in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php on line 343
+[15-Mar-2016 21:28:21 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:28:21 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:28:21 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 21:28:21 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 22:00:24 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 22:00:24 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 22:00:24 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 22:00:24 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 22:00:26 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 22:00:26 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 22:00:26 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[15-Mar-2016 22:00:26 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261

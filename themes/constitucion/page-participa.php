@@ -212,9 +212,39 @@ get_header(); the_post();
 					<h2 class=""><?php echo $ensayo->post_title; ?></h2>
 					<?php echo wpautop( $ensayo->post_content );  ?>
 					<div class="[ text-center ][ margin-bottom padding--top--large padding--bottom ]">
-						<a href="http://constitucioncdmx.pubpub.org/" target="_blank" class="[ btn btn-primary btn-large ][ inline-block ][ gtm-btn-ensayo ]">Consulta y comenta los ensayos</a>
+						<a data-toggle="modal" data-target="#indicaciones-ensayo" class="[ btn btn-primary btn-large ][ inline-block ][ gtm-btn-ensayo ]">Consulta y comenta los ensayos</a>
 					</div>
-					<p>Comparte tu ensayo llenando el siguiente formulario. Verifica que cumpla con los requisitos de publicación aquí.</p>
+
+					<!-- / Modal indicaciones-ensayo -->
+					<div id=indicaciones-ensayo class="modal fade" tabindex="-1" role="dialog">
+						<div class="[ modal-dialog ]">
+							<div class="[ modal-content ][ no-border-radius ]">
+								<div class="[ modal-body ]">
+									<a type="button" id="close-feedback" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>
+									<div class="[ row padding--sides--xsm ]">
+										<div class="[ padding--top--xxlarge padding--bottom--xxlarge padding--sides--large--sm ]">
+											<p class="[ color-primary ][ margin-top ]">"Para facilitar la recepción y lectura de los ensayos necesitamos que todos tengan un mismo formato. Por ello te recomendamos seguir las siguientes indicaciones.</p>
+											<ul class="[ margin-top--large ]">
+												<li>Formato tamaño carta (21.59 cm x 27.94 cm)</li>
+												<li>Extensión Mínima de dos páginas (incluyendo portada) y máxima de 10 páginas, incluyendo anexo, referencias y soporte gráfico.</li>
+												<li>La primera página deberá incluir un resumen de máximo 250 palabras con las ideas principales y conclusiones del ensayo.</li>
+												<li>Tipografía del texto Helvética a 12 puntos, espacio sencillo.</li>
+												<li>Tipografía de subtítulos Helvética a 13 puntos.</li>
+												<li>Tipografía del Título en Helvética a 14 puntos, en mayúscula.</li>
+												<li>Si hay notas al pie de página, deberán estar en Helvética a 10 puntos.</li>
+												<li>El listado de autores alineado al margen derecho con letra Helvetica cursiva de 11 puntos.</li>
+												<li>En caso de ser presentado por una institución (es) u organización (es) esto se deberá señalarse también con letra Helvetica cursiva de 11 puntos.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- / modal indicaciones-ensayo -->
+
+
+
+					<p>Comparte tu ensayo llenando el siguiente formulario. Verifica que cumpla con los requisitos de publicación <a href="http://constitucioncdmx.pubpub.org/" target="_blank" class="[ color-primary ]">aquí.</a></p>
 				</div>
 			</article>
 			<article class="[ box-shadow--form ]">

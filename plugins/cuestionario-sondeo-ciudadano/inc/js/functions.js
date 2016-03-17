@@ -279,11 +279,7 @@ function getHTMLDelegacionesCDMX( section ){
         default:
             var pregunta = '¿En qué delegación vives?';
     }
-    var delegaciones = `
-        <label class="[ fs-field-label fs-anim-upper ][ color-gray ]">` + pregunta + `</label>
-        <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
-            <option value="" disabled selected>Selecciona tu delegación</option>
-        `;
+    var delegaciones = '<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">' + pregunta + '</label><select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required"><option value="" disabled selected>Selecciona tu delegación</option>';
     $.each( allDelegaciones, function(i, val){
         delegaciones += '<option value="' + val.delegacion + '">' + val.delegacion + '</option>';
     });
@@ -323,11 +319,7 @@ function getHTMLMunicipios( section ){
         default:
             var pregunta = '¿En qué municipio vives?';
     }
-    var municipios = `
-        <label class="[ fs-field-label fs-anim-upper ][ color-gray ]">` + pregunta + `</label>
-        <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
-            <option value="" disabled selected>Selecciona tu municipio</option>
-        `;
+    var municipios = '<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">' + pregunta + '</label><select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required"><option value="" disabled selected>Selecciona tu municipio</option>';
     var currentTitle = '';
     $.each( allMunicipios, function(i, val){
         if( currentTitle != val.municipio.charAt(0) ){
@@ -350,11 +342,7 @@ function getHTMLEstados( section ){
         default:
             var pregunta = '¿En qué estado vives?';
     }
-    var estados =  `
-        <label class="[ fs-field-label fs-anim-upper ][ color-gray ]">` + pregunta + `</label>
-        <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" name="state" id="state" >
-            <option value="" disabled selected>Selecciona el estado</option>
-        `;
+    var estados =  '<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">' + pregunta + '</label><select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" name="state" id="state" ><option value="" disabled selected>Selecciona el estado</option>';
     $.each( allEstados, function(i, val){
         estados += '<option value="' + val.estado + '">' + val.estado + '</option>';
     });
@@ -372,11 +360,7 @@ function getHTMLPaises( section ){
         default:
             var pregunta = '¿En qué país vives?';
     }
-    var paises =  `
-        <label class="[ fs-field-label fs-anim-upper ][ color-gray ]">` + pregunta + `</label>
-        <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ] select-paises" name="pais" id="pais" >
-            <option value="" disabled selected>Selecciona el país</option>
-        `;
+    var paises =  '<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">' + pregunta + '</label><select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ] select-paises" name="pais" id="pais" ><option value="" disabled selected>Selecciona el país</option>';
     var currentTitle = '';
     $.each( allPaises, function(i, val){
         if( currentTitle != val.pais.charAt(0) ){
@@ -399,11 +383,7 @@ function getHTMLColoniasCDMX( delegacion, section ){
         default:
             var pregunta = '¿En qué colonia vives?';
     }
-    var colonias = `
-        <label class="[ fs-field-label fs-anim-upper ][ color-gray ]">` + pregunta + `</label>
-        <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
-            <option value="" disabled selected>Selecciona tu colonia</option>
-        `;
+    var colonias = '<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">' + pregunta + '</label><select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required"><option value="" disabled selected>Selecciona tu colonia</option>';
 
     var currentTitle = '';
     $.each( allColonias, function( del, col ){
@@ -421,10 +401,7 @@ function getHTMLColoniasCDMX( delegacion, section ){
 }
 
 function getHTMLOtrosRetos(){
-    return `
-        <label class="[ fs-field-label fs-anim-upper ][ color-gray ]">¿Qué otro reto tienes en mente?</label>
-        <textarea class="fs-anim-lower" id="q27" name="q27" placeholder="" required></textarea>
-        `;
+    return '<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">¿Qué otro reto tienes en mente?</label><textarea class="fs-anim-lower" id="q27" name="q27" placeholder="" required></textarea>';
 }
 
 function getSurveyData(){

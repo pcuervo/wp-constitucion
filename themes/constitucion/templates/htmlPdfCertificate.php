@@ -17,6 +17,7 @@
 		p{ font-family: "ABeeZee", sans-serif;  }
 		.text-center{text-align: center;}
 		.img-logo{ width: 200px; }
+		.img-logo--small{ width: 130px; }
 		.color-primary{ color: #e80e8a; }
 		.color-gray--strong{ color:#222; }
 		.color-gray{ color: #555; }
@@ -31,7 +32,8 @@
 		.margin-top--xsmall{ margin-top: 30px; }
 		.margin-top--small{ margin-top: 50px; }
 		.margin-top{ margin-top: 110px; }
-		.margin-top--large{ margin-top: 180px; }
+		.margin-top--large{ margin-top: 170px; }
+		.margin-right{ margin-right: 20px; }
 		.padding{ padding: 50px; }
 		.border-primary{
 			border: 1px solid #e80e8a;
@@ -67,6 +69,10 @@
 								<p class="[ color-gray ][ fz--small ][ text-uppercase ][ margin-top--large ]">Con el folio núm. <span class="[ color-primary ][ fz--small ]"><?php echo $referencia ?></span><br>
 								podrás darle seguimiento <br>
 								a tu participación</p>
+								<div class="[ margin-top--large ]">
+									<img class="[ img-logo--small margin-right ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png">
+									<img class="[ img-logo--small ]" src="<?php echo THEMEPATH; ?>images/capital-social.jpg">
+								</div>
 							</div>
 							<div class="[ col col-2 ]">
 								<h2 class="[ text-uppercase ][ margin-top ][ color-gray ]"><?php echo $nombre . ' ' . $apellidos ?></h2>

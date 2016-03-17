@@ -209,6 +209,9 @@ class Sondeo_CDMX_Survey {
 		<div class="[ survey-container ]">
 			<div class="[ container ][ height-100 ]">
 				<div class="[ fs-form-wrap ]" id="fs-form-wrap">
+					<div class="[ fs-back-to-site ]">
+						<a class="[ color-primary ]" href="<?php echo site_url(); ?>">< Regresar al sitio</a>
+					</div>
 					<div class="[ fs-title ][ text-center ]">
 						<h1 class="[ ]">Imagina tu ciudad</h1>
 					</div>
@@ -303,7 +306,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-captcha" data-question="999">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Necesitamos asegurarnos de que no seas un robot. ¿Cuánto es <span></span> + <span></span>?</label>
 								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="" captcha-required/>
-								<p class="[ accept-terms ][ color-primary ]">Al aceptar, estoy de acuerdo con las políticas de privacidad, términos y condiciones de la plataforma. <a href="<?php echo site_url('terminos-y-condiciones/' ); ?>">Ver más.</a></p>
+								<p class="[ accept-terms ][ color-primary ]">Al aceptar, estoy de acuerdo con las políticas de privacidad, términos y condiciones de la plataforma. <a target="_blank"> href="<?php echo site_url('terminos-y-condiciones/' ); ?>">Ver más.</a></p>
 							</li>
 						</ol><!-- /fs-fields -->
 						<button class="fs-submit" type="submit">Enviar respuestas</button>

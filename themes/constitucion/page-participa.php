@@ -223,10 +223,10 @@ get_header(); the_post();
 									<a type="button" id="close-feedback" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>
 									<div class="[ row padding--sides--xsm ]">
 										<div class="[ padding--top--xxlarge padding--bottom--xxlarge padding--sides--large--sm ]">
-											<p class="[ color-primary ][ margin-top ]">"Para facilitar la recepción y lectura de los ensayos necesitamos que todos tengan un mismo formato. Por ello te recomendamos seguir las siguientes indicaciones.</p>
+											<p class="[ color-primary ][ margin-top ]">Para facilitar la recepción y lectura de los ensayos necesitamos que todos tengan un mismo formato. Por ello te recomendamos seguir las siguientes indicaciones.</p>
 											<ul class="[ margin-top--large ]">
 												<li>Formato tamaño carta (21.59 cm x 27.94 cm)</li>
-												<li>Extensión Mínima de dos páginas (incluyendo portada) y máxima de 10 páginas, incluyendo anexo, referencias y soporte gráfico.</li>
+												<li>Extensión mínima de dos páginas (incluyendo portada) y máxima de 10 páginas, incluyendo anexo, referencias y soporte gráfico.</li>
 												<li>La primera página deberá incluir un resumen de máximo 250 palabras con las ideas principales y conclusiones del ensayo.</li>
 												<li>Tipografía del texto Helvética a 12 puntos, espacio sencillo.</li>
 												<li>Tipografía de subtítulos Helvética a 13 puntos.</li>

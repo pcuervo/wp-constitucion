@@ -261,29 +261,11 @@ function showDondeEstudias(){
 }
 
 function getHTMLDondeTrabajas(){
-    return `
-        <label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde trabajas?</label>
-        <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
-            <option value="" disabled selected>Selecciona una opción</option>
-            <option value="cdmx">CDMX</option>
-            <option value="zmvm">Zona Metropolitana</option>
-            <option value="resto-republica">Resto de la república</option>
-            <option value="fuera-mexico">Fuera de México</option>
-        </select>
-    `;
+    return '<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde trabajas?</label><select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required"><option value="" disabled selected>Selecciona una opción</option><option value="cdmx">CDMX</option><option value="zmvm">Zona Metropolitana</option><option value="resto-republica">Resto de la república</option><option value="fuera-mexico">Fuera de México</option></select>';
 }
 
 function getHTMLDondeEstudias(){
-    return `
-        <label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde estudias?</label>
-        <select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
-            <option value="" disabled selected>Selecciona una opción</option>
-            <option value="cdmx">CDMX</option>
-            <option value="zmvm">Zona Metropolitana</option>
-            <option value="resto-republica">Resto de la república</option>
-            <option value="fuera-mexico">Fuera de México</option>
-        </select>
-    `;
+    return '<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde estudias?</label><select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required"><option value="" disabled selected>Selecciona una opción</option><option value="cdmx">CDMX</option><option value="zmvm">Zona Metropolitana</option><option value="resto-republica">Resto de la república</option><option value="fuera-mexico">Fuera de México</option></select>';
 }
 
 function getHTMLDelegacionesCDMX( section ){

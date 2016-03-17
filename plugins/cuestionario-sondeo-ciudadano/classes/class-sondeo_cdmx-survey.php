@@ -286,7 +286,7 @@ class Sondeo_CDMX_Survey {
 								<span class="[ color-primary ]" id="counter-imaginas"></span>
 							</li>
 							<li id="js-obstaculos-principales" data-question="29">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="obstaculos-principales" data-info="Las palabras deben ir separadas por comas.">Pensando en esta visión, ¿cuáles pensarías que son los tres obstáculos principales para que se haga realidad?</label>
+								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="obstaculos-principales" data-info="Las palabras deben ir separadas por comas.">Pensando en esta visión de ciudad, ¿cuáles son los tres obstáculos principales para que se haga realidad?</label>
 								<input class="fs-anim-lower" id="q11" name="obstaculos-principales" type="text" placeholder="Ej. palabra1, palabra2, palabra3" comma-required/>
 							</li>
 							<li id="js-vision-realidad" data-question="30">

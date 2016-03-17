@@ -20,7 +20,7 @@ $date_arr = getDateTransform( $fecha_evento ); ?>
 				<p><strong>Fotografía de cartel o publicidad del acontecimiento:</strong> <?php echo get_post_meta( $post->ID, 'fotografia_evento', true ); ?></p>
 				<p><strong>Correo electrónico:</strong> <?php echo get_post_meta( $post->ID, 'correo_evento', true ); ?></p>
 				<p>
-					<strong>Asistentes:</strong> 
+					<strong>Asistentes:</strong>
 					<?php echo $asistencia_invitacion == 'si' ? 'Por invitación' : 'La asistencia es libre'; ?>
 				</p>
 				<p><strong>Dónde se llevara a cabo el evento:</strong> <?php echo get_post_meta( $post->ID, 'ubicacion_evento', true ); ?></p>
@@ -28,7 +28,7 @@ $date_arr = getDateTransform( $fecha_evento ); ?>
 					echo '<iframe width="100%" height="170" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q='.$latitud_evento.','.$longitud_evento.'&hl=es;z=14&amp;output=embed"></iframe>';
 				} ?>
 				<p><strong>Fecha del evento:</strong> <?php echo $date_arr[4].' '.$date_arr[1].' '.$date_arr[2] ?></p>
-				<p><strong>Horario:</strong> <?php echo get_post_meta( $post->ID, 'horarios_evento', true ); ?></p>
+				<p><em><strong>Horario:</strong></em> <?php echo get_post_meta( $post->ID, 'horarios_evento', true ); ?></p>
 
 			</div>
 			<?php if (is_singular('post')): ?>

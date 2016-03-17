@@ -7793,6 +7793,10 @@ ul.slick-dots li.slick-active {
   padding-left: 48px;
   padding-right: 48px;
 }
+.padding--sides--xlarge {
+  padding-left: 72px;
+  padding-right: 72px;
+}
 @media (min-width: 480px) and (max-width: 767px) {
   .padding--sides--xsm {
     padding-left: 15%;

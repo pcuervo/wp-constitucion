@@ -277,31 +277,26 @@
                     value: 60,
                     color: "#457390",
                     highlight: "#222",
-                    label: "Diputados Electos"
                 },
                 {
                     value: 14,
                     color: "#4b7c9c",
                     highlight: "#222",
-                    label: "Senadores"
                 },
                 {
                     value: 14,
                     color: "#76a1bd",
                     highlight: "#222",
-                    label: "Diputados Designados por voto"
                 },
                 {
                     value: 6,
                     color: "#d1d8e4",
                     highlight: "#222",
-                    label: "Diputados Designados por el Presidente"
                 },
                 {
                     value: 6,
                     color: "#363636",
                     highlight: "#222",
-                    label: "Diputados Designados por el Jefe de Gobierno"
                 }
             ];
             //draw

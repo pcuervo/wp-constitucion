@@ -17,6 +17,7 @@
 		p{ font-family: "ABeeZee", sans-serif;  }
 		.text-center{text-align: center;}
 		.img-logo{ width: 200px; }
+		.img-logo--small{ width: 130px; }
 		.color-primary{ color: #e80e8a; }
 		.color-gray--strong{ color:#222; }
 		.color-gray{ color: #555; }
@@ -31,7 +32,8 @@
 		.margin-top--xsmall{ margin-top: 30px; }
 		.margin-top--small{ margin-top: 50px; }
 		.margin-top{ margin-top: 110px; }
-		.margin-top--large{ margin-top: 180px; }
+		.margin-top--large{ margin-top: 170px; }
+		.margin-right{ margin-right: 20px; }
 		.padding{ padding: 50px; }
 		.border-primary{
 			border: 1px solid #e80e8a;
@@ -63,14 +65,18 @@
 					<div class="[ border-primary border--3 ]">
 						<div class="[ padding ]">
 							<div class="[ col col-1 ]">
-								<img class="[ img-logo ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
+								<img class="[ img-logo ]" src="<?php echo THEMEPATH; ?>images/consti_horizontal.png">
 								<p class="[ color-gray ][ fz--small ][ text-uppercase ][ margin-top--large ]">Con el folio núm. <span class="[ color-primary ][ fz--small ]"><?php echo $referencia ?></span><br>
 								podrás darle seguimiento <br>
 								a tu participación</p>
+								<div class="[ margin-top--large ]">
+									<img class="[ img-logo--small margin-right ]" src="<?php echo THEMEPATH; ?>images/logocdmx.png">
+									<img class="[ img-logo--small ]" src="<?php echo THEMEPATH; ?>images/capital-social.jpg">
+								</div>
 							</div>
 							<div class="[ col col-2 ]">
 								<h2 class="[ text-uppercase ][ margin-top ][ color-gray ]"><?php echo $nombre . ' ' . $apellidos ?></h2>
-								<p class="[ color-gray--strong ][ margin-top--small ]">El grupo de trabajo redactor del proyecto de constitución Política de la Ciudad de México otorga la presente constancia por haber contribuido con ideas, reflexiones y propuestas.</p>
+								<p class="[ color-gray--strong ][ margin-top--small ]">El Grupo de Trabajo que apoya al Jefe de Gobierno en la redacción de la Constitución Política de la Ciudad de México, te otorga el presente reconocimiento por haber contribuido con tus ideas, reflexiones y propuestas para este proyecto.</p>
 								<p class="[ color-gray--strong ][ margin-top--xsmall ]">La Ciudad de México somos todas y todos. Gracias por ser parte de este proceso histórico.</p>
 								<?php $date = getDateTransform(date('Y-m-d'));  ?>
 								<p class="[ text-uppercase ][ color-gray ][ fz--small ][ margin-top--xsmall ]">Ciudad de México a <?php echo $date[0].' de '.$date['1'].' de '.$date[2]; ?> </p>

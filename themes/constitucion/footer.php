@@ -9,7 +9,7 @@
 						<div class="[ col-xs-12 col-sm-6 col-lg-4 ][ text-center ][ margin-top-bottom ]">
 							<a href="<?php echo site_url('terminos-y-condiciones/' ); ?>" target="_blank" >Términos y condiciones</a>
 							<a data-toggle="modal" data-target="#contacto">Contacto</a>
-							<a href="<?php echo THEMEPATH; ?>pdf/Transparencia.pdf" target="_blank">Transparencia</a>
+							<a href="<?php echo site_url('transparencia/' ); ?>" target="_blank">Transparencia</a>
 						</div>
 					</div>
 

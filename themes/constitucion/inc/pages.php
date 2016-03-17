@@ -216,17 +216,6 @@
 			wp_insert_post( $page, true );
 		}
 
-		if( ! get_page_by_path('terminos-y-condiciones') ){
-			$page = array(
-				'post_author' => 1,
-				'post_status' => 'publish',
-				'post_title'  => 'Términos y condiciones',
-				'post_name'   => 'terminos-y-condiciones',
-				'post_type'   => 'page'
-			);
-			wp_insert_post( $page, true );
-		}
-
 		if( ! get_page_by_path('cronica') ){
 			$page = array(
 				'post_author' => 1,
@@ -286,6 +275,28 @@
 				'post_status' => 'publish',
 				'post_title'  => 'Ensayo',
 				'post_name'   => 'ensayo',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+
+		if( ! get_page_by_path('terminos-y-condiciones') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Términos y condiciones',
+				'post_name'   => 'terminos-y-condiciones',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+
+		if( ! get_page_by_path('transparencia') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Transparencia',
+				'post_name'   => 'transparencia',
 				'post_type'   => 'page'
 			);
 			wp_insert_post( $page, true );

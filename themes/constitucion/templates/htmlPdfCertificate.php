@@ -63,14 +63,14 @@
 					<div class="[ border-primary border--3 ]">
 						<div class="[ padding ]">
 							<div class="[ col col-1 ]">
-								<img class="[ img-logo ]" src="<?php echo THEMEPATH; ?>images/consti_vertical.png">
+								<img class="[ img-logo ]" src="<?php echo THEMEPATH; ?>images/consti_horizontal.png">
 								<p class="[ color-gray ][ fz--small ][ text-uppercase ][ margin-top--large ]">Con el folio núm. <span class="[ color-primary ][ fz--small ]"><?php echo $referencia ?></span><br>
 								podrás darle seguimiento <br>
 								a tu participación</p>
 							</div>
 							<div class="[ col col-2 ]">
 								<h2 class="[ text-uppercase ][ margin-top ][ color-gray ]"><?php echo $nombre . ' ' . $apellidos ?></h2>
-								<p class="[ color-gray--strong ][ margin-top--small ]">El grupo de trabajo redactor del proyecto de constitución Política de la Ciudad de México otorga la presente constancia por haber contribuido con ideas, reflexiones y propuestas.</p>
+								<p class="[ color-gray--strong ][ margin-top--small ]">El Grupo de Trabajo que apoya al Jefe de Gobierno en la redacción de la Constitución Política de la Ciudad de México, te otorga el presente reconocimiento por haber contribuido con tus ideas, reflexiones y propuestas para este proyecto.</p>
 								<p class="[ color-gray--strong ][ margin-top--xsmall ]">La Ciudad de México somos todas y todos. Gracias por ser parte de este proceso histórico.</p>
 								<?php $date = getDateTransform(date('Y-m-d'));  ?>
 								<p class="[ text-uppercase ][ color-gray ][ fz--small ][ margin-top--xsmall ]">Ciudad de México a <?php echo $date[0].' de '.$date['1'].' de '.$date[2]; ?> </p>

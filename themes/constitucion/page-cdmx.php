@@ -79,6 +79,7 @@ $img_cdmx = get_option( 'img_cdmx' ); ?>
 				<p>El Bosque de Chapultepec (847 hectáreas) es dos veces más grande que Central Park de Nueva York (341.15 hectáreas).</p>
 			</blockquote>
 			<blockquote class="[ text-center ]">
+				<h4>Conformación del Constituyente</h4>
 				<canvas id="pie-data" width="120px" height="120px"></canvas>
 			</blockquote>
 			<blockquote>

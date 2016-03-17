@@ -17,7 +17,7 @@
 		p{ font-family: "ABeeZee", sans-serif;  }
 		.text-center{text-align: center;}
 		.img-logo{ width: 200px; }
-		.img-logo--small{ width: 100px; }
+		.img-logo--small{ width: 130px; }
 		.color-primary{ color: #e80e8a; }
 		.color-gray--strong{ color:#222; }
 		.color-gray{ color: #555; }

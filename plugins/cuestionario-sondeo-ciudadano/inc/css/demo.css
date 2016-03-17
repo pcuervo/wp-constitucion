@@ -4,16 +4,15 @@
 .clearfix:after { clear: both; }
 
 html, body {
-	height: 100%; overflow: hidden;
+	height: 100%; min-height: 590px;
+	overflow: hidden;
 }
 
-.survey-container {
-	height: calc(100vh - 55px);
-	background: #eeeeee;
+.main{ height: 100%; }
 
-	@media (min-width: 992px) {
-		height: calc(100vh - 100px);
-	}
+.survey-container {
+	height: 100%;
+	background: #eeeeee;
 }
 
 body {
@@ -141,3 +140,12 @@ h1{ color: #e80e8a;}
 
 
 
+/*------------------------------------*\
+    #Denky tablet specifics
+\*------------------------------------*/
+
+@media screen and ( height: 431px ){
+	html, body {
+		min-height: 431px;
+	}
+}

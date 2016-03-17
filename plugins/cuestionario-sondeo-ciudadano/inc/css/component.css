@@ -11,16 +11,19 @@
 
 /* Title */
 .fs-title {
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin: 0;
-	padding: 40px;
 	width: 100%;
+	margin: 0; padding: 40px;
+	position: absolute; top: 0; left: 0;
 }
 
 .fs-title h1 { margin: 0; }
 
+/* Back to site */
+.fs-back-to-site{
+	padding-top: 48px;
+	position: absolute; top: 0; left: 0;
+	z-index: 99;
+}
 
 /* Form */
 .fs-form {
@@ -674,7 +677,7 @@ button.fs-continue {
 	margin: 0;
 	font-size: 1.25em;
     position: absolute; right: 0; bottom: 60px;
-    z-index: 9999;
+    z-index: 99;
 }
 
 .fs-continue::after {
@@ -922,6 +925,8 @@ div.fade-out:active{
 
 	.fs-title{ padding: 20px; }
 
+	.fs-back-to-site{ padding-top: 27px; }
+
 	.fs-message-error{ top: 15%; }
 
 	.fs-numbers{ top: 15px; }
@@ -929,8 +934,7 @@ div.fade-out:active{
 	.fs-form-full{ top: 20%; }
 
 	.long-answers--container{
-		position: relative; top: -20px;
-		max-height: 100px;
+		max-height: 150px;
 	}
 
 	.fs-fields > li label.fs-field-label{
@@ -941,5 +945,7 @@ div.fade-out:active{
 	.fs-fields input{ font-size: 1em; }
 
 	.accept-terms{ margin-top: 40px; }
+
+	button.fs-continue{ bottom: 30px; }
 
 }

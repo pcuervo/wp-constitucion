@@ -1,7 +1,7 @@
 <?php get_header();
 if( ! isset( $_GET['referencia'] ) || $_GET['referencia'] == '' ):
 	echo 'Referencia no registrada';
-else: 
+else:
 	$retos = new RetosParticipante($_GET['referencia']);
 	$retos = $retos->get_retos_relacionados(); ?>
 
@@ -24,14 +24,14 @@ else:
 		</form>
 	</section>
 	<section class="[ container ]">
-		<h2 class="[ margin-bottom ]">Conoce los ensayos relacionados con los retos que elegiste</h2>
+		<h2 class="[ margin-bottom ]">Según los retos que tú consideras más importantes para la CDMX, hemos hecho esta selección de ensayos escritos por expertos, que te pueden interesar. Conoce más aquí.</h2>
 		<div class="[ row ][ retos ]">
 			<?php if(! empty($retos)):
 				foreach ($retos as $key => $reto):
 					$term = get_term_by('id', $key, 'taxonomy-grandes-retos'); ?>
 					<div class="[ col-xs-12 col-sm-3 ][ margin-bottom--large ]">
 						<h3><?php echo $term->name ?></h3><!-- reto 1 -->
-						<?php foreach ($reto as $key => $pubpub): 
+						<?php foreach ($reto as $key => $pubpub):
 							$url_pubpub = get_post_meta($pubpub->ID, 'url_pubpub', true); ?>
 							<a href="<?php echo $url_pubpub; ?>" target="_blank">
 								<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
@@ -39,8 +39,8 @@ else:
 							</a>
 						<?php endforeach; ?>
 					</div>
-				<?php endforeach;	
-			endif; ?>  
+				<?php endforeach;
+			endif; ?>
 		</div>
 	</section>
 <?php endif; ?>

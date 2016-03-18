@@ -139,6 +139,19 @@ $image_plataforma = attachment_image_url( $plataforma->ID, 'full' ); ?>
 	</div>
 </section>
 
+<div class="[ container ]">
+	<div class="[ row ]">
+		<div class="[ col-xs-12 ][ content-sobre-la-plataforma ][ text-center ]">
+			<img src="<?php echo THEMEPATH; ?>images/plataforma/cejur.png" alt="Logo Cejur">
+			<img src="<?php echo THEMEPATH; ?>images/plataforma/labcdmx.png" alt="Logo Laboratorio para la Ciudad">
+			<img src="<?php echo THEMEPATH; ?>images/plataforma/injuve.png" alt="Logo Injuve">
+			<img src="<?php echo THEMEPATH; ?>images/plataforma/mitmedialab.png" alt="Logo MIT Media Lab">
+			<img src="<?php echo THEMEPATH; ?>images/plataforma/changeorg.png" alt="Logo Changeorg">
+		</div>
+	</div>	
+</div>
+
+
 <div class="[ descanso-visual ][ margin-bottom--large ]">
 	<?php if ( has_post_thumbnail($plataforma->ID) ): ?>
 		<img src="<?php echo $image_plataforma; ?>" alt="fotografía lago de chapultepec">

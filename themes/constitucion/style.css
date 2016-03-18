@@ -8309,6 +8309,14 @@ blockquote canvas {
     font-size: 16px;
   }
 }
+.content-sobre-la-plataforma img {
+  width: 25%;
+}
+@media (min-width: 768px) {
+  .content-sobre-la-plataforma img {
+    width: 15%;
+  }
+}
 .content-biblioteca {
   margin-bottom: 80px;
 }

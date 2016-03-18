@@ -127,7 +127,7 @@ div.cs-skin-boxes:focus > span {
 }
 
 
-.cs-skin-boxes .cs-options li.title:hover{ opacity: 1; }
+.cs-skin-boxes .cs-options li.title:hover{ background-color: transparent; }
 
 .cs-skin-boxes.cs-active .cs-options li:nth-child(2) {
 	-webkit-transition-delay: 0.01s;
@@ -264,7 +264,7 @@ div.cs-skin-boxes:focus > span {
 }
 
 .cs-skin-boxes .cs-options .title span:hover {
-	color: #4a4a4a;
+	color: #E80E8A;
 	cursor: default;
 }
 

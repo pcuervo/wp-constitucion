@@ -1016,3 +1016,55 @@ Stack trace:
 [17-Mar-2016 16:10:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
 [17-Mar-2016 16:12:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
 [17-Mar-2016 16:12:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:20:29 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[18-Mar-2016 18:20:29 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[18-Mar-2016 18:20:29 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[18-Mar-2016 18:20:29 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[18-Mar-2016 18:27:49 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:27:49 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:28:29 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:28:29 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:28:42 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:28:42 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:29:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:29:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:29:08 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:29:08 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:29:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:29:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:29:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:29:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:29:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:29:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:29:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:29:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:30:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:30:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:30:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:30:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:31:11 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:31:11 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:33:11 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:33:11 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:35:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:35:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:37:13 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:37:13 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:39:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:39:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:41:13 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:41:13 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:43:14 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:43:14 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:45:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:45:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:47:16 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:47:16 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:49:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:49:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:51:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:51:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:53:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:53:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:55:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[18-Mar-2016 18:55:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445

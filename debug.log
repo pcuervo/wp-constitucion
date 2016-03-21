@@ -1134,3 +1134,6 @@ Stack trace:
 [21-Mar-2016 16:08:43 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
 [21-Mar-2016 16:08:43 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
 [21-Mar-2016 16:08:44 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[21-Mar-2016 19:33:15 UTC] PHP Notice:  Trying to get property of non-object in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-includes/post.php on line 3555
+[21-Mar-2016 19:33:15 UTC] PHP Notice:  Trying to get property of non-object in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-includes/post.php on line 3602
+[21-Mar-2016 19:33:15 UTC] PHP Fatal error:  Call to a member function get_page_permastruct() on a non-object in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-includes/link-template.php on line 350

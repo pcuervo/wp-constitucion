@@ -1,5 +1,7 @@
 <?php
-get_header(); the_post();
+	get_header(); 
+	the_post();
+	
 	$img_participa = get_option( 'img_participa' );
 
 	global $result;

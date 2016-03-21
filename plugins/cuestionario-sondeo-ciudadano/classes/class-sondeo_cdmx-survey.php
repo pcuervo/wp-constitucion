@@ -615,8 +615,10 @@ class Sondeo_CDMX_Survey {
 		global $wpdb;
 		$word_occurrences = array();
 		$word_results = $wpdb->get_results('
-			SELECT TRIM( LOWER( answer ) ) as answer, COUNT( answer ) as occurrences FROM wp_sondeo_cdmx_user_answers
+			SELECT TRIM( LOWER( answer ) ) as answer, COUNT( answer ) as occurrences 
+			FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
 			WHERE question_id = ' . $question_id . '
+			AND answer <> ""
 			GROUP BY TRIM( LOWER( answer) )
 			ORDER BY occurrences'
 		);
@@ -635,8 +637,10 @@ class Sondeo_CDMX_Survey {
 		global $wpdb;
 		$latest_answers = array();
 		$latest_results = $wpdb->get_results('
-			SELECT answer FROM wp_sondeo_cdmx_user_answers
+			SELECT answer 
+			FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
 			WHERE question_id = ' . $question_id . '
+			AND answer <> ""
 			ORDER BY created_at DESC
 			LIMIT ' . $num_answers
 		);

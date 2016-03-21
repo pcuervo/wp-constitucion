@@ -618,6 +618,7 @@ class Sondeo_CDMX_Survey {
 			SELECT TRIM( LOWER( answer ) ) as answer, COUNT( answer ) as occurrences 
 			FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
 			WHERE question_id = ' . $question_id . '
+			AND answer <> ""
 			GROUP BY TRIM( LOWER( answer) )
 			ORDER BY occurrences'
 		);
@@ -639,6 +640,7 @@ class Sondeo_CDMX_Survey {
 			SELECT answer 
 			FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
 			WHERE question_id = ' . $question_id . '
+			AND answer <> ""
 			ORDER BY created_at DESC
 			LIMIT ' . $num_answers
 		);

@@ -25,6 +25,10 @@
 	z-index: 99;
 }
 
+.fs-back-to-site a:hover{
+	color: #B10B69;
+}
+
 /* Form */
 .fs-form {
 	position: relative;

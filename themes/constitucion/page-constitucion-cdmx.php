@@ -141,7 +141,7 @@ $image_plataforma = attachment_image_url( $plataforma->ID, 'full' ); ?>
 
 <div class="[ container ]">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 ][ content-sobre-la-plataforma ][ text-center ]">
+		<div class="[ col-xs-12 ][ margin-top-bottom--large ][ content-sobre-la-plataforma ][ text-center ]">
 			<img src="<?php echo THEMEPATH; ?>images/plataforma/cejur.png" alt="Logo Cejur">
 			<img src="<?php echo THEMEPATH; ?>images/plataforma/labcdmx.png" alt="Logo Laboratorio para la Ciudad">
 			<img src="<?php echo THEMEPATH; ?>images/plataforma/injuve.png" alt="Logo Injuve">

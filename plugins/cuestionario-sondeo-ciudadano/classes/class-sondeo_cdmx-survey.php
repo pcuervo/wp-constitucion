@@ -172,8 +172,8 @@ class Sondeo_CDMX_Survey {
 			}
 			$post_reto = array(
 				'post_type'		=> 'grandes-retos',
-			  	'post_title'    => $reto,
-			  	'post_status'   => 'publish'
+				'post_title'    => $reto,
+				'post_status'   => 'publish'
 			);
 			wp_insert_post( $post_reto );
 		}
@@ -615,14 +615,19 @@ class Sondeo_CDMX_Survey {
 		global $wpdb;
 		$word_occurrences = array();
 		$word_results = $wpdb->get_results('
-			SELECT TRIM( LOWER( answer ) ) as answer, COUNT( answer ) as occurrences 
+			SELECT TRIM( LOWER( answer ) ) as answer, COUNT( answer ) as occurrences
 			FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
 			WHERE question_id = ' . $question_id . '
 			AND answer <> ""
 			GROUP BY TRIM( LOWER( answer) )
 			ORDER BY occurrences'
 		);
-		foreach ( $word_results as $word ) $word_occurrences[$word->answer] = $word->occurrences;
+		foreach ( $word_results as $key => $word ){
+			$word_occurrences[$key] = array(
+				'text' => $word->answer,
+				'value' => $word->occurrences
+			);
+		}
 
 		return $word_occurrences;
 	}
@@ -637,7 +642,7 @@ class Sondeo_CDMX_Survey {
 		global $wpdb;
 		$latest_answers = array();
 		$latest_results = $wpdb->get_results('
-			SELECT answer 
+			SELECT answer
 			FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
 			WHERE question_id = ' . $question_id . '
 			AND answer <> ""

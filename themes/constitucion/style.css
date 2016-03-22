@@ -9085,3 +9085,13 @@ footer a:hover {
   padding: 0 15px;
   text-align: center;
 }
+.card {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 2em;
+  border: 1px solid #e5e5e5;
+  border-bottom: 5px solid #4a4a4a;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  background: #fff;
+}

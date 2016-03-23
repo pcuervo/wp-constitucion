@@ -24,7 +24,7 @@ else:
 		</form>
 	</section>
 	<section class="[ container ]">
-		<h2 class="[ margin-bottom ]">Según los retos que tú consideras más importantes para la CDMX, hemos hecho esta selección de ensayos escritos por expertos, que te pueden interesar. Conoce más aquí.</h2>
+		<h2 class="[ margin-bottom ]">Según los retos que tú consideras más importantes para la CDMX, hemos hecho esta selección de ensayos escritos por expertos, que te pueden interesar.</h2>
 		<div class="[ row ][ retos ]">
 			<?php if(! empty($retos)):
 				foreach ($retos as $key => $reto):

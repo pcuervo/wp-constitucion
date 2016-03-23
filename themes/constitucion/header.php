@@ -82,7 +82,7 @@
 							</span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/cdmx/'); ?>#cronica">Crónica</a></li>
-								<li><a class="gtm-btn-menu" href="<?php echo site_url('/cdmx/'); ?>#hacia-el-constituyente">Hacia el constituyente</a></li>
+								<li><a class="gtm-btn-menu" href="<?php echo site_url('/cdmx/'); ?>#hacia-el-constituyente">Hacia la Constituyente</a></li>
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/cdmx/'); ?>#voces-ciudadanas">Voces ciudadanas</a></li>
 							</ul>
 						</li><li class="[ dropdown--hover ]">
@@ -203,7 +203,7 @@
 							</span>
 							<ul class="dropdown-content dropdown-menu" aria-labelledby="dropdown--header">
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/cdmx/'); ?>#cronica">Crónica</a></li>
-								<li><a class="gtm-btn-menu" href="<?php echo site_url('/cdmx/'); ?>#hacia-el-constituyente">Hacia el constituyente</a></li>
+								<li><a class="gtm-btn-menu" href="<?php echo site_url('/cdmx/'); ?>#hacia-el-constituyente">Hacia la Constituyente</a></li>
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/cdmx/'); ?>#voces-ciudadanas">Voces ciudadanas</a></li>
 							</ul>
 						</li><li

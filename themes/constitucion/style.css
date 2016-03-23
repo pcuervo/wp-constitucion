@@ -8286,6 +8286,19 @@ blockquote canvas {
     font-size: 16px;
   }
 }
+.content-sobre-la-plataforma img {
+  width: 19%;
+}
+@media (min-width: 768px) {
+  .content-sobre-la-plataforma img {
+    width: 13%;
+  }
+}
+@media (min-width: 992px) {
+  .content-sobre-la-plataforma img {
+    width: 10%;
+  }
+}
 .content-biblioteca {
   margin-bottom: 80px;
 }
@@ -8426,6 +8439,13 @@ blockquote canvas {
 .hero_video {
   background-size: cover;
   background: url('video/cccdmx.jpg') no-repeat center bottom;
+}
+@media (max-width: 480px) {
+  .hero_video {
+    width: 100% !important;
+    height: 200vh !important;
+    zoom: 50% !important;
+  }
 }
 @media (max-width: 768px) {
   .hero_video .video_home {
@@ -9047,4 +9067,14 @@ footer a:hover {
   line-height: 16px;
   padding: 0 15px;
   text-align: center;
+}
+.card {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 2em;
+  border: 1px solid #e5e5e5;
+  border-bottom: 5px solid #4a4a4a;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  background: #fff;
 }

@@ -1,5 +1,7 @@
 <?php
-get_header(); the_post();
+	get_header(); 
+	the_post();
+	
 	$img_participa = get_option( 'img_participa' );
 
 	global $result;
@@ -221,7 +223,7 @@ get_header(); the_post();
 							<div class="[ modal-content ][ no-border-radius ]">
 								<div class="[ modal-body ]">
 									<a type="button" id="close-feedback" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>
-									<div class="[ row padding--sides--xsm ]">
+									<div class="[ row padding ]">
 										<div class="[ padding--top--xxlarge padding--bottom--xxlarge padding--sides--large--sm ]">
 											<p class="[ color-primary ][ margin-top ]">Para facilitar la recepción y lectura de los ensayos necesitamos que todos tengan un mismo formato. Por ello te recomendamos seguir las siguientes indicaciones.</p>
 											<ul class="[ margin-top--large ]">

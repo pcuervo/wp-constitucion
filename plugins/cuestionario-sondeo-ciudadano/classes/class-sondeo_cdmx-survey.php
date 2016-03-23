@@ -4,6 +4,7 @@ class Sondeo_CDMX_Survey {
 
 	const Q_PIENSAS_CDMX 			= 25;
 	const Q_GRANDES_RETOS 			= 26;
+	const Q_CDMX_IDEAL	 			= 28;
 	const Q_OBSTACULOS_PRINCIPALES 	= 29;
 	const Q_COSAS_VALIOSAS 			= 32;
 
@@ -33,6 +34,7 @@ class Sondeo_CDMX_Survey {
 	private function init() {
 		$this->hooks();
 		$this->create_survey_page();
+		$this->create_results_page();
 
 		if( ! is_admin() ){
 			add_shortcode( 'show-survey', array( $this, 'display_survey' ) );
@@ -67,6 +69,22 @@ class Sondeo_CDMX_Survey {
 				'post_status' => 'publish',
 				'post_title'  => 'Sondeo Masivo',
 				'post_name'   => 'sondeo-masivo',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+	}
+
+	/**
+	 * Creates a Wordpress Page for for the survey.
+	 */
+	private function create_results_page(){
+		if( ! get_page_by_path( 'resultados' ) ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Resultados',
+				'post_name'   => 'resultados',
 				'post_type'   => 'page'
 			);
 			wp_insert_post( $page, true );
@@ -154,8 +172,8 @@ class Sondeo_CDMX_Survey {
 			}
 			$post_reto = array(
 				'post_type'		=> 'grandes-retos',
-			  	'post_title'    => $reto,
-			  	'post_status'   => 'publish'
+				'post_title'    => $reto,
+				'post_status'   => 'publish'
 			);
 			wp_insert_post( $post_reto );
 		}
@@ -587,4 +605,53 @@ class Sondeo_CDMX_Survey {
 		wp_die();
 
 	}// survey_exists
+
+	/**
+	 * Get word occurrences from user answers
+	 * @param 	[int]   $question_id
+	 * @return 	[array]	$word_occurrences
+	 */
+	public function get_word_occurrences_by_question( $question_id ) {
+		global $wpdb;
+		$word_occurrences = array();
+		$word_results = $wpdb->get_results('
+			SELECT TRIM( LOWER( answer ) ) as answer, COUNT( answer ) as occurrences
+			FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
+			WHERE question_id = ' . $question_id . '
+			AND answer <> ""
+			GROUP BY TRIM( LOWER( answer) )
+			ORDER BY occurrences'
+		);
+		foreach ( $word_results as $key => $word ){
+			$word_occurrences[$key] = array(
+				'text' => $word->answer,
+				'value' => $word->occurrences
+			);
+		}
+
+		return $word_occurrences;
+	}
+
+	/**
+	 * Get word occurrences from user answers
+	 * @param 	[int]   $num_answers
+	 * @param 	[int]   $question_id
+	 * @return 	[array]	$latest_answers
+	 */
+	public function get_latest_answers( $num_answers, $question_id ) {
+		global $wpdb;
+		$latest_answers = array();
+		$latest_results = $wpdb->get_results('
+			SELECT answer
+			FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
+			WHERE question_id = ' . $question_id . '
+			AND answer <> ""
+			ORDER BY created_at DESC
+			LIMIT ' . $num_answers
+		);
+		foreach ( $latest_results as $result ) array_push( $latest_answers, $result->answer );
+
+		return $latest_answers;
+	}
+
 }// Sondeo_CDMX_Survey

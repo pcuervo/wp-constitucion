@@ -32,6 +32,12 @@
             var $feedback = $('#feedback');
         });
 
+        $('#close-feedback-forms').on('click', function(){
+            console.log('aaaaa');
+            $('#feedback, .modal-backdrop').remove();
+            var $feedback = $('#feedback');
+        });
+
         /**
          * LUGA DEL EVENTO
          */
@@ -270,8 +276,6 @@
 
         function createPieChart(){
             var ctx = $("#pie-data").get(0).getContext("2d");
-            //pie chart data
-            //sum of values = 360
             var data = [
                 {
                     value: 60,
@@ -298,12 +302,19 @@
                     color: "#363636",
                     highlight: "#222",
                 }
-            ];
-            //draw
+            ]
+
             new Chart(ctx).Pie(data);
         } //createPieChart
 
         if( parseInt( isHome ) ){
+
+            if ($(this).scrollTop() > 400){
+                $('header').addClass("sticky");
+            }
+            else{
+                $('header').removeClass("sticky");
+            }
 
             $(window).scroll(function() {
                 if ($(this).scrollTop() > 400){
@@ -408,7 +419,7 @@
             document.getElementById('js-contact-captcha-label').getElementsByTagName('span')[0].innerHTML = Math.floor(Math.random() * 20) + 1  ;
             document.getElementById('js-contact-captcha-label').getElementsByTagName('span')[1].innerHTML = Math.floor(Math.random() * 20) + 1  ;
 
-            /** 
+            /**
              * VALIDA CONTACT
              */
             window.Parsley.addValidator(
@@ -418,7 +429,7 @@
               })
               .addMessage('en', 'captcha', 'El valor es incorrecto');
 
-            
+
         }
 
         function validateCaptcha(value){
@@ -427,9 +438,9 @@
 
             var value = $('#contact-captcha').val();
             var suma = parseInt(firstNum) + parseInt(secondNum);
-                
+
             return value == suma;
-          
+
         }
 
         $('.mas-eventos').on('click', function(event){

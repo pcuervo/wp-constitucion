@@ -67,7 +67,7 @@
 					<!-- Modal content-->
 					<div class="modal-content">
 						<div class="modal-body">
-							<a type="button" id="close-feedback" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>
+							<a type="button" id="close-feedback-forms" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>
 							<div class="[ row padding--sides--xsm ]">
 								<div class="[ padding--top--xxlarge padding--bottom--xxlarge padding--sides--large--sm ]">
 									<div class="[ feedback--success text-center ]"><?php echo $result['success']; ?></div>

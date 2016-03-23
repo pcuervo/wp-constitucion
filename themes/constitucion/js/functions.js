@@ -32,6 +32,12 @@
             var $feedback = $('#feedback');
         });
 
+        $('#close-feedback-forms').on('click', function(){
+            console.log('aaaaa');
+            $('#feedback, .modal-backdrop').remove();
+            var $feedback = $('#feedback');
+        });
+
         /**
          * LUGA DEL EVENTO
          */

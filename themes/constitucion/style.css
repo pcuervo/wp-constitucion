@@ -3633,6 +3633,9 @@ input[type="button"].btn-block {
   line-height: 1.3333333;
   border-radius: 6px;
 }
+.btn-primary:focus {
+  color: #e80e8a;
+}
 .btn-primary:hover {
   background-color: #e80e8a;
   color: #fff;

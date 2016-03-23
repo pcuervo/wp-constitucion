@@ -3144,6 +3144,10 @@ select[multiple].input-lg {
   list-style: none;
   color: red;
 }
+.position-data .parsley-errors-list {
+  position: absolute;
+  bottom: -40px;
+}
 .box-shadow--form {
   background-color: #fff;
 }

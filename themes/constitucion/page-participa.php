@@ -86,7 +86,7 @@
 		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
 			<p>Si ya participaste ingresa tu número de folio para obtener tu certificado y recibir sugerencias sobre ensayos que pueden interesarte.</p>
 			<form class="[ form-inline ][ margin-top ][ text-center ]" action="<?php echo site_url('obtener-certificado'); ?>" method="GET" data-parsley-certificado>
-				<div class="[ input-group ]" >
+				<div class="[ input-group ][ position-data ]" >
 					<input type="text" name="referencia" class="[ form-control input--search ][ height-50 ][ fz-xxlarge ]" placeholder="CM5697CX08" required="" data-parsley-required-message="El número de folio es obligatorio">
 					<span class="[ input-group-btn ]">
 						<button class="[ btn btn-secondary ][ height-50 ]" type="submit">

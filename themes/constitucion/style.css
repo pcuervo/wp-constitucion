@@ -8463,6 +8463,13 @@ blockquote canvas {
   background-size: cover;
   background: url('video/cccdmx.jpg') no-repeat center bottom;
 }
+@media (max-width: 480px) {
+  .hero_video {
+    width: 100% !important;
+    height: 200vh !important;
+    zoom: 50% !important;
+  }
+}
 @media (max-width: 768px) {
   .hero_video .video_home {
     display: none;

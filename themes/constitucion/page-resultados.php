@@ -11,6 +11,7 @@
 			// pregunta #8
 			$palabras_que_piensas = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_PIENSAS_CDMX );
 			$palabras_que_piensas_json_encoded = json_encode($palabras_que_piensas);
+			print_r($palabras_que_piensas_json_encoded)
 		?>
 		<h2>¿Cuáles son las tres primeras palabras que te llegan a la mente cuando piensas en la Ciudad de México?</h2>
 		<div id ='pregunta-8'></div>
@@ -18,19 +19,28 @@
 		  var configPregunta8 = {
 			"graphset":[
 				{
+					"globals":{
+						"fontFamily":"Alegreya Sans",
+					},
 					"type":"treemap",
 					"plotarea":{
 						"margin":"0 0 30 0"
-					},
-					"tooltip":{
-
 					},
 					"options":{
 						"aspect-type":"transition",
 						"color-start":"#457390",
 						"color-end":"#363636",
+						"box":{
+							"borderWidth": 1,
+							"borderColor": "#fff"
+						},
 						"tooltip-box":{
-							"background-color":"#ec2383"
+							"background-color":"#ec2383",
+							"border-color":"#000",
+							"text":"%value",
+							"border-color":"#fff",
+							"border-width":"1px",
+							"font-color":"#fff"
 						}
 					},
 					"series": <?php echo $palabras_que_piensas_json_encoded; ?>
@@ -43,7 +53,8 @@
 			id : 'pregunta-8',
 			data : configPregunta8,
 			height: "400px",
-			width: "100%"
+			width: "100%",
+			hideprogresslogo: true,
 		});
 		</script>
 
@@ -68,9 +79,6 @@
 					"plotarea":{
 						"margin":"0 0 30 0"
 					},
-					"tooltip":{
-
-					},
 					"options":{
 						"aspect-type":"transition",
 						"color-start":"#4F5AD0",
@@ -89,7 +97,8 @@
 			id : 'pregunta-9',
 			data : configPregunta9,
 			height: "400px",
-			width: "100%"
+			width: "100%",
+			hideprogresslogo: true,
 		});
 		</script>
 
@@ -153,7 +162,8 @@
 			id : 'pregunta-11',
 			data : configPregunta11,
 			height: "400px",
-			width: "100%"
+			width: "100%",
+			hideprogresslogo: true,
 		});
 		</script>
 
@@ -197,7 +207,8 @@
 			id : 'pregunta-14',
 			data : configPregunta14,
 			height: "400px",
-			width: "100%"
+			width: "100%",
+			hideprogresslogo: true,
 		});
 		</script>
 

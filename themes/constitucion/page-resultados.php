@@ -3,34 +3,48 @@
 <script src="<?php echo THEMEPATH; ?>js/zingchart/modules/zingchart-treemap.min.js"></script>
 <?php  $survey = Sondeo_CDMX_Survey::get(); ?>
 
-<div class="[ container ]">
+<div class="[ container ][ margin-top--large ]">
 
-	<section>
+	<section class="[ row ][ margin-bottom ]">
 
 		<?php
 			// pregunta #8
 			$palabras_que_piensas = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_PIENSAS_CDMX );
 			$palabras_que_piensas_json_encoded = json_encode($palabras_que_piensas);
 		?>
-		<h2>¿Cuáles son las tres primeras palabras que te llegan a la mente cuando piensas en la Ciudad de México?</h2>
-		<div id ='pregunta-8'></div>
+
+		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+			<h2>¿Cuáles son las tres primeras palabras que te llegan a la mente cuando piensas en la Ciudad de México?</h2>
+			<div id ='pregunta-8'></div>
+		</div>
+
 		<script>
 		  var configPregunta8 = {
 			"graphset":[
 				{
+					"globals":{
+						"fontFamily":"Alegreya Sans",
+						"fontColor": "#e0e0e0"
+					},
 					"type":"treemap",
 					"plotarea":{
 						"margin":"0 0 30 0"
-					},
-					"tooltip":{
-
 					},
 					"options":{
 						"aspect-type":"transition",
 						"color-start":"#457390",
 						"color-end":"#363636",
+						"box":{
+							"borderWidth": 1,
+							"borderColor": "#fff"
+						},
 						"tooltip-box":{
-							"background-color":"#ec2383"
+							"background-color":"#ec2383",
+							"border-color":"#000",
+							"text":"%value",
+							"border-color":"#fff",
+							"border-width":"1px",
+							"font-color":"#fff"
 						}
 					},
 					"series": <?php echo $palabras_que_piensas_json_encoded; ?>
@@ -42,14 +56,15 @@
 		zingchart.render({
 			id : 'pregunta-8',
 			data : configPregunta8,
-			height: "400px",
-			width: "100%"
+			height: "300px",
+			width: "100%",
+			hideprogresslogo: true,
 		});
 		</script>
 
 	</section>
 
-	<section>
+	<section class="[ row ][ margin-bottom ]">
 
 
 		<?php
@@ -58,8 +73,11 @@
 			$palabras_grandes_retos_json_encoded = json_encode($palabras_grandes_retos);
 		?>
 
-		<h2>Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</h2>
-		<div id ='pregunta-9'></div>
+		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+			<h2>Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</h2>
+			<div id ='pregunta-9'></div>
+		</div>
+
 		<script>
 		  var configPregunta9 = {
 			"graphset":[
@@ -67,9 +85,6 @@
 					"type":"treemap",
 					"plotarea":{
 						"margin":"0 0 30 0"
-					},
-					"tooltip":{
-
 					},
 					"options":{
 						"aspect-type":"transition",
@@ -88,14 +103,15 @@
 		zingchart.render({
 			id : 'pregunta-9',
 			data : configPregunta9,
-			height: "400px",
-			width: "100%"
+			height: "300px",
+			width: "100%",
+			hideprogresslogo: true,
 		});
 		</script>
 
 	</section>
 
-	<section>
+	<section class="[ row ][ margin-bottom ]">
 
 		<?php
 			// pregunta #10
@@ -114,7 +130,7 @@
 		</div>
 
 	</section>
-	<section>
+	<section class="[ row ][ margin-bottom ]">
 
 		<?php
 			// pregunta #11
@@ -152,13 +168,14 @@
 		zingchart.render({
 			id : 'pregunta-11',
 			data : configPregunta11,
-			height: "400px",
-			width: "100%"
+			height: "300px",
+			width: "100%",
+			hideprogresslogo: true,
 		});
 		</script>
 
 	</section>
-	<section>
+	<section class="[ row ][ margin-bottom ]">
 
 		<?php
 			// pregunta #14
@@ -196,8 +213,9 @@
 		zingchart.render({
 			id : 'pregunta-14',
 			data : configPregunta14,
-			height: "400px",
-			width: "100%"
+			height: "300px",
+			width: "100%",
+			hideprogresslogo: true,
 		});
 		</script>
 

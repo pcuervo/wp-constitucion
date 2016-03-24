@@ -15,17 +15,6 @@ html, body {
 	background: #eeeeee;
 }
 
-body {
-	// background: #3b3f45;
-	// color: #fff;
-	// font-weight: 400;
-	// font-size: 1em;
-	// font-family: 'Raleway', Arial, sans-serif;
-	// overflow: hidden;
-	// overflow-y: scroll;
-	// min-height: 600px;
-}
-
 a {
 	color: rgba(0,0,0,0.3);
 	text-decoration: none;

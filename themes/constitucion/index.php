@@ -23,12 +23,12 @@ global $wp_query; ?>
 			$url_image = attachment_image_url( $post->ID, 'images_news_cdmx' );
 			$link_noticia = get_post_meta( $post->ID, 'link_noticia', true );?>
 			<div class="[ row ][ margin-bottom--large ]">
-				<div class="[ col-xs-5 no-padding--right ]">
+				<div class="[ col-xs-12 col-sm-5 ]">
 					<a href="<?php echo $link_noticia; ?>" target="_blank" class="btn-noticia">
 						<img class="[ img-responsive ]" src="<?php echo $url_image; ?>" alt="<?php echo get_the_title(); ?>">
 					</a>
 				</div>
-				<div class="[ col-xs-7 ]">
+				<div class="[ col-xs-12 col-sm-7 ]">
 					<h2 class="[ fw-semibold ]">
 						<a class="[ color-gray ] gtm-btn-noticia" href="<?php echo $link_noticia; ?>" target="_blank">
 							<?php the_title(); ?>

@@ -285,7 +285,7 @@
 							<input name="fotografias_redes_ensayo" id="fotografias_redes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]">
 							<label for="">Comparte la lista de asistentes firmada de los participantes de la sesión/evento con una liga a Google Drive, Dropbox o OneDrive</label>
 							<input name="lista_asistentes_ensayo" id="lista_asistentes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="La lista de asistentes es obligatoria">
-							<label for="">Copia a continuación la liga a Google Drive, Dropbox o OneDrive. Este deberá estar en formato .docx (Microsoft Word) y no deberá exceder 8 páginas. <a href="<?php echo site_url('/guia-para-compartir-el-texto/'); ?>" target="_blank" class="[ color-gray--light ][ fz--small ]">Aqui puedes descargar una guía para compartir el texto.</a></label>
+							<label for="">Copia a continuación la liga a Google Drive, Dropbox o OneDrive. Este deberá estar en formato .docx (Microsoft Word) y no deberá exceder 8 páginas. <a data-toggle="modal" data-target="#guia-compartir-ensayo" class="[ color-primary ]">Aqui puedes descargar una guía para compartir el texto.</a></label>
 							<input name="compartir_documento_ensayo" id="compartir_documento_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="El documento obligatorio">
 							<label for="">Señala a continuación un correo electrónico para contactar al grupo que preparó este documento.</label>
 							<input name="correo_electronico_ensayo" id="correo_electronico_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-required-message="El correo es obligatorio" data-parsley-type-message="Por favor escribe un correo válido">
@@ -303,6 +303,32 @@
 						<button type="submit" class="[ btn btn-primary btn--large ]">enviar</button>
 					</div>
 				</form>
+
+				<!-- / Modal guia compartir ensayo -->
+					<div id="guia-compartir-ensayo" class="modal fade" tabindex="-1" role="dialog">
+						<div class="[ modal-dialog ]">
+							<div class="[ modal-content ][ no-border-radius ]">
+								<div class="[ modal-body ]">
+									<a type="button" id="close-feedback" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>
+									<div class="[ row padding ]">
+										<div class="[ padding--top--xxlarge padding--bottom--xxlarge padding--sides--large--sm ]">
+											<h4 class="[ color-primary ]">Guía para compartir el texto</h4>
+											<p class="[ color-gray ][ margin-top ]">Las relatorías o ensayos deben estar escritos en tipografía Garamond a 13 puntos, a espacio sencillo y formato tamaño carta (21.59 cm x 27.94 cm). La extensión mínima del documento es de 2 páginas y máxima de 8 incluyendo resumen-portada así como cualquier soporte gráfico y referencias si es el caso. Los subtítulos deberán estar alineados a la izquierda y con letra Garamond de 14 puntos. Las notas al pie de página, si es el caso, deberán estar en Garamond a 11 puntos. La primera página deberá incluir el resumen del ensayo o relatoría. Este deberá tener una extensión máxima de 250 palabras que incluya información del contexto de la sesión de trabajo, las principales reflexiones, resultados y las conclusiones de esta. Además deberá incluir:</p>
+											<ul class="[ margin-top--large ]">
+												<li>Título de la relatoría o ensayo en mayúsculas, centrado y escrito con letra Garamond de 15 puntos en negritas.</li>
+												<li> El nombre del evento o reunión de la cual se derivó el ensayo y las fechas en las que se sesionó el grupo.</li>
+												<li> El listado de autores alineado al margen derecho con letra Garamond cursiva de 12 puntos.</li>
+												<li>En caso de ser presentado por una institución (es) u organización (es) esto se deberá señalarse también con letra Garamond cursiva de 12 puntos.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- / modal guia compartir ensayo -->
+
+
+
 			</article>
 		</div> <!-- /container -->
 	</section>

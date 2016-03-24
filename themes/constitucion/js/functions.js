@@ -513,9 +513,17 @@
 
             var map;
             var bounds = new google.maps.LatLngBounds();
+            var isDraggable = $(document).width() > 480 ? true : false;
             var mapOptions = {
                 mapTypeId: 'roadmap',
                 scrollwheel: false,
+                navigationControl: false,
+                zoomControl: false,
+                scaleControl: false,
+                disableDoubleClickZoom: true,
+                navigationControl: false,
+                mapTypeControl: false,
+                draggable: isDraggable,
             };
 
             // Display a map on the page

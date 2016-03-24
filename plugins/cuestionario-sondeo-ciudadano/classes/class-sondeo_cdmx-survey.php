@@ -207,11 +207,12 @@ class Sondeo_CDMX_Survey {
 		wp_enqueue_style( 'cs-select', SONDEO_CDMX_PLUGIN_URL . 'inc/css/cs-select.css' );
 		wp_enqueue_style( 'cs-skin-boxes', SONDEO_CDMX_PLUGIN_URL . 'inc/css/cs-skin-boxes.css' );
 		// js
-		wp_enqueue_script( 'normalize', SONDEO_CDMX_PLUGIN_URL . 'inc/js/modernizr.custom.js', '', '1.0', false );
+		wp_enqueue_script( 'normalize', SONDEO_CDMX_PLUGIN_URL . 'inc/js/modernizr.custom.js', array('jquery'), '1.0', false );
+		wp_enqueue_script( 'function-prev', SONDEO_CDMX_PLUGIN_URL . 'inc/js/function-prev.js', array('normalize'), '1.0', true );
 		wp_enqueue_script( 'classie', SONDEO_CDMX_PLUGIN_URL . 'inc/js/classie.js', '', '1.0', true );
 		wp_enqueue_script( 'select_fx', SONDEO_CDMX_PLUGIN_URL . 'inc/js/selectFx.js', '', '1.0', true );
 		wp_enqueue_script( 'fullscreen_form', SONDEO_CDMX_PLUGIN_URL . 'inc/js/fullscreenForm.js', '', '1.0', true );
-		wp_enqueue_script( 'sondeo_cdmx_functions', SONDEO_CDMX_PLUGIN_URL . 'inc/js/functions.js', array('jquery'), '1.0', true );
+		wp_enqueue_script( 'sondeo_cdmx_functions', SONDEO_CDMX_PLUGIN_URL . 'inc/js/functions.js', array('fullscreen_form'), '1.0', true );
 		wp_localize_script( 'functions', 'allDelegaciones', $this->get_delegaciones() );
 		wp_localize_script( 'functions', 'allColonias', $this->get_colonias() );
 		wp_localize_script( 'functions', 'allMunicipios', $this->get_municipios() );
@@ -270,6 +271,20 @@ class Sondeo_CDMX_Survey {
 									<span><input id="q5-2" name="trabajas" type="radio" value="no" /><label for="q5-2" class="radio-no">No</label></span>
 								</div>
 							</li>
+							<li id="js-donde-trabajas" data-question="11">
+								<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde trabajas?</label>
+								<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
+									<option value="" disabled selected>Selecciona una opción</option>
+									<option value="cdmx">CDMX</option>
+									<option value="zmvm">Zona Metropolitana</option>
+									<option value="resto-republica">Resto de la república</option>
+									<option value="fuera-mexico">Fuera de México</option>
+								</select>
+							</li>
+
+							<li id="js-trabajas-delegaciones-estados-paises" data-input-trigger data-question="12">
+							</li>
+
 							<li id="js-estudias" data-input-trigger data-question="17">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="estudias">¿Estudias?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
@@ -277,6 +292,20 @@ class Sondeo_CDMX_Survey {
 									<span><input id="q6-2" name="estudias" type="radio" value="no" /><label for="q6-2" class="radio-no">No</label></span>
 								</div>
 							</li>
+							<li id="js-donde-estudias" data-question="18">
+								<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde estudias?</label>
+								<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
+									<option value="" disabled selected>Selecciona una opción</option>
+									<option value="cdmx">CDMX</option>
+									<option value="zmvm">Zona Metropolitana</option>
+									<option value="resto-republica">Resto de la república</option>
+									<option value="fuera-mexico">Fuera de México</option>
+								</select>
+							</li>
+
+							<li id="js-estudias-delegaciones-estados-paises" data-input-trigger data-question="19">
+							</li>
+
 							<li id="js-naciste-cdmx" data-input-trigger data-question="24">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="naciste-cdmx">¿Naciste en la CDMX?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">

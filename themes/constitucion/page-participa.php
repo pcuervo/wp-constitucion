@@ -285,7 +285,7 @@
 							<input name="fotografias_redes_ensayo" id="fotografias_redes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]">
 							<label for="">Comparte la lista de asistentes firmada de los participantes de la sesión/evento con una liga a Google Drive, Dropbox o OneDrive</label>
 							<input name="lista_asistentes_ensayo" id="lista_asistentes_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="La lista de asistentes es obligatoria">
-							<label for="">Copia a continuación la liga a Google Drive, Dropbox o OneDrive. Este deberá estar en formato .docx (Microsoft Word) y no deberá exceder 8 páginas. <a href="<?php echo site_url('/guia-para-compartir-el-texto/'); ?>" target="_blank" class="[ color-gray--light ][ fz--small ]">Aqui puedes descargar una guía para compartir el texto.</a></label>
+							<label for="">Copia a continuación la liga a Google Drive, Dropbox o OneDrive. Este deberá estar en formato .docx (Microsoft Word) y no deberá exceder 8 páginas. <a data-toggle="modal" data-target="#guia-compartir-ensayo" class="[ color-primary ]">Aqui puedes descargar una guía para compartir el texto.</a></label>
 							<input name="compartir_documento_ensayo" id="compartir_documento_ensayo" type="text" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-error-message="El documento obligatorio">
 							<label for="">Señala a continuación un correo electrónico para contactar al grupo que preparó este documento.</label>
 							<input name="correo_electronico_ensayo" id="correo_electronico_ensayo" type="email" class="[ form-control ][ input-primary ][ margin-bottom--large ]" required="" data-parsley-required-message="El correo es obligatorio" data-parsley-type-message="Por favor escribe un correo válido">
@@ -303,6 +303,37 @@
 						<button type="submit" class="[ btn btn-primary btn--large ]">enviar</button>
 					</div>
 				</form>
+
+				<!-- / Modal guia compartir ensayo -->
+					<div id="guia-compartir-ensayo" class="modal fade" tabindex="-1" role="dialog">
+						<div class="[ modal-dialog ]">
+							<div class="[ modal-content ][ no-border-radius ]">
+								<div class="[ modal-body ]">
+									<a type="button" id="close-feedback" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>
+									<div class="[ row padding ]">
+										<div class="[ padding--top--xxlarge padding--bottom--xxlarge padding--sides--large--sm ]">
+											<p class="[ color-primary ][ margin-top ]">Para facilitar la recepción y lectura de los ensayos necesitamos que todos tengan un mismo formato. Por ello te recomendamos seguir las siguientes indicaciones.</p>
+											<ul class="[ margin-top--large ]">
+												<li>Formato tamaño carta (21.59 cm x 27.94 cm)</li>
+												<li>Extensión mínima de dos páginas (incluyendo portada) y máxima de 10 páginas, incluyendo anexo, referencias y soporte gráfico.</li>
+												<li>La primera página deberá incluir un resumen de máximo 250 palabras con las ideas principales y conclusiones del ensayo.</li>
+												<li>Tipografía del texto Helvética a 12 puntos, espacio sencillo.</li>
+												<li>Tipografía de subtítulos Helvética a 13 puntos.</li>
+												<li>Tipografía del Título en Helvética a 14 puntos, en mayúscula.</li>
+												<li>Si hay notas al pie de página, deberán estar en Helvética a 10 puntos.</li>
+												<li>El listado de autores alineado al margen derecho con letra Helvetica cursiva de 11 puntos.</li>
+												<li>En caso de ser presentado por una institución (es) u organización (es) esto se deberá señalarse también con letra Helvetica cursiva de 11 puntos.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- / modal indicaciones-ensayo -->
+
+
+
+
 			</article>
 		</div> <!-- /container -->
 	</section>

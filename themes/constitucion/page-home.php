@@ -28,32 +28,32 @@
 <section class="flexslider relative">
 	<ul class="slides">
 		<li>
-			<a href="<?php echo site_url('/participa/' ); ?>">
+			<a class="[ block ]" href="<?php echo site_url('/participa/' ); ?>">
 				<img src="<?php echo THEMEPATH; ?>images/slide-participa.jpg" alt="¿Cómo participo?">
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('/participa/'); ?>#imagina-ciudad">
+			<a class="[ block ]" href="<?php echo site_url('/participa/'); ?>#imagina-ciudad">
 				<img src="<?php echo THEMEPATH; ?>images/slide-imagina.jpg" alt="Imagina tu ciudad">
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('/participa/'); ?>#peticiones">
+			<a class="[ block ]" href="<?php echo site_url('/participa/'); ?>#peticiones">
 				<img src="<?php echo THEMEPATH; ?>images/slide-peticion.jpg" alt="Haz una petición">
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('/participa/' ); ?>#dialogos-publicos">
+			<a class="[ block ]" href="<?php echo site_url('/participa/' ); ?>#dialogos-publicos">
 				<img src="<?php echo THEMEPATH; ?>images/slide-organiza.jpg" alt="Organiza un encuentro ciudadano">
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('/participa/' ); ?>#ensayos">
+			<a class="[ block ]" href="<?php echo site_url('/participa/' ); ?>#ensayos">
 				<img src="<?php echo THEMEPATH; ?>images/slide-publica.jpg" alt="Publica o comenta un ensayo">
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('/cdmx/' ); ?>#voces-ciudadanas">
+			<a class="[ block ]" href="<?php echo site_url('/cdmx/' ); ?>#voces-ciudadanas">
 				<img src="<?php echo THEMEPATH; ?>images/slide-voces-ciudadanas.jpg" alt="Voces ciudadanas">
 			</a>
 		</li>
@@ -90,9 +90,12 @@
 
 					$link_noticia = get_post_meta( $post->ID, 'link_noticia', true );?>
 					<div class="[ col-xs-6 col-sm-4 ][ margin-bottom ][ post_compact ]">
-						<a class="gtm-btn-noticia" href="<?php echo $link_noticia; ?>">
+						<a class="gtm-btn-noticia" href="<?php echo $link_noticia; ?>" target="_blank">
 							<img class="[ img-responsive ][ margin-bottom--small ]" src="<?php echo $url_image; ?>" alt="<?php echo get_the_title(); ?>">
-							<div>
+							<div class="[ hidden-xs ]">
+								<h4 class="[ color-gray ][ center-full ][ text-uppercase ][ line-height ]"><?php the_title(); ?></h4>
+							</div>
+							<div class="[ visible-xs ]">
 								<h4 class="[ color-gray ][ center-full ][ text-uppercase ][ line-height ]"><?php the_title(); ?></h4>
 							</div>
 						</a>

@@ -23,7 +23,7 @@
         }
 
         $('.js-hero_video__scroll').on('click', function(){
-            $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 130 }, '700');
+            $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 70 }, '700');
         });
 
 

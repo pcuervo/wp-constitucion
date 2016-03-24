@@ -29,11 +29,11 @@ global $wp_query; ?>
 					</a>
 				</div>
 				<div class="[ col-xs-12 col-sm-7 ]">
-					<h2 class="[ fw-semibold ]">
+					<h3 class="[ fw-semibold ]">
 						<a class="[ color-gray ] gtm-btn-noticia" href="<?php echo $link_noticia; ?>" target="_blank">
 							<?php the_title(); ?>
 						</a>
-					</h2>
+					</h3>
 					<p class="[ color-primary ]"><?php echo $date_arr[4].' '.$date_arr[1].' '.$date_arr[2] ?></p>
 					<p><?php echo wp_trim_words( get_the_excerpt(), 23 ) ?></p>
 					<a href="<?php echo $link_noticia; ?>" class="gtm-btn-noticia" target="_blank">

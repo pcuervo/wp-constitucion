@@ -3144,6 +3144,10 @@ select[multiple].input-lg {
   list-style: none;
   color: red;
 }
+.position-data .parsley-errors-list {
+  position: absolute;
+  bottom: -40px;
+}
 .box-shadow--form {
   background-color: #fff;
 }
@@ -3632,6 +3636,9 @@ input[type="button"].btn-block {
   font-size: 18px;
   line-height: 1.3333333;
   border-radius: 6px;
+}
+.btn-primary:focus {
+  color: #e80e8a;
 }
 .btn-primary:hover {
   background-color: #e80e8a;
@@ -7226,30 +7233,7 @@ ul.slides li img {
   display: none;
 }
 .slick-arrow {
-  position: absolute;
-  width: 100%;
-  bottom: 45%;
-  text-indent: -9999px;
-  overflow: hidden;
-  top: 90%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  z-index: 40;
-  width: 30px;
-  height: 40px;
-}
-@media (max-width: 767px) {
-  .slick-arrow {
-    display: none !important;
-  }
-}
-@media (min-width: 1200px) {
-  .slick-arrow {
-    top: 92%;
-  }
+  display: none !important;
 }
 button.slick-prev.slick-arrow {
   left: 5%;
@@ -9024,10 +9008,9 @@ footer a {
   display: inline-block;
   vertical-align: bottom;
   text-decoration: none;
-  font-size: 12px;
-  line-height: 9px;
+  font-size: 16px;
+  line-height: 15px;
   margin-left: 20px;
-  margin-right: 20px;
   color: #cccccc;
 }
 @media (max-width: 480px) {

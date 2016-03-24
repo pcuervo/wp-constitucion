@@ -3,7 +3,7 @@ $asistencia_invitacion = get_post_meta( $post->ID, 'asistencia_invitacion', true
 $latitud_evento = get_post_meta( $post->ID, 'latitud_evento', true );
 $longitud_evento = get_post_meta( $post->ID, 'longitud_evento', true );
 $fecha_evento = get_post_meta( $post->ID, 'fecha_evento', true );
-$date_arr = getDateTransform( $fecha_evento ); 
+$date_arr = getDateTransform( $fecha_evento );
 
 $frace_evento = get_post_meta( $post->ID, 'frace_evento', true );
 $institucion = get_post_meta( $post->ID, 'institucion_evento', true );
@@ -31,10 +31,10 @@ $horario = get_post_meta( $post->ID, 'horarios_evento', true ); ?>
 					<?php endif;
 					if($liga_oficial != ''): ?>
 						<p class="[ color-gray--light ]"><strong class="[ color-primary ]">Liga del sitio ofician:</strong> <?php echo $liga_oficial; ?></p>
-					<?php endif; 
+					<?php endif;
 					if($fotografia != ''): ?>
 						<p class="[ color-gray--light ]"><strong class="[ color-primary ]">Fotografía de cartel o publicidad del acontecimiento:</strong> <?php echo $fotografia; ?></p>
-					<?php endif; 
+					<?php endif;
 					if ($correo != ''): ?>
 						<p class="[ color-gray--light ]"><strong class="[ color-primary ]">Correo electrónico:</strong> <?php echo $correo; ?></p>
 					<?php endif; ?>
@@ -47,16 +47,16 @@ $horario = get_post_meta( $post->ID, 'horarios_evento', true ); ?>
 					<?php endif;
 					if ($latitud_evento != '' ):
 						echo '<iframe width="100%" height="170" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q='.$latitud_evento.','.$longitud_evento.'&hl=es;z=14&amp;output=embed"></iframe>';
-					endif; 
+					endif;
 					if ($fecha_evento != ''): ?>
-						<p class="[ color-gray--light ][ text-right ][ margin-top ]"><strong class="[ color-primary ]">Fecha del evento:</strong> <?php echo $date_arr[4].' '.$date_arr[1].' '.$date_arr[2] ?></p>
-					<?php endif; 
+						<p class="[ color-gray--light ][ margin-top ]"><strong class="[ color-primary ]">Fecha del evento:</strong> <?php echo $date_arr[4].' '.$date_arr[1].' '.$date_arr[2] ?></p>
+					<?php endif;
 					if ($horario != ''): ?>
-						<p class="[ color-gray--light ][ text-right ]"><em><strong class="[ color-primary ]">Horario:</strong></em> <?php echo get_post_meta( $post->ID, 'horarios_evento', true ); ?></p>
+						<p class="[ color-gray--light ]"><em><strong class="[ color-primary ]">Horario:</strong></em> <?php echo get_post_meta( $post->ID, 'horarios_evento', true ); ?></p>
 					<?php endif; ?>
 				</div>
 			</div>
-		</div>		
+		</div>
 	</div>
 </section>
 

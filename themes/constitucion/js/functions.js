@@ -356,8 +356,9 @@
             toggleTwitter();
         })
 
-        $('#js-hide-twitter').click(function(e){
-            e.preventDefault();
+        $('#js-hide-twitter').on('click', function(event){
+            event.preventDefault();
+            console.log('entro');
             toggleTwitter();
         })
 
@@ -456,7 +457,7 @@
 
         function smoothScrollTo(anchor, offset) {
             var duration= 1000; //time (milliseconds) it takes to reach anchor point
-            var targetY = $(anchor).offset().top;
+            var targetY = $(anchor).offset();
             $("body").animate({
                 scrollTop : targetY - offset
             }, duration );

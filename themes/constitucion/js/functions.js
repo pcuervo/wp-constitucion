@@ -521,7 +521,6 @@
                 zoomControl: false,
                 scaleControl: false,
                 disableDoubleClickZoom: true,
-                navigationControl: false,
                 mapTypeControl: false,
                 draggable: isDraggable,
             };

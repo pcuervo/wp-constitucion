@@ -312,20 +312,25 @@
 									<a type="button" id="close-feedback" class="close" data-dismiss="modal" aria-label="Close"><img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar"></a>
 									<div class="[ row padding ]">
 										<div class="[ padding--top--xxlarge padding--bottom--xxlarge padding--sides--large--sm ]">
-											<h4 class="[ color-primary ]">Guía para compartir el texto</h4>
-											<p class="[ color-gray ][ margin-top ]">Las relatorías o ensayos deben estar escritos en tipografía Garamond a 13 puntos, a espacio sencillo y formato tamaño carta (21.59 cm x 27.94 cm). La extensión mínima del documento es de 2 páginas y máxima de 8 incluyendo resumen-portada así como cualquier soporte gráfico y referencias si es el caso. Los subtítulos deberán estar alineados a la izquierda y con letra Garamond de 14 puntos. Las notas al pie de página, si es el caso, deberán estar en Garamond a 11 puntos. La primera página deberá incluir el resumen del ensayo o relatoría. Este deberá tener una extensión máxima de 250 palabras que incluya información del contexto de la sesión de trabajo, las principales reflexiones, resultados y las conclusiones de esta. Además deberá incluir:</p>
+											<p class="[ color-primary ][ margin-top ]">Para facilitar la recepción y lectura de los ensayos necesitamos que todos tengan un mismo formato. Por ello te recomendamos seguir las siguientes indicaciones.</p>
 											<ul class="[ margin-top--large ]">
-												<li>Título de la relatoría o ensayo en mayúsculas, centrado y escrito con letra Garamond de 15 puntos en negritas.</li>
-												<li> El nombre del evento o reunión de la cual se derivó el ensayo y las fechas en las que se sesionó el grupo.</li>
-												<li> El listado de autores alineado al margen derecho con letra Garamond cursiva de 12 puntos.</li>
-												<li>En caso de ser presentado por una institución (es) u organización (es) esto se deberá señalarse también con letra Garamond cursiva de 12 puntos.</li>
+												<li>Formato tamaño carta (21.59 cm x 27.94 cm)</li>
+												<li>Extensión mínima de dos páginas (incluyendo portada) y máxima de 10 páginas, incluyendo anexo, referencias y soporte gráfico.</li>
+												<li>La primera página deberá incluir un resumen de máximo 250 palabras con las ideas principales y conclusiones del ensayo.</li>
+												<li>Tipografía del texto Helvética a 12 puntos, espacio sencillo.</li>
+												<li>Tipografía de subtítulos Helvética a 13 puntos.</li>
+												<li>Tipografía del Título en Helvética a 14 puntos, en mayúscula.</li>
+												<li>Si hay notas al pie de página, deberán estar en Helvética a 10 puntos.</li>
+												<li>El listado de autores alineado al margen derecho con letra Helvetica cursiva de 11 puntos.</li>
+												<li>En caso de ser presentado por una institución (es) u organización (es) esto se deberá señalarse también con letra Helvetica cursiva de 11 puntos.</li>
 											</ul>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div><!-- / modal guia compartir ensayo -->
+					</div><!-- / modal indicaciones-ensayo -->
+
 
 
 

@@ -3,7 +3,7 @@ $ = jQuery.noConflict();
 (function() {
 
     var formWrap = document.getElementById( 'fs-form-wrap' );
-    [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+    [].slice.call( document.querySelectorAll( '#js-donde-vives select.cs-select' ) ).forEach( function(el) {
         new SelectFx( el, {
             stickyPlaceholder: false,
             onChange: function( lugar ){
@@ -26,24 +26,58 @@ $ = jQuery.noConflict();
         });
     } );
 
+    [].slice.call( document.querySelectorAll( '#js-donde-trabajas select.cs-select' ) ).forEach( function(el) {
+        new SelectFx( el, {
+            stickyPlaceholder: false,
+            onChange: function( lugar ){
+                $('#js-trabajas-delegaciones-estados-paises').empty();
+                switch( lugar ){
+                    case 'cdmx':
+                        showDelegaciones( lugar, 'trabajas' );
+                        break;
+                    case 'zmvm':
+                        showMunicipios( 'trabajas' );
+                        break;
+                    case 'resto-republica':
+                        showEstados( 'trabajas' );
+                        break;
+                    case 'fuera-mexico':
+                        showPaises( 'trabajas' );
+                        break;
+                }
+            }
+        });
+    } );
+
+    [].slice.call( document.querySelectorAll( '#js-donde-estudias select.cs-select' ) ).forEach( function(el) {
+        new SelectFx( el, {
+            stickyPlaceholder: false,
+            onChange: function( lugar ){
+                $('#js-estudias-delegaciones-estados-paises').empty();
+                switch( lugar ){
+                    case 'cdmx':
+                        showDelegaciones( lugar, 'estudias' );
+                        break;
+                    case 'zmvm':
+                        showMunicipios( 'estudias' );
+                        break;
+                    case 'resto-republica':
+                        showEstados( 'estudias' );
+                        break;
+                    case 'fuera-mexico':
+                        showPaises( 'estudias' );
+                        break;
+                }
+            }
+        });
+    } );
+
     new FForm( formWrap, {
         onReview : function() {
             //classie.add( document.body, 'overview' ); // for demo purposes only
             getSurveyData();
         }
     } );
-
-    $('#js-trabajas input').click(function(){
-        if( 'si' == this.value ){
-            showDondeTrabajas();
-        }
-    })
-
-    $('#js-estudias input').click(function(){
-        if( 'si' == this.value ){
-            showDondeEstudias();
-        }
-    })
 
     $('#js-grandes-retos a').click(function(e){
         e.preventDefault();
@@ -206,67 +240,7 @@ function showPaises( section ){
     return;
 }
 
-function showDondeTrabajas(){
-    FForm.prototype._addField( $('#fs-form-wrap')[0], 'js-donde-trabajas', 'js-trabajas' );
-    FForm.prototype._addField( $('#fs-form-wrap')[0], 'js-trabajas-delegaciones-estados-paises', 'js-donde-trabajas' );
-    $( '#js-donde-trabajas' ).append( getHTMLDondeTrabajas() );
-    $( '#js-donde-trabajas' ).attr( 'data-question', 11 );
-    new SelectFx( $('#js-donde-trabajas .cs-select')[0], {
-        stickyPlaceholder: false,
-        onChange: function( lugar ){
-            $('#js-trabajas-delegaciones-estados-paises').empty();
-            switch( lugar ){
-                case 'cdmx':
-                    showDelegaciones( lugar, 'trabajas' );
-                    break;
-                case 'zmvm':
-                    showMunicipios( 'trabajas' );
-                    break;
-                case 'resto-republica':
-                    showEstados( 'trabajas' );
-                    break;
-                case 'fuera-mexico':
-                    showPaises( 'trabajas' );
-                    break;
-            }
-        }
-    });
-}
 
-function showDondeEstudias(){
-    FForm.prototype._addField( $('#fs-form-wrap')[0], 'js-donde-estudias', 'js-estudias' );
-    FForm.prototype._addField( $('#fs-form-wrap')[0], 'js-estudias-delegaciones-estados-paises', 'js-donde-estudias' );
-    $('#js-donde-estudias').append( getHTMLDondeEstudias() );
-    $( '#js-donde-trabajas' ).attr( 'data-question', 18 );
-    new SelectFx( $('#js-donde-estudias .cs-select')[0], {
-        stickyPlaceholder: false,
-        onChange: function( lugar ){
-            $('#js-estudias-delegaciones-estados-paises').empty();
-            switch( lugar ){
-                case 'cdmx':
-                    showDelegaciones( lugar, 'estudias' );
-                    break;
-                case 'zmvm':
-                    showMunicipios( 'estudias' );
-                    break;
-                case 'resto-republica':
-                    showEstados( 'estudias' );
-                    break;
-                case 'fuera-mexico':
-                    showPaises( 'estudias' );
-                    break;
-            }
-        }
-    });
-}
-
-function getHTMLDondeTrabajas(){
-    return '<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde trabajas?</label><select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required"><option value="" disabled selected>Selecciona una opción</option><option value="cdmx">CDMX</option><option value="zmvm">Zona Metropolitana</option><option value="resto-republica">Resto de la república</option><option value="fuera-mexico">Fuera de México</option></select>';
-}
-
-function getHTMLDondeEstudias(){
-    return '<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde estudias?</label><select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required"><option value="" disabled selected>Selecciona una opción</option><option value="cdmx">CDMX</option><option value="zmvm">Zona Metropolitana</option><option value="resto-republica">Resto de la república</option><option value="fuera-mexico">Fuera de México</option></select>';
-}
 
 function getHTMLDelegacionesCDMX( section ){
     switch( section ){

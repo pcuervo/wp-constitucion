@@ -3,24 +3,28 @@
 <script src="<?php echo THEMEPATH; ?>js/zingchart/modules/zingchart-treemap.min.js"></script>
 <?php  $survey = Sondeo_CDMX_Survey::get(); ?>
 
-<div class="[ container ]">
+<div class="[ container ][ margin-top--large ]">
 
-	<section>
+	<section class="[ row ][ margin-bottom ]">
 
 		<?php
 			// pregunta #8
 			$palabras_que_piensas = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_PIENSAS_CDMX );
 			$palabras_que_piensas_json_encoded = json_encode($palabras_que_piensas);
-			print_r($palabras_que_piensas_json_encoded)
 		?>
-		<h2>¿Cuáles son las tres primeras palabras que te llegan a la mente cuando piensas en la Ciudad de México?</h2>
-		<div id ='pregunta-8'></div>
+
+		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+			<h2>¿Cuáles son las tres primeras palabras que te llegan a la mente cuando piensas en la Ciudad de México?</h2>
+			<div id ='pregunta-8'></div>
+		</div>
+
 		<script>
 		  var configPregunta8 = {
 			"graphset":[
 				{
 					"globals":{
 						"fontFamily":"Alegreya Sans",
+						"fontColor": "#e0e0e0"
 					},
 					"type":"treemap",
 					"plotarea":{
@@ -52,7 +56,7 @@
 		zingchart.render({
 			id : 'pregunta-8',
 			data : configPregunta8,
-			height: "400px",
+			height: "300px",
 			width: "100%",
 			hideprogresslogo: true,
 		});
@@ -60,7 +64,7 @@
 
 	</section>
 
-	<section>
+	<section class="[ row ][ margin-bottom ]">
 
 
 		<?php
@@ -69,8 +73,11 @@
 			$palabras_grandes_retos_json_encoded = json_encode($palabras_grandes_retos);
 		?>
 
-		<h2>Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</h2>
-		<div id ='pregunta-9'></div>
+		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+			<h2>Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</h2>
+			<div id ='pregunta-9'></div>
+		</div>
+
 		<script>
 		  var configPregunta9 = {
 			"graphset":[
@@ -96,7 +103,7 @@
 		zingchart.render({
 			id : 'pregunta-9',
 			data : configPregunta9,
-			height: "400px",
+			height: "300px",
 			width: "100%",
 			hideprogresslogo: true,
 		});
@@ -104,7 +111,7 @@
 
 	</section>
 
-	<section>
+	<section class="[ row ][ margin-bottom ]">
 
 		<?php
 			// pregunta #10
@@ -123,7 +130,7 @@
 		</div>
 
 	</section>
-	<section>
+	<section class="[ row ][ margin-bottom ]">
 
 		<?php
 			// pregunta #11
@@ -161,14 +168,14 @@
 		zingchart.render({
 			id : 'pregunta-11',
 			data : configPregunta11,
-			height: "400px",
+			height: "300px",
 			width: "100%",
 			hideprogresslogo: true,
 		});
 		</script>
 
 	</section>
-	<section>
+	<section class="[ row ][ margin-bottom ]">
 
 		<?php
 			// pregunta #14
@@ -206,7 +213,7 @@
 		zingchart.render({
 			id : 'pregunta-14',
 			data : configPregunta14,
-			height: "400px",
+			height: "300px",
 			width: "100%",
 			hideprogresslogo: true,
 		});

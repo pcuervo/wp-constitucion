@@ -293,7 +293,7 @@
 
 		<div class="[ soy-cdmx right-370 ][ js-hidden ]">
 			<div class="[ opacity-7 ][ absolute right-10 ]">
-				<a id="js-hide-twitter gtm-btn-menu" href="#nada">
+				<a id="js-hide-twitter" href="#nada">
 					<img class="[ svg icon icon--iconed icon--thickness-1 icon--stroke ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/close.svg" alt="Ícono cerrar">
 				</a>
 			</div>

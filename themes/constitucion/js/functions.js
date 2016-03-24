@@ -23,7 +23,7 @@
         }
 
         $('.js-hero_video__scroll').on('click', function(){
-            $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 130 }, '700');
+            $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 70 }, '700');
         });
 
 
@@ -356,8 +356,9 @@
             toggleTwitter();
         })
 
-        $('#js-hide-twitter').click(function(e){
-            e.preventDefault();
+        $('#js-hide-twitter').on('click', function(event){
+            event.preventDefault();
+            console.log('entro');
             toggleTwitter();
         })
 
@@ -456,7 +457,7 @@
 
         function smoothScrollTo(anchor, offset) {
             var duration= 1000; //time (milliseconds) it takes to reach anchor point
-            var targetY = $(anchor).offset().top;
+            var targetY = $(anchor).offset();
             $("body").animate({
                 scrollTop : targetY - offset
             }, duration );
@@ -512,9 +513,17 @@
 
             var map;
             var bounds = new google.maps.LatLngBounds();
+            var isDraggable = $(document).width() > 480 ? true : false;
             var mapOptions = {
                 mapTypeId: 'roadmap',
                 scrollwheel: false,
+                navigationControl: false,
+                zoomControl: false,
+                scaleControl: false,
+                disableDoubleClickZoom: true,
+                navigationControl: false,
+                mapTypeControl: false,
+                draggable: isDraggable,
             };
 
             // Display a map on the page

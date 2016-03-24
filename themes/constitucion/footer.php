@@ -28,7 +28,7 @@
 							<div class="[ padding--top--xxlarge padding--bottom--xxlarge padding--sides--large--sm ]">
 								<div>
 									<h2 class="[ inline-block align-middle ][ no-margin padding--left ]">Estimados</h2>
-									<img class="[ inline-block align-middle ][ img-contacto ][ margin-auto ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif" alt="Logo horizontal Constitución CDMX">
+									<img class="[ inline-block align-middle ][ img-contacto ][ margin-top--xsmall margin-bottom--large ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif" alt="Logo horizontal Constitución CDMX">
 								</div>
 								<form class="[ margin-bottom--large ]" action="" method="POST" data-parsley-validate="">
 									<label for="mensaje_cdmx" class="[ hidden ]">Mensaje</label>

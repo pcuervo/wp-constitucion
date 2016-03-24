@@ -164,7 +164,7 @@ $image_plataforma = attachment_image_url( $plataforma->ID, 'full' ); ?>
 $image_wiki = attachment_image_url( $wiki->ID, 'full' ); ?>
 <section class="[ container ][ space-id ]" id="constitucion-wiki">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 ][ text-justify ]">
+		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 ]">
 			<h2><?php echo $wiki->post_title; ?></h2>
 			<?php echo wpautop( $wiki->post_content ); ?>
 		</div>

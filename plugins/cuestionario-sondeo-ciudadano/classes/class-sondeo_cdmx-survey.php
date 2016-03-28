@@ -656,10 +656,10 @@ class Sondeo_CDMX_Survey {
 			$word_occurrences['labels'] = array();
 			$word_occurrences['values'] = array();
 			foreach ( $word_results as $key => $word ){
-				array_push( $word_occurrences['labels'], $word->answer ); 
-				array_push( $word_occurrences['values'], $word->occurrences ); 
-			}	
-			return json_encode( $word_occurrences );
+				array_push( $word_occurrences['labels'], $word->answer );
+				array_push( $word_occurrences['values'], $word->occurrences );
+			}
+			return $word_occurrences;
 		}
 
 		foreach ( $word_results as $key => $word ){

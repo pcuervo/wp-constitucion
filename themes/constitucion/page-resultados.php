@@ -10,6 +10,7 @@
 		<?php
 			// pregunta #8
 			$palabras_que_piensas = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_PIENSAS_CDMX );
+			$num_respuestas_que_piensas = $survey->get_number_of_answers_by_question( Sondeo_CDMX_Survey::Q_PIENSAS_CDMX );
 			$palabras_que_piensas_json_encoded = json_encode($palabras_que_piensas);
 		?>
 
@@ -70,6 +71,7 @@
 		<?php
 			// pregunta #9
 			$palabras_grandes_retos = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS );
+			$num_respuestas_grandes_retos = $survey->get_number_of_answers_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS );
 			$palabras_grandes_retos_json_encoded = json_encode($palabras_grandes_retos);
 		?>
 
@@ -116,6 +118,7 @@
 		<?php
 			// pregunta #10
 			$num_respuestas = 3;
+			$num_respuestas_cdmx_ideal = $survey->get_number_of_answers_by_question( Sondeo_CDMX_Survey::Q_CDMX_IDEAL );
 			$ultimas_respuestas = $survey->get_latest_answers( $num_respuestas, Sondeo_CDMX_Survey::Q_CDMX_IDEAL );
 		?>
 
@@ -137,6 +140,7 @@
 		<?php
 			// pregunta #11
 			$palabras_obstaculos_principales = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_OBSTACULOS_PRINCIPALES );
+			$num_respuestas_obstaculos_principales = $survey->get_number_of_answers_by_question( Sondeo_CDMX_Survey::Q_OBSTACULOS_PRINCIPALES );
 			$palabras_obstaculos_principales_json_encoded = json_encode($palabras_obstaculos_principales);
 		?>
 
@@ -185,6 +189,7 @@
 		<?php
 			// pregunta #14
 			$palabras_cosas_valiosas = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_COSAS_VALIOSAS );
+			$num_respuestas_cosas_valiosas = $survey->get_number_of_answers_by_question( Sondeo_CDMX_Survey::Q_COSAS_VALIOSAS );
 			$palabras_cosas_valiosas_json_encoded = json_encode($palabras_cosas_valiosas);
 		?>
 

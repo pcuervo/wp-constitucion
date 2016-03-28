@@ -19,7 +19,7 @@ else:
 			</div>
 			<input type="hidden" name="referencia" value="<?php echo $_GET['referencia']; ?>">
 			<div class="[ col-xs-12 col-sm-4  ]">
-				<button type="submit" class="[ btn btn-secondary color-gray ][ center-block ][ margin-bottom--large ]">obtener certificado</button>
+				<button id="gtm-btn-certificado" type="submit" class="[ btn btn-secondary color-gray ][ center-block ][ margin-bottom--large ]">obtener certificado</button>
 				<a class="[ btn btn-primary btn--small ]" href="<?php echo site_url('/resultados/'); ?> ">Ver resultados</a>
 			</div>
 		</form>

@@ -114,6 +114,9 @@ $image_sobre = attachment_image_url( $sobre->ID, 'full' ); ?>
 						<h3 class="nombre-modal"></h3>
 						<p class="cargo-modal"></p>
 						<div class="biografia-modal"></div>
+						<a href="" target="_blank" class="[ block margin-top text-right ]">
+							<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg" alt="icono de red social twitter">
+						</a>
 					</div><!-- modal-body -->
 				</div>
 			</div>
@@ -228,8 +231,8 @@ $image_biblioteca = attachment_image_url( $biblioteca->ID, 'full' ); ?>
 <section class="[ container ][ space-id ][ content-biblioteca ]" id="biblioteca">
 	<h2 class="[ margin-bottom--large no-margin-top ]" id="biblioteca"><?php echo $biblioteca->post_title; ?></h2>
 	<p class="[ margin-bottom--large ]">La búsqueda de una Reforma Política para la Ciudad de México es un proceso que ha tomado mucho tiempo en su conceptualización y cuya ejecución no es expedita. En esta biblioteca podrás descargar documentos relacionados a la historia de la configuración política del Distrito Federal y nuestra ciudad.</p>
-	<a href="http://www.juridicas.unam.mx/publica/librev/rev/rap/cont/61/pr/pr21.pdf" target="_blank"><p class="[ margin-top gtm-btn-liga ]">La Ley Orgánica del Distrito y Territorios Federales de 1928</p></a>
-	<a href="http://www.juridicas.unam.mx/publica/librev/rev/rap/cont/61/pr/pr23.pdf" target="_blank"><p class="[ margin-top gtm-btn-liga ]">La Ley Orgánica del Departamento del Distrito Federal de 1970</p></a>
+	<a href="http://www.juridicas.unam.mx/publica/librev/rev/rap/cont/61/pr/pr21.pdf" target="_blank" class="gtm-btn-liga"><p class="[ margin-top gtm-btn-liga ]">La Ley Orgánica del Distrito y Territorios Federales de 1928</p></a>
+	<a href="http://www.juridicas.unam.mx/publica/librev/rev/rap/cont/61/pr/pr23.pdf" target="_blank" class="gtm-btn-liga"><p class="[ margin-top gtm-btn-liga ]">La Ley Orgánica del Departamento del Distrito Federal de 1970</p></a>
 	<a href="http://info4.juridicas.unam.mx/adprojus/leg/10/350/" target="_blank" class="gtm-btn-liga"><p class="[ margin-top ]">Estatuto de Gobierno del Distrito Federal de 1994.</p></a>
 	<a href="http://sil.gobernacion.gob.mx/Archivos/Documentos/2002/09/asun_57128_20020905_844595.pdf" target="_blank" class="gtm-btn-liga"><p class="[ margin-top ]">Iniciativa de Reforma Política de Andrés Manuel López Obrador, 2001</p></a>
 	<a href="http://sil.gobernacion.gob.mx/Archivos/Documentos/2010/04/asun_2663420_20100429_1272578740.pdf" target="_blank" class="gtm-btn-liga"><p class="[ margin-top ]">Iniciativa de Reforma Política de Marcelo Ebrard Casaubón, 2010</p></a>

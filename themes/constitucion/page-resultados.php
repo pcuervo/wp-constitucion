@@ -15,6 +15,7 @@
 
 		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
 			<h2>¿Cuáles son las tres primeras palabras que te llegan a la mente cuando piensas en la Ciudad de México?</h2>
+			<h4><?php echo $num_respuestas_que_piensas; ?></h4>
 			<div id ='pregunta-8'></div>
 		</div>
 

@@ -114,6 +114,9 @@ $image_sobre = attachment_image_url( $sobre->ID, 'full' ); ?>
 						<h3 class="nombre-modal"></h3>
 						<p class="cargo-modal"></p>
 						<div class="biografia-modal"></div>
+						<a href="" target="_blank" class="[ block margin-top text-right ]">
+							<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg" alt="icono de red social twitter">
+						</a>
 					</div><!-- modal-body -->
 				</div>
 			</div>

@@ -657,7 +657,7 @@ class Sondeo_CDMX_Survey {
 			$word_occurrences['values'] = array();
 			foreach ( $word_results as $key => $word ){
 				array_push( $word_occurrences['labels'], $word->answer );
-				array_push( $word_occurrences['values'], $word->occurrences );
+				array_push( $word_occurrences['values'], intval($word->occurrences) );
 			}
 			return $word_occurrences;
 		}

@@ -622,9 +622,15 @@ class Sondeo_CDMX_Survey {
 			GROUP BY TRIM( LOWER( answer) )
 			ORDER BY occurrences'
 		);
-		foreach ( $word_results as $word ) $word_occurrences[$word->answer] = $word->occurrences;
 
-		return $word_occurrences;
+		foreach ( $word_results as $key => $word ) {
+			$word_occurrences[$key] = array(
+				$word->answer,
+				$word->occurrences
+			);
+		}
+
+		return json_encode( $word_occurrences );
 	}
 
 	/**

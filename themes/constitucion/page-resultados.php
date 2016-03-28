@@ -70,8 +70,10 @@
 
 		<?php
 			// pregunta #9
+			$separateAnswersAndValues = true;
 			$palabras_grandes_retos = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS );
 			$num_respuestas_grandes_retos = $survey->get_number_of_answers_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS );
+			$palabras_grandes_retos_separado = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS, $separateAnswersAndValues );
 			$palabras_grandes_retos_json_encoded = json_encode($palabras_grandes_retos);
 		?>
 

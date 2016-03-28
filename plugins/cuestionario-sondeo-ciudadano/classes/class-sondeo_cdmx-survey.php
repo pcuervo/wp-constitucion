@@ -640,7 +640,7 @@ class Sondeo_CDMX_Survey {
 	 * @param 	[int]   $question_id
 	 * @return 	[array]	$word_occurrences
 	 */
-	public function get_word_occurrences_by_question( $question_id ) {
+	public function get_word_occurrences_by_question( $question_id, $separateAnswersAndValues = false ) {
 		global $wpdb;
 		$word_occurrences = array();
 		$word_results = $wpdb->get_results('
@@ -652,13 +652,22 @@ class Sondeo_CDMX_Survey {
 			ORDER BY occurrences'
 		);
 
+		if( $separateAnswersAndValues ){
+			$word_occurrences['labels'] = array();
+			$word_occurrences['values'] = array();
+			foreach ( $word_results as $key => $word ){
+				array_push( $word_occurrences['labels'], $word->answer ); 
+				array_push( $word_occurrences['values'], $word->occurrences ); 
+			}	
+			return json_encode( $word_occurrences );
+		}
+
 		foreach ( $word_results as $key => $word ){
 			$word_occurrences[$key] = array(
 				'text' => $word->answer,
 				'value' => $word->occurrences
 			);
 		}
-
 		return json_encode( $word_occurrences );
 	}
 

@@ -124,8 +124,8 @@
 
 			<div class="[ row ]">
 				<?php foreach ($ultimas_respuestas as $key => $ultima_respuesta) { ?>
-					<div class="[ card ][ col-xs-12 col-sm-4 ][ ultima-respuesta ][ margin-bottom ]">
-						<h3 class="[ color-primary ]"><?php echo $ultima_respuesta; ?></h3>
+					<div class="[ card ][ col-xs-12 ][ margin-bottom ]">
+						<h3 class="[ no-margin ]"><?php echo $ultima_respuesta; ?></h3>
 					</div>
 				<?php } ?>
 			</div>

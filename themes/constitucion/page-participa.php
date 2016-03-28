@@ -54,7 +54,7 @@
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">4</p>
 					<p class="[ fz-small text-left ]">
-						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucioncdmx.pubpub.org/">
+						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucioncdmx.pubpub.org/" target="_blank">
 							<?php echo get_post_meta($post->ID, 'paso_d', true);?>
 						</a>
 					</p>

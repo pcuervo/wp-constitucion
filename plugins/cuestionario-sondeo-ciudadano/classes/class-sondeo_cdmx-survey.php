@@ -640,7 +640,7 @@ class Sondeo_CDMX_Survey {
 	 * @param 	[int]   $question_id
 	 * @return 	[array]	$word_occurrences
 	 */
-	public function get_word_occurrences_by_question( $question_id ) {
+	public function get_word_occurrences_by_question( $question_id, $separateAnswersAndValues = false ) {
 		global $wpdb;
 		$word_occurrences = array();
 		$word_results = $wpdb->get_results('
@@ -652,13 +652,22 @@ class Sondeo_CDMX_Survey {
 			ORDER BY occurrences'
 		);
 
+		if( $separateAnswersAndValues ){
+			$word_occurrences['labels'] = array();
+			$word_occurrences['values'] = array();
+			foreach ( $word_results as $key => $word ){
+				array_push( $word_occurrences['labels'], $word->answer ); 
+				array_push( $word_occurrences['values'], $word->occurrences ); 
+			}	
+			return json_encode( $word_occurrences );
+		}
+
 		foreach ( $word_results as $key => $word ){
 			$word_occurrences[$key] = array(
 				'text' => $word->answer,
 				'value' => $word->occurrences
 			);
 		}
-
 		return json_encode( $word_occurrences );
 	}
 
@@ -691,7 +700,6 @@ class Sondeo_CDMX_Survey {
 	 */
 	public function get_number_of_answers_by_question( $question_id ) {
 		global $wpdb;
-		$latest_answers = array();
 		$latest_results = $wpdb->get_results('
 			SELECT COUNT( question_id ) AS num_answers
 			FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
@@ -699,7 +707,7 @@ class Sondeo_CDMX_Survey {
 			AND answer <> ""
 			GROUP BY question_id'
 		);
-		foreach ( $latest_results as $result ) array_push( $latest_answers, $result->num_answers );
+		foreach ( $latest_results as $result ) $latest_answers = $result->num_answers;
 
 		return $latest_answers;
 	}// get_number_of_answers_by_question

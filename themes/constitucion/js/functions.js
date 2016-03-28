@@ -474,10 +474,8 @@
         */
 
         function smoothScrollTo(anchor, offset) {
-            console.log(anchor);
             var duration= 1000; //time (milliseconds) it takes to reach anchor point
             var targetY = $(anchor).offset();
-            console.log(targetY.top);
             $('html, body').animate({
                 scrollTop : targetY.top - offset
             }, duration );

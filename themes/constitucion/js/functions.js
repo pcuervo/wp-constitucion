@@ -474,14 +474,17 @@
         */
 
         function smoothScrollTo(anchor, offset) {
+            console.log(anchor);
             var duration= 1000; //time (milliseconds) it takes to reach anchor point
             var targetY = $(anchor).offset();
-            $("body").animate({
-                scrollTop : targetY - offset
+            console.log(targetY.top);
+            $('html, body').animate({
+                scrollTop : targetY.top - offset
             }, duration );
         }
 
         $(window).bind("load", function() {
+            console.log('hola');
             var hashURL = location.hash;
             if(hashURL != "" && hashURL.length > 1){
                 smoothScrollTo(hashURL, 110);

@@ -33,7 +33,6 @@
         });
 
         $('#close-feedback-forms').on('click', function(){
-            console.log('aaaaa');
             $('#feedback, .modal-backdrop').remove();
             var $feedback = $('#feedback');
         });
@@ -122,6 +121,23 @@
         /**
          * DATEPIKER
          */
+        $.datepicker.regional['es'] = {
+            closeText: 'Cerrar',
+            prevText: '',
+            currentText: 'Hoy',
+            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+            dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+            dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+            dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+            weekHeader: 'Sm',
+            dateFormat: 'dd/mm/yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''
+        };
+        $.datepicker.setDefaults($.datepicker.regional['es']);
         $('.date-ensayo').datepicker({
             dateFormat : 'yy-mm-dd',
             minDate: new Date(2015, 01 - 1, 01),
@@ -146,6 +162,7 @@
             var result_c = getValidateDocs('compartir_documento_ensayo');
 
             if (result_a && result_b && result_c) {
+                dataLayer.push({'event': 'ensayo-exitoso'});
                 var form = document.getElementById("form-ensayos");
                 form.submit();
             };
@@ -159,6 +176,7 @@
             var result_a = getValidateDocs('fotografia_evento');
 
             if (result_a) {
+                dataLayer.push({'event': 'encuentro-exitoso'});
                 var form = document.getElementById("form-eventos");
                 form.submit();
             };

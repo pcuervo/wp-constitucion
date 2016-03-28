@@ -96,6 +96,10 @@
 				</div>
 			</form>
 		</div>
+		<div class="[ clear ][ margin-bottom--large ]"></div>
+		<div class="[ text-center ]">
+			<a class="[ btn btn-primary btn--small ]" href="<?php echo site_url('/resultados/'); ?> ">Ver resultados</a>
+		</div>
 	</section>
 
 	<div class="[ descanso-visual ]">
@@ -157,7 +161,10 @@
 								<label for="">Copia a continuación la liga del sitio oficial del acontecimiento, la cuenta de Facebook o de Twitter </label>
 								<input type="text" name="liga_oficial_evento" id="liga_oficial_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Liga oficial">
 								<label for="">Fechas (Puede ser un sólo día) </label>
+								<label for="">Inicio</label>
 								<input class="[ input-primary border-gray ][ margin-bottom--large ] date-ensayo" name="fecha_evento" id="fecha_evento" placeholder="yyyy-mm-dd" required="" type="text" data-parsley-required-message="La fecha es obligatoria">
+								<label for="">Final</label>
+								<input type="text" name="fecha_evento_fin" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo-fin" placeholder="yyyy-mm-dd" disabled>
 								<label for="">Señala abajo dónde se llevara a cabo el evento</label>
 								<input type="text" name="ubicacion_evento" id="ubicacion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Ubicación" data-parsley-required-message="La ubicación es obligatoria">
 								<input type="hidden" name="latitud_evento" id="latitud_evento" value="">

@@ -14,9 +14,10 @@
 		body{ width: 300px;
 		height: 300px }
 		h2{	font-family: "Alegreya Sans",sans-serif; font-size: 28px;}
+		h2.large-name{ font-size: 25px;}
 		p{ font-family: "ABeeZee", sans-serif;  }
 		.text-center{text-align: center;}
-		.img-logo{ width: 200px; }
+		.img-logo{ width: 300px; }
 		.img-logo--small{ width: 130px; }
 		.color-primary{ color: #e80e8a; }
 		.color-gray--strong{ color:#222; }
@@ -75,7 +76,9 @@
 								</div>
 							</div>
 							<div class="[ col col-2 ]">
-								<h2 class="[ text-uppercase ][ color-gray ][ margin-bottom--small ]"><?php echo $nombre . ' ' . $apellidos ?></h2>
+								<?php $count = strlen($nombre.' '.$apellidos);
+								$class_h2 = $count >= 40 ? 'large-name' : ''; ?>
+								<h2 class="[ text-uppercase ][ color-gray ][ margin-bottom--small ] <?php echo $class_h2 ?>"><?php echo $nombre . ' ' . $apellidos ?></h2>
 								<p class="[ color-gray--strong ][ margin-top--xsmall ]">A nombre de todas las personas que están involucradas en la redacción de la Constitución de la Ciudad de México, te otorgo el presente reconocimiento por haber contribuido con tus ideas, reflexiones y propuestas para este proyecto.</p>
 								<p class="[ color-gray--strong ][ margin-top--xsmall ]">
 									La Ciudad de México somos todas y todos. Gracias por ser parte de este proceso histórico.

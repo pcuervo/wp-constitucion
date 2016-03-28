@@ -4396,6 +4396,7 @@ header ul li.active #dropdown--header,
 ul.menu-home > li.active > a,
 .collapse--menu > li.active > a,
 ul.menu-mobile > li.active > a,
+header > nav > ul > li.active > span > a,
 header > nav > ul > li.active > a {
   color: #e80e8a;
 }

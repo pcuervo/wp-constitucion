@@ -651,6 +651,7 @@ class Sondeo_CDMX_Survey {
 			GROUP BY TRIM( LOWER( answer) )
 			ORDER BY occurrences'
 		);
+
 		foreach ( $word_results as $key => $word ){
 			$word_occurrences[$key] = array(
 				'text' => $word->answer,
@@ -658,11 +659,11 @@ class Sondeo_CDMX_Survey {
 			);
 		}
 
-		return $word_occurrences;
+		return json_encode( $word_occurrences );
 	}
 
 	/**
-	 * Get word occurrences from user answers
+	 * Get latest answers from a survey question
 	 * @param 	[int]   $num_answers
 	 * @param 	[int]   $question_id
 	 * @return 	[array]	$latest_answers
@@ -682,5 +683,25 @@ class Sondeo_CDMX_Survey {
 
 		return $latest_answers;
 	}
+
+	/**
+	 * Get the number of time a question has been answered
+	 * @param 	[int]   $question_id
+	 * @return 	[array]	$latest_answers
+	 */
+	public function get_number_of_answers_by_question( $question_id ) {
+		global $wpdb;
+		$latest_answers = array();
+		$latest_results = $wpdb->get_results('
+			SELECT COUNT( question_id ) AS num_answers
+			FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
+			WHERE question_id = ' . $question_id . '
+			AND answer <> ""
+			GROUP BY question_id'
+		);
+		foreach ( $latest_results as $result ) array_push( $latest_answers, $result->num_answers );
+
+		return $latest_answers;
+	}// get_number_of_answers_by_question
 
 }// Sondeo_CDMX_Survey

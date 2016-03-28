@@ -90,13 +90,17 @@
 				{
 					"globals":{
 						"fontFamily":"Alegreya Sans",
-						"fontColor": "#333"
 					},
 					"type":"area",
 					"plotarea": {
 						//"adjust-layout":true /* For automatic margin adjustment. */
 						"margin":"30 50 30 50"
 					},
+					"labels":[
+						{
+							"font-color":"#333"
+						}
+					],
 					"scale-x": {
 						"label":{ /* Add a scale title with a label object. */
 							"text":"Respuestas posibles",

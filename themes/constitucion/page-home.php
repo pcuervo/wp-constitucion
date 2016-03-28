@@ -89,9 +89,9 @@
 					$url_image = attachment_image_url( $post->ID, 'images_news_cdmx' );
 
 					$link_noticia = get_post_meta( $post->ID, 'link_noticia', true );?>
-					<div class="[ col-xs-6 col-sm-4 ][ margin-bottom ][ post_compact ]">
-						<a class="gtm-btn-noticia" href="<?php echo $link_noticia; ?>" target="_blank">
-							<img class="[ img-responsive ][ margin-bottom--small ]" src="<?php echo $url_image; ?>" alt="<?php echo get_the_title(); ?>">
+					<div class="[ col-xs-6 col-sm-4 ][ margin-bottom--large ][ post_compact ]">
+						<a class="[ show ] gtm-btn-noticia" href="<?php echo $link_noticia; ?>" target="_blank">
+							<img class="[ width-100 img-responsive ]" src="<?php echo $url_image; ?>" alt="<?php echo get_the_title(); ?>">
 							<div class="[ hidden-xs ]">
 								<h4 class="[ color-gray ][ center-full ][ text-uppercase ][ line-height ]"><?php the_title(); ?></h4>
 							</div>
@@ -101,7 +101,7 @@
 						</a>
 					</div>
 					<?php if ( $current_noticia % 3 == 0 ) : ?>
-						<div class="[ clear ]"></div>
+						<div class="[ clear ][ hidden-xs ]"></div>
 					<?php endif; ?>
 				<?php $current_noticia +=1; endwhile;
 			endif; ?>

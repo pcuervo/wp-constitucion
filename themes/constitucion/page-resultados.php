@@ -11,7 +11,6 @@
 			// pregunta #8
 			$palabras_que_piensas = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_PIENSAS_CDMX );
 			$num_respuestas_que_piensas = $survey->get_number_of_answers_by_question( Sondeo_CDMX_Survey::Q_PIENSAS_CDMX );
-			$palabras_que_piensas_json_encoded = json_encode($palabras_que_piensas);
 		?>
 
 		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
@@ -37,18 +36,18 @@
 						"color-end":"#363636",
 						"box":{
 							"borderWidth": 1,
-							"borderColor": "#fff"
+							"borderColor": "#e0e0e0"
 						},
 						"tooltip-box":{
 							"background-color":"#ec2383",
 							"border-color":"#000",
-							"text":"%value",
+							"text":"%text: %value",
 							"border-color":"#fff",
 							"border-width":"1px",
 							"font-color":"#fff"
 						}
 					},
-					"series": <?php echo $palabras_que_piensas_json_encoded; ?>
+					"series": <?php echo $palabras_que_piensas; ?>
 				}
 			]
 		};
@@ -70,9 +69,10 @@
 
 		<?php
 			// pregunta #9
+			$separateAnswersAndValues = true;
 			$palabras_grandes_retos = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS );
 			$num_respuestas_grandes_retos = $survey->get_number_of_answers_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS );
-			$palabras_grandes_retos_json_encoded = json_encode($palabras_grandes_retos);
+			$palabras_grandes_retos_separado = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS, $separateAnswersAndValues );
 		?>
 
 		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
@@ -84,6 +84,10 @@
 		  var configPregunta9 = {
 			"graphset":[
 				{
+					"globals":{
+						"fontFamily":"Alegreya Sans",
+						"fontColor": "#e0e0e0"
+					},
 					"type":"treemap",
 					"plotarea":{
 						"margin":"0 0 30 0"
@@ -92,11 +96,20 @@
 						"aspect-type":"transition",
 						"color-start":"#4F5AD0",
 						"color-end":"#1A1D43",
+						"box":{
+							"borderWidth": 1,
+							"borderColor": "#e0e0e0"
+						},
 						"tooltip-box":{
-							"background-color":"#ec2383"
+							"background-color":"#ec2383",
+							"border-color":"#000",
+							"text":"%text: %value",
+							"border-color":"#fff",
+							"border-width":"1px",
+							"font-color":"#fff"
 						}
 					},
-					"series": <?php echo $palabras_grandes_retos_json_encoded; ?>
+					"series": <?php echo $palabras_grandes_retos; ?>
 				}
 			]
 		};
@@ -127,8 +140,8 @@
 
 			<div class="[ row ]">
 				<?php foreach ($ultimas_respuestas as $key => $ultima_respuesta) { ?>
-					<div class="[ card ][ col-xs-12 col-sm-4 ][ ultima-respuesta ][ margin-bottom ]">
-						<h3 class="[ color-primary ]"><?php echo $ultima_respuesta; ?></h3>
+					<div class="[ card ][ col-xs-12 ][ margin-bottom ]">
+						<h3 class="[ no-margin ]"><?php echo $ultima_respuesta; ?></h3>
 					</div>
 				<?php } ?>
 			</div>
@@ -141,7 +154,6 @@
 			// pregunta #11
 			$palabras_obstaculos_principales = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_OBSTACULOS_PRINCIPALES );
 			$num_respuestas_obstaculos_principales = $survey->get_number_of_answers_by_question( Sondeo_CDMX_Survey::Q_OBSTACULOS_PRINCIPALES );
-			$palabras_obstaculos_principales_json_encoded = json_encode($palabras_obstaculos_principales);
 		?>
 
 		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
@@ -153,22 +165,32 @@
 		  var configPregunta11 = {
 			"graphset":[
 				{
+					"globals":{
+						"fontFamily":"Alegreya Sans",
+						"fontColor": "#e0e0e0"
+					},
 					"type":"treemap",
 					"plotarea":{
 						"margin":"0 0 30 0"
-					},
-					"tooltip":{
-
 					},
 					"options":{
 						"aspect-type":"transition",
 						"color-start":"#40A956",
 						"color-end":"#235D2F",
+						"box":{
+							"borderWidth": 1,
+							"borderColor": "#e0e0e0"
+						},
 						"tooltip-box":{
-							"background-color":"#ec2383"
+							"background-color":"#ec2383",
+							"border-color":"#000",
+							"text":"%text: %value",
+							"border-color":"#fff",
+							"border-width":"1px",
+							"font-color":"#fff"
 						}
 					},
-					"series": <?php echo $palabras_obstaculos_principales_json_encoded; ?>
+					"series": <?php echo $palabras_obstaculos_principales; ?>
 				}
 			]
 		};
@@ -190,7 +212,6 @@
 			// pregunta #14
 			$palabras_cosas_valiosas = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_COSAS_VALIOSAS );
 			$num_respuestas_cosas_valiosas = $survey->get_number_of_answers_by_question( Sondeo_CDMX_Survey::Q_COSAS_VALIOSAS );
-			$palabras_cosas_valiosas_json_encoded = json_encode($palabras_cosas_valiosas);
 		?>
 
 		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
@@ -202,22 +223,32 @@
 		  var configPregunta14 = {
 			"graphset":[
 				{
+					"globals":{
+						"fontFamily":"Alegreya Sans",
+						"fontColor": "#e0e0e0"
+					},
 					"type":"treemap",
 					"plotarea":{
 						"margin":"0 0 30 0"
-					},
-					"tooltip":{
-
 					},
 					"options":{
 						"aspect-type":"transition",
 						"color-start":"#E95959",
 						"color-end":"#5D2323",
+						"box":{
+							"borderWidth": 1,
+							"borderColor": "#e0e0e0"
+						},
 						"tooltip-box":{
-							"background-color":"#ec2383"
+							"background-color":"#ec2383",
+							"border-color":"#000",
+							"text":"%text: %value",
+							"border-color":"#fff",
+							"border-width":"1px",
+							"font-color":"#fff"
 						}
 					},
-					"series": <?php echo $palabras_cosas_valiosas_json_encoded; ?>
+					"series": <?php echo $palabras_cosas_valiosas; ?>
 				}
 			]
 		};

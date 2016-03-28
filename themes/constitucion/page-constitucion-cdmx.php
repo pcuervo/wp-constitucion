@@ -14,7 +14,16 @@ $img_constitucion_cdmx = get_option( 'img_constitucion_cdmx' ); ?>
 $image_mensaje = attachment_image_url( $mensaje->ID, 'full' ); ?>
 <section class="[ container ][ space-id ]" id="jefe-gobierno">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 ]">
+		<div class="[ col-xs-12 col-sm-3 ][ hidden-xs ]">
+			<h2>Datos Curiosos</h2>
+			<blockquote>
+				<p>El Distrito Federal estuvo regido por un Estatuto de Gobierno que fue aprobado por el Congreso de la Unión y sólo este podía reformarlo.</p>
+			</blockquote>
+			<blockquote>
+				<p>Iniciaremos una nueva etapa en nuestra ciudad, basada en una Constitución acorde a nuestros valores y aspiraciones, que será producto de un amplio proceso consultivo y deliberativo.</p>
+			</blockquote>
+		</div>
+		<div class="[ col-xs-12 col-sm-offset-1 col-sm-8 col-sm-offset-2 col-md-6 ][ margin-bottom--large ]">
 			<div class="[ content-mensaje-jefegob ]">
 				<h2><?php echo $mensaje->post_title; ?></h2>
 				<?php echo wpautop( $mensaje->post_content ); ?>
@@ -35,11 +44,16 @@ $image_mensaje = attachment_image_url( $mensaje->ID, 'full' ); ?>
 $image_sobre = attachment_image_url( $sobre->ID, 'full' ); ?>
 <section class="[ container ][ space-id ]" id="sobre-constitucion">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 ]">
+		<div class="[ col-xs-12 col-sm-3 ][ hidden-xs ]">
+			<h2>Datos Curiosos</h2>
+			<blockquote>
+				<p>Con la energía social y fuerza ciudadana característica de la Ciudad de México, la Constitución tiene el potencial de ser otro gran logro.</p>
+			</blockquote>
+		</div>
+		<div class="[ col-xs-12 col-sm-offset-1 col-sm-8 col-sm-offset-2 col-md-6 ][ margin-bottom--large ]">
 			<div class="[ content-acerca-de ]">
 				<h2><?php echo $sobre->post_title; ?></h2>
 				<?php echo wpautop( $sobre->post_content ); ?>
-
 			</div>
 		</div>
 	</div>
@@ -56,7 +70,13 @@ $image_sobre = attachment_image_url( $sobre->ID, 'full' ); ?>
 
 <section class="[ container ][ space-id ]" id="grupo-trabajo">
 	<article class="[ row ]">
-		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 ]">
+		<div class="[ col-xs-12 col-sm-3 ][ hidden-xs ]">
+			<h2>Datos Curiosos</h2>
+			<blockquote>
+				<p>Dentro de sus funcones están considerar la opinión ciudadana bajo los criterios de legalidad, calidad, viabilidad y beneficio social.</p>
+			</blockquote>
+		</div>
+		<div class="[ col-xs-12 col-sm-offset-1 col-sm-8 col-sm-offset-2 col-md-6 ][ margin-bottom--large ]">
 
 			<div class="[ content-acerca-de ]">
 				<?php $grupo = get_page_by_path('grupo-de-trabajo'); ?>
@@ -114,6 +134,9 @@ $image_sobre = attachment_image_url( $sobre->ID, 'full' ); ?>
 						<h3 class="nombre-modal"></h3>
 						<p class="cargo-modal"></p>
 						<div class="biografia-modal"></div>
+						<a href="" target="_blank" class="[ block margin-top text-right ]">
+							<img class="[ svg icon icon--iconed icon--thickness-1 icon--fill ][ color-gray ]" src="<?php echo THEMEPATH; ?>icons/twitter.svg" alt="icono de red social twitter">
+						</a>
 					</div><!-- modal-body -->
 				</div>
 			</div>
@@ -126,7 +149,16 @@ $image_plataforma = attachment_image_url( $plataforma->ID, 'full' ); ?>
 <section class="[ bg-gray--fondo section--bg ][ no-margin--bottom ][ space-id ]" id="sobre-plataforma">
 	<div class="[ container ]">
 		<div class="[ row ]">
-			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 ]">
+			<div class="[ col-xs-12 col-sm-3 ][ hidden-xs ]">
+				<h2>Datos Curiosos</h2>
+				<blockquote>
+					<p>El capital más valioso de la ciudad es la diversidad de personas e ideas que la componen.</p>
+				</blockquote>
+				<blockquote>
+					<p>El Grupo aprovechará las contribuciones que concentren esta plataforma para redactar el Proyecto de Constitución.</p>
+				</blockquote>
+			</div>
+			<div class="[ col-xs-12 col-sm-offset-1 col-sm-8 col-sm-offset-2 col-md-6 ][ margin-bottom--large ]">
 
 				<div class="[ content-sobre-la-plataforma ]">
 

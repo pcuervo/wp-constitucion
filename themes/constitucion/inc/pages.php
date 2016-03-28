@@ -295,8 +295,8 @@
 			$page = array(
 				'post_author' => 1,
 				'post_status' => 'publish',
-				'post_title'  => 'Transparencia',
-				'post_name'   => 'transparencia',
+				'post_title'  => 'Datos y código abierto',
+				'post_name'   => 'datos-y-codigo-abierto',
 				'post_type'   => 'page'
 			);
 			wp_insert_post( $page, true );

@@ -16,7 +16,7 @@
 	</div>
 
 
-	<section class="[ container ][ padding--header--id ]">
+	<section class="[ container ][ padding--header--id ]" id="instrucciones">
 		<div class="[ row ][ margin-bottom ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
 				<?php $participa = get_page_by_path('participa'); ?>
@@ -24,7 +24,7 @@
 				<?php the_content(); ?>
 			</div>
 		</div>
-		<div class="[ row ][ margin-top ][ padding--sides--xsm ]" id="instrucciones">
+		<div class="[ row ][ margin-top ][ padding--sides--xsm ]">
 			<div class="[ col-xs-6 col-md-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">1</p>

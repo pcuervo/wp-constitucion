@@ -16,7 +16,7 @@
 		h2{	font-family: "Alegreya Sans",sans-serif; font-size: 28px;}
 		p{ font-family: "ABeeZee", sans-serif;  }
 		.text-center{text-align: center;}
-		.img-logo{ width: 200px; }
+		.img-logo{ width: 300px; }
 		.img-logo--small{ width: 130px; }
 		.color-primary{ color: #e80e8a; }
 		.color-gray--strong{ color:#222; }

@@ -101,7 +101,7 @@
 						</a>
 					</div>
 					<?php if ( $current_noticia % 3 == 0 ) : ?>
-						<div class="[ clear ]"></div>
+						<div class="[ clear ][ hidden-xs ]"></div>
 					<?php endif; ?>
 				<?php $current_noticia +=1; endwhile;
 			endif; ?>

@@ -700,7 +700,6 @@ class Sondeo_CDMX_Survey {
 	 */
 	public function get_number_of_answers_by_question( $question_id ) {
 		global $wpdb;
-		$latest_answers = array();
 		$latest_results = $wpdb->get_results('
 			SELECT COUNT( question_id ) AS num_answers
 			FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
@@ -708,7 +707,7 @@ class Sondeo_CDMX_Survey {
 			AND answer <> ""
 			GROUP BY question_id'
 		);
-		foreach ( $latest_results as $result ) array_push( $latest_answers, $result->num_answers );
+		foreach ( $latest_results as $result ) $latest_answers = $result->num_answers;
 
 		return $latest_answers;
 	}// get_number_of_answers_by_question

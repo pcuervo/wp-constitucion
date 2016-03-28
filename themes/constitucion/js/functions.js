@@ -23,11 +23,16 @@
         }
 
         $('.js-hero_video__scroll').on('click', function(){
-            $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 130 }, '700');
+            $("body").animate({scrollTop: $('#js-home-scroll-point').position().top - 70 }, '700');
         });
 
 
         $('#close-feedback').on('click', function(){
+            $('#feedback, .modal-backdrop').remove();
+            var $feedback = $('#feedback');
+        });
+
+        $('#close-feedback-forms').on('click', function(){
             $('#feedback, .modal-backdrop').remove();
             var $feedback = $('#feedback');
         });
@@ -116,6 +121,23 @@
         /**
          * DATEPIKER
          */
+        $.datepicker.regional['es'] = {
+            closeText: 'Cerrar',
+            prevText: '',
+            currentText: 'Hoy',
+            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+            dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+            dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+            dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+            weekHeader: 'Sm',
+            dateFormat: 'dd/mm/yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''
+        };
+        $.datepicker.setDefaults($.datepicker.regional['es']);
         $('.date-ensayo').datepicker({
             dateFormat : 'yy-mm-dd',
             minDate: new Date(2015, 01 - 1, 01),
@@ -350,8 +372,9 @@
             toggleTwitter();
         })
 
-        $('#js-hide-twitter').click(function(e){
-            e.preventDefault();
+        $('#js-hide-twitter').on('click', function(event){
+            event.preventDefault();
+            console.log('entro');
             toggleTwitter();
         })
 
@@ -450,7 +473,7 @@
 
         function smoothScrollTo(anchor, offset) {
             var duration= 1000; //time (milliseconds) it takes to reach anchor point
-            var targetY = $(anchor).offset().top;
+            var targetY = $(anchor).offset();
             $("body").animate({
                 scrollTop : targetY - offset
             }, duration );
@@ -506,9 +529,16 @@
 
             var map;
             var bounds = new google.maps.LatLngBounds();
+            var isDraggable = $(document).width() > 480 ? true : false;
             var mapOptions = {
                 mapTypeId: 'roadmap',
                 scrollwheel: false,
+                navigationControl: false,
+                zoomControl: false,
+                scaleControl: false,
+                disableDoubleClickZoom: true,
+                mapTypeControl: false,
+                draggable: isDraggable,
             };
 
             // Display a map on the page

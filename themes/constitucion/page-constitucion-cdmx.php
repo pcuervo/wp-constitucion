@@ -39,7 +39,7 @@ $image_sobre = attachment_image_url( $sobre->ID, 'full' ); ?>
 			<div class="[ content-acerca-de ]">
 				<h2><?php echo $sobre->post_title; ?></h2>
 				<?php echo wpautop( $sobre->post_content ); ?>
-				
+
 			</div>
 		</div>
 	</div>
@@ -51,7 +51,7 @@ $image_sobre = attachment_image_url( $sobre->ID, 'full' ); ?>
 	<?php else: ?>
 		<p class="text-warning">Falta la Imagen de Sobre la constitución</p>
 	<?php endif; ?>
-	
+
 </div>
 
 <section class="[ container ][ space-id ]" id="grupo-trabajo">
@@ -121,7 +121,7 @@ $image_sobre = attachment_image_url( $sobre->ID, 'full' ); ?>
 	</article>
 </section>
 
-<?php $plataforma = get_page_by_path('sobre-la-plataforma'); 
+<?php $plataforma = get_page_by_path('sobre-la-plataforma');
 $image_plataforma = attachment_image_url( $plataforma->ID, 'full' ); ?>
 <section class="[ bg-gray--fondo section--bg ][ no-margin--bottom ][ space-id ]" id="sobre-plataforma">
 	<div class="[ container ]">
@@ -129,7 +129,7 @@ $image_plataforma = attachment_image_url( $plataforma->ID, 'full' ); ?>
 			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 ]">
 
 				<div class="[ content-sobre-la-plataforma ]">
-					
+
 					<h2><?php echo $plataforma->post_title; ?></h2>
 					<?php echo wpautop( $plataforma->post_content ); ?>
 				</div>
@@ -147,8 +147,9 @@ $image_plataforma = attachment_image_url( $plataforma->ID, 'full' ); ?>
 			<img src="<?php echo THEMEPATH; ?>images/plataforma/injuve.png" alt="Logo Injuve">
 			<img src="<?php echo THEMEPATH; ?>images/plataforma/mitmedialab.png" alt="Logo MIT Media Lab">
 			<img src="<?php echo THEMEPATH; ?>images/plataforma/changeorg.png" alt="Logo Changeorg">
+			<img src="<?php echo THEMEPATH; ?>images/plataforma/metro.png" alt="Logo Metro">
 		</div>
-	</div>	
+	</div>
 </div>
 
 
@@ -164,7 +165,7 @@ $image_plataforma = attachment_image_url( $plataforma->ID, 'full' ); ?>
 $image_wiki = attachment_image_url( $wiki->ID, 'full' ); ?>
 <section class="[ container ][ space-id ]" id="constitucion-wiki">
 	<div class="[ row ]">
-		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 ][ text-justify ]">
+		<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 ]">
 			<h2><?php echo $wiki->post_title; ?></h2>
 			<?php echo wpautop( $wiki->post_content ); ?>
 		</div>
@@ -180,7 +181,7 @@ $image_wiki = attachment_image_url( $wiki->ID, 'full' ); ?>
 	<?php else: ?>
 		<p class="text-warning">Falta la Imagen de Constitución en wiki</p>
 	<?php endif; ?>
-	
+
 </div>
 
 <section class="[ space-id ]" id="preguntas-frecuentes">

@@ -75,9 +75,15 @@
 								</div>
 							</div>
 							<div class="[ col col-2 ]">
-								<h2 class="[ text-uppercase ][ margin-top ][ color-gray ]"><?php echo $nombre . ' ' . $apellidos ?></h2>
-								<p class="[ color-gray--strong ][ margin-top--small ]">El Grupo de Trabajo que apoya al Jefe de Gobierno en la redacción de la Constitución Política de la Ciudad de México, te otorga el presente reconocimiento por haber contribuido con tus ideas, reflexiones y propuestas para este proyecto.</p>
-								<p class="[ color-gray--strong ][ margin-top--xsmall ]">La Ciudad de México somos todas y todos. Gracias por ser parte de este proceso histórico.</p>
+								<h2 class="[ text-uppercase ][ color-gray ][ margin-bottom--small ]"><?php echo $nombre . ' ' . $apellidos ?></h2>
+								<p class="[ color-gray--strong ][ margin-top--xsmall ]">A nombre de todas las personas que están involucradas en la redacción de la Constitución de la Ciudad de México, te otorgo el presente reconocimiento por haber contribuido con tus ideas, reflexiones y propuestas para este proyecto.</p>
+								<p class="[ color-gray--strong ][ margin-top--xsmall ]">
+									La Ciudad de México somos todas y todos. Gracias por ser parte de este proceso histórico.
+								</p>
+								<p class="[ color-gray--strong ][ margin-top--xsmall ][ text-center ]">
+									Miguel Ángel Mancera Espinosa<br />
+									Jefe de Gobierno de la Ciudad de México
+								</p>
 								<?php $date = getDateTransform(date('Y-m-d'));  ?>
 								<p class="[ text-uppercase ][ color-gray ][ fz--small ][ margin-top--xsmall ]">Ciudad de México a <?php echo $date[0].' de '.$date['1'].' de '.$date[2]; ?> </p>
 							</div>

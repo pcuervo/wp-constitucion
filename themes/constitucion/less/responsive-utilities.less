@@ -95,8 +95,14 @@
 
 .hero_video{
   background-size: cover;
-  background: url('video/cccdmx.jpg') no-repeat center bottom;
+  background: url('video/cccdmx.jpg') no-repeat center bottom; 
+    @media (max-width: @screen-xs-min){
+    width: 100% !important;
+    height: 200vh !important;
+    zoom:50% !important;
+  }
 }
+
 
 @media (max-width: @screen-sm-min){
   .hero_video .video_home{display:none;}
@@ -123,7 +129,6 @@
 @media (max-width: 340px){
    .post_compact:hover div{line-height: 155px !important;}
 }
-
 
 .visible-md {
   @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {

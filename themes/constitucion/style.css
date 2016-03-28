@@ -3144,6 +3144,10 @@ select[multiple].input-lg {
   list-style: none;
   color: red;
 }
+.position-data .parsley-errors-list {
+  position: absolute;
+  bottom: -40px;
+}
 .box-shadow--form {
   background-color: #fff;
 }
@@ -3632,6 +3636,9 @@ input[type="button"].btn-block {
   font-size: 18px;
   line-height: 1.3333333;
   border-radius: 6px;
+}
+.btn-primary:focus {
+  color: #e80e8a;
 }
 .btn-primary:hover {
   background-color: #e80e8a;
@@ -4389,6 +4396,7 @@ header ul li.active #dropdown--header,
 ul.menu-home > li.active > a,
 .collapse--menu > li.active > a,
 ul.menu-mobile > li.active > a,
+header > nav > ul > li.active > span > a,
 header > nav > ul > li.active > a {
   color: #e80e8a;
 }
@@ -7226,30 +7234,7 @@ ul.slides li img {
   display: none;
 }
 .slick-arrow {
-  position: absolute;
-  width: 100%;
-  bottom: 45%;
-  text-indent: -9999px;
-  overflow: hidden;
-  top: 90%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  z-index: 40;
-  width: 30px;
-  height: 40px;
-}
-@media (max-width: 767px) {
-  .slick-arrow {
-    display: none !important;
-  }
-}
-@media (min-width: 1200px) {
-  .slick-arrow {
-    top: 92%;
-  }
+  display: none !important;
 }
 button.slick-prev.slick-arrow {
   left: 5%;
@@ -8310,7 +8295,7 @@ blockquote canvas {
   }
 }
 .content-sobre-la-plataforma img {
-  width: 19%;
+  width: 25%;
 }
 @media (min-width: 768px) {
   .content-sobre-la-plataforma img {
@@ -8342,7 +8327,7 @@ blockquote canvas {
 }
 #ui-datepicker-div {
   position: absolute;
-  top: 0px;
+  top: -10px;
 }
 #parsley-id-84 {
   margin-top: -20px;
@@ -8462,6 +8447,13 @@ blockquote canvas {
 .hero_video {
   background-size: cover;
   background: url('video/cccdmx.jpg') no-repeat center bottom;
+}
+@media (max-width: 480px) {
+  .hero_video {
+    width: 100% !important;
+    height: 200vh !important;
+    zoom: 50% !important;
+  }
 }
 @media (max-width: 768px) {
   .hero_video .video_home {
@@ -9017,10 +9009,9 @@ footer a {
   display: inline-block;
   vertical-align: bottom;
   text-decoration: none;
-  font-size: 12px;
-  line-height: 9px;
+  font-size: 16px;
+  line-height: 15px;
   margin-left: 20px;
-  margin-right: 20px;
   color: #cccccc;
 }
 @media (max-width: 480px) {
@@ -9057,7 +9048,7 @@ footer a:hover {
 .hero_video__scroll {
   width: 100%;
   position: absolute;
-  bottom: 20px;
+  bottom: 120px;
   left: 0;
   cursor: pointer;
 }
@@ -9084,4 +9075,14 @@ footer a:hover {
   line-height: 16px;
   padding: 0 15px;
   text-align: center;
+}
+.card {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 2em;
+  border: 1px solid #e5e5e5;
+  border-bottom: 5px solid #4a4a4a;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  background: #fff;
 }

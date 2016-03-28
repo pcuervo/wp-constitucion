@@ -693,7 +693,7 @@ class Sondeo_CDMX_Survey {
 		global $wpdb;
 		$latest_answers = array();
 		$latest_results = $wpdb->get_results('
-			SELECT COUNT( question_id ) AS num_answers 
+			SELECT COUNT( question_id ) AS num_answers
 			FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
 			WHERE question_id = ' . $question_id . '
 			AND answer <> ""

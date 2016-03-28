@@ -162,6 +162,7 @@
             var result_c = getValidateDocs('compartir_documento_ensayo');
 
             if (result_a && result_b && result_c) {
+                dataLayer.push({'event': 'ensayo-exitoso'});
                 var form = document.getElementById("form-ensayos");
                 form.submit();
             };
@@ -175,6 +176,7 @@
             var result_a = getValidateDocs('fotografia_evento');
 
             if (result_a) {
+                dataLayer.push({'event': 'encuentro-exitoso'});
                 var form = document.getElementById("form-eventos");
                 form.submit();
             };

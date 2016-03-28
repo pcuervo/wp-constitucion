@@ -9081,8 +9081,12 @@ footer a:hover {
   margin-bottom: 20px;
   padding: 2em;
   border: 1px solid #e5e5e5;
-  border-bottom: 5px solid #4a4a4a;
+  border-top: 5px solid #e80e8a;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   background: #fff;
+}
+.card--third {
+  width: 30%;
+  margin: 0 1.6% 20px 1.6%;
 }

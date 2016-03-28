@@ -119,14 +119,16 @@
 			$ultimas_respuestas = $survey->get_latest_answers( $num_respuestas, Sondeo_CDMX_Survey::Q_CDMX_IDEAL );
 		?>
 
-		<h2>¿Cómo te imaginas la CDMX ideal, en 20 años?</h2>
+		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+			<h2>¿Cómo te imaginas la CDMX ideal, en 20 años?</h2>
 
-		<div class="[ row ]">
-			<?php foreach ($ultimas_respuestas as $key => $ultima_respuesta) { ?>
-				<div class="[ card ][ col-xs-12 col-sm-4 ][ ultima-respuesta ][ margin-bottom ]">
-					<h3 class="[ color-primary ]"><?php echo $ultima_respuesta; ?></h3>
-				</div>
-			<?php } ?>
+			<div class="[ row ]">
+				<?php foreach ($ultimas_respuestas as $key => $ultima_respuesta) { ?>
+					<div class="[ card ][ col-xs-12 col-sm-4 ][ ultima-respuesta ][ margin-bottom ]">
+						<h3 class="[ color-primary ]"><?php echo $ultima_respuesta; ?></h3>
+					</div>
+				<?php } ?>
+			</div>
 		</div>
 
 	</section>
@@ -138,8 +140,11 @@
 			$palabras_obstaculos_principales_json_encoded = json_encode($palabras_obstaculos_principales);
 		?>
 
-		<h2>Pensando en esta CDMX ideal, ¿cuáles pensarías que son los tres obstáculos principales para que se haga realidad?</h2>
-		<div id ='pregunta-11'></div>
+		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+			<h2>Pensando en esta CDMX ideal, ¿cuáles pensarías que son los tres obstáculos principales para que se haga realidad?</h2>
+			<div id ='pregunta-11'></div>
+		</div>
+
 		<script>
 		  var configPregunta11 = {
 			"graphset":[
@@ -183,8 +188,11 @@
 			$palabras_cosas_valiosas_json_encoded = json_encode($palabras_cosas_valiosas);
 		?>
 
-		<h2>Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿Qué palabras te vienen a la mente?</h2>
-		<div id ='pregunta-14'></div>
+		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
+			<h2>Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿Qué palabras te vienen a la mente?</h2>
+			<div id ='pregunta-14'></div>
+		</div>
+
 		<script>
 		  var configPregunta14 = {
 			"graphset":[

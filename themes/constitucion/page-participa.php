@@ -96,6 +96,10 @@
 				</div>
 			</form>
 		</div>
+		<div class="[ clear ][ margin-bottom--large ]"></div>
+		<div class="[ text-center ]">
+			<a class="[ btn btn-primary btn--small ]" href="<?php echo site_url('/resultados/'); ?> ">Ver resultados</a>
+		</div>
 	</section>
 
 	<div class="[ descanso-visual ]">

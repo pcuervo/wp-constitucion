@@ -28,27 +28,33 @@
 			<div class="[ col-xs-6 col-md-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">1</p>
-					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_a', true);?></p>
+					<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="<?php echo site_url('/sondeo-masivo/'); ?>">
+						<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_a', true);?></p>
+					</a>
 				</div>
 			</div>
 			<div class="[ col-xs-6 col-md-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">2</p>
-					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
+					<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="<?php echo site_url('/participa/'); ?>#dialogos-publicos">
+						<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
+					</a>
 				</div>
 			</div>
 			<div class="[ clearfix ][ visible-xs ]"></div>
 			<div class="[ col-xs-6 col-md-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">3</p>
-					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
+					<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="<?php echo site_url('/participa/'); ?>#peticiones">
+						<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
+					</a>
 				</div>
 			</div>
 			<div class="[ col-xs-6 col-md-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">4</p>
 					<p class="[ fz-small text-left ]">
-						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucion.cdmx.gob.mx/ensayos">
+						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucioncdmx.pubpub.org/">
 							<?php echo get_post_meta($post->ID, 'paso_d', true);?>
 						</a>
 					</p>

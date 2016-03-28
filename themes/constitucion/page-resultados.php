@@ -41,7 +41,6 @@
 						},
 						"tooltip-box":{
 							"background-color":"#ec2383",
-							"border-color":"#000",
 							"text":"%text: %value",
 							"border-color":"#fff",
 							"border-width":"1px",
@@ -74,8 +73,8 @@
 			$palabras_grandes_retos = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS );
 			$num_respuestas_grandes_retos = $survey->get_number_of_answers_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS );
 			$palabras_grandes_retos_separado = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS, $separateAnswersAndValues );
-			$palabras_grandes_retos_labels = $palabras_grandes_retos_separado["labels"];
-			$palabras_grandes_retos_separado_json_encoded = json_encode($palabras_grandes_retos_labels);
+			$palabras_grandes_retos_labels = json_encode($palabras_grandes_retos_separado["labels"]);
+			$palabras_grandes_retos_values = json_encode($palabras_grandes_retos_separado["values"]);
 
 		?>
 
@@ -95,20 +94,29 @@
 					},
 					"type":"area",
 					"plotarea": {
-						"adjust-layout":true /* For automatic margin adjustment. */
+						//"adjust-layout":true /* For automatic margin adjustment. */
+						"margin":"30 50 30 50"
 					},
 					"scale-x": {
 						"label":{ /* Add a scale title with a label object. */
 							"text":"Respuestas posibles",
 						},
 						/* Add your scale labels with a labels array. */
-						"labels": <?php echo $palabras_grandes_retos_separado_json_encoded; ?>
+						"labels": <?php echo $palabras_grandes_retos_labels; ?>
+					},
+					"scale-y":{
+						"min-value":0,
+						"max-value": <?php echo $num_respuestas_grandes_retos; ?>
 					},
 					"series": [
 						{
-							"values":<?php echo $palabras_grandes_retos; ?>
+							"values":<?php echo $palabras_grandes_retos_values; ?>
 						}
-					]
+					],
+					"tooltip":{
+						"background-color":"#ec2383",
+						"color":"#fff",
+					}
 				}
 			]
 		};
@@ -184,7 +192,6 @@
 						},
 						"tooltip-box":{
 							"background-color":"#ec2383",
-							"border-color":"#000",
 							"text":"%text: %value",
 							"border-color":"#fff",
 							"border-width":"1px",
@@ -243,7 +250,6 @@
 						},
 						"tooltip-box":{
 							"background-color":"#ec2383",
-							"border-color":"#000",
 							"text":"%text: %value",
 							"border-color":"#fff",
 							"border-width":"1px",

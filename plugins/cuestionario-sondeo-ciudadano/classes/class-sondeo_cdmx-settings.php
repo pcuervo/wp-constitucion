@@ -52,12 +52,17 @@ class Sondeo_CDMX_Settings {
 	 */
 	public function add_sondeo_cdmx_page() {
 		$survey = Sondeo_CDMX_Survey::get();
+
+		if( isset( $_GET['delete'] ) ){
+			$survey->delete_survey( $_GET['delete'] );
+			echo '<div class="notice-success notice is-dismissible"><p>Se ha eliminado la encuesta correctamente.</p></div>';
+		}
+		
 		$answered_surveys = $survey->get_answered_surveys();
 		?>
-
 		<div class="[ wrap ]">
-			<h1>Sondeo CDMX</h1>
-			<p>Aquí podrás consultar las encuestas del Sondeo Masivo de la Constitución CDMX</p>
+			<h1>Sondeo Imagina tu Ciudad</h1>
+			<p>Aquí podrás consultar las encuestas de la sección "Imagina tu Ciudad"</p>
 			<hr>
 			<?php if( empty( $answered_surveys ) ) : ?>
 				<p>Por el momento no hay ninguna encuesta.</p>
@@ -68,7 +73,8 @@ class Sondeo_CDMX_Settings {
 							<th>#</th>
 							<th>Número de folio</th>
 							<th>Fecha y hora</th>
-							<th>Ver respuestas</th>
+							<th></th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -77,7 +83,8 @@ class Sondeo_CDMX_Settings {
 								<td><?php echo $key+1 ?></td>
 								<td><?php echo $survey['reference_code'] ?></td>
 								<td><?php echo $survey['created_at'] ?></td>
-								<td><a href="<?php echo admin_url( '/admin.php?page=respuestas_sondeo_cdmx', 'http' ) . '&reference_code=' . $survey['reference_code']?>">Abrir</a></td>
+								<td><a href="<?php echo admin_url( '/admin.php?page=respuestas_sondeo_cdmx', 'http' ) . '&reference_code=' . $survey['reference_code']?>">Ver respuestas</a></td>
+								<td><a href="<?php echo admin_url( '/admin.php?page=menu_sondeo_cdmx', 'http' ) . '&delete=' . $survey['reference_code']?>">Eliminar encuesta</a></td>
 							</tr>
 						<?php endforeach; ?>
 					</tbody>

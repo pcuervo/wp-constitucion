@@ -657,7 +657,7 @@ class Sondeo_CDMX_Survey {
 			$word_occurrences['values'] = array();
 			foreach ( $word_results as $key => $word ){
 				array_push( $word_occurrences['labels'], $word->answer );
-				array_push( $word_occurrences['values'], $word->occurrences );
+				array_push( $word_occurrences['values'], intval($word->occurrences) );
 			}
 			return $word_occurrences;
 		}
@@ -711,5 +711,15 @@ class Sondeo_CDMX_Survey {
 
 		return $latest_answers;
 	}// get_number_of_answers_by_question
+
+	/**
+	 * Delete an existing survey 
+	 * @param [string] $reference_code
+	 * [bool]
+	 */
+	public function delete_survey( $reference_code ) {
+		global $wpdb;
+		return $wpdb->delete( $wpdb->prefix . 'sondeo_cdmx_user_answers', array( 'reference_code' => $reference_code ) );
+	}// delete_survey
 
 }// Sondeo_CDMX_Survey

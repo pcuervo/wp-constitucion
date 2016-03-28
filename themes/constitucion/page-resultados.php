@@ -36,12 +36,12 @@
 						"color-end":"#363636",
 						"box":{
 							"borderWidth": 1,
-							"borderColor": "#fff"
+							"borderColor": "#e0e0e0"
 						},
 						"tooltip-box":{
 							"background-color":"#ec2383",
 							"border-color":"#000",
-							"text":"%value",
+							"text":"%text: %value",
 							"border-color":"#fff",
 							"border-width":"1px",
 							"font-color":"#fff"
@@ -82,6 +82,10 @@
 		  var configPregunta9 = {
 			"graphset":[
 				{
+					"globals":{
+						"fontFamily":"Alegreya Sans",
+						"fontColor": "#e0e0e0"
+					},
 					"type":"treemap",
 					"plotarea":{
 						"margin":"0 0 30 0"
@@ -90,8 +94,17 @@
 						"aspect-type":"transition",
 						"color-start":"#4F5AD0",
 						"color-end":"#1A1D43",
+						"box":{
+							"borderWidth": 1,
+							"borderColor": "#e0e0e0"
+						},
 						"tooltip-box":{
-							"background-color":"#ec2383"
+							"background-color":"#ec2383",
+							"border-color":"#000",
+							"text":"%text: %value",
+							"border-color":"#fff",
+							"border-width":"1px",
+							"font-color":"#fff"
 						}
 					},
 					"series": <?php echo $palabras_grandes_retos_json_encoded; ?>
@@ -149,19 +162,29 @@
 		  var configPregunta11 = {
 			"graphset":[
 				{
+					"globals":{
+						"fontFamily":"Alegreya Sans",
+						"fontColor": "#e0e0e0"
+					},
 					"type":"treemap",
 					"plotarea":{
 						"margin":"0 0 30 0"
-					},
-					"tooltip":{
-
 					},
 					"options":{
 						"aspect-type":"transition",
 						"color-start":"#40A956",
 						"color-end":"#235D2F",
+						"box":{
+							"borderWidth": 1,
+							"borderColor": "#e0e0e0"
+						},
 						"tooltip-box":{
-							"background-color":"#ec2383"
+							"background-color":"#ec2383",
+							"border-color":"#000",
+							"text":"%text: %value",
+							"border-color":"#fff",
+							"border-width":"1px",
+							"font-color":"#fff"
 						}
 					},
 					"series": <?php echo $palabras_obstaculos_principales_json_encoded; ?>
@@ -197,19 +220,29 @@
 		  var configPregunta14 = {
 			"graphset":[
 				{
+					"globals":{
+						"fontFamily":"Alegreya Sans",
+						"fontColor": "#e0e0e0"
+					},
 					"type":"treemap",
 					"plotarea":{
 						"margin":"0 0 30 0"
-					},
-					"tooltip":{
-
 					},
 					"options":{
 						"aspect-type":"transition",
 						"color-start":"#E95959",
 						"color-end":"#5D2323",
+						"box":{
+							"borderWidth": 1,
+							"borderColor": "#e0e0e0"
+						},
 						"tooltip-box":{
-							"background-color":"#ec2383"
+							"background-color":"#ec2383",
+							"border-color":"#000",
+							"text":"%text: %value",
+							"border-color":"#fff",
+							"border-width":"1px",
+							"font-color":"#fff"
 						}
 					},
 					"series": <?php echo $palabras_cosas_valiosas_json_encoded; ?>

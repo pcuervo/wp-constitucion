@@ -482,7 +482,6 @@
         }
 
         $(window).bind("load", function() {
-            console.log('hola');
             var hashURL = location.hash;
             if(hashURL != "" && hashURL.length > 1){
                 smoothScrollTo(hashURL, 110);

@@ -91,12 +91,16 @@
 				{
 					"globals":{
 						"fontFamily":"Alegreya Sans",
-						"fontColor": "#333"
 					},
 					"type":"varea",
 					"plotarea": {
 						"margin":"dynamic"
 					},
+					"labels":[
+						{
+							"font-color":"#333"
+						}
+					],
 					"scale-x": {
 						"label":{ 
 							"text":"Respuestas posibles"

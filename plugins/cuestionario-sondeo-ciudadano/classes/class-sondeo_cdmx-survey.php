@@ -330,7 +330,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-como-imaginas" data-question="28">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="como-imaginas" data-info="Máximo 140 caracteres.">¿Cómo te imaginas la CDMX ideal, en 20 años?</label>
 								<textarea class="fs-anim-lower" id="q10" name="como-imaginas" placeholder="" maxlength="140" onkeyup="countChar(this, 140, '#counter-imaginas')"></textarea>
-								<span class="[ color-primary ]" id="counter-imaginas"></span>
+								<span class="[ color-primary ]" id="counter-imaginas">140</span>
 							</li>
 							<li id="js-obstaculos-principales" data-question="29">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="obstaculos-principales" data-info="Las palabras deben ir separadas por comas.">Pensando en esta visión de ciudad, ¿cuáles son los tres obstáculos principales para que se haga realidad?</label>
@@ -344,7 +344,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-tuviste-hacer" data-question="31">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="tuviste-hacer" data-info="Máximo 140 caracteres.">¿Y qué tuviste que hacer tú?</label>
 								<textarea class="fs-anim-lower" id="q13" name="tuviste-hacer" placeholder="" maxlength="140" onkeyup="countChar(this, 140, '#counter-tuviste')"></textarea>
-								<span class="[ color-primary ]" id="counter-tuviste"></span>
+								<span class="[ color-primary ]" id="counter-tuviste">140</span>
 							</li>
 							<li id="js-cosas-valiosas" data-question="32">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿qué palabras te vienen a la mente?</label>

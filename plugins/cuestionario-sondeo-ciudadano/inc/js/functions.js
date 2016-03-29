@@ -104,7 +104,7 @@ $ = jQuery.noConflict();
         }
         $grandesRetos = $('#js-grandes-retos input').val();
         if( hasFourChallenges( $grandesRetos ) ){
-            if( $grandesRetos.indexOf('Otro') > -1 ){
+            if( $grandesRetos.indexOf('otro') > -1 ){
                 showOtrosRetos();
             }
             $('#js-grandes-retos a').hide();
@@ -435,18 +435,18 @@ function getSurveyData(){
     $estudias = $('#js-estudias input:checked').val()
     $answers[$estudiasQ] = $estudias;
 
-    $lugarEstudioQ = $('#js-donde-trabajas').data('question');
-    $lugarEstudio = $('#js-donde-trabajas select option:selected').val();
+    $lugarEstudioQ = $('#js-donde-estudias').data('question');
+    $lugarEstudio = $('#js-donde-estudias select option:selected').val();
     $answers[$lugarEstudioQ] = getLugarResidencia( $lugarEstudio );
 
-    $delegacionEstadoPaisMunicipioEstudiasQ = $('#js-trabajas-delegaciones-estados-paises').data('question');
-    $delegacionEstadoPaisMunicipioEstudias = $('#js-trabajas-delegaciones-estados-paises select option:selected').val()
+    $delegacionEstadoPaisMunicipioEstudiasQ = $('#js-estudias-delegaciones-estados-paises').data('question');
+    $delegacionEstadoPaisMunicipioEstudias = $('#js-estudias-delegaciones-estados-paises select option:selected').val()
     $answers[$delegacionEstadoPaisMunicipioEstudiasQ] = $delegacionEstadoPaisMunicipioEstudias;
 
-    $coloniaEstudio = $('#js-trabajas-colonias select');
+    $coloniaEstudio = $('#js-estudias-colonias select');
     if( 0 < $coloniaEstudio.length ){
-        $coloniaEstudioQ = $('#js-trabajas-colonias').data( 'question' );
-        $coloniaEstudio = $('#js-trabajas-colonias select option:selected').val();
+        $coloniaEstudioQ = $('#js-estudias-colonias').data( 'question' );
+        $coloniaEstudio = $('#js-estudias-colonias select option:selected').val();
         $answers[$coloniaEstudioQ] = $coloniaEstudio;
     }
 
@@ -500,7 +500,8 @@ function saveSurvey( answersObj ){
             action:     'save_user_answers'
         },
         function( codigo ){
-            window.location = siteUrl+"obtener-certificado/?referencia="+codigo;
+            console.log( codigo );
+            //window.location = siteUrl+"obtener-certificado/?referencia="+codigo;
         }
     );
 }

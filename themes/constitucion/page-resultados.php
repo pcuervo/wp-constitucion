@@ -73,9 +73,10 @@
 			$palabras_grandes_retos = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS );
 			$num_respuestas_grandes_retos = $survey->get_number_of_answers_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS );
 			$palabras_grandes_retos_separado = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS, $separateAnswersAndValues );
+			
 			$palabras_grandes_retos_labels = json_encode($palabras_grandes_retos_separado["labels"]);
 			$palabras_grandes_retos_values = json_encode($palabras_grandes_retos_separado["values"]);
-
+			$palabras_grandes_retos_max_value = $palabras_grandes_retos_separado["max_value"];
 		?>
 
 		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
@@ -92,40 +93,39 @@
 						"fontFamily":"Alegreya Sans",
 						"fontColor": "#333"
 					},
-					"type":"area",
+					"type":"varea",
 					"plotarea": {
-						//"adjust-layout":true /* For automatic margin adjustment. */
-						"margin":"30 50 30 50"
+						"margin":"dynamic"
 					},
 					"scale-x": {
-						"label":{ /* Add a scale title with a label object. */
-							"text":"Respuestas posibles",
+						"label":{ 
+							"text":"Respuestas posibles"
 						},
-						/* Add your scale labels with a labels array. */
-						"labels": <?php echo $palabras_grandes_retos_labels; ?>
+						"labels": <?php echo $palabras_grandes_retos_labels; ?>,
+						"items-overlap": true,
+						"max-items": <?php echo $num_respuestas_grandes_retos; ?>
 					},
 					"scale-y":{
 						"min-value":0,
-						"max-value": <?php echo $num_respuestas_grandes_retos; ?>
+						"max-value": <?php echo $palabras_grandes_retos_max_value; ?>
 					},
 					"series": [
 						{
-							"values":<?php echo $palabras_grandes_retos_values; ?>
+							"values": <?php echo $palabras_grandes_retos_values; ?>
 						}
 					],
-					"tooltip":{
+					"tooltip": {
 						"background-color":"#ec2383",
 						"color":"#fff",
-					}
+					},
 				}
 			]
 		};
 
-
 		zingchart.render({
 			id : 'pregunta-9',
 			data : configPregunta9,
-			height: "300px",
+			height: "400px",
 			width: "100%",
 			hideprogresslogo: true,
 		});

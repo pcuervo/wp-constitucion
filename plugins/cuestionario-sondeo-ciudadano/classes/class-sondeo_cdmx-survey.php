@@ -193,7 +193,7 @@ class Sondeo_CDMX_Survey {
 	 */
 	function get_options_grandes_retos() {
 		global $wpdb;
-		return $wpdb->get_col( "SELECT post_title FROM $wpdb->posts WHERE post_type = 'grandes-retos' AND post_status = 'publish' " );
+		return $wpdb->get_col( "SELECT post_title FROM $wpdb->posts WHERE post_type = 'grandes-retos' AND post_status = 'publish' ORDER BY post_title" );
 	}
 
 	/**
@@ -649,16 +649,27 @@ class Sondeo_CDMX_Survey {
 			WHERE question_id = ' . $question_id . '
 			AND answer <> ""
 			GROUP BY TRIM( LOWER( answer) )
-			ORDER BY occurrences'
+			ORDER BY answer, occurrences'
 		);
 
 		if( $separateAnswersAndValues ){
+			$retos = $this->get_options_grandes_retos();
 			$word_occurrences['labels'] = array();
 			$word_occurrences['values'] = array();
+			$max_value = 0;
 			foreach ( $word_results as $key => $word ){
+				if( intval($word->occurrences) > $max_value ) $max_value = intval($word->occurrences);
 				array_push( $word_occurrences['labels'], $word->answer );
-				array_push( $word_occurrences['values'], intval($word->occurrences) );
+				array_push( $word_occurrences['values'], intval( $word->occurrences ) );
 			}
+
+			foreach ( $retos as $reto ) {
+				if( ! in_array( $reto, $word_occurrences['labels'] ) ){
+					array_push( $word_occurrences['labels'], $reto );
+					array_push( $word_occurrences['values'], 0 );
+				}
+			}
+			$word_occurrences['max_value'] = $max_value + 1;
 			return $word_occurrences;
 		}
 

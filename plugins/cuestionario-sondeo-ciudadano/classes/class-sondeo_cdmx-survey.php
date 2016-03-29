@@ -193,7 +193,7 @@ class Sondeo_CDMX_Survey {
 	 */
 	function get_options_grandes_retos() {
 		global $wpdb;
-		return $wpdb->get_col( "SELECT post_title FROM $wpdb->posts WHERE post_type = 'grandes-retos' AND post_status = 'publish' " );
+		return $wpdb->get_col( "SELECT post_title FROM $wpdb->posts WHERE post_type = 'grandes-retos' AND post_status = 'publish' ORDER BY post_title" );
 	}
 
 	/**
@@ -207,11 +207,12 @@ class Sondeo_CDMX_Survey {
 		wp_enqueue_style( 'cs-select', SONDEO_CDMX_PLUGIN_URL . 'inc/css/cs-select.css' );
 		wp_enqueue_style( 'cs-skin-boxes', SONDEO_CDMX_PLUGIN_URL . 'inc/css/cs-skin-boxes.css' );
 		// js
-		wp_enqueue_script( 'normalize', SONDEO_CDMX_PLUGIN_URL . 'inc/js/modernizr.custom.js', '', '1.0', false );
+		wp_enqueue_script( 'normalize', SONDEO_CDMX_PLUGIN_URL . 'inc/js/modernizr.custom.js', array('jquery'), '1.0', false );
+		wp_enqueue_script( 'function-prev', SONDEO_CDMX_PLUGIN_URL . 'inc/js/function-prev.js', array('normalize'), '1.0', true );
 		wp_enqueue_script( 'classie', SONDEO_CDMX_PLUGIN_URL . 'inc/js/classie.js', '', '1.0', true );
 		wp_enqueue_script( 'select_fx', SONDEO_CDMX_PLUGIN_URL . 'inc/js/selectFx.js', '', '1.0', true );
 		wp_enqueue_script( 'fullscreen_form', SONDEO_CDMX_PLUGIN_URL . 'inc/js/fullscreenForm.js', '', '1.0', true );
-		wp_enqueue_script( 'sondeo_cdmx_functions', SONDEO_CDMX_PLUGIN_URL . 'inc/js/functions.js', array('jquery'), '1.0', true );
+		wp_enqueue_script( 'sondeo_cdmx_functions', SONDEO_CDMX_PLUGIN_URL . 'inc/js/functions.js', array('fullscreen_form'), '1.0', true );
 		wp_localize_script( 'functions', 'allDelegaciones', $this->get_delegaciones() );
 		wp_localize_script( 'functions', 'allColonias', $this->get_colonias() );
 		wp_localize_script( 'functions', 'allMunicipios', $this->get_municipios() );
@@ -270,6 +271,20 @@ class Sondeo_CDMX_Survey {
 									<span><input id="q5-2" name="trabajas" type="radio" value="no" /><label for="q5-2" class="radio-no">No</label></span>
 								</div>
 							</li>
+							<li id="js-donde-trabajas" data-question="11">
+								<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde trabajas?</label>
+								<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
+									<option value="" disabled selected>Selecciona una opción</option>
+									<option value="cdmx">CDMX</option>
+									<option value="zmvm">Zona Metropolitana</option>
+									<option value="resto-republica">Resto de la república</option>
+									<option value="fuera-mexico">Fuera de México</option>
+								</select>
+							</li>
+
+							<li id="js-trabajas-delegaciones-estados-paises" data-input-trigger data-question="12">
+							</li>
+
 							<li id="js-estudias" data-input-trigger data-question="17">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="estudias">¿Estudias?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
@@ -277,6 +292,20 @@ class Sondeo_CDMX_Survey {
 									<span><input id="q6-2" name="estudias" type="radio" value="no" /><label for="q6-2" class="radio-no">No</label></span>
 								</div>
 							</li>
+							<li id="js-donde-estudias" data-question="18">
+								<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde estudias?</label>
+								<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
+									<option value="" disabled selected>Selecciona una opción</option>
+									<option value="cdmx">CDMX</option>
+									<option value="zmvm">Zona Metropolitana</option>
+									<option value="resto-republica">Resto de la república</option>
+									<option value="fuera-mexico">Fuera de México</option>
+								</select>
+							</li>
+
+							<li id="js-estudias-delegaciones-estados-paises" data-input-trigger data-question="19">
+							</li>
+
 							<li id="js-naciste-cdmx" data-input-trigger data-question="24">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="naciste-cdmx">¿Naciste en la CDMX?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
@@ -301,7 +330,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-como-imaginas" data-question="28">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="como-imaginas" data-info="Máximo 140 caracteres.">¿Cómo te imaginas la CDMX ideal, en 20 años?</label>
 								<textarea class="fs-anim-lower" id="q10" name="como-imaginas" placeholder="" maxlength="140" onkeyup="countChar(this, 140, '#counter-imaginas')"></textarea>
-								<span class="[ color-primary ]" id="counter-imaginas"></span>
+								<span class="[ color-primary ]" id="counter-imaginas">140</span>
 							</li>
 							<li id="js-obstaculos-principales" data-question="29">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="obstaculos-principales" data-info="Las palabras deben ir separadas por comas.">Pensando en esta visión de ciudad, ¿cuáles son los tres obstáculos principales para que se haga realidad?</label>
@@ -315,7 +344,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-tuviste-hacer" data-question="31">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="tuviste-hacer" data-info="Máximo 140 caracteres.">¿Y qué tuviste que hacer tú?</label>
 								<textarea class="fs-anim-lower" id="q13" name="tuviste-hacer" placeholder="" maxlength="140" onkeyup="countChar(this, 140, '#counter-tuviste')"></textarea>
-								<span class="[ color-primary ]" id="counter-tuviste"></span>
+								<span class="[ color-primary ]" id="counter-tuviste">140</span>
 							</li>
 							<li id="js-cosas-valiosas" data-question="32">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿qué palabras te vienen a la mente?</label>
@@ -324,7 +353,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-captcha" data-question="999">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Necesitamos asegurarnos de que no seas un robot. ¿Cuánto es <span></span> + <span></span>?</label>
 								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="" captcha-required/>
-								<p class="[ accept-terms ][ color-primary ]">Al aceptar, estoy de acuerdo con las políticas de privacidad, términos y condiciones de la plataforma. <a target="_blank"> href="<?php echo site_url('terminos-y-condiciones/' ); ?>">Ver más.</a></p>
+								<p class="[ accept-terms ]">Al aceptar, estoy de acuerdo con las políticas de privacidad, términos y condiciones de la plataforma. <a class="[ color-primary ]" target="_blank" href="<?php echo site_url('terminos-y-condiciones/' ); ?>">Ver más</a></p>
 							</li>
 						</ol><!-- /fs-fields -->
 						<button class="fs-submit" type="submit">Enviar respuestas</button>
@@ -611,7 +640,7 @@ class Sondeo_CDMX_Survey {
 	 * @param 	[int]   $question_id
 	 * @return 	[array]	$word_occurrences
 	 */
-	public function get_word_occurrences_by_question( $question_id ) {
+	public function get_word_occurrences_by_question( $question_id, $separateAnswersAndValues = false ) {
 		global $wpdb;
 		$word_occurrences = array();
 		$word_results = $wpdb->get_results('
@@ -620,20 +649,41 @@ class Sondeo_CDMX_Survey {
 			WHERE question_id = ' . $question_id . '
 			AND answer <> ""
 			GROUP BY TRIM( LOWER( answer) )
-			ORDER BY occurrences'
+			ORDER BY answer, occurrences'
 		);
+
+		if( $separateAnswersAndValues ){
+			$retos = $this->get_options_grandes_retos();
+			$word_occurrences['labels'] = array();
+			$word_occurrences['values'] = array();
+			$max_value = 0;
+			foreach ( $word_results as $key => $word ){
+				if( intval($word->occurrences) > $max_value ) $max_value = intval($word->occurrences);
+				array_push( $word_occurrences['labels'], $word->answer );
+				array_push( $word_occurrences['values'], intval( $word->occurrences ) );
+			}
+
+			foreach ( $retos as $reto ) {
+				if( ! in_array( $reto, $word_occurrences['labels'] ) ){
+					array_push( $word_occurrences['labels'], $reto );
+					array_push( $word_occurrences['values'], 0 );
+				}
+			}
+			$word_occurrences['max_value'] = $max_value + 1;
+			return $word_occurrences;
+		}
+
 		foreach ( $word_results as $key => $word ){
 			$word_occurrences[$key] = array(
 				'text' => $word->answer,
 				'value' => $word->occurrences
 			);
 		}
-
-		return $word_occurrences;
+		return json_encode( $word_occurrences );
 	}
 
 	/**
-	 * Get word occurrences from user answers
+	 * Get latest answers from a survey question
 	 * @param 	[int]   $num_answers
 	 * @param 	[int]   $question_id
 	 * @return 	[array]	$latest_answers
@@ -653,5 +703,34 @@ class Sondeo_CDMX_Survey {
 
 		return $latest_answers;
 	}
+
+	/**
+	 * Get the number of time a question has been answered
+	 * @param 	[int]   $question_id
+	 * @return 	[array]	$latest_answers
+	 */
+	public function get_number_of_answers_by_question( $question_id ) {
+		global $wpdb;
+		$latest_results = $wpdb->get_results('
+			SELECT COUNT( question_id ) AS num_answers
+			FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
+			WHERE question_id = ' . $question_id . '
+			AND answer <> ""
+			GROUP BY question_id'
+		);
+		foreach ( $latest_results as $result ) $latest_answers = $result->num_answers;
+
+		return $latest_answers;
+	}// get_number_of_answers_by_question
+
+	/**
+	 * Delete an existing survey 
+	 * @param [string] $reference_code
+	 * [bool]
+	 */
+	public function delete_survey( $reference_code ) {
+		global $wpdb;
+		return $wpdb->delete( $wpdb->prefix . 'sondeo_cdmx_user_answers', array( 'reference_code' => $reference_code ) );
+	}// delete_survey
 
 }// Sondeo_CDMX_Survey

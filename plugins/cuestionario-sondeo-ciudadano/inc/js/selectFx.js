@@ -157,7 +157,7 @@
 		var self = this;
 
 		// open/close select
-		this.selPlaceholder.addEventListener( 'click', function() {
+		$(document).on( 'click', 'span.cs-placeholder', function() {
 			self._toggleSelect();
 		} );
 
@@ -172,7 +172,7 @@
 		} );
 
 		// close the select element if the target it´s not the select element or one of its descendants..
-		document.addEventListener( 'click', function(ev) {
+		$(document).on( 'click', function(ev) {
 			var target = ev.target;
 			if( self._isOpen() && target !== self.selEl && !hasParent( target, self.selEl ) ) {
 				self._toggleSelect();

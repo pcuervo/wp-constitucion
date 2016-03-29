@@ -3,7 +3,7 @@ $ = jQuery.noConflict();
 (function() {
 
     var formWrap = document.getElementById( 'fs-form-wrap' );
-    [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+    [].slice.call( document.querySelectorAll( '#js-donde-vives select.cs-select' ) ).forEach( function(el) {
         new SelectFx( el, {
             stickyPlaceholder: false,
             onChange: function( lugar ){
@@ -26,24 +26,58 @@ $ = jQuery.noConflict();
         });
     } );
 
+    [].slice.call( document.querySelectorAll( '#js-donde-trabajas select.cs-select' ) ).forEach( function(el) {
+        new SelectFx( el, {
+            stickyPlaceholder: false,
+            onChange: function( lugar ){
+                $('#js-trabajas-delegaciones-estados-paises').empty();
+                switch( lugar ){
+                    case 'cdmx':
+                        showDelegaciones( lugar, 'trabajas' );
+                        break;
+                    case 'zmvm':
+                        showMunicipios( 'trabajas' );
+                        break;
+                    case 'resto-republica':
+                        showEstados( 'trabajas' );
+                        break;
+                    case 'fuera-mexico':
+                        showPaises( 'trabajas' );
+                        break;
+                }
+            }
+        });
+    } );
+
+    [].slice.call( document.querySelectorAll( '#js-donde-estudias select.cs-select' ) ).forEach( function(el) {
+        new SelectFx( el, {
+            stickyPlaceholder: false,
+            onChange: function( lugar ){
+                $('#js-estudias-delegaciones-estados-paises').empty();
+                switch( lugar ){
+                    case 'cdmx':
+                        showDelegaciones( lugar, 'estudias' );
+                        break;
+                    case 'zmvm':
+                        showMunicipios( 'estudias' );
+                        break;
+                    case 'resto-republica':
+                        showEstados( 'estudias' );
+                        break;
+                    case 'fuera-mexico':
+                        showPaises( 'estudias' );
+                        break;
+                }
+            }
+        });
+    } );
+
     new FForm( formWrap, {
         onReview : function() {
             //classie.add( document.body, 'overview' ); // for demo purposes only
             getSurveyData();
         }
     } );
-
-    $('#js-trabajas input').click(function(){
-        if( 'si' == this.value ){
-            showDondeTrabajas();
-        }
-    })
-
-    $('#js-estudias input').click(function(){
-        if( 'si' == this.value ){
-            showDondeEstudias();
-        }
-    })
 
     $('#js-grandes-retos a').click(function(e){
         e.preventDefault();
@@ -70,7 +104,7 @@ $ = jQuery.noConflict();
         }
         $grandesRetos = $('#js-grandes-retos input').val();
         if( hasFourChallenges( $grandesRetos ) ){
-            if( $grandesRetos.indexOf('Otro') > -1 ){
+            if( $grandesRetos.indexOf('otro') > -1 ){
                 showOtrosRetos();
             }
             $('#js-grandes-retos a').hide();
@@ -132,8 +166,6 @@ function showColonias( delegacion, section ){
             $(el).attr( 'data-question', 20 );
         }
     }
-    console.log('el');
-    console.log( $(el) );
 
     $(el).append( getHTMLColoniasCDMX( delegacion, section ) );
     new SelectFx( $(el + ' .cs-select')[0], {
@@ -206,67 +238,7 @@ function showPaises( section ){
     return;
 }
 
-function showDondeTrabajas(){
-    FForm.prototype._addField( $('#fs-form-wrap')[0], 'js-donde-trabajas', 'js-trabajas' );
-    FForm.prototype._addField( $('#fs-form-wrap')[0], 'js-trabajas-delegaciones-estados-paises', 'js-donde-trabajas' );
-    $( '#js-donde-trabajas' ).append( getHTMLDondeTrabajas() );
-    $( '#js-donde-trabajas' ).attr( 'data-question', 11 );
-    new SelectFx( $('#js-donde-trabajas .cs-select')[0], {
-        stickyPlaceholder: false,
-        onChange: function( lugar ){
-            $('#js-trabajas-delegaciones-estados-paises').empty();
-            switch( lugar ){
-                case 'cdmx':
-                    showDelegaciones( lugar, 'trabajas' );
-                    break;
-                case 'zmvm':
-                    showMunicipios( 'trabajas' );
-                    break;
-                case 'resto-republica':
-                    showEstados( 'trabajas' );
-                    break;
-                case 'fuera-mexico':
-                    showPaises( 'trabajas' );
-                    break;
-            }
-        }
-    });
-}
 
-function showDondeEstudias(){
-    FForm.prototype._addField( $('#fs-form-wrap')[0], 'js-donde-estudias', 'js-estudias' );
-    FForm.prototype._addField( $('#fs-form-wrap')[0], 'js-estudias-delegaciones-estados-paises', 'js-donde-estudias' );
-    $('#js-donde-estudias').append( getHTMLDondeEstudias() );
-    $( '#js-donde-trabajas' ).attr( 'data-question', 18 );
-    new SelectFx( $('#js-donde-estudias .cs-select')[0], {
-        stickyPlaceholder: false,
-        onChange: function( lugar ){
-            $('#js-estudias-delegaciones-estados-paises').empty();
-            switch( lugar ){
-                case 'cdmx':
-                    showDelegaciones( lugar, 'estudias' );
-                    break;
-                case 'zmvm':
-                    showMunicipios( 'estudias' );
-                    break;
-                case 'resto-republica':
-                    showEstados( 'estudias' );
-                    break;
-                case 'fuera-mexico':
-                    showPaises( 'estudias' );
-                    break;
-            }
-        }
-    });
-}
-
-function getHTMLDondeTrabajas(){
-    return '<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde trabajas?</label><select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required"><option value="" disabled selected>Selecciona una opción</option><option value="cdmx">CDMX</option><option value="zmvm">Zona Metropolitana</option><option value="resto-republica">Resto de la república</option><option value="fuera-mexico">Fuera de México</option></select>';
-}
-
-function getHTMLDondeEstudias(){
-    return '<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde estudias?</label><select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required"><option value="" disabled selected>Selecciona una opción</option><option value="cdmx">CDMX</option><option value="zmvm">Zona Metropolitana</option><option value="resto-republica">Resto de la república</option><option value="fuera-mexico">Fuera de México</option></select>';
-}
 
 function getHTMLDelegacionesCDMX( section ){
     switch( section ){
@@ -461,18 +433,18 @@ function getSurveyData(){
     $estudias = $('#js-estudias input:checked').val()
     $answers[$estudiasQ] = $estudias;
 
-    $lugarEstudioQ = $('#js-donde-trabajas').data('question');
-    $lugarEstudio = $('#js-donde-trabajas select option:selected').val();
+    $lugarEstudioQ = $('#js-donde-estudias').data('question');
+    $lugarEstudio = $('#js-donde-estudias select option:selected').val();
     $answers[$lugarEstudioQ] = getLugarResidencia( $lugarEstudio );
 
-    $delegacionEstadoPaisMunicipioEstudiasQ = $('#js-trabajas-delegaciones-estados-paises').data('question');
-    $delegacionEstadoPaisMunicipioEstudias = $('#js-trabajas-delegaciones-estados-paises select option:selected').val()
+    $delegacionEstadoPaisMunicipioEstudiasQ = $('#js-estudias-delegaciones-estados-paises').data('question');
+    $delegacionEstadoPaisMunicipioEstudias = $('#js-estudias-delegaciones-estados-paises select option:selected').val()
     $answers[$delegacionEstadoPaisMunicipioEstudiasQ] = $delegacionEstadoPaisMunicipioEstudias;
 
-    $coloniaEstudio = $('#js-trabajas-colonias select');
+    $coloniaEstudio = $('#js-estudias-colonias select');
     if( 0 < $coloniaEstudio.length ){
-        $coloniaEstudioQ = $('#js-trabajas-colonias').data( 'question' );
-        $coloniaEstudio = $('#js-trabajas-colonias select option:selected').val();
+        $coloniaEstudioQ = $('#js-estudias-colonias').data( 'question' );
+        $coloniaEstudio = $('#js-estudias-colonias select option:selected').val();
         $answers[$coloniaEstudioQ] = $coloniaEstudio;
     }
 
@@ -488,10 +460,10 @@ function getSurveyData(){
     $grandesRetos = $('#js-grandes-retos input').val();
     $answers[$grandesRetosQ] = $grandesRetos;
 
-    $otroRetos = $('#js-otros-retos input');
+    $otroRetos = $('#js-otros-retos textarea');
     if( 0 < $otroRetos.length ){
         $otroRetosQ = $('#js-otros-retos').data('question');
-        $otroRetos = $('#js-otros-retos input').val();
+        $otroRetos = $('#js-otros-retos textarea').val();
         $answers[$otroRetosQ] = $otroRetos;
     }
 
@@ -526,13 +498,14 @@ function saveSurvey( answersObj ){
             action:     'save_user_answers'
         },
         function( codigo ){
+            dataLayer.push({'event': 'sondeo-exitoso'});
+
             window.location = siteUrl+"obtener-certificado/?referencia="+codigo;
         }
     );
 }
 
 function surveyExists( refCode ){
-    console.log( refCode );
     $.post(
         ajax_url,
         {

@@ -16,7 +16,7 @@
 	</div>
 
 
-	<section class="[ container ][ padding--header--id ]">
+	<section class="[ container ][ padding--header--id ]" id="instrucciones">
 		<div class="[ row ][ margin-bottom ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
 				<?php $participa = get_page_by_path('participa'); ?>
@@ -24,31 +24,43 @@
 				<?php the_content(); ?>
 			</div>
 		</div>
-		<div class="[ row ][ margin-top ][ padding--sides--xsm ]" id="instrucciones">
+		<div class="[ row ][ margin-top ][ padding--sides--xsm ]">
 			<div class="[ col-xs-6 col-md-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">1</p>
-					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_a', true);?></p>
+					<p class="[ fz-small text-left ]">
+						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="<?php echo site_url('/sondeo-masivo/'); ?>">
+							<?php echo get_post_meta($post->ID, 'paso_a', true);?>
+						</a>
+					</p>
 				</div>
 			</div>
 			<div class="[ col-xs-6 col-md-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">2</p>
-					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
+					<p class="[ fz-small text-left ]">
+						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="<?php echo site_url('/participa/'); ?>#dialogos-publicos">
+							<?php echo get_post_meta($post->ID, 'paso_b', true);?>
+						</a>
+					</p>
 				</div>
 			</div>
 			<div class="[ clearfix ][ visible-xs ]"></div>
 			<div class="[ col-xs-6 col-md-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">3</p>
-					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
+					<p class="[ fz-small text-left ]">
+						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="<?php echo site_url('/participa/'); ?>#peticiones" target="_blank">
+							<?php echo get_post_meta($post->ID, 'paso_c', true);?>
+						</a>
+					</p>
 				</div>
 			</div>
 			<div class="[ col-xs-6 col-md-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">4</p>
 					<p class="[ fz-small text-left ]">
-						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucion.cdmx.gob.mx/ensayos">
+						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucioncdmx.pubpub.org/" target="_blank">
 							<?php echo get_post_meta($post->ID, 'paso_d', true);?>
 						</a>
 					</p>
@@ -95,6 +107,10 @@
 					</span>
 				</div>
 			</form>
+		</div>
+		<div class="[ clear ][ margin-bottom--large ]"></div>
+		<div class="[ text-center ]">
+			<a class="[ btn btn-primary btn--small ]" href="<?php echo site_url('/resultados/'); ?> ">Ver resultados</a>
 		</div>
 	</section>
 
@@ -157,7 +173,10 @@
 								<label for="">Copia a continuación la liga del sitio oficial del acontecimiento, la cuenta de Facebook o de Twitter </label>
 								<input type="text" name="liga_oficial_evento" id="liga_oficial_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" placeholder="Liga oficial">
 								<label for="">Fechas (Puede ser un sólo día) </label>
+								<label for="">Inicio</label>
 								<input class="[ input-primary border-gray ][ margin-bottom--large ] date-ensayo" name="fecha_evento" id="fecha_evento" placeholder="yyyy-mm-dd" required="" type="text" data-parsley-required-message="La fecha es obligatoria">
+								<label for="">Final</label>
+								<input type="text" name="fecha_evento_fin" class="[ input-primary ][ margin-bottom--large ][ width-50 ] date-ensayo-fin" placeholder="yyyy-mm-dd" disabled>
 								<label for="">Señala abajo dónde se llevara a cabo el evento</label>
 								<input type="text" name="ubicacion_evento" id="ubicacion_evento" class="[ form-control ][ input-primary border-gray ][ margin-bottom--large ]" required="" placeholder="Ubicación" data-parsley-required-message="La ubicación es obligatoria">
 								<input type="hidden" name="latitud_evento" id="latitud_evento" value="">

@@ -23,10 +23,11 @@ class Twitter {
 
 		$new_arr = array();
 		foreach ($results->statuses as $key => $result) {
-		 
-		  	$dt = DateTime::createFromFormat('D M j H:i:s O Y', $result->created_at);
-		  	$date =  $dt->format('H:i');
-		  	$date_t = getDateTransform($dt->format('Y-m-d'));
+		 	$date_transform = new DateTime($result->created_at);
+		    $date_transform->setTimezone(new DateTimeZone('America/Mexico_City'));
+		    $date = $date_transform->format('H:i');
+
+		  	$date_t = getDateTransform($date_transform->format('Y-m-d'));
 
 		  	$new_arr[$key]['user_name']   = $result->user->name;
 		  	$new_arr[$key]['screen_name'] = $result->user->screen_name;
@@ -38,8 +39,8 @@ class Twitter {
 	}
 
 
-	/**	
-	 * RETURN RESULTS SEARCH HASHTAG IN TWITTER 
+	/**
+	 * RETURN RESULTS SEARCH HASHTAG IN TWITTER
 	 * @return [array] [tweets search #]
 	 */
 	private function getSearchTweets()
@@ -47,11 +48,11 @@ class Twitter {
 		$connection = new TwitterOAuth( $this->consumer_key, $this->consumer_secret, $this->access_token, $this->access_token_secret);
 		// return $connection->get("account/verify_credentials");
 		$query = array(
-		  	"q" => "#SomosCDMX",
+		  	"q" => "#SomosCDMX-filter:retweets",
 		  	"count" => 8,
 		  	"result_type" => "recent"
 		);
-		 
+
 		return $connection->get('search/tweets', $query);
 	}
 

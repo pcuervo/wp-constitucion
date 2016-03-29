@@ -193,7 +193,19 @@
 
 					case 'input' :
 						[].slice.call( fld.querySelectorAll( 'input[type="radio"]' ) ).forEach( function( inp ) {
-							inp.addEventListener( 'change', function(ev) { self._nextField(); } );
+							inp.addEventListener( 'change', function(ev) { 
+
+								if (inp.getAttribute('name') == 'trabajas' && inp.getAttribute('value') == 'no') {
+									jQuery('#js-donde-trabajas').remove();
+              						jQuery('#js-trabajas-delegaciones-estados-paises').remove();
+								}
+								if (inp.getAttribute('name') == 'estudias' && inp.getAttribute('value') == 'no') {
+									jQuery('#js-donde-estudias').remove();
+              						jQuery('#js-estudias-delegaciones-estados-paises').remove();
+								}
+								self._nextField();
+								 
+							} );
 						} );
 						break;
 
@@ -231,11 +243,10 @@
 	 */
 	FForm.prototype._nextField = function( backto ) {
         // the form element
-        this.formEl = this.el.querySelector( 'form' );
-        this.fieldsList = this.formEl.querySelector( 'ol.fs-fields' );
+        this.fieldsList = document.querySelector( 'form#myform ol.fs-fields' );
         this.fields = [].slice.call( this.fieldsList.children );
-        this.fieldsCount = this.fields.length;
 
+        this.fieldsCount = this.fields.length;
 		if( this.isLastStep || !this._validade() || this.isAnimating ) {
 			return false;
 		}

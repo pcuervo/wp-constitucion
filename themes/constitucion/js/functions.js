@@ -33,7 +33,6 @@
         });
 
         $('#close-feedback-forms').on('click', function(){
-            console.log('aaaaa');
             $('#feedback, .modal-backdrop').remove();
             var $feedback = $('#feedback');
         });
@@ -122,6 +121,23 @@
         /**
          * DATEPIKER
          */
+        $.datepicker.regional['es'] = {
+            closeText: 'Cerrar',
+            prevText: '',
+            currentText: 'Hoy',
+            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+            dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+            dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+            dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+            weekHeader: 'Sm',
+            dateFormat: 'dd/mm/yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''
+        };
+        $.datepicker.setDefaults($.datepicker.regional['es']);
         $('.date-ensayo').datepicker({
             dateFormat : 'yy-mm-dd',
             minDate: new Date(2015, 01 - 1, 01),
@@ -146,6 +162,7 @@
             var result_c = getValidateDocs('compartir_documento_ensayo');
 
             if (result_a && result_b && result_c) {
+                dataLayer.push({'event': 'ensayo-exitoso'});
                 var form = document.getElementById("form-ensayos");
                 form.submit();
             };
@@ -159,6 +176,7 @@
             var result_a = getValidateDocs('fotografia_evento');
 
             if (result_a) {
+                dataLayer.push({'event': 'encuentro-exitoso'});
                 var form = document.getElementById("form-eventos");
                 form.submit();
             };
@@ -344,7 +362,6 @@
 
         if (document.getElementById("scroll") && document.getElementById("recorre")) {
             var recorre = $('#recorre').val();
-            console.log(recorre);
             $('.scroll-cronologia').animate({
                 scrollLeft: recorre
             }, 0);
@@ -358,7 +375,6 @@
 
         $('#js-hide-twitter').on('click', function(event){
             event.preventDefault();
-            console.log('entro');
             toggleTwitter();
         })
 
@@ -458,8 +474,8 @@
         function smoothScrollTo(anchor, offset) {
             var duration= 1000; //time (milliseconds) it takes to reach anchor point
             var targetY = $(anchor).offset();
-            $("body").animate({
-                scrollTop : targetY - offset
+            $('html, body').animate({
+                scrollTop : targetY.top - offset
             }, duration );
         }
 
@@ -479,9 +495,6 @@
             var pathnameURL = location.pathname;
             var pathnameURLarray = pathnameURL.split('/');
             var pathnameURLarrayLast = $(pathnameURLarray).get(-2);
-
-            //console.log( pathnameURLarrayLast );
-            //console.log( anchorLast );
 
             if( anchorLast == pathnameURLarrayLast ){
                 smoothScrollTo('#'+anchor[1], 140);
@@ -513,9 +526,16 @@
 
             var map;
             var bounds = new google.maps.LatLngBounds();
+            var isDraggable = $(document).width() > 480 ? true : false;
             var mapOptions = {
                 mapTypeId: 'roadmap',
                 scrollwheel: false,
+                navigationControl: false,
+                zoomControl: false,
+                scaleControl: false,
+                disableDoubleClickZoom: true,
+                mapTypeControl: false,
+                draggable: isDraggable,
             };
 
             // Display a map on the page

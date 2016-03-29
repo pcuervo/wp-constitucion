@@ -15,7 +15,7 @@
 
 		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
 			<h2>¿Cuáles son las tres primeras palabras que te llegan a la mente cuando piensas en la Ciudad de México?</h2>
-			<h4 class="[ color-gray--light ]"># de respuestas: <?php echo $num_respuestas_que_piensas; ?></h4>
+			<h4 class="[ color-gray--light ]">Número total de respuestas: <?php echo $num_respuestas_que_piensas; ?></h4>
 			<div id ='pregunta-8'></div>
 		</div>
 
@@ -73,7 +73,7 @@
 			$palabras_grandes_retos = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS );
 			$num_respuestas_grandes_retos = $survey->get_number_of_answers_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS );
 			$palabras_grandes_retos_separado = $survey->get_word_occurrences_by_question( Sondeo_CDMX_Survey::Q_GRANDES_RETOS, $separateAnswersAndValues );
-			
+
 			$palabras_grandes_retos_labels = json_encode($palabras_grandes_retos_separado["labels"]);
 			$palabras_grandes_retos_values = json_encode($palabras_grandes_retos_separado["values"]);
 			$palabras_grandes_retos_max_value = $palabras_grandes_retos_separado["max_value"];
@@ -81,7 +81,7 @@
 
 		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
 			<h2>Si pensaras en los grandes retos de esta Ciudad, ¿cuáles son los primeros cuatro que te llegan a la mente?</h2>
-			<h4 class="[ color-gray--light ]"># de respuestas: <?php echo $num_respuestas_grandes_retos; ?></h4>
+			<h4 class="[ color-gray--light ]">Número total de respuestas: <?php echo $num_respuestas_grandes_retos; ?></h4>
 			<div id ='pregunta-9'></div>
 		</div>
 
@@ -102,7 +102,7 @@
 						}
 					],
 					"scale-x": {
-						"label":{ 
+						"label":{
 							"text":"Respuestas posibles"
 						},
 						"labels": <?php echo $palabras_grandes_retos_labels; ?>,
@@ -148,7 +148,7 @@
 
 		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
 			<h2>¿Cómo te imaginas la CDMX ideal, en 20 años?</h2>
-			<h4 class="[ color-gray--light ]"># de respuestas: <?php echo $num_respuestas_cdmx_ideal; ?></h4>
+			<h4 class="[ color-gray--light ]">Número total de respuestas: <?php echo $num_respuestas_cdmx_ideal; ?> - Mostrando la últimas tres</h4>
 
 			<div class="[ row ]">
 				<?php foreach ($ultimas_respuestas as $key => $ultima_respuesta) { ?>
@@ -170,7 +170,7 @@
 
 		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
 			<h2>Pensando en esta CDMX ideal, ¿cuáles pensarías que son los tres obstáculos principales para que se haga realidad?</h2>
-			<h4 class="[ color-gray--light ]"># de respuestas: <?php echo $num_respuestas_obstaculos_principales; ?></h4>
+			<h4 class="[ color-gray--light ]">Número total de respuestas: <?php echo $num_respuestas_obstaculos_principales; ?></h4>
 			<div id ='pregunta-11'></div>
 		</div>
 
@@ -228,7 +228,7 @@
 
 		<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ]">
 			<h2>Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿Qué palabras te vienen a la mente?</h2>
-			<h4 class="[ color-gray--light ]"># de respuestas: <?php echo $num_respuestas_cosas_valiosas; ?></h4>
+			<h4 class="[ color-gray--light ]">Número total de respuestas: <?php echo $num_respuestas_cosas_valiosas; ?></h4>
 			<div id ='pregunta-14'></div>
 		</div>
 

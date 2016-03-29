@@ -500,6 +500,7 @@ function saveSurvey( answersObj ){
             action:     'save_user_answers'
         },
         function( codigo ){
+            dataLayer.push({'event': 'sondeo-exitoso'});
             window.location = siteUrl+"obtener-certificado/?referencia="+codigo;
         }
     );

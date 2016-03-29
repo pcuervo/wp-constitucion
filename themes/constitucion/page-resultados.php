@@ -92,7 +92,7 @@
 					"globals":{
 						"fontFamily":"Alegreya Sans",
 					},
-					"type":"varea",
+					"type":"area",
 					"plotarea": {
 						"margin":"dynamic"
 					},
@@ -107,7 +107,10 @@
 						},
 						"labels": <?php echo $palabras_grandes_retos_labels; ?>,
 						"items-overlap": true,
-						"max-items": <?php echo $num_respuestas_grandes_retos; ?>
+						"max-items": <?php echo $num_respuestas_grandes_retos; ?>,
+						"item":{
+							"angle": -75
+						}
 					},
 					"scale-y":{
 						"min-value":0,

@@ -194,8 +194,6 @@
 					case 'input' :
 						[].slice.call( fld.querySelectorAll( 'input[type="radio"]' ) ).forEach( function( inp ) {
 							inp.addEventListener( 'change', function(ev) { 
-								console.log(inp.getAttribute('name'));
-								console.log(inp.getAttribute('value'));
 
 								if (inp.getAttribute('name') == 'trabajas' && inp.getAttribute('value') == 'no') {
 									jQuery('#js-donde-trabajas').remove();

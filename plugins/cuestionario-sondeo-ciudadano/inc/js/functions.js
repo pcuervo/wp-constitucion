@@ -166,8 +166,6 @@ function showColonias( delegacion, section ){
             $(el).attr( 'data-question', 20 );
         }
     }
-    console.log('el');
-    console.log( $(el) );
 
     $(el).append( getHTMLColoniasCDMX( delegacion, section ) );
     new SelectFx( $(el + ' .cs-select')[0], {
@@ -462,10 +460,10 @@ function getSurveyData(){
     $grandesRetos = $('#js-grandes-retos input').val();
     $answers[$grandesRetosQ] = $grandesRetos;
 
-    $otroRetos = $('#js-otros-retos input');
+    $otroRetos = $('#js-otros-retos textarea');
     if( 0 < $otroRetos.length ){
         $otroRetosQ = $('#js-otros-retos').data('question');
-        $otroRetos = $('#js-otros-retos input').val();
+        $otroRetos = $('#js-otros-retos textarea').val();
         $answers[$otroRetosQ] = $otroRetos;
     }
 
@@ -501,13 +499,12 @@ function saveSurvey( answersObj ){
         },
         function( codigo ){
             console.log( codigo );
-            //window.location = siteUrl+"obtener-certificado/?referencia="+codigo;
+            window.location = siteUrl+"obtener-certificado/?referencia="+codigo;
         }
     );
 }
 
 function surveyExists( refCode ){
-    console.log( refCode );
     $.post(
         ajax_url,
         {

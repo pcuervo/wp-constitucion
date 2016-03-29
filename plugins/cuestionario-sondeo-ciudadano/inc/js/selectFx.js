@@ -64,7 +64,6 @@
 	 * initialize and cache some vars
 	 */
 	SelectFx.prototype._init = function() {
-		console.log(this.el);
 		// check if we are using a placeholder for the native select box
 		// we assume the placeholder is disabled and selected by default
 		var selectedOpt = this.el.querySelector( 'option[selected]' );

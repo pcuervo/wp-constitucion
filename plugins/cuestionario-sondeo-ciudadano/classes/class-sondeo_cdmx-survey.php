@@ -193,7 +193,7 @@ class Sondeo_CDMX_Survey {
 	 */
 	function get_options_grandes_retos() {
 		global $wpdb;
-		return $wpdb->get_col( "SELECT post_title FROM $wpdb->posts WHERE post_type = 'grandes-retos' AND post_status = 'publish' " );
+		return $wpdb->get_col( "SELECT post_title FROM $wpdb->posts WHERE post_type = 'grandes-retos' AND post_status = 'publish' ORDER BY post_title" );
 	}
 
 	/**
@@ -330,7 +330,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-como-imaginas" data-question="28">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="como-imaginas" data-info="Máximo 140 caracteres.">¿Cómo te imaginas la CDMX ideal, en 20 años?</label>
 								<textarea class="fs-anim-lower" id="q10" name="como-imaginas" placeholder="" maxlength="140" onkeyup="countChar(this, 140, '#counter-imaginas')"></textarea>
-								<span class="[ color-primary ]" id="counter-imaginas"></span>
+								<span class="[ color-primary ]" id="counter-imaginas">140</span>
 							</li>
 							<li id="js-obstaculos-principales" data-question="29">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="obstaculos-principales" data-info="Las palabras deben ir separadas por comas.">Pensando en esta visión de ciudad, ¿cuáles son los tres obstáculos principales para que se haga realidad?</label>
@@ -344,7 +344,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-tuviste-hacer" data-question="31">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="tuviste-hacer" data-info="Máximo 140 caracteres.">¿Y qué tuviste que hacer tú?</label>
 								<textarea class="fs-anim-lower" id="q13" name="tuviste-hacer" placeholder="" maxlength="140" onkeyup="countChar(this, 140, '#counter-tuviste')"></textarea>
-								<span class="[ color-primary ]" id="counter-tuviste"></span>
+								<span class="[ color-primary ]" id="counter-tuviste">140</span>
 							</li>
 							<li id="js-cosas-valiosas" data-question="32">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿qué palabras te vienen a la mente?</label>
@@ -649,17 +649,28 @@ class Sondeo_CDMX_Survey {
 			WHERE question_id = ' . $question_id . '
 			AND answer <> ""
 			GROUP BY TRIM( LOWER( answer) )
-			ORDER BY occurrences'
+			ORDER BY answer, occurrences'
 		);
 
 		if( $separateAnswersAndValues ){
+			$retos = $this->get_options_grandes_retos();
 			$word_occurrences['labels'] = array();
 			$word_occurrences['values'] = array();
+			$max_value = 0;
 			foreach ( $word_results as $key => $word ){
-				array_push( $word_occurrences['labels'], $word->answer ); 
-				array_push( $word_occurrences['values'], $word->occurrences ); 
-			}	
-			return json_encode( $word_occurrences );
+				if( intval($word->occurrences) > $max_value ) $max_value = intval($word->occurrences);
+				array_push( $word_occurrences['labels'], $word->answer );
+				array_push( $word_occurrences['values'], intval( $word->occurrences ) );
+			}
+
+			foreach ( $retos as $reto ) {
+				if( ! in_array( $reto, $word_occurrences['labels'] ) ){
+					array_push( $word_occurrences['labels'], $reto );
+					array_push( $word_occurrences['values'], 0 );
+				}
+			}
+			$word_occurrences['max_value'] = $max_value + 1;
+			return $word_occurrences;
 		}
 
 		foreach ( $word_results as $key => $word ){
@@ -711,5 +722,15 @@ class Sondeo_CDMX_Survey {
 
 		return $latest_answers;
 	}// get_number_of_answers_by_question
+
+	/**
+	 * Delete an existing survey 
+	 * @param [string] $reference_code
+	 * [bool]
+	 */
+	public function delete_survey( $reference_code ) {
+		global $wpdb;
+		return $wpdb->delete( $wpdb->prefix . 'sondeo_cdmx_user_answers', array( 'reference_code' => $reference_code ) );
+	}// delete_survey
 
 }// Sondeo_CDMX_Survey

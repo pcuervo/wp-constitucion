@@ -16,7 +16,7 @@
 	</div>
 
 
-	<section class="[ container ][ padding--header--id ]">
+	<section class="[ container ][ padding--header--id ]" id="instrucciones">
 		<div class="[ row ][ margin-bottom ]">
 			<div class="[ col-xs-12 padding--sides--xsm col-sm-offset-2 col-sm-8 ][ text-justify ]">
 				<?php $participa = get_page_by_path('participa'); ?>
@@ -24,31 +24,43 @@
 				<?php the_content(); ?>
 			</div>
 		</div>
-		<div class="[ row ][ margin-top ][ padding--sides--xsm ]" id="instrucciones">
+		<div class="[ row ][ margin-top ][ padding--sides--xsm ]">
 			<div class="[ col-xs-6 col-md-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">1</p>
-					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_a', true);?></p>
+					<p class="[ fz-small text-left ]">
+						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="<?php echo site_url('/sondeo-masivo/'); ?>">
+							<?php echo get_post_meta($post->ID, 'paso_a', true);?>
+						</a>
+					</p>
 				</div>
 			</div>
 			<div class="[ col-xs-6 col-md-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">2</p>
-					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_b', true);?></p>
+					<p class="[ fz-small text-left ]">
+						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="<?php echo site_url('/participa/'); ?>#dialogos-publicos">
+							<?php echo get_post_meta($post->ID, 'paso_b', true);?>
+						</a>
+					</p>
 				</div>
 			</div>
 			<div class="[ clearfix ][ visible-xs ]"></div>
 			<div class="[ col-xs-6 col-md-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">3</p>
-					<p class="[ fz-small text-left ]"><?php echo get_post_meta($post->ID, 'paso_c', true);?></p>
+					<p class="[ fz-small text-left ]">
+						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="<?php echo site_url('/participa/'); ?>#peticiones" target="_blank">
+							<?php echo get_post_meta($post->ID, 'paso_c', true);?>
+						</a>
+					</p>
 				</div>
 			</div>
 			<div class="[ col-xs-6 col-md-3 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">4</p>
 					<p class="[ fz-small text-left ]">
-						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucion.cdmx.gob.mx/ensayos">
+						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucioncdmx.pubpub.org/" target="_blank">
 							<?php echo get_post_meta($post->ID, 'paso_d', true);?>
 						</a>
 					</p>

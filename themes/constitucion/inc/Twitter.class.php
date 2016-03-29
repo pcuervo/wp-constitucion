@@ -23,7 +23,7 @@ class Twitter {
 
 		$new_arr = array();
 		foreach ($results->statuses as $key => $result) {
-		 
+
 		  	$dt = DateTime::createFromFormat('D M j H:i:s O Y', $result->created_at);
 		  	$date =  $dt->format('H:i');
 		  	$date_t = getDateTransform($dt->format('Y-m-d'));
@@ -38,8 +38,8 @@ class Twitter {
 	}
 
 
-	/**	
-	 * RETURN RESULTS SEARCH HASHTAG IN TWITTER 
+	/**
+	 * RETURN RESULTS SEARCH HASHTAG IN TWITTER
 	 * @return [array] [tweets search #]
 	 */
 	private function getSearchTweets()
@@ -51,7 +51,7 @@ class Twitter {
 		  	"count" => 8,
 		  	"result_type" => "recent"
 		);
-		 
+
 		return $connection->get('search/tweets', $query);
 	}
 

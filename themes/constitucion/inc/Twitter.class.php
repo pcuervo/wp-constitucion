@@ -48,7 +48,7 @@ class Twitter {
 		$connection = new TwitterOAuth( $this->consumer_key, $this->consumer_secret, $this->access_token, $this->access_token_secret);
 		// return $connection->get("account/verify_credentials");
 		$query = array(
-		  	"q" => "#SomosCDMX",
+		  	"q" => "#SomosCDMX-filter:retweets",
 		  	"count" => 8,
 		  	"result_type" => "recent"
 		);

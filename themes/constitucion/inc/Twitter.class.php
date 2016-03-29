@@ -23,10 +23,11 @@ class Twitter {
 
 		$new_arr = array();
 		foreach ($results->statuses as $key => $result) {
-		 
-		  	$dt = DateTime::createFromFormat('D M j H:i:s O Y', $result->created_at);
-		  	$date =  $dt->format('H:i');
-		  	$date_t = getDateTransform($dt->format('Y-m-d'));
+		 	$date_transform = new DateTime($result->created_at);
+		    $date_transform->setTimezone(new DateTimeZone('America/Mexico_City'));
+		    $date = $date_transform->format('H:i');
+
+		  	$date_t = getDateTransform($date_transform->format('Y-m-d'));
 
 		  	$new_arr[$key]['user_name']   = $result->user->name;
 		  	$new_arr[$key]['screen_name'] = $result->user->screen_name;

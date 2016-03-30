@@ -269,6 +269,9 @@ $image_biblioteca = attachment_image_url( $biblioteca->ID, 'full' ); ?>
 	<a href="http://www.dof.gob.mx/nota_detalle.php?codigo=5424043&fecha=29/01/2016" target="_blank" class="gtm-btn-liga"><p class="[ margin-top ]">Decreto de Reforma Política de la Ciudad de México 2016</p></a>
 	<a href="http://biblio.juridicas.unam.mx/libros/2/649/19.pdf" target="_blank" class="gtm-btn-liga"><p class="[ margin-top ]">El Distrito Federal Mexicano Gobierno y Democracia</p></a>
 	<a href="http://www.juridicas.unam.mx/publica/librev/rev/mexder/cont/9/cnt/cnt1.pdf" target="_blank" class="gtm-btn-liga"><p class="[ margin-top ]">El Distrito Federal Una Nueva Estructura Constitucional</p></a>
+	<a href="http://www.onuhabitat.org/index.php?option=com_docman&task=doc_details&gid=50&Itemid=3" target="_blank" class="gtm-btn-liga"><p class="[ margin-top ]">La Carta Mundial de Derecho a la Ciudad, de ONU Hábitat. </p></a>
+	<a href="http://www.equipopueblo.org.mx/descargas/Carta%20de%20la%20Ciudad%20de%20Mexico%20por%20el%20Derecho%20a%20la%20Ciudad.pdf" target="_blank" class="gtm-btn-liga"><p class="[ margin-top ]">La Carta de la Ciudad de México por el Derecho a la Ciudad. </p></a>
+	<a href="http://info4.juridicas.unam.mx/ijure/tcfed/9.htm?s=" target="_blank" class="gtm-btn-liga"><p class="[ margin-top ]">La Constitución Política de los Estados Unidos Mexicanos.</p></a>
 </section>
 
 <?php get_footer(); ?>

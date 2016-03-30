@@ -33,7 +33,7 @@
 		<meta property="og:description" content="En el 2017 la Ciudad de México tendrá; su propia Constitución. Todas y todos los que habitamos y visitamos la ciudad tenemos la oportunidad de contribuir y ser escuchados." />
 		<meta property="og:site_name" content="Constitución CDMX | Espacio de encuentro | #SomosCDMX" />
 
-		<meta property="og:image" content="https://www.constitucion.cdmx.gob.mx/wp-content/themes/constitucion/video/cccdmx.jpg" />
+		<meta property="og:image" content="<?php echo THEMEPATH; ?>video/cccdmx-share.jpg" />
 		<meta property="og:image:width" content="450" />
 		<meta property="og:image:height" content="300" />
 

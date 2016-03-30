@@ -1,4 +1,5 @@
-<?php global $result;
+<?php date_default_timezone_set('America/Mexico_City');
+global $result;
 
 if(isset($_POST['accion']) AND $_POST['accion'] == 'guarda-formulario') storeForm($_POST);
 if(isset($_POST['accion']) AND $_POST['accion'] == 'guarda-ensayo') storeFormTest($_POST);

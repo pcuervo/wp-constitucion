@@ -29,6 +29,19 @@
 			<script src="js/respond.min.js"></script>
 		<![endif]-->
 
+		<meta property="og:title" content="Constitución CDMX | Espacio de encuentro | #SomosCDMX" />
+		<meta property="og:description" content="En el 2017 la Ciudad de México tendrá; su propia Constitución. Todas y todos los que habitamos y visitamos la ciudad tenemos la oportunidad de contribuir y ser escuchados." />
+		<meta property="og:site_name" content="Constitución CDMX | Espacio de encuentro | #SomosCDMX" />
+
+		<meta property="og:image" content="https://www.constitucion.cdmx.gob.mx/wp-content/themes/constitucion/video/cccdmx.jpg" />
+		<meta property="og:image:width" content="450" />
+		<meta property="og:image:height" content="300" />
+
+		<meta property="og:url" content="https://www.constitucion.cdmx.gob.mx/" />
+		<meta property="og:locale" content="es_LA" />
+
+		<meta property="fb:app_id" content="1791851151034579" />
+
 		<?php wp_head(); ?>
 	</head>
 

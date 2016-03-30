@@ -39,8 +39,8 @@ class Twitter {
 	}
 
 
-	/**	
-	 * RETURN RESULTS SEARCH HASHTAG IN TWITTER 
+	/**
+	 * RETURN RESULTS SEARCH HASHTAG IN TWITTER
 	 * @return [array] [tweets search #]
 	 */
 	private function getSearchTweets()
@@ -52,7 +52,7 @@ class Twitter {
 		  	"count" => 8,
 		  	"result_type" => "recent"
 		);
-		 
+
 		return $connection->get('search/tweets', $query);
 	}
 

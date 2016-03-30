@@ -354,7 +354,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		$to = "alan.grabinsky@gmail.com";
 		$subject = "constitucion.cdmx.gob.mx - Se guardo un nuevo Ensayo";
 		$content = "Hay un nuevo Ensayo en constitucion.cdmx.gob.mx \n\n";
-		$content .= $data['nombre_evento'].' - <a href="'.$url_edit.'">Ver Ensayo</a>';
+		$content .= $data['titulo_ensayo'].' - <a href="'.$url_edit.'">Ver Ensayo</a>';
 		
 		$headers = 'From: info@constitucion.cdmx.gob.mx'."\r\n".
 			'X-Mailer: PHP/' . phpversion();

@@ -551,3 +551,11 @@ function countChar(val, maxlength, el) {
     }
   };
 
+$('#return-site').on('click', function(event){
+
+    var r = confirm("No se guardarán tus respuestas si sales de esta página, ¿deseas salir?");
+    if (r == false) {
+        event.preventDefault();
+    }
+});
+

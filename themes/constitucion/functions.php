@@ -181,30 +181,6 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 
 
-
-
-
-
-
-// MODIFICAR EL MAIN QUERY ///////////////////////////////////////////////////////////
-
-
-
-// THE EXECRPT FORMAT AND LENGTH /////////////////////////////////////////////////////
-
-
-
-	/*add_filter('excerpt_length', function($length){
-		return 20;
-	});*/
-
-
-	/*add_filter('excerpt_more', function(){
-		return ' &raquo;';
-	});*/
-
-
-
 // REMOVE ACCENTS AND THE LETTER Ñ FROM FILE NAMES ///////////////////////////////////
 
 
@@ -303,9 +279,27 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 		if ($post_id) {
 			saveMetaDataEvent($post_id, $data);
+			sendMailAdminNewEvent($post_id, $data);
 		}
 
 		$result['success'] = 'Tu evento se ha enviado correctamente';
+	}
+
+	/**	
+	 * ENVIA UN MAIL CUANDO SE GENERA UN NUEVO EVENTO DESDE PARTICIPA
+	 * @return [type]          [description]
+	 */
+	function sendMailAdminNewEvent($post_id, $data){
+		$url_edit = admin_url().'post.php?post='.$post_id.'&action=edit';
+		$to = "a.cervantes@pcuervo.com";
+		$subject = "constitucion.cdmx.gob.mx - Se guardo un nuevo Evento";
+		$content = "Hay un nuevo Evento en constitucion.cdmx.gob.mx\n\n";
+		$content .= $data['nombre_evento'].' - <a href="'.$url_edit.'">Ver evento</a>';
+
+		$headers = 'From: info@constitucion.cdmx.gob.mx'."\r\n".
+			'X-Mailer: PHP/' . phpversion();
+	
+		return wp_mail($to, $subject, $content, $headers);
 	}
 
 	/**
@@ -327,12 +321,33 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 		if ($post_id) {
 			saveMetaDataTest($post_id, $data);
+			sendMailAdminNewTest($post_id, $data);
 		}
 
 		$result['success'] = 'Tu ensayo se ha enviado correctamente';
-
 	}
 
+	/**	
+	 * ENVIA UN MAIL CUANDO SE GENERA UN NUEVO EVENTO DESDE PARTICIPA
+	 * @return [type]          [description]
+	 */
+	function sendMailAdminNewTest($post_id, $data){
+		$url_edit = admin_url().'post.php?post='.$post_id.'&action=edit';
+		$to = "a.cervantes@pcuervo.com";
+		$subject = "constitucion.cdmx.gob.mx - Se guardo un nuevo Ensayo";
+		$content = "Hay un nuevo Ensayo en constitucion.cdmx.gob.mx\n\n";
+		$content .= $data['nombre_evento'].' - <a href="'.$url_edit.'">Ver Ensayo</a>';
+
+		$headers = 'From: info@constitucion.cdmx.gob.mx'."\r\n".
+			'X-Mailer: PHP/' . phpversion();
+	
+		return wp_mail($to, $subject, $content, $headers);
+	}
+
+	/**	
+	 * GUARDA LA INFORMACION DEL ENSAYO 
+	 * @return [type]          [description]
+	 */
 	function saveMetaDataTest($post_id, $data){
 		update_post_meta($post_id, 'tipo-de-evento', 2);
 		foreach ($data as $meta_key => $meta_value):
@@ -343,6 +358,10 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 	}
 
+	/**	
+	 * GUARDA LA INFORMACION DEL EVENTO
+	 * @return [type]          [description]
+	 */
 	function saveMetaDataEvent($post_id, $data){
 		update_post_meta($post_id, 'tipo-de-evento', 2);
 		foreach ($data as $meta_key => $meta_value):

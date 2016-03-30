@@ -195,6 +195,15 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 // HELPER METHODS AND FUNCTIONS //////////////////////////////////////////////////////
 
+	/**
+	 * Override Jetpack's default OpenGraph image.
+	 * Standard is blank WordPress image (https://s0.wp.com/i/blank.jpg).
+	 * Christoph Nahr 2015-07-07
+	 */
+	add_filter( 'jetpack_open_graph_image_default', function() {
+	    return THEMEPATH.'video/cccdmx-share.jpg';
+	});
+
 
 	/**
 	 * Print the <title> tag based on what is being viewed.

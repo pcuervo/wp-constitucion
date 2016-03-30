@@ -304,7 +304,15 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		$to = "alan.grabinsky@gmail.com";
 		$subject = "constitucion.cdmx.gob.mx - Se guardo un nuevo Evento";
 		$content = "Hay un nuevo Evento en constitucion.cdmx.gob.mx\n\n";
-		$content .= $data['nombre_evento'].' - <a href="'.$url_edit.'">Ver evento</a>';
+		$content .= $data['nombre_evento'].' - <a href="'.$url_edit.'">Ver evento</a>'."\n\n";
+		$content .= "Frase que describa el evento/sesión: ".get_post_meta( $post_id, 'frace_evento', true ) ."\n";
+		$content .= "Fechs Inicio: ".get_post_meta( $post_id, 'fecha_evento', true )."\n";
+		$content .= "Fechs Final: ".get_post_meta( $post_id, 'fecha_evento_fin', true )."\n";
+		$content .= "Dónde se llevara a cabo el evento: ".get_post_meta( $post_id, 'ubicacion_evento', true )."\n";
+		$content .= "Horarios: ".get_post_meta( $post_id, 'horarios_evento', true )."\n";
+		$content .= "Institución u organización: ".get_post_meta( $post_id, 'institucion_evento', true )."\n";
+		$content .= "Fotografía de cartel o publicidad del acontecimiento: ".get_post_meta( $post_id, 'fotografia_evento', true )."\n";
+		$content .= "Correo electrónico: ".get_post_meta( $post_id, 'correo_evento', true );
 
 		$headers = 'From: info@constitucion.cdmx.gob.mx'."\r\n".
 			'X-Mailer: PHP/' . phpversion();
@@ -345,9 +353,9 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		$url_edit = admin_url().'post.php?post='.$post_id.'&action=edit';
 		$to = "alan.grabinsky@gmail.com";
 		$subject = "constitucion.cdmx.gob.mx - Se guardo un nuevo Ensayo";
-		$content = "Hay un nuevo Ensayo en constitucion.cdmx.gob.mx\n\n";
+		$content = "Hay un nuevo Ensayo en constitucion.cdmx.gob.mx \n\n";
 		$content .= $data['nombre_evento'].' - <a href="'.$url_edit.'">Ver Ensayo</a>';
-
+		
 		$headers = 'From: info@constitucion.cdmx.gob.mx'."\r\n".
 			'X-Mailer: PHP/' . phpversion();
 	

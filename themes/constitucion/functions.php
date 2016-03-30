@@ -301,7 +301,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	 */
 	function sendMailAdminNewEvent($post_id, $data){
 		$url_edit = admin_url().'post.php?post='.$post_id.'&action=edit';
-		$to = "a.cervantes@pcuervo.com";
+		$to = "alan.grabinsky@gmail.com";
 		$subject = "constitucion.cdmx.gob.mx - Se guardo un nuevo Evento";
 		$content = "Hay un nuevo Evento en constitucion.cdmx.gob.mx\n\n";
 		$content .= $data['nombre_evento'].' - <a href="'.$url_edit.'">Ver evento</a>';
@@ -343,7 +343,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 	 */
 	function sendMailAdminNewTest($post_id, $data){
 		$url_edit = admin_url().'post.php?post='.$post_id.'&action=edit';
-		$to = "a.cervantes@pcuervo.com";
+		$to = "alan.grabinsky@gmail.com";
 		$subject = "constitucion.cdmx.gob.mx - Se guardo un nuevo Ensayo";
 		$content = "Hay un nuevo Ensayo en constitucion.cdmx.gob.mx\n\n";
 		$content .= $data['nombre_evento'].' - <a href="'.$url_edit.'">Ver Ensayo</a>';

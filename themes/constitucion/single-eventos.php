@@ -22,7 +22,9 @@ $horario = get_post_meta( $post->ID, 'horarios_evento', true ); ?>
 				endif;?>
 				<div class="[ margin-bottom ]">
 					<h2><?php the_title(); ?></h2>
-					<p class="[ color-gray ][ margin-top-bottom--large ]"><?php the_content(); ?></p>
+					<div class="[ color-gray ][ margin-top-bottom--large ]">
+						<?php the_content(); ?>
+					</div>
 					<?php if ($frace_evento != ''): ?>
 						<p class="[ color-gray--light ][ margin-top ]"><strong class="[ color-primary ]">Frase que describa el evento/sesión:</strong> <?php echo $frace_evento; ?></p>
 					<?php endif;

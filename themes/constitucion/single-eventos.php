@@ -21,7 +21,7 @@ $horario = get_post_meta( $post->ID, 'horarios_evento', true ); ?>
 <section class="[ bg-gray--fondo section--bg no-margin ]">
 	<div class="[ container ]">
 		<div class="[ row ]">
-			<div class="[ col-xs-12 col-sm-offset-2 col-sm-10 col-md-offset-2 col-sm-8 ][ content-user ][ box-shadow--form ]">
+			<div class="[ col-xs-12 col-sm-offset-2 col-sm-10 col-md-offset-2 col-sm-8 ][ box-shadow--form ]">
 				<?php if ( has_post_thumbnail() ):
 					the_post_thumbnail('large', array('class' => '[ img-responsive ]'));
 				endif;?>
@@ -57,9 +57,9 @@ $horario = get_post_meta( $post->ID, 'horarios_evento', true ); ?>
 					endif;
 					if ($fecha_evento != ''): ?>
 						<p class="[ color-gray--light ][ margin-top ]">
-							<strong class="[ color-primary ]">Fecha del evento:</strong> 
-							<?php echo $date_arr[0].' '.$date_arr[1].' '.$date_arr[2]; 
-							if ($fecha_evento_fin != ''): 
+							<strong class="[ color-primary ]">Fecha del evento:</strong>
+							<?php echo $date_arr[0].' '.$date_arr[1].' '.$date_arr[2];
+							if ($fecha_evento_fin != ''):
 								echo ' al '. $date_arr_fin[0].' '.$date_arr_fin[1].' '.$date_arr_fin[2];
 							endif;?>
 						</p>

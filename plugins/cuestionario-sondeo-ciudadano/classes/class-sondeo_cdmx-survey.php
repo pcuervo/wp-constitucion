@@ -185,7 +185,7 @@ class Sondeo_CDMX_Survey {
 	 */
 	private function reto_exists( $title ) {
 		global $wpdb;
-		return $wpdb->get_row( "SELECT * FROM " . $wpdb->prefix . "posts WHERE post_title = '" . $title . "'", 'ARRAY_A' );
+		return $wpdb->get_row( "SELECT * FROM " . $wpdb->prefix . "posts WHERE LOWER( post_title ) = LOWER ('" . $title . "')", 'ARRAY_A' );
 	}
 
 	/**
@@ -193,7 +193,7 @@ class Sondeo_CDMX_Survey {
 	 */
 	function get_options_grandes_retos() {
 		global $wpdb;
-		return $wpdb->get_col( "SELECT post_title FROM $wpdb->posts WHERE post_type = 'grandes-retos' AND post_status = 'publish' ORDER BY post_title" );
+		return $wpdb->get_col( "SELECT post_title FROM $wpdb->posts WHERE post_type = 'grandes-retos' AND post_status = 'publish' ORDER BY RAND()" );
 	}
 
 	/**
@@ -643,17 +643,32 @@ class Sondeo_CDMX_Survey {
 	public function get_word_occurrences_by_question( $question_id, $separateAnswersAndValues = false ) {
 		global $wpdb;
 		$word_occurrences = array();
-		$word_results = $wpdb->get_results('
-			SELECT TRIM( LOWER( answer ) ) as answer, COUNT( answer ) as occurrences
-			FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
-			WHERE question_id = ' . $question_id . '
-			AND answer <> ""
-			GROUP BY TRIM( LOWER( answer) )
-			ORDER BY answer, occurrences'
-		);
+
+		if( self::Q_GRANDES_RETOS == $question_id){
+			$retos = implode( ',', $this->get_options_grandes_retos() );
+			$retos = str_replace( 'otro,', '', $retos );
+			$word_results = $wpdb->get_results('
+				SELECT TRIM( LOWER( answer ) ) as answer, COUNT( answer ) as occurrences
+				FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
+				WHERE question_id = ' . $question_id . '
+				AND FIND_IN_SET( answer, "' . $retos . '")
+				GROUP BY TRIM( LOWER( answer) )
+				ORDER BY answer, occurrences'
+			);
+		} else {
+			$word_results = $wpdb->get_results('
+				SELECT TRIM( LOWER( answer ) ) as answer, COUNT( answer ) as occurrences
+				FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
+				WHERE question_id = ' . $question_id . '
+				AND answer <> ""
+				GROUP BY TRIM( LOWER( answer) )
+				ORDER BY answer, occurrences'
+			);
+		}
 
 		if( $separateAnswersAndValues ){
 			$retos = $this->get_options_grandes_retos();
+			array_push( $retos, 'fuck' );
 			$word_occurrences['labels'] = array();
 			$word_occurrences['values'] = array();
 			$max_value = 0;
@@ -664,6 +679,8 @@ class Sondeo_CDMX_Survey {
 			}
 
 			foreach ( $retos as $reto ) {
+				if( ! $this->reto_exists( $reto ) ) continue;
+
 				if( ! in_array( $reto, $word_occurrences['labels'] ) ){
 					array_push( $word_occurrences['labels'], $reto );
 					array_push( $word_occurrences['values'], 0 );

@@ -81,3 +81,49 @@
 [29-Mar-2016 17:21:03 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
 [29-Mar-2016 17:21:03 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
 >>>>>>> 51b3e92645785638f00c57a5058eed3f5013f8b2
+[12-Apr-2016 12:43:41 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[12-Apr-2016 12:43:41 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[12-Apr-2016 12:54:19 America/Mexico_City] PHP Notice:  Use of undefined constant Q_GRANDES_RETOS - assumed 'Q_GRANDES_RETOS' in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 647
+[12-Apr-2016 12:54:19 America/Mexico_City] PHP Notice:  Use of undefined constant Q_GRANDES_RETOS - assumed 'Q_GRANDES_RETOS' in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 647
+[12-Apr-2016 12:54:19 America/Mexico_City] PHP Notice:  Use of undefined constant Q_GRANDES_RETOS - assumed 'Q_GRANDES_RETOS' in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 647
+[12-Apr-2016 12:54:19 America/Mexico_City] PHP Notice:  Use of undefined constant Q_GRANDES_RETOS - assumed 'Q_GRANDES_RETOS' in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 647
+[12-Apr-2016 12:54:19 America/Mexico_City] PHP Notice:  Use of undefined constant Q_GRANDES_RETOS - assumed 'Q_GRANDES_RETOS' in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 647
+[12-Apr-2016 17:55:24 UTC] PHP Parse error:  syntax error, unexpected '::' (T_PAAMAYIM_NEKUDOTAYIM) in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 539
+[12-Apr-2016 17:59:02 UTC] PHP Parse error:  syntax error, unexpected '::' (T_PAAMAYIM_NEKUDOTAYIM) in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 539
+[12-Apr-2016 17:59:16 UTC] PHP Parse error:  syntax error, unexpected '::' (T_PAAMAYIM_NEKUDOTAYIM) in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 539
+[12-Apr-2016 17:59:29 UTC] PHP Parse error:  syntax error, unexpected '::' (T_PAAMAYIM_NEKUDOTAYIM) in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 539
+[12-Apr-2016 17:59:37 UTC] PHP Parse error:  syntax error, unexpected '::' (T_PAAMAYIM_NEKUDOTAYIM) in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 539
+[12-Apr-2016 17:59:53 UTC] PHP Parse error:  syntax error, unexpected '::' (T_PAAMAYIM_NEKUDOTAYIM) in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 539
+[12-Apr-2016 13:07:06 America/Mexico_City] Error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'de género,pobreza y desigualdad económica,empleo digno y productividad,finanza' at line 4 de la base de datos de WordPress para la consulta 
+				SELECT TRIM( LOWER( answer ) ) as answer, COUNT( answer ) as occurrences
+				FROM wp_sondeo_cdmx_user_answers
+				WHERE question_id = 26
+				AND answer IN (igualdad de género,pobreza y desigualdad económica,empleo digno y productividad,finanzas públicas,educación de calidad permanente,transporte y movilidad,servicios urbanos,infraestructura,desarrollo barrial participativo,transparencia y rendición de cuentas,vivienda y uso de suelo,otro,sustentabilidad del medio ambiente,derechos humanos,agua,salud pública y bienestar,coordinación metropolitana,legalidad y justicia)
+				GROUP BY TRIM( LOWER( answer) )
+				ORDER BY answer, occurrences realizada por require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/constitucion/page-resultados.php'), Sondeo_CDMX_Survey->get_word_occurrences_by_question
+[12-Apr-2016 13:07:06 America/Mexico_City] Error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'digno y productividad,infraestructura,educación de calidad permanente,sustentab' at line 4 de la base de datos de WordPress para la consulta 
+				SELECT TRIM( LOWER( answer ) ) as answer, COUNT( answer ) as occurrences
+				FROM wp_sondeo_cdmx_user_answers
+				WHERE question_id = 26
+				AND answer IN (empleo digno y productividad,infraestructura,educación de calidad permanente,sustentabilidad del medio ambiente,servicios urbanos,transporte y movilidad,agua,transparencia y rendición de cuentas,legalidad y justicia,pobreza y desigualdad económica,vivienda y uso de suelo,desarrollo barrial participativo,coordinación metropolitana,salud pública y bienestar,derechos humanos,finanzas públicas,igualdad de género,otro)
+				GROUP BY TRIM( LOWER( answer) )
+				ORDER BY answer, occurrences realizada por require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/constitucion/page-resultados.php'), Sondeo_CDMX_Survey->get_word_occurrences_by_question
+[12-Apr-2016 13:12:10 America/Mexico_City] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 648
+[12-Apr-2016 13:12:10 America/Mexico_City] Error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'y bienestar,otro,transporte y movilidad,educación de calidad permanente,legalid' at line 4 de la base de datos de WordPress para la consulta 
+				SELECT TRIM( LOWER( answer ) ) as answer, COUNT( answer ) as occurrences
+				FROM wp_sondeo_cdmx_user_answers
+				WHERE question_id = 26
+				AND FIND_IN_SET( answer,salud pública y bienestar,otro,transporte y movilidad,educación de calidad permanente,legalidad y justicia,servicios urbanos,agua,pobreza y desigualdad económica,vivienda y uso de suelo,desarrollo barrial participativo,empleo digno y productividad,finanzas públicas,infraestructura,sustentabilidad del medio ambiente,igualdad de género,coordinación metropolitana,transparencia y rendición de cuentas,derechos humanos)
+				GROUP BY TRIM( LOWER( answer) )
+				ORDER BY answer, occurrences realizada por require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/constitucion/page-resultados.php'), Sondeo_CDMX_Survey->get_word_occurrences_by_question
+[12-Apr-2016 13:12:10 America/Mexico_City] Error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'género,finanzas públicas,legalidad y justicia,transporte y movilidad,sustentab' at line 4 de la base de datos de WordPress para la consulta 
+				SELECT TRIM( LOWER( answer ) ) as answer, COUNT( answer ) as occurrences
+				FROM wp_sondeo_cdmx_user_answers
+				WHERE question_id = 26
+				AND FIND_IN_SET( answer,otro,infraestructura,derechos humanos,igualdad de género,finanzas públicas,legalidad y justicia,transporte y movilidad,sustentabilidad del medio ambiente,transparencia y rendición de cuentas,agua,salud pública y bienestar,vivienda y uso de suelo,coordinación metropolitana,desarrollo barrial participativo,educación de calidad permanente,servicios urbanos,empleo digno y productividad,pobreza y desigualdad económica)
+				GROUP BY TRIM( LOWER( answer) )
+				ORDER BY answer, occurrences realizada por require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/constitucion/page-resultados.php'), Sondeo_CDMX_Survey->get_word_occurrences_by_question
+[12-Apr-2016 13:13:35 America/Mexico_City] PHP Deprecated:  mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 648
+[12-Apr-2016 13:14:07 America/Mexico_City] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 648
+[12-Apr-2016 13:14:07 America/Mexico_City] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 648
+[12-Apr-2016 13:24:34 America/Mexico_City] PHP Fatal error:  Call to undefined function unsert() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/plugins/cuestionario-sondeo-ciudadano/classes/class-sondeo_cdmx-survey.php on line 672

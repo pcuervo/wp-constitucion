@@ -459,6 +459,7 @@ function getSurveyData(){
     $grandesRetosQ = $('#js-grandes-retos').data('question');
     $grandesRetos = $('#js-grandes-retos input').val();
     $answers[$grandesRetosQ] = $grandesRetos;
+    console.log( $grandesRetos );
 
     $otroRetos = $('#js-otros-retos textarea');
     if( 0 < $otroRetos.length ){

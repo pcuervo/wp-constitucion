@@ -47,6 +47,7 @@ class RetosParticipante {
 			$query = new WP_Query( $args );
 
 			if( ! empty($query->posts) ) $posts[$id_term] = $query->posts;
+			if( empty($query->posts) ) $posts[$id_term] = array();
 		}
 
 		return $posts;

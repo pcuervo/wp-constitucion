@@ -229,7 +229,7 @@ class Sondeo_CDMX_Survey {
 			<div class="[ container ][ height-100 ]">
 				<div class="[ fs-form-wrap ]" id="fs-form-wrap">
 					<div class="[ fs-back-to-site ]">
-						<a class="[ color-primary ]" href="<?php echo site_url(); ?>">< Regresar al sitio</a>
+						<a id="return-site" class="[ color-primary ]" href="<?php echo site_url(); ?>">< Regresar al sitio</a>
 					</div>
 					<div class="[ fs-title ][ text-center ]">
 						<h1 class="[ ]">Imagina tu ciudad</h1>

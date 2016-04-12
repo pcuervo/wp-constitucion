@@ -79,7 +79,7 @@
 								<?php $count = strlen($nombre.' '.$apellidos);
 								$class_h2 = $count >= 40 ? 'large-name' : ''; ?>
 								<h2 class="[ text-uppercase ][ color-gray ][ margin-bottom--small ] <?php echo $class_h2 ?>"><?php echo $nombre . ' ' . $apellidos ?></h2>
-								<p class="[ color-gray--strong ][ margin-top--xsmall ]">A nombre de todas las personas que están involucradas en la redacción de la Constitución de la Ciudad de México, te otorgo el presente reconocimiento por haber contribuido con tus ideas, reflexiones y propuestas para este proyecto.</p>
+								<p class="[ color-gray--strong ][ margin-top--xsmall ]">A nombre de quienes integramos el Grupo de Trabajo encargado de la redacción del proyecto de Constitución de la Ciudad de México, te otorgo el presente reconocimiento por haber contribuido con tus ideas, reflexiones y propuestas para este proyecto.</p>
 								<p class="[ color-gray--strong ][ margin-top--xsmall ]">
 									La Ciudad de México somos todas y todos. Gracias por ser parte de este proceso histórico.
 								</p>

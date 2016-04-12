@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [29-Mar-2016 03:02:30 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
 [29-Mar-2016 03:02:30 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
 [29-Mar-2016 03:03:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
@@ -74,3 +75,9 @@
 [29-Mar-2016 04:01:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
 [29-Mar-2016 04:05:35 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
 [29-Mar-2016 04:05:35 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+=======
+[29-Mar-2016 17:21:03 UTC] PHP Notice:  Undefined offset: 2 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[29-Mar-2016 17:21:03 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[29-Mar-2016 17:21:03 UTC] PHP Notice:  Undefined index:  in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+[29-Mar-2016 17:21:03 UTC] PHP Notice:  Undefined offset: 1 in /Users/pcuervo/Documents/sitios/wp-constitucion/wp-content/themes/constitucion/functions.php on line 261
+>>>>>>> 51b3e92645785638f00c57a5058eed3f5013f8b2

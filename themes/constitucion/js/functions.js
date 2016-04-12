@@ -362,7 +362,6 @@
 
         if (document.getElementById("scroll") && document.getElementById("recorre")) {
             var recorre = $('#recorre').val();
-            console.log(recorre);
             $('.scroll-cronologia').animate({
                 scrollLeft: recorre
             }, 0);
@@ -376,7 +375,6 @@
 
         $('#js-hide-twitter').on('click', function(event){
             event.preventDefault();
-            console.log('entro');
             toggleTwitter();
         })
 
@@ -497,9 +495,6 @@
             var pathnameURL = location.pathname;
             var pathnameURLarray = pathnameURL.split('/');
             var pathnameURLarrayLast = $(pathnameURLarray).get(-2);
-
-            //console.log( pathnameURLarrayLast );
-            //console.log( anchorLast );
 
             if( anchorLast == pathnameURLarrayLast ){
                 smoothScrollTo('#'+anchor[1], 140);

@@ -498,7 +498,8 @@ function saveSurvey( answersObj ){
             action:     'save_user_answers'
         },
         function( codigo ){
-            console.log( codigo );
+            dataLayer.push({'event': 'sondeo-exitoso'});
+
             window.location = siteUrl+"obtener-certificado/?referencia="+codigo;
         }
     );
@@ -549,4 +550,12 @@ function countChar(val, maxlength, el) {
       $( el ).text(maxlength - len);
     }
   };
+
+$('#return-site').on('click', function(event){
+
+    var r = confirm("No se guardarán tus respuestas si sales de esta página, ¿deseas salir?");
+    if (r == false) {
+        event.preventDefault();
+    }
+});
 

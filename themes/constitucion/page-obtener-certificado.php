@@ -3,7 +3,7 @@ if( ! isset( $_GET['referencia'] ) || $_GET['referencia'] == '' ):
 	echo 'Referencia no registrada';
 else:
 	$retos = new RetosParticipante($_GET['referencia']);
-	$retos = $retos->get_retos_relacionados(); ?>
+	$retos = $retos->get_retos_relacionados();?>
 
 	<section class="[ container ][ margin-top--large ][ text-center ]">
 		<img class="[ img-logo ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif" alt="Logo horizontal Constitución CDMX">
@@ -32,6 +32,7 @@ else:
 					$term = get_term_by('id', $key, 'taxonomy-grandes-retos'); ?>
 					<div class="[ col-xs-12 col-sm-3 ][ margin-bottom--large ]">
 						<h3><?php echo $term->name ?></h3><!-- reto 1 -->
+						<?php if ( empty($reto) ) echo '<p>Próximamente</p>'; ?>
 						<?php foreach ($reto as $key => $pubpub):
 							$url_pubpub = get_post_meta($pubpub->ID, 'url_pubpub', true); ?>
 							<a href="<?php echo $url_pubpub; ?>" target="_blank">

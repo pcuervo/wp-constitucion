@@ -1,4 +1,5 @@
-<?php global $result;
+<?php date_default_timezone_set('America/Mexico_City');
+global $result;
 
 if(isset($_POST['accion']) AND $_POST['accion'] == 'guarda-formulario') storeForm($_POST);
 if(isset($_POST['accion']) AND $_POST['accion'] == 'guarda-ensayo') storeFormTest($_POST);
@@ -181,30 +182,6 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 
 
-
-
-
-
-
-// MODIFICAR EL MAIN QUERY ///////////////////////////////////////////////////////////
-
-
-
-// THE EXECRPT FORMAT AND LENGTH /////////////////////////////////////////////////////
-
-
-
-	/*add_filter('excerpt_length', function($length){
-		return 20;
-	});*/
-
-
-	/*add_filter('excerpt_more', function(){
-		return ' &raquo;';
-	});*/
-
-
-
 // REMOVE ACCENTS AND THE LETTER Ñ FROM FILE NAMES ///////////////////////////////////
 
 
@@ -217,6 +194,15 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 
 // HELPER METHODS AND FUNCTIONS //////////////////////////////////////////////////////
+
+	/**
+	 * Override Jetpack's default OpenGraph image.
+	 * Standard is blank WordPress image (https://s0.wp.com/i/blank.jpg).
+	 * Christoph Nahr 2015-07-07
+	 */
+	add_filter( 'jetpack_open_graph_image_default', function() {
+	    return THEMEPATH.'video/cccdmx-share.jpg';
+	});
 
 
 	/**
@@ -303,9 +289,35 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 		if ($post_id) {
 			saveMetaDataEvent($post_id, $data);
+			sendMailAdminNewEvent($post_id, $data);
 		}
 
 		$result['success'] = 'Tu evento se ha enviado correctamente';
+	}
+
+	/**	
+	 * ENVIA UN MAIL CUANDO SE GENERA UN NUEVO EVENTO DESDE PARTICIPA
+	 * @return [type]          [description]
+	 */
+	function sendMailAdminNewEvent($post_id, $data){
+		$url_edit = admin_url().'post.php?post='.$post_id.'&action=edit';
+		$to = "alan.grabinsky@gmail.com";
+		$subject = "constitucion.cdmx.gob.mx - Se guardo un nuevo Evento";
+		$content = "Hay un nuevo Evento en constitucion.cdmx.gob.mx\n\n";
+		$content .= $data['nombre_evento'].' - <a href="'.$url_edit.'">Ver evento</a>'."\n\n";
+		$content .= "Frase que describa el evento/sesión: ".get_post_meta( $post_id, 'frace_evento', true ) ."\n";
+		$content .= "Fechs Inicio: ".get_post_meta( $post_id, 'fecha_evento', true )."\n";
+		$content .= "Fechs Final: ".get_post_meta( $post_id, 'fecha_evento_fin', true )."\n";
+		$content .= "Dónde se llevara a cabo el evento: ".get_post_meta( $post_id, 'ubicacion_evento', true )."\n";
+		$content .= "Horarios: ".get_post_meta( $post_id, 'horarios_evento', true )."\n";
+		$content .= "Institución u organización: ".get_post_meta( $post_id, 'institucion_evento', true )."\n";
+		$content .= "Fotografía de cartel o publicidad del acontecimiento: ".get_post_meta( $post_id, 'fotografia_evento', true )."\n";
+		$content .= "Correo electrónico: ".get_post_meta( $post_id, 'correo_evento', true );
+
+		$headers = 'From: info@constitucion.cdmx.gob.mx'."\r\n".
+			'X-Mailer: PHP/' . phpversion();
+	
+		return wp_mail($to, $subject, $content, $headers);
 	}
 
 	/**
@@ -327,12 +339,33 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 		if ($post_id) {
 			saveMetaDataTest($post_id, $data);
+			sendMailAdminNewTest($post_id, $data);
 		}
 
 		$result['success'] = 'Tu ensayo se ha enviado correctamente';
-
 	}
 
+	/**	
+	 * ENVIA UN MAIL CUANDO SE GENERA UN NUEVO EVENTO DESDE PARTICIPA
+	 * @return [type]          [description]
+	 */
+	function sendMailAdminNewTest($post_id, $data){
+		$url_edit = admin_url().'post.php?post='.$post_id.'&action=edit';
+		$to = "alan.grabinsky@gmail.com";
+		$subject = "constitucion.cdmx.gob.mx - Se guardo un nuevo Ensayo";
+		$content = "Hay un nuevo Ensayo en constitucion.cdmx.gob.mx \n\n";
+		$content .= $data['titulo_ensayo'].' - <a href="'.$url_edit.'">Ver Ensayo</a>';
+		
+		$headers = 'From: info@constitucion.cdmx.gob.mx'."\r\n".
+			'X-Mailer: PHP/' . phpversion();
+	
+		return wp_mail($to, $subject, $content, $headers);
+	}
+
+	/**	
+	 * GUARDA LA INFORMACION DEL ENSAYO 
+	 * @return [type]          [description]
+	 */
 	function saveMetaDataTest($post_id, $data){
 		update_post_meta($post_id, 'tipo-de-evento', 2);
 		foreach ($data as $meta_key => $meta_value):
@@ -343,6 +376,10 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 	}
 
+	/**	
+	 * GUARDA LA INFORMACION DEL EVENTO
+	 * @return [type]          [description]
+	 */
 	function saveMetaDataEvent($post_id, $data){
 		update_post_meta($post_id, 'tipo-de-evento', 2);
 		foreach ($data as $meta_key => $meta_value):

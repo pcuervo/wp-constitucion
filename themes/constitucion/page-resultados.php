@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 <script src="<?php echo THEMEPATH; ?>js/zingchart/zingchart.min.js"></script>
 <script src="<?php echo THEMEPATH; ?>js/zingchart/modules/zingchart-treemap.min.js"></script>
-<?php  $survey = Sondeo_CDMX_Survey::get(); ?>
+<?php  
+	$survey = Sondeo_CDMX_Survey::get(); 
+?>
 
 <div class="[ container ][ margin-top--large ]">
 

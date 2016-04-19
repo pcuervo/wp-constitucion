@@ -565,6 +565,7 @@ class Sondeo_CDMX_Survey {
 	private function insert_answer_with_commas( $question_id, $answers, $ref_code ){
 		$answer_arr = explode( ',', $answers );
 		foreach ( $answer_arr as $key => $answer ) {
+			// $this->insert_user_answer( $question_id, trim( $answer ), $ref_code );
 			$this->insert_user_answer( $question_id, $answer, $ref_code );
 		}
 	}
@@ -646,15 +647,16 @@ class Sondeo_CDMX_Survey {
 
 		if( self::Q_GRANDES_RETOS == $question_id){
 			$retos = implode( ',', $this->get_options_grandes_retos() );
-			$retos = str_replace( 'otro,', '', $retos );
+			//$retos = str_replace( 'otro,', '', $retos );
 			$word_results = $wpdb->get_results('
 				SELECT TRIM( LOWER( answer ) ) as answer, COUNT( answer ) as occurrences
 				FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
 				WHERE question_id = ' . $question_id . '
-				AND FIND_IN_SET( answer, "' . $retos . '")
-				GROUP BY TRIM( LOWER( answer) )
+				AND FIND_IN_SET( TRIM( LOWER( answer ) ), "' . $retos . '")
+				GROUP BY TRIM( TRIM( LOWER( answer ) ) )
 				ORDER BY answer, occurrences'
 			);
+			// echo $wpdb->last_query;//lists only single query
 		} else {
 			$word_results = $wpdb->get_results('
 				SELECT TRIM( LOWER( answer ) ) as answer, COUNT( answer ) as occurrences
@@ -739,6 +741,20 @@ class Sondeo_CDMX_Survey {
 
 		return $latest_answers;
 	}// get_number_of_answers_by_question
+
+	/**
+	 * Delete trash answers from Retos
+	 */
+	public function delete_trash_answers() {
+		global $wpdb;
+		$retos = implode( ',', $this->get_options_grandes_retos() );
+		$word_results = $wpdb->query('
+			DELETE FROM ' . $wpdb->prefix . 'sondeo_cdmx_user_answers
+			WHERE question_id = 26
+			AND NOT FIND_IN_SET( TRIM( LOWER( answer ) ) , "' . $retos . '")'
+		);
+		echo $word_results;
+	}
 
 	/**
 	 * Delete an existing survey 

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class RetosParticipante {
 
@@ -10,7 +10,7 @@ class RetosParticipante {
 		if ( $folio == '' )  {
 	        return false;
 	    }
-		
+
 		$this->folio = $folio;
 		$this->retos = $this->get_retos_folio();
 	}
@@ -24,7 +24,7 @@ class RetosParticipante {
 		return $this->get_posts_pubpub();
 	}
 
-	/**	
+	/**
 	 * ENSAYOS PUBPUB QUE PERTENECEN A LOS RETOS
 	 * @return [array] [ensayos por reto]
 	 */
@@ -54,7 +54,7 @@ class RetosParticipante {
 
 	}
 
-	/**	
+	/**
 	 * REGRESA EL ID DE LOS TERMS TAXOMOMY RELACIONADOS AL FOLIO
 	 * @return [type] [description]
 	 */
@@ -81,7 +81,7 @@ class RetosParticipante {
 	{
 		global $wpdb;
 		$prefix = $wpdb->prefix;
-	
+
 		return $wpdb->get_results("SELECT * FROM {$prefix}sondeo_cdmx_user_answers
 				WHERE reference_code = '{$this->folio}' AND question_id = 26; ", OBJECT );
 	}
@@ -98,7 +98,7 @@ class RetosParticipante {
 		$new_arr = array();
 		if ( ! empty($categories) ) {
 			foreach ($categories as $key => $term) {
-				
+
 				$new_arr[$term->name] = $term->term_id;
 			}
 		}

@@ -568,7 +568,7 @@ function getSurveyData(){
     $answers[$cosasValiosasQ] = $cosasValiosas;
 
     console.log( $answers );
-    // saveSurvey( $answers );
+    saveSurvey( $answers );
 }
 
 function saveSurvey( answersObj ){

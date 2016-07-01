@@ -171,6 +171,11 @@
 .width-col-11 { width: 91.66666667%;}
 .width-col-12 { width: 100%;}
 
+@media (min-width: @screen-md){
+	.col-md-1-5{ width: 20%; }
+}
+
+
 // Padding
 // -------------------------
 
@@ -359,12 +364,9 @@
 .bg-light{ background-color:@light; }
 .bg-gray--fondo{background-color: @gray-bg;}
 
-//
-// -------------------------
 .opacity-7{opacity: 0.7;}
 
-//
-// -------------------------
+
 .height-home-video{
   height: 185px;
     @media (min-width: @screen-sm-min){ height: 400px; }
@@ -567,5 +569,33 @@ blockquote canvas {
 		&>p{
 			.margin-bottom;
 		}
+	}
+}
+
+
+
+
+
+// Formas de participar
+// -------------------------
+
+.formas-de-participar .col-xs-6{
+	width: 50%;
+
+	&:last-child{
+		float: none;
+		clear: both;
+		margin: 0 auto;
+		top: 20px;
+
+		@media (min-width: @screen-md){
+			margin: 0;
+			float: left; clear: none;
+			top: 0;
+		}
+	}
+
+	@media (min-width: @screen-md){
+		width: 20%;
 	}
 }

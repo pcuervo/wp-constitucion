@@ -80,6 +80,7 @@
 		$paso_b = get_post_meta($post->ID, 'paso_b', true);
 		$paso_c = get_post_meta($post->ID, 'paso_c', true);
 		$paso_d = get_post_meta($post->ID, 'paso_d', true);
+		$paso_e = get_post_meta($post->ID, 'paso_e', true);
 
 		wp_nonce_field(__FILE__, '_pasos_nonce');
 
@@ -94,6 +95,9 @@
 
 		echo "<label for='paso_d' class='label-paquetes'>Paso 4: </label>";
 		echo "<input type='text' class='widefat' id='paso_d' name='paso_d' value='$paso_d'/><br><br>";
+
+		echo "<label for='paso_e' class='label-paquetes'>Paso 5: </label>";
+		echo "<input type='text' class='widefat' id='paso_e' name='paso_e' value='$paso_e'/><br><br>";
 
 	}
 
@@ -338,6 +342,7 @@
 			update_post_meta($post_id, 'paso_b', $_POST['paso_b']);
 			update_post_meta($post_id, 'paso_c', $_POST['paso_c']);
 			update_post_meta($post_id, 'paso_d', $_POST['paso_d']);
+			update_post_meta($post_id, 'paso_e', $_POST['paso_e']);
 		}
 
 		if ( isset($_POST['tipo-de-evento']) and check_admin_referer(__FILE__, '_evento_nonce') ){

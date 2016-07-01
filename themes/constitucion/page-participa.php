@@ -24,8 +24,8 @@
 				<?php the_content(); ?>
 			</div>
 		</div>
-		<div class="[ row ][ margin-top ][ padding--sides--xsm ]">
-			<div class="[ col-xs-6 col-md-3 ]">
+		<div class="[ row ][ margin-top ][ padding--sides--xsm ][ formas-de-participar ]">
+			<div class="[ col-xs-6 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">1</p>
 					<p class="[ fz-small text-left ]">
@@ -35,7 +35,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="[ col-xs-6 col-md-3 ]">
+			<div class="[ col-xs-6 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">2</p>
 					<p class="[ fz-small text-left ]">
@@ -46,7 +46,7 @@
 				</div>
 			</div>
 			<div class="[ clearfix ][ visible-xs ]"></div>
-			<div class="[ col-xs-6 col-md-3 ]">
+			<div class="[ col-xs-6 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">3</p>
 					<p class="[ fz-small text-left ]">
@@ -56,12 +56,22 @@
 					</p>
 				</div>
 			</div>
-			<div class="[ col-xs-6 col-md-3 ]">
+			<div class="[ col-xs-6 ]">
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">4</p>
 					<p class="[ fz-small text-left ]">
 						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucioncdmx.pubpub.org/" target="_blank">
 							<?php echo get_post_meta($post->ID, 'paso_d', true);?>
+						</a>
+					</p>
+				</div>
+			</div>
+			<div class="[ col-xs-6 ]">
+				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
+					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">5</p>
+					<p class="[ fz-small text-left ]">
+						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucioncdmx.pubpub.org/" target="_blank" title="Esta forma de participar es puesta a tu disposición por el Instituto Electoral del Distrito Federal. Al dar click en esta opción, saldrás de la plataforma Constitución CDMX – Espacio de Encuentro.">
+							<?php echo get_post_meta($post->ID, 'paso_e', true);?>
 						</a>
 					</p>
 				</div>

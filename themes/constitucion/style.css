@@ -7655,6 +7655,11 @@ ul.slick-dots li.slick-active {
 .width-col-12 {
   width: 100%;
 }
+@media (min-width: 992px) {
+  .col-md-1-5 {
+    width: 20%;
+  }
+}
 .no-padding {
   padding: 0 !important;
 }
@@ -8355,6 +8360,28 @@ blockquote canvas {
 }
 .retos a > p {
   margin-bottom: 20px;
+}
+.formas-de-participar .col-xs-6 {
+  width: 50%;
+}
+.formas-de-participar .col-xs-6:last-child {
+  float: none;
+  clear: both;
+  margin: 0 auto;
+  top: 20px;
+}
+@media (min-width: 992px) {
+  .formas-de-participar .col-xs-6:last-child {
+    margin: 0;
+    float: left;
+    clear: none;
+    top: 0;
+  }
+}
+@media (min-width: 992px) {
+  .formas-de-participar .col-xs-6 {
+    width: 20%;
+  }
 }
 @-ms-viewport {
   width: device-width;

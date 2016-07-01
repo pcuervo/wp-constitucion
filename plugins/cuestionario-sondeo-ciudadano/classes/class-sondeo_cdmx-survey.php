@@ -267,15 +267,9 @@ class Sondeo_CDMX_Survey {
 							</li>
 							<!-- <li id="js-dedicas" data-question="9">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q4">¿A qué te dedicas?</label>
-								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q4-1" name="dedicas" type="radio" value="estudio" /><label for="q4-1" class="radio-si">Estudio</label></span>
-									<span><input id="q4-2" name="dedicas" type="radio" value="trabajo" /><label for="q4-2" class="radio-no">Trabajo</label></span>
-									<span><input id="q4-2" name="dedicas" type="radio" value="ambas" /><label for="q4-2" class="radio-no">Ambas</label></span>
-									<span><input id="q4-2" name="dedicas" type="radio" value="ninguna" /><label for="q4-2" class="radio-no">Ninguna</label></span>
-								</div>
 								<!-- <textarea class="fs-anim-lower" id="q4" name="q4" placeholder=""></textarea> 
 							</li> -->
-							<li id="js-dedicas-multiple" data-input-trigger>
+ 							<li id="js-dedicas-multiple" data-input-trigger>
 								<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="genero">¿A qué te dedicas?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 									<span><input id="q9-1" name="dedicas" type="radio" value="estudio" /><label for="q9-1" class="radio-si">Estudio</label></span>

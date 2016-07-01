@@ -346,14 +346,6 @@
 
         }
 
-        if( parseInt( isPageSondeo ) ){
-
-            $('.js-reset').on('click', function(){
-                console.log('click');
-            });
-
-        }
-
         $('.flex-prev, .flex-next').addClass('hidden-xs');
 
         $(window).scroll(function() {

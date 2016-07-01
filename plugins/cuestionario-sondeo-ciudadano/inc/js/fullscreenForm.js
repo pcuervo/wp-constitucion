@@ -117,6 +117,9 @@
 		// continue button (jump to next field)
 		this.ctrlContinue = createElement( 'button', { cName : '[ fs-continue btn btn-primary btn--large', inner : 'Siguiente', appendTo : this.ctrls } );
 		this.ctrlReset = createElement( 'button', { cName : '[ fs-reset btn btn-primary btn--large ][ js-reset ] ', inner : 'Reiniciar', appendTo : this.ctrls } );
+        this.ctrlReset.addEventListener( 'click', function() {
+            location.reload( true );
+        });
 		this._showCtrl( this.ctrlContinue );
 
 		// navigation dots
@@ -196,9 +199,8 @@
 						[].slice.call( fld.querySelectorAll( 'input[type="radio"]' ) ).forEach( function( inp ) {
 							inp.addEventListener( 'change', function(ev) {
 
-                                console.log(inp.getAttribute('name'));
-                                console.log(inp.getAttribute('value'));
                                 if (inp.getAttribute('name') == 'dedicas' && inp.getAttribute('value') == 'ninguna') {
+                                    jQuery('#js-dedicas').remove();
                                     jQuery('#js-trabajas').remove();
                                     jQuery('#js-donde-trabajas').remove();
                                     jQuery('#js-trabajas-delegaciones-estados-paises').remove();
@@ -209,15 +211,22 @@
                                 if (inp.getAttribute('name') == 'dedicas' && inp.getAttribute('value') == 'trabajo') {
                                     jQuery('#js-trabajas').remove();
                                     jQuery('#js-estudias').remove();
+                                    jQuery('#js-donde-estudias').remove();
+                                    jQuery('#js-estudias-delegaciones-estados-paises').remove();
                                 }
-								if (inp.getAttribute('name') == 'trabajas' && inp.getAttribute('value') == 'no') {
-									jQuery('#js-donde-trabajas').remove();
-              						jQuery('#js-trabajas-delegaciones-estados-paises').remove();
-								}
-								if (inp.getAttribute('name') == 'estudias' && inp.getAttribute('value') == 'no') {
-									jQuery('#js-donde-estudias').remove();
-              						jQuery('#js-estudias-delegaciones-estados-paises').remove();
-								}
+                                if (inp.getAttribute('name') == 'dedicas' && inp.getAttribute('value') == 'estudio') {
+                                    jQuery('#js-dedicas').remove();
+                                    jQuery('#js-trabajas').remove();
+                                    jQuery('#js-estudias').remove();
+                                    jQuery('#js-donde-trabajas').remove();
+                                    jQuery('#js-trabajas-delegaciones-estados-paises').remove();
+                                }
+                                if (inp.getAttribute('name') == 'dedicas' && inp.getAttribute('value') == 'ambas') {
+                                    jQuery('#js-trabajas').remove();
+                                    jQuery('#js-estudias').remove();
+                                    jQuery('#js-donde-estudias').remove();
+                                    jQuery('#js-estudias-delegaciones-estados-paises').remove();
+                                }
 								self._nextField();
 
 							} );

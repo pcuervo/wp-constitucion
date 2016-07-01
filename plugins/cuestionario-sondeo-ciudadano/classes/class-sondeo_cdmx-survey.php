@@ -252,7 +252,7 @@ class Sondeo_CDMX_Survey {
 								</div> -->
 							</li>
 							<li id="js-delegaciones-estados-paises"></li>
-							<li id="js-genero" data-input-trigger data-question="7">
+<!-- 							<li id="js-genero" data-input-trigger data-question="7">
 								<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="genero">Género</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 									<span><input id="q1-1" name="genero" type="radio" value="mujer" /><label for="q1-1" class="radio-mujer">Mujer</label></span>
@@ -264,7 +264,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-edad" data-question="8">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Edad</label>
 								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="¿Cuántos años tienes?" required/>
-							</li>
+							</li> -->
 							<!-- <li id="js-dedicas" data-question="9">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q4">¿A qué te dedicas?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
@@ -328,7 +328,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-estudias-delegaciones-estados-paises" data-input-trigger data-question="19">
 							</li>
 
-							<li id="js-naciste-cdmx" data-input-trigger data-question="24">
+							<!-- <li id="js-naciste-cdmx" data-input-trigger data-question="24">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="naciste-cdmx">¿Naciste en la CDMX?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 									<span><input id="q7-1" name="naciste-cdmx" type="radio" value="si" /><label for="q7-1" class="radio-si">Sí</label></span>
@@ -371,7 +371,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-cosas-valiosas" data-question="32">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">¿Cuáles son las tres cosas más valiosas de la CDMX?</label>
 								<input class="fs-anim-lower" id="q14" name="cosas-valiosas" type="text" placeholder="Ej. palabra1, palabra2, palabra3" comma-required/>
-							</li>
+							</li> -->
 							<li id="js-captcha" data-question="999">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Necesitamos asegurarnos de que no seas un robot. ¿Cuánto es <span></span> + <span></span>?</label>
 								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="" captcha-required/>

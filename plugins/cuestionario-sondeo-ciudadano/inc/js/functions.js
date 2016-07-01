@@ -431,12 +431,25 @@ function getSurveyData(){
     $edad = $('#js-edad input').val()
     $answers[$edadQ] = $edad;
 
-    $dedicasQ = $('#js-dedicas').data('question');
-    $dedicas = $('#js-dedicas textarea').val()
+    $dedicas = $('#js-dedicas');
+    $dedicasMulitple = $('#js-dedicas-multiple input:checked').val();
+    $dedicasQ = 9;
+    if( 0 < $dedicas.length ){
+        $dedicas = $('#js-dedicas textarea').val()
+    } else {
+        $dedicas = $('#js-dedicas-multiple input:checked').val()
+    }
     $answers[$dedicasQ] = $dedicas;
 
-    $trabajasQ = $('#js-trabajas').data('question');
-    $trabajas = $('#js-trabajas input:checked').val()
+    $trabajas = $('#js-trabajas');
+    $trabajasQ = 10;
+    if( 0 < $trabajas.length ){
+        $trabajas = $('#js-trabajas input:checked').val()
+    } else if ( 'ninguna' == $dedicas || 'estudio' == $dedicasMulitple ) {
+        $trabajas = 'no';
+    } else if( 'trabajo' == $dedicasMulitple || 'ambas' == $dedicasMulitple ){
+        $trabajas = 'si';
+    }
     $answers[$trabajasQ] = $trabajas;
 
     $lugarTrabajoQ = $('#js-donde-trabajas').data('question');
@@ -454,8 +467,15 @@ function getSurveyData(){
         $answers[$coloniaTrabajoQ] = $coloniaTrabajo;
     }
 
-    $estudiasQ = $('#js-estudias').data('question');
-    $estudias = $('#js-estudias input:checked').val()
+    $estudias = $('#js-estudias');
+    $estudiasQ = 17;
+    if( 0 < $estudias.length ){
+        $estudias = $('#js-estudias input:checked').val()
+    } else if ( 'ninguna' == $dedicas || 'trabajo' == $dedicasMulitple ) {
+        $estudias = 'no';
+    } else if( 'estudio' == $dedicasMulitple || 'ambas' == $dedicasMulitple ){
+        $estudias = 'si';
+    }
     $answers[$estudiasQ] = $estudias;
 
     $lugarEstudioQ = $('#js-donde-estudias').data('question');
@@ -471,6 +491,40 @@ function getSurveyData(){
         $coloniaEstudioQ = $('#js-estudias-colonias').data( 'question' );
         $coloniaEstudio = $('#js-estudias-colonias select option:selected').val();
         $answers[$coloniaEstudioQ] = $coloniaEstudio;
+    }
+
+    if( 'trabajo' == $dedicasMulitple || 'ambas' == $dedicasMulitple ){
+        $lugarEstudioQ = 18;
+        $lugarEstudio = $('#js-donde-trabajas select option:selected').val();
+        $answers[$lugarEstudioQ] = getLugarResidencia( $lugarTrabajo );
+
+        $delegacionEstadoPaisMunicipioEstudiasQ = 19;
+        $delegacionEstadoPaisMunicipioEstudias = $('#js-trabajas-delegaciones-estados-paises select option:selected').val()
+        $answers[$delegacionEstadoPaisMunicipioEstudiasQ] = $delegacionEstadoPaisMunicipioEstudias;
+
+        $coloniaTrabajo = $('#js-trabajas-colonias select');
+        if( 0 < $coloniaTrabajo.length ){
+            $coloniaEstudioQ = 20;
+            $coloniaEstudio = $('#js-trabajas-colonias select option:selected').val();
+            $answers[$coloniaEstudioQ] = $coloniaEstudio;
+        }
+    }
+
+    if( 'estudio' == $dedicasMulitple ){
+        $lugarTrabajoQ = 11;
+        $lugarTrabajo = $('#js-donde-estudias select option:selected').val();
+        $answers[$lugarTrabajoQ] = getLugarResidencia( $lugarTrabajo );
+
+        $delegacionEstadoPaisMunicipioEstudiasQ = 12;
+        $delegacionEstadoPaisMunicipioEstudias = $('#js-estudias-delegaciones-estados-paises select option:selected').val()
+        $answers[$delegacionEstadoPaisMunicipioEstudiasQ] = $delegacionEstadoPaisMunicipioEstudias;
+
+        $coloniaTrabajo = $('#js-estudias-colonias select');
+        if( 0 < $coloniaTrabajo.length ){
+            $coloniaTrabajoQ = 13;
+            $coloniaTrabajo = $('#js-estudias-colonias select option:selected').val();
+            $answers[$coloniaTrabajoQ] = $coloniaTrabajo;
+        }
     }
 
     $nacisteCDMXQ = $('#js-naciste-cdmx').data('question');
@@ -513,7 +567,8 @@ function getSurveyData(){
     $cosasValiosas = $('#js-cosas-valiosas input').val();
     $answers[$cosasValiosasQ] = $cosasValiosas;
 
-    saveSurvey( $answers );
+    console.log( $answers );
+    // saveSurvey( $answers );
 }
 
 function saveSurvey( answersObj ){

@@ -116,6 +116,7 @@
 
 		// continue button (jump to next field)
 		this.ctrlContinue = createElement( 'button', { cName : '[ fs-continue btn btn-primary btn--large', inner : 'Siguiente', appendTo : this.ctrls } );
+		this.ctrlReset = createElement( 'button', { cName : '[ fs-reset btn btn-primary btn--large ][ js-reset ] ', inner : 'Reiniciar', appendTo : this.ctrls } );
 		this._showCtrl( this.ctrlContinue );
 
 		// navigation dots
@@ -193,7 +194,7 @@
 
 					case 'input' :
 						[].slice.call( fld.querySelectorAll( 'input[type="radio"]' ) ).forEach( function( inp ) {
-							inp.addEventListener( 'change', function(ev) { 
+							inp.addEventListener( 'change', function(ev) {
 
                                 if (inp.getAttribute('name') == 'dedicas' && inp.getAttribute('value') == 'ninguna') {
                                     jQuery('#js-dedicas').remove();
@@ -224,7 +225,7 @@
                                     jQuery('#js-estudias-delegaciones-estados-paises').remove();
                                 }
 								self._nextField();
-								 
+
 							} );
 						} );
 						break;

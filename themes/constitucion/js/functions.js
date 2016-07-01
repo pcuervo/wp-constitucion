@@ -211,6 +211,7 @@
         if( parseInt( isPageSondeo ) ){
             $('[data-parsley-certificado]').parsley();
         }
+
         if( parseInt( isPageParticipa ) ){
             addWordValidator();
             $('[data-parsley-certificado]').parsley();
@@ -341,6 +342,14 @@
                 else{
                     $('header').removeClass("sticky");
                 }
+            });
+
+        }
+
+        if( parseInt( isPageSondeo ) ){
+
+            $('.js-reset').on('click', function(){
+                console.log('click');
             });
 
         }

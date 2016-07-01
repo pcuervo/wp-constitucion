@@ -677,14 +677,14 @@ a.fs-continue,
 	color: #232529;
 }
 
-button.fs-continue {
+button.fs-continue, button.fs-reset {
 	margin: 0;
 	font-size: 1.25em;
     position: absolute; right: 0; bottom: 60px;
     z-index: 99;
 }
 
-.fs-continue::after {
+.fs-continue::after, .fs-reset::after {
 	position: absolute;
 	top: 100%;
 	left: -20px;
@@ -696,6 +696,8 @@ button.fs-continue {
 	font-size: 0.65em;
 	pointer-events: none;
 }
+
+button.fs-reset { left: 0; }
 
 /* Error message */
 .fs-message-error {
@@ -857,11 +859,11 @@ input[type=text]::-ms-clear {
 		right: 25px;
 	}
 
-	button.fs-continue {
-		bottom: 20px;
+	button.fs-continue, button.fs-reset {
+		bottom: 40px;
 	}
 
-	.fs-continue::after {
+	.fs-continue::after .fs-reset::after {
 		content: '';
 	}
 
@@ -953,6 +955,6 @@ div.fade-out:active{
 
 	.accept-terms{ margin-top: 40px; }
 
-	button.fs-continue{ bottom: 30px; }
+	button.fs-continue, button.fs-reset{ bottom: 30px; }
 
 }

@@ -2,6 +2,30 @@ $ = jQuery.noConflict();
 
 (function() {
 
+    // addDelegacionesDondeVives(); 
+    $('input[name="ubicacion"]').change(function(){
+        var lugar = this.value;
+        $('#js-delegaciones-estados-paises').empty();
+        switch( lugar ){
+            case 'zmvm':
+                showMunicipios( '' );
+                break;
+            case 'resto-republica':
+                showEstados( '' );
+                break;
+            case 'fuera-mexico':
+                showPaises( '' );
+                break;
+            default:
+                console.log( lugar );
+                //$('#js-delegaciones-estados-paises').remove();
+                showColonias( lugar, '' );
+                $('#js-delegaciones-estados-paises').remove();
+        }
+        $('.fs-continue').show();
+        $('.fs-continue').click();
+    });
+
     var formWrap = document.getElementById( 'fs-form-wrap' );
     [].slice.call( document.querySelectorAll( '#js-donde-vives select.cs-select' ) ).forEach( function(el) {
         new SelectFx( el, {
@@ -381,6 +405,7 @@ function getSurveyData(){
 
     $lugarResidenciaQ = $('#js-donde-vives').data('question');
     $lugarResidencia = $('#js-donde-vives select option:selected').val();
+    $lugarResidencia = $('#js-donde-vives input:selected').val();
     $answers[$lugarResidenciaQ] = getLugarResidencia( $lugarResidencia );
 
     $delegacionEstadoPaisMunicipioQ = $('#js-delegaciones-estados-paises').data('question');
@@ -537,8 +562,11 @@ function getLugarResidencia( slug ){
         case 'resto-republica':
             lugar = 'Zona Metropolitana';
             break;
-        default:
+        case 'fuera-mexico':
             lugar = 'Fuera de México';
+            break;
+        default:
+            lugar = 'CDMX';
     }
     return lugar;
 }
@@ -553,10 +581,28 @@ function countChar(val, maxlength, el) {
   };
 
 $('#return-site').on('click', function(event){
-
     var r = confirm("No se guardarán tus respuestas si sales de esta página, ¿deseas salir?");
     if (r == false) {
         event.preventDefault();
     }
 });
+
+function addDelegacionesDondeVives(){
+    var delegacionesHTML = '';
+    $.each( allDelegaciones, function(i, val){
+        //var delegacionSlug = convertToSlug( val.delegacion );
+        delegacionesHTML += '<span><input id="' + i + '" name="ubicacion" type="radio" value="' + val.delegacion + '" /><label for="' + i + '" class="radio-fuera-mexico">' + val.delegacion + '</label></span>';
+    });
+    $('#radio-donde-vives').append( delegacionesHTML );
+}
+
+/**
+* Converts a given text to a Web URL friendly text
+* @param {String} text
+* @return {String} slug
+*/
+function convertToSlug( text ){
+    var slug = text.toLowerCase().replace(/[^\w ]+/g,'').replace(/ +/g,'-');
+    return slug;
+}// convertToSlug
 

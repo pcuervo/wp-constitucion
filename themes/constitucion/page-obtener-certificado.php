@@ -3,7 +3,7 @@ if( ! isset( $_GET['referencia'] ) || $_GET['referencia'] == '' ):
 	echo 'Referencia no registrada';
 else:
 	$retos = new RetosParticipante($_GET['referencia']);
-	$retos = $retos->get_retos_relacionados();?>
+	$retos = $retos->get_retos_relacionados(); ?>
 
 	<section class="[ container ][ margin-top--large ][ text-center ]">
 		<img class="[ img-logo ]" src="<?php echo THEMEPATH; ?>/images/logo-horizontal.gif" alt="Logo horizontal Constitución CDMX">
@@ -29,12 +29,13 @@ else:
 		<div class="[ row ][ retos ]">
 			<?php if(! empty($retos)):
 				foreach ($retos as $key => $reto):
+
 					$term = get_term_by('id', $key, 'taxonomy-grandes-retos'); ?>
 					<div class="[ col-xs-12 col-sm-3 ][ margin-bottom--large ]">
 						<h3><?php echo $term->name ?></h3><!-- reto 1 -->
 						<?php if ( empty($reto) ) echo '<p>Próximamente</p>'; ?>
 						<?php foreach ($reto as $key => $pubpub):
-							$url_pubpub = get_post_meta($pubpub->ID, 'url_pubpub', true); ?>
+							$url_pubpub = get_post_meta( $pubpub->ID, 'url_pubpub', true ); ?>
 							<a href="<?php echo $url_pubpub; ?>" target="_blank">
 								<img class="[ svg icon icon--iconed icon--thickness-05 icon--stoke ][ color-gray ]"  src="<?php echo THEMEPATH; ?>icons/bookmark-article.svg" alt="icono de ensayos">
 								<p><?php echo $pubpub->post_title; ?></p>

@@ -44,7 +44,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 		wp_enqueue_script( 'jquery', 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js', array(), '2.0.3', true );
 		wp_enqueue_script('jquery-ui-datepicker');
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.min.js', array('jquery'), '1.0', true );
-		wp_enqueue_script( 'api-google', 'https://maps.google.com/maps/api/js?libraries=places&language=es&key=AIzaSyBa-P_2_xm1FQOYfZ1h-86QDvI9KQdhxtI', array('plugins'), '1.0', true );
+		wp_enqueue_script( 'api-google', 'https://maps.google.com/maps/api/js?libraries=places&language=es&key=AIzaSyBXbTzYc_7n0zJmDlLKz8-Ud1iZU_8ug24', array('plugins'), '1.0', true );
 		wp_enqueue_script( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js', array('jquery'), '3.1.0', true );
 		wp_enqueue_script( 'functions', JSPATH.'functions.min.js', array('plugins'), '1.0', true );
 
@@ -80,7 +80,7 @@ add_action( 'admin_menu', 'change_post_menu_label' );
 
 		// scripts
 		wp_enqueue_script('jquery-ui-datepicker');
-		wp_enqueue_script( 'api-google', 'https://maps.google.com/maps/api/js?libraries=places&language=en-AU&key=AIzaSyBa-P_2_xm1FQOYfZ1h-86QDvI9KQdhxtI', array('jquery'), '1.0', true );
+		wp_enqueue_script( 'api-google', 'https://maps.google.com/maps/api/js?libraries=places&language=en-AU&key=AIzaSyBXbTzYc_7n0zJmDlLKz8-Ud1iZU_8ug24', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'admin-js', JSPATH.'admin.js', array('api-google'), '1.0', true );
 
 		// localize scripts

@@ -168,6 +168,7 @@
 				self._changeOption();
 				// close select elem
 				self._toggleSelect();
+                $('.fs-continue').click();
 			} );
 		} );
 

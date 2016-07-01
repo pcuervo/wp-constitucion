@@ -245,6 +245,11 @@ class Sondeo_CDMX_Survey {
 									<option value="resto-republica">Resto de la República</option>
 									<option value="fuera-mexico">Fuera de México</option>
 								</select>
+<!-- 								<div id="radio-donde-vives" class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+									<span><input id="q1-1" name="ubicacion" type="radio" value="zmvm" /><label for="q1-1" class="radio-zmvm">Zona Metropolitana</label></span>
+									<span><input id="q1-2" name="ubicacion" type="radio" value="resto-republica" /><label for="q1-2" class="radio-resto-republica">Resto de la república</label></span>
+									<span><input id="q1-3" name="ubicacion" type="radio" value="fuera-mexico" /><label for="q1-3" class="radio-fuera-mexico">Fuera de México</label></span>
+								</div> -->
 							</li>
 							<li id="js-delegaciones-estados-paises"></li>
 							<li id="js-genero" data-input-trigger data-question="7">
@@ -260,9 +265,28 @@ class Sondeo_CDMX_Survey {
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Edad</label>
 								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="¿Cuántos años tienes?" required/>
 							</li>
-							<li id="js-dedicas" data-question="9">
+							<!-- <li id="js-dedicas" data-question="9">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q4">¿A qué te dedicas?</label>
-								<textarea class="fs-anim-lower" id="q4" name="q4" placeholder=""></textarea>
+								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+									<span><input id="q4-1" name="dedicas" type="radio" value="estudio" /><label for="q4-1" class="radio-si">Estudio</label></span>
+									<span><input id="q4-2" name="dedicas" type="radio" value="trabajo" /><label for="q4-2" class="radio-no">Trabajo</label></span>
+									<span><input id="q4-2" name="dedicas" type="radio" value="ambas" /><label for="q4-2" class="radio-no">Ambas</label></span>
+									<span><input id="q4-2" name="dedicas" type="radio" value="ninguna" /><label for="q4-2" class="radio-no">Ninguna</label></span>
+								</div>
+								<!-- <textarea class="fs-anim-lower" id="q4" name="q4" placeholder=""></textarea> 
+							</li> -->
+							<li id="js-dedicas-multiple" data-input-trigger>
+								<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="genero">¿A qué te dedicas?</label>
+								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+									<span><input id="q9-1" name="dedicas" type="radio" value="estudio" /><label for="q9-1" class="radio-si">Estudio</label></span>
+									<span><input id="q9-2" name="dedicas" type="radio" value="trabajo" /><label for="q9-2" class="radio-no">Trabajo</label></span>
+									<span><input id="q9-3" name="dedicas" type="radio" value="ambas" /><label for="q9-3" class="radio-no">Ambas</label></span>
+									<span><input id="q9-4" name="dedicas" type="radio" value="ninguna" /><label for="q9-4" class="radio-no">Ninguna</label></span>
+								</div>
+							</li>
+							<li id="js-dedicas" data-question="9">
+								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q4">¿En qué trabajas?</label>
+								<textarea class="fs-anim-lower" id="q4" name="q4" placeholder=""></textarea> 
 							</li>
 							<li id="js-trabajas" data-input-trigger data-question="10">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="trabajas">¿Trabajas?</label>
@@ -281,10 +305,8 @@ class Sondeo_CDMX_Survey {
 									<option value="fuera-mexico">Fuera de México</option>
 								</select>
 							</li>
-
 							<li id="js-trabajas-delegaciones-estados-paises" data-input-trigger data-question="12">
 							</li>
-
 							<li id="js-estudias" data-input-trigger data-question="17">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="estudias">¿Estudias?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
@@ -337,7 +359,7 @@ class Sondeo_CDMX_Survey {
 								<input class="fs-anim-lower" id="q11" name="obstaculos-principales" type="text" placeholder="Ej. palabra1, palabra2, palabra3" comma-required/>
 							</li>
 							<li id="js-vision-realidad" data-question="30">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="vision-realidad" data-info="Máximo 140 caracteres.">Imagina que es el año 2036. Tu visión se hizo realidad ¿qué tuvo que hacer el gobierno para que esto sucediera?</label>
+								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="vision-realidad" data-info="Máximo 140 caracteres.">Imagina que es el año 2036. Tu visión se hizo realidad. ¿Qué tuvo que hacer el gobierno para que esto sucediera?</label>
 								<textarea class="fs-anim-lower" id="q12" name="vision-realidad" placeholder="" maxlength="140" onkeyup="countChar(this, 140, '#counter-vision')"></textarea>
 								<span class="[ color-primary ]" id="counter-vision">140</span>
 							</li>
@@ -347,7 +369,7 @@ class Sondeo_CDMX_Survey {
 								<span class="[ color-primary ]" id="counter-tuviste">140</span>
 							</li>
 							<li id="js-cosas-valiosas" data-question="32">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">Si pensaras en las tres cosas más valiosas de la CDMX que deben ser protegidas o potenciadas ¿qué palabras te vienen a la mente?</label>
+								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">¿Cuáles son las tres cosas más valiosas de la CDMX?</label>
 								<input class="fs-anim-lower" id="q14" name="cosas-valiosas" type="text" placeholder="Ej. palabra1, palabra2, palabra3" comma-required/>
 							</li>
 							<li id="js-captcha" data-question="999">
@@ -664,7 +686,7 @@ class Sondeo_CDMX_Survey {
 				WHERE question_id = ' . $question_id . '
 				AND answer <> ""
 				GROUP BY TRIM( LOWER( answer) )
-				ORDER BY answer, occurrences'
+				ORDER BY occurrences DESC, answer LIMIT 35'
 			);
 		}
 

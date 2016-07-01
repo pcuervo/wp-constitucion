@@ -31,7 +31,6 @@ class RetosParticipante {
 	private function get_posts_pubpub()
 	{
 		$ids_terms_retos = $this->get_id_retos_relacionados();
-
 		$posts = array();
 		foreach ($ids_terms_retos as $id_term) {
 			$args = array(
@@ -51,7 +50,6 @@ class RetosParticipante {
 		}
 
 		return $posts;
-
 	}
 
 	/**	
@@ -98,7 +96,6 @@ class RetosParticipante {
 		$new_arr = array();
 		if ( ! empty($categories) ) {
 			foreach ($categories as $key => $term) {
-				
 				$new_arr[$term->name] = $term->term_id;
 			}
 		}

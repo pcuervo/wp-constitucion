@@ -291,5 +291,5 @@
 	add_action( 'admin_init', 'quitar_menus' );
 	function quitar_menus() { 
 		remove_menu_page('edit-comments.php');
-		remove_menu_page( 'edit.php?post_type=feedback' );
+		//remove_menu_page( 'edit.php?post_type=feedback' );
 	}

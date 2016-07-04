@@ -108,7 +108,7 @@
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#dialogos-publicos">Encuentros ciudadanos</a></li>
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
-								<li><a class="gtm-btn-menu" href="#">Propuestas ciudadanas</a></li>
+								<li><a class="gtm-btn-menu" href="https://portal.iedf.org.mx/constituyente/propuestas/" target="_blank">Propuestas ciudadanas</a></li>
 							</ul>
 						</li><li
 						class="[ text-uppercase ] <?php echo $activeNoticias; ?>">
@@ -231,7 +231,7 @@
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#peticiones">Peticiones</a></li>
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#dialogos-publicos">Encuentros ciudadanos</a></li>
 								<li><a class="gtm-btn-menu" href="<?php echo site_url('/participa/'); ?>#ensayos">Ensayos</a></li>
-								<li><a class="gtm-btn-menu" href="#">Propuestas ciudadanas</a></li>
+								<li><a class="gtm-btn-menu" href="https://portal.iedf.org.mx/constituyente/propuestas/" target="_blank">Propuestas ciudadanas</a></li>
 							</ul>
 						</li>
 						<li class="[ text-uppercase ] <?php echo $activeNoticias; ?>">

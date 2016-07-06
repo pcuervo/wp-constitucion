@@ -1,1 +1,34 @@
 [01-Jul-2016 15:25:49 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 15:29:18 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 15:30:26 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 15:30:28 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 15:31:37 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 15:32:49 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 15:34:55 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 15:36:57 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 15:39:07 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 15:41:18 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 16:54:54 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 16:55:53 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 16:57:17 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 16:59:19 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 17:01:25 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 17:03:25 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 17:05:26 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 17:07:27 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 17:35:46 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 17:36:46 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 17:37:47 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 17:39:47 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 17:41:47 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 17:43:47 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 17:45:47 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 17:47:47 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[01-Jul-2016 19:19:48 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[04-Jul-2016 16:46:37 America/Mexico_City] PHP Warning:  Invalid argument supplied for foreach() in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-admin/includes/plugin.php on line 1445
+[04-Jul-2016 17:19:07 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Abraham\TwitterOAuth\TwitterOAuthException' with message 'Operation timed out after 5000 milliseconds with 0 bytes received' in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php:343
+Stack trace:
+#0 /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(278): Abraham\TwitterOAuth\TwitterOAuth->request('https://api.twi...', 'GET', 'Authorization: ...', Array)
+#1 /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(249): Abraham\TwitterOAuth\TwitterOAuth->oAuthRequest('https://api.twi...', 'GET', Array)
+#2 /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php(178): Abraham\TwitterOAuth\TwitterOAuth->http('GET', 'https://api.twi...', 'search/tweets', Array)
+#3 /Users/micho/Documents/cuervo/sitios/wp in /Users/micho/Documents/cuervo/sitios/wp-constitucion/wp-content/themes/constitucion/inc/twitteroauth-0.5.4/src/TwitterOAuth.php on line 343

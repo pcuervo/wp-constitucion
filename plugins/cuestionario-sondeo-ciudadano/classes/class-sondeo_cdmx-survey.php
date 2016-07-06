@@ -236,40 +236,33 @@ class Sondeo_CDMX_Survey {
 					</div>
 					<form id="myform" class="fs-form fs-form-full" autocomplete="off">
 						<ol class="fs-fields">
+							<!--
 							<li id="js-donde-vives" data-question="1">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">¿En dónde vives?</label>
-								<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
-									<option value="" disabled selected>Selecciona una opción</option>
-									<option value="cdmx">CDMX</option>
-									<option value="zmvm">Zona Metropolitana</option>
-									<option value="resto-republica">Resto de la República</option>
-									<option value="fuera-mexico">Fuera de México</option>
-								</select>
-<!-- 								<div id="radio-donde-vives" class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q1-1" name="ubicacion" type="radio" value="zmvm" /><label for="q1-1" class="radio-zmvm">Zona Metropolitana</label></span>
-									<span><input id="q1-2" name="ubicacion" type="radio" value="resto-republica" /><label for="q1-2" class="radio-resto-republica">Resto de la república</label></span>
-									<span><input id="q1-3" name="ubicacion" type="radio" value="fuera-mexico" /><label for="q1-3" class="radio-fuera-mexico">Fuera de México</label></span>
-								</div> -->
+								<div id="radio-donde-vives" class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+									<span><input id="q1-1" name="ubicacion-vives" type="radio" value="zmvm" /><label for="q1-1" class="radio-zmvm">Zona Metropolitana</label></span>
+									<span><input id="q1-2" name="ubicacion-vives" type="radio" value="resto-republica" /><label for="q1-2" class="radio-resto-republica">Resto de la república</label></span>
+									<span><input id="q1-3" name="ubicacion-vives" type="radio" value="fuera-mexico" /><label for="q1-3" class="radio-fuera-mexico">Fuera de México</label></span>
+
+								</div>
 							</li>
 							<li id="js-delegaciones-estados-paises"></li>
+							
 							<li id="js-genero" data-input-trigger data-question="7">
 								<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="genero">Género</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q1-1" name="genero" type="radio" value="mujer" /><label for="q1-1" class="radio-mujer">Mujer</label></span>
-									<span><input id="q1-2" name="genero" type="radio" value="hombre" /><label for="q1-2" class="radio-hombre">Hombre</label></span>
-									<span><input id="q1-3" name="genero" type="radio" value="otro" /><label for="q1-3" class="radio-otro">Otro</label></span>
-									<span><input id="q1-3" name="genero" type="radio" value="ninguno" /><label for="q1-3" class="radio-otro">Ninguno</label></span>
+									<span><input id="q7-1" name="genero" type="radio" value="mujer" /><label for="q7-1" class="radio-mujer">Mujer</label></span>
+									<span><input id="q7-2" name="genero" type="radio" value="hombre" /><label for="q7-2" class="radio-hombre">Hombre</label></span>
+									<span><input id="q7-3" name="genero" type="radio" value="otro" /><label for="q7-3" class="radio-otro">Otro</label></span>
+									<span><input id="q7-3" name="genero" type="radio" value="ninguno" /><label for="q7-3" class="radio-otro">Ninguno</label></span>
 								</div>
 							</li>
 							<li id="js-edad" data-question="8">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Edad</label>
 								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="¿Cuántos años tienes?" required/>
 							</li>
-							<!-- <li id="js-dedicas" data-question="9">
-								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q4">¿A qué te dedicas?</label>
-								<!-- <textarea class="fs-anim-lower" id="q4" name="q4" placeholder=""></textarea> 
-							</li> -->
- 							<li id="js-dedicas-multiple" data-input-trigger>
+							-->
+  							<li id="js-dedicas-multiple" data-input-trigger>
 								<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="genero">¿A qué te dedicas?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 									<span><input id="q9-1" name="dedicas" type="radio" value="estudio" /><label for="q9-1" class="radio-si">Estudio</label></span>
@@ -278,6 +271,7 @@ class Sondeo_CDMX_Survey {
 									<span><input id="q9-4" name="dedicas" type="radio" value="ninguna" /><label for="q9-4" class="radio-no">Ninguna</label></span>
 								</div>
 							</li>
+							
 							<li id="js-dedicas" data-question="9">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q4">¿En qué trabajas?</label>
 								<textarea class="fs-anim-lower" id="q4" name="q4" placeholder=""></textarea> 
@@ -291,13 +285,12 @@ class Sondeo_CDMX_Survey {
 							</li>
 							<li id="js-donde-trabajas" data-question="11">
 								<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde trabajas?</label>
-								<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
-									<option value="" disabled selected>Selecciona una opción</option>
-									<option value="cdmx">CDMX</option>
-									<option value="zmvm">Zona Metropolitana</option>
-									<option value="resto-republica">Resto de la república</option>
-									<option value="fuera-mexico">Fuera de México</option>
-								</select>
+								<div id="radio-donde-trabajas" class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+									<span><input id="q11-1" name="ubicacion-trabajas" type="radio" value="zmvm" /><label for="q11-1" class="radio-zmvm">Zona Metropolitana</label></span>
+									<span><input id="q11-2" name="ubicacion-trabajas" type="radio" value="resto-republica" /><label for="q11-2" class="radio-resto-republica">Resto de la república</label></span>
+									<span><input id="q11-3" name="ubicacion-trabajas" type="radio" value="fuera-mexico" /><label for="q11-3" class="radio-fuera-mexico">Fuera de México</label></span>
+									
+								</div>
 							</li>
 							<li id="js-trabajas-delegaciones-estados-paises" data-input-trigger data-question="12">
 							</li>
@@ -321,7 +314,7 @@ class Sondeo_CDMX_Survey {
 
 							<li id="js-estudias-delegaciones-estados-paises" data-input-trigger data-question="19">
 							</li>
-
+							<!-- 
 							<li id="js-naciste-cdmx" data-input-trigger data-question="24">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="naciste-cdmx">¿Naciste en la CDMX?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
@@ -365,12 +358,12 @@ class Sondeo_CDMX_Survey {
 							<li id="js-cosas-valiosas" data-question="32">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">¿Cuáles son las tres cosas más valiosas de la CDMX?</label>
 								<input class="fs-anim-lower" id="q14" name="cosas-valiosas" type="text" placeholder="Ej. palabra1, palabra2, palabra3" comma-required/>
-							</li>
+							</li> -->
 							<li id="js-captcha" data-question="999">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Necesitamos asegurarnos de que no seas un robot. ¿Cuánto es <span></span> + <span></span>?</label>
 								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="" captcha-required/>
 								<p class="[ accept-terms ]">Al aceptar, estoy de acuerdo con las políticas de privacidad, términos y condiciones de la plataforma. <a class="[ color-primary ]" target="_blank" href="<?php echo site_url('terminos-y-condiciones/' ); ?>">Ver más</a></p>
-							</li>
+							</li> 
 						</ol><!-- /fs-fields -->
 						<button class="fs-submit" type="submit">Enviar respuestas</button>
 					</form><!-- /fs-form -->

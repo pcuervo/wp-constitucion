@@ -2,10 +2,10 @@ $ = jQuery.noConflict();
 
 (function() {
 
-    // addDelegacionesDondeVives(); 
-    $('input[name="ubicacion"]').change(function(){
+    addDelegacionesRadio( 'vives' ); 
+    addDelegacionesRadio( 'trabajas' ); 
+    $('input[name="ubicacion-vives"]').change(function(){
         var lugar = this.value;
-        $('#js-delegaciones-estados-paises').empty();
         switch( lugar ){
             case 'zmvm':
                 showMunicipios( '' );
@@ -17,12 +17,27 @@ $ = jQuery.noConflict();
                 showPaises( '' );
                 break;
             default:
-                console.log( lugar );
-                //$('#js-delegaciones-estados-paises').remove();
                 showColonias( lugar, '' );
                 $('#js-delegaciones-estados-paises').remove();
         }
-        $('.fs-continue').show();
+        $('.fs-continue').click();
+    });
+    $('input[name="ubicacion-trabajas"]').change(function(){
+        var lugar = this.value;
+        switch( lugar ){
+            case 'zmvm':
+                showMunicipios( 'trabajas' );
+                break;
+            case 'resto-republica':
+                showEstados( 'trabajas' );
+                break;
+            case 'fuera-mexico':
+                showPaises( 'trabajas' );
+                break;
+            default:
+                showColonias( lugar, 'trabajas' );
+                $('#js-trabajas-delegaciones-estados-paises').remove();
+        }
         $('.fs-continue').click();
     });
 
@@ -404,13 +419,19 @@ function getSurveyData(){
     $answers = {};
 
     $lugarResidenciaQ = $('#js-donde-vives').data('question');
-    $lugarResidencia = $('#js-donde-vives select option:selected').val();
     $lugarResidencia = $('#js-donde-vives input:selected').val();
     $answers[$lugarResidenciaQ] = getLugarResidencia( $lugarResidencia );
 
-    $delegacionEstadoPaisMunicipioQ = $('#js-delegaciones-estados-paises').data('question');
-    $delegacionEstadoPaisMunicipio = $('#js-delegaciones-estados-paises select option:selected').val()
+    if( 0 < $('#js-delegaciones-estados-paises') ){
+        $delegacionEstadoPaisMunicipioQ = $('#js-delegaciones-estados-paises').data('question');
+        $delegacionEstadoPaisMunicipio = $('#js-delegaciones-estados-paises select option:selected').val()
+        
+    } else {
+        $delegacionEstadoPaisMunicipioQ = 2;
+        $delegacionEstadoPaisMunicipio = $('#js-donde-vives input:checked').val()
+    }
     $answers[$delegacionEstadoPaisMunicipioQ] = $delegacionEstadoPaisMunicipio;
+    
 
     $colonia = $('#js-colonias select');
     if( 0 < $colonia.length ){
@@ -538,7 +559,6 @@ function getSurveyData(){
     $grandesRetosQ = $('#js-grandes-retos').data('question');
     $grandesRetos = $('#js-grandes-retos input').val();
     $answers[$grandesRetosQ] = $grandesRetos;
-    console.log( $grandesRetos );
 
     $otroRetos = $('#js-otros-retos textarea');
     if( 0 < $otroRetos.length ){
@@ -568,7 +588,7 @@ function getSurveyData(){
     $answers[$cosasValiosasQ] = $cosasValiosas;
 
     console.log( $answers );
-    saveSurvey( $answers );
+    //saveSurvey( $answers );
 }
 
 function saveSurvey( answersObj ){
@@ -633,7 +653,7 @@ function countChar(val, maxlength, el) {
     } else {
       $( el ).text(maxlength - len);
     }
-  };
+};
 
 $('#return-site').on('click', function(event){
     var r = confirm("No se guardarán tus respuestas si sales de esta página, ¿deseas salir?");
@@ -642,13 +662,12 @@ $('#return-site').on('click', function(event){
     }
 });
 
-function addDelegacionesDondeVives(){
+function addDelegacionesRadio( section ){
     var delegacionesHTML = '';
     $.each( allDelegaciones, function(i, val){
-        //var delegacionSlug = convertToSlug( val.delegacion );
-        delegacionesHTML += '<span><input id="' + i + '" name="ubicacion" type="radio" value="' + val.delegacion + '" /><label for="' + i + '" class="radio-fuera-mexico">' + val.delegacion + '</label></span>';
+        delegacionesHTML += '<span><input id="' + section + '-' + i + '" name="ubicacion-' + section + '" type="radio" value="' + val.delegacion + '" /><label for="' + section + '-' + i + '" class="radio-fuera-mexico">' + val.delegacion + '</label></span>';
     });
-    $('#radio-donde-vives').append( delegacionesHTML );
+    $('#radio-donde-' + section).append( delegacionesHTML );
 }
 
 /**

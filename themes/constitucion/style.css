@@ -1169,6 +1169,12 @@ hr {
   border: 0;
   border-top: 1px solid #eeeeee;
 }
+hr.color-primary {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #e80e8a;
+}
 .sr-only {
   position: absolute;
   width: 1px;

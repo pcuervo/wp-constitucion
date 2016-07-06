@@ -236,18 +236,18 @@ class Sondeo_CDMX_Survey {
 					</div>
 					<form id="myform" class="fs-form fs-form-full" autocomplete="off">
 						<ol class="fs-fields">
-							<!--
 							<li id="js-donde-vives" data-question="1">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">¿En dónde vives?</label>
-								<div id="radio-donde-vives" class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								<div id="radio-donde-vives" class="fs-radio-group fs-radio-custom clearfix fs-anim-lower [ text-center ]">
 									<span><input id="q1-1" name="ubicacion-vives" type="radio" value="zmvm" /><label for="q1-1" class="radio-zmvm">Zona Metropolitana</label></span>
 									<span><input id="q1-2" name="ubicacion-vives" type="radio" value="resto-republica" /><label for="q1-2" class="radio-resto-republica">Resto de la república</label></span>
 									<span><input id="q1-3" name="ubicacion-vives" type="radio" value="fuera-mexico" /><label for="q1-3" class="radio-fuera-mexico">Fuera de México</label></span>
-
+									<br/>
+									<hr class="[ color-primary ]">
 								</div>
 							</li>
 							<li id="js-delegaciones-estados-paises"></li>
-							
+
 							<li id="js-genero" data-input-trigger data-question="7">
 								<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="genero">Género</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
@@ -261,7 +261,6 @@ class Sondeo_CDMX_Survey {
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Edad</label>
 								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="¿Cuántos años tienes?" required/>
 							</li>
-							-->
   							<li id="js-dedicas-multiple" data-input-trigger>
 								<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="genero">¿A qué te dedicas?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
@@ -271,10 +270,10 @@ class Sondeo_CDMX_Survey {
 									<span><input id="q9-4" name="dedicas" type="radio" value="ninguna" /><label for="q9-4" class="radio-no">Ninguna</label></span>
 								</div>
 							</li>
-							
+
 							<li id="js-dedicas" data-question="9">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q4">¿En qué trabajas?</label>
-								<textarea class="fs-anim-lower" id="q4" name="q4" placeholder=""></textarea> 
+								<textarea class="fs-anim-lower" id="q4" name="q4" placeholder=""></textarea>
 							</li>
 							<li id="js-trabajas" data-input-trigger data-question="10">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="trabajas">¿Trabajas?</label>
@@ -289,7 +288,8 @@ class Sondeo_CDMX_Survey {
 									<span><input id="q11-1" name="ubicacion-trabajas" type="radio" value="zmvm" /><label for="q11-1" class="radio-zmvm">Zona Metropolitana</label></span>
 									<span><input id="q11-2" name="ubicacion-trabajas" type="radio" value="resto-republica" /><label for="q11-2" class="radio-resto-republica">Resto de la república</label></span>
 									<span><input id="q11-3" name="ubicacion-trabajas" type="radio" value="fuera-mexico" /><label for="q11-3" class="radio-fuera-mexico">Fuera de México</label></span>
-									
+									<br/>
+									<hr class="[ color-primary ]">
 								</div>
 							</li>
 							<li id="js-trabajas-delegaciones-estados-paises" data-input-trigger data-question="12">
@@ -314,7 +314,7 @@ class Sondeo_CDMX_Survey {
 
 							<li id="js-estudias-delegaciones-estados-paises" data-input-trigger data-question="19">
 							</li>
-							<!-- 
+							<!--
 							<li id="js-naciste-cdmx" data-input-trigger data-question="24">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="naciste-cdmx">¿Naciste en la CDMX?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
@@ -363,7 +363,7 @@ class Sondeo_CDMX_Survey {
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Necesitamos asegurarnos de que no seas un robot. ¿Cuánto es <span></span> + <span></span>?</label>
 								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="" captcha-required/>
 								<p class="[ accept-terms ]">Al aceptar, estoy de acuerdo con las políticas de privacidad, términos y condiciones de la plataforma. <a class="[ color-primary ]" target="_blank" href="<?php echo site_url('terminos-y-condiciones/' ); ?>">Ver más</a></p>
-							</li> 
+							</li>
 						</ol><!-- /fs-fields -->
 						<button class="fs-submit" type="submit">Enviar respuestas</button>
 					</form><!-- /fs-form -->
@@ -766,7 +766,7 @@ class Sondeo_CDMX_Survey {
 	}
 
 	/**
-	 * Delete an existing survey 
+	 * Delete an existing survey
 	 * @param [string] $reference_code
 	 * [bool]
 	 */

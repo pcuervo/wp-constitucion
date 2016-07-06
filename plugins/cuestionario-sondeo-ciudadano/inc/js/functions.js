@@ -2,8 +2,8 @@ $ = jQuery.noConflict();
 
 (function() {
 
-    addDelegacionesRadio( 'vives' ); 
-    addDelegacionesRadio( 'trabajas' ); 
+    addDelegacionesRadio( 'vives' );
+    addDelegacionesRadio( 'trabajas' );
     $('input[name="ubicacion-vives"]').change(function(){
         var lugar = this.value;
         switch( lugar ){
@@ -425,13 +425,13 @@ function getSurveyData(){
     if( 0 < $('#js-delegaciones-estados-paises') ){
         $delegacionEstadoPaisMunicipioQ = $('#js-delegaciones-estados-paises').data('question');
         $delegacionEstadoPaisMunicipio = $('#js-delegaciones-estados-paises select option:selected').val()
-        
+
     } else {
         $delegacionEstadoPaisMunicipioQ = 2;
         $delegacionEstadoPaisMunicipio = $('#js-donde-vives input:checked').val()
     }
     $answers[$delegacionEstadoPaisMunicipioQ] = $delegacionEstadoPaisMunicipio;
-    
+
 
     $colonia = $('#js-colonias select');
     if( 0 < $colonia.length ){

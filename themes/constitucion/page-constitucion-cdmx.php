@@ -180,6 +180,7 @@ $image_plataforma = attachment_image_url( $plataforma->ID, 'full' ); ?>
 			<img src="<?php echo THEMEPATH; ?>images/plataforma/mitmedialab.png" alt="Logo MIT Media Lab">
 			<img src="<?php echo THEMEPATH; ?>images/plataforma/changeorg.png" alt="Logo Changeorg">
 			<img src="<?php echo THEMEPATH; ?>images/plataforma/metro.png" alt="Logo Metro">
+			<img src="<?php echo THEMEPATH; ?>images/plataforma/infodf.png" alt="InfoDF">
 		</div>
 	</div>
 </div>

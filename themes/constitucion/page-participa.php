@@ -70,7 +70,7 @@
 				<div class="[ bg-gray-light ][ padding padding--top-bottom--large margin-top ]">
 					<p class="[ fz-xlarge text-center ][ margin-top-bottom--small ][ color-primary ]">5</p>
 					<p class="[ fz-small text-left ]">
-						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="http://constitucioncdmx.pubpub.org/" target="_blank" title="Esta forma de participar es puesta a tu disposición por el Instituto Electoral del Distrito Federal. Al dar click en esta opción, saldrás de la plataforma Constitución CDMX – Espacio de Encuentro.">
+						<a class="[ no-decoration ][ color-gray color-primary--hover ]" href="https://portal.iedf.org.mx/constituyente/propuestas/" target="_blank" title="Esta forma de participar es puesta a tu disposición por el Instituto Electoral del Distrito Federal. Al dar click en esta opción, saldrás de la plataforma Constitución CDMX – Espacio de Encuentro.">
 							<?php echo get_post_meta($post->ID, 'paso_e', true);?>
 						</a>
 					</p>

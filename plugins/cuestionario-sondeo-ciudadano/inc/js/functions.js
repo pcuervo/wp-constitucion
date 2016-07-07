@@ -21,6 +21,7 @@ $ = jQuery.noConflict();
                 showColonias( lugar, '' );
                 $('#js-delegaciones-estados-paises').remove();
         }
+        $('.fs-continue').removeClass('hide');
         $('.fs-continue').click();
     });
     $('input[name="ubicacion-trabajas"]').change(function(){

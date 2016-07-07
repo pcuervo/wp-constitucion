@@ -239,7 +239,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-donde-vives" data-question="1">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]">¿En dónde vives?</label>
 								<div id="radio-donde-vives" class="fs-radio-group fs-radio-custom clearfix fs-anim-lower [ text-center ]">
-									<span><input id="q1-1" name="ubicacion-vives" type="radio" value="zmvm" /><label for="q1-1" class="radio-zmvm">Zona Metropolitana</label></span>
+									<span><input id="q1-1" name="ubicacion-vives" type="radio" value="zmvm" required/><label for="q1-1" class="radio-zmvm">Zona Metropolitana</label></span>
 									<span><input id="q1-2" name="ubicacion-vives" type="radio" value="resto-republica" /><label for="q1-2" class="radio-resto-republica">Resto de la república</label></span>
 									<span><input id="q1-3" name="ubicacion-vives" type="radio" value="fuera-mexico" /><label for="q1-3" class="radio-fuera-mexico">Fuera de México</label></span>
 									<br/>
@@ -251,7 +251,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-genero" data-input-trigger data-question="7">
 								<label class="fs-field-label fs-anim-upper  [ color-gray ]" for="genero">Género</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q7-1" name="genero" type="radio" value="mujer" /><label for="q7-1" class="radio-mujer">Mujer</label></span>
+									<span><input id="q7-1" name="genero" type="radio" value="mujer"/><label for="q7-1" class="radio-mujer">Mujer</label></span>
 									<span><input id="q7-2" name="genero" type="radio" value="hombre" /><label for="q7-2" class="radio-hombre">Hombre</label></span>
 									<span><input id="q7-3" name="genero" type="radio" value="otro" /><label for="q7-3" class="radio-otro">Otro</label></span>
 									<span><input id="q7-3" name="genero" type="radio" value="ninguno" /><label for="q7-3" class="radio-otro">Ninguno</label></span>
@@ -285,7 +285,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-donde-trabajas" data-question="11">
 								<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde trabajas?</label>
 								<div id="radio-donde-trabajas" class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q11-1" name="ubicacion-trabajas" type="radio" value="zmvm" /><label for="q11-1" class="radio-zmvm">Zona Metropolitana</label></span>
+									<span><input id="q11-1" name="ubicacion-trabajas" type="radio" value="zmvm" required/><label for="q11-1" class="radio-zmvm">Zona Metropolitana</label></span>
 									<span><input id="q11-2" name="ubicacion-trabajas" type="radio" value="resto-republica" /><label for="q11-2" class="radio-resto-republica">Resto de la república</label></span>
 									<span><input id="q11-3" name="ubicacion-trabajas" type="radio" value="fuera-mexico" /><label for="q11-3" class="radio-fuera-mexico">Fuera de México</label></span>
 									<br/>
@@ -304,7 +304,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-donde-estudias" data-question="18">
 								<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde estudias?</label>
 								<div id="radio-donde-estudias" class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q18-1" name="ubicacion-estudias" type="radio" value="zmvm" /><label for="q18-1" class="radio-zmvm">Zona Metropolitana</label></span>
+									<span><input id="q18-1" name="ubicacion-estudias" type="radio" value="zmvm" required /><label for="q18-1" class="radio-zmvm">Zona Metropolitana</label></span>
 									<span><input id="q18-2" name="ubicacion-estudias" type="radio" value="resto-republica" /><label for="q18-2" class="radio-resto-republica">Resto de la república</label></span>
 									<span><input id="q18-3" name="ubicacion-estudias" type="radio" value="fuera-mexico" /><label for="q18-3" class="radio-fuera-mexico">Fuera de México</label></span>
 									<br/>

@@ -705,7 +705,7 @@ button.fs-reset { left: 0; }
 /* Error message */
 .fs-message-error {
 	width: 100%;
-	position: absolute; top; 80px; left: 100%;
+	position: absolute; top: 80px; left: 100%;
 	color: #eb7e7f;
 	font-weight: 700;
 	font-size: 1em;
@@ -876,10 +876,6 @@ input[type=text]::-ms-clear {
 		font-size: 1.25em;
 	}
 
-	.fs-message-error{
-		font-size: 1.3em;
-	}
-
 	.fs-fields > li .fs-radio-custom span{
 		width: 46%;
 		font-size: 12px;
@@ -890,10 +886,9 @@ input[type=text]::-ms-clear {
 @media (min-width: 460px) {
 	.fs-message-error {
 		position: absolute;
-		left: 50%;
-		top: 20%;
+		left: 100%;
+		top: 80px;
 		z-index: 800;
-		font-size: 1.2em;
 	}
 }
 

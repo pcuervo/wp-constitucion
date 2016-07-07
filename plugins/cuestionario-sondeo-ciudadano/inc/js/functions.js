@@ -4,6 +4,7 @@ $ = jQuery.noConflict();
 
     addDelegacionesRadio( 'vives' );
     addDelegacionesRadio( 'trabajas' );
+    addDelegacionesRadio( 'estudias' );
     $('input[name="ubicacion-vives"]').change(function(){
         var lugar = this.value;
         switch( lugar ){
@@ -37,6 +38,24 @@ $ = jQuery.noConflict();
             default:
                 showColonias( lugar, 'trabajas' );
                 $('#js-trabajas-delegaciones-estados-paises').remove();
+        }
+        $('.fs-continue').click();
+    });
+    $('input[name="ubicacion-estudias"]').change(function(){
+        var lugar = this.value;
+        switch( lugar ){
+            case 'zmvm':
+                showMunicipios( 'estudias' );
+                break;
+            case 'resto-republica':
+                showEstados( 'estudias' );
+                break;
+            case 'fuera-mexico':
+                showPaises( 'estudias' );
+                break;
+            default:
+                showColonias( lugar, 'estudias' );
+                $('#js-estudias-delegaciones-estados-paises').remove();
         }
         $('.fs-continue').click();
     });
@@ -474,11 +493,17 @@ function getSurveyData(){
     $answers[$trabajasQ] = $trabajas;
 
     $lugarTrabajoQ = $('#js-donde-trabajas').data('question');
-    $lugarTrabajo = $('#js-donde-trabajas select option:selected').val();
+    $lugarTrabajo = $('#js-donde-vives input:selected').val();
     $answers[$lugarTrabajoQ] = getLugarResidencia( $lugarTrabajo );
 
-    $delegacionEstadoPaisMunicipioTrabajasQ = $('#js-trabajas-delegaciones-estados-paises').data('question');
-    $delegacionEstadoPaisMunicipioTrabajas = $('#js-trabajas-delegaciones-estados-paises select option:selected').val()
+    if( 0 < $('#js-trabajas-delegaciones-estados-paises') ){
+        $delegacionEstadoPaisMunicipioTrabajasQ = $('#js-trabajas-delegaciones-estados-paises').data('question');
+        $delegacionEstadoPaisMunicipioTrabajas = $('#js-trabajas-delegaciones-estados-paises select option:selected').val()
+
+    } else {
+        $delegacionEstadoPaisMunicipioTrabajasQ = 12;
+        $delegacionEstadoPaisMunicipioTrabajas = $('#js-donde-trabajas input:checked').val()
+    }
     $answers[$delegacionEstadoPaisMunicipioTrabajasQ] = $delegacionEstadoPaisMunicipioTrabajas;
 
     $coloniaTrabajo = $('#js-trabajas-colonias select');
@@ -500,11 +525,17 @@ function getSurveyData(){
     $answers[$estudiasQ] = $estudias;
 
     $lugarEstudioQ = $('#js-donde-estudias').data('question');
-    $lugarEstudio = $('#js-donde-estudias select option:selected').val();
+    $lugarEstudio = $('#js-donde-estudias input:selected').val();
     $answers[$lugarEstudioQ] = getLugarResidencia( $lugarEstudio );
 
-    $delegacionEstadoPaisMunicipioEstudiasQ = $('#js-estudias-delegaciones-estados-paises').data('question');
-    $delegacionEstadoPaisMunicipioEstudias = $('#js-estudias-delegaciones-estados-paises select option:selected').val()
+    if( 0 < $('#js-estudias-delegaciones-estados-paises') ){
+        $delegacionEstadoPaisMunicipioEstudiasQ = $('#js-estudias-delegaciones-estados-paises').data('question');
+        $delegacionEstadoPaisMunicipioEstudias = $('#js-estudias-delegaciones-estados-paises select option:selected').val()
+
+    } else {
+        $delegacionEstadoPaisMunicipioEstudiasQ = 19;
+        $delegacionEstadoPaisMunicipioEstudias = $('#js-donde-estudias input:checked').val()
+    }
     $answers[$delegacionEstadoPaisMunicipioEstudiasQ] = $delegacionEstadoPaisMunicipioEstudias;
 
     $coloniaEstudio = $('#js-estudias-colonias select');
@@ -520,8 +551,7 @@ function getSurveyData(){
         $answers[$lugarEstudioQ] = getLugarResidencia( $lugarTrabajo );
 
         $delegacionEstadoPaisMunicipioEstudiasQ = 19;
-        $delegacionEstadoPaisMunicipioEstudias = $('#js-trabajas-delegaciones-estados-paises select option:selected').val()
-        $answers[$delegacionEstadoPaisMunicipioEstudiasQ] = $delegacionEstadoPaisMunicipioEstudias;
+        $answers[$delegacionEstadoPaisMunicipioEstudiasQ] = $delegacionEstadoPaisMunicipioTrabajas;
 
         $coloniaTrabajo = $('#js-trabajas-colonias select');
         if( 0 < $coloniaTrabajo.length ){
@@ -536,9 +566,8 @@ function getSurveyData(){
         $lugarTrabajo = $('#js-donde-estudias select option:selected').val();
         $answers[$lugarTrabajoQ] = getLugarResidencia( $lugarTrabajo );
 
-        $delegacionEstadoPaisMunicipioEstudiasQ = 12;
-        $delegacionEstadoPaisMunicipioEstudias = $('#js-estudias-delegaciones-estados-paises select option:selected').val()
-        $answers[$delegacionEstadoPaisMunicipioEstudiasQ] = $delegacionEstadoPaisMunicipioEstudias;
+        $delegacionEstadoPaisMunicipioTrabajasQ = 12;
+        $answers[$delegacionEstadoPaisMunicipioTrabajasQ] = $delegacionEstadoPaisMunicipioEstudias;
 
         $coloniaTrabajo = $('#js-estudias-colonias select');
         if( 0 < $coloniaTrabajo.length ){
@@ -588,7 +617,7 @@ function getSurveyData(){
     $answers[$cosasValiosasQ] = $cosasValiosas;
 
     console.log( $answers );
-    //saveSurvey( $answers );
+    saveSurvey( $answers );
 }
 
 function saveSurvey( answersObj ){

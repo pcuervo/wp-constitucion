@@ -278,8 +278,8 @@ class Sondeo_CDMX_Survey {
 							<li id="js-trabajas" data-input-trigger data-question="10">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="trabajas">¿Trabajas?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q5-1" name="trabajas" type="radio" value="si" /><label for="q5-1" class="radio-si">Sí</label></span>
-									<span><input id="q5-2" name="trabajas" type="radio" value="no" /><label for="q5-2" class="radio-no">No</label></span>
+									<span><input id="q10-1" name="trabajas" type="radio" value="si" /><label for="q10-1" class="radio-si">Sí</label></span>
+									<span><input id="q10-2" name="trabajas" type="radio" value="no" /><label for="q10-2" class="radio-no">No</label></span>
 								</div>
 							</li>
 							<li id="js-donde-trabajas" data-question="11">
@@ -297,29 +297,27 @@ class Sondeo_CDMX_Survey {
 							<li id="js-estudias" data-input-trigger data-question="17">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="estudias">¿Estudias?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q6-1" name="estudias" type="radio" value="si" /><label for="q6-1" class="radio-si">Sí</label></span>
-									<span><input id="q6-2" name="estudias" type="radio" value="no" /><label for="q6-2" class="radio-no">No</label></span>
+									<span><input id="q17-1" name="estudias" type="radio" value="si" /><label for="q17-1" class="radio-si">Sí</label></span>
+									<span><input id="q17-2" name="estudias" type="radio" value="no" /><label for="q17-2" class="radio-no">No</label></span>
 								</div>
 							</li>
 							<li id="js-donde-estudias" data-question="18">
 								<label class="fs-field-label fs-anim-upper  [ color-gray ]">¿En dónde estudias?</label>
-								<select class="[ cs-select cs-skin-boxes ][ fs-anim-lower ]" required="required">
-									<option value="" disabled selected>Selecciona una opción</option>
-									<option value="cdmx">CDMX</option>
-									<option value="zmvm">Zona Metropolitana</option>
-									<option value="resto-republica">Resto de la república</option>
-									<option value="fuera-mexico">Fuera de México</option>
-								</select>
+								<div id="radio-donde-estudias" class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+									<span><input id="q18-1" name="ubicacion-estudias" type="radio" value="zmvm" /><label for="q18-1" class="radio-zmvm">Zona Metropolitana</label></span>
+									<span><input id="q18-2" name="ubicacion-estudias" type="radio" value="resto-republica" /><label for="q18-2" class="radio-resto-republica">Resto de la república</label></span>
+									<span><input id="q18-3" name="ubicacion-estudias" type="radio" value="fuera-mexico" /><label for="q18-3" class="radio-fuera-mexico">Fuera de México</label></span>
+									<br/>
+									<hr class="[ color-primary ]">
+								</div>
 							</li>
-
 							<li id="js-estudias-delegaciones-estados-paises" data-input-trigger data-question="19">
 							</li>
-							<!--
 							<li id="js-naciste-cdmx" data-input-trigger data-question="24">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="naciste-cdmx">¿Naciste en la CDMX?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									<span><input id="q7-1" name="naciste-cdmx" type="radio" value="si" /><label for="q7-1" class="radio-si">Sí</label></span>
-									<span><input id="q7-2" name="naciste-cdmx" type="radio" value="no" /><label for="q7-2" class="radio-no">No</label></span>
+									<span><input id="q24-1" name="naciste-cdmx" type="radio" value="si" /><label for="q24-1" class="radio-si">Sí</label></span>
+									<span><input id="q24-2" name="naciste-cdmx" type="radio" value="no" /><label for="q24-2" class="radio-no">No</label></span>
 								</div>
 							</li>
 							<li id="js-piensas-cdmx" data-question="25">
@@ -358,7 +356,7 @@ class Sondeo_CDMX_Survey {
 							<li id="js-cosas-valiosas" data-question="32">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="cosas-valiosas" data-info="Las palabras deben ir separadas por comas.">¿Cuáles son las tres cosas más valiosas de la CDMX?</label>
 								<input class="fs-anim-lower" id="q14" name="cosas-valiosas" type="text" placeholder="Ej. palabra1, palabra2, palabra3" comma-required/>
-							</li> -->
+							</li> 
 							<li id="js-captcha" data-question="999">
 								<label class="[ fs-field-label fs-anim-upper ][ color-gray ]" for="q3">Necesitamos asegurarnos de que no seas un robot. ¿Cuánto es <span></span> + <span></span>?</label>
 								<input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="" captcha-required/>

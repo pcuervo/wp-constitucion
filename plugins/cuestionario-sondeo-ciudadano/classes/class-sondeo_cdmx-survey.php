@@ -243,7 +243,7 @@ class Sondeo_CDMX_Survey {
 									<span><input id="q1-2" name="ubicacion-vives" type="radio" value="resto-republica" /><label for="q1-2" class="radio-resto-republica">Resto de la república</label></span>
 									<span><input id="q1-3" name="ubicacion-vives" type="radio" value="fuera-mexico" /><label for="q1-3" class="radio-fuera-mexico">Fuera de México</label></span>
 									<br/>
-									<hr class="[ color-primary ]">
+									<hr class="[ color-primary ][ clear ]">
 								</div>
 							</li>
 							<li id="js-delegaciones-estados-paises"></li>
@@ -289,7 +289,7 @@ class Sondeo_CDMX_Survey {
 									<span><input id="q11-2" name="ubicacion-trabajas" type="radio" value="resto-republica" /><label for="q11-2" class="radio-resto-republica">Resto de la república</label></span>
 									<span><input id="q11-3" name="ubicacion-trabajas" type="radio" value="fuera-mexico" /><label for="q11-3" class="radio-fuera-mexico">Fuera de México</label></span>
 									<br/>
-									<hr class="[ color-primary ]">
+									<hr class="[ color-primary ][ clear ]">
 								</div>
 							</li>
 							<li id="js-trabajas-delegaciones-estados-paises" data-input-trigger data-question="12">

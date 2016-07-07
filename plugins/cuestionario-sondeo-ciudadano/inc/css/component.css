@@ -42,7 +42,7 @@
 
 /* Views (fullscreen and overview)*/
 .fs-form-full {
-	top: 30%;
+	top: 100px;
 	margin: 0 auto;
 	width: 100%;
 }
@@ -679,6 +679,7 @@ a.fs-continue,
 
 button.fs-continue, button.fs-reset {
 	margin: 0;
+	background: #fff;
 	font-size: 1.25em;
     position: absolute; right: 0; bottom: 60px;
     z-index: 99;

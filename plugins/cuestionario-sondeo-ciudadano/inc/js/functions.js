@@ -439,13 +439,26 @@ function getSurveyData(){
     $answers = {};
 
     $lugarResidenciaQ = $('#js-donde-vives').data('question');
-    $lugarResidencia = $('#js-donde-vives input:selected').val();
+    $lugarResidencia = $('#js-donde-vives input:checked').val();
     $answers[$lugarResidenciaQ] = getLugarResidencia( $lugarResidencia );
 
-    if( 0 < $('#js-delegaciones-estados-paises') ){
+    if( 0 < $('#js-delegaciones-estados-paises').length ){
+        $answers[2] = '-';
+        $answers[3] = '-';
+        if( 4 == $('#js-delegaciones-estados-paises').data('question') ){
+            $answers[5] = '-';
+            $answers[6] = '-';
+        } 
+        if( 5 == $('#js-delegaciones-estados-paises').data('question') ){
+            $answers[4] = '-';
+            $answers[6] = '-';
+        } 
+        if( 6 == $('#js-delegaciones-estados-paises').data('question') ){
+            $answers[4] = '-';
+            $answers[5] = '-';
+        } 
         $delegacionEstadoPaisMunicipioQ = $('#js-delegaciones-estados-paises').data('question');
-        $delegacionEstadoPaisMunicipio = $('#js-delegaciones-estados-paises select option:selected').val()
-
+        $delegacionEstadoPaisMunicipio = $('#js-delegaciones-estados-paises select option:selected').val();
     } else {
         $delegacionEstadoPaisMunicipioQ = 2;
         $delegacionEstadoPaisMunicipio = $('#js-donde-vives input:checked').val()
@@ -488,22 +501,54 @@ function getSurveyData(){
         $trabajas = $('#js-trabajas input:checked').val()
     } else if ( 'ninguna' == $dedicas || 'estudio' == $dedicasMulitple ) {
         $trabajas = 'no';
+        $answers[11] = '-';
+        $answers[12] = '-';
+        $answers[13] = '-';
+        $answers[14] = '-';
+        $answers[15] = '-';
+        $answers[16] = '-';
+        $answers[19] = '-';
+        $answers[20] = '-';
+        $answers[21] = '-';
+        $answers[22] = '-';
+        $answers[23] = '-';
     } else if( 'trabajo' == $dedicasMulitple || 'ambas' == $dedicasMulitple ){
         $trabajas = 'si';
+        $answers[19] = '-';
+        $answers[20] = '-';
+        $answers[21] = '-';
+        $answers[22] = '-';
+        $answers[23] = '-';
     }
     $answers[$trabajasQ] = $trabajas;
 
     $lugarTrabajoQ = $('#js-donde-trabajas').data('question');
-    $lugarTrabajo = $('#js-donde-vives input:selected').val();
+    $lugarTrabajo = $('#js-donde-trabajas input:checked').val();
     $answers[$lugarTrabajoQ] = getLugarResidencia( $lugarTrabajo );
 
-    if( 0 < $('#js-trabajas-delegaciones-estados-paises') ){
+    if( 0 < $('#js-trabajas-delegaciones-estados-paises').length ){
+        $answers[12] = '-';
+        $answers[13] = '-';
+        if( 14 == $('#js-trabajas-delegaciones-estados-paises').data('question') ){
+            $answers[15] = '-';
+            $answers[16] = '-';
+        } 
+        if( 15 == $('#js-trabajas-delegaciones-estados-paises').data('question') ){
+            $answers[14] = '-';
+            $answers[16] = '-';
+        } 
+        if( 16 == $('#js-trabajas-delegaciones-estados-paises').data('question') ){
+            $answers[14] = '-';
+            $answers[15] = '-';
+        } 
         $delegacionEstadoPaisMunicipioTrabajasQ = $('#js-trabajas-delegaciones-estados-paises').data('question');
         $delegacionEstadoPaisMunicipioTrabajas = $('#js-trabajas-delegaciones-estados-paises select option:selected').val()
-
     } else {
+        $answers[14] = '-';
+        $answers[15] = '-';
+        $answers[16] = '-';
         $delegacionEstadoPaisMunicipioTrabajasQ = 12;
-        $delegacionEstadoPaisMunicipioTrabajas = $('#js-donde-trabajas input:checked').val()
+        $delegacionEstadoPaisMunicipioTrabajas = $('#js-donde-trabajas input:checked').val();
     }
     $answers[$delegacionEstadoPaisMunicipioTrabajasQ] = $delegacionEstadoPaisMunicipioTrabajas;
 
@@ -520,24 +565,40 @@ function getSurveyData(){
         $estudias = $('#js-estudias input:checked').val()
     } else if ( 'ninguna' == $dedicas || 'trabajo' == $dedicasMulitple ) {
         $estudias = 'no';
+        $answers[18] = '-';
+        $answers[19] = '-';
     } else if( 'estudio' == $dedicasMulitple || 'ambas' == $dedicasMulitple ){
         $estudias = 'si';
     }
     $answers[$estudiasQ] = $estudias;
 
     $lugarEstudioQ = $('#js-donde-estudias').data('question');
-    $lugarEstudio = $('#js-donde-estudias input:selected').val();
+    $lugarEstudio = $('#js-donde-estudias input:checked').val();
     $answers[$lugarEstudioQ] = getLugarResidencia( $lugarEstudio );
 
-    if( 0 < $('#js-estudias-delegaciones-estados-paises') ){
+    if( 0 < $('#js-estudias-delegaciones-estados-paises').length ){
+        $answers[19] = '-';
+        $answers[20] = '-';
+        if( 21 == $('#js-estudias-delegaciones-estados-paises').data('question') ){
+            $answers[22] = '-';
+            $answers[23] = '-';
+        } 
+        if( 22 == $('#js-estudias-delegaciones-estados-paises').data('question') ){
+            $answers[21] = '-';
+            $answers[23] = '-';
+        } 
+        if( 23 == $('#js-estudias-delegaciones-estados-paises').data('question') ){
+            $answers[21] = '-';
+            $answers[22] = '-';
+        } 
         $delegacionEstadoPaisMunicipioEstudiasQ = $('#js-estudias-delegaciones-estados-paises').data('question');
         $delegacionEstadoPaisMunicipioEstudias = $('#js-estudias-delegaciones-estados-paises select option:selected').val()
-
-    } else {
+    } else  {
         $delegacionEstadoPaisMunicipioEstudiasQ = 19;
         $delegacionEstadoPaisMunicipioEstudias = $('#js-donde-estudias input:checked').val()
     }
     $answers[$delegacionEstadoPaisMunicipioEstudiasQ] = $delegacionEstadoPaisMunicipioEstudias;
+    
 
     $coloniaEstudio = $('#js-estudias-colonias select');
     if( 0 < $coloniaEstudio.length ){
@@ -548,11 +609,34 @@ function getSurveyData(){
 
     if( 'trabajo' == $dedicasMulitple || 'ambas' == $dedicasMulitple ){
         $lugarEstudioQ = 18;
-        $lugarEstudio = $('#js-donde-trabajas select option:selected').val();
+        $lugarEstudio = $('#js-donde-trabajas input:checked').val();
         $answers[$lugarEstudioQ] = getLugarResidencia( $lugarTrabajo );
 
-        $delegacionEstadoPaisMunicipioEstudiasQ = 19;
+        if( 0 < $('#js-trabajas-delegaciones-estados-paises').length ){
+            $answers[19] = '-';
+            $answers[20] = '-';
+            if( 14 == $('#js-trabajas-delegaciones-estados-paises').data('question') ){
+                $delegacionEstadoPaisMunicipioEstudiasQ = 21;
+                $answers[22] = '-';
+                $answers[23] = '-';
+            }
+            if( 15 == $('#js-trabajas-delegaciones-estados-paises').data('question') ){
+                $delegacionEstadoPaisMunicipioEstudiasQ = 22;
+                $answers[21] = '-';
+                $answers[23] = '-';
+            }
+            if( 16 == $('#js-trabajas-delegaciones-estados-paises').data('question') ){
+                $delegacionEstadoPaisMunicipioEstudiasQ = 23;
+                $answers[21] = '-';
+                $answers[22] = '-';
+            }
+            $delegacionEstadoPaisMunicipioEstudias = $('#js-trabajas-delegaciones-estados-paises select option:selected').val()
+        } else  {
+            $delegacionEstadoPaisMunicipioEstudiasQ = 19;
+            $delegacionEstadoPaisMunicipioTrabajas = $('#js-donde-trabajas input:checked').val()
+        }
         $answers[$delegacionEstadoPaisMunicipioEstudiasQ] = $delegacionEstadoPaisMunicipioTrabajas;
+        console.log( $answers[$delegacionEstadoPaisMunicipioEstudiasQ] );
 
         $coloniaTrabajo = $('#js-trabajas-colonias select');
         if( 0 < $coloniaTrabajo.length ){
@@ -564,10 +648,26 @@ function getSurveyData(){
 
     if( 'estudio' == $dedicasMulitple ){
         $lugarTrabajoQ = 11;
-        $lugarTrabajo = $('#js-donde-estudias select option:selected').val();
+        $lugarTrabajo = $('#js-donde-estudias input:checked').val();
         $answers[$lugarTrabajoQ] = getLugarResidencia( $lugarTrabajo );
 
-        $delegacionEstadoPaisMunicipioTrabajasQ = 12;
+        if( 0 < $('#js-estudias-delegaciones-estados-paises').length ){
+            $answers[12] = '-';
+            $answers[13] = '-';
+            if( 21 == $('#js-estudias-delegaciones-estados-paises').data('question') ){
+                $delegacionEstadoPaisMunicipioTrabajasQ = 14;
+            }
+            if( 22 == $('#js-estudias-delegaciones-estados-paises').data('question') ){
+                $delegacionEstadoPaisMunicipioTrabajasQ = 15;
+            }
+            if( 23 == $('#js-estudias-delegaciones-estados-paises').data('question') ){
+                $delegacionEstadoPaisMunicipioTrabajasQ = 16;
+            }
+            $delegacionEstadoPaisMunicipioTrabajas = $('#js-estudias-delegaciones-estados-paises select option:selected').val()
+        } else  {
+            $delegacionEstadoPaisMunicipioTrabajasQ = 12;
+            $delegacionEstadoPaisMunicipioEstudias = $('#js-donde-estudias input:checked').val()
+        }
         $answers[$delegacionEstadoPaisMunicipioTrabajasQ] = $delegacionEstadoPaisMunicipioEstudias;
 
         $coloniaTrabajo = $('#js-estudias-colonias select');
@@ -577,6 +677,19 @@ function getSurveyData(){
             $answers[$coloniaTrabajoQ] = $coloniaTrabajo;
         }
     }
+
+    if( 0 < $('#js-estudias-delegaciones-estados-paises').length ){
+
+        $delegacionEstadoPaisMunicipioEstudiasQ = $('#js-estudias-delegaciones-estados-paises').data('question');
+        $delegacionEstadoPaisMunicipioEstudias = $('#js-estudias-delegaciones-estados-paises select option:selected').val()
+        $answers[$delegacionEstadoPaisMunicipioEstudiasQ] = $delegacionEstadoPaisMunicipioEstudias;
+    } else if( 0 < $('#js-donde-estudias input').length )  {
+        $delegacionEstadoPaisMunicipioEstudiasQ = 19;
+        $delegacionEstadoPaisMunicipioEstudias = $('#js-donde-estudias input:checked').val()
+        $answers[$delegacionEstadoPaisMunicipioEstudiasQ] = $delegacionEstadoPaisMunicipioEstudias;
+    }
+    
+
 
     $nacisteCDMXQ = $('#js-naciste-cdmx').data('question');
     $nacisteCDMX = $('#js-naciste-cdmx input:checked').val()
@@ -617,7 +730,8 @@ function getSurveyData(){
     $cosasValiosas = $('#js-cosas-valiosas input').val();
     $answers[$cosasValiosasQ] = $cosasValiosas;
 
-    console.log( $answers );
+    if( 'undefined' == typeof $answers[12] ) $answers[12] = '-';
+    if( 'undefined' == typeof $answers[19] ) $answers[19] = '-';
     saveSurvey( $answers );
 }
 
@@ -665,7 +779,7 @@ function getLugarResidencia( slug ){
             lugar = 'Zona Metropolitana';
             break;
         case 'resto-republica':
-            lugar = 'Zona Metropolitana';
+            lugar = 'Resto de la República';
             break;
         case 'fuera-mexico':
             lugar = 'Fuera de México';
